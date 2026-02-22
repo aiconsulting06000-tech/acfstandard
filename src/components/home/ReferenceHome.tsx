@@ -7,18 +7,19 @@ export default function ReferenceHome(){
     try{
       const c = document.getElementById('neural') as HTMLCanvasElement | null
       if(c){
-        const x = c.getContext('2d')!
-        function sz(){c.width = window.innerWidth; c.height = window.innerHeight}
+        const canvas = c as HTMLCanvasElement
+        const x = canvas.getContext('2d')!
+        function sz(){canvas.width = window.innerWidth; canvas.height = window.innerHeight}
         sz(); window.addEventListener('resize', sz)
         const pts: any[] = []
-        for(let i=0;i<90;i++) pts.push({x:Math.random()*c.width,y:Math.random()*c.height,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4})
+        for(let i=0;i<90;i++) pts.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4})
         let rafId: number
         function draw(){
-          x.clearRect(0,0,c.width,c.height)
+          x.clearRect(0,0,canvas.width,canvas.height)
           for(let i=0;i<pts.length;i++){
             pts[i].x += pts[i].vx; pts[i].y += pts[i].vy
-            if(pts[i].x<0||pts[i].x>c.width) pts[i].vx *= -1
-            if(pts[i].y<0||pts[i].y>c.height) pts[i].vy *= -1
+            if(pts[i].x<0||pts[i].x>canvas.width) pts[i].vx *= -1
+            if(pts[i].y<0||pts[i].y>canvas.height) pts[i].vy *= -1
             x.beginPath(); x.arc(pts[i].x,pts[i].y,1.5,0,Math.PI*2); x.fillStyle='rgba(201,168,76,.75)'; x.fill()
             for(let j=i+1;j<pts.length;j++){
               const dx = pts[i].x-pts[j].x, dy = pts[i].y-pts[j].y, d = Math.sqrt(dx*dx+dy*dy)
@@ -38,15 +39,16 @@ export default function ReferenceHome(){
     // DIAGRAM (dc)
     const c = document.getElementById('dc') as HTMLCanvasElement | null
     if(!c) return
-    const x = c.getContext('2d')!
-    function sz(){ c.width = c.offsetWidth; c.height = c.offsetHeight }
+    const canvas = c as HTMLCanvasElement
+    const x = canvas.getContext('2d')!
+    function sz(){ canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight }
     sz(); window.addEventListener('resize', sz)
     const pulses: any[] = []
     let tick = 0
-    function nodes(){ const cx = c.width/2, cy = c.height/2; return [{x:cx,y:cy*.12},{x:c.width*.96,y:cy},{x:cx,y:c.height*.88},{x:c.width*.04,y:cy}] }
-    function spawn(){ const ns = nodes(), n = ns[Math.floor(Math.random()*ns.length)], cx=c.width/2, cy=c.height/2, tc = Math.random()>.5; pulses.push({sx:tc?n.x:cx,sy:tc?n.y:cy,ex:tc?cx:n.x,ey:tc?cy:n.y,t:0,spd:.008+Math.random()*.005,col:Math.random()>.3?'201,168,76':'80,180,255'}) }
+    function nodes(){ const cx = canvas.width/2, cy = canvas.height/2; return [{x:cx,y:cy*.12},{x:canvas.width*.96,y:cy},{x:cx,y:canvas.height*.88},{x:canvas.width*.04,y:cy}] }
+    function spawn(){ const ns = nodes(), n = ns[Math.floor(Math.random()*ns.length)], cx=canvas.width/2, cy=canvas.height/2, tc = Math.random()>.5; pulses.push({sx:tc?n.x:cx,sy:tc?n.y:cy,ex:tc?cx:n.x,ey:tc?cy:n.y,t:0,spd:.008+Math.random()*.005,col:Math.random()>.3?'201,168,76':'80,180,255'}) }
     let rafId = 0
-    function draw(){ x.clearRect(0,0,c.width,c.height); const ns = nodes(), cx=c.width/2, cy=c.height/2; ns.forEach(n=>{ x.beginPath(); x.moveTo(cx,cy); x.lineTo(n.x,n.y); x.strokeStyle='rgba(201,168,76,.1)'; x.lineWidth=1; x.stroke() }); tick++; if(tick%50===0) spawn(); for(let i=pulses.length-1;i>=0;i--){ const p=pulses[i]; p.t+=p.spd; if(p.t>=1){ pulses.splice(i,1); continue } const px = p.sx+(p.ex-p.sx)*p.t, py = p.sy+(p.ey-p.sy)*p.t; const g = x.createRadialGradient(px,py,0,px,py,6); g.addColorStop(0,'rgba('+p.col+',.9)'); g.addColorStop(1,'rgba('+p.col+',0)'); x.beginPath(); x.arc(px,py,5,0,Math.PI*2); x.fillStyle = g; x.fill(); const tpx = p.sx+(p.ex-p.sx)*Math.max(0,p.t-.15), tpy = p.sy+(p.ey-p.sy)*Math.max(0,p.t-.15); x.beginPath(); x.moveTo(tpx,tpy); x.lineTo(px,py); x.strokeStyle='rgba('+p.col+',.25)'; x.lineWidth=1.5; x.stroke(); }
+    function draw(){ x.clearRect(0,0,canvas.width,canvas.height); const ns = nodes(), cx=canvas.width/2, cy=canvas.height/2; ns.forEach(n=>{ x.beginPath(); x.moveTo(cx,cy); x.lineTo(n.x,n.y); x.strokeStyle='rgba(201,168,76,.1)'; x.lineWidth=1; x.stroke() }); tick++; if(tick%50===0) spawn(); for(let i=pulses.length-1;i>=0;i--){ const p=pulses[i]; p.t+=p.spd; if(p.t>=1){ pulses.splice(i,1); continue } const px = p.sx+(p.ex-p.sx)*p.t, py = p.sy+(p.ey-p.sy)*p.t; const g = x.createRadialGradient(px,py,0,px,py,6); g.addColorStop(0,'rgba('+p.col+',.9)'); g.addColorStop(1,'rgba('+p.col+',0)'); x.beginPath(); x.arc(px,py,5,0,Math.PI*2); x.fillStyle = g; x.fill(); const tpx = p.sx+(p.ex-p.sx)*Math.max(0,p.t-.15), tpy = p.sy+(p.ey-p.sy)*Math.max(0,p.t-.15); x.beginPath(); x.moveTo(tpx,tpy); x.lineTo(px,py); x.strokeStyle='rgba('+p.col+',.25)'; x.lineWidth=1.5; x.stroke(); }
       rafId = requestAnimationFrame(draw)
     }
     draw()
@@ -85,7 +87,7 @@ export default function ReferenceHome(){
 
     // counters
     let countersRun = false
-    function runCounters(){ if(countersRun) return; countersRun = true; const arr = [{id:'c1',val:4},{id:'c2',val:18},{id:'c3',val:17},{id:'c4',val:100}]; arr.forEach(t=>{ const el = document.getElementById(t.id); if(!el) return; let start: number | null = null; const dur = 1600; function step(ts:number){ if(!start) start = ts; const p = Math.min((ts-start)/dur,1); const e = 1-Math.pow(1-p,4); el.textContent = String(Math.round(e*t.val)); if(p<1) requestAnimationFrame(step); else el.textContent = String(t.val) } requestAnimationFrame(step) }) }
+    function runCounters(){ if(countersRun) return; countersRun = true; const arr = [{id:'c1',val:4},{id:'c2',val:18},{id:'c3',val:17},{id:'c4',val:100}]; arr.forEach(t=>{ const el = document.getElementById(t.id); if(!el) return; const element = el as HTMLElement; let start: number | null = null; const dur = 1600; function step(ts:number){ if(!start) start = ts; const p = Math.min((ts-start)/dur,1); const e = 1-Math.pow(1-p,4); element.textContent = String(Math.round(e*t.val)); if(p<1) requestAnimationFrame(step); else element.textContent = String(t.val) } requestAnimationFrame(step) }) }
     function checkCounters(){ const b = document.getElementById('statsbar'); if(!b) return; const r = b.getBoundingClientRect(); if(r.top < window.innerHeight && r.bottom > 0) runCounters() }
     window.addEventListener('scroll', checkCounters, {passive:true}); window.addEventListener('load', ()=> setTimeout(checkCounters,200)); document.addEventListener('DOMContentLoaded', ()=> setTimeout(checkCounters,400))
 
@@ -95,7 +97,7 @@ export default function ReferenceHome(){
     if(matwrap){ new IntersectionObserver(function(entries){ entries.forEach(function(e:any){ if(e.isIntersecting && !matDone){ matDone = true; [0,380,760,1140].forEach(function(d,i){ setTimeout(function(){ const el = document.getElementById('mc'+i); if(el) el.classList.add(i===2?'dg':'da') }, d) }); setTimeout(function(){ const l = document.getElementById('matline'); if(l) l.classList.add('go') }, 380) } }) }, {threshold:.3}).observe(matwrap) }
 
     // typing
-    (function(){ const words = ['Governance','Sovereignty','Intelligence','Commerce']; let wi=0, ci=0, del=false, paused=false; const tel = document.getElementById('typed'); if(!tel) return; tel.textContent = words[0]; ci = words[0].length; function typeStep(){ if(paused){ paused=false; del=true; setTimeout(typeStep,2400); return } if(!del && ci===words[wi].length){ paused=true; typeStep(); return } if(del && ci===0){ del=false; wi=(wi+1)%words.length; setTimeout(typeStep,300); return } ci += del ? -1 : 1; tel.textContent = words[wi].slice(0,ci); setTimeout(typeStep, del ? 45 : 85) } setTimeout(typeStep,2600) })()
+    (function(){ const words = ['Governance','Sovereignty','Intelligence','Commerce']; let wi=0, ci=0, del=false, paused=false; const tel = document.getElementById('typed'); if(!tel) return; const typedEl = tel as HTMLElement; typedEl.textContent = words[0]; ci = words[0].length; function typeStep(){ if(paused){ paused=false; del=true; setTimeout(typeStep,2400); return } if(!del && ci===words[wi].length){ paused=true; typeStep(); return } if(del && ci===0){ del=false; wi=(wi+1)%words.length; setTimeout(typeStep,300); return } ci += del ? -1 : 1; typedEl.textContent = words[wi].slice(0,ci); setTimeout(typeStep, del ? 45 : 85) } setTimeout(typeStep,2600) })()
 
     // video modal
     function openVideoModal(){ const m = document.getElementById('videomodal'); if(m) m.classList.add('open'); document.body.style.overflow='hidden' }
