@@ -1,1 +1,5 @@
-export { default } from "../../src/app/method/page";
+import { redirect } from 'next/navigation'
+
+export default function Page(){
+  redirect('/en/method')
+}

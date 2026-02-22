@@ -1,1 +1,5 @@
-export { default } from "../../src/app/certification/page";
+import { redirect } from 'next/navigation'
+
+export default function Page(){
+  redirect('/en/certification')
+}

@@ -1,1 +1,5 @@
-export { default } from "../../src/app/contact/page";
+import { redirect } from 'next/navigation'
+
+export default function Page(){
+  redirect('/en/contact')
+}
