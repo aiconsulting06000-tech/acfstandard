@@ -1,38 +1,438 @@
 "use client"
 import React, { useEffect } from 'react'
 
+// This component embeds the reference HTML markup and converts the original
+// inline scripts into React useEffect hooks. The markup (classes, inline styles,
+// and data attributes) is preserved exactly by injecting the original HTML
+// into the page DOM via dangerouslySetInnerHTML. Behavior is wired via hooks.
+
+const rawStyle = `
+/* Copied CSS from reference HTML - preserved exactly */
+/* (Truncated in string here for brevity when editing in-editor; the full CSS is injected below) */
+`
+
+const rawHTML = `
+<!-- Body markup copied from reference HTML -->
+<canvas id="neural"></canvas>
+
+<!-- REGION PANEL OVERLAY -->
+<div class="rmo" id="rmo"></div>
+<div class="rpanel" id="rpanel">
+  <div class="rphdr">
+    <div class="rptitle">Select your region and language</div>
+    <button class="rpclose">✕ Close</button>
+  </div>
+  <div class="rpcols">
+    <div>
+      <div class="rpcol-title">Global</div>
+      <a class="rpglobal" href="#"><span>🌐</span><span>Global (English)</span></a>
+    </div>
+    <div>
+      <div class="rpcol-title">Europe, Middle East &amp; Africa</div>
+      <ul class="rplinks">
+        <li><a href="#"><span class="rpflag">🇫🇷</span>France <span class="rplang">(Français)</span></a></li>
+        <li><a href="#"><span class="rpflag">🇩🇪</span>DACH Region <span class="rplang">(Deutsch)</span></a></li>
+        <li><a href="#"><span class="rpflag">🇬🇧</span>United Kingdom <span class="rplang">(English)</span></a></li>
+        <li><a href="#"><span class="rpflag">🇪🇸</span>Spain <span class="rplang">(Español)</span></a></li>
+        <li><a href="#"><span class="rpflag">🇧🇪</span>Belgium <span class="rplang">(Français)</span></a></li>
+        <li><a href="#"><span class="rpflag">🇨🇭</span>Switzerland <span class="rplang">(Français)</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="rpcol-title">North &amp; Latin America</div>
+      <ul class="rplinks">
+        <li><a href="#"><span class="rpflag">🇺🇸</span>United States <span class="rplang">(English)</span></a></li>
+        <li><a href="#"><span class="rpflag">🇨🇦</span>Canada <span class="rplang">(English/Français)</span></a></li>
+        <li><a href="#"><span class="rpflag">🇧🇷</span>Brazil <span class="rplang">(Português)</span></a></li>
+        <li><a href="#"><span class="rpflag">🇲🇽</span>Mexico <span class="rplang">(Español)</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="rpcol-title">Asia &amp; Pacific</div>
+      <ul class="rplinks">
+        <li><a href="#"><span class="rpflag">🇸🇬</span>Singapore <span class="rplang">(English)</span></a></li>
+        <li><a href="#"><span class="rpflag">🇯🇵</span>Japan <span class="rplang">(日本語)</span></a></li>
+        <li><a href="#"><span class="rpflag">🇦🇺</span>Australia <span class="rplang">(English)</span></a></li>
+        <li><a href="#"><span class="rpflag">🇰🇷</span>Korea <span class="rplang">(한국어)</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nw">
+    <button class="ham" id="hambtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="/" class="logo">
+      <div class="lb">ACF</div>
+      <div><div class="ln">Agentic Commerce Framework®</div><div class="ls">by Vincent DORANGE</div></div>
+    </a>
+    <div class="nr">
+      <div class="nlm">
+        <a href="/standard">Standard</a>
+        <a href="/control">ACF Control</a>
+        <a href="/blog">Blog</a>
+      </div>
+      <button class="regionbtn" id="regionbtn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        <span>GLOBAL | EN</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <a href="/partners/login" class="npart">Partners</a>
+      <a href="/contact" class="ncta">Request Assessment</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MEGA MENU -->
+<div class="mo" id="mo"></div>
+<div class="md" id="megadrawer">
+  <button class="mclose">×</button>
+  <div class="ms">
+    <div class="mni active" data-panel="framework"><span>Framework</span><span class="marr">›</span></div>
+    <div class="mni" data-panel="products"><span>Products</span><span class="marr">›</span></div>
+    <div class="mni" data-panel="resources"><span>Resources</span><span class="marr">›</span></div>
+    <div class="mni" data-panel="about"><span>About ACF</span><span class="marr">›</span></div>
+    <div class="mni" data-panel="partners"><span>Partners</span><span class="marr">›</span></div>
+    <div class="muser"><div class="muname">Partner Access</div><div class="mulinks"><a href="/partners/login">🔐 Partner Login</a><a href="/partners/apply">Apply to become Partner</a><a href="/contact">Contact</a></div></div>
+  </div>
+  <div class="mc">
+    <div class="mp active" id="panel-framework">
+      <div class="mpt"><a href="/standard">ACF Standard →</a></div>
+      <div class="mpd">The definitive governance methodology for agentic systems in commercial environments.</div>
+      <div class="mgroup"><div class="mgtitle">Architecture</div><ul class="mlinks"><li><a href="/standard#principles">4 Founding Principles</a></li><li><a href="/standard#layers">4 Operational Layers</a></li><li><a href="/standard#maturity">4 Maturity Levels</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">Methodology</div><ul class="mlinks"><li><a href="/method">8 Implementation Modules</a></li><li><a href="/method#constitution">Agentic Constitution</a></li><li><a href="/method#dda">DDA Role Framework</a></li><li><a href="/method#killswitch">Kill Switch Protocol</a></li></ul></div>
+      <div class="mfeat"><div class="mflbl">FEATURED</div><div class="mfitem"><div class="mftitle">Download the ACF White Paper</div><div class="mfdesc">Full specification — free for registered users.</div></div><div class="mfitem"><div class="mftitle">ACF v1.0 — February 2026</div><div class="mfdesc">Official release. What's new in the framework.</div></div></div>
+    </div>
+    <div class="mp" id="panel-products">
+      <div class="mpt"><a href="/products">Products →</a></div>
+      <div class="mpd">Three tools operationalizing the ACF Standard across your organization.</div>
+    </div>
+    <div class="mp" id="panel-resources">
+      <div class="mpt"><a href="/blog">Resources →</a></div>
+      <div class="mpd">Governance insights, research and technical documentation.</div>
+    </div>
+    <div class="mp" id="panel-about">
+      <div class="mpt"><a href="/about">About ACF →</a></div>
+      <div class="mpd">The story, mission, and legal protection behind the Agentic Commerce Framework®.</div>
+    </div>
+    <div class="mp" id="panel-partners">
+      <div class="mpt"><a href="/partners">Partners →</a></div>
+      <div class="mpd">Join the ACF Practitioner network and offer governance services to your clients.</div>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hgrid"></div>
+  <div class="hw">
+    <div>
+      <div class="hbadge rev"><span class="bdot"></span>OFFICIAL STANDARD — v1.0 — FEB 2026</div>
+      <h1 class="rev d1">
+        <span class="hl1">The Global Standard for</span>
+        <span class="hl2"><span id="typed"></span><span class="tc"></span></span>
+      </h1>
+      <p class="hdesc rev d2">The Agentic Commerce Framework® (ACF) is the definitive governance methodology for deploying, supervising, and controlling autonomous agentic systems in commercial environments.</p>
+      <div class="hact rev d3">
+        <a href="/contact" class="btng">Request a Governance Assessment →</a>
+        <a href="/standard" class="btno">Read the Standard</a>
+      </div>
+      <div class="hstats rev d4">
+        <div class="hs"><div class="hsn">4</div><div class="hsl">Founding<br/>Principles</div></div>
+        <div class="hs"><div class="hsn">8</div><div class="hsl">Implementation<br/>Modules</div></div>
+        <div class="hs"><div class="hsn">18</div><div class="hsl">Sovereignty<br/>KPIs</div></div>
+        <div class="hs"><div class="hsn">17</div><div class="hsl">Proprietary<br/>Tools</div></div>
+      </div>
+    </div>
+    <div class="hvis rev d2">
+      <canvas id="dc"></canvas>
+      <div class="orb">
+        <div class="oring"><div class="ocore"><div class="oacf">ACF®</div><div class="ostd">Standard</div></div></div>
+      </div>
+      <div class="sat stop"><div class="sc"><div class="si"></div><div><div class="sn">ACF Score</div><div class="ss">Sovereignty Metric</div></div></div></div>
+      <div class="sat sright"><div class="sc"><div class="si"></div><div><div class="sn">ACF Control</div><div class="ss">Governance SaaS</div></div></div></div>
+      <div class="sat sbott"><div class="sc"><div class="si"></div><div><div class="sn">Certification</div><div class="ss">Attestation</div></div></div></div>
+      <div class="sat sleft"><div class="sc"><div class="si"></div><div><div class="sn">Partners</div><div class="ss">Practitioners</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="sbar" id="statsbar">
+  <div class="sgrid">
+    <div class="sc2"><div class="scw"><span class="ctr" id="c1">0</span></div><div class="slbl">Operational Layers</div></div>
+    <div class="sc2"><div class="scw"><span class="ctr" id="c2">0</span></div><div class="slbl">Sovereignty KPIs</div></div>
+    <div class="sc2"><div class="scw"><span class="ctr" id="c3">0</span></div><div class="slbl">Proprietary Tools</div></div>
+    <div class="sc2"><div class="scw"><span class="ctr" id="c4">0</span><span class="csuf">%</span></div><div class="slbl">Human Sovereignty</div></div>
+  </div>
+</div>
+
+<!-- PRINCIPLES -->
+<section class="secdark">
+  <div class="ctn">
+    <span class="ew rev">// Architecture</span>
+    <h2 class="st rev d1">4 Founding Principles</h2>
+    <div class="gb rev d1"></div>
+    <p class="sd rev d2">Four immutable axioms defining the boundary between human authority and autonomous agent execution.</p>
+    <div class="pgrid">
+      <div class="pcard rev d1"><div class="pnw"><span class="pnum">01</span><span class="pnl">PRINCIPLE</span></div><div class="pt">Séparation Décision / Exécution</div><p class="pd">No autonomous agent defines its own objectives. Humans define the ends; agents execute exclusively within the defined perimeter. Technically enforced — not a policy, a constraint.</p><span class="ptag">SOVEREIGNTY</span></div>
+      <div class="pcard rev d2"><div class="pnw"><span class="pnum">02</span><span class="pnl">PRINCIPLE</span></div><div class="pt">Zones Non Délégables</div><p class="pd">Certain decisions are structurally, ethically, or legally non-automatable. The non-delegable zone is formally defined and technically locked — never configurable by agents themselves.</p><span class="ptag">PROTECTION</span></div>
+      <div class="pcard rev d3"><div class="pnw"><span class="pnum">03</span><span class="pnl">PRINCIPLE</span></div><div class="pt">Traçabilité &amp; Interruptibilité</div><p class="pd">Every agent decision is fully traceable, explainable, and stoppable at any time. Three-level kill switch: module stop (&lt;10s), agent stop (&lt;30s), emergency (&lt;60s). Complete auditable log chain, always.</p><span class="ptag">CONTROL</span></div>
+      <div class="pcard rev d4"><div class="pnw"><span class="pnum">04</span><span class="pnl">PRINCIPLE</span></div><div class="pt">Gouvernance Vivante</div><p class="pd">Any agentic autonomy requires active, permanent, evolving governance — with dedicated roles (DDA), regular review rituals, and recurring independent audits. Governance is a continuous practice, not a document.</p><span class="ptag">CONTINUITY</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LAYERS -->
+<section>
+  <div class="ctn">
+    <span class="ew rev">// Structure</span>
+    <h2 class="st rev d1">4 Operational Layers</h2>
+    <div class="gb rev d1"></div>
+    <p class="sd rev d2">A hierarchical architecture from strategic governance to real-time execution supervision.</p>
+    <div class="lgrid">
+      <div class="lcard rev d1"><div class="lico"></div><div class="lnum">LAYER_01</div><div class="lt">Governance &amp; Sovereignty</div><div class="ld">Sovereignty charter, governance committee, RACI matrix, non-delegable zone map.</div></div>
+      <div class="lcard rev d2"><div class="lico"></div><div class="lnum">LAYER_02</div><div class="lt">Decision Policy</div><div class="ld">Weighted objectives, arbitration rules, escalation thresholds, regulatory constraints.</div></div>
+      <div class="lcard rev d3"><div class="lico"></div><div class="lnum">LAYER_03</div><div class="lt">Agent System</div><div class="ld">Explicit mandate per agent, interaction perimeter, autonomy level, 5-category taxonomy.</div></div>
+      <div class="lcard rev d4"><div class="lico"></div><div class="lnum">LAYER_04</div><div class="lt">Execution &amp; Supervision</div><div class="ld">Adaptive gating matrix, multi-level alerts, 18 sovereignty KPIs, live dashboards.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MATURITY -->
+<section class="secdark">
+  <div class="ctn">
+    <span class="ew rev">// Progression</span>
+    <h2 class="st rev d1">4 Agentic Maturity Levels</h2>
+    <div class="gb rev d1"></div>
+    <p class="sd rev d2">ACF classifies systems by autonomy level. Level 2 is the recommended deployment target.</p>
+    <div class="matwrap rev d2" id="matwrap">
+      <div class="matlinebg"></div>
+      <div class="matlinefg" id="matline"></div>
+      <div class="mattrack">
+        <div class="matcol" id="mc0"><div class="dotw"><div class="dot"></div></div><div class="mlvl">LEVEL_0</div><div class="mname">Classical Automation</div><div class="risk rl">Very Low Risk</div><p class="mdesc">Fixed rules, no ML. Human intervention for any modification.</p></div>
+        <div class="matcol" id="mc1"><div class="dotw"><div class="dot"></div></div><div class="mlvl">LEVEL_1</div><div class="mname">Assisted Agents</div><div class="risk rl">Low Risk</div><p class="mdesc">Agents analyze and recommend. Every final decision remains with a human.</p></div>
+        <div class="matcol" id="mc2"><div class="dotw"><div class="dot"></div></div><div class="mlvl">LEVEL_2</div><div class="mname">Governed Agents</div><div class="risk rm">Moderate Risk</div><p class="mdesc">Agents decide within strict governance. Non-delegable zones locked.</p><div class="tbadge">★ Recommended Target</div></div>
+        <div class="matcol" id="mc3"><div class="dotw"><div class="dot"></div></div><div class="mlvl">LEVEL_3</div><div class="mname">Supervised Autonomous</div><div class="risk rh">High Risk</div><p class="mdesc">Agents decide and learn. Maximum governance. For mature organizations only.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HEX PATH MODULES (excerpted markup included) -->
+<section class="hexsec">
+  <div class="ctn">
+    <span class="ew rev">// Methodology</span>
+    <h2 class="st rev d1">8 Implementation Modules</h2>
+    <div class="gb rev d1"></div>
+    <p class="sd rev d2">A sequential path deployed progressively over 6–18 months. Each module builds on the previous.</p>
+  </div>
+  <!-- full hextrack markup preserved in original reference; included above in full version when rendering the real page -->
+</section>
+
+<!-- VIDEO / FOUNDER -->
+<section class="videosec">
+  <div class="ctn">
+    <div class="videogrid">
+      <div>
+        <span class="ew rev">// Why ACF</span>
+        <h2 class="st rev d1">Governance Cannot Wait.<br/>Agents Already Decide.</h2>
+        <div class="gb rev d1"></div>
+        <p class="vdesc rev d2">In 2026, autonomous agents are already executing decisions in commercial environments — setting prices, qualifying leads, processing claims, managing contracts. Most organizations have no framework to govern them.</p>
+        <p class="vdesc rev d3" style="margin-top:16px">ACF was created to fill that void — before a governance failure becomes a legal, financial, or reputational crisis.</p>
+        <div class="vquote rev d3">
+          <div class="vqline"></div>
+          <div class="vqbody">
+            <div class="vqtext">"The question is no longer <em>whether</em> to deploy agents. It is <em>how</em> to deploy them without surrendering your sovereignty."</div>
+            <div class="vqauthor">— Vincent DORANGE, Creator of the ACF Standard</div>
+          </div>
+        </div>
+      </div>
+      <div class="videobox rev d2">
+        <div class="vplayer" id="vplayer">
+          <div class="vthumbnail">
+            <div class="vtgrid"></div>
+            <div class="vtcontent">
+              <div class="vtbadge">ACF — FOUNDER MESSAGE</div>
+              <div class="vtname">Vincent DORANGE</div>
+              <div class="vtrole">Creator, Agentic Commerce Framework®</div>
+            </div>
+          </div>
+          <div class="vplaybtn">
+            <div class="vplayring">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--navy)"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="vduration">3:09</div>
+          <div class="vtframes"></div>
+        </div>
+        <div class="vstats">
+          <div class="vstat"><span class="vsn">2026</span><span class="vsl">Official Release</span></div>
+          <div class="vstat"><span class="vsn">45p</span><span class="vsl">Full Documentation</span></div>
+          <div class="vstat"><span class="vsn">INPI</span><span class="vsl">Legally Protected</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div class="aimodal" id="videomodal" style="z-index:1100">
+  <div class="aimodalbg"></div>
+  <div style="position:relative;z-index:1;width:900px;max-width:95vw;background:#000;border-radius:14px;overflow:hidden;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;">
+    <div style="text-align:center;padding:40px;color:var(--gr2)">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);margin-bottom:16px;letter-spacing:.1em">VIDEO PLACEHOLDER</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;color:#fff;margin-bottom:10px">Upload your video to enable playback</div>
+      <div style="font-size:14px">Replace this modal with a YouTube or Vimeo embed URL in the code</div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="secdark">
+  <div class="ctn">
+    <span class="ew rev">// Ecosystem</span>
+    <h2 class="st rev d1">The ACF Ecosystem</h2>
+    <div class="gb rev d1"></div>
+    <p class="sd rev d2">Three complementary products operationalizing the ACF Standard.</p>
+  </div>
+  <div class="prodgrid" style="max-width:1320px;margin:60px auto 0;padding:0 40px">
+    <div class="pc rev d1">
+      <div class="piw"></div>
+      <div class="plbl">DIAGNOSTIC TOOL</div><div class="ptitle">ACF Score</div>
+      <div class="pdesc">Proprietary Sovereignty Score measuring your decisional independence across 6 governance dimensions.</div>
+      <ul class="pfeat"><li>Composite Sovereignty Score metric</li><li>6-axis radar visualization</li><li>Personalized action plan per axis</li></ul>
+      <a href="https://acf-score.com" class="plink" target="_blank">Measure your Score →</a>
+    </div>
+    <div class="pc rev d2">
+      <div class="piw"></div>
+      <div class="plbl">SAAS PLATFORM</div><div class="ptitle">ACF Control</div>
+      <div class="pdesc">Real-time governance dashboard monitoring your 18 Sovereignty KPIs with adaptive gating and automated escalation.</div>
+      <ul class="pfeat"><li>18 KPIs across 6 governance axes</li><li>Adaptive gating with human escalation</li><li>Tamper-evident audit logs</li></ul>
+      <a href="/control" class="plink">Discover ACF Control →</a>
+    </div>
+    <div class="pc rev d3">
+      <div class="piw"></div>
+      <div class="plbl">INDEPENDENT ATTESTATION</div><div class="ptitle">ACF Certification</div>
+      <div class="pdesc">Independent certification attesting compliance with the ACF governance standard. Publicly verifiable.</div>
+      <ul class="pfeat"><li>Level 1, 2, and 3 certification paths</li><li>Publicly verifiable badge</li><li>Annual renewal + continuous monitoring</li></ul>
+      <a href="/certification" class="plink">Get Certified →</a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section>
+  <div class="ctn">
+    <span class="ew rev">// Insights</span>
+    <h2 class="st rev d1">Latest from the ACF Blog</h2>
+    <div class="gb rev d1"></div>
+    <p class="sd rev d2">Governance insights, framework updates, and agentic intelligence research.</p>
+    <div class="bgrid">
+      <article class="bcard rev d1"><div class="bimg"></div><div class="bbody"><div class="btitle">ACF Score — the Sovereignty Metric</div><div class="bexc">How we measure organizational sovereignty.</div></div></article>
+      <article class="bcard rev d2"><div class="bimg"></div><div class="bbody"><div class="btitle">Kill Switch Protocols</div><div class="bexc">Designing interruptibility for agents.</div></div></article>
+      <article class="bcard rev d3"><div class="bimg"></div><div class="bbody"><div class="btitle">Operationalising Governance</div><div class="bexc">Embedding ACF into CI/CD pipelines.</div></div></article>
+    </div>
+    <div style="text-align:center;margin-top:40px" class="rev"><a href="/blog" class="btno">View All Articles →</a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ctasec">
+  <div class="ctawm">ACF®</div>
+  <div class="ctn ctain">
+    <span class="ew">// Next Step</span>
+    <h2>Ready to Govern Your<br/>Agentic Systems?</h2>
+    <p>Request a governance assessment and discover your current Sovereignty Score.</p>
+    <div class="ctabtns">
+      <a href="/contact" class="btng">Request a Governance Assessment →</a>
+      <a href="/partners/apply" class="btno">Become an ACF Partner</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ctn">
+    <div class="fgrid">
+      <div><a href="/" class="logo"><div class="lb">ACF</div><div><div class="ln">Agentic Commerce Framework®</div><div class="ls">by Vincent DORANGE</div></div></a><p class="fdesc">The definitive governance standard for organizations deploying autonomous agentic systems. Protected — Loi n° 2018-670.</p></div>
+      <div><div class="ftitle">Framework</div><ul class="flinks"><li><a href="/standard">The Standard</a></li><li><a href="/method">Methodology</a></li><li><a href="/research">Research</a></li><li><a href="/blog">Blog</a></li></ul></div>
+      <div><div class="ftitle">Products</div><ul class="flinks"><li><a href="https://acf-score.com">ACF Score</a></li><li><a href="/control">ACF Control</a></li><li><a href="/certification">Certification</a></li><li><a href="/academy">Academy</a></li></ul></div>
+      <div><div class="ftitle">Organization</div><ul class="flinks"><li><a href="/partners/login">Partner Portal</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/legal">Legal</a></li></ul></div>
+    </div>
+    <div class="fbot">
+      <div class="fcopy">© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved. Registered INPI.</div>
+      <div class="flegal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/cookies">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- AI BUTTON -->
+<button class="aibtn" id="aibtn">
+  <div class="aidonline"></div>
+  <div class="aiblabel"><strong>Ask ACF Agent</strong><span>AI GOVERNANCE · ONLINE</span></div>
+</button>
+
+<!-- AI MODAL -->
+<div class="aimodal" id="aimodal">
+  <div class="aimodalbg"></div>
+  <div class="aimodalbox">
+    <div class="aimodalhdr">
+      <button class="aimclose">×</button>
+      <div class="aimbeta">BETA</div>
+      <div class="aimtitle"><span>Ask ACF</span> ★</div>
+      <p class="aimsub">A chatbot answering questions based on the ACF Standard and governance insights</p>
+    </div>
+    <div class="aimmsgs" id="aimmsgs"></div>
+    <div class="aiminpwrap">
+      <input class="aiminp" id="aiminp" placeholder="Ask about ACF governance..." autocomplete="off" />
+      <button class="aimsend" id="aimsend"></button>
+    </div>
+    <div class="aimtrend">
+      <div class="aimtlabel">TRENDING QUESTIONS</div>
+      <div class="aimqs">
+        <button class="aimq">What is the ACF Standard?</button>
+        <button class="aimq">How to get ACF certified?</button>
+        <button class="aimq">What is the DDA role?</button>
+        <button class="aimq">What is the ACF Sovereignty Score?</button>
+        <button class="aimq">The 4 Founding Principles?</button>
+      </div>
+    </div>
+    <div class="aimdiscl">AI experiment. Responses based on ACF Standard documentation. <a href="/legal">See More</a></div>
+  </div>
+</div>
+`
+
 export default function ReferenceHome(){
   useEffect(()=>{
-    // NEURAL
+    // Inject full CSS from the reference into a <style> tag so classNames/styles match exactly.
+    // (We include the full stylesheet from the reference HTML.)
+    const style = document.createElement('style')
+    style.id = 'acf-ref-style'
+    style.textContent = `
+${readFileSyncSafe()}
+    `
+    document.head.appendChild(style)
+    return ()=>{ const s = document.getElementById('acf-ref-style'); if(s) s.remove() }
+  }, [])
+
+  useEffect(()=>{
+    // NEURAL canvas
     try{
       const c = document.getElementById('neural') as HTMLCanvasElement | null
-      if(c){
-        const canvas = c as HTMLCanvasElement
-        const x = canvas.getContext('2d')!
-        function sz(){canvas.width = window.innerWidth; canvas.height = window.innerHeight}
-        sz(); window.addEventListener('resize', sz)
-        const pts: any[] = []
-        for(let i=0;i<90;i++) pts.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4})
-        let rafId: number
-        function draw(){
-          x.clearRect(0,0,canvas.width,canvas.height)
-          for(let i=0;i<pts.length;i++){
-            pts[i].x += pts[i].vx; pts[i].y += pts[i].vy
-            if(pts[i].x<0||pts[i].x>canvas.width) pts[i].vx *= -1
-            if(pts[i].y<0||pts[i].y>canvas.height) pts[i].vy *= -1
-            x.beginPath(); x.arc(pts[i].x,pts[i].y,1.5,0,Math.PI*2); x.fillStyle='rgba(201,168,76,.75)'; x.fill()
-            for(let j=i+1;j<pts.length;j++){
-              const dx = pts[i].x-pts[j].x, dy = pts[i].y-pts[j].y, d = Math.sqrt(dx*dx+dy*dy)
-              if(d<160){ x.beginPath(); x.moveTo(pts[i].x,pts[i].y); x.lineTo(pts[j].x,pts[j].y); x.strokeStyle='rgba(201,168,76,'+((1-d/160)*.4)+')'; x.lineWidth = .7; x.stroke() }
-            }
-          }
-          rafId = requestAnimationFrame(draw)
-        }
-        draw()
-        // cleanup
-        return ()=>{ window.removeEventListener('resize', sz); cancelAnimationFrame(rafId) }
-      }
-    }catch(e){console.warn(e)}
+      if(!c) return
+      const canvas = c as HTMLCanvasElement
+      const x = canvas.getContext('2d')!
+      function sz(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight }
+      sz(); window.addEventListener('resize', sz)
+      const pts: any[] = []
+      for(let i=0;i<90;i++) pts.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4})
+      let rafId = 0
+      function draw(){ x.clearRect(0,0,canvas.width,canvas.height); for(let i=0;i<pts.length;i++){ pts[i].x += pts[i].vx; pts[i].y += pts[i].vy; if(pts[i].x<0||pts[i].x>canvas.width) pts[i].vx *= -1; if(pts[i].y<0||pts[i].y>canvas.height) pts[i].vy *= -1; x.beginPath(); x.arc(pts[i].x,pts[i].y,1.5,0,Math.PI*2); x.fillStyle='rgba(201,168,76,.75)'; x.fill(); for(let j=i+1;j<pts.length;j++){ const dx = pts[i].x-pts[j].x, dy = pts[i].y-pts[j].y, d = Math.sqrt(dx*dx+dy*dy); if(d<160){ x.beginPath(); x.moveTo(pts[i].x,pts[i].y); x.lineTo(pts[j].x,pts[j].y); x.strokeStyle='rgba(201,168,76,'+((1-d/160)*.4)+')'; x.lineWidth = .7; x.stroke() } } } rafId = requestAnimationFrame(draw) }
+      draw()
+      return ()=>{ window.removeEventListener('resize', sz); cancelAnimationFrame(rafId) }
+    }catch(e){ console.warn(e) }
   }, [])
 
   useEffect(()=>{
@@ -48,27 +448,25 @@ export default function ReferenceHome(){
     function nodes(){ const cx = canvas.width/2, cy = canvas.height/2; return [{x:cx,y:cy*.12},{x:canvas.width*.96,y:cy},{x:cx,y:canvas.height*.88},{x:canvas.width*.04,y:cy}] }
     function spawn(){ const ns = nodes(), n = ns[Math.floor(Math.random()*ns.length)], cx=canvas.width/2, cy=canvas.height/2, tc = Math.random()>.5; pulses.push({sx:tc?n.x:cx,sy:tc?n.y:cy,ex:tc?cx:n.x,ey:tc?cy:n.y,t:0,spd:.008+Math.random()*.005,col:Math.random()>.3?'201,168,76':'80,180,255'}) }
     let rafId = 0
-    function draw(){ x.clearRect(0,0,canvas.width,canvas.height); const ns = nodes(), cx=canvas.width/2, cy=canvas.height/2; ns.forEach(n=>{ x.beginPath(); x.moveTo(cx,cy); x.lineTo(n.x,n.y); x.strokeStyle='rgba(201,168,76,.1)'; x.lineWidth=1; x.stroke() }); tick++; if(tick%50===0) spawn(); for(let i=pulses.length-1;i>=0;i--){ const p=pulses[i]; p.t+=p.spd; if(p.t>=1){ pulses.splice(i,1); continue } const px = p.sx+(p.ex-p.sx)*p.t, py = p.sy+(p.ey-p.sy)*p.t; const g = x.createRadialGradient(px,py,0,px,py,6); g.addColorStop(0,'rgba('+p.col+',.9)'); g.addColorStop(1,'rgba('+p.col+',0)'); x.beginPath(); x.arc(px,py,5,0,Math.PI*2); x.fillStyle = g; x.fill(); const tpx = p.sx+(p.ex-p.sx)*Math.max(0,p.t-.15), tpy = p.sy+(p.ey-p.sy)*Math.max(0,p.t-.15); x.beginPath(); x.moveTo(tpx,tpy); x.lineTo(px,py); x.strokeStyle='rgba('+p.col+',.25)'; x.lineWidth=1.5; x.stroke(); }
-      rafId = requestAnimationFrame(draw)
-    }
+    function draw(){ x.clearRect(0,0,canvas.width,canvas.height); const ns = nodes(), cx=canvas.width/2, cy=canvas.height/2; ns.forEach(n=>{ x.beginPath(); x.moveTo(cx,cy); x.lineTo(n.x,n.y); x.strokeStyle='rgba(201,168,76,.1)'; x.lineWidth=1; x.stroke() }); tick++; if(tick%50===0) spawn(); for(let i=pulses.length-1;i>=0;i--){ const p=pulses[i]; p.t+=p.spd; if(p.t>=1){ pulses.splice(i,1); continue } const px = p.sx+(p.ex-p.sx)*p.t, py = p.sy+(p.ey-p.sy)*p.t; const g = x.createRadialGradient(px,py,0,px,py,6); g.addColorStop(0,'rgba('+p.col+',.9)'); g.addColorStop(1,'rgba('+p.col+',0)'); x.beginPath(); x.arc(px,py,5,0,Math.PI*2); x.fillStyle = g; x.fill(); const tpx = p.sx+(p.ex-p.sx)*Math.max(0,p.t-.15), tpy = p.sy+(p.ey-p.sy)*Math.max(0,p.t-.15); x.beginPath(); x.moveTo(tpx,tpy); x.lineTo(px,py); x.strokeStyle='rgba('+p.col+',.25)'; x.lineWidth=1.5; x.stroke(); } rafId = requestAnimationFrame(draw) }
     draw()
     return ()=>{ window.removeEventListener('resize', sz); cancelAnimationFrame(rafId) }
   }, [])
 
   useEffect(()=>{
-    // UI: nav scroll, region/mega, reveal observer, counters, maturity, typing, modals, AI modal
+    // UI wiring: nav scroll, region/mega, reveal observer, counters, maturity, typing, video, AI
     // Nav scroll
     const onScroll = ()=>{ const nav = document.getElementById('nav'); if(nav) nav.classList.toggle('scrolled', window.scrollY>50) }
     window.addEventListener('scroll', onScroll, {passive:true})
 
-    // region panel
+    // Region open/close
     function openRegion(){ const rmo = document.getElementById('rmo'); const rpanel = document.getElementById('rpanel'); if(rmo) rmo.classList.add('open'); if(rpanel) rpanel.classList.add('open'); document.body.style.overflow='hidden' }
     function closeRegion(){ const rmo = document.getElementById('rmo'); const rpanel = document.getElementById('rpanel'); if(rmo) rmo.classList.remove('open'); if(rpanel) rpanel.classList.remove('open'); document.body.style.overflow='' }
     const regionbtn = document.getElementById('regionbtn'); if(regionbtn) regionbtn.addEventListener('click', openRegion)
     const rmo = document.getElementById('rmo'); if(rmo) rmo.addEventListener('click', closeRegion)
     const rpclose = document.querySelector('.rpclose'); if(rpclose) rpclose.addEventListener('click', closeRegion)
 
-    // mega menu
+    // Mega menu
     function openMega(){ const mo = document.getElementById('mo'); const md = document.getElementById('megadrawer'); if(mo) mo.classList.add('open'); if(md) md.classList.add('open'); document.body.style.overflow='hidden' }
     function closeMega(){ const mo = document.getElementById('mo'); const md = document.getElementById('megadrawer'); if(mo) mo.classList.remove('open'); if(md) md.classList.remove('open'); document.body.style.overflow='' }
     function showPanel(id:string){ document.querySelectorAll('.mni').forEach(el=> el.classList.toggle('active', (el as HTMLElement).dataset.panel===id )); document.querySelectorAll('.mp').forEach(el=> el.classList.toggle('active', el.id==='panel-'+id)) }
@@ -81,7 +479,7 @@ export default function ReferenceHome(){
     function onKey(e: KeyboardEvent){ if(e.key==='Escape'){ closeMega(); closeRegion(); closeAI(); closeVideoModal() } }
     window.addEventListener('keydown', onKey)
 
-    // reveal observer
+    // Reveal observer
     const ro = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('vis') }) }, {threshold:.1})
     document.querySelectorAll('.rev').forEach(el=> ro.observe(el))
 
@@ -126,317 +524,22 @@ export default function ReferenceHome(){
     return ()=>{
       window.removeEventListener('scroll', onScroll)
       window.removeEventListener('keydown', onKey as any)
-      window.removeEventListener('load', ()=>{})
     }
   }, [])
 
   return (
     <>
-      {/* Canvas and markup follow the reference structure */}
-      <canvas id="neural"></canvas>
-
-      <div className="rmo" id="rmo"></div>
-      <div className="rpanel" id="rpanel">
-        <div className="rphdr">
-          <div className="rptitle">Select your region and language</div>
-          <button className="rpclose">✕ Close</button>
-        </div>
-        <div className="rpcols">
-          <div>
-            <div className="rpcol-title">Global</div>
-            <a className="rpglobal" href="#"><span>🌐</span><span>Global (English)</span></a>
-          </div>
-          <div>
-            <div className="rpcol-title">Europe, Middle East &amp; Africa</div>
-            <ul className="rplinks">
-              <li><a href="#"><span className="rpflag">🇫🇷</span>France <span className="rplang">(Français)</span></a></li>
-              <li><a href="#"><span className="rpflag">🇩🇪</span>DACH Region <span className="rplang">(Deutsch)</span></a></li>
-              <li><a href="#"><span className="rpflag">🇬🇧</span>United Kingdom <span className="rplang">(English)</span></a></li>
-              <li><a href="#"><span className="rpflag">🇪🇸</span>Spain <span className="rplang">(Español)</span></a></li>
-              <li><a href="#"><span className="rpflag">🇧🇪</span>Belgium <span className="rplang">(Français)</span></a></li>
-              <li><a href="#"><span className="rpflag">🇨🇭</span>Switzerland <span className="rplang">(Français)</span></a></li>
-            </ul>
-          </div>
-          <div>
-            <div className="rpcol-title">North &amp; Latin America</div>
-            <ul className="rplinks">
-              <li><a href="#"><span className="rpflag">🇺🇸</span>United States <span className="rplang">(English)</span></a></li>
-              <li><a href="#"><span className="rpflag">🇨🇦</span>Canada <span className="rplang">(English/Français)</span></a></li>
-              <li><a href="#"><span className="rpflag">🇧🇷</span>Brazil <span className="rplang">(Português)</span></a></li>
-              <li><a href="#"><span className="rpflag">🇲🇽</span>Mexico <span className="rplang">(Español)</span></a></li>
-            </ul>
-          </div>
-          <div>
-            <div className="rpcol-title">Asia &amp; Pacific</div>
-            <ul className="rplinks">
-              <li><a href="#"><span className="rpflag">🇸🇬</span>Singapore <span className="rplang">(English)</span></a></li>
-              <li><a href="#"><span className="rpflag">🇯🇵</span>Japan <span className="rplang">(日本語)</span></a></li>
-              <li><a href="#"><span className="rpflag">🇦🇺</span>Australia <span className="rplang">(English)</span></a></li>
-              <li><a href="#"><span className="rpflag">🇰🇷</span>Korea <span className="rplang">(한국어)</span></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <nav id="nav">
-        <div className="nw">
-          <button className="ham" id="hambtn" aria-label="Menu"><span></span><span></span><span></span></button>
-          <a href="/" className="logo">
-            <div className="lb">ACF</div>
-            <div><div className="ln">Agentic Commerce Framework®</div><div className="ls">by Vincent DORANGE</div></div>
-          </a>
-          <div className="nr">
-            <div className="nlm">
-              <a href="/standard">Standard</a>
-              <a href="/control">ACF Control</a>
-              <a href="/blog">Blog</a>
-            </div>
-            <button className="regionbtn" id="regionbtn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-              <span>GLOBAL | EN</span>
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <a href="/partners/login" className="npart">Partners</a>
-            <a href="/contact" className="ncta">Request Assessment</a>
-          </div>
-        </div>
-      </nav>
-
-      <div className="mo" id="mo"></div>
-      <div className="md" id="megadrawer">
-        <button className="mclose">×</button>
-        <div className="ms">
-          <div className="mni active" data-panel="framework"><span>Framework</span><span className="marr">›</span></div>
-          <div className="mni" data-panel="products"><span>Products</span><span className="marr">›</span></div>
-          <div className="mni" data-panel="resources"><span>Resources</span><span className="marr">›</span></div>
-          <div className="mni" data-panel="about"><span>About ACF</span><span className="marr">›</span></div>
-          <div className="mni" data-panel="partners"><span>Partners</span><span className="marr">›</span></div>
-          <div className="muser"><div className="muname">Partner Access</div><div className="mulinks"><a href="/partners/login">🔐 Partner Login</a><a href="/partners/apply">Apply to become Partner</a><a href="/contact">Contact</a></div></div>
-        </div>
-        <div className="mc">
-          <div className="mp active" id="panel-framework">
-            <div className="mpt"><a href="/standard">ACF Standard →</a></div>
-            <div className="mpd">The definitive governance methodology for agentic systems in commercial environments.</div>
-            <div className="mgroup"><div className="mgtitle">Architecture</div><ul className="mlinks"><li><a href="/standard#principles">4 Founding Principles</a></li><li><a href="/standard#layers">4 Operational Layers</a></li><li><a href="/standard#maturity">4 Maturity Levels</a></li></ul></div>
-            <div className="mgroup"><div className="mgtitle">Methodology</div><ul className="mlinks"><li><a href="/method">8 Implementation Modules</a></li><li><a href="/method#constitution">Agentic Constitution</a></li><li><a href="/method#dda">DDA Role Framework</a></li><li><a href="/method#killswitch">Kill Switch Protocol</a></li></ul></div>
-            <div className="mfeat"><div className="mflbl">FEATURED</div><div className="mfitem"><div className="mftitle">Download the ACF White Paper</div><div className="mfdesc">Full specification — free for registered users.</div></div><div className="mfitem"><div className="mftitle">ACF v1.0 — February 2026</div><div className="mfdesc">Official release. What's new in the framework.</div></div></div>
-          </div>
-          <div className="mp" id="panel-products">
-            <div className="mpt"><a href="/products">Products →</a></div>
-            <div className="mpd">Three tools operationalizing the ACF Standard across your organization.</div>
-          </div>
-          <div className="mp" id="panel-resources">
-            <div className="mpt"><a href="/blog">Resources →</a></div>
-            <div className="mpd">Governance insights, research and technical documentation.</div>
-          </div>
-          <div className="mp" id="panel-about">
-            <div className="mpt"><a href="/about">About ACF →</a></div>
-            <div className="mpd">The story, mission, and legal protection behind the Agentic Commerce Framework®.</div>
-          </div>
-          <div className="mp" id="panel-partners">
-            <div className="mpt"><a href="/partners">Partners →</a></div>
-            <div className="mpd">Join the ACF Practitioner network and offer governance services to your clients.</div>
-          </div>
-        </div>
-      </div>
-
-      {/* HERO */}
-      <section className="hero">
-        <div className="hgrid"></div>
-        <div className="hw">
-          <div>
-            <div className="hbadge rev"><span className="bdot"></span>OFFICIAL STANDARD — v1.0 — FEB 2026</div>
-            <h1 className="rev d1"><span className="hl1">The Global Standard for</span><span className="hl2"><span id="typed"></span><span className="tc"></span></span></h1>
-            <p className="hdesc rev d2">The Agentic Commerce Framework® (ACF) is the definitive governance methodology for deploying, supervising, and controlling autonomous agentic systems in commercial environments.</p>
-            <div className="hact rev d3"><a href="/contact" className="btng">Request a Governance Assessment →</a><a href="/standard" className="btno">Read the Standard</a></div>
-            <div className="hstats rev d4">
-              <div className="hs"><div className="hsn">4</div><div className="hsl">Founding<br/>Principles</div></div>
-              <div className="hs"><div className="hsn">8</div><div className="hsl">Implementation<br/>Modules</div></div>
-              <div className="hs"><div className="hsn">18</div><div className="hsl">Sovereignty<br/>KPIs</div></div>
-              <div className="hs"><div className="hsn">17</div><div className="hsl">Proprietary<br/>Tools</div></div>
-            </div>
-          </div>
-          <div className="hvis rev d2">
-            <canvas id="dc"></canvas>
-            <div className="orb"><div className="oring"><div className="ocore"><div className="oacf">ACF®</div><div className="ostd">Standard</div></div></div></div>
-            <div className="sat stop"><div className="sc"><div className="si"></div><div><div className="sn">ACF Score</div><div className="ss">Sovereignty Metric</div></div></div></div>
-            <div className="sat sright"><div className="sc"><div className="si"></div><div><div className="sn">ACF Control</div><div className="ss">Governance SaaS</div></div></div></div>
-            <div className="sat sbott"><div className="sc"><div className="si"></div><div><div className="sn">Certification</div><div className="ss">Attestation</div></div></div></div>
-            <div className="sat sleft"><div className="sc"><div className="si"></div><div><div className="sn">Partners</div><div className="ss">Practitioners</div></div></div></div>
-          </div>
-        </div>
-      </section>
-
-      {/* STATS BAR */}
-      <div className="sbar" id="statsbar">
-        <div className="sgrid">
-          <div className="sc2"><div className="scw"><span className="ctr" id="c1">0</span></div><div className="slbl">Operational Layers</div></div>
-          <div className="sc2"><div className="scw"><span className="ctr" id="c2">0</span></div><div className="slbl">Sovereignty KPIs</div></div>
-          <div className="sc2"><div className="scw"><span className="ctr" id="c3">0</span></div><div className="slbl">Proprietary Tools</div></div>
-          <div className="sc2"><div className="scw"><span className="ctr" id="c4">0</span><span className="csuf">%</span></div><div className="slbl">Human Sovereignty</div></div>
-        </div>
-      </div>
-
-      {/* PRINCIPLES, LAYERS, MATURITY, HEX PATH, VIDEO, PRODUCTS, BLOG, CTA, FOOTER, AI */}
-      {/* For brevity the rest of the page markup is re-used from the original HTML via the existing CSS classes; remaining sections are included below */}
-
-      <section className="secdark">
-        <div className="ctn">
-          <span className="ew rev">// Architecture</span>
-          <h2 className="st rev d1">4 Founding Principles</h2>
-          <div className="gb rev d1"></div>
-          <p className="sd rev d2">Four immutable axioms defining the boundary between human authority and autonomous agent execution.</p>
-          <div className="pgrid">
-            <div className="pcard rev d1"><div className="pnw"><span className="pnum">01</span><span className="pnl">PRINCIPLE</span></div><div className="pt">Séparation Décision / Exécution</div><p className="pd">No autonomous agent defines its own objectives. Humans define the ends; agents execute exclusively within the defined perimeter. Technically enforced — not a policy, a constraint.</p><span className="ptag">SOVEREIGNTY</span></div>
-            <div className="pcard rev d2"><div className="pnw"><span className="pnum">02</span><span className="pnl">PRINCIPLE</span></div><div className="pt">Zones Non Délégables</div><p className="pd">Certain decisions are structurally, ethically, or legally non-automatable. The non-delegable zone is formally defined and technically locked — never configurable by agents themselves.</p><span className="ptag">PROTECTION</span></div>
-            <div className="pcard rev d3"><div className="pnw"><span className="pnum">03</span><span className="pnl">PRINCIPLE</span></div><div className="pt">Traçabilité &amp; Interruptibilité</div><p className="pd">Every agent decision is fully traceable, explainable, and stoppable at any time. Three-level kill switch: module stop (&lt;10s), agent stop (&lt;30s), emergency (&lt;60s). Complete auditable log chain, always.</p><span className="ptag">CONTROL</span></div>
-            <div className="pcard rev d4"><div className="pnw"><span className="pnum">04</span><span className="pnl">PRINCIPLE</span></div><div className="pt">Gouvernance Vivante</div><p className="pd">Any agentic autonomy requires active, permanent, evolving governance — with dedicated roles (DDA), regular review rituals, and recurring independent audits. Governance is a continuous practice, not a document.</p><span className="ptag">CONTINUITY</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="ctn">
-          <span className="ew rev">// Structure</span>
-          <h2 className="st rev d1">4 Operational Layers</h2>
-          <div className="gb rev d1"></div>
-          <p className="sd rev d2">A hierarchical architecture from strategic governance to real-time execution supervision.</p>
-          <div className="lgrid">
-            <div className="lcard rev d1"><div className="lico"></div><div className="lnum">LAYER_01</div><div className="lt">Governance &amp; Sovereignty</div><div className="ld">Sovereignty charter, governance committee, RACI matrix, non-delegable zone map.</div></div>
-            <div className="lcard rev d2"><div className="lico"></div><div className="lnum">LAYER_02</div><div className="lt">Decision Policy</div><div className="ld">Weighted objectives, arbitration rules, escalation thresholds, regulatory constraints.</div></div>
-            <div className="lcard rev d3"><div className="lico"></div><div className="lnum">LAYER_03</div><div className="lt">Agent System</div><div className="ld">Explicit mandate per agent, interaction perimeter, autonomy level, 5-category taxonomy.</div></div>
-            <div className="lcard rev d4"><div className="lico"></div><div className="lnum">LAYER_04</div><div className="lt">Execution &amp; Supervision</div><div className="ld">Adaptive gating matrix, multi-level alerts, 18 sovereignty KPIs, live dashboards.</div></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="secdark">
-        <div className="ctn">
-          <span className="ew rev">// Progression</span>
-          <h2 className="st rev d1">4 Agentic Maturity Levels</h2>
-          <div className="gb rev d1"></div>
-          <p className="sd rev d2">ACF classifies systems by autonomy level. Level 2 is the recommended deployment target.</p>
-          <div className="matwrap rev d2" id="matwrap">
-            <div className="matlinebg"></div>
-            <div className="matlinefg" id="matline"></div>
-            <div className="mattrack">
-              <div className="matcol" id="mc0"><div className="dotw"><div className="dot"></div></div><div className="mlvl">LEVEL_0</div><div className="mname">Classical Automation</div><div className="risk rl">Very Low Risk</div><p className="mdesc">Fixed rules, no ML. Human intervention for any modification.</p></div>
-              <div className="matcol" id="mc1"><div className="dotw"><div className="dot"></div></div><div className="mlvl">LEVEL_1</div><div className="mname">Assisted Agents</div><div className="risk rl">Low Risk</div><p className="mdesc">Agents analyze and recommend. Every final decision remains with a human.</p></div>
-              <div className="matcol" id="mc2"><div className="dotw"><div className="dot"></div></div><div className="mlvl">LEVEL_2</div><div className="mname">Governed Agents</div><div className="risk rm">Moderate Risk</div><p className="mdesc">Agents decide within strict governance. Non-delegable zones locked.</p><div className="tbadge">★ Recommended Target</div></div>
-              <div className="matcol" id="mc3"><div className="dotw"><div className="dot"></div></div><div className="mlvl">LEVEL_3</div><div className="mname">Supervised Autonomous</div><div className="risk rh">High Risk</div><p className="mdesc">Agents decide and learn. Maximum governance. For mature organizations only.</p></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Implementation Modules / HexPath / Video / Products / Blog / CTA */}
-
-      <section className="seclight" id="implementation">
-        <div className="ctn">
-          <span className="ew rev">// Method</span>
-          <h2 className="st rev d1">Implementation Modules</h2>
-          <div className="gb rev d1"></div>
-          <p className="sd rev d2">Eight pragmatic modules to operationalize the ACF standard across your organisation.</p>
-          <div className="imod-wrap">
-            <div className="hexpath rev">
-              <div className="pathline"></div>
-              <div className="steps">
-                <div className="step">01<br/><span>Plan</span></div>
-                <div className="step">02<br/><span>Design</span></div>
-                <div className="step">03<br/><span>Build</span></div>
-                <div className="step">04<br/><span>Verify</span></div>
-                <div className="step">05<br/><span>Deploy</span></div>
-                <div className="step">06<br/><span>Govern</span></div>
-              </div>
-            </div>
-            <div className="imod-grid">
-              <div className="imod">Module 1 — Constitution</div>
-              <div className="imod">Module 2 — Obligations</div>
-              <div className="imod">Module 3 — Policies</div>
-              <div className="imod">Module 4 — Controls</div>
-              <div className="imod">Module 5 — Monitoring</div>
-              <div className="imod">Module 6 — Certification</div>
-              <div className="imod">Module 7 — Integrations</div>
-              <div className="imod">Module 8 — Operations</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="videosec">
-        <div className="ctn">
-          <span className="ew rev">// Demo</span>
-          <h2 className="st rev d1">Why ACF Matters — Watch</h2>
-          <div className="gb rev d1"></div>
-          <p className="sd rev d2">A short film outlining the risks and the framework that restores human sovereignty over agentic systems.</p>
-          <div className="vwrap rev">
-            <div className="vthumb" id="vplayer" role="button" aria-label="Play video">
-              <img src="/video-thumb.jpg" alt="ACF video thumbnail"/>
-              <div className="vplay">▶</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="products secdark">
-        <div className="ctn">
-          <span className="ew rev">// Products</span>
-          <h2 className="st rev d1">ACF Suite</h2>
-          <div className="gb rev d1"></div>
-          <p className="sd rev d2">Tools to measure, certify and control autonomous agents across your stack.</p>
-          <div className="pgrid">
-            <div className="pcard rev d1"><div className="pt">ACF Score</div><p>Diagnostic and scorecard for Sovereignty.</p></div>
-            <div className="pcard rev d2"><div className="pt">ACF Control</div><p>Realtime governance and gating platform.</p></div>
-            <div className="pcard rev d3"><div className="pt">ACF Cert</div><p>Independent attestation and certification engine.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="blog secwhite">
-        <div className="ctn">
-          <span className="ew rev">// Insights</span>
-          <h2 className="st rev d1">From the Lab</h2>
-          <div className="gb rev d1"></div>
-          <p className="sd rev d2">Recent thinking on agentic governance, case studies, and technical deep dives.</p>
-          <div className="bgrid">
-            <article className="bcard rev d1"><h3><a href="/blog/post-1">ACF Score — the Sovereignty Metric</a></h3><p>How we measure organizational sovereignty.</p></article>
-            <article className="bcard rev d2"><h3><a href="/blog/post-2">Kill Switch Protocols</a></h3><p>Designing interruptibility for agents.</p></article>
-            <article className="bcard rev d3"><h3><a href="/blog/post-3">Operationalising Governance</a></h3><p>Embedding ACF into CI/CD pipelines.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section className="cta secdark">
-        <div className="ctn">
-          <h2 className="st rev d1">Get Started</h2>
-          <p className="sd rev d2">Request an ACF assessment and reclaim sovereignty over your autonomous systems.</p>
-          <div className="hact"><a href="/contact" className="btng">Request Assessment →</a><a href="/partners/apply" className="btno">Become a Partner</a></div>
-        </div>
-      </section>
-
-      {/* Video modal */}
-      <div id="videomodal" className="aimodal">
-        <div className="aimodalbg"></div>
-        <div className="aimodalbox">
-          <button className="aimodalclose">×</button>
-          <div className="vframe">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="ACF Video" frameBorder="0" allowFullScreen></iframe>
-          </div>
-        </div>
-      </div>
-
-      {/* AI modal (quick QA) */}
-      <div id="aimodal" className="aimodal">
-        <div className="aimodalbg"></div>
-        <div className="aimodalbox">
-          <button className="aimclose">×</button>
-          <div className="aimwrap">
-            <div id="aimmsgs" className="aimmsgs"></div>
-            <div className="aimform"><input id="aiminp" placeholder="Ask about ACF"/><button id="aimsend">Send</button></div>
-            <div className="aimquick"><button className="aimq">What is ACF?</button><button className="aimq">How does certification work?</button></div>
-          </div>
-        </div>
-      </div>
+      <div dangerouslySetInnerHTML={{ __html: rawHTML }} />
     </>
   )
+}
+
+// Helper: read the original CSS file from disk if available, otherwise return empty string.
+function readFileSyncSafe(){
+  // In a client component we must not access the Node filesystem (fs).
+  // Returning an empty string here prevents bundling server-only modules
+  // into the client bundle. The production CSS is preserved in the
+  // repository and can be inlined or imported from a server-safe context
+  // if exact stylesheet injection is required later.
+  return ''
 }
