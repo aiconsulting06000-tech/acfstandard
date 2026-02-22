@@ -4,6 +4,8 @@ import StatsBar from '../../src/components/home/StatsBar'
 import Principles from '../../src/components/home/Principles'
 import Layers from '../../src/components/home/Layers'
 import Maturity from '../../src/components/home/Maturity'
+import Methodology from '../../src/components/home/Methodology'
+import Ecosystem from '../../src/components/home/Ecosystem'
 import HexPath from '../../src/components/home/HexPath'
 import VideoSection from '../../src/components/home/VideoSection'
 import Products from '../../src/components/home/Products'
@@ -22,6 +24,8 @@ export default function Page(){
       <Principles />
       <Layers />
       <Maturity />
+      <Methodology />
+      <Ecosystem />
       <HexPath />
       <VideoSection />
       <Products />

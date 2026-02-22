@@ -12,7 +12,21 @@ export default function DiagramCanvas(){
     sz(); window.addEventListener('resize', sz)
     let pulses: any[] = []
     let tick = 0
-    function nodes(){ const cx = el.width/2, cy = el.height/2; return [{x:cx,y:cy*.12},{x:el.width*.96,y:cy},{x:cx,y:el.height*.88},{x:el.width*.04,y:cy}] }
+    function nodes(){ 
+      const cx = el.width/2, cy = el.height/2
+      const r = Math.min(el.width, el.height) * 0.35
+      return [
+        {x:cx,y:cy*.12,label:'Governance'},
+        {x:el.width*.96,y:cy,label:'Decision',icon:'⚖️'},
+        {x:cx,y:el.height*.88,label:'Execution',icon:'⚙️'},
+        {x:el.width*.04,y:cy,label:'Agent',icon:'🤖'},
+        {x:cx+r*Math.cos(0),y:cy+r*Math.sin(0),label:'ACF Control',icon:'📊'},
+        {x:cx+r*Math.cos(Math.PI/5),y:cy+r*Math.sin(Math.PI/5),label:'Partners',icon:'🤝'},
+        {x:cx+r*Math.cos(2*Math.PI/5),y:cy+r*Math.sin(2*Math.PI/5),label:'Practitioners',icon:'👨‍💼'},
+        {x:cx+r*Math.cos(3*Math.PI/5),y:cy+r*Math.sin(3*Math.PI/5),label:'Certification',icon:'🏆'},
+        {x:cx+r*Math.cos(4*Math.PI/5),y:cy+r*Math.sin(4*Math.PI/5),label:'Attestation',icon:'✓'}
+      ]
+    }
     function spawn(){ const ns = nodes(); const n = ns[Math.floor(Math.random()*ns.length)]; const cx = el.width/2, cy = el.height/2; const tc = Math.random()>.5; pulses.push({sx: tc ? n.x : cx, sy: tc ? n.y : cy, ex: tc? cx : n.x, ey: tc? cy : n.y, t:0, spd:.008+Math.random()*.005, col: Math.random()>.3 ? '201,168,76' : '80,180,255'}) }
     function draw(){
       x.clearRect(0,0,el.width,el.height)
