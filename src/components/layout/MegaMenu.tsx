@@ -1,11 +1,10 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
 
-type Props = { open: boolean; onClose: ()=>void }
+type Props = { open: boolean; onClose: ()=>void; activePanel: string; setActivePanel: (p:string)=>void }
 
-export default function MegaMenu({open,onClose}:Props){
-  const [activePanel,setActivePanel] = useState('framework')
+export default function MegaMenu({open,onClose,activePanel,setActivePanel}:Props){
 
   return (
     <>
