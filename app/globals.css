@@ -6,8 +6,8 @@
   --bd:rgba(201,168,76,.2);--bd2:rgba(255,255,255,.07);
   --green:#22c55e;--green-glow:rgba(34,197,94,.4);
 }
-html{scroll-behavior:smooth}
-body{background:var(--navy);color:var(--w);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden}
+html{scroll-behavior:smooth;background:#050c1a !important;height:100%}
+body{background:#050c1a !important;color:#ffffff;font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden;min-height:100vh}
 #neural{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5}
 
 /* ═══ NAV ═══ */
