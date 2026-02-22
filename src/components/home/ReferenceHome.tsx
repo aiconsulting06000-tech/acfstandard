@@ -1,16 +1,6 @@
 "use client"
 import React, { useEffect } from 'react'
 
-// This component embeds the reference HTML markup and converts the original
-// inline scripts into React useEffect hooks. The markup (classes, inline styles,
-// and data attributes) is preserved exactly by injecting the original HTML
-// into the page DOM via dangerouslySetInnerHTML. Behavior is wired via hooks.
-
-const rawStyle = `
-/* Copied CSS from reference HTML - preserved exactly */
-/* (Truncated in string here for brevity when editing in-editor; the full CSS is injected below) */
-`
-
 const rawHTML = `
 <!-- Body markup copied from reference HTML -->
 <canvas id="neural"></canvas>
@@ -58,31 +48,6 @@ const rawHTML = `
     </div>
   </div>
 </div>
-
-<!-- NAV -->
-<nav id="nav">
-  <div class="nw">
-    <button class="ham md:hidden" id="hambtn" aria-label="Menu"><span></span><span></span><span></span></button>
-    <a href="/" class="logo">
-      <div class="lb">ACF</div>
-      <div><div class="ln">Agentic Commerce Framework®</div><div class="ls">by Vincent DORANGE</div></div>
-    </a>
-    <div class="nr hidden md:flex items-center gap-4">
-      <div class="nlm hidden md:flex items-center gap-4">
-        <a href="/standard">Standard</a>
-        <a href="/control">ACF Control</a>
-        <a href="/blog">Blog</a>
-      </div>
-      <button class="regionbtn" id="regionbtn">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-        <span>GLOBAL | EN</span>
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <a href="/partners/login" class="npart md:inline-flex hidden">Partners</a>
-      <a href="/contact" class="ncta w-full md:w-auto">Request Assessment</a>
-    </div>
-  </div>
-</nav>
 
 <!-- MEGA MENU -->
 <div class="mo" id="mo"></div>
@@ -220,7 +185,7 @@ const rawHTML = `
   </div>
 </section>
 
-<!-- HEX PATH MODULES (excerpted markup included) -->
+<!-- HEX PATH MODULES -->
 <section class="hexsec">
   <div class="ctn px-4 md:px-16">
     <span class="ew rev">// Methodology</span>
@@ -228,7 +193,6 @@ const rawHTML = `
     <div class="gb rev d1"></div>
     <p class="sd rev d2">A sequential path deployed progressively over 6–18 months. Each module builds on the previous.</p>
   </div>
-  <!-- full hextrack markup preserved in original reference; included above in full version when rendering the real page -->
 </section>
 
 <!-- VIDEO / FOUNDER -->
@@ -390,13 +354,9 @@ const rawHTML = `
 
 export default function ReferenceHome(){
   useEffect(()=>{
-    // Inject full CSS from the reference into a <style> tag so classNames/styles match exactly.
-    // (We include the full stylesheet from the reference HTML.)
     const style = document.createElement('style')
     style.id = 'acf-ref-style'
-    style.textContent = `
-${readFileSyncSafe()}
-    `
+    style.textContent = readFileSyncSafe()
     document.head.appendChild(style)
     return ()=>{ const s = document.getElementById('acf-ref-style'); if(s) s.remove() }
   }, [])
@@ -438,7 +398,6 @@ ${readFileSyncSafe()}
   }, [])
 
   useEffect(()=>{
-    // UI wiring: nav scroll, region/mega, reveal observer, counters, maturity, typing, video, AI
     // Nav scroll
     const onScroll = ()=>{ const nav = document.getElementById('nav'); if(nav) nav.classList.toggle('scrolled', window.scrollY>50) }
     window.addEventListener('scroll', onScroll, {passive:true})
@@ -446,15 +405,12 @@ ${readFileSyncSafe()}
     // Region open/close
     function openRegion(){ const rmo = document.getElementById('rmo'); const rpanel = document.getElementById('rpanel'); if(rmo) rmo.classList.add('open'); if(rpanel) rpanel.classList.add('open'); document.body.style.overflow='hidden' }
     function closeRegion(){ const rmo = document.getElementById('rmo'); const rpanel = document.getElementById('rpanel'); if(rmo) rmo.classList.remove('open'); if(rpanel) rpanel.classList.remove('open'); document.body.style.overflow='' }
-    const regionbtn = document.getElementById('regionbtn'); if(regionbtn) regionbtn.addEventListener('click', openRegion)
     const rmo = document.getElementById('rmo'); if(rmo) rmo.addEventListener('click', closeRegion)
     const rpclose = document.querySelector('.rpclose'); if(rpclose) rpclose.addEventListener('click', closeRegion)
 
-    // Mega menu
-    function openMega(){ const mo = document.getElementById('mo'); const md = document.getElementById('megadrawer'); if(mo) mo.classList.add('open'); if(md) md.classList.add('open'); document.body.style.overflow='hidden' }
+    // Mega menu (drawer only — no hambtn here, handled by Nav.tsx)
     function closeMega(){ const mo = document.getElementById('mo'); const md = document.getElementById('megadrawer'); if(mo) mo.classList.remove('open'); if(md) md.classList.remove('open'); document.body.style.overflow='' }
     function showPanel(id:string){ document.querySelectorAll('.mni').forEach(el=> el.classList.toggle('active', (el as HTMLElement).dataset.panel===id )); document.querySelectorAll('.mp').forEach(el=> el.classList.toggle('active', el.id==='panel-'+id)) }
-    const hambtn = document.getElementById('hambtn'); if(hambtn) hambtn.addEventListener('click', openMega)
     const moclose = document.getElementById('mo'); if(moclose) moclose.addEventListener('click', closeMega)
     const mclose = document.querySelector('.mclose'); if(mclose) mclose.addEventListener('click', closeMega)
     document.querySelectorAll('.mni').forEach(el=> el.addEventListener('click', ()=>{ const id = (el as HTMLElement).dataset.panel; if(id) showPanel(id) }))
@@ -504,7 +460,6 @@ ${readFileSyncSafe()}
     const aiminp = document.getElementById('aiminp') as HTMLInputElement | null; if(aiminp) aiminp.addEventListener('keydown', (e)=>{ if((e as KeyboardEvent).key === 'Enter'){ const v = aiminp.value.trim(); if(v){ aiminp.value=''; sendMsg(v) } } })
     document.querySelectorAll('.aimq').forEach(b=> b.addEventListener('click', ()=>{ const txt = (b as HTMLElement).textContent||''; const inp = document.getElementById('aiminp') as HTMLInputElement | null; if(inp) inp.value = txt; sendMsg(txt) }))
 
-    // cleanup
     return ()=>{
       window.removeEventListener('scroll', onScroll)
       window.removeEventListener('keydown', onKey as any)
@@ -518,12 +473,6 @@ ${readFileSyncSafe()}
   )
 }
 
-// Helper: read the original CSS file from disk if available, otherwise return empty string.
 function readFileSyncSafe(){
-  // In a client component we must not access the Node filesystem (fs).
-  // Returning an empty string here prevents bundling server-only modules
-  // into the client bundle. The production CSS is preserved in the
-  // repository and can be inlined or imported from a server-safe context
-  // if exact stylesheet injection is required later.
   return ''
 }
