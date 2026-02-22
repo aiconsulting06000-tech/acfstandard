@@ -11,7 +11,7 @@ export default function HexPath(){
 
   return (
     <section className="sec light" id="hexpath">
-      <div className="ctn">
+      <div className="ctn px-4 md:px-16">
         <span className="ew rev">// Journey</span>
         <h2 className="st rev d1">The Hex Path</h2>
         <div className="gb rev d1"></div>

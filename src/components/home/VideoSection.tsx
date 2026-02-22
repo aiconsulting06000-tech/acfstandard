@@ -11,7 +11,7 @@ export default function VideoSection(){
 
   return (
     <section className="sec dark" id="videosec">
-      <div className="ctn">
+      <div className="ctn px-4 md:px-16">
         <span className="ew rev">// Demo</span>
         <h2 className="st rev d1">See ACF In Action</h2>
         <div className="gb rev d1"></div>

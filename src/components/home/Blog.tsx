@@ -11,7 +11,7 @@ export default function Blog(){
 
   return (
     <section className="sec dark" id="blogsec">
-      <div className="ctn">
+      <div className="ctn px-4 md:px-16">
         <span className="ew rev">// Insights</span>
         <h2 className="st rev d1">From the Blog</h2>
         <div className="gb rev d1"></div>

@@ -27,7 +27,7 @@ export default function Methodology(){
         <h2 className="st rev d1">8 Implementation Modules</h2>
         <div className="gb rev d1"></div>
         <p className="sd rev d2">The step-by-step methodology to embed ACF governance into your agentic infrastructure.</p>
-        <div className="mgrid">
+        <div className="mgrid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {modules.map((m,i)=>(
             <div key={i} className="mcard rev" style={{animationDelay: i*50+'ms'}}>
               <div className="mico">{m.icon}</div>

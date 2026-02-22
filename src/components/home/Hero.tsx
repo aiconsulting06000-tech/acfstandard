@@ -26,7 +26,7 @@ export default function Hero(){
   return (
     <section className="hero">
       <div className="hgrid" />
-      <div className="hw">
+      <div className="hw grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <div className="hbadge rev"><span className="bdot"/>OFFICIAL STANDARD — v1.0 — FEB 2026</div>
           <h1 className="rev d1">
@@ -35,8 +35,8 @@ export default function Hero(){
           </h1>
           <p className="hdesc rev d2">The Agentic Commerce Framework® (ACF) is the definitive governance methodology for deploying, supervising, and controlling autonomous agentic systems in commercial environments.</p>
           <div className="hact rev d3">
-            <Link href="/en/contact" className="btng">Request a Governance Assessment →</Link>
-            <Link href="/en/standard" className="btno">Read the Standard</Link>
+            <Link href="/en/contact" className="btng w-full md:w-auto">Request a Governance Assessment →</Link>
+            <Link href="/en/standard" className="btno w-full md:w-auto">Read the Standard</Link>
           </div>
           <div className="hstats rev d4">
             <div className="hs"><div className="hsn">4</div><div className="hsl">Founding<br/>Principles</div></div>
@@ -45,7 +45,7 @@ export default function Hero(){
             <div className="hs"><div className="hsn">17</div><div className="hsl">Proprietary<br/>Tools</div></div>
           </div>
         </div>
-        <div className="hvis rev d2">
+          <div className="hvis rev d2">
           <DiagramCanvas />
           <div className="orb">
             <div className="oring"><div className="ocore"><div className="oacf">ACF®</div><div className="ostd">Standard</div></div></div>

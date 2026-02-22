@@ -11,7 +11,7 @@ export default function Nav(){
   return (
     <nav id="nav">
       <div className="nw">
-        <button className="ham" id="hambtn" aria-label="Menu" onClick={()=>setMegaOpen(true)}>
+        <button className="ham md:hidden" id="hambtn" aria-label="Menu" onClick={()=>setMegaOpen(true)}>
           <span></span><span></span><span></span>
         </button>
         <Link href="/en/" className="logo">
@@ -22,14 +22,16 @@ export default function Nav(){
           </div>
         </Link>
 
-        <div className="nr">
-          <div className="nlm">
+        <div className="nr hidden md:flex items-center gap-4">
+          <div className="nlm hidden md:flex items-center gap-4">
             <Link href="/en/standard">Standard</Link>
             <Link href="/en/framework">Framework</Link>
             <Link href="/en/method">Method</Link>
-            <Link href="/en/control">ACF Control</Link>
+            <Link href="/en/control">Control</Link>
             <Link href="/en/certification">Certification</Link>
-            <Link href="/en/blog">Blog</Link>
+            <Link href="/en/partners">Partners</Link>
+            <Link href="/en/academy">Academy</Link>
+            <Link href="/en/about">About</Link>
           </div>
 
           <button className="regionbtn" id="regionbtn" onClick={()=>setRegionOpen(true)}>
@@ -38,11 +40,11 @@ export default function Nav(){
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
 
-          <Link href="/en/partners/login" className="npart">
+          <Link href="/en/partners/login" className="npart md:inline-flex hidden">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v2h20v-2c0-3.3-6.7-5-10-5z"/></svg>
             Partners
           </Link>
-          <Link href="/en/contact" className="ncta">Request Assessment</Link>
+          <Link href="/en/contact" className="ncta w-full md:w-auto">Request Assessment</Link>
         </div>
       </div>
 

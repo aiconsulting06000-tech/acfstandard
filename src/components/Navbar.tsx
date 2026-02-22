@@ -15,6 +15,7 @@ export default function Navbar() {
           </div>
         </Link>
 
+        <button className="ham md:hidden" aria-label="Menu" />
         <nav className="hidden md:flex items-center gap-8">
           <Link href="/standard" className="nav-link">Standard</Link>
           <Link href="/framework" className="nav-link">Framework</Link>
@@ -27,7 +28,7 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Link href="/contact" className="btn">Contact</Link>
+          <Link href="/contact" className="btn w-full md:w-auto">Contact</Link>
         </div>
       </div>
 

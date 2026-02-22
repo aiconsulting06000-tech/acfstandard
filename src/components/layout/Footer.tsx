@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Footer(){
   return (
     <footer>
-      <div className="ctn">
+      <div className="ctn px-4 md:px-16">
         <div className="fgrid">
           <div>
             <Link href="/en/" className="logo"><div className="lb">ACF</div><div><div className="ln">Agentic Commerce Framework®</div><div className="ls">by Vincent DORANGE</div></div></Link>

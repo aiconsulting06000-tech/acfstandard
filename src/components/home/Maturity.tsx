@@ -11,7 +11,7 @@ export default function Maturity(){
 
   return (
     <section className="secdark">
-      <div className="ctn">
+      <div className="ctn px-4 md:px-16">
         <span className="ew rev">// Progression</span>
         <h2 className="st rev d1">4 Agentic Maturity Levels</h2>
         <div className="gb rev d1"></div>

@@ -23,7 +23,7 @@ export default function StatsBar(){
 
   return (
     <div className="sbar" id="statsbar">
-      <div className="sgrid">
+      <div className="sgrid grid grid-cols-1 md:grid-cols-4 gap-2">
         <div className="sc2"><div className="scw"><span className="ctr" id="c1">0</span></div><div className="slbl">Operational Layers</div></div>
         <div className="sc2"><div className="scw"><span className="ctr" id="c2">0</span></div><div className="slbl">Sovereignty KPIs</div></div>
         <div className="sc2"><div className="scw"><span className="ctr" id="c3">0</span></div><div className="slbl">Proprietary Tools</div></div>

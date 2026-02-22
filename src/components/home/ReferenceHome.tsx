@@ -62,13 +62,13 @@ const rawHTML = `
 <!-- NAV -->
 <nav id="nav">
   <div class="nw">
-    <button class="ham" id="hambtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="ham md:hidden" id="hambtn" aria-label="Menu"><span></span><span></span><span></span></button>
     <a href="/" class="logo">
       <div class="lb">ACF</div>
       <div><div class="ln">Agentic Commerce Framework®</div><div class="ls">by Vincent DORANGE</div></div>
     </a>
-    <div class="nr">
-      <div class="nlm">
+    <div class="nr hidden md:flex items-center gap-4">
+      <div class="nlm hidden md:flex items-center gap-4">
         <a href="/standard">Standard</a>
         <a href="/control">ACF Control</a>
         <a href="/blog">Blog</a>
@@ -78,8 +78,8 @@ const rawHTML = `
         <span>GLOBAL | EN</span>
         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
-      <a href="/partners/login" class="npart">Partners</a>
-      <a href="/contact" class="ncta">Request Assessment</a>
+      <a href="/partners/login" class="npart md:inline-flex hidden">Partners</a>
+      <a href="/contact" class="ncta w-full md:w-auto">Request Assessment</a>
     </div>
   </div>
 </nav>
@@ -126,7 +126,7 @@ const rawHTML = `
 <!-- HERO -->
 <section class="hero">
   <div class="hgrid"></div>
-  <div class="hw">
+  <div class="hw grid grid-cols-1 md:grid-cols-2 gap-8">
     <div>
       <div class="hbadge rev"><span class="bdot"></span>OFFICIAL STANDARD — v1.0 — FEB 2026</div>
       <h1 class="rev d1">
@@ -135,10 +135,10 @@ const rawHTML = `
       </h1>
       <p class="hdesc rev d2">The Agentic Commerce Framework® (ACF) is the definitive governance methodology for deploying, supervising, and controlling autonomous agentic systems in commercial environments.</p>
       <div class="hact rev d3">
-        <a href="/contact" class="btng">Request a Governance Assessment →</a>
-        <a href="/standard" class="btno">Read the Standard</a>
+        <a href="/contact" class="btng w-full md:w-auto">Request a Governance Assessment →</a>
+        <a href="/standard" class="btno w-full md:w-auto">Read the Standard</a>
       </div>
-      <div class="hstats rev d4">
+      <div class="hstats rev d4 grid grid-cols-1 md:grid-cols-4 gap-2">
         <div class="hs"><div class="hsn">4</div><div class="hsl">Founding<br/>Principles</div></div>
         <div class="hs"><div class="hsn">8</div><div class="hsl">Implementation<br/>Modules</div></div>
         <div class="hs"><div class="hsn">18</div><div class="hsl">Sovereignty<br/>KPIs</div></div>
@@ -170,12 +170,12 @@ const rawHTML = `
 
 <!-- PRINCIPLES -->
 <section class="secdark">
-  <div class="ctn">
+  <div class="ctn px-4 md:px-16">
     <span class="ew rev">// Architecture</span>
     <h2 class="st rev d1">4 Founding Principles</h2>
     <div class="gb rev d1"></div>
     <p class="sd rev d2">Four immutable axioms defining the boundary between human authority and autonomous agent execution.</p>
-    <div class="pgrid">
+    <div class="pgrid grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="pcard rev d1"><div class="pnw"><span class="pnum">01</span><span class="pnl">PRINCIPLE</span></div><div class="pt">Séparation Décision / Exécution</div><p class="pd">No autonomous agent defines its own objectives. Humans define the ends; agents execute exclusively within the defined perimeter. Technically enforced — not a policy, a constraint.</p><span class="ptag">SOVEREIGNTY</span></div>
       <div class="pcard rev d2"><div class="pnw"><span class="pnum">02</span><span class="pnl">PRINCIPLE</span></div><div class="pt">Zones Non Délégables</div><p class="pd">Certain decisions are structurally, ethically, or legally non-automatable. The non-delegable zone is formally defined and technically locked — never configurable by agents themselves.</p><span class="ptag">PROTECTION</span></div>
       <div class="pcard rev d3"><div class="pnw"><span class="pnum">03</span><span class="pnl">PRINCIPLE</span></div><div class="pt">Traçabilité &amp; Interruptibilité</div><p class="pd">Every agent decision is fully traceable, explainable, and stoppable at any time. Three-level kill switch: module stop (&lt;10s), agent stop (&lt;30s), emergency (&lt;60s). Complete auditable log chain, always.</p><span class="ptag">CONTROL</span></div>
@@ -186,23 +186,23 @@ const rawHTML = `
 
 <!-- LAYERS -->
 <section>
-  <div class="ctn">
+  <div class="ctn px-4 md:px-16">
     <span class="ew rev">// Structure</span>
     <h2 class="st rev d1">4 Operational Layers</h2>
     <div class="gb rev d1"></div>
     <p class="sd rev d2">A hierarchical architecture from strategic governance to real-time execution supervision.</p>
-    <div class="lgrid">
-      <div class="lcard rev d1"><div class="lico"></div><div class="lnum">LAYER_01</div><div class="lt">Governance &amp; Sovereignty</div><div class="ld">Sovereignty charter, governance committee, RACI matrix, non-delegable zone map.</div></div>
-      <div class="lcard rev d2"><div class="lico"></div><div class="lnum">LAYER_02</div><div class="lt">Decision Policy</div><div class="ld">Weighted objectives, arbitration rules, escalation thresholds, regulatory constraints.</div></div>
-      <div class="lcard rev d3"><div class="lico"></div><div class="lnum">LAYER_03</div><div class="lt">Agent System</div><div class="ld">Explicit mandate per agent, interaction perimeter, autonomy level, 5-category taxonomy.</div></div>
-      <div class="lcard rev d4"><div class="lico"></div><div class="lnum">LAYER_04</div><div class="lt">Execution &amp; Supervision</div><div class="ld">Adaptive gating matrix, multi-level alerts, 18 sovereignty KPIs, live dashboards.</div></div>
+    <div class="lgrid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="lcard rev d1"><div class="lico">🔒</div><div class="lnum">LAYER_01</div><div class="lt">Governance &amp; Sovereignty</div><div class="ld">Sovereignty charter, governance committee, RACI matrix, non-delegable zone map.</div></div>
+      <div class="lcard rev d2"><div class="lico">⚖️</div><div class="lnum">LAYER_02</div><div class="lt">Decision Policy</div><div class="ld">Weighted objectives, arbitration rules, escalation thresholds, regulatory constraints.</div></div>
+      <div class="lcard rev d3"><div class="lico">🤖</div><div class="lnum">LAYER_03</div><div class="lt">Agent System</div><div class="ld">Explicit mandate per agent, interaction perimeter, autonomy level, 5-category taxonomy.</div></div>
+      <div class="lcard rev d4"><div class="lico">⚙️</div><div class="lnum">LAYER_04</div><div class="lt">Execution &amp; Supervision</div><div class="ld">Adaptive gating matrix, multi-level alerts, 18 sovereignty KPIs, live dashboards.</div></div>
     </div>
   </div>
 </section>
 
 <!-- MATURITY -->
 <section class="secdark">
-  <div class="ctn">
+  <div class="ctn px-4 md:px-16">
     <span class="ew rev">// Progression</span>
     <h2 class="st rev d1">4 Agentic Maturity Levels</h2>
     <div class="gb rev d1"></div>
@@ -222,7 +222,7 @@ const rawHTML = `
 
 <!-- HEX PATH MODULES (excerpted markup included) -->
 <section class="hexsec">
-  <div class="ctn">
+  <div class="ctn px-4 md:px-16">
     <span class="ew rev">// Methodology</span>
     <h2 class="st rev d1">8 Implementation Modules</h2>
     <div class="gb rev d1"></div>
@@ -233,7 +233,7 @@ const rawHTML = `
 
 <!-- VIDEO / FOUNDER -->
 <section class="videosec">
-  <div class="ctn">
+  <div class="ctn px-4 md:px-16">
     <div class="videogrid">
       <div>
         <span class="ew rev">// Why ACF</span>
@@ -291,13 +291,13 @@ const rawHTML = `
 
 <!-- PRODUCTS -->
 <section class="secdark">
-  <div class="ctn">
+  <div class="ctn px-4 md:px-16">
     <span class="ew rev">// Ecosystem</span>
     <h2 class="st rev d1">The ACF Ecosystem</h2>
     <div class="gb rev d1"></div>
     <p class="sd rev d2">Three complementary products operationalizing the ACF Standard.</p>
   </div>
-  <div class="prodgrid" style="max-width:1320px;margin:60px auto 0;padding:0 40px">
+  <div class="prodgrid grid grid-cols-1 md:grid-cols-3 gap-6" style="max-width:1320px;margin:60px auto 0;padding:0 40px">
     <div class="pc rev d1">
       <div class="piw"></div>
       <div class="plbl">DIAGNOSTIC TOOL</div><div class="ptitle">ACF Score</div>
@@ -324,17 +324,17 @@ const rawHTML = `
 
 <!-- BLOG -->
 <section>
-  <div class="ctn">
+  <div class="ctn px-4 md:px-16">
     <span class="ew rev">// Insights</span>
     <h2 class="st rev d1">Latest from the ACF Blog</h2>
     <div class="gb rev d1"></div>
     <p class="sd rev d2">Governance insights, framework updates, and agentic intelligence research.</p>
-    <div class="bgrid">
+    <div class="bgrid grid grid-cols-1 md:grid-cols-3 gap-6">
       <article class="bcard rev d1"><div class="bimg"></div><div class="bbody"><div class="btitle">ACF Score — the Sovereignty Metric</div><div class="bexc">How we measure organizational sovereignty.</div></div></article>
       <article class="bcard rev d2"><div class="bimg"></div><div class="bbody"><div class="btitle">Kill Switch Protocols</div><div class="bexc">Designing interruptibility for agents.</div></div></article>
       <article class="bcard rev d3"><div class="bimg"></div><div class="bbody"><div class="btitle">Operationalising Governance</div><div class="bexc">Embedding ACF into CI/CD pipelines.</div></div></article>
     </div>
-    <div style="text-align:center;margin-top:40px" class="rev"><a href="/blog" class="btno">View All Articles →</a></div>
+    <div style="text-align:center;margin-top:40px" class="rev"><a href="/blog" class="btno w-full md:w-auto">View All Articles →</a></div>
   </div>
 </section>
 
@@ -346,27 +346,11 @@ const rawHTML = `
     <h2>Ready to Govern Your<br/>Agentic Systems?</h2>
     <p>Request a governance assessment and discover your current Sovereignty Score.</p>
     <div class="ctabtns">
-      <a href="/contact" class="btng">Request a Governance Assessment →</a>
-      <a href="/partners/apply" class="btno">Become an ACF Partner</a>
+      <a href="/contact" class="btng w-full md:w-auto">Request a Governance Assessment →</a>
+      <a href="/partners/apply" class="btno w-full md:w-auto">Become an ACF Partner</a>
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="ctn">
-    <div class="fgrid">
-      <div><a href="/" class="logo"><div class="lb">ACF</div><div><div class="ln">Agentic Commerce Framework®</div><div class="ls">by Vincent DORANGE</div></div></a><p class="fdesc">The definitive governance standard for organizations deploying autonomous agentic systems. Protected — Loi n° 2018-670.</p></div>
-      <div><div class="ftitle">Framework</div><ul class="flinks"><li><a href="/standard">The Standard</a></li><li><a href="/method">Methodology</a></li><li><a href="/research">Research</a></li><li><a href="/blog">Blog</a></li></ul></div>
-      <div><div class="ftitle">Products</div><ul class="flinks"><li><a href="https://acf-score.com">ACF Score</a></li><li><a href="/control">ACF Control</a></li><li><a href="/certification">Certification</a></li><li><a href="/academy">Academy</a></li></ul></div>
-      <div><div class="ftitle">Organization</div><ul class="flinks"><li><a href="/partners/login">Partner Portal</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/legal">Legal</a></li></ul></div>
-    </div>
-    <div class="fbot">
-      <div class="fcopy">© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved. Registered INPI.</div>
-      <div class="flegal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/cookies">Cookies</a></div>
-    </div>
-  </div>
-</footer>
 
 <!-- AI BUTTON -->
 <button class="aibtn" id="aibtn">

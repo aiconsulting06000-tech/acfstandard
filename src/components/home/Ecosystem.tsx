@@ -12,12 +12,12 @@ export default function Ecosystem(){
 
   return (
     <section>
-      <div className="ctn">
+      <div className="ctn px-4 md:px-16">
         <span className="ew rev">// Community</span>
         <h2 className="st rev d1">ACF Ecosystem</h2>
         <div className="gb rev d1"></div>
         <p className="sd rev d2">A network of certified partners, practitioners, and organizations building sovereign agentic systems.</p>
-        <div className="ecgrid">
+        <div className="ecgrid grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="eccard rev d1">
             <div className="ecico">🤝</div>
             <div className="ectitle">Technology Partners</div>
