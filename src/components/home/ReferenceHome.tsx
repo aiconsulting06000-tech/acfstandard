@@ -329,9 +329,114 @@ export default function ReferenceHome(){
         </div>
       </section>
 
-      {/* Many sections omitted for brevity to keep patch focused; CSS is already present in globals.css */}
+      {/* Implementation Modules / HexPath / Video / Products / Blog / CTA */}
 
-      {/* VIDEO MODAL, PRODUCTS, BLOG, CTA, FOOTER, AI modal included above */}
+      <section className="seclight" id="implementation">
+        <div className="ctn">
+          <span className="ew rev">// Method</span>
+          <h2 className="st rev d1">Implementation Modules</h2>
+          <div className="gb rev d1"></div>
+          <p className="sd rev d2">Eight pragmatic modules to operationalize the ACF standard across your organisation.</p>
+          <div className="imod-wrap">
+            <div className="hexpath rev">
+              <div className="pathline"></div>
+              <div className="steps">
+                <div className="step">01<br/><span>Plan</span></div>
+                <div className="step">02<br/><span>Design</span></div>
+                <div className="step">03<br/><span>Build</span></div>
+                <div className="step">04<br/><span>Verify</span></div>
+                <div className="step">05<br/><span>Deploy</span></div>
+                <div className="step">06<br/><span>Govern</span></div>
+              </div>
+            </div>
+            <div className="imod-grid">
+              <div className="imod">Module 1 — Constitution</div>
+              <div className="imod">Module 2 — Obligations</div>
+              <div className="imod">Module 3 — Policies</div>
+              <div className="imod">Module 4 — Controls</div>
+              <div className="imod">Module 5 — Monitoring</div>
+              <div className="imod">Module 6 — Certification</div>
+              <div className="imod">Module 7 — Integrations</div>
+              <div className="imod">Module 8 — Operations</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="videosec">
+        <div className="ctn">
+          <span className="ew rev">// Demo</span>
+          <h2 className="st rev d1">Why ACF Matters — Watch</h2>
+          <div className="gb rev d1"></div>
+          <p className="sd rev d2">A short film outlining the risks and the framework that restores human sovereignty over agentic systems.</p>
+          <div className="vwrap rev">
+            <div className="vthumb" id="vplayer" role="button" aria-label="Play video">
+              <img src="/video-thumb.jpg" alt="ACF video thumbnail"/>
+              <div className="vplay">▶</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="products secdark">
+        <div className="ctn">
+          <span className="ew rev">// Products</span>
+          <h2 className="st rev d1">ACF Suite</h2>
+          <div className="gb rev d1"></div>
+          <p className="sd rev d2">Tools to measure, certify and control autonomous agents across your stack.</p>
+          <div className="pgrid">
+            <div className="pcard rev d1"><div className="pt">ACF Score</div><p>Diagnostic and scorecard for Sovereignty.</p></div>
+            <div className="pcard rev d2"><div className="pt">ACF Control</div><p>Realtime governance and gating platform.</p></div>
+            <div className="pcard rev d3"><div className="pt">ACF Cert</div><p>Independent attestation and certification engine.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="blog secwhite">
+        <div className="ctn">
+          <span className="ew rev">// Insights</span>
+          <h2 className="st rev d1">From the Lab</h2>
+          <div className="gb rev d1"></div>
+          <p className="sd rev d2">Recent thinking on agentic governance, case studies, and technical deep dives.</p>
+          <div className="bgrid">
+            <article className="bcard rev d1"><h3><a href="/blog/post-1">ACF Score — the Sovereignty Metric</a></h3><p>How we measure organizational sovereignty.</p></article>
+            <article className="bcard rev d2"><h3><a href="/blog/post-2">Kill Switch Protocols</a></h3><p>Designing interruptibility for agents.</p></article>
+            <article className="bcard rev d3"><h3><a href="/blog/post-3">Operationalising Governance</a></h3><p>Embedding ACF into CI/CD pipelines.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta secdark">
+        <div className="ctn">
+          <h2 className="st rev d1">Get Started</h2>
+          <p className="sd rev d2">Request an ACF assessment and reclaim sovereignty over your autonomous systems.</p>
+          <div className="hact"><a href="/contact" className="btng">Request Assessment →</a><a href="/partners/apply" className="btno">Become a Partner</a></div>
+        </div>
+      </section>
+
+      {/* Video modal */}
+      <div id="videomodal" className="aimodal">
+        <div className="aimodalbg"></div>
+        <div className="aimodalbox">
+          <button className="aimodalclose">×</button>
+          <div className="vframe">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="ACF Video" frameBorder="0" allowFullScreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      {/* AI modal (quick QA) */}
+      <div id="aimodal" className="aimodal">
+        <div className="aimodalbg"></div>
+        <div className="aimodalbox">
+          <button className="aimclose">×</button>
+          <div className="aimwrap">
+            <div id="aimmsgs" className="aimmsgs"></div>
+            <div className="aimform"><input id="aiminp" placeholder="Ask about ACF"/><button id="aimsend">Send</button></div>
+            <div className="aimquick"><button className="aimq">What is ACF?</button><button className="aimq">How does certification work?</button></div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
