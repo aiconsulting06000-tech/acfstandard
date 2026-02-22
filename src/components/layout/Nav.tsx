@@ -25,7 +25,10 @@ export default function Nav(){
         <div className="nr">
           <div className="nlm">
             <Link href="/en/standard">Standard</Link>
+            <Link href="/en/framework">Framework</Link>
+            <Link href="/en/method">Method</Link>
             <Link href="/en/control">ACF Control</Link>
+            <Link href="/en/certification">Certification</Link>
             <Link href="/en/blog">Blog</Link>
           </div>
 

@@ -13,7 +13,9 @@ export default function StatsBar(){
         requestAnimationFrame(step)
       })
     }
-    const onScroll = ()=>{ const b = document.getElementById('statsbar'); if(!b) return; const r = b.getBoundingClientRect(); if(r.top < window.innerHeight && r.bottom > 0) run(); }
+    const b = document.getElementById('statsbar')
+    if(b) document.querySelectorAll('.rev').forEach(r=>r.classList.add('vis'))
+    const onScroll = ()=>{ const b = document.getElementById('statsbar'); if(!b) return; const r = b.getBoundingClientRect(); if(r.top < window.innerHeight && r.bottom > 0) run(); b.removeEventListener('scroll', onScroll) }
     window.addEventListener('scroll', onScroll, { passive:true })
     setTimeout(onScroll,200)
     return ()=> window.removeEventListener('scroll', onScroll)

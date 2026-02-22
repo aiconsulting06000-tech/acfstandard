@@ -1,7 +1,14 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function Principles(){
+  useEffect(()=>{
+    const el = document.querySelector('.pgrid'); if(!el) return
+    const io = new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting){ document.querySelectorAll('.rev').forEach(r=>r.classList.add('vis')); io.disconnect() } }) },{threshold:.15})
+    io.observe(el.parentElement!)
+    return ()=> io.disconnect()
+  },[])
+
   return (
     <section className="secdark">
       <div className="ctn">

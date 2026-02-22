@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 export default function Products(){
   useEffect(()=>{
     const el = document.getElementById('products'); if(!el) return
-    const io = new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting){ el.classList.add('go'); io.disconnect() } }) },{threshold:.2})
+    const io = new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting){ document.querySelectorAll('.rev').forEach(r=>r.classList.add('vis')); io.disconnect() } }) },{threshold:.2})
     io.observe(el)
     return ()=> io.disconnect()
   },[])

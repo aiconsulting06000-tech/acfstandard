@@ -19,6 +19,10 @@ export default function Hero(){
     return ()=>clearTimeout(to)
   },[])
 
+  useEffect(()=>{
+    document.querySelectorAll('.rev').forEach(r=>r.classList.add('vis'))
+  },[])
+
   return (
     <section className="hero">
       <div className="hgrid" />
