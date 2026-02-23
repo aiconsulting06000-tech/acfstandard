@@ -439,7 +439,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:80px 0 36p
   .rpcols{grid-template-columns:1fr}
 }`
 
-const rawHTML = `<canvas id="neural"></canvas>
+const ACF_HTML = `<canvas id="neural"></canvas>
 
 <!-- REGION PANEL OVERLAY -->
 <div class="rmo" id="rmo" onclick="closeRegion()"></div>
@@ -484,6 +484,36 @@ const rawHTML = `<canvas id="neural"></canvas>
     </div>
   </div>
 </div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nw">
+    <button class="ham" id="hambtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="/" class="logo">
+      <div class="lb">ACF</div>
+      <div><div class="ln">Agentic Commerce Framework®</div><div class="ls">Global Standard for AI Governance</div></div>
+    </a>
+    <div class="nr">
+      <div class="nlm">
+        <a href="/standard">Standard</a>
+        <a href="/control">ACF Control</a>
+        <a href="/blog">Blog</a>
+      </div>
+      <!-- Region selector Bain-style -->
+      <button class="regionbtn" id="regionbtn" onclick="openRegion()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        <span>GLOBAL | EN</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <a href="/partners/login" class="npart">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v2h20v-2c0-3.3-6.7-5-10-5z"/></svg>
+        Partners
+      </a>
+      <a href="/contact" class="ncta">Request Assessment</a>
+    </div>
+  </div>
+</nav>
+
 <!-- MEGA MENU -->
 <div class="mo" id="mo" onclick="closeMega()"></div>
 <div class="md" id="megadrawer">
@@ -930,7 +960,7 @@ const rawHTML = `<canvas id="neural"></canvas>
 <footer>
   <div class="ctn">
     <div class="fgrid">
-      <div><a href="/" class="logo"><div class="lb">ACF</div><div><div class="ln">Agentic Commerce Framework®</div><div class="ls">by Vincent DORANGE</div></div></a><p class="fdesc">The definitive governance standard for organizations deploying autonomous agentic systems. Protected — Loi n° 2018-670.</p></div>
+      <div><a href="/" class="logo"><div class="lb">ACF</div><div><div class="ln">Agentic Commerce Framework®</div><div class="ls">Global Standard for AI Governance</div></div></a><p class="fdesc">The definitive governance standard for organizations deploying autonomous agentic systems. Protected — Loi n° 2018-670.</p></div>
       <div><div class="ftitle">Framework</div><ul class="flinks"><li><a href="/standard">The Standard</a></li><li><a href="/method">Methodology</a></li><li><a href="/research">Research</a></li><li><a href="/blog">Blog</a></li></ul></div>
       <div><div class="ftitle">Products</div><ul class="flinks"><li><a href="https://acf-score.com">ACF Score</a></li><li><a href="/control">ACF Control</a></li><li><a href="/certification">Certification</a></li><li><a href="/academy">Academy</a></li></ul></div>
       <div><div class="ftitle">Organization</div><ul class="flinks"><li><a href="/partners/login">Partner Portal</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/legal">Legal</a></li></ul></div>
@@ -1041,7 +1071,7 @@ function showPanel(id){
   document.querySelectorAll('.mni').forEach(function(el){el.classList.toggle('active',el.dataset.panel===id)});
   document.querySelectorAll('.mp').forEach(function(el){el.classList.toggle('active',el.id==='panel-'+id)});
 }
-// hambtn handled by Nav.tsx
+document.getElementById('hambtn').addEventListener('click',openMega);
 addEventListener('keydown',function(e){if(e.key==='Escape'){closeMega();closeRegion();closeAI();closeVideoModal()}});
 
 // ══ SCROLL REVEAL ══
@@ -1127,14 +1157,12 @@ function closeAI(){document.getElementById('aimodal').classList.remove('open');d
 
 export default function ReferenceHome() {
   useEffect(() => {
-    // Inject CSS
     if (!document.getElementById('acf-ref-style')) {
       const style = document.createElement('style')
       style.id = 'acf-ref-style'
       style.textContent = ACF_CSS
       document.head.appendChild(style)
     }
-    // Inject JS as a script tag to bypass TypeScript strict checks
     if (!document.getElementById('acf-ref-script')) {
       const script = document.createElement('script')
       script.id = 'acf-ref-script'
@@ -1147,7 +1175,5 @@ export default function ReferenceHome() {
     }
   }, [])
 
-  return (
-    <div dangerouslySetInnerHTML={{ __html: rawHTML }} />
-  )
+  return <div dangerouslySetInnerHTML={{ __html: ACF_HTML }} />
 }
