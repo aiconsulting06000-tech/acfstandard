@@ -565,8 +565,9 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div class="nr">
       <div class="nlm">
         <a href="/standard">Standard</a>
+        <a href="https://acf-score.com" target="_blank">ACF Score</a>
         <a href="/control">ACF Control</a>
-        <a href="/blog">Blog</a>
+        <a href="/certification">ACF Certification</a>
       </div>
       <!-- Region selector Bain-style -->
       <button class="regionbtn" id="regionbtn" onclick="openRegion()">
@@ -1030,7 +1031,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   <div class="ctn">
     <div class="fgrid">
       <div><a href="/" class="logo"><div class="lb">ACF</div><div><div class="ln">Agentic Commerce Framework®</div><div class="ls">Global Standard for AI Governance</div></div></a><p class="fdesc">The definitive governance standard for organizations deploying autonomous agentic systems. Protected — Loi n° 2018-670.</p></div>
-      <div><div class="ftitle">Framework</div><ul class="flinks"><li><a href="/standard">The Standard</a></li><li><a href="/method">Methodology</a></li><li><a href="/research">Research</a></li><li><a href="/blog">Blog</a></li></ul></div>
+      <div><div class="ftitle">Framework</div><ul class="flinks"><li><a href="/standard">The Standard</a></li><li><a href="/method">Methodology</a></li><li><a href="/research">Research</a></li><li><a href="/certification">ACF Certification</a></li></ul></div>
       <div><div class="ftitle">Products</div><ul class="flinks"><li><a href="https://acf-score.com">ACF Score</a></li><li><a href="/control">ACF Control</a></li><li><a href="/certification">Certification</a></li><li><a href="/academy">Academy</a></li></ul></div>
       <div><div class="ftitle">Organization</div><ul class="flinks"><li><a href="/partners/login">Partner Portal</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/legal">Legal</a></li></ul></div>
     </div>
