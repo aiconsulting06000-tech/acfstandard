@@ -46,7 +46,7 @@ nav.scrolled{background:rgba(5,12,26,.99);box-shadow:0 4px 40px rgba(0,0,0,.5)}
 /* ═══ REGION SELECTOR PANEL ═══ */
 .rmo{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:900;opacity:0;pointer-events:none;transition:.3s}
 .rmo.open{opacity:1;pointer-events:all}
-.rpanel{position:fixed;top:0;left:0;right:0;background:var(--w);color:#1a1a2e;z-index:901;padding:32px 60px 40px;transform:translateY(-100%);transition:transform .35s cubic-bezier(.16,1,.3,1);border-bottom:3px solid var(--gold)}
+.rpanel{position:fixed;top:0;left:0;right:0;max-height:85vh;overflow-y:auto;background:var(--w);color:#1a1a2e;z-index:901;padding:24px 40px 32px;transform:translateY(-100%);transition:transform .35s cubic-bezier(.16,1,.3,1);border-bottom:3px solid var(--gold)}
 .rpanel.open{transform:translateY(0)}
 .rphdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid #e5e5e5}
 .rptitle{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:#1a1a2e}
@@ -456,38 +456,99 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div class="rptitle">Select your region and language</div>
     <button class="rpclose" onclick="closeRegion()">✕ Close</button>
   </div>
-  <div class="rpcols">
+  <div class="rpcols" style="grid-template-columns:repeat(5,1fr);gap:28px">
     <div>
       <div class="rpcol-title">Global</div>
       <a class="rpglobal" href="#" onclick="closeRegion()"><span>🌐</span><span>Global (English)</span></a>
-    </div>
-    <div>
-      <div class="rpcol-title">Europe, Middle East &amp; Africa</div>
+      <div class="rpcol-title" style="margin-top:20px">North America</div>
       <ul class="rplinks">
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇫🇷</span>France <span class="rplang">(Français)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇩🇪</span>DACH Region <span class="rplang">(Deutsch)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇬🇧</span>United Kingdom <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇪🇸</span>Spain <span class="rplang">(Español)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇧🇪</span>Belgium <span class="rplang">(Français)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇨🇭</span>Switzerland <span class="rplang">(Français)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇺🇸</span>United States <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇨🇦</span>Canada <span class="rplang">(EN/FR)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇲🇽</span>Mexico <span class="rplang">(Español)</span></a></li>
+      </ul>
+      <div class="rpcol-title" style="margin-top:20px">Latin America</div>
+      <ul class="rplinks">
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇧🇷</span>Brazil <span class="rplang">(Português)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇦🇷</span>Argentina <span class="rplang">(Español)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇨🇱</span>Chile <span class="rplang">(Español)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇨🇴</span>Colombia <span class="rplang">(Español)</span></a></li>
       </ul>
     </div>
     <div>
-      <div class="rpcol-title">North &amp; Latin America</div>
+      <div class="rpcol-title">Western Europe</div>
       <ul class="rplinks">
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇺🇸</span>United States <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇨🇦</span>Canada <span class="rplang">(English/Français)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇧🇷</span>Brazil <span class="rplang">(Português)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇲🇽</span>Mexico <span class="rplang">(Español)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇫🇷</span>France <span class="rplang">(Français)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇩🇪</span>Germany <span class="rplang">(Deutsch)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇬🇧</span>United Kingdom <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇪🇸</span>Spain <span class="rplang">(Español)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇮🇹</span>Italy <span class="rplang">(Italiano)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇵🇹</span>Portugal <span class="rplang">(Português)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇧🇪</span>Belgium <span class="rplang">(FR/NL)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇨🇭</span>Switzerland <span class="rplang">(FR/DE/IT)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇳🇱</span>Netherlands <span class="rplang">(Nederlands)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇦🇹</span>Austria <span class="rplang">(Deutsch)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇮🇪</span>Ireland <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇱🇺</span>Luxembourg <span class="rplang">(FR/DE)</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="rpcol-title">Nordic &amp; Baltic</div>
+      <ul class="rplinks">
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇸🇪</span>Sweden <span class="rplang">(Svenska)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇳🇴</span>Norway <span class="rplang">(Norsk)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇩🇰</span>Denmark <span class="rplang">(Dansk)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇫🇮</span>Finland <span class="rplang">(Suomi)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇮🇸</span>Iceland <span class="rplang">(Íslenska)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇪🇪</span>Estonia <span class="rplang">(Eesti)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇱🇻</span>Latvia <span class="rplang">(Latviešu)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇱🇹</span>Lithuania <span class="rplang">(Lietuvių)</span></a></li>
+      </ul>
+      <div class="rpcol-title" style="margin-top:20px">Central &amp; Eastern Europe</div>
+      <ul class="rplinks">
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇵🇱</span>Poland <span class="rplang">(Polski)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇨🇿</span>Czech Republic <span class="rplang">(Čeština)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇸🇰</span>Slovakia <span class="rplang">(Slovenčina)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇭🇺</span>Hungary <span class="rplang">(Magyar)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇷🇴</span>Romania <span class="rplang">(Română)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇧🇬</span>Bulgaria <span class="rplang">(Български)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇭🇷</span>Croatia <span class="rplang">(Hrvatski)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇸🇮</span>Slovenia <span class="rplang">(Slovenščina)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇷🇸</span>Serbia <span class="rplang">(Srpski)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇺🇦</span>Ukraine <span class="rplang">(Українська)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇬🇷</span>Greece <span class="rplang">(Ελληνικά)</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="rpcol-title">Middle East &amp; Africa</div>
+      <ul class="rplinks">
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇦🇪</span>UAE <span class="rplang">(العربية)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇸🇦</span>Saudi Arabia <span class="rplang">(العربية)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇮🇱</span>Israel <span class="rplang">(עברית)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇹🇷</span>Turkey <span class="rplang">(Türkçe)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇿🇦</span>South Africa <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇳🇬</span>Nigeria <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇰🇪</span>Kenya <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇲🇦</span>Morocco <span class="rplang">(Français)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇪🇬</span>Egypt <span class="rplang">(العربية)</span></a></li>
       </ul>
     </div>
     <div>
       <div class="rpcol-title">Asia &amp; Pacific</div>
       <ul class="rplinks">
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇸🇬</span>Singapore <span class="rplang">(English)</span></a></li>
         <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇯🇵</span>Japan <span class="rplang">(日本語)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇦🇺</span>Australia <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇨🇳</span>China <span class="rplang">(中文)</span></a></li>
         <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇰🇷</span>Korea <span class="rplang">(한국어)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇸🇬</span>Singapore <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇦🇺</span>Australia <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇳🇿</span>New Zealand <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇮🇳</span>India <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇮🇩</span>Indonesia <span class="rplang">(Bahasa)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇲🇾</span>Malaysia <span class="rplang">(Bahasa)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇹🇭</span>Thailand <span class="rplang">(ภาษาไทย)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇻🇳</span>Vietnam <span class="rplang">(Tiếng Việt)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇵🇭</span>Philippines <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇭🇰</span>Hong Kong <span class="rplang">(中文)</span></a></li>
+        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇹🇼</span>Taiwan <span class="rplang">(中文)</span></a></li>
       </ul>
     </div>
   </div>
