@@ -34,7 +34,7 @@ nav.scrolled{background:rgba(5,12,26,.99);box-shadow:0 4px 40px rgba(0,0,0,.5)}
 .nlm{display:flex;align-items:center;gap:16px}
 .nlm a{color:var(--gr2);text-decoration:none;font-size:13px;font-weight:500;transition:.2s}
 .nlm a:hover{color:var(--gold)}
-.nlm a+a::before{content:'|';color:var(--gold);opacity:.4;margin-right:16px;font-size:11px}
+.nlm a+a::before{content:'|';color:var(--gold);opacity:.8;margin-right:16px;font-size:12px;font-weight:300}
 /* Region selector button */
 .regionbtn{display:flex;align-items:center;gap:6px;background:transparent;border:1px solid var(--bd2);color:var(--gr2);padding:7px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600;font-family:'Inter',sans-serif;transition:.2s}
 .regionbtn:hover{border-color:var(--bd);color:var(--gold)}
