@@ -1157,18 +1157,30 @@ function closeAI(){document.getElementById('aimodal').classList.remove('open');d
 
 export default function ReferenceHome() {
   useEffect(() => {
-    if (!document.getElementById('acf-ref-style')) {
-      const style = document.createElement('style')
+    // Inject CSS
+    let style = document.getElementById('acf-ref-style') as HTMLStyleElement | null
+    if (!style) {
+      style = document.createElement('style') as HTMLStyleElement
       style.id = 'acf-ref-style'
-      style.textContent = ACF_CSS
       document.head.appendChild(style)
     }
-    if (!document.getElementById('acf-ref-script')) {
-      const script = document.createElement('script')
-      script.id = 'acf-ref-script'
-      script.textContent = ACF_JS
-      document.body.appendChild(script)
+    style.textContent = ACF_CSS
+
+    // Remove extra spacing from Next.js main wrapper
+    const main = document.querySelector('main') as HTMLElement | null
+    if (main) {
+      main.style.paddingTop = '0'
+      main.style.marginTop = '0'
     }
+
+    // Always remove old script and re-inject so event listeners re-attach
+    const old = document.getElementById('acf-ref-script')
+    if (old) old.remove()
+    const script = document.createElement('script')
+    script.id = 'acf-ref-script'
+    script.textContent = ACF_JS
+    document.body.appendChild(script)
+
     return () => {
       const s = document.getElementById('acf-ref-style')
       if (s) s.remove()
