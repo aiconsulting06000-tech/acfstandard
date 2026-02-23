@@ -49,45 +49,6 @@ const rawHTML = `
   </div>
 </div>
 
-<!-- MEGA MENU -->
-<div class="mo" id="mo"></div>
-<div class="md" id="megadrawer">
-  <button class="mclose">×</button>
-  <div class="ms">
-    <div class="mni active" data-panel="framework"><span>Framework</span><span class="marr">›</span></div>
-    <div class="mni" data-panel="products"><span>Products</span><span class="marr">›</span></div>
-    <div class="mni" data-panel="resources"><span>Resources</span><span class="marr">›</span></div>
-    <div class="mni" data-panel="about"><span>About ACF</span><span class="marr">›</span></div>
-    <div class="mni" data-panel="partners"><span>Partners</span><span class="marr">›</span></div>
-    <div class="muser"><div class="muname">Partner Access</div><div class="mulinks"><a href="/partners/login">🔐 Partner Login</a><a href="/partners/apply">Apply to become Partner</a><a href="/contact">Contact</a></div></div>
-  </div>
-  <div class="mc">
-    <div class="mp active" id="panel-framework">
-      <div class="mpt"><a href="/standard">ACF Standard →</a></div>
-      <div class="mpd">The definitive governance methodology for agentic systems in commercial environments.</div>
-      <div class="mgroup"><div class="mgtitle">Architecture</div><ul class="mlinks"><li><a href="/standard#principles">4 Founding Principles</a></li><li><a href="/standard#layers">4 Operational Layers</a></li><li><a href="/standard#maturity">4 Maturity Levels</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">Methodology</div><ul class="mlinks"><li><a href="/method">8 Implementation Modules</a></li><li><a href="/method#constitution">Agentic Constitution</a></li><li><a href="/method#dda">DDA Role Framework</a></li><li><a href="/method#killswitch">Kill Switch Protocol</a></li></ul></div>
-      <div class="mfeat"><div class="mflbl">FEATURED</div><div class="mfitem"><div class="mftitle">Download the ACF White Paper</div><div class="mfdesc">Full specification — free for registered users.</div></div><div class="mfitem"><div class="mftitle">ACF v1.0 — February 2026</div><div class="mfdesc">Official release. What's new in the framework.</div></div></div>
-    </div>
-    <div class="mp" id="panel-products">
-      <div class="mpt"><a href="/products">Products →</a></div>
-      <div class="mpd">Three tools operationalizing the ACF Standard across your organization.</div>
-    </div>
-    <div class="mp" id="panel-resources">
-      <div class="mpt"><a href="/blog">Resources →</a></div>
-      <div class="mpd">Governance insights, research and technical documentation.</div>
-    </div>
-    <div class="mp" id="panel-about">
-      <div class="mpt"><a href="/about">About ACF →</a></div>
-      <div class="mpd">The story, mission, and legal protection behind the Agentic Commerce Framework®.</div>
-    </div>
-    <div class="mp" id="panel-partners">
-      <div class="mpt"><a href="/partners">Partners →</a></div>
-      <div class="mpd">Join the ACF Practitioner network and offer governance services to your clients.</div>
-    </div>
-  </div>
-</div>
-
 <!-- HERO -->
 <section class="hero">
   <div class="hgrid"></div>
