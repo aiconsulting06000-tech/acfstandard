@@ -583,7 +583,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   <div class="hgrid"></div>
   <div class="hw">
     <div>
-      <div class="hbadge rev"><span class="bdot"></span>OFFICIAL STANDARD — v1.0 — FEB 2026</div>
+      
       <h1 class="rev d1">
         <span class="hl1">The Global Standard for</span>
         <span class="hl2"><span id="typed"></span><span class="tc"></span></span>
