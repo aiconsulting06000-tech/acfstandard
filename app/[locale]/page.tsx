@@ -34,7 +34,6 @@ nav.scrolled{background:rgba(5,12,26,.99);box-shadow:0 4px 40px rgba(0,0,0,.5)}
 .nlm{display:flex;align-items:center;gap:16px}
 .nlm a{color:var(--gr2);text-decoration:none;font-size:13px;font-weight:500;transition:.2s}
 .nlm a:hover{color:var(--gold)}
-.nlm a+a::before{content:'|';color:var(--gold);opacity:.8;margin-right:16px;font-size:12px;font-weight:300}
 /* Region selector button */
 .regionbtn{display:flex;align-items:center;gap:6px;background:transparent;border:1px solid var(--bd2);color:var(--gr2);padding:7px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600;font-family:'Inter',sans-serif;transition:.2s}
 .regionbtn:hover{border-color:var(--bd);color:var(--gold)}
@@ -173,7 +172,7 @@ section{padding:60px 0;position:relative;z-index:1}
 .secdark{background:var(--navy2)}
 
 /* ═══ PRINCIPLES ═══ */
-.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:36px}
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-top:60px}
 .pcard{background:var(--navy3);padding:52px;transition:.3s;position:relative;overflow:hidden}
 .pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),rgba(201,168,76,.2),transparent);transform:scaleX(0);transform-origin:left;transition:.4s}
 .pcard:hover::before{transform:scaleX(1)}
@@ -186,7 +185,7 @@ section{padding:60px 0;position:relative;z-index:1}
 .ptag{display:inline-flex;margin-top:20px;padding:5px 12px;background:var(--gold-dim);border:1px solid var(--bd);border-radius:100px;font-size:11px;color:var(--gold);letter-spacing:.07em;font-weight:700;font-family:'JetBrains Mono',monospace}
 
 /* ═══ LAYERS ═══ */
-.lgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px}
+.lgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:60px}
 .lcard{background:var(--navy3);border:1px solid var(--bd2);border-radius:12px;padding:36px 28px;transition:.3s;position:relative;overflow:hidden}
 .lcard::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,168,76,.07),transparent 70%);opacity:0;transition:.3s}
 .lcard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.3)}
@@ -197,7 +196,7 @@ section{padding:60px 0;position:relative;z-index:1}
 .ld{font-size:13.5px;color:var(--gr);line-height:1.65}
 
 /* ═══ MATURITY ═══ */
-.matwrap{margin-top:36px;position:relative}
+.matwrap{margin-top:70px;position:relative}
 .mattrack{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
 .matlinebg,.matlinefg{position:absolute;top:12px;height:2px;border-radius:1px;left:calc(12.5% + 12px);right:calc(12.5% + 12px)}
 .matlinebg{background:rgba(201,168,76,.2);z-index:0}
@@ -309,7 +308,7 @@ section{padding:60px 0;position:relative;z-index:1}
 .plink:hover{gap:14px}
 
 /* ═══ BLOG ═══ */
-.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
 .bcard{background:var(--navy3);border:1px solid var(--bd2);border-radius:12px;overflow:hidden;transition:.3s;text-decoration:none;color:var(--w);display:block}
 .bcard:hover{border-color:var(--bd);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
 .bimg{height:200px;position:relative;overflow:hidden;background:var(--navy2)}
@@ -445,6 +444,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   .mattrack{grid-template-columns:1fr}
   .rpcols{grid-template-columns:1fr}
 }
+.nlm a+a::before{content:"|";color:var(--gold);opacity:.8;margin-right:16px;font-size:12px;font-weight:300}
 </style>
 </head>
 <body>
@@ -460,7 +460,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   <div class="rpcols" style="grid-template-columns:repeat(5,1fr);gap:28px">
     <div>
       <div class="rpcol-title">Global</div>
-      <a class="rpglobal" href="#" onclick="closeRegion()"><span>🌐</span><span>Global (English)</span></a>
+      <a class="rpglobal" href="#" onclick="closeRegion()"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span><span>Global (English)</span></a>
       <div class="rpcol-title" style="margin-top:20px">North America</div>
       <ul class="rplinks">
         <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇺🇸</span>United States <span class="rplang">(English)</span></a></li>
@@ -565,8 +565,8 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     </a>
     <div class="nr">
       <div class="nlm">
+        <a href="/en/acf-score">ACF Score</a>
         <a href="/standard">Standard</a>
-        <a href="https://acf-score.com" target="_blank">ACF Score</a>
         <a href="/control">ACF Control</a>
         <a href="/certification">ACF Certification</a>
       </div>
@@ -598,7 +598,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div class="muser">
       <div class="muname">Partner Access</div>
       <div class="mulinks">
-        <a href="/partners/login">🔐 Partner Login</a>
+        <a href="/partners/login"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Partner Login</a>
         <a href="/partners/apply">Apply to become Partner</a>
         <a href="/contact">Contact</a>
       </div>
@@ -635,7 +635,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div class="mp" id="panel-partners">
       <div class="mpt"><a href="/partners">Partners →</a></div>
       <div class="mpd">Join the ACF Practitioner network and offer governance services to your clients.</div>
-      <div class="mgroup"><div class="mgtitle">Partner Portal</div><ul class="mlinks"><li><a href="/partners/login">🔐 Login to Partner Portal</a></li><li><a href="/partners/dashboard">Dashboard &amp; Tools</a></li><li><a href="/partners/training">Training Materials</a></li><li><a href="/partners/toolkit">ACF Practitioner Toolkit</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">Partner Portal</div><ul class="mlinks"><li><a href="/partners/login"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Login to Partner Portal</a></li><li><a href="/partners/dashboard">Dashboard &amp; Tools</a></li><li><a href="/partners/training">Training Materials</a></li><li><a href="/partners/toolkit">ACF Practitioner Toolkit</a></li></ul></div>
       <div class="mgroup"><div class="mgtitle">Become a Partner</div><ul class="mlinks"><li><a href="/partners/apply">Apply to Join</a></li><li><a href="/partners/tiers">Partner Tiers</a></li><li><a href="/certification">Get ACF Certified First</a></li></ul></div>
     </div>
   </div>
