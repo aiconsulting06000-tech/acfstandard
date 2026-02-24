@@ -160,15 +160,15 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- NAV -->
 <nav>
   <div class="nw">
-    <a href="/en/" class="logo">
+    <a href="/en/acf-score" target="_top" class="logo">
       <div class="lb">ACF</div>
       <div>
-        <div class="ln">Agentic Commerce Framework®</div>
-        <div class="ls">Global Standard for AI Governance</div>
+        <div class="ln">ACF SCORE</div>
+        <div class="ls">DIAGNOSTIC TOOL — FREE</div>
       </div>
     </a>
     <div class="nr">
-      <a href="/en/" class="nback">← Back to Standard</a>
+      <a href="/en/" target="_top" class="nback">← Back to Standard</a>
       <a href="https://acf-score.com/calculator" target="_blank" class="ncta">Calculate My Score →</a>
     </div>
   </div>
@@ -422,7 +422,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <p>10 minutes. A complete diagnostic of your agentic governance. Understand where you stand before a failure forces you to find out.</p>
     <div class="ctabtns">
       <a href="https://acf-score.com/calculator" target="_blank" class="btng" style="font-size:15px;padding:16px 32px">Start the Diagnostic — Free →</a>
-      <a href="/en/contact" class="btno">Request a Custom Assessment</a>
+      <a href="/en/contact" target="_top" class="btno">Request a Custom Assessment</a>
     </div>
   </div>
 </section>
@@ -432,7 +432,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   <div class="ctn">
     <div class="fgrid">
       <div>
-        <a href="/en/" class="logo">
+        <a href="/en/" target="_top" class="logo">
           <div class="lb">ACF</div>
           <div><div class="ln">Agentic Commerce Framework®</div><div class="ls">Global Standard for AI Governance</div></div>
         </a>
@@ -441,17 +441,17 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div>
         <div class="ftitle">ACF Products</div>
         <ul class="flinks">
-          <li><a href="https://acf-score.com" target="_blank">ACF Score®</a></li>
-          <li><a href="/en/control">ACF Control</a></li>
-          <li><a href="/en/certification">ACF Certification</a></li>
+          <li><a href="/en/acf-score" target="_top">ACF Score®</a></li>
+          <li><a href="/en/acf-control" target="_top">ACF Control</a></li>
+          <li><a href="/en/certification" target="_top">ACF Certification</a></li>
         </ul>
       </div>
       <div>
         <div class="ftitle">Framework</div>
         <ul class="flinks">
-          <li><a href="/en/standard">The Standard</a></li>
-          <li><a href="/en/about">About ACF</a></li>
-          <li><a href="/en/contact">Contact</a></li>
+          <li><a href="/en/" target="_top">The Standard</a></li>
+          <li><a href="/en/about" target="_top">About ACF</a></li>
+          <li><a href="/en/contact" target="_top">Contact</a></li>
         </ul>
       </div>
     </div>
