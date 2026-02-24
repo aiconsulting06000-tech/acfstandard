@@ -160,11 +160,11 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- NAV -->
 <nav>
   <div class="nw">
-    <a href="/en/" class="logo">
+    <a href="/en/acf-score" class="logo">
       <div class="lb">ACF</div>
       <div>
-        <div class="ln">Agentic Commerce Framework®</div>
-        <div class="ls">Global Standard for AI Governance</div>
+        <div class="ln">ACF SCORE</div>
+        <div class="ls">DIAGNOSTIC TOOL — FREE</div>
       </div>
     </a>
     <div class="nr">
@@ -441,15 +441,15 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div>
         <div class="ftitle">ACF Products</div>
         <ul class="flinks">
-          <li><a href="https://acf-score.com" target="_blank">ACF Score®</a></li>
-          <li><a href="/en/control">ACF Control</a></li>
+          <li><a href="/en/acf-score">ACF Score®</a></li>
+          <li><a href="/en/acf-control">ACF Control</a></li>
           <li><a href="/en/certification">ACF Certification</a></li>
         </ul>
       </div>
       <div>
         <div class="ftitle">Framework</div>
         <ul class="flinks">
-          <li><a href="/en/standard">The Standard</a></li>
+          <li><a href="/en/">The Standard</a></li>
           <li><a href="/en/about">About ACF</a></li>
           <li><a href="/en/contact">Contact</a></li>
         </ul>
