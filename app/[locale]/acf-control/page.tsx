@@ -38,8 +38,8 @@ function AnimatedCounter({ end, duration = 1600, suffix = "", prefix = "" }: { e
   return <span ref={ref}>{prefix}{count}{suffix}</span>;
 }
 
-function Pulse({ color = "green" }) {
-  const colors = { green: C.green, amber: C.amber, red: C.red, gold: C.gold };
+function Pulse({ color = "green" }: { color?: string }) {
+  const colors: Record<string, string> = { green: C.green, amber: C.amber, red: C.red, gold: C.gold };
   return (
     <span className="relative flex" style={{ width: 8, height: 8 }}>
       <span style={{ position: "absolute", inset: 0, borderRadius: "50%", background: colors[color], opacity: .6, animation: "pulse-ring 2s infinite" }} />
@@ -102,13 +102,14 @@ function KPIMini({ label, value, trend, unit = "" }) {
   );
 }
 
-function TimelineEvent({ time, label, level }) {
-  const cfg = {
+function TimelineEvent({ time, label, level }: { time: string; label: string; level: string }) {
+  const cfgMap: Record<string, { color: string; bg: string; border: string; icon: string }> = {
     ok: { color: C.green, bg: "rgba(34,197,94,.08)", border: "rgba(34,197,94,.2)", icon: "✓" },
     warning: { color: C.amber, bg: "rgba(245,158,11,.08)", border: "rgba(245,158,11,.2)", icon: "⚠" },
     alert: { color: "#f97316", bg: "rgba(249,115,22,.08)", border: "rgba(249,115,22,.2)", icon: "◆" },
     critical: { color: C.red, bg: "rgba(239,68,68,.08)", border: "rgba(239,68,68,.2)", icon: "✕" },
-  }[level];
+  };
+  const cfg = cfgMap[level] || cfgMap.ok;
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "7px 10px", borderRadius: 8, background: cfg.bg, border: `1px solid ${cfg.border}` }}>
       <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: cfg.color }}>{time}</span>
@@ -307,17 +308,17 @@ export default function ACFControlPage() {
       {/* ━━━ EQUATION BAR ━━━ */}
       <section style={{ padding: "40px 0", borderTop: `1px solid ${C.bd1}`, borderBottom: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "center", gap: 24, flexWrap: "wrap" }}>
-          {[
-            { label: "Observability", c: C.gold },
+          {([
+            { label: "Observability", c: C.gold, bold: false },
             null,
-            { label: "Governance", c: C.green },
+            { label: "Governance", c: C.green, bold: false },
             null,
-            { label: "Intervention", c: C.amber },
+            { label: "Intervention", c: C.amber, bold: false },
             "=",
             { label: "Sovereignty", c: "#fff", bold: true },
-          ].map((item, i) => item === null ? (
+          ] as (null | string | { label: string; c: string; bold: boolean })[]).map((item, i) => item === null ? (
             <span key={i} style={{ fontSize: 20, color: C.gray }}>+</span>
-          ) : item === "=" ? (
+          ) : typeof item === "string" ? (
             <span key={i} style={{ fontSize: 20, color: C.gray }}>=</span>
           ) : (
             <span key={i} style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: item.bold ? 700 : 500, color: item.c }}>{item.label}</span>
