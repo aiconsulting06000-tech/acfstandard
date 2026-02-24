@@ -52,7 +52,7 @@ function GoldBar() {
   return <div style={{ width: 44, height: 3, background: `linear-gradient(90deg, ${C.gold}, transparent)`, borderRadius: 2, marginBottom: 16 }} />;
 }
 
-function Badge({ children }) {
+function Badge({ children }: { children: React.ReactNode }) {
   return (
     <span style={{
       fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700,
@@ -63,7 +63,7 @@ function Badge({ children }) {
   );
 }
 
-function SectionLabel({ children }) {
+function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div style={{
       fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600,
@@ -72,7 +72,7 @@ function SectionLabel({ children }) {
   );
 }
 
-function StabilityRing({ value, label }) {
+function StabilityRing({ value, label }: { value: number; label: string }) {
   const color = value > 80 ? C.green : value > 60 ? C.amber : C.red;
   const circ = 2 * Math.PI * 34;
   return (
@@ -89,7 +89,7 @@ function StabilityRing({ value, label }) {
   );
 }
 
-function KPIMini({ label, value, trend, unit = "" }) {
+function KPIMini({ label, value, trend, unit = "" }: { label: string; value: string | number; trend: string; unit?: string }) {
   const up = trend === "up";
   return (
     <div style={{ background: C.navy3, borderRadius: 10, padding: "10px 12px", border: `1px solid ${C.bd1}` }}>
