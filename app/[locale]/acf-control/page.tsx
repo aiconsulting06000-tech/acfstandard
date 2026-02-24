@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    ACF CONTROL — Decision Governance Operating System
@@ -20,10 +20,10 @@ const C = {
 };
 
 /* ── Helpers ───────────────────────────────────── */
-function AnimatedCounter({ end, duration = 1600, suffix = "", prefix = "" }) {
+function AnimatedCounter({ end, duration = 1600, suffix = "", prefix = "" }: { end: number; duration?: number; suffix?: string; prefix?: string }) {
   const [count, setCount] = useState(0);
   const [started, setStarted] = useState(false);
-  const ref = useRef(null);
+  const ref = useRef<HTMLSpanElement>(null);
   useEffect(() => {
     const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setStarted(true); }, { threshold: 0.1 });
     if (ref.current) obs.observe(ref.current);
@@ -118,7 +118,7 @@ function TimelineEvent({ time, label, level }) {
   );
 }
 
-function ModuleCard({ id, title, subtitle, icon, children }) {
+function ModuleCard({ id, title, subtitle, icon, children }: { id: string; title: string; subtitle: string; icon: React.ReactNode; children?: React.ReactNode }) {
   return (
     <div style={{
       background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 16, padding: 24,
@@ -186,7 +186,7 @@ export default function ACFControlPage() {
           <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
             {navLinks.map(l => (
               <a key={l} href={`#${l.toLowerCase().replace(" ", "-")}`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-                onMouseEnter={e => e.target.style.color = C.gold} onMouseLeave={e => e.target.style.color = C.gray2}>{l}</a>
+                onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l}</a>
             ))}
             <button className="gold-glow" style={{
               background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
@@ -234,8 +234,8 @@ export default function ACFControlPage() {
                   background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
                   padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 500, cursor: "pointer", transition: "all .3s",
                 }}
-                  onMouseEnter={e => { e.target.style.borderColor = C.goldBorder; e.target.style.color = "#fff"; }}
-                  onMouseLeave={e => { e.target.style.borderColor = C.bd1; e.target.style.color = C.gray2; }}
+                  onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
+                  onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}
                 >Watch Demo</button>
               </div>
 
@@ -819,8 +819,8 @@ export default function ACFControlPage() {
               background: "transparent", border: `1px solid ${C.goldBorder}`, color: C.gold,
               padding: "10px 24px", borderRadius: 10, fontSize: 13, fontWeight: 600, cursor: "pointer", transition: "all .3s",
             }}
-              onMouseEnter={e => { e.target.style.background = C.goldDim; }}
-              onMouseLeave={e => { e.target.style.background = "transparent"; }}
+              onMouseEnter={e => { (e.target as HTMLElement).style.background = C.goldDim; }}
+              onMouseLeave={e => { (e.target as HTMLElement).style.background = "transparent"; }}
             >Apply for Certification →</button>
           </div>
         </div>
@@ -864,8 +864,8 @@ export default function ACFControlPage() {
               background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
               padding: "16px 36px", borderRadius: 12, fontSize: 15, fontWeight: 500, cursor: "pointer",
             }}
-              onMouseEnter={e => { e.target.style.borderColor = C.goldBorder; e.target.style.color = "#fff"; }}
-              onMouseLeave={e => { e.target.style.borderColor = C.bd1; e.target.style.color = C.gray2; }}
+              onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
+              onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}
             >Calculate Your ACF Score</button>
           </div>
         </div>
@@ -880,9 +880,9 @@ export default function ACFControlPage() {
           </div>
           <div style={{ display: "flex", gap: 20, fontSize: 12, color: C.gray }}>
             <span>© 2026 Vincent DORANGE</span>
-            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => e.target.style.color = C.gold} onMouseLeave={e => e.target.style.color = C.gray}>Privacy</a>
-            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => e.target.style.color = C.gold} onMouseLeave={e => e.target.style.color = C.gray}>Terms</a>
-            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => e.target.style.color = C.gold} onMouseLeave={e => e.target.style.color = C.gray}>Contact</a>
+            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray}>Privacy</a>
+            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray}>Terms</a>
+            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray}>Contact</a>
           </div>
         </div>
       </footer>
