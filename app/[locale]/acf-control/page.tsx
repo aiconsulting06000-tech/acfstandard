@@ -42,7 +42,7 @@ function Pulse({ color = "green" }: { color?: string }) {
   const colors: Record<string, string> = { green: C.green, amber: C.amber, red: C.red, gold: C.gold };
   return (
     <span className="relative flex" style={{ width: 8, height: 8 }}>
-      <span style={{ position: "absolute", inset: 0, borderRadius: "50%", background: colors[color], opacity: .6, animation: "pulse-ring 2s infinite" }} />
+      <span style={{ position: "absolute", inset: 0, borderRadius: "50%", background: colors[color], opacity: .4, animation: "pulse-ring 2s infinite" }} />
       <span style={{ position: "relative", width: 8, height: 8, borderRadius: "50%", background: colors[color] }} />
     </span>
   );
@@ -146,9 +146,33 @@ export default function ACFControlPage() {
   const [activeTab, setActiveTab] = useState("ceo");
   const [killArmed, setKillArmed] = useState(false);
   const [clock, setClock] = useState(new Date());
+  const [alertPhase, setAlertPhase] = useState(0);
+  // Phase 0: Normal (0-6s) | Phase 1: Drift warning (6-9s) | Phase 2: Critical alert + red flash (9-12s) 
+  // Phase 3: Kill switch fires (12-15s) | Phase 4: Recovery (15-18s) | Loop
 
   useEffect(() => { const t = setInterval(() => setClock(new Date()), 1000); return () => clearInterval(t); }, []);
+  useEffect(() => {
+    const sequence = [
+      { phase: 0, delay: 0 },
+      { phase: 1, delay: 6000 },
+      { phase: 2, delay: 9000 },
+      { phase: 3, delay: 12000 },
+      { phase: 4, delay: 15000 },
+      { phase: 0, delay: 19000 },
+    ];
+    const timers = sequence.map(s => setTimeout(() => setAlertPhase(s.phase), s.delay));
+    const loop = setInterval(() => {
+      sequence.forEach(s => setTimeout(() => setAlertPhase(s.phase), s.delay));
+    }, 19000);
+    return () => { timers.forEach(clearTimeout); clearInterval(loop); };
+  }, []);
+
   const timeStr = clock.toLocaleTimeString("en-US", { hour12: false });
+  const sovScore = alertPhase === 0 ? 74 : alertPhase === 1 ? 68 : alertPhase === 2 ? 41 : alertPhase === 3 ? 41 : 74;
+  const stockScore = alertPhase === 0 ? 67 : alertPhase === 1 ? 38 : alertPhase === 2 ? 12 : alertPhase === 3 ? 0 : 67;
+  const isAlert = alertPhase === 2;
+  const isKill = alertPhase === 3;
+  const isRecovery = alertPhase === 4;
 
   const navLinks = ["Modules", "Drift Engine", "Dashboard", "Risks"];
 
@@ -157,12 +181,15 @@ export default function ACFControlPage() {
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
 
       <style>{`
-        @keyframes pulse-ring { 0% { transform: scale(1); opacity: .6; } 70% { transform: scale(2.2); opacity: 0; } 100% { transform: scale(2.2); opacity: 0; } }
+        @keyframes pulse-ring { 0% { transform: scale(1); opacity: .4; } 70% { transform: scale(2); opacity: 0; } 100% { transform: scale(2); opacity: 0; } }
         @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
         @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
-        .fade-up { animation: fadeUp .8s cubic-bezier(.16,1,.3,1) forwards; }
-        .gold-glow:hover { box-shadow: 0 0 30px ${C.goldGlow}; }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes alertFlash { 0%,100% { box-shadow: 0 0 0px rgba(239,68,68,0); } 50% { box-shadow: 0 0 40px rgba(239,68,68,.5); } }
+        @keyframes redPulse { 0%,100% { border-color: rgba(239,68,68,.3); } 50% { border-color: rgba(239,68,68,.7); } }
+        @keyframes killFlash { 0% { opacity: 1; } 50% { opacity: .4; } 100% { opacity: 1; } }
+        .fade-up { opacity: 0; animation: fadeUp .6s cubic-bezier(.16,1,.3,1) forwards; animation-delay: .1s; }
+        .gold-glow:hover { box-shadow: 0 0 20px rgba(201,168,76,.2); }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         a { text-decoration: none; color: inherit; }
       `}</style>
@@ -199,15 +226,6 @@ export default function ACFControlPage() {
 
       {/* ━━━ HERO ━━━ */}
       <section style={{ paddingTop: 140, paddingBottom: 100, position: "relative", overflow: "hidden" }}>
-        {/* Subtle grid background */}
-        <div style={{
-          position: "absolute", inset: 0, opacity: .03,
-          backgroundImage: `linear-gradient(${C.gold} 1px, transparent 1px), linear-gradient(90deg, ${C.gold} 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-        }} />
-        {/* Gold radial glow */}
-        <div style={{ position: "absolute", top: -200, left: "50%", transform: "translateX(-50%)", width: 800, height: 800, background: `radial-gradient(circle, ${C.goldDim}, transparent 70%)`, pointerEvents: "none" }} />
-
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px", position: "relative", zIndex: 2 }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
             {/* Left */}
@@ -249,56 +267,131 @@ export default function ACFControlPage() {
               </div>
             </div>
 
-            {/* Right — Live Dashboard */}
+            {/* Right — Live Dashboard with Alert Scenario */}
             <div className="fade-up" style={{ animationDelay: ".2s" }}>
-              <div style={{ background: C.navy2, border: `1px solid ${C.bd2}`, borderRadius: 16, padding: 20, position: "relative" }}>
-                <div style={{ position: "absolute", inset: -16, background: `radial-gradient(ellipse at center, ${C.goldDim}, transparent 70%)`, borderRadius: 24, zIndex: -1 }} />
+              <div style={{
+                background: C.navy2, border: `1px solid ${isAlert || isKill ? "rgba(239,68,68,.4)" : C.bd2}`, borderRadius: 16, padding: 20, position: "relative",
+                transition: "border-color .5s, box-shadow .5s",
+                animation: isAlert ? "alertFlash 1s ease-in-out infinite" : isKill ? "redPulse 1.5s ease-in-out infinite" : "none",
+              }}>
 
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
+                {/* Red overlay flash */}
+                {isAlert && <div style={{ position: "absolute", inset: 0, background: "rgba(239,68,68,.06)", borderRadius: 16, pointerEvents: "none", transition: "opacity .3s" }} />}
+
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16, position: "relative" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                    <Pulse color="green" />
-                    <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gray, letterSpacing: ".1em" }}>ACF CONTROL — LIVE</span>
+                    <Pulse color={isAlert || isKill ? "red" : "green"} />
+                    <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: isAlert || isKill ? C.red : C.gray, letterSpacing: ".1em", transition: "color .5s" }}>
+                      {isKill ? "⚠ KILL SWITCH ACTIVE" : isAlert ? "🚨 CRITICAL ALERT" : "ACF CONTROL — LIVE"}
+                    </span>
                   </div>
-                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: C.gold }}>{timeStr}</span>
+                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: isAlert || isKill ? C.red : C.gold }}>{timeStr}</span>
                 </div>
 
                 {/* Score */}
-                <div style={{ background: C.navy3, borderRadius: 12, padding: 16, marginBottom: 12, border: `1px solid ${C.bd1}` }}>
+                <div style={{
+                  background: C.navy3, borderRadius: 12, padding: 16, marginBottom: 12, border: `1px solid ${isAlert ? "rgba(239,68,68,.3)" : C.bd1}`,
+                  transition: "border-color .5s",
+                }}>
                   <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 8 }}>Sovereignty Score</div>
                   <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
-                    <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 44, fontWeight: 800, color: C.green }}>74</span>
+                    <span style={{
+                      fontFamily: "'Space Grotesk', sans-serif", fontSize: 44, fontWeight: 800,
+                      color: sovScore > 60 ? C.green : sovScore > 40 ? C.amber : C.red,
+                      transition: "color .5s",
+                    }}>{sovScore}</span>
                     <span style={{ fontSize: 13, color: C.gray }}>/100</span>
-                    <span style={{ fontSize: 11, color: C.green, marginLeft: "auto" }}>▲ +3.2 (30d)</span>
+                    <span style={{
+                      fontSize: 11, marginLeft: "auto", transition: "color .5s",
+                      color: alertPhase === 0 || isRecovery ? C.green : C.red,
+                    }}>
+                      {alertPhase === 0 || isRecovery ? "▲ +3.2 (30d)" : isKill ? "⬛ SUSPENDED" : "▼ −33 CRITICAL"}
+                    </span>
                   </div>
                   <div style={{ width: "100%", height: 4, background: C.navy1, borderRadius: 4, marginTop: 8 }}>
-                    <div style={{ width: "74%", height: 4, background: `linear-gradient(90deg, ${C.green}, ${C.gold})`, borderRadius: 4 }} />
+                    <div style={{
+                      width: `${sovScore}%`, height: 4, borderRadius: 4, transition: "width 1s, background .5s",
+                      background: sovScore > 60 ? `linear-gradient(90deg, ${C.green}, ${C.gold})` : sovScore > 40 ? C.amber : C.red,
+                    }} />
                   </div>
                 </div>
 
                 {/* Agents */}
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 12 }}>
                   {[
-                    { name: "PRICE-GOV", score: 92, status: "green" },
-                    { name: "STOCK-AI", score: 67, status: "amber" },
-                    { name: "FRAUD-DET", score: 88, status: "green" },
+                    { name: "PRICE-GOV", score: alertPhase === 0 || isRecovery ? 92 : isKill ? 0 : 92, status: isKill ? "red" : "green" },
+                    { name: "STOCK-AI", score: stockScore, status: stockScore > 60 ? "amber" : "red" },
+                    { name: "FRAUD-DET", score: alertPhase === 0 || isRecovery ? 88 : isKill ? 0 : 88, status: isKill ? "red" : "green" },
                   ].map(a => (
-                    <div key={a.name} style={{ background: C.navy3, borderRadius: 8, padding: 10, border: `1px solid ${C.bd1}` }}>
+                    <div key={a.name} style={{
+                      background: C.navy3, borderRadius: 8, padding: 10, border: `1px solid ${a.status === "red" && alertPhase > 0 ? "rgba(239,68,68,.2)" : C.bd1}`,
+                      transition: "border-color .5s",
+                    }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4 }}>
                         <Pulse color={a.status} />
                         <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 8, color: C.gray, letterSpacing: ".08em" }}>{a.name}</span>
                       </div>
-                      <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 18, fontWeight: 700, color: a.score > 80 ? C.green : a.score > 60 ? C.amber : C.red }}>{a.score}</span>
+                      <span style={{
+                        fontFamily: "'Space Grotesk', sans-serif", fontSize: 18, fontWeight: 700, transition: "color .5s",
+                        color: isKill ? C.red : a.score > 80 ? C.green : a.score > 60 ? C.amber : C.red,
+                        animation: isKill ? "killFlash 1s infinite" : "none",
+                      }}>{isKill ? "OFF" : a.score}</span>
                     </div>
                   ))}
                 </div>
 
-                {/* Timeline */}
+                {/* Timeline — dynamic */}
                 <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-                  <TimelineEvent time="14:32" label="PRICE-GOV margin adjusted +0.3%" level="ok" />
-                  <TimelineEvent time="14:28" label="STOCK-AI drift detected (−1.2%)" level="warning" />
-                  <TimelineEvent time="14:15" label="FRAUD-DET suspicious transaction blocked" level="ok" />
-                  <TimelineEvent time="13:47" label="Escalation threshold approaching" level="alert" />
+                  {isKill ? (
+                    <>
+                      <TimelineEvent time={timeStr.slice(0,5)} label="⚠ KILL SWITCH ACTIVATED — All agents suspended" level="critical" />
+                      <TimelineEvent time={timeStr.slice(0,5)} label="STOCK-AI drift exceeded 300% — sovereignty breach" level="critical" />
+                      <TimelineEvent time={timeStr.slice(0,5)} label="Degraded mode active — human takeover required" level="alert" />
+                    </>
+                  ) : isAlert ? (
+                    <>
+                      <TimelineEvent time={timeStr.slice(0,5)} label="🚨 STOCK-AI CRITICAL — Score 12, drift +312%" level="critical" />
+                      <TimelineEvent time={timeStr.slice(0,5)} label="Sovereignty score below threshold (41/100)" level="critical" />
+                      <TimelineEvent time="14:28" label="STOCK-AI drift detected (−1.2%)" level="warning" />
+                      <TimelineEvent time="14:15" label="FRAUD-DET suspicious transaction blocked" level="ok" />
+                    </>
+                  ) : alertPhase === 1 ? (
+                    <>
+                      <TimelineEvent time={timeStr.slice(0,5)} label="⚠ STOCK-AI drift accelerating (−4.8%)" level="warning" />
+                      <TimelineEvent time="14:32" label="PRICE-GOV margin adjusted +0.3%" level="ok" />
+                      <TimelineEvent time="14:28" label="STOCK-AI drift detected (−1.2%)" level="warning" />
+                      <TimelineEvent time="14:15" label="FRAUD-DET suspicious transaction blocked" level="ok" />
+                    </>
+                  ) : (
+                    <>
+                      <TimelineEvent time="14:32" label="PRICE-GOV margin adjusted +0.3%" level="ok" />
+                      <TimelineEvent time="14:28" label="STOCK-AI drift detected (−1.2%)" level="warning" />
+                      <TimelineEvent time="14:15" label="FRAUD-DET suspicious transaction blocked" level="ok" />
+                      <TimelineEvent time="13:47" label="Escalation threshold approaching" level="alert" />
+                    </>
+                  )}
                 </div>
+
+                {/* Kill Switch Banner */}
+                {(isAlert || isKill) && (
+                  <div style={{
+                    marginTop: 12, padding: "10px 14px", borderRadius: 10,
+                    background: isKill ? "rgba(239,68,68,.15)" : "rgba(239,68,68,.08)",
+                    border: `1px solid rgba(239,68,68,${isKill ? ".4" : ".2"})`,
+                    display: "flex", alignItems: "center", gap: 10,
+                    animation: isAlert ? "redPulse 1s infinite" : "none",
+                  }}>
+                    <span style={{ fontSize: 16 }}>{isKill ? "🛑" : "⚠️"}</span>
+                    <div>
+                      <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, color: C.red, letterSpacing: ".08em" }}>
+                        {isKill ? "ALL AGENTS SUSPENDED" : "KILL SWITCH RECOMMENDED"}
+                      </div>
+                      <div style={{ fontSize: 11, color: "rgba(239,68,68,.7)", marginTop: 2 }}>
+                        {isKill ? "Human takeover active. Awaiting manual review." : "Sovereignty breach detected. Immediate intervention required."}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
