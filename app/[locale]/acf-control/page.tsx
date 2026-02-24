@@ -205,6 +205,8 @@ export default function ACFControlPage() {
             </div>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
+            <a href="/en" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Back to Standard</a>
             {navLinks.map(l => (
               <a key={l} href={`#${l.toLowerCase().replace(" ", "-")}`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
                 onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l}</a>
