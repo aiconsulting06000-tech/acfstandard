@@ -40,12 +40,7 @@ function AnimatedCounter({ end, duration = 1600, suffix = "", prefix = "" }: { e
 
 function Pulse({ color = "green" }: { color?: string }) {
   const colors: Record<string, string> = { green: C.green, amber: C.amber, red: C.red, gold: C.gold };
-  return (
-    <span className="relative flex" style={{ width: 8, height: 8 }}>
-      <span style={{ position: "absolute", inset: 0, borderRadius: "50%", background: colors[color], opacity: .4, animation: "pulse-ring 2s infinite" }} />
-      <span style={{ position: "relative", width: 8, height: 8, borderRadius: "50%", background: colors[color] }} />
-    </span>
-  );
+  return <span style={{ display: "inline-block", width: 8, height: 8, borderRadius: "50%", background: colors[color] }} />;
 }
 
 function GoldBar() {
@@ -154,16 +149,15 @@ export default function ACFControlPage() {
   useEffect(() => {
     const sequence = [
       { phase: 0, delay: 0 },
-      { phase: 1, delay: 6000 },
-      { phase: 2, delay: 9000 },
-      { phase: 3, delay: 12000 },
-      { phase: 4, delay: 15000 },
-      { phase: 0, delay: 19000 },
+      { phase: 1, delay: 3000 },
+      { phase: 2, delay: 5000 },
+      { phase: 3, delay: 7000 },
+      { phase: 4, delay: 9000 },
+      { phase: 0, delay: 11000 },
     ];
-    const timers = sequence.map(s => setTimeout(() => setAlertPhase(s.phase), s.delay));
-    const loop = setInterval(() => {
-      sequence.forEach(s => setTimeout(() => setAlertPhase(s.phase), s.delay));
-    }, 19000);
+    const runSequence = () => sequence.map(s => setTimeout(() => setAlertPhase(s.phase), s.delay));
+    let timers = runSequence();
+    const loop = setInterval(() => { timers = runSequence(); }, 11000);
     return () => { timers.forEach(clearTimeout); clearInterval(loop); };
   }, []);
 
@@ -181,7 +175,6 @@ export default function ACFControlPage() {
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
 
       <style>{`
-        @keyframes pulse-ring { 0% { transform: scale(1); opacity: .4; } 70% { transform: scale(2); opacity: 0; } 100% { transform: scale(2); opacity: 0; } }
         @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
         @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
         @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
@@ -656,7 +649,6 @@ export default function ACFControlPage() {
               background: killArmed ? C.red : "rgba(239,68,68,.08)",
               color: killArmed ? "#fff" : C.red,
               boxShadow: killArmed ? "0 0 20px rgba(239,68,68,.4)" : "none",
-              animation: killArmed ? "pulse-ring 2s infinite" : "none",
             }}>
               {killArmed ? "⚠ KILL SWITCH ARMED — Click to disarm" : "Arm Kill Switch"}
             </button>
