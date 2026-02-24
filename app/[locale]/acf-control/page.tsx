@@ -218,7 +218,7 @@ export default function ACFControlPage() {
       </nav>
 
       {/* ━━━ HERO ━━━ */}
-      <section style={{ paddingTop: 140, paddingBottom: 100, position: "relative", overflow: "hidden" }}>
+      <section style={{ paddingTop: 120, paddingBottom: 60, position: "relative", overflow: "hidden" }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px", position: "relative", zIndex: 2 }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
             {/* Left */}
@@ -413,7 +413,7 @@ export default function ACFControlPage() {
       </section>
 
       {/* ━━━ WHAT IT IS / IS NOT ━━━ */}
-      <section style={{ padding: "100px 0" }}>
+      <section style={{ padding: "60px 0" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <SectionLabel>Positioning</SectionLabel>
@@ -451,7 +451,7 @@ export default function ACFControlPage() {
       </section>
 
       {/* ━━━ 6 CORE MODULES ━━━ */}
-      <section id="modules" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
+      <section id="modules" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <SectionLabel>Architecture</SectionLabel>
@@ -543,7 +543,7 @@ export default function ACFControlPage() {
       </section>
 
       {/* ━━━ DRIFT ENGINE ━━━ */}
-      <section id="drift-engine" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
+      <section id="drift-engine" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
             <div>
@@ -610,7 +610,7 @@ export default function ACFControlPage() {
       </section>
 
       {/* ━━━ KILL SWITCH & INTERVENTION ━━━ */}
-      <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
+      <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 1000, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
           <SectionLabel>Command Authority</SectionLabel>
           <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 12 }}>Immediate Intervention</h2>
@@ -658,7 +658,7 @@ export default function ACFControlPage() {
       </section>
 
       {/* ━━━ EXECUTIVE DASHBOARD ━━━ */}
-      <section id="dashboard" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
+      <section id="dashboard" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <SectionLabel>One page, one answer</SectionLabel>
@@ -746,7 +746,7 @@ export default function ACFControlPage() {
       </section>
 
       {/* ━━━ RISK vs COST — THE REAL ROI SECTION ━━━ */}
-      <section id="risks" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
+      <section id="risks" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <SectionLabel>The real math</SectionLabel>
@@ -831,7 +831,7 @@ export default function ACFControlPage() {
       </section>
 
       {/* ━━━ PRICING — ON REQUEST ━━━ */}
-      <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
+      <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
           <SectionLabel>Plans</SectionLabel>
           <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 12 }}>
@@ -913,7 +913,7 @@ export default function ACFControlPage() {
       </section>
 
       {/* ━━━ STATS BAR ━━━ */}
-      <section style={{ padding: "56px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
+      <section style={{ padding: "40px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 24, textAlign: "center" }}>
           {[
             { val: 60, suf: "s", label: "Kill switch max" },
@@ -932,7 +932,7 @@ export default function ACFControlPage() {
       </section>
 
       {/* ━━━ FINAL CTA ━━━ */}
-      <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
+      <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
           <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>
             Stop flying blind.<br />
