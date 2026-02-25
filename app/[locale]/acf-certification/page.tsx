@@ -66,7 +66,7 @@ function TrustShield({ name, color, colorLight }: { name: string; color: string;
   const id = `trust-${name.toLowerCase()}`;
   return (
     <div style={{ display: "flex", justifyContent: "center", marginBottom: 16 }}>
-      <svg width="130" height="148" viewBox="0 0 140 160" fill="none" style={{ filter: `drop-shadow(0 4px 14px ${color}30)`, transition: "all .4s" }}>
+      <svg width="160" height="182" viewBox="0 0 140 160" fill="none" style={{ filter: `drop-shadow(0 4px 14px ${color}30)`, transition: "all .4s" }}>
         <defs>
           <linearGradient id={`sg-${id}`} x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor={colorLight} stopOpacity={0.9} /><stop offset="50%" stopColor={color} stopOpacity={0.3} /><stop offset="100%" stopColor={colorLight} stopOpacity={0.9} />
@@ -99,7 +99,7 @@ function CertifiedShield({ name, color, colorLight, stars }: { name: string; col
   const startX = 70 - totalW / 2;
   return (
     <div style={{ display: "flex", justifyContent: "center", marginBottom: 16 }}>
-      <svg width="130" height="148" viewBox="0 0 140 160" fill="none" style={{ filter: `drop-shadow(0 4px 14px ${color}30)`, transition: "all .4s" }}>
+      <svg width="160" height="182" viewBox="0 0 140 160" fill="none" style={{ filter: `drop-shadow(0 4px 14px ${color}30)`, transition: "all .4s" }}>
         <defs>
           <linearGradient id={`sg-${id}`} x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor={colorLight} stopOpacity={0.9} /><stop offset="50%" stopColor={color} stopOpacity={0.3} /><stop offset="100%" stopColor={colorLight} stopOpacity={0.9} />
@@ -669,7 +669,7 @@ export default function ACFCertificationPage() {
                 </div>
               </div>
               <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 360 }}>
-                ACF Score® is the official diagnostic tool of the Agentic Commerce Framework. Free, immediate, and actionable.
+                ACF Certification & Academy is the governance pathway of the Agentic Commerce Framework. Certify trust. Train leaders. Build accountability.
               </p>
             </div>
 
