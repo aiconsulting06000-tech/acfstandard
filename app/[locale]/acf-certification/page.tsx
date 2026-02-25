@@ -226,7 +226,7 @@ export default function ACFCertificationPage() {
             </div>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
-            <a href="/en/" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+            <a href="/" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
               onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Back to Standard</a>
             {navLinks.map(l => (
               <a key={l} href={`#${l.toLowerCase()}`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
@@ -290,7 +290,9 @@ export default function ACFCertificationPage() {
                 <span style={{ color: C.gold }}>Certify the Trust.</span>
               </h1>
               <p style={{ fontSize: 16, color: C.gray2, lineHeight: 1.7, maxWidth: 520, margin: "0 auto 28px" }}>
-                Autonomous agents are reshaping commerce. The question is no longer <em>if</em>. The question is: <strong style={{ color: "#fff" }}>who governs them?</strong>
+                Autonomous agents are reshaping commerce.<br />
+                The question is no longer <em>if</em>.<br />
+                The question is: <strong style={{ color: "#fff" }}>who governs them?</strong>
               </p>
               <p style={{ fontSize: 14, color: C.gray, maxWidth: 420, margin: "0 auto 32px" }}>
                 ACF is not an AI tool. It is a governance standard.
@@ -427,6 +429,7 @@ export default function ACFCertificationPage() {
                 border: `1px solid ${plan.recommended ? C.goldBorder : C.bd1}`,
                 borderRadius: 16, padding: "40px 28px 28px", position: "relative", textAlign: "center",
                 transition: "all .4s cubic-bezier(.16,1,.3,1)", overflow: "visible",
+                display: "flex", flexDirection: "column",
               }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = `${plan.color}40`; e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = `0 12px 40px ${plan.glowColor}`; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = plan.recommended ? C.goldBorder : C.bd1; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}
@@ -446,13 +449,15 @@ export default function ACFCertificationPage() {
                 <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 16, textAlign: "left" }}>
                   {plan.requirements.map(r => (<div key={r} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: C.gray }}><span style={{ color: C.gray, fontSize: 10 }}>→</span> {r}</div>))}
                 </div>
-                <div style={{ borderTop: `1px solid ${C.bd1}`, paddingTop: 12, marginBottom: 16, fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 600, color: plan.colorLight, fontStyle: "italic" }}>{plan.tagline}</div>
-                <button className="gold-glow" style={{
-                  width: "100%", padding: 12, borderRadius: 10, border: "none", fontSize: 13, fontWeight: 700, cursor: "pointer", transition: "all .3s",
-                  background: plan.recommended ? `linear-gradient(135deg, ${C.gold}, ${C.gold2})` : C.navy2,
-                  color: plan.recommended ? C.navy1 : C.gray2,
-                  outline: plan.recommended ? "none" : `1px solid ${C.bd1}`,
-                }}>{plan.recommended ? "Apply for Certification →" : "Learn More"}</button>
+                <div style={{ marginTop: "auto" }}>
+                  <div style={{ borderTop: `1px solid ${C.bd1}`, paddingTop: 12, marginBottom: 16, fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 600, color: plan.colorLight, fontStyle: "italic" }}>{plan.tagline}</div>
+                  <button className="gold-glow" style={{
+                    width: "100%", padding: 12, borderRadius: 10, border: "none", fontSize: 13, fontWeight: 700, cursor: "pointer", transition: "all .3s",
+                    background: plan.recommended ? `linear-gradient(135deg, ${C.gold}, ${C.gold2})` : C.navy2,
+                    color: plan.recommended ? C.navy1 : C.gray2,
+                    outline: plan.recommended ? "none" : `1px solid ${C.bd1}`,
+                  }}>{plan.recommended ? "Apply for Certification →" : "Learn More"}</button>
+                </div>
               </div>
             ))}
           </div>
@@ -648,17 +653,66 @@ export default function ACFCertificationPage() {
       </section>
 
       {/* ━━━ FOOTER ━━━ */}
-      <footer style={{ padding: "32px 0", borderTop: `1px solid ${C.bd1}` }}>
-        <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <div style={{ width: 32, height: 32, borderRadius: 8, background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, fontWeight: 900, color: C.navy1 }}>ACF</div>
-            <span style={{ fontSize: 13, color: C.gray }}>Agentic Commerce Framework® — All rights reserved.</span>
+      <footer style={{ padding: "48px 0 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
+        <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr", gap: 60, paddingBottom: 40 }}>
+            {/* Left column */}
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
+                <div style={{
+                  width: 44, height: 44, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center",
+                  background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 13, color: C.navy1, letterSpacing: 1,
+                }}>ACF</div>
+                <div>
+                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff" }}>Agentic Commerce Framework®</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase" }}>GLOBAL STANDARD FOR AI GOVERNANCE</div>
+                </div>
+              </div>
+              <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 360 }}>
+                ACF Score® is the official diagnostic tool of the Agentic Commerce Framework. Free, immediate, and actionable.
+              </p>
+            </div>
+
+            {/* Middle column — ACF Products */}
+            <div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 20 }}>ACF Products</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                {[
+                  { label: "ACF Score®", href: "/en/acf-score" },
+                  { label: "ACF Control", href: "/en/acf-control" },
+                  { label: "ACF Certification", href: "/en/acf-certification" },
+                ].map(link => (
+                  <a key={link.label} href={link.href} style={{ fontSize: 14, color: C.gray2, transition: "color .2s" }}
+                    onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold}
+                    onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}
+                  >{link.label}</a>
+                ))}
+              </div>
+            </div>
+
+            {/* Right column — Framework */}
+            <div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 20 }}>Framework</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                {[
+                  { label: "The Standard", href: "/" },
+                  { label: "About ACF", href: "/about" },
+                  { label: "Contact", href: "/contact" },
+                ].map(link => (
+                  <a key={link.label} href={link.href} style={{ fontSize: 14, color: C.gray2, transition: "color .2s" }}
+                    onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold}
+                    onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}
+                  >{link.label}</a>
+                ))}
+              </div>
+            </div>
           </div>
-          <div style={{ display: "flex", gap: 20, fontSize: 12, color: C.gray }}>
-            <span>© 2026 Vincent DORANGE</span>
-            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray}>Privacy</a>
-            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray}>Terms</a>
-            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray}>Contact</a>
+
+          {/* Bottom bar */}
+          <div style={{ borderTop: `1px solid ${C.bd1}`, padding: "20px 0", textAlign: "center" }}>
+            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>
+              © 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
