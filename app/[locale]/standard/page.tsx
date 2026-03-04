@@ -326,7 +326,7 @@ export default function TheStandardPage() {
           </a>
           <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
             <a href="/en/" className="hide-mobile" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Accueil</a>
+              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Home</a>
             {["Framework", "Architecture", "Ecosystem", "Blog"].map(l => (
               <a key={l} href={l === "Blog" ? "/en/blog" : `#${l.toLowerCase()}`} className="hide-mobile" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
                 onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l}</a>
