@@ -69,7 +69,7 @@ function AnimatedStat({ value, prefix = "", suffix = "", duration = 1800 }: { va
    ══════════════════════════════════════════════════════════ */
 function HeroVisualization() {
   return (
-    <svg viewBox="0 0 400 480" fill="none" style={{ width: "100%", maxWidth: 380, height: "auto" }}>
+    <svg viewBox="0 0 400 480" fill="none" style={{ width: "100%", maxWidth: 460, height: "auto" }}>
       <defs>
         <linearGradient id="g-gov" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor={C.gov} stopOpacity=".8" /><stop offset="100%" stopColor={C.gov} stopOpacity=".2" /></linearGradient>
         <linearGradient id="g-pol" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor={C.pol} stopOpacity=".8" /><stop offset="100%" stopColor={C.pol} stopOpacity=".2" /></linearGradient>
@@ -188,7 +188,7 @@ function GovernanceLoopSVG() {
   ];
   const cx = 200, cy = 200, r = 140;
   return (
-    <div ref={ref} style={{ maxWidth: 420, margin: "48px auto", opacity: vis ? 1 : 0, transform: vis ? "scale(1)" : "scale(.9)", transition: "all .9s cubic-bezier(.16,1,.3,1)" }}>
+    <div ref={ref} style={{ maxWidth: 560, margin: "48px auto", opacity: vis ? 1 : 0, transform: vis ? "scale(1)" : "scale(.9)", transition: "all .9s cubic-bezier(.16,1,.3,1)" }}>
       <svg viewBox="0 0 400 400" fill="none" style={{ width: "100%" }}>
         <defs>
           <filter id="loop-glow"><feGaussianBlur stdDeviation="4" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
@@ -258,14 +258,14 @@ function EcosystemFlowSVG() {
     { name: "Partners", action: "Scale", color: C.gov, icon: "◇" },
   ];
   return (
-    <div ref={ref} style={{ maxWidth: 780, margin: "48px auto", opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(20px)", transition: "all .8s cubic-bezier(.16,1,.3,1)" }}>
-      <svg viewBox="0 0 780 120" fill="none" style={{ width: "100%" }}>
+    <div ref={ref} style={{ maxWidth: 920, margin: "48px auto", opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(20px)", transition: "all .8s cubic-bezier(.16,1,.3,1)" }}>
+      <svg viewBox="0 0 780 160" fill="none" style={{ width: "100%" }}>
         {/* Connecting line */}
-        <line x1="70" y1="50" x2="710" y2="50" stroke={C.gold} strokeWidth=".6" opacity=".15" />
+        <line x1="70" y1="70" x2="710" y2="70" stroke={C.gold} strokeWidth=".8" opacity=".15" />
         {/* Animated pulse on line */}
-        <circle r="3" fill={C.gold} opacity=".5">
+        <circle r="4" fill={C.gold} opacity=".5">
           <animate attributeName="cx" values="70;710;70" dur="5s" repeatCount="indefinite" />
-          <animate attributeName="cy" values="50;50;50" dur="5s" repeatCount="indefinite" />
+          <animate attributeName="cy" values="70;70;70" dur="5s" repeatCount="indefinite" />
           <animate attributeName="opacity" values=".2;.7;.2" dur="5s" repeatCount="indefinite" />
         </circle>
 
@@ -273,21 +273,21 @@ function EcosystemFlowSVG() {
           const x = 70 + i * 160;
           return (
             <g key={p.name}>
-              <circle cx={x} cy="50" r="24" fill={C.navy3} stroke={p.color} strokeWidth="1.2">
+              <circle cx={x} cy="70" r="32" fill={C.navy3} stroke={p.color} strokeWidth="1.4">
                 <animate attributeName="stroke-opacity" values=".4;.9;.4" dur="3s" begin={`${i * 0.4}s`} repeatCount="indefinite" />
               </circle>
-              <text x={x} y="53" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="12" fontWeight="700" fill={p.color}>{p.icon}</text>
-              <text x={x} y="90" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="11" fontWeight="700" fill="#fff" opacity=".8">{p.name}</text>
-              <text x={x} y="105" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="8" fill={C.gray}>{p.action}</text>
+              <text x={x} y="74" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="16" fontWeight="700" fill={p.color}>{p.icon}</text>
+              <text x={x} y="118" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="13" fontWeight="700" fill="#fff" opacity=".8">{p.name}</text>
+              <text x={x} y="136" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="10" fill={C.gray}>{p.action}</text>
               {i < 4 && (
-                <text x={x + 80} y="54" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="12" fill={C.gold} opacity=".3">→</text>
+                <text x={x + 80} y="74" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="14" fill={C.gold} opacity=".3">→</text>
               )}
             </g>
           );
         })}
         {/* Loop-back arrow */}
-        <path d="M 720 50 Q 740 50 740 30 Q 740 10 390 10 Q 40 10 40 30 Q 40 50 60 50" fill="none" stroke={C.gold} strokeWidth=".6" opacity=".15" strokeDasharray="3 5" />
-        <text x="390" y="8" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill={C.gray} opacity=".5">CLOSED LOOP</text>
+        <path d="M 720 70 Q 750 70 750 40 Q 750 10 390 10 Q 30 10 30 40 Q 30 70 60 70" fill="none" stroke={C.gold} strokeWidth=".8" opacity=".15" strokeDasharray="4 6" />
+        <text x="390" y="8" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray} opacity=".5">CLOSED LOOP</text>
       </svg>
     </div>
   );
@@ -343,7 +343,7 @@ export default function TheStandardPage() {
         {/* Animated grid background */}
         <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(201,168,76,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.02) 1px,transparent 1px)", backgroundSize: "80px 80px", animation: "gridFloat 20s linear infinite", maskImage: "radial-gradient(ellipse 70% 70% at 50% 40%,black 20%,transparent 100%)", WebkitMaskImage: "radial-gradient(ellipse 70% 70% at 50% 40%,black 20%,transparent 100%)" }} />
 
-        <div className="hero-grid" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "1fr 380px", gap: 60, alignItems: "center", position: "relative", zIndex: 2 }}>
+        <div className="hero-grid" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "1fr 460px", gap: 60, alignItems: "center", position: "relative", zIndex: 2 }}>
           {/* LEFT — Text */}
           <div>
             <div className="hero-anim hero-d1" style={{ marginBottom: 28 }}>
