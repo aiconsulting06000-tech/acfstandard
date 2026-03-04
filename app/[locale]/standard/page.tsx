@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    ACF STANDARD — THE GOVERNANCE FRAMEWORK
@@ -38,6 +38,29 @@ function Reveal({ children, delay = 0, className = "" }: { children: React.React
       transition: `opacity .8s cubic-bezier(.16,1,.3,1) ${delay}s, transform .8s cubic-bezier(.16,1,.3,1) ${delay}s`,
     }}>{children}</div>
   );
+}
+
+/* ── Animated counter for stats ─── */
+function AnimatedStat({ value, prefix = "", suffix = "", duration = 1800 }: { value: number; prefix?: string; suffix?: string; duration?: number }) {
+  const { ref, vis } = useReveal(0.3);
+  const [count, setCount] = useState(0);
+  const started = useRef(false);
+  useEffect(() => {
+    if (!vis || started.current) return;
+    started.current = true;
+    const steps = 60;
+    const stepTime = duration / steps;
+    let current = 0;
+    const timer = setInterval(() => {
+      current++;
+      const progress = current / steps;
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.round(eased * value));
+      if (current >= steps) { setCount(value); clearInterval(timer); }
+    }, stepTime);
+    return () => clearInterval(timer);
+  }, [vis, value, duration]);
+  return <span ref={ref}>{prefix}{vis ? count : 0}{suffix}</span>;
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -409,14 +432,16 @@ export default function TheStandardPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 32, textAlign: "center" }}>
             {[
-              { val: "73%", label: "of organizations have no formal AI governance", color: C.gold },
-              { val: "€35M", label: "maximum AI Act sanctions or 7% global revenue", color: C.amber },
-              { val: "4x", label: "lower correction costs with structured governance", color: C.sup },
-              { val: "<1s", label: "Level 1 kill switch response time (ACF spec)", color: C.sys },
+              { value: 73, suffix: "%", prefix: "", label: "of organizations have no formal AI governance", color: C.gold },
+              { value: 35, suffix: "M", prefix: "€", label: "maximum AI Act sanctions or 7% global revenue", color: C.amber },
+              { value: 4, suffix: "x", prefix: "", label: "lower correction costs with structured governance", color: C.sup },
+              { value: 1, suffix: "s", prefix: "<", label: "Level 1 kill switch response time (ACF spec)", color: C.sys },
             ].map((s, i) => (
               <Reveal key={i} delay={i * 0.12}>
                 <div style={{ padding: "20px 0" }}>
-                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 38, fontWeight: 800, color: s.color, marginBottom: 8, letterSpacing: "-1px" }}>{s.val}</div>
+                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 38, fontWeight: 800, color: s.color, marginBottom: 8, letterSpacing: "-1px" }}>
+                    <AnimatedStat value={s.value} prefix={s.prefix} suffix={s.suffix} duration={s.value > 10 ? 1800 : 1200} />
+                  </div>
                   <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gray2, letterSpacing: ".04em", lineHeight: 1.5 }}>{s.label}</div>
                 </div>
               </Reveal>
