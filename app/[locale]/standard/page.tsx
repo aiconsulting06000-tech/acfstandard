@@ -510,13 +510,13 @@ export default function TheStandardPage() {
            VISUAL COMPARISON — Without vs With governance
          ═══════════════════════════════════════════════ */}
       <section style={{ padding: "80px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2, position: "relative", overflow: "hidden" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
           <Reveal>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28 }}>
               {/* WITHOUT */}
-              <div style={{ position: "relative", background: "rgba(239,68,68,.03)", border: "1px solid rgba(239,68,68,.12)", borderRadius: 20, padding: "36px 32px", overflow: "hidden" }}>
+              <div style={{ position: "relative", background: "rgba(239,68,68,.07)", border: "1px solid rgba(239,68,68,.2)", borderRadius: 20, padding: "40px 36px", overflow: "hidden" }}>
                 {/* Animated noise lines */}
-                <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.04 }}>
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.08 }}>
                   {[0,1,2,3,4].map(i => (
                     <div key={i} style={{ position: "absolute", top: `${15 + i * 18}%`, left: 0, right: 0, height: 1, background: "#ef4444" }}>
                       <div style={{ position: "absolute", top: 0, width: "30%", height: "100%", background: "#ef4444", animation: `noiseLine ${2 + i * 0.5}s linear infinite`, animationDelay: `${i * 0.3}s` }} />
@@ -524,30 +524,30 @@ export default function TheStandardPage() {
                   ))}
                 </div>
                 <style>{`@keyframes noiseLine{0%{left:-30%}100%{left:130%}}`}</style>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, color: "#ef4444", letterSpacing: ".14em", marginBottom: 24, position: "relative" }}>✕ WITHOUT GOVERNANCE</div>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: "#ef4444", letterSpacing: ".14em", marginBottom: 24, position: "relative" }}>✕ WITHOUT GOVERNANCE</div>
                 <div style={{ position: "relative" }}>
                   <svg viewBox="0 0 320 200" fill="none" style={{ width: "100%", marginBottom: 20 }}>
                     {/* Chaotic lines */}
                     {[0,1,2,3,4,5,6].map(i => (
-                      <line key={i} x1={20 + Math.random() * 280} y1={20 + Math.random() * 160} x2={20 + Math.random() * 280} y2={20 + Math.random() * 160} stroke="#ef4444" strokeWidth=".6" opacity=".2">
-                        <animate attributeName="opacity" values=".05;.3;.05" dur={`${2 + i * 0.4}s`} repeatCount="indefinite" />
+                      <line key={i} x1={20 + Math.random() * 280} y1={20 + Math.random() * 160} x2={20 + Math.random() * 280} y2={20 + Math.random() * 160} stroke="#ef4444" strokeWidth="1" opacity=".35">
+                        <animate attributeName="opacity" values=".1;.5;.1" dur={`${2 + i * 0.4}s`} repeatCount="indefinite" />
                       </line>
                     ))}
                     {/* Scattered nodes */}
                     {[{x:60,y:40},{x:180,y:30},{x:280,y:70},{x:40,y:120},{x:150,y:100},{x:260,y:140},{x:100,y:170}].map((n,i) => (
                       <g key={i}>
-                        <circle cx={n.x} cy={n.y} r="8" fill={C.navy3} stroke="#ef4444" strokeWidth=".8" opacity=".4">
-                          <animate attributeName="opacity" values=".2;.5;.2" dur={`${1.5 + i * 0.3}s`} repeatCount="indefinite" />
+                        <circle cx={n.x} cy={n.y} r="10" fill={C.navy3} stroke="#ef4444" strokeWidth="1.2" opacity=".6">
+                          <animate attributeName="opacity" values=".3;.7;.3" dur={`${1.5 + i * 0.3}s`} repeatCount="indefinite" />
                         </circle>
-                        <text x={n.x} y={n.y + 3} textAnchor="middle" fontSize="6" fill="#ef4444" opacity=".5">?</text>
+                        <text x={n.x} y={n.y + 4} textAnchor="middle" fontSize="8" fill="#ef4444" opacity=".7">?</text>
                       </g>
                     ))}
-                    <text x="160" y="195" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill="#ef4444" opacity=".4">UNCONTROLLED DECISIONS</text>
+                    <text x="160" y="195" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="8" fill="#ef4444" opacity=".6">UNCONTROLLED DECISIONS</text>
                   </svg>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                     {["Opacity", "Drift", "Conflict", "Exposure"].map((r, i) => (
-                      <div key={r} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 13, color: C.gray2 }}>
-                        <span style={{ color: "#ef4444", fontSize: 10 }}>✕</span> {r}
+                      <div key={r} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "#c4c4c4" }}>
+                        <span style={{ color: "#ef4444", fontSize: 12 }}>✕</span> {r}
                       </div>
                     ))}
                   </div>
@@ -555,8 +555,8 @@ export default function TheStandardPage() {
               </div>
 
               {/* WITH ACF */}
-              <div style={{ position: "relative", background: C.goldDim, border: `1px solid ${C.goldBorder}`, borderRadius: 20, padding: "36px 32px", overflow: "hidden" }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, color: C.gold, letterSpacing: ".14em", marginBottom: 24, position: "relative" }}>✓ WITH ACF® GOVERNANCE</div>
+              <div style={{ position: "relative", background: C.goldDim, border: `1px solid ${C.goldBorder}`, borderRadius: 20, padding: "40px 36px", overflow: "hidden" }}>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".14em", marginBottom: 24, position: "relative" }}>✓ WITH ACF® GOVERNANCE</div>
                 <div style={{ position: "relative" }}>
                   <svg viewBox="0 0 320 200" fill="none" style={{ width: "100%", marginBottom: 20 }}>
                     {/* Structured layers */}
@@ -584,12 +584,12 @@ export default function TheStandardPage() {
                       <animate attributeName="cx" values="160;160;160;160;160;160;160" dur="4s" repeatCount="indefinite" />
                       <animate attributeName="opacity" values=".3;.8;.3" dur="2s" repeatCount="indefinite" />
                     </circle>
-                    <text x="160" y="198" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill={C.gold} opacity=".4">GOVERNED DECISIONS</text>
+                    <text x="160" y="198" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="8" fill={C.gold} opacity=".5">GOVERNED DECISIONS</text>
                   </svg>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                     {["Traceable", "Reversible", "Accountable", "Sovereign"].map((r, i) => (
-                      <div key={r} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 13, color: C.gray2 }}>
-                        <span style={{ color: C.gold, fontSize: 10 }}>✓</span> {r}
+                      <div key={r} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "#c4c4c4" }}>
+                        <span style={{ color: C.gold, fontSize: 12 }}>✓</span> {r}
                       </div>
                     ))}
                   </div>
