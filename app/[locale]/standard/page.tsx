@@ -1,93 +1,298 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   ACF STANDARD — THE GOVERNANCE FRAMEWORK
+   Version: WOW
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 
 const C = {
   navy1: "#050c1a", navy2: "#071122", navy3: "#0d1f3c",
-  gold: "#c9a84c", gold2: "#e8c96a", goldDim: "rgba(201,168,76,.14)",
-  goldGlow: "rgba(201,168,76,.35)", goldBorder: "rgba(201,168,76,.2)",
-  white: "#ffffff", gray: "#6b7fa0", gray2: "#9db0c8",
-  bd1: "rgba(255,255,255,.07)", bd2: "rgba(201,168,76,.2)",
-  green: "#22c55e", red: "#ef4444", amber: "#f59e0b",
-  blue: "#3b82f6", purple: "#8b5cf6",
+  gold: "#c9a84c", gold2: "#e8c96a", goldDim: "rgba(201,168,76,.12)",
+  goldBorder: "rgba(201,168,76,.18)", white: "#ffffff",
+  gray: "#5a6f8a", gray2: "#8fa3be",
+  bd1: "rgba(255,255,255,.06)",
+  gov: "#a78bfa", pol: "#3b82f6", sys: "#06b6d4", sup: "#22c55e",
+  amber: "#f59e0b", purple: "#8b5cf6",
 };
 
-function AnimatedCounter({ end, duration = 1600, suffix = "" }: { end: number; duration?: number; suffix?: string }) {
-  const [count, setCount] = useState(0);
-  const [started, setStarted] = useState(false);
-  const ref = useRef<HTMLSpanElement>(null);
+/* ── Scroll-triggered reveal ─── */
+function useReveal(threshold = 0.15) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [vis, setVis] = useState(false);
   useEffect(() => {
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setStarted(true); }, { threshold: 0.1 });
-    if (ref.current) obs.observe(ref.current);
+    const el = ref.current; if (!el) return;
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVis(true); obs.disconnect(); } }, { threshold });
+    obs.observe(el);
     return () => obs.disconnect();
-  }, []);
-  useEffect(() => {
-    if (!started) return;
-    let s = 0; const step = end / (duration / 16);
-    const t = setInterval(() => { s += step; if (s >= end) { setCount(end); clearInterval(t); } else setCount(Math.floor(s)); }, 16);
-    return () => clearInterval(t);
-  }, [started, end, duration]);
-  return <span ref={ref}>{count}{suffix}</span>;
+  }, [threshold]);
+  return { ref, vis };
 }
 
-function GoldBar() { return <div style={{ width: 44, height: 3, background: `linear-gradient(90deg, ${C.gold}, transparent)`, borderRadius: 2, marginBottom: 16 }} />; }
-function GoldBarCenter() { return <div style={{ width: 44, height: 3, background: `linear-gradient(90deg, ${C.gold}, transparent)`, borderRadius: 2, margin: "0 auto 16px" }} />; }
-function Badge({ children }: { children: React.ReactNode }) {
-  return <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", background: C.goldDim, border: `1px solid ${C.goldBorder}`, padding: "5px 14px", borderRadius: 100, display: "inline-block" }}>{children}</span>;
-}
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 12 }}>// {children}</div>;
-}
-
-/* ── Hero Shield SVG ─────────────────────────────── */
-function HeroShield() {
+function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+  const { ref, vis } = useReveal();
   return (
-    <svg width="200" height="220" viewBox="0 0 200 220" fill="none">
+    <div ref={ref} className={className} style={{
+      opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(32px)",
+      transition: `opacity .8s cubic-bezier(.16,1,.3,1) ${delay}s, transform .8s cubic-bezier(.16,1,.3,1) ${delay}s`,
+    }}>{children}</div>
+  );
+}
+
+/* ══════════════════════════════════════════════════════════
+   HERO ANIMATED VISUALIZATION — The signature visual
+   4 layers floating with pulsing energy lines between them
+   ══════════════════════════════════════════════════════════ */
+function HeroVisualization() {
+  return (
+    <svg viewBox="0 0 400 480" fill="none" style={{ width: "100%", maxWidth: 380, height: "auto" }}>
       <defs>
-        <linearGradient id="hs-stroke" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#e8c96a" stopOpacity="0.9" /><stop offset="50%" stopColor="#c9a84c" stopOpacity="0.3" /><stop offset="100%" stopColor="#e8c96a" stopOpacity="0.9" /></linearGradient>
-        <linearGradient id="hs-fill" x1="50%" y1="0%" x2="50%" y2="100%"><stop offset="0%" stopColor="#0d1f3c" /><stop offset="100%" stopColor="#071122" /></linearGradient>
-        <filter id="hs-glow"><feGaussianBlur stdDeviation="5" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+        <linearGradient id="g-gov" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor={C.gov} stopOpacity=".8" /><stop offset="100%" stopColor={C.gov} stopOpacity=".2" /></linearGradient>
+        <linearGradient id="g-pol" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor={C.pol} stopOpacity=".8" /><stop offset="100%" stopColor={C.pol} stopOpacity=".2" /></linearGradient>
+        <linearGradient id="g-sys" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor={C.sys} stopOpacity=".8" /><stop offset="100%" stopColor={C.sys} stopOpacity=".2" /></linearGradient>
+        <linearGradient id="g-sup" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor={C.sup} stopOpacity=".8" /><stop offset="100%" stopColor={C.sup} stopOpacity=".2" /></linearGradient>
+        <filter id="glow-gov"><feGaussianBlur stdDeviation="6" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+        <filter id="glow-pol"><feGaussianBlur stdDeviation="6" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+        <filter id="glow-sys"><feGaussianBlur stdDeviation="6" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+        <filter id="glow-sup"><feGaussianBlur stdDeviation="6" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+        <linearGradient id="line-pulse" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={C.gold} stopOpacity="0" /><stop offset="50%" stopColor={C.gold} stopOpacity=".6" /><stop offset="100%" stopColor={C.gold} stopOpacity="0" /></linearGradient>
       </defs>
-      <path d="M100 8 L188 36 L188 124 Q188 174 100 216 Q12 174 12 124 L12 36 Z" fill="none" stroke="url(#hs-stroke)" strokeWidth="2.5" filter="url(#hs-glow)" />
-      <path d="M100 16 L180 40 L180 120 Q180 167 100 208 Q20 167 20 120 L20 40 Z" fill="url(#hs-fill)" opacity="0.92" />
-      {/* 4 layers inside shield */}
-      <g opacity="0.7">
-        <rect x="56" y="60" width="88" height="14" rx="4" fill="#c9a84c" opacity="0.25" stroke="#c9a84c" strokeWidth="0.8" />
-        <text x="100" y="71" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill="#c9a84c" fontWeight="600" opacity="0.9">GOVERNANCE</text>
-        <rect x="56" y="80" width="88" height="14" rx="4" fill="#22c55e" opacity="0.15" stroke="#22c55e" strokeWidth="0.8" />
-        <text x="100" y="91" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill="#22c55e" fontWeight="600" opacity="0.9">POLICY</text>
-        <rect x="56" y="100" width="88" height="14" rx="4" fill="#3b82f6" opacity="0.15" stroke="#3b82f6" strokeWidth="0.8" />
-        <text x="100" y="111" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill="#3b82f6" fontWeight="600" opacity="0.9">SYSTEM</text>
-        <rect x="56" y="120" width="88" height="14" rx="4" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" strokeWidth="0.8" />
-        <text x="100" y="131" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill="#f59e0b" fontWeight="600" opacity="0.9">SUPERVISION</text>
+
+      {/* Background circles */}
+      <circle cx="200" cy="240" r="200" fill="none" stroke={C.gold} strokeWidth=".3" opacity=".1">
+        <animateTransform attributeName="transform" type="rotate" values="0 200 240;360 200 240" dur="120s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="200" cy="240" r="150" fill="none" stroke={C.gold} strokeWidth=".3" opacity=".08" strokeDasharray="4 8">
+        <animateTransform attributeName="transform" type="rotate" values="360 200 240;0 200 240" dur="90s" repeatCount="indefinite" />
+      </circle>
+
+      {/* HUMAN AUTHORITY label */}
+      <text x="200" y="32" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="11" fontWeight="700" fill="#fff" opacity=".5" letterSpacing="2">HUMAN AUTHORITY</text>
+      <text x="200" y="48" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="8" fill={C.gray} opacity=".5">Leadership · Strategy · Accountability</text>
+
+      {/* Energy line from top */}
+      <line x1="200" y1="58" x2="200" y2="85" stroke="url(#line-pulse)" strokeWidth="1.5">
+        <animate attributeName="opacity" values=".2;.8;.2" dur="2s" repeatCount="indefinite" />
+      </line>
+
+      {/* Layer 1 — Governance */}
+      <g filter="url(#glow-gov)">
+        <rect x="60" y="88" width="280" height="64" rx="14" fill={C.navy3} stroke="url(#g-gov)" strokeWidth="1.2">
+          <animate attributeName="stroke-opacity" values=".5;1;.5" dur="3s" repeatCount="indefinite" />
+        </rect>
+        <text x="88" y="116" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gov} opacity=".6" fontWeight="600">L1</text>
+        <text x="112" y="116" fontFamily="'Space Grotesk'" fontSize="14" fill={C.gov} fontWeight="700">GOVERNANCE</text>
+        <text x="112" y="136" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray2} opacity=".7">Who decides · Authority · Constitution</text>
       </g>
-      <text x="100" y="162" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="11" fontWeight="800" fill="#c9a84c" opacity="0.7" letterSpacing="2">ACF®</text>
-      <text x="100" y="176" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="8" fontWeight="600" fill="#ffffff" opacity="0.4" letterSpacing="1">THE STANDARD</text>
+
+      {/* Pulse line */}
+      <line x1="200" y1="152" x2="200" y2="178" stroke="url(#line-pulse)" strokeWidth="1.5">
+        <animate attributeName="opacity" values=".2;.8;.2" dur="2s" begin=".5s" repeatCount="indefinite" />
+      </line>
+
+      {/* Layer 2 — Policy */}
+      <g filter="url(#glow-pol)">
+        <rect x="60" y="180" width="280" height="64" rx="14" fill={C.navy3} stroke="url(#g-pol)" strokeWidth="1.2">
+          <animate attributeName="stroke-opacity" values=".5;1;.5" dur="3s" begin=".5s" repeatCount="indefinite" />
+        </rect>
+        <text x="88" y="208" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.pol} opacity=".6" fontWeight="600">L2</text>
+        <text x="112" y="208" fontFamily="'Space Grotesk'" fontSize="14" fill={C.pol} fontWeight="700">POLICY</text>
+        <text x="112" y="228" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray2} opacity=".7">Rules · Constraints · Ethical guardrails</text>
+      </g>
+
+      {/* Pulse line */}
+      <line x1="200" y1="244" x2="200" y2="270" stroke="url(#line-pulse)" strokeWidth="1.5">
+        <animate attributeName="opacity" values=".2;.8;.2" dur="2s" begin="1s" repeatCount="indefinite" />
+      </line>
+
+      {/* Layer 3 — System */}
+      <g filter="url(#glow-sys)">
+        <rect x="60" y="272" width="280" height="64" rx="14" fill={C.navy3} stroke="url(#g-sys)" strokeWidth="1.2">
+          <animate attributeName="stroke-opacity" values=".5;1;.5" dur="3s" begin="1s" repeatCount="indefinite" />
+        </rect>
+        <text x="88" y="300" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.sys} opacity=".6" fontWeight="600">L3</text>
+        <text x="112" y="300" fontFamily="'Space Grotesk'" fontSize="14" fill={C.sys} fontWeight="700">SYSTEM</text>
+        <text x="112" y="320" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray2} opacity=".7">Agents · Traceability · Kill switch</text>
+      </g>
+
+      {/* Pulse line */}
+      <line x1="200" y1="336" x2="200" y2="362" stroke="url(#line-pulse)" strokeWidth="1.5">
+        <animate attributeName="opacity" values=".2;.8;.2" dur="2s" begin="1.5s" repeatCount="indefinite" />
+      </line>
+
+      {/* Layer 4 — Supervision */}
+      <g filter="url(#glow-sup)">
+        <rect x="60" y="364" width="280" height="64" rx="14" fill={C.navy3} stroke="url(#g-sup)" strokeWidth="1.2">
+          <animate attributeName="stroke-opacity" values=".5;1;.5" dur="3s" begin="1.5s" repeatCount="indefinite" />
+        </rect>
+        <text x="88" y="392" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.sup} opacity=".6" fontWeight="600">L4</text>
+        <text x="112" y="392" fontFamily="'Space Grotesk'" fontSize="14" fill={C.sup} fontWeight="700">SUPERVISION</text>
+        <text x="112" y="412" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray2} opacity=".7">Monitoring · Incidents · Sovereignty</text>
+      </g>
+
+      {/* Energy line to bottom */}
+      <line x1="200" y1="428" x2="200" y2="454" stroke="url(#line-pulse)" strokeWidth="1.5">
+        <animate attributeName="opacity" values=".2;.8;.2" dur="2s" begin="2s" repeatCount="indefinite" />
+      </line>
+
+      {/* MACHINE-SPEED EXECUTION label */}
+      <text x="200" y="470" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="11" fontWeight="700" fill="#fff" opacity=".5" letterSpacing="2">MACHINE-SPEED EXECUTION</text>
+
+      {/* Floating particles */}
+      {[0,1,2,3,4,5,6,7].map(i => (
+        <circle key={i} cx={60 + (i * 40)} cy={240} r="1.5" fill={C.gold} opacity="0">
+          <animate attributeName="opacity" values="0;.5;0" dur={`${2.5 + i * 0.4}s`} begin={`${i * 0.6}s`} repeatCount="indefinite" />
+          <animate attributeName="cy" values={`${200 + i * 15};${180 + i * 10};${200 + i * 15}`} dur={`${3 + i * 0.3}s`} begin={`${i * 0.4}s`} repeatCount="indefinite" />
+        </circle>
+      ))}
     </svg>
   );
 }
 
+/* ══════════════════════════════════════════════════════════
+   GOVERNANCE LOOP — Animated hexagonal loop
+   ══════════════════════════════════════════════════════════ */
+function GovernanceLoopSVG() {
+  const { ref, vis } = useReveal();
+  const steps = [
+    { label: "DEFINE", sub: "Authority", color: C.gov, angle: -90 },
+    { label: "CONSTRAIN", sub: "Rules", color: C.pol, angle: -30 },
+    { label: "EXECUTE", sub: "Agents", color: C.sys, angle: 30 },
+    { label: "MONITOR", sub: "Drift", color: C.sup, angle: 90 },
+    { label: "INTERVENE", sub: "Override", color: C.amber, angle: 150 },
+    { label: "IMPROVE", sub: "Evolve", color: C.gold, angle: 210 },
+  ];
+  const cx = 200, cy = 200, r = 140;
+  return (
+    <div ref={ref} style={{ maxWidth: 420, margin: "48px auto", opacity: vis ? 1 : 0, transform: vis ? "scale(1)" : "scale(.9)", transition: "all .9s cubic-bezier(.16,1,.3,1)" }}>
+      <svg viewBox="0 0 400 400" fill="none" style={{ width: "100%" }}>
+        <defs>
+          <filter id="loop-glow"><feGaussianBlur stdDeviation="4" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+        </defs>
+
+        {/* Outer rotating ring */}
+        <circle cx={cx} cy={cy} r={r + 30} fill="none" stroke={C.gold} strokeWidth=".4" opacity=".1" strokeDasharray="3 9">
+          <animateTransform attributeName="transform" type="rotate" values="0 200 200;360 200 200" dur="60s" repeatCount="indefinite" />
+        </circle>
+
+        {/* Connecting lines between nodes */}
+        {steps.map((s, i) => {
+          const next = steps[(i + 1) % steps.length];
+          const x1 = cx + r * Math.cos((s.angle * Math.PI) / 180);
+          const y1 = cy + r * Math.sin((s.angle * Math.PI) / 180);
+          const x2 = cx + r * Math.cos((next.angle * Math.PI) / 180);
+          const y2 = cy + r * Math.sin((next.angle * Math.PI) / 180);
+          return (
+            <line key={`line-${i}`} x1={x1} y1={y1} x2={x2} y2={y2} stroke={s.color} strokeWidth="1" opacity=".2">
+              <animate attributeName="opacity" values=".1;.4;.1" dur="3s" begin={`${i * 0.5}s`} repeatCount="indefinite" />
+            </line>
+          );
+        })}
+
+        {/* Animated pulse traveling the loop */}
+        <circle r="3" fill={C.gold} opacity=".7" filter="url(#loop-glow)">
+          <animateMotion dur="6s" repeatCount="indefinite" path={`M ${cx + r * Math.cos((-90 * Math.PI) / 180)} ${cy + r * Math.sin((-90 * Math.PI) / 180)} ${steps.map((s, i) => {
+            const next = steps[(i + 1) % steps.length];
+            return `L ${cx + r * Math.cos((next.angle * Math.PI) / 180)} ${cy + r * Math.sin((next.angle * Math.PI) / 180)}`;
+          }).join(" ")} Z`} />
+        </circle>
+
+        {/* Nodes */}
+        {steps.map((s, i) => {
+          const x = cx + r * Math.cos((s.angle * Math.PI) / 180);
+          const y = cy + r * Math.sin((s.angle * Math.PI) / 180);
+          return (
+            <g key={s.label}>
+              <circle cx={x} cy={y} r="28" fill={C.navy3} stroke={s.color} strokeWidth="1.2">
+                <animate attributeName="stroke-opacity" values=".4;1;.4" dur="3s" begin={`${i * 0.5}s`} repeatCount="indefinite" />
+              </circle>
+              <text x={x} y={y - 4} textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="9" fontWeight="700" fill={s.color}>{s.label}</text>
+              <text x={x} y={y + 8} textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill={C.gray2} opacity=".7">{s.sub}</text>
+            </g>
+          );
+        })}
+
+        {/* Center label */}
+        <text x={cx} y={cy - 6} textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="11" fontWeight="800" fill={C.gold} opacity=".6">ACF®</text>
+        <text x={cx} y={cy + 8} textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill={C.gray} opacity=".5">CONTINUOUS</text>
+        <text x={cx} y={cy + 18} textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill={C.gray} opacity=".5">LOOP</text>
+      </svg>
+    </div>
+  );
+}
+
+/* ══════════════════════════════════════════════════════════
+   ECOSYSTEM FLOW — Animated horizontal pipeline
+   ══════════════════════════════════════════════════════════ */
+function EcosystemFlowSVG() {
+  const { ref, vis } = useReveal();
+  const products = [
+    { name: "Score", action: "Diagnose", color: C.sup, icon: "◉" },
+    { name: "Academy", action: "Train", color: C.pol, icon: "◈" },
+    { name: "Control", action: "Monitor", color: C.amber, icon: "◎" },
+    { name: "Certification", action: "Certify", color: C.gold, icon: "◆" },
+    { name: "Partners", action: "Scale", color: C.gov, icon: "◇" },
+  ];
+  return (
+    <div ref={ref} style={{ maxWidth: 780, margin: "48px auto", opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(20px)", transition: "all .8s cubic-bezier(.16,1,.3,1)" }}>
+      <svg viewBox="0 0 780 120" fill="none" style={{ width: "100%" }}>
+        {/* Connecting line */}
+        <line x1="70" y1="50" x2="710" y2="50" stroke={C.gold} strokeWidth=".6" opacity=".15" />
+        {/* Animated pulse on line */}
+        <circle r="3" fill={C.gold} opacity=".5">
+          <animate attributeName="cx" values="70;710;70" dur="5s" repeatCount="indefinite" />
+          <animate attributeName="cy" values="50;50;50" dur="5s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values=".2;.7;.2" dur="5s" repeatCount="indefinite" />
+        </circle>
+
+        {products.map((p, i) => {
+          const x = 70 + i * 160;
+          return (
+            <g key={p.name}>
+              <circle cx={x} cy="50" r="24" fill={C.navy3} stroke={p.color} strokeWidth="1.2">
+                <animate attributeName="stroke-opacity" values=".4;.9;.4" dur="3s" begin={`${i * 0.4}s`} repeatCount="indefinite" />
+              </circle>
+              <text x={x} y="53" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="12" fontWeight="700" fill={p.color}>{p.icon}</text>
+              <text x={x} y="90" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="11" fontWeight="700" fill="#fff" opacity=".8">{p.name}</text>
+              <text x={x} y="105" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="8" fill={C.gray}>{p.action}</text>
+              {i < 4 && (
+                <text x={x + 80} y="54" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="12" fill={C.gold} opacity=".3">→</text>
+              )}
+            </g>
+          );
+        })}
+        {/* Loop-back arrow */}
+        <path d="M 720 50 Q 740 50 740 30 Q 740 10 390 10 Q 40 10 40 30 Q 40 50 60 50" fill="none" stroke={C.gold} strokeWidth=".6" opacity=".15" strokeDasharray="3 5" />
+        <text x="390" y="8" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill={C.gray} opacity=".5">CLOSED LOOP</text>
+      </svg>
+    </div>
+  );
+}
+
+/* ══════════════════════════════════════════════════════════
+   MAIN PAGE
+   ══════════════════════════════════════════════════════════ */
 export default function TheStandardPage() {
   return (
-    <div style={{ minHeight: "100vh", background: C.navy1, color: "#fff", fontFamily: "'Inter', sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: C.navy1, color: "#fff", fontFamily: "'Inter', sans-serif", overflowX: "hidden" }}>
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
       <style>{`
-        @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-        @keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-        @keyframes heroPulse{0%,100%{filter:drop-shadow(0 0 12px rgba(201,168,76,.15))}50%{filter:drop-shadow(0 0 36px rgba(201,168,76,.45))}}
-        @keyframes heroOrbitCW{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-        @keyframes sparkle{0%,100%{opacity:0;transform:scale(0)}50%{opacity:1;transform:scale(1)}}
-        .fade-up{opacity:0;animation:fadeUp .6s cubic-bezier(.16,1,.3,1) forwards;animation-delay:.1s}
-        .fade-up-d2{opacity:0;animation:fadeUp .6s cubic-bezier(.16,1,.3,1) forwards;animation-delay:.3s}
-        .fade-up-d3{opacity:0;animation:fadeUp .6s cubic-bezier(.16,1,.3,1) forwards;animation-delay:.55s}
-        .gold-glow:hover{box-shadow:0 0 20px rgba(201,168,76,.2)}
-        .hero-shield{animation:heroFloat 4s ease-in-out infinite,heroPulse 4s ease-in-out infinite}
+        @keyframes heroEntry{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes gridFloat{0%{background-position:0 0}100%{background-position:80px 80px}}
+        .hero-anim{opacity:0;animation:heroEntry 1s cubic-bezier(.16,1,.3,1) forwards}
+        .hero-d1{animation-delay:.2s}
+        .hero-d2{animation-delay:.45s}
+        .hero-d3{animation-delay:.7s}
+        .hero-d4{animation-delay:1s}
+        .gold-glow:hover{box-shadow:0 0 28px rgba(201,168,76,.18)}
         *{box-sizing:border-box;margin:0;padding:0}a{text-decoration:none;color:inherit}
-        @media(max-width:768px){.hide-mobile{display:none!important}.grid-2{grid-template-columns:1fr!important}.grid-3{grid-template-columns:1fr!important}.grid-4{grid-template-columns:1fr 1fr!important}}
+        ::selection{background:rgba(201,168,76,.3);color:#fff}
+        @media(max-width:900px){.hero-grid{grid-template-columns:1fr!important}.hide-mobile{display:none!important}.eco-grid{grid-template-columns:1fr!important}}
       `}</style>
 
-      {/* NAV */}
-      <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: 72, background: "rgba(5,12,26,.92)", backdropFilter: "blur(24px)", borderBottom: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center" }}>
+      {/* ── NAV ── */}
+      <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: 72, background: "rgba(5,12,26,.88)", backdropFilter: "blur(24px)", borderBottom: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center" }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px", width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <a href="/en/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <div style={{ width: 40, height: 40, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1 }}>ACF</div>
@@ -97,289 +302,443 @@ export default function TheStandardPage() {
             </div>
           </a>
           <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-            {["Framework", "Layers", "Ecosystem", "Blog"].map(l => (
-              <a key={l} href={l === "Blog" ? "/en/blog" : `#${l.toLowerCase()}`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+            <a href="/en/" className="hide-mobile" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Accueil</a>
+            {["Framework", "Architecture", "Ecosystem", "Blog"].map(l => (
+              <a key={l} href={l === "Blog" ? "/en/blog" : `#${l.toLowerCase()}`} className="hide-mobile" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
                 onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l}</a>
             ))}
-            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, display: "inline-block", transition: "all .3s" }}>Get Your Score →</a>
+            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, display: "inline-block" }}>Get Your Score →</a>
           </div>
         </div>
       </nav>
 
-      {/* ═══════ HERO ═══════ */}
-      <section style={{ paddingTop: 120, paddingBottom: 60, position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(201,168,76,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.03) 1px,transparent 1px)", backgroundSize: "60px 60px", maskImage: "radial-gradient(ellipse 80% 70% at 50% 50%,black 20%,transparent 100%)", WebkitMaskImage: "radial-gradient(ellipse 80% 70% at 50% 50%,black 20%,transparent 100%)" }} />
-        <div style={{ position: "absolute", top: "50%", left: "50%", width: 600, height: 600, transform: "translate(-50%,-50%)", pointerEvents: "none" }}>
-          <div style={{ position: "absolute", inset: 0, borderRadius: "50%", border: "1px solid rgba(201,168,76,.06)", animation: "heroOrbitCW 60s linear infinite" }} />
-          <div style={{ position: "absolute", inset: 80, borderRadius: "50%", border: "1px dashed rgba(201,168,76,.04)", animation: "heroOrbitCW 80s linear infinite reverse" }} />
-          {[0,1,2,3,4].map(i => (<div key={i} style={{ position: "absolute", top: `${50+40*Math.sin((i/5)*Math.PI*2)}%`, left: `${50+40*Math.cos((i/5)*Math.PI*2)}%`, width: 4, height: 4, borderRadius: "50%", background: C.gold, opacity: 0, animation: `sparkle ${2+i*.3}s ease-in-out infinite ${i*.7}s` }} />))}
-        </div>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", position: "relative", zIndex: 2, display: "grid", gridTemplateColumns: "1fr auto", gap: 60, alignItems: "center" }}>
-          <div className="fade-up">
-            <Badge>THE GOVERNANCE STANDARD</Badge>
-            <h1 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 52, fontWeight: 800, lineHeight: 1.06, marginTop: 24, marginBottom: 24, letterSpacing: "-1.5px" }}>
-              <span style={{ color: "#fff" }}>Agentic Commerce</span><br /><span style={{ color: C.gold }}>Framework®</span>
+      {/* ═══════════════════════════════════════════════
+           HERO — Split layout: manifesto + animated diagram
+         ═══════════════════════════════════════════════ */}
+      <section style={{ paddingTop: 120, paddingBottom: 40, position: "relative", overflow: "hidden" }}>
+        {/* Animated grid background */}
+        <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(201,168,76,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.02) 1px,transparent 1px)", backgroundSize: "80px 80px", animation: "gridFloat 20s linear infinite", maskImage: "radial-gradient(ellipse 70% 70% at 50% 40%,black 20%,transparent 100%)", WebkitMaskImage: "radial-gradient(ellipse 70% 70% at 50% 40%,black 20%,transparent 100%)" }} />
+
+        <div className="hero-grid" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "1fr 380px", gap: 60, alignItems: "center", position: "relative", zIndex: 2 }}>
+          {/* LEFT — Text */}
+          <div>
+            <div className="hero-anim hero-d1" style={{ marginBottom: 28 }}>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase" }}>The Governance Standard</span>
+            </div>
+            <h1 className="hero-anim hero-d2" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 54, fontWeight: 800, lineHeight: 1.04, letterSpacing: "-2px", marginBottom: 28 }}>
+              Agentic Commerce<br /><span style={{ color: C.gold }}>Framework®</span>
             </h1>
-            <p style={{ fontSize: 18, color: C.gray2, lineHeight: 1.7, maxWidth: 560, marginBottom: 12 }}>
-              Le premier standard de gouvernance pour les organisations qui déploient des <strong style={{ color: "#fff" }}>agents IA autonomes</strong>.
+            <p className="hero-anim hero-d3" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 21, color: C.gray2, lineHeight: 1.55, maxWidth: 500, marginBottom: 36, fontWeight: 400 }}>
+              Governing decisions in the age of autonomous systems.
             </p>
-            <p style={{ fontSize: 15, color: C.gray, maxWidth: 500, marginBottom: 32 }}>
-              4 couches de gouvernance. 5 produits intégrés. Un cadre méthodologique complet pour structurer le contrôle, limiter les risques et préserver votre souveraineté.
-            </p>
-            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, display: "inline-block", transition: "all .3s" }}>Évaluer ma gouvernance →</a>
-              <a href="#framework" style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 500, display: "inline-block", transition: "all .3s" }}
+            <div className="hero-anim hero-d4" style={{ display: "flex", gap: 14 }}>
+              <a href="#framework" style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "14px 24px", borderRadius: 10, fontSize: 14, fontWeight: 500, transition: "all .3s" }}
                 onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
-                onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>Explorer le Framework</a>
+                onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>Read the Framework ↓</a>
             </div>
           </div>
-          <div className="fade-up-d2 hero-shield hide-mobile"><HeroShield /></div>
+
+          {/* RIGHT — Animated Governance Stack */}
+          <div className="hero-anim hero-d3 hide-mobile">
+            <HeroVisualization />
+          </div>
         </div>
       </section>
 
-      {/* ═══════ STATS BAR ═══════ */}
-      <section style={{ padding: "32px 0", borderTop: `1px solid ${C.bd1}`, borderBottom: `1px solid ${C.bd1}`, background: C.navy2 }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24, textAlign: "center" }} className="grid-4">
-          {[
-            { val: 73, suf: "%", label: "des entreprises sans gouvernance formalisée" },
-            { val: 35, suf: "M€", label: "sanctions AI Act (jusqu'à 7% du CA)" },
-            { val: 4, suf: "", label: "couches de gouvernance ACF®" },
-            { val: 10, suf: " min", label: "pour obtenir votre Score ACF®" },
-          ].map(s => (
-            <div key={s.label}>
-              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 32, fontWeight: 800, color: C.gold }}><AnimatedCounter end={s.val} suffix={s.suf} /></div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gray, letterSpacing: ".08em", marginTop: 4 }}>{s.label}</div>
+      {/* ═══════════════════════════════════════════════
+           THE SHIFT — Cinematic prose
+         ═══════════════════════════════════════════════ */}
+      <section id="framework" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 40 }}>// The shift</div></Reveal>
+
+          <Reveal delay={0.1}><p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 700, lineHeight: 1.3, color: "#fff", marginBottom: 48, letterSpacing: "-.5px" }}>Artificial intelligence is no longer just a tool.</p></Reveal>
+
+          <Reveal delay={0.15}><p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 700, lineHeight: 1.3, color: C.gold, marginBottom: 48, letterSpacing: "-.5px" }}>It is becoming a decision-maker.</p></Reveal>
+
+          <Reveal delay={0.1}>
+            <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>
+              Across industries, autonomous agents are now executing operational decisions in real time — pricing adjustments, procurement orders, customer engagement, logistics routing, risk assessments.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>
+              These decisions happen continuously, at machine speed. And in most organizations, <strong style={{ color: "#fff" }}>no governance architecture exists to supervise them.</strong>
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>
+              The result is a new category of risk: <strong style={{ color: C.gold }}>uncontrolled autonomous decision systems.</strong>
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9 }}>
+              The Agentic Commerce Framework® was created to solve this problem.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+           STATEMENT — Full-width breathing pause
+         ═══════════════════════════════════════════════ */}
+      <section style={{ padding: "80px 0", borderTop: `1px solid ${C.bd1}` }}>
+        <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
+          <Reveal>
+            <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 700, color: C.gray, lineHeight: 1.4, marginBottom: 16 }}>Autonomous systems do not create chaos.</p>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 32, fontWeight: 800, color: "#fff", lineHeight: 1.3 }}>Ungoverned decisions do.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+           ANIMATED STATS — Visual impact moment
+         ═══════════════════════════════════════════════ */}
+      <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2, position: "relative", overflow: "hidden" }}>
+        {/* Animated horizontal scan line */}
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, ${C.gold}, transparent)`, opacity: 0.15 }}>
+          <div style={{ position: "absolute", top: 0, left: "-100%", width: "50%", height: "100%", background: `linear-gradient(90deg, transparent, ${C.gold}, transparent)`, animation: "scanLine 4s linear infinite" }} />
+        </div>
+        <style>{`@keyframes scanLine{0%{left:-50%}100%{left:150%}}`}</style>
+        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 32, textAlign: "center" }}>
+            {[
+              { val: "73%", label: "of organizations have no formal AI governance", color: C.gold },
+              { val: "€35M", label: "maximum AI Act sanctions or 7% global revenue", color: C.amber },
+              { val: "4x", label: "lower correction costs with structured governance", color: C.sup },
+              { val: "<1s", label: "Level 1 kill switch response time (ACF spec)", color: C.sys },
+            ].map((s, i) => (
+              <Reveal key={i} delay={i * 0.12}>
+                <div style={{ padding: "20px 0" }}>
+                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 38, fontWeight: 800, color: s.color, marginBottom: 8, letterSpacing: "-1px" }}>{s.val}</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gray2, letterSpacing: ".04em", lineHeight: 1.5 }}>{s.label}</div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+           THE GOVERNANCE GAP
+         ═══════════════════════════════════════════════ */}
+      <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// The governance gap</div></Reveal>
+
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 32 }}>Organizations spent the last decade adopting AI. Governance models never evolved.</h2></Reveal>
+
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>Traditional governance assumes a simple structure: humans decide, systems execute.</p></Reveal>
+
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>Agentic systems invert this relationship. Machines now execute <strong style={{ color: "#fff" }}>and decide</strong> within defined parameters.</p></Reveal>
+
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 32 }}>When this shift occurs without structured governance, organizations lose visibility and control over their own operational decisions. The consequences are not theoretical:</p></Reveal>
+
+          <Reveal delay={0.1}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 32, paddingLeft: 4 }}>
+              {["Untraceable autonomous decisions", "Conflicting agent optimizations", "Operational drift over time", "Regulatory exposure under emerging AI regulation", "Strategic dependence on external platforms"].map((item, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
+                  <span style={{ color: C.gray, fontSize: 14, marginTop: 3, flexShrink: 0 }}>—</span>
+                  <span style={{ fontSize: 16, color: C.gray2, lineHeight: 1.7 }}>{item}</span>
+                </div>
+              ))}
             </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+           INTRODUCING ACF
+         ═══════════════════════════════════════════════ */}
+      <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// The framework</div></Reveal>
+
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 32 }}>The first governance architecture for autonomous decision systems.</h2></Reveal>
+
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>The Agentic Commerce Framework® does not control AI models. It governs the <strong style={{ color: "#fff" }}>decisions</strong> they execute.</p></Reveal>
+
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>The framework defines how organizations:</p></Reveal>
+
+          <Reveal delay={0.1}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 32 }}>
+              {["Structure decision authority", "Define non-delegable zones", "Constrain autonomous behavior", "Maintain real-time oversight", "Preserve human sovereignty over critical actions"].map((item, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <span style={{ color: C.gold, fontSize: 12, flexShrink: 0 }}>▸</span>
+                  <span style={{ fontSize: 16, color: C.gray2, lineHeight: 1.7 }}>{item}</span>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9 }}>ACF creates a structured decision governance layer between human leadership and machine execution.</p></Reveal>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+           VISUAL COMPARISON — Without vs With governance
+         ═══════════════════════════════════════════════ */}
+      <section style={{ padding: "80px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2, position: "relative", overflow: "hidden" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px" }}>
+          <Reveal>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+              {/* WITHOUT */}
+              <div style={{ position: "relative", background: "rgba(239,68,68,.03)", border: "1px solid rgba(239,68,68,.12)", borderRadius: 20, padding: "36px 32px", overflow: "hidden" }}>
+                {/* Animated noise lines */}
+                <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.04 }}>
+                  {[0,1,2,3,4].map(i => (
+                    <div key={i} style={{ position: "absolute", top: `${15 + i * 18}%`, left: 0, right: 0, height: 1, background: "#ef4444" }}>
+                      <div style={{ position: "absolute", top: 0, width: "30%", height: "100%", background: "#ef4444", animation: `noiseLine ${2 + i * 0.5}s linear infinite`, animationDelay: `${i * 0.3}s` }} />
+                    </div>
+                  ))}
+                </div>
+                <style>{`@keyframes noiseLine{0%{left:-30%}100%{left:130%}}`}</style>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, color: "#ef4444", letterSpacing: ".14em", marginBottom: 24, position: "relative" }}>✕ WITHOUT GOVERNANCE</div>
+                <div style={{ position: "relative" }}>
+                  <svg viewBox="0 0 320 200" fill="none" style={{ width: "100%", marginBottom: 20 }}>
+                    {/* Chaotic lines */}
+                    {[0,1,2,3,4,5,6].map(i => (
+                      <line key={i} x1={20 + Math.random() * 280} y1={20 + Math.random() * 160} x2={20 + Math.random() * 280} y2={20 + Math.random() * 160} stroke="#ef4444" strokeWidth=".6" opacity=".2">
+                        <animate attributeName="opacity" values=".05;.3;.05" dur={`${2 + i * 0.4}s`} repeatCount="indefinite" />
+                      </line>
+                    ))}
+                    {/* Scattered nodes */}
+                    {[{x:60,y:40},{x:180,y:30},{x:280,y:70},{x:40,y:120},{x:150,y:100},{x:260,y:140},{x:100,y:170}].map((n,i) => (
+                      <g key={i}>
+                        <circle cx={n.x} cy={n.y} r="8" fill={C.navy3} stroke="#ef4444" strokeWidth=".8" opacity=".4">
+                          <animate attributeName="opacity" values=".2;.5;.2" dur={`${1.5 + i * 0.3}s`} repeatCount="indefinite" />
+                        </circle>
+                        <text x={n.x} y={n.y + 3} textAnchor="middle" fontSize="6" fill="#ef4444" opacity=".5">?</text>
+                      </g>
+                    ))}
+                    <text x="160" y="195" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill="#ef4444" opacity=".4">UNCONTROLLED DECISIONS</text>
+                  </svg>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                    {["Opacity", "Drift", "Conflict", "Exposure"].map((r, i) => (
+                      <div key={r} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 13, color: C.gray2 }}>
+                        <span style={{ color: "#ef4444", fontSize: 10 }}>✕</span> {r}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* WITH ACF */}
+              <div style={{ position: "relative", background: C.goldDim, border: `1px solid ${C.goldBorder}`, borderRadius: 20, padding: "36px 32px", overflow: "hidden" }}>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, color: C.gold, letterSpacing: ".14em", marginBottom: 24, position: "relative" }}>✓ WITH ACF® GOVERNANCE</div>
+                <div style={{ position: "relative" }}>
+                  <svg viewBox="0 0 320 200" fill="none" style={{ width: "100%", marginBottom: 20 }}>
+                    {/* Structured layers */}
+                    {[
+                      { y: 20, color: C.gov, label: "GOVERNANCE" },
+                      { y: 65, color: C.pol, label: "POLICY" },
+                      { y: 110, color: C.sys, label: "SYSTEM" },
+                      { y: 155, color: C.sup, label: "SUPERVISION" },
+                    ].map((l, i) => (
+                      <g key={i}>
+                        <rect x="40" y={l.y} width="240" height="32" rx="8" fill={C.navy3} stroke={l.color} strokeWidth="1">
+                          <animate attributeName="stroke-opacity" values=".3;.8;.3" dur="3s" begin={`${i * 0.5}s`} repeatCount="indefinite" />
+                        </rect>
+                        <text x="160" y={l.y + 20} textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="8" fill={l.color} fontWeight="600" opacity=".8">{l.label}</text>
+                        {i < 3 && (
+                          <line x1="160" y1={l.y + 32} x2="160" y2={l.y + 33 + 20} stroke={C.gold} strokeWidth=".8" opacity=".2">
+                            <animate attributeName="opacity" values=".1;.4;.1" dur="2s" begin={`${i * 0.5}s`} repeatCount="indefinite" />
+                          </line>
+                        )}
+                      </g>
+                    ))}
+                    {/* Energy flow */}
+                    <circle r="2.5" fill={C.gold} opacity=".6">
+                      <animate attributeName="cy" values="36;81;126;171;126;81;36" dur="4s" repeatCount="indefinite" />
+                      <animate attributeName="cx" values="160;160;160;160;160;160;160" dur="4s" repeatCount="indefinite" />
+                      <animate attributeName="opacity" values=".3;.8;.3" dur="2s" repeatCount="indefinite" />
+                    </circle>
+                    <text x="160" y="198" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill={C.gold} opacity=".4">GOVERNED DECISIONS</text>
+                  </svg>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                    {["Traceable", "Reversible", "Accountable", "Sovereign"].map((r, i) => (
+                      <div key={r} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 13, color: C.gray2 }}>
+                        <span style={{ color: C.gold, fontSize: 10 }}>✓</span> {r}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+           FOUR-LAYER ARCHITECTURE — Detailed
+         ═══════════════════════════════════════════════ */}
+      <section id="architecture" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// Architecture</div></Reveal>
+
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16 }}>A four-layer governance architecture.</h2></Reveal>
+
+          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 48 }}>Together they create a continuous control system for autonomous operations.</p></Reveal>
+
+          {[
+            { num: "01", name: "Governance", sub: "Who holds authority", color: C.gov,
+              text: "The governance layer establishes decision sovereignty. Organizations define who retains final authority, which decisions can be delegated, which remain exclusively human. At this level, companies formalize their Agentic Constitution — the foundational document establishing the principles of AI governance." },
+            { num: "02", name: "Policy", sub: "What agents are allowed to do", color: C.pol,
+              text: "Policy defines the behavioral boundaries of autonomous systems. It translates governance principles into operational rules — financial thresholds, time-based constraints, ethical limits, sector-specific regulatory policies. Policies ensure that agents operate within clearly defined decision boundaries." },
+            { num: "03", name: "System", sub: "How decisions are executed", color: C.sys,
+              text: "The system layer governs the technical execution environment. Every autonomous action remains observable, interruptible and auditable — through decision traceability, multi-agent coordination, and layered kill-switch mechanisms. The objective is not to slow agents down. It is to ensure they remain governable at machine speed." },
+            { num: "04", name: "Supervision", sub: "How organizations maintain continuous oversight", color: C.sup,
+              text: "Governance is not a one-time configuration. It is an ongoing operational discipline. The supervision layer introduces continuous monitoring, incident response and governance reviews. Supervision ensures that agent systems evolve without eroding control." },
+          ].map((layer, i) => (
+            <Reveal key={layer.num} delay={0.1}>
+              <div style={{ marginBottom: 48, paddingLeft: 24, borderLeft: `2px solid ${layer.color}40` }}>
+                <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 8 }}>
+                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: layer.color, fontWeight: 700, opacity: .5 }}>{layer.num}</span>
+                  <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, fontWeight: 700, color: layer.color }}>{layer.name}</h3>
+                </div>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: C.gray, marginBottom: 14, letterSpacing: ".05em" }}>{layer.sub}</div>
+                <p style={{ fontSize: 16, color: C.gray2, lineHeight: 1.85 }}>{layer.text}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </section>
 
-      {/* ═══════ THE PROBLEM ═══════ */}
-      <section id="framework" style={{ padding: "70px 0", borderBottom: `1px solid ${C.bd1}` }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <SectionLabel>Le constat</SectionLabel>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 34, fontWeight: 800, letterSpacing: "-.5px", marginBottom: 8 }}>Les agents IA prennent des décisions <span style={{ color: C.gold }}>à votre place</span></h2>
-            <GoldBarCenter />
-            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 640, margin: "0 auto", lineHeight: 1.7 }}>Pricing, procurement, engagement client, logistique — les agents autonomes exécutent des décisions à la vitesse machine. La question n'est pas de savoir s'il faut les utiliser. C'est <strong style={{ color: "#fff" }}>qui les gouverne</strong>.</p>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, maxWidth: 900, margin: "0 auto" }} className="grid-2">
-            <div style={{ background: "rgba(239,68,68,.04)", border: "1px solid rgba(239,68,68,.15)", borderRadius: 16, padding: 28 }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: C.red, letterSpacing: ".1em", marginBottom: 14, fontWeight: 700 }}>✕ SANS GOUVERNANCE</div>
-              {["Agents qui optimisent localement, détruisent globalement", "Aucune traçabilité des décisions autonomes", "€2,4M de pertes moyennes par décision IA non contrôlée", "Sanctions AI Act jusqu'à 7% du CA mondial", "Dépendance critique aux plateformes tierces", "Impossibilité de piloter ou corriger en temps réel", "Atteinte à l'image de marque par actions non conformes"].map(r => (
-                <div key={r} style={{ display: "flex", alignItems: "flex-start", gap: 8, fontSize: 13, color: C.gray2, lineHeight: 1.5, marginBottom: 8 }}><span style={{ color: C.red, fontSize: 11, marginTop: 3, flexShrink: 0 }}>✕</span> {r}</div>
-              ))}
-            </div>
-            <div style={{ background: C.goldDim, border: `1px solid ${C.goldBorder}`, borderRadius: 16, padding: 28 }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: C.gold, letterSpacing: ".1em", marginBottom: 14, fontWeight: 700 }}>✓ AVEC GOUVERNANCE ACF®</div>
-              {["Chaque décision traçable et réversible", "Responsabilité humaine identifiée à chaque niveau", "Conformité réglementaire native (AI Act, RGPD)", "Souveraineté préservée à la vitesse machine", "Kill switch à 3 niveaux avec temps de réponse garantis", "Dashboard de monitoring temps réel", "Labels de confiance ACF TRUST™ / ACF CERTIFIED"].map(r => (
-                <div key={r} style={{ display: "flex", alignItems: "flex-start", gap: 8, fontSize: 13, color: C.gray2, lineHeight: 1.5, marginBottom: 8 }}><span style={{ color: C.gold, fontSize: 11, marginTop: 3, flexShrink: 0 }}>✓</span> {r}</div>
-              ))}
-            </div>
-          </div>
+      {/* ═══════════════════════════════════════════════
+           ENERGY SEPARATOR — Visual breath
+         ═══════════════════════════════════════════════ */}
+      <section style={{ padding: "40px 0", borderTop: `1px solid ${C.bd1}`, position: "relative", overflow: "hidden" }}>
+        <svg viewBox="0 0 1200 60" fill="none" style={{ width: "100%", display: "block" }}>
+          {/* Center pulse */}
+          <line x1="0" y1="30" x2="1200" y2="30" stroke={C.gold} strokeWidth=".3" opacity=".08" />
+          <circle r="4" fill={C.gold} opacity=".4" filter="url(#glow-gov)">
+            <animate attributeName="cx" values="0;600;1200;600;0" dur="6s" repeatCount="indefinite" />
+            <animate attributeName="cy" values="30;30;30;30;30" dur="6s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values=".1;.6;.1" dur="3s" repeatCount="indefinite" />
+          </circle>
+          {/* Side dots */}
+          {[200,400,600,800,1000].map(x => (
+            <circle key={x} cx={x} cy="30" r="1.5" fill={C.gold} opacity=".1">
+              <animate attributeName="opacity" values=".05;.25;.05" dur="3s" begin={`${x/600}s`} repeatCount="indefinite" />
+            </circle>
+          ))}
+        </svg>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+           CENTRAL STATEMENT — The "holy shit" moment
+         ═══════════════════════════════════════════════ */}
+      <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, position: "relative" }}>
+        <div style={{ position: "absolute", top: "50%", left: "50%", width: 500, height: 500, transform: "translate(-50%,-50%)", background: "radial-gradient(circle, rgba(201,168,76,.04) 0%, transparent 70%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px", textAlign: "center", position: "relative", zIndex: 2 }}>
+          <Reveal>
+            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 42, fontWeight: 800, lineHeight: 1.2, letterSpacing: "-1px" }}>
+              AI automates execution.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 42, fontWeight: 800, lineHeight: 1.2, letterSpacing: "-1px", color: C.gold, marginTop: 8 }}>
+              ACF governs decisions.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.35}>
+            <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.8, maxWidth: 520, margin: "32px auto 0" }}>
+              Without governance, autonomous systems create opacity. With governance, they become scalable instruments of strategic control.
+            </p>
+          </Reveal>
         </div>
       </section>
 
-      {/* ═══════ 4 LAYERS ═══════ */}
-      <section id="layers" style={{ padding: "70px 0", background: C.navy2, borderBottom: `1px solid ${C.bd1}` }}>
-        <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <SectionLabel>La méthodologie</SectionLabel>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-.5px", marginBottom: 8 }}>Les 4 couches de gouvernance <span style={{ color: C.gold }}>ACF®</span></h2>
-            <GoldBarCenter />
-            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 640, margin: "0 auto", lineHeight: 1.7 }}>Un framework en couches qui structure le contrôle à travers tout votre écosystème agentique — de la gouvernance stratégique à la supervision temps réel.</p>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }} className="grid-2">
-            {[
-              { num: "01", title: "Couche Gouvernance", subtitle: "Le « qui »", color: C.gold, desc: "Fondement stratégique. Définit qui gouverne, qui décide, qui est responsable. Établit la constitution agentique de l'organisation.", items: ["Constitution agentique", "Sponsor de gouvernance nommé (DDA)", "Cartographie des autorités de décision", "Protocoles d'escalade par niveau de risque", "Comité de gouvernance agentique"] },
-              { num: "02", title: "Couche Politique", subtitle: "Le « quoi »", color: C.green, desc: "Règles opérationnelles et limites formalisées pour le comportement des agents autonomes. Les garde-fous qui contraignent l'action IA.", items: ["Politiques comportementales par agent", "Limites d'autonomie (financières, temporelles)", "Alignement réglementaire (AI Act, RGPD)", "Cadres éthiques de décision", "Règles sectorielles spécifiques"] },
-              { num: "03", title: "Couche Système", subtitle: "Le « comment »", color: C.blue, desc: "Infrastructure technique de monitoring, logging et contrôle de l'exécution des agents en temps réel.", items: ["Kill switch à 3 niveaux", "Architecture de traçabilité complète", "Coordination multi-agents", "Protocoles d'interruptibilité", "Tests trimestriels de résilience"] },
-              { num: "04", title: "Couche Supervision", subtitle: "Le « en continu »", color: C.amber, desc: "Surveillance humaine continue, cadence de revue et amélioration permanente de la posture de gouvernance.", items: ["Dashboard ACF Control temps réel", "Revues trimestrielles de gouvernance", "Procédures de réponse aux incidents", "Tracking du score de souveraineté", "Reporting direction et régulateur"] },
-            ].map(l => (
-              <div key={l.num} style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 20, padding: 32, transition: "all .3s" }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = `${l.color}40`; e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = `0 12px 40px ${l.color}12`; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = C.bd1; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 16 }}>
-                  <div style={{ width: 48, height: 48, borderRadius: 14, display: "flex", alignItems: "center", justifyContent: "center", background: `${l.color}15`, border: `1px solid ${l.color}40` }}>
-                    <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 16, fontWeight: 700, color: l.color }}>{l.num}</span>
-                  </div>
-                  <div>
-                    <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, fontWeight: 700, color: "#fff" }}>{l.title}</h3>
-                    <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: l.color, letterSpacing: ".1em" }}>{l.subtitle}</div>
-                  </div>
-                </div>
-                <p style={{ fontSize: 14, color: C.gray2, lineHeight: 1.65, marginBottom: 18 }}>{l.desc}</p>
-                <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                  {l.items.map(item => (<div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: C.gray2 }}><span style={{ color: l.color, fontSize: 10 }}>▸</span> {item}</div>))}
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* ═══════════════════════════════════════════════
+           GOVERNANCE LOOP — Animated diagram
+         ═══════════════════════════════════════════════ */}
+      <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// Operational discipline</div></Reveal>
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16 }}>The Agent Governance Loop</h2></Reveal>
+          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 0 }}>Governance is not configuration. It is a continuous operational loop — define, constrain, execute, monitor, intervene, improve. Then loop again.</p></Reveal>
+
+          <GovernanceLoopSVG />
         </div>
       </section>
 
-      {/* ═══════ HOW THE SCORE WORKS ═══════ */}
-      <section style={{ padding: "70px 0", borderBottom: `1px solid ${C.bd1}` }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <SectionLabel>Le processus</SectionLabel>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 34, fontWeight: 800, letterSpacing: "-.5px", marginBottom: 8 }}>Comment ça <span style={{ color: C.gold }}>marche</span> ?</h2>
-            <GoldBarCenter />
-            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 560, margin: "0 auto", lineHeight: 1.7 }}>7 étapes guidées, 10 minutes, résultat immédiat.</p>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 20 }} className="grid-4">
-            {[
-              { num: "01", title: "Contexte entreprise", desc: "Secteur, taille, présence agents IA actuels", color: C.gray2 },
-              { num: "02", title: "Maturité agentique", desc: "Fonctionnement actuel de vos agents autonomes", color: C.gray2 },
-              { num: "03", title: "4 couches ACF®", desc: "Évaluation de chaque couche de gouvernance", color: C.gold },
-              { num: "04", title: "Score & Actions", desc: "Score global, positionnement marché, 3 actions prioritaires", color: C.green },
-            ].map(s => (
-              <div key={s.num} style={{ textAlign: "center", padding: 24, background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 16 }}>
-                <div style={{ width: 44, height: 44, borderRadius: 12, background: C.goldDim, border: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 14px" }}>
-                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 14, fontWeight: 700, color: C.gold }}>{s.num}</span>
-                </div>
-                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff", marginBottom: 6 }}>{s.title}</h3>
-                <p style={{ fontSize: 13, color: C.gray, lineHeight: 1.5 }}>{s.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginTop: 28 }} className="grid-3">
-            {[
-              { icon: "📊", title: "Score de Souveraineté", desc: "Mesurez votre indépendance face aux plateformes tierces et votre résilience opérationnelle." },
-              { icon: "🎯", title: "Score Global ACF®", desc: "Évaluez vos 4 couches de gouvernance sur 100 points avec positionnement marché." },
-              { icon: "⚡", title: "3 Actions Prioritaires", desc: "Plan d'action personnalisé et priorisé pour sécuriser votre transition agentique." },
-            ].map(d => (
-              <div key={d.title} style={{ background: C.goldDim, border: `1px solid ${C.goldBorder}`, borderRadius: 16, padding: 28, textAlign: "center" }}>
-                <div style={{ fontSize: 28, marginBottom: 12 }}>{d.icon}</div>
-                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 700, color: "#fff", marginBottom: 8 }}>{d.title}</h3>
-                <p style={{ fontSize: 13, color: C.gray2, lineHeight: 1.6 }}>{d.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ═══════════════════════════════════════════════
+           ECOSYSTEM — Flow diagram + cards
+         ═══════════════════════════════════════════════ */}
+      <section id="ecosystem" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px" }}>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24, textAlign: "center" }}>// The ecosystem</div></Reveal>
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16, textAlign: "center" }}>ACF Operating System</h2></Reveal>
+          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, textAlign: "center", maxWidth: 560, margin: "0 auto" }}>Five integrated tools. One closed-loop system. Diagnose → Train → Monitor → Certify → Scale.</p></Reveal>
 
-      {/* ═══════ ECOSYSTEM ═══════ */}
-      <section id="ecosystem" style={{ padding: "70px 0", background: C.navy2, borderBottom: `1px solid ${C.bd1}` }}>
-        <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <SectionLabel>L'écosystème</SectionLabel>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-.5px", marginBottom: 8 }}>5 produits. <span style={{ color: C.gold }}>1 système.</span></h2>
-            <GoldBarCenter />
-            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 560, margin: "0 auto", lineHeight: 1.7 }}>Chaque produit alimente le suivant. Un écosystème en boucle fermée pour une gouvernance complète.</p>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }} className="grid-3">
+          <EcosystemFlowSVG />
+
+          <div className="eco-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginTop: 40 }}>
             {[
-              { icon: "📊", name: "ACF Score®", tag: "Diagnostic gratuit", desc: "Évaluez votre gouvernance agentique en 10 minutes. Score immédiat, rapport PDF, recommandations personnalisées.", color: C.green, href: "/en/acf-score", cta: "Calculer mon Score" },
-              { icon: "🎛️", name: "ACF Control", tag: "Plateforme de gouvernance", desc: "Dashboard de monitoring temps réel. Suivez les décisions, appliquez les politiques, maintenez le contrôle.", color: C.amber, href: "/en/acf-control", cta: "Explorer Control" },
-              { icon: "🎓", name: "ACF Academy", tag: "Formation", desc: "Programme de formation en 6 modules. Parcours équipes et parcours dirigeants. Apprenez à gouverner.", color: C.blue, href: "/en/acf-certification#academy", cta: "Voir les programmes" },
-              { icon: "🛡️", name: "ACF Certification", tag: "Labels de confiance", desc: "Labels ACF TRUST™ et ACF CERTIFIED. Prouvez votre gouvernance à vos clients, partenaires et régulateurs.", color: C.gold, href: "/en/acf-certification", cta: "Se certifier" },
-              { icon: "🤝", name: "ACF Partners", tag: "Réseau mondial", desc: "Déployez, auditez, formez et certifiez les organisations. Exclusivité territoriale et revenue share.", color: C.purple, href: "/en/acf-partners", cta: "Devenir partenaire" },
+              { name: "ACF Score®", desc: "Rapid diagnostic measuring decision sovereignty and governance maturity.", href: "/en/acf-score", color: C.sup },
+              { name: "ACF Control", desc: "Real-time platform for supervising autonomous systems.", href: "/en/acf-control", color: C.amber },
+              { name: "ACF Academy", desc: "Training for executives and operators governing autonomous systems.", href: "/en/acf-certification#academy", color: C.pol },
+              { name: "ACF Certification", desc: "ACF TRUST™ and ACF CERTIFIED labels validating governance maturity.", href: "/en/acf-certification", color: C.gold },
             ].map(p => (
-              <div key={p.name} style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 16, padding: "28px 24px", transition: "all .3s", display: "flex", flexDirection: "column", ...(p.name === "ACF Partners" ? { gridColumn: "span 1" } : {}) }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = `${p.color}40`; e.currentTarget.style.transform = "translateY(-3px)"; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = C.bd1; e.currentTarget.style.transform = "translateY(0)"; }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
-                  <span style={{ fontSize: 24 }}>{p.icon}</span>
-                  <div>
-                    <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 700, color: "#fff" }}>{p.name}</div>
-                    <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: p.color, letterSpacing: ".12em", textTransform: "uppercase" }}>{p.tag}</div>
-                  </div>
-                </div>
-                <p style={{ fontSize: 13, color: C.gray2, lineHeight: 1.6, marginBottom: 16, flex: 1 }}>{p.desc}</p>
-                <a href={p.href} style={{ display: "block", textAlign: "center", padding: "10px 16px", borderRadius: 8, border: `1px solid ${p.color}40`, color: p.color, fontSize: 13, fontWeight: 600, transition: "all .2s" }}
-                  onMouseEnter={e => { (e.target as HTMLElement).style.background = `${p.color}15`; }}
-                  onMouseLeave={e => { (e.target as HTMLElement).style.background = "transparent"; }}>{p.cta} →</a>
-              </div>
+              <Reveal key={p.name}>
+                <a href={p.href} style={{ display: "block", background: `${p.color}06`, border: `1px solid ${p.color}20`, borderRadius: 14, padding: "22px 26px", transition: "all .3s" }}
+                  onMouseEnter={e => { e.currentTarget.style.borderColor = `${p.color}50`; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = `${p.color}20`; e.currentTarget.style.transform = "translateY(0)"; }}>
+                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: p.color, marginBottom: 6 }}>{p.name}</div>
+                  <p style={{ fontSize: 14, color: C.gray2, lineHeight: 1.6, margin: 0 }}>{p.desc}</p>
+                </a>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════ USE CASES ═══════ */}
-      <section style={{ padding: "70px 0", borderBottom: `1px solid ${C.bd1}` }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <SectionLabel>Cas d'usage</SectionLabel>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 34, fontWeight: 800, letterSpacing: "-.5px", marginBottom: 8 }}>Qui a besoin de <span style={{ color: C.gold }}>gouvernance agentique</span> ?</h2>
-            <GoldBarCenter />
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }} className="grid-3">
-            {[
-              { icon: "🛒", title: "E-commerce & Retail", items: ["Agents de pricing dynamique", "Chatbots autonomes", "Optimisation supply chain", "Agents marketplace (Amazon, etc.)"] },
-              { icon: "🏦", title: "Finance & Assurance", items: ["Trading algorithmique", "Agents de souscription", "Détection de fraude autonome", "Agents de crédit scoring"] },
-              { icon: "🏭", title: "Industrie & Logistique", items: ["Agents de procurement", "Optimisation production", "Maintenance prédictive", "Gestion de flotte autonome"] },
-              { icon: "💊", title: "Santé & Pharma", items: ["Agents de diagnostic", "Gestion des stocks médicaux", "Essais cliniques IA", "Compliance réglementaire"] },
-              { icon: "📱", title: "Tech & SaaS", items: ["Agents DevOps autonomes", "Customer success IA", "Agents de facturation", "Orchestration multi-agents"] },
-              { icon: "🏛️", title: "Secteur Public", items: ["Services citoyens IA", "Agents de traitement", "Conformité AI Act", "Transparence décisionnelle"] },
-            ].map(uc => (
-              <div key={uc.title} style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 16, padding: 28, transition: "all .3s" }}
-                onMouseEnter={e => e.currentTarget.style.borderColor = C.goldBorder} onMouseLeave={e => e.currentTarget.style.borderColor = C.bd1}>
-                <div style={{ fontSize: 28, marginBottom: 12 }}>{uc.icon}</div>
-                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 700, color: "#fff", marginBottom: 12 }}>{uc.title}</h3>
-                {uc.items.map(item => (
-                  <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: C.gray2, marginBottom: 5 }}><span style={{ color: C.gold, fontSize: 10 }}>▸</span> {item}</div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ═══════════════════════════════════════════════
+           THE QUESTION — Final philosophical statement
+         ═══════════════════════════════════════════════ */}
+      <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
+        <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px" }}>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// A new operational discipline</div></Reveal>
 
-      {/* ═══════ RESEARCH ═══════ */}
-      <section style={{ padding: "70px 0", background: C.navy2, borderBottom: `1px solid ${C.bd1}` }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
-          <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <SectionLabel>Recherche & Fondements</SectionLabel>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, letterSpacing: "-.5px", marginBottom: 8 }}>Un framework ancré dans la <span style={{ color: C.gold }}>recherche</span></h2>
-            <GoldBarCenter />
-            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 560, margin: "0 auto", lineHeight: 1.7 }}>L'ACF® est construit sur la recherche rigoureuse à l'intersection de la gouvernance IA, la souveraineté organisationnelle et la conformité réglementaire.</p>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }} className="grid-2">
-            {[
-              { title: "Commerce Agentique", desc: "Comment les agents IA autonomes transforment le commerce et pourquoi les contrôles traditionnels échouent.", icon: "🔬" },
-              { title: "Souveraineté Décisionnelle", desc: "La théorie de la souveraineté organisationnelle à l'ère des systèmes autonomes.", icon: "⚖️" },
-              { title: "Paysage Réglementaire", desc: "AI Act, RGPD, réglementations sectorielles — comment les frameworks de gouvernance doivent s'adapter.", icon: "📜" },
-              { title: "Architecture 4 Couches", desc: "La méthodologie derrière le modèle de gouvernance ACF® et comment il monte en échelle.", icon: "🏗️" },
-            ].map(r => (
-              <div key={r.title} style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 14, padding: 28, transition: "all .3s" }}
-                onMouseEnter={e => e.currentTarget.style.borderColor = C.goldBorder} onMouseLeave={e => e.currentTarget.style.borderColor = C.bd1}>
-                <div style={{ fontSize: 24, marginBottom: 14 }}>{r.icon}</div>
-                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 17, fontWeight: 700, color: "#fff", marginBottom: 8 }}>{r.title}</h3>
-                <p style={{ fontSize: 13, color: C.gray2, lineHeight: 1.6 }}>{r.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div style={{ textAlign: "center", marginTop: 32 }}>
-            <p style={{ fontSize: 14, color: C.gray, marginBottom: 16 }}>Développé par <strong style={{ color: "#fff" }}>Vincent DORANGE</strong> — AI CONSULTING, Nice, France</p>
-            <div style={{ display: "flex", gap: 12, justifyContent: "center" }}>
-              <a href="/en/blog" style={{ display: "inline-block", padding: "12px 24px", borderRadius: 8, border: `1px solid ${C.goldBorder}`, color: C.gold, fontSize: 13, fontWeight: 600, transition: "all .2s" }}
-                onMouseEnter={e => { (e.target as HTMLElement).style.background = C.goldDim; }} onMouseLeave={e => { (e.target as HTMLElement).style.background = "transparent"; }}>Lire le blog →</a>
-              <a href="/en/about" style={{ display: "inline-block", padding: "12px 24px", borderRadius: 8, border: `1px solid ${C.bd1}`, color: C.gray2, fontSize: 13, fontWeight: 600, transition: "all .2s" }}
-                onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }} onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>À propos de l'ACF® →</a>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>The transition to autonomous systems is not a technology shift. It is a governance shift.</p></Reveal>
+
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>Organizations must evolve from managing software to governing decision systems.</p></Reveal>
+
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 48 }}>The Agentic Commerce Framework® provides the structure required to do so.</p></Reveal>
+
+          <Reveal delay={0.15}>
+            <div style={{ textAlign: "center", padding: "48px 0" }}>
+              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, color: C.gray, fontWeight: 500, marginBottom: 16 }}>Because in the age of autonomous systems,<br />the most important question is no longer:</p>
+              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, color: C.gray, fontWeight: 600, marginBottom: 20 }}>"What can AI do?"</p>
+              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 800, color: "#fff" }}>
+                "Who governs the decisions <span style={{ color: C.gold }}>it makes</span>?"
+              </p>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* ═══════ FINAL CTA ═══════ */}
-      <section style={{ padding: "70px 0", borderBottom: `1px solid ${C.bd1}` }}>
-        <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-.5px", marginBottom: 12 }}>Gouvernez les agents.<br /><span style={{ color: C.gold }}>Préservez votre souveraineté.</span></h2>
-          <p style={{ fontSize: 15, color: C.gray2, maxWidth: 520, margin: "0 auto 32px", lineHeight: 1.7 }}>Commencez par un diagnostic gratuit. Obtenez votre Score ACF® en 10 minutes. Comprenez où vous en êtes — et quoi faire ensuite.</p>
+      {/* ═══════════════════════════════════════════════
+           AUTHOR + CTA
+         ═══════════════════════════════════════════════ */}
+      <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
+        <div style={{ maxWidth: 600, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
           <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
-            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "16px 28px", borderRadius: 12, fontSize: 14, fontWeight: 700, display: "inline-block", transition: "all .3s" }}>Calculer mon Score ACF® →</a>
-            <a href="/en/acf-certification" style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "16px 28px", borderRadius: 12, fontSize: 14, fontWeight: 500, display: "inline-block" }}
+            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, display: "inline-block" }}>Assess your governance →</a>
+            <a href="/en/blog" style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 500, display: "inline-block", transition: "all .3s" }}
               onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
-              onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>Certification & Academy</a>
-            <a href="/en/contact" style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "16px 28px", borderRadius: 12, fontSize: 14, fontWeight: 500, display: "inline-block" }}
-              onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
-              onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>Nous contacter</a>
+              onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>Read the research</a>
           </div>
         </div>
       </section>
 
-      {/* FOOTER */}
+      {/* ── FOOTER ── */}
       <footer style={{ padding: "48px 0 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr 1fr", gap: 48, paddingBottom: 40 }}>
@@ -391,7 +750,7 @@ export default function TheStandardPage() {
                   <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase" }}>GLOBAL STANDARD FOR AI GOVERNANCE</div>
                 </div>
               </div>
-              <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 320 }}>Le standard de gouvernance pour les organisations déployant des agents IA autonomes.</p>
+              <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 320 }}>The governance standard for organizations deploying autonomous AI agents.</p>
             </div>
             {[
               { title: "Framework", links: [{ label: "The Standard", href: "/en/standard" },{ label: "Blog", href: "/en/blog" },{ label: "Certification", href: "/en/acf-certification" }] },
@@ -407,7 +766,7 @@ export default function TheStandardPage() {
             ))}
           </div>
           <div style={{ borderTop: `1px solid ${C.bd1}`, padding: "20px 0", textAlign: "center" }}>
-            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>© 2026 Agentic Commerce Framework® — Vincent DORANGE. Tous droits réservés.</p>
+            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>© 2026 Agentic Commerce Framework® — Vincent Dorange. All rights reserved.</p>
           </div>
         </div>
       </footer>
