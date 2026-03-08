@@ -613,17 +613,17 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="mfeat"><div class="mflbl">FEATURED</div><div class="mfitem"><div class="mftitle">Download the ACF White Paper</div><div class="mfdesc">Full specification — free for registered users.</div></div><div class="mfitem"><div class="mftitle">ACF v1.0 — February 2026</div><div class="mfdesc">Official release. What's new in the framework.</div></div></div>
     </div>
     <div class="mp" id="panel-products">
-      <div class="mpt"><a href="/products">Products →</a></div>
+      <div class="mpt"><a href="/standard">Products →</a></div>
       <div class="mpd">Three tools operationalizing the ACF Standard across your organization.</div>
-      <div class="mgroup"><div class="mgtitle">Diagnostic</div><ul class="mlinks"><li><a href="https://acf-score.com">ACF Score — Sovereignty Metric</a></li><li><a href="/en/acf-score#methodology">Scoring Methodology</a></li><li><a href="/en/acf-score#axes">6 Governance Axes</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">SaaS Platform</div><ul class="mlinks"><li><a href="/control">ACF Control — Governance Dashboard</a></li><li><a href="/control#kpis">18 Sovereignty KPIs</a></li><li><a href="/control#gating">Adaptive Gating System</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">Certification</div><ul class="mlinks"><li><a href="/certification">ACF Certification Program</a></li><li><a href="/certification#levels">Certification Levels</a></li><li><a href="/certification#process">Audit Process</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">Diagnostic</div><ul class="mlinks"><li><a href="https://acf-score.com">ACF Score — Sovereignty Metric</a></li><li><a href="/en/acf-score">Scoring Methodology</a></li><li><a href="/en/acf-score">6 Governance Axes</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">SaaS Platform</div><ul class="mlinks"><li><a href="/control">ACF Control — Governance Dashboard</a></li><li><a href="/control">18 Sovereignty KPIs</a></li><li><a href="/control">Adaptive Gating System</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">Certification</div><ul class="mlinks"><li><a href="/certification">ACF Certification Program</a></li><li><a href="/certification">Certification Levels</a></li><li><a href="/certification">Audit Process</a></li></ul></div>
     </div>
     <div class="mp" id="panel-resources">
-      <div class="mpt"><a href="/blog">Resources →</a></div>
+      <div class="mpt"><a href="/en/blog">Resources →</a></div>
       <div class="mpd">Governance insights, research and technical documentation.</div>
-      <div class="mgroup"><div class="mgtitle">Latest Insights</div><ul class="mlinks"><li><a href="/blog/ai-act">EU AI Act &amp; Agentic Systems</a></li><li><a href="/blog/dda">The DDA Role Explained</a></li><li><a href="/blog/kill-switch">Designing a 3-Level Kill Switch</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">Documentation</div><ul class="mlinks"><li><a href="/blog">Technical Specifications</a></li><li><a href="/blog">Research Papers</a></li><li><a href="/academy">ACF Academy</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">Latest Insights</div><ul class="mlinks"><li><a href="/en/blog">EU AI Act &amp; Agentic Systems</a></li><li><a href="/en/blog">The DDA Role Explained</a></li><li><a href="/en/blog">Designing a 3-Level Kill Switch</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">Documentation</div><ul class="mlinks"><li><a href="/en/blog">Technical Specifications</a></li><li><a href="/en/blog">Research Papers</a></li><li><a href="/academy">ACF Academy</a></li></ul></div>
     </div>
     <div class="mp" id="panel-about">
       <div class="mpt"><a href="/about">About ACF →</a></div>
@@ -635,8 +635,8 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div class="mp" id="panel-partners">
       <div class="mpt"><a href="/partners">Partners →</a></div>
       <div class="mpd">Join the ACF Practitioner network and offer governance services to your clients.</div>
-      <div class="mgroup"><div class="mgtitle">Partner Portal</div><ul class="mlinks"><li><a href="/partners/login"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Login to Partner Portal</a></li><li><a href="/partners/dashboard">Dashboard &amp; Tools</a></li><li><a href="/partners/training">Training Materials</a></li><li><a href="/partners/toolkit">ACF Practitioner Toolkit</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">Become a Partner</div><ul class="mlinks"><li><a href="/partners/apply">Apply to Join</a></li><li><a href="/partners/tiers">Partner Tiers</a></li><li><a href="/certification">Get ACF Certified First</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">Partner Portal</div><ul class="mlinks"><li><a href="/partners"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Login to Partner Portal</a></li><li><a href="/partners">Dashboard &amp; Tools</a></li><li><a href="/partners">Training Materials</a></li><li><a href="/partners">ACF Practitioner Toolkit</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">Become a Partner</div><ul class="mlinks"><li><a href="/partners">Apply to Join</a></li><li><a href="/partners">Partner Tiers</a></li><li><a href="/certification">Get ACF Certified First</a></li></ul></div>
     </div>
   </div>
 </div>
