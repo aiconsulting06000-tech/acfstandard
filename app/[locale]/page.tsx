@@ -565,8 +565,8 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     </a>
     <div class="nr">
       <div class="nlm">
-        <a href="/en/acf-score">ACF Score</a>
         <a href="/standard">The Standard</a>
+        <a href="/en/acf-score">ACF Score</a>
         <a href="/control">ACF Control</a>
         <a href="/certification">ACF Certification</a>
       </div>
