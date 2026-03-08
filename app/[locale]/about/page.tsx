@@ -99,7 +99,7 @@ export default function AboutPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "280px 1fr", gap: 56, alignItems: "start" }}>
           <div style={{ background: C.navy3, border: `1px solid ${C.goldBorder}`, borderRadius: 20, padding: 32, textAlign: "center", position: "sticky", top: 100 }}>
             <div style={{ width: 140, height: 140, borderRadius: "50%", background: C.goldDim, border: `3px solid ${C.goldBorder}`, margin: "0 auto 20px", overflow: "hidden", position: "relative" }}>
-              <img src="/vincent-dorange.png" alt="Vincent DORANGE" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -45%)", width: "110%", height: "110%", objectFit: "cover" }} />
+              <img src="/vincent-dorange.png" alt="Vincent DORANGE" style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -68%)", width: "140%", height: "140%", objectFit: "cover" }} />
             </div>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, fontWeight: 800, color: "#fff", marginBottom: 4 }}>Vincent DORANGE</h2>
             <p style={{ fontSize: 13, color: C.gray2, lineHeight: 1.5, marginBottom: 4 }}>Founder · Agentic Governance</p>
