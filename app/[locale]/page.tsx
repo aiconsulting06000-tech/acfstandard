@@ -615,28 +615,28 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div class="mp" id="panel-products">
       <div class="mpt"><a href="/products">Products →</a></div>
       <div class="mpd">Three tools operationalizing the ACF Standard across your organization.</div>
-      <div class="mgroup"><div class="mgtitle">Diagnostic</div><ul class="mlinks"><li><a href="https://acf-score.com">ACF Score — Sovereignty Metric</a></li><li><a href="/acf-score#methodology">Scoring Methodology</a></li><li><a href="/acf-score#axes">6 Governance Axes</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">SaaS Platform</div><ul class="mlinks"><li><a href="/acf-control">ACF Control — Governance Dashboard</a></li><li><a href="/acf-control#kpis">18 Sovereignty KPIs</a></li><li><a href="/acf-control#gating">Adaptive Gating System</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">Certification</div><ul class="mlinks"><li><a href="/acf-certification">ACF Certification Program</a></li><li><a href="/acf-certification#levels">Certification Levels</a></li><li><a href="/acf-certification#process">Audit Process</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">Diagnostic</div><ul class="mlinks"><li><a href="https://acf-score.com">ACF Score — Sovereignty Metric</a></li><li><a href="/en/acf-score#methodology">Scoring Methodology</a></li><li><a href="/en/acf-score#axes">6 Governance Axes</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">SaaS Platform</div><ul class="mlinks"><li><a href="/control">ACF Control — Governance Dashboard</a></li><li><a href="/control#kpis">18 Sovereignty KPIs</a></li><li><a href="/control#gating">Adaptive Gating System</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">Certification</div><ul class="mlinks"><li><a href="/certification">ACF Certification Program</a></li><li><a href="/certification#levels">Certification Levels</a></li><li><a href="/certification#process">Audit Process</a></li></ul></div>
     </div>
     <div class="mp" id="panel-resources">
       <div class="mpt"><a href="/blog">Resources →</a></div>
       <div class="mpd">Governance insights, research and technical documentation.</div>
       <div class="mgroup"><div class="mgtitle">Latest Insights</div><ul class="mlinks"><li><a href="/blog/ai-act">EU AI Act &amp; Agentic Systems</a></li><li><a href="/blog/dda">The DDA Role Explained</a></li><li><a href="/blog/kill-switch">Designing a 3-Level Kill Switch</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">Documentation</div><ul class="mlinks"><li><a href="/blog">Technical Specifications</a></li><li><a href="/blog">Research Papers</a></li><li><a href="/blog">ACF Academy</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">Documentation</div><ul class="mlinks"><li><a href="/blog">Technical Specifications</a></li><li><a href="/blog">Research Papers</a></li><li><a href="/academy">ACF Academy</a></li></ul></div>
     </div>
     <div class="mp" id="panel-about">
       <div class="mpt"><a href="/about">About ACF →</a></div>
       <div class="mpd">The story, mission, and legal protection behind the Agentic Commerce Framework®.</div>
       <div class="mgroup"><div class="mgtitle">Who We Are</div><ul class="mlinks"><li><a href="/about#vincent">Vincent DORANGE — Creator</a></li><li><a href="/about#mission">Mission &amp; Values</a></li><li><a href="/about#legal">Legal Protection (INPI)</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">How We Work</div><ul class="mlinks"><li><a href="/acf-partners">Practitioner Network</a></li><li><a href="/acf-certification">Audit &amp; Certification</a></li><li><a href="/contact">Contact Us</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">How We Work</div><ul class="mlinks"><li><a href="/partners">Practitioner Network</a></li><li><a href="/certification">Audit &amp; Certification</a></li><li><a href="/contact">Contact Us</a></li></ul></div>
       <div class="mfeat"><div class="mflbl">REGISTERED</div><div class="mfitem"><div class="mftitle">INPI Protected — Loi n° 2018-670</div><div class="mfdesc">ACF® is a registered trademark. All methodology and tools are legally protected.</div></div></div>
     </div>
     <div class="mp" id="panel-partners">
       <div class="mpt"><a href="/partners">Partners →</a></div>
       <div class="mpd">Join the ACF Practitioner network and offer governance services to your clients.</div>
-      <div class="mgroup"><div class="mgtitle">Partner Portal</div><ul class="mlinks"><li><a href="/acf-partners"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Login to Partner Portal</a></li><li><a href="/acf-partners">Dashboard &amp; Tools</a></li><li><a href="/acf-partners">Training Materials</a></li><li><a href="/acf-partners">ACF Practitioner Toolkit</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">Become a Partner</div><ul class="mlinks"><li><a href="/acf-partners">Apply to Join</a></li><li><a href="/acf-partners">Partner Tiers</a></li><li><a href="/acf-certification">Get ACF Certified First</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">Partner Portal</div><ul class="mlinks"><li><a href="/partners/login"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Login to Partner Portal</a></li><li><a href="/partners/dashboard">Dashboard &amp; Tools</a></li><li><a href="/partners/training">Training Materials</a></li><li><a href="/partners/toolkit">ACF Practitioner Toolkit</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">Become a Partner</div><ul class="mlinks"><li><a href="/partners/apply">Apply to Join</a></li><li><a href="/partners/tiers">Partner Tiers</a></li><li><a href="/certification">Get ACF Certified First</a></li></ul></div>
     </div>
   </div>
 </div>
