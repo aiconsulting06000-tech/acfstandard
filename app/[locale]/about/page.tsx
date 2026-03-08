@@ -123,8 +123,8 @@ export default function AboutPage() {
             <GoldBar />
             <div style={{ fontSize: 15, color: C.gray2, lineHeight: 1.9 }}>
               <p style={{ marginBottom: 20 }}>Vincent DORANGE has been working in e-commerce and digital strategy for over 25 years. Over these two decades, he has observed from the inside the profound transformations of digital commerce: the rise of platforms, the centralization of decisions in algorithms, and the growing dependence of companies on technological infrastructures.</p>
-              <p style={{ marginBottom: 20 }}>His work has progressively focused on a question that has become central in the digital economy: who really holds decision-making power in organizations driven by data and automated systems?</p>
-              <p style={{ marginBottom: 20 }}>Facing the emergence of autonomous artificial intelligence agents, he developed in 2025 the Agentic Commerce Framework® (ACF®), a methodological framework designed to help organizations govern the use of AI agents and preserve their decision-making sovereignty in the agentic economy.</p>
+              <p style={{ marginBottom: 20 }}>His work has progressively focused on a question that has become central in the digital economy: <strong style={{ color: "#fff" }}>who really holds decision-making power in organizations driven by data and automated systems?</strong></p>
+              <p style={{ marginBottom: 20 }}>Facing the emergence of autonomous artificial intelligence agents, he developed in 2025 the <strong style={{ color: C.gold }}>Agentic Commerce Framework® (ACF®), a methodological framework designed to help organizations govern the use of AI agents and preserve their decision-making sovereignty in the agentic economy.</strong></p>
               <p>Based in France, he works with SMEs, mid-cap companies, and large corporations on issues of digital transformation, AI governance, and the evolution of business models in the era of autonomous systems.</p>
             </div>
           </div>
