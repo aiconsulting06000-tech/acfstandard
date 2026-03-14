@@ -452,35 +452,35 @@ const ACF_HTML = `<canvas id="neural"></canvas>
   <div class="rpcols">
     <div>
       <div class="rpcol-title">Global</div>
-      <a class="rpglobal" href="#" onclick="closeRegion()"><span>🌐</span><span>Global (English)</span></a>
+      <a class="rpglobal" href="/en/" onclick="event.preventDefault();window.parent.location.href='/en/';"><span>🌐</span><span>Global (English)</span></a>
     </div>
     <div>
       <div class="rpcol-title">Europe, Middle East &amp; Africa</div>
       <ul class="rplinks">
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇫🇷</span>France <span class="rplang">(Français)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇩🇪</span>DACH Region <span class="rplang">(Deutsch)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇬🇧</span>United Kingdom <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇪🇸</span>Spain <span class="rplang">(Español)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇧🇪</span>Belgium <span class="rplang">(Français)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇨🇭</span>Switzerland <span class="rplang">(Français)</span></a></li>
+        <li><a href="/fr/" onclick="event.preventDefault();window.parent.location.href='/fr/';"><span class="rpflag">🇫🇷</span>France <span class="rplang">(Français)</span></a></li>
+        <li><a href="/de/" onclick="event.preventDefault();window.parent.location.href='/de/';"><span class="rpflag">🇩🇪</span>DACH Region <span class="rplang">(Deutsch)</span></a></li>
+        <li><a href="/en/" onclick="event.preventDefault();window.parent.location.href='/en/';"><span class="rpflag">🇬🇧</span>United Kingdom <span class="rplang">(English)</span></a></li>
+        <li><a href="/es/" onclick="event.preventDefault();window.parent.location.href='/es/';"><span class="rpflag">🇪🇸</span>Spain <span class="rplang">(Español)</span></a></li>
+        <li><a href="/fr/" onclick="event.preventDefault();window.parent.location.href='/fr/';"><span class="rpflag">🇧🇪</span>Belgium <span class="rplang">(Français)</span></a></li>
+        <li><a href="/fr/" onclick="event.preventDefault();window.parent.location.href='/fr/';"><span class="rpflag">🇨🇭</span>Switzerland <span class="rplang">(Français)</span></a></li>
       </ul>
     </div>
     <div>
       <div class="rpcol-title">North &amp; Latin America</div>
       <ul class="rplinks">
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇺🇸</span>United States <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇨🇦</span>Canada <span class="rplang">(English/Français)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇧🇷</span>Brazil <span class="rplang">(Português)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇲🇽</span>Mexico <span class="rplang">(Español)</span></a></li>
+        <li><a href="/en/" onclick="event.preventDefault();window.parent.location.href='/en/';"><span class="rpflag">🇺🇸</span>United States <span class="rplang">(English)</span></a></li>
+        <li><a href="/en/" onclick="event.preventDefault();window.parent.location.href='/en/';"><span class="rpflag">🇨🇦</span>Canada <span class="rplang">(English/Français)</span></a></li>
+        <li><a href="/pt/" onclick="event.preventDefault();window.parent.location.href='/pt/';"><span class="rpflag">🇧🇷</span>Brazil <span class="rplang">(Português)</span></a></li>
+        <li><a href="/es/" onclick="event.preventDefault();window.parent.location.href='/es/';"><span class="rpflag">🇲🇽</span>Mexico <span class="rplang">(Español)</span></a></li>
       </ul>
     </div>
     <div>
       <div class="rpcol-title">Asia &amp; Pacific</div>
       <ul class="rplinks">
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇸🇬</span>Singapore <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇯🇵</span>Japan <span class="rplang">(日本語)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇦🇺</span>Australia <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="closeRegion()"><span class="rpflag">🇰🇷</span>Korea <span class="rplang">(한국어)</span></a></li>
+        <li><a href="/en/" onclick="event.preventDefault();window.parent.location.href='/en/';"><span class="rpflag">🇸🇬</span>Singapore <span class="rplang">(English)</span></a></li>
+        <li><a href="/ja/" onclick="event.preventDefault();window.parent.location.href='/ja/';"><span class="rpflag">🇯🇵</span>Japan <span class="rplang">(日本語)</span></a></li>
+        <li><a href="/en/" onclick="event.preventDefault();window.parent.location.href='/en/';"><span class="rpflag">🇦🇺</span>Australia <span class="rplang">(English)</span></a></li>
+        <li><a href="/ko/" onclick="event.preventDefault();window.parent.location.href='/ko/';"><span class="rpflag">🇰🇷</span>Korea <span class="rplang">(한국어)</span></a></li>
       </ul>
     </div>
   </div>
