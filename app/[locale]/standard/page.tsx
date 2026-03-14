@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    ACF STANDARD — THE GOVERNANCE FRAMEWORK
@@ -297,6 +298,48 @@ function EcosystemFlowSVG() {
    MAIN PAGE
    ══════════════════════════════════════════════════════════ */
 export default function TheStandardPage() {
+  const t = useTranslations();
+
+  const stats = [
+    { value: 73, suffix: "%", prefix: "", label: t("standard.stat1Label"), color: C.gold },
+    { value: 35, suffix: "M", prefix: "€", label: t("standard.stat2Label"), color: C.amber },
+    { value: 4, suffix: "x", prefix: "", label: t("standard.stat3Label"), color: C.sup },
+    { value: 1, suffix: "s", prefix: "<", label: t("standard.stat4Label"), color: C.sys },
+  ];
+
+  const gapRisks = [
+    t("standard.gapRisk1"), t("standard.gapRisk2"), t("standard.gapRisk3"),
+    t("standard.gapRisk4"), t("standard.gapRisk5"),
+  ];
+
+  const frameworkItems = [
+    t("standard.frameworkItem1"), t("standard.frameworkItem2"), t("standard.frameworkItem3"),
+    t("standard.frameworkItem4"), t("standard.frameworkItem5"),
+  ];
+
+  const comparisonRisks = [t("standard.comparisonRisk1"), t("standard.comparisonRisk2"), t("standard.comparisonRisk3"), t("standard.comparisonRisk4")];
+  const comparisonBenefits = [t("standard.comparisonBenefit1"), t("standard.comparisonBenefit2"), t("standard.comparisonBenefit3"), t("standard.comparisonBenefit4")];
+
+  const archLayers = [
+    { num: "01", name: t("standard.layer1Name"), sub: t("standard.layer1Sub"), color: C.gov, text: t("standard.layer1Text") },
+    { num: "02", name: t("standard.layer2Name"), sub: t("standard.layer2Sub"), color: C.pol, text: t("standard.layer2Text") },
+    { num: "03", name: t("standard.layer3Name"), sub: t("standard.layer3Sub"), color: C.sys, text: t("standard.layer3Text") },
+    { num: "04", name: t("standard.layer4Name"), sub: t("standard.layer4Sub"), color: C.sup, text: t("standard.layer4Text") },
+  ];
+
+  const ecoProducts = [
+    { name: t("standard.ecoScore"), desc: t("standard.ecoScoreDesc"), href: "/en/acf-score", color: C.sup },
+    { name: t("standard.ecoControl"), desc: t("standard.ecoControlDesc"), href: "/en/acf-control", color: C.amber },
+    { name: t("standard.ecoAcademy"), desc: t("standard.ecoAcademyDesc"), href: "/en/acf-certification#academy", color: C.pol },
+    { name: t("standard.ecoCert"), desc: t("standard.ecoCertDesc"), href: "/en/acf-certification", color: C.gold },
+  ];
+
+  const footerCols = [
+    { title: t("footer.framework.title"), links: [{ label: t("footer.framework.theStandard"), href: "/en/standard" }, { label: t("standard.navBlog"), href: "/en/blog" }, { label: t("footer.framework.certification"), href: "/en/acf-certification" }] },
+    { title: t("footer.products.title"), links: [{ label: t("footer.products.score"), href: "/en/acf-score" }, { label: t("footer.products.control"), href: "/en/acf-control" }, { label: t("footer.products.academy"), href: "/en/acf-certification#academy" }] },
+    { title: t("footer.organization.title"), links: [{ label: t("nav.partners"), href: "/en/acf-partners" }, { label: t("footer.organization.about"), href: "/en/about" }, { label: t("footer.organization.contact"), href: "/en/contact" }, { label: t("footer.organization.legal"), href: "/en/legal" }] },
+  ];
+
   return (
     <div style={{ minHeight: "100vh", background: C.navy1, color: "#fff", fontFamily: "'Inter', sans-serif", overflowX: "hidden" }}>
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -321,17 +364,17 @@ export default function TheStandardPage() {
             <div style={{ width: 40, height: 40, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1 }}>ACF</div>
             <div>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>ACF STANDARD</div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>THE GOVERNANCE FRAMEWORK</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>{t("standard.navBadge")}</div>
             </div>
           </a>
           <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
             <a href="/en/" className="hide-mobile" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Home</a>
-            {["Framework", "Architecture", "Ecosystem", "Blog"].map(l => (
-              <a key={l} href={l === "Blog" ? "/en/blog" : `#${l.toLowerCase()}`} className="hide-mobile" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-                onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l}</a>
+              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{t("standard.navHome")}</a>
+            {[{ label: t("standard.navFramework"), id: "framework" }, { label: t("standard.navArchitecture"), id: "architecture" }, { label: t("standard.navEcosystem"), id: "ecosystem" }, { label: t("standard.navBlog"), id: "blog" }].map(l => (
+              <a key={l.id} href={l.id === "blog" ? "/en/blog" : `#${l.id}`} className="hide-mobile" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+                onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l.label}</a>
             ))}
-            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, display: "inline-block" }}>Get Your Score →</a>
+            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, display: "inline-block" }}>{t("standard.getScore")}</a>
           </div>
         </div>
       </nav>
@@ -347,18 +390,18 @@ export default function TheStandardPage() {
           {/* LEFT — Text */}
           <div>
             <div className="hero-anim hero-d1" style={{ marginBottom: 28 }}>
-              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase" }}>The Governance Standard</span>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase" }}>{t("standard.heroTagline")}</span>
             </div>
             <h1 className="hero-anim hero-d2" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 54, fontWeight: 800, lineHeight: 1.04, letterSpacing: "-2px", marginBottom: 28 }}>
-              Agentic Commerce<br /><span style={{ color: C.gold }}>Framework®</span>
+              {t("standard.heroTitle1")}<br /><span style={{ color: C.gold }}>{t("standard.heroTitle2")}</span>
             </h1>
             <p className="hero-anim hero-d3" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 21, color: C.gray2, lineHeight: 1.55, maxWidth: 500, marginBottom: 36, fontWeight: 400 }}>
-              Governing decisions in the age of autonomous systems.
+              {t("standard.heroSubtitle")}
             </p>
             <div className="hero-anim hero-d4" style={{ display: "flex", gap: 14 }}>
               <a href="#framework" style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "14px 24px", borderRadius: 10, fontSize: 14, fontWeight: 500, transition: "all .3s" }}
                 onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
-                onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>Read the Framework ↓</a>
+                onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>{t("standard.heroCta")}</a>
             </div>
           </div>
 
@@ -374,33 +417,33 @@ export default function TheStandardPage() {
          ═══════════════════════════════════════════════ */}
       <section id="framework" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
-          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 40 }}>// The shift</div></Reveal>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 40 }}>{t("standard.shiftBadge")}</div></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 700, lineHeight: 1.3, color: "#fff", marginBottom: 48, letterSpacing: "-.5px" }}>Artificial intelligence is no longer just a tool.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 700, lineHeight: 1.3, color: "#fff", marginBottom: 48, letterSpacing: "-.5px" }}>{t("standard.shiftLine1")}</p></Reveal>
 
-          <Reveal delay={0.15}><p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 700, lineHeight: 1.3, color: C.gold, marginBottom: 48, letterSpacing: "-.5px" }}>It is becoming a decision-maker.</p></Reveal>
+          <Reveal delay={0.15}><p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 700, lineHeight: 1.3, color: C.gold, marginBottom: 48, letterSpacing: "-.5px" }}>{t("standard.shiftLine2")}</p></Reveal>
 
           <Reveal delay={0.1}>
             <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>
-              Across industries, autonomous agents are now executing operational decisions in real time — pricing adjustments, procurement orders, customer engagement, logistics routing, risk assessments.
+              {t("standard.shiftP1")}
             </p>
           </Reveal>
 
           <Reveal delay={0.1}>
             <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>
-              These decisions happen continuously, at machine speed. And in most organizations, <strong style={{ color: "#fff" }}>no governance architecture exists to supervise them.</strong>
+              {t("standard.shiftP2Pre")}<strong style={{ color: "#fff" }}>{t("standard.shiftP2Bold")}</strong>
             </p>
           </Reveal>
 
           <Reveal delay={0.1}>
             <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>
-              The result is a new category of risk: <strong style={{ color: C.gold }}>uncontrolled autonomous decision systems.</strong>
+              {t("standard.shiftP3Pre")}<strong style={{ color: C.gold }}>{t("standard.shiftP3Bold")}</strong>
             </p>
           </Reveal>
 
           <Reveal delay={0.1}>
             <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9 }}>
-              The Agentic Commerce Framework® was created to solve this problem.
+              {t("standard.shiftP4")}
             </p>
           </Reveal>
         </div>
@@ -412,10 +455,10 @@ export default function TheStandardPage() {
       <section style={{ padding: "80px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
           <Reveal>
-            <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 700, color: C.gray, lineHeight: 1.4, marginBottom: 16 }}>Autonomous systems do not create chaos.</p>
+            <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 700, color: C.gray, lineHeight: 1.4, marginBottom: 16 }}>{t("standard.statementLine1")}</p>
           </Reveal>
           <Reveal delay={0.15}>
-            <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 32, fontWeight: 800, color: "#fff", lineHeight: 1.3 }}>Ungoverned decisions do.</p>
+            <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 32, fontWeight: 800, color: "#fff", lineHeight: 1.3 }}>{t("standard.statementLine2")}</p>
           </Reveal>
         </div>
       </section>
@@ -431,12 +474,7 @@ export default function TheStandardPage() {
         <style>{`@keyframes scanLine{0%{left:-50%}100%{left:150%}}`}</style>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 32, textAlign: "center" }}>
-            {[
-              { value: 73, suffix: "%", prefix: "", label: "of organizations have no formal AI governance", color: C.gold },
-              { value: 35, suffix: "M", prefix: "€", label: "maximum AI Act sanctions or 7% global revenue", color: C.amber },
-              { value: 4, suffix: "x", prefix: "", label: "lower correction costs with structured governance", color: C.sup },
-              { value: 1, suffix: "s", prefix: "<", label: "Level 1 kill switch response time (ACF spec)", color: C.sys },
-            ].map((s, i) => (
+            {stats.map((s, i) => (
               <Reveal key={i} delay={i * 0.12}>
                 <div style={{ padding: "20px 0" }}>
                   <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 38, fontWeight: 800, color: s.color, marginBottom: 8, letterSpacing: "-1px" }}>
@@ -455,19 +493,19 @@ export default function TheStandardPage() {
          ═══════════════════════════════════════════════ */}
       <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
-          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// The governance gap</div></Reveal>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>{t("standard.gapBadge")}</div></Reveal>
 
-          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 32 }}>Organizations spent the last decade adopting AI. Governance models never evolved.</h2></Reveal>
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 32 }}>{t("standard.gapTitle")}</h2></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>Traditional governance assumes a simple structure: humans decide, systems execute.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>{t("standard.gapP1")}</p></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>Agentic systems invert this relationship. Machines now execute <strong style={{ color: "#fff" }}>and decide</strong> within defined parameters.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>{t("standard.gapP2Pre")}<strong style={{ color: "#fff" }}>{t("standard.gapP2Bold")}</strong>{t("standard.gapP2Post")}</p></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 32 }}>When this shift occurs without structured governance, organizations lose visibility and control over their own operational decisions. The consequences are not theoretical:</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 32 }}>{t("standard.gapP3")}</p></Reveal>
 
           <Reveal delay={0.1}>
             <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 32, paddingLeft: 4 }}>
-              {["Untraceable autonomous decisions", "Conflicting agent optimizations", "Operational drift over time", "Regulatory exposure under emerging AI regulation", "Strategic dependence on external platforms"].map((item, i) => (
+              {gapRisks.map((item, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
                   <span style={{ color: C.gray, fontSize: 14, marginTop: 3, flexShrink: 0 }}>—</span>
                   <span style={{ fontSize: 16, color: C.gray2, lineHeight: 1.7 }}>{item}</span>
@@ -483,17 +521,17 @@ export default function TheStandardPage() {
          ═══════════════════════════════════════════════ */}
       <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
-          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// The framework</div></Reveal>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>{t("standard.frameworkBadge")}</div></Reveal>
 
-          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 32 }}>The first governance architecture for autonomous decision systems.</h2></Reveal>
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 32 }}>{t("standard.frameworkTitle")}</h2></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>The Agentic Commerce Framework® does not control AI models. It governs the <strong style={{ color: "#fff" }}>decisions</strong> they execute.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>{t("standard.frameworkP1Pre")}<strong style={{ color: "#fff" }}>{t("standard.frameworkP1Bold")}</strong>{t("standard.frameworkP1Post")}</p></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>The framework defines how organizations:</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>{t("standard.frameworkP2")}</p></Reveal>
 
           <Reveal delay={0.1}>
             <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 32 }}>
-              {["Structure decision authority", "Define non-delegable zones", "Constrain autonomous behavior", "Maintain real-time oversight", "Preserve human sovereignty over critical actions"].map((item, i) => (
+              {frameworkItems.map((item, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <span style={{ color: C.gold, fontSize: 12, flexShrink: 0 }}>▸</span>
                   <span style={{ fontSize: 16, color: C.gray2, lineHeight: 1.7 }}>{item}</span>
@@ -502,7 +540,7 @@ export default function TheStandardPage() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9 }}>ACF creates a structured decision governance layer between human leadership and machine execution.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9 }}>{t("standard.frameworkClosing")}</p></Reveal>
         </div>
       </section>
 
@@ -524,7 +562,7 @@ export default function TheStandardPage() {
                   ))}
                 </div>
                 <style>{`@keyframes noiseLine{0%{left:-30%}100%{left:130%}}`}</style>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: "#ef4444", letterSpacing: ".14em", marginBottom: 24, position: "relative" }}>✕ WITHOUT GOVERNANCE</div>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: "#ef4444", letterSpacing: ".14em", marginBottom: 24, position: "relative" }}>{t("standard.comparisonWithout")}</div>
                 <div style={{ position: "relative" }}>
                   <svg viewBox="0 0 320 200" fill="none" style={{ width: "100%", marginBottom: 20 }}>
                     {/* Chaotic lines */}
@@ -545,7 +583,7 @@ export default function TheStandardPage() {
                     <text x="160" y="195" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="8" fill="#ef4444" opacity=".6">UNCONTROLLED DECISIONS</text>
                   </svg>
                   <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                    {["Opacity", "Drift", "Conflict", "Exposure"].map((r, i) => (
+                    {comparisonRisks.map((r, i) => (
                       <div key={r} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "#c4c4c4" }}>
                         <span style={{ color: "#ef4444", fontSize: 12 }}>✕</span> {r}
                       </div>
@@ -556,7 +594,7 @@ export default function TheStandardPage() {
 
               {/* WITH ACF */}
               <div style={{ position: "relative", background: C.goldDim, border: `1px solid ${C.goldBorder}`, borderRadius: 20, padding: "40px 36px", overflow: "hidden" }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".14em", marginBottom: 24, position: "relative" }}>✓ WITH ACF® GOVERNANCE</div>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".14em", marginBottom: 24, position: "relative" }}>{t("standard.comparisonWith")}</div>
                 <div style={{ position: "relative" }}>
                   <svg viewBox="0 0 320 200" fill="none" style={{ width: "100%", marginBottom: 20 }}>
                     {/* Structured layers */}
@@ -587,7 +625,7 @@ export default function TheStandardPage() {
                     <text x="160" y="198" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="8" fill={C.gold} opacity=".5">GOVERNED DECISIONS</text>
                   </svg>
                   <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                    {["Traceable", "Reversible", "Accountable", "Sovereign"].map((r, i) => (
+                    {comparisonBenefits.map((r, i) => (
                       <div key={r} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "#c4c4c4" }}>
                         <span style={{ color: C.gold, fontSize: 12 }}>✓</span> {r}
                       </div>
@@ -605,22 +643,13 @@ export default function TheStandardPage() {
          ═══════════════════════════════════════════════ */}
       <section id="architecture" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
-          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// Architecture</div></Reveal>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>{t("standard.archBadge")}</div></Reveal>
 
-          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16 }}>A four-layer governance architecture.</h2></Reveal>
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16 }}>{t("standard.archTitle")}</h2></Reveal>
 
-          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 48 }}>Together they create a continuous control system for autonomous operations.</p></Reveal>
+          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 48 }}>{t("standard.archSubtitle")}</p></Reveal>
 
-          {[
-            { num: "01", name: "Governance", sub: "Who holds authority", color: C.gov,
-              text: "The governance layer establishes decision sovereignty. Organizations define who retains final authority, which decisions can be delegated, which remain exclusively human. At this level, companies formalize their Agentic Constitution — the foundational document establishing the principles of AI governance." },
-            { num: "02", name: "Policy", sub: "What agents are allowed to do", color: C.pol,
-              text: "Policy defines the behavioral boundaries of autonomous systems. It translates governance principles into operational rules — financial thresholds, time-based constraints, ethical limits, sector-specific regulatory policies. Policies ensure that agents operate within clearly defined decision boundaries." },
-            { num: "03", name: "System", sub: "How decisions are executed", color: C.sys,
-              text: "The system layer governs the technical execution environment. Every autonomous action remains observable, interruptible and auditable — through decision traceability, multi-agent coordination, and layered kill-switch mechanisms. The objective is not to slow agents down. It is to ensure they remain governable at machine speed." },
-            { num: "04", name: "Supervision", sub: "How organizations maintain continuous oversight", color: C.sup,
-              text: "Governance is not a one-time configuration. It is an ongoing operational discipline. The supervision layer introduces continuous monitoring, incident response and governance reviews. Supervision ensures that agent systems evolve without eroding control." },
-          ].map((layer, i) => (
+          {archLayers.map((layer, i) => (
             <Reveal key={layer.num} delay={0.1}>
               <div style={{ marginBottom: 48, paddingLeft: 24, borderLeft: `2px solid ${layer.color}40` }}>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 8 }}>
@@ -664,17 +693,17 @@ export default function TheStandardPage() {
         <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px", textAlign: "center", position: "relative", zIndex: 2 }}>
           <Reveal>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 42, fontWeight: 800, lineHeight: 1.2, letterSpacing: "-1px" }}>
-              AI automates execution.
+              {t("standard.centralLine1")}
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 42, fontWeight: 800, lineHeight: 1.2, letterSpacing: "-1px", color: C.gold, marginTop: 8 }}>
-              ACF governs decisions.
+              {t("standard.centralLine2")}
             </h2>
           </Reveal>
           <Reveal delay={0.35}>
             <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.8, maxWidth: 520, margin: "32px auto 0" }}>
-              Without governance, autonomous systems create opacity. With governance, they become scalable instruments of strategic control.
+              {t("standard.centralP")}
             </p>
           </Reveal>
         </div>
@@ -685,9 +714,9 @@ export default function TheStandardPage() {
          ═══════════════════════════════════════════════ */}
       <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
-          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// Operational discipline</div></Reveal>
-          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16 }}>The Agent Governance Loop</h2></Reveal>
-          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 0 }}>Governance is not configuration. It is a continuous operational loop — define, constrain, execute, monitor, intervene, improve. Then loop again.</p></Reveal>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>{t("standard.loopBadge")}</div></Reveal>
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16 }}>{t("standard.loopTitle")}</h2></Reveal>
+          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 0 }}>{t("standard.loopP")}</p></Reveal>
 
           <GovernanceLoopSVG />
         </div>
@@ -698,19 +727,14 @@ export default function TheStandardPage() {
          ═══════════════════════════════════════════════ */}
       <section id="ecosystem" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px" }}>
-          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24, textAlign: "center" }}>// The ecosystem</div></Reveal>
-          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16, textAlign: "center" }}>ACF Operating System</h2></Reveal>
-          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, textAlign: "center", maxWidth: 560, margin: "0 auto" }}>Five integrated tools. One closed-loop system. Diagnose → Train → Monitor → Certify → Scale.</p></Reveal>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24, textAlign: "center" }}>{t("standard.ecoBadge")}</div></Reveal>
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16, textAlign: "center" }}>{t("standard.ecoTitle")}</h2></Reveal>
+          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, textAlign: "center", maxWidth: 560, margin: "0 auto" }}>{t("standard.ecoSubtitle")}</p></Reveal>
 
           <EcosystemFlowSVG />
 
           <div className="eco-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginTop: 40 }}>
-            {[
-              { name: "ACF Score®", desc: "Rapid diagnostic measuring decision sovereignty and governance maturity.", href: "/en/acf-score", color: C.sup },
-              { name: "ACF Control", desc: "Real-time platform for supervising autonomous systems.", href: "/en/acf-control", color: C.amber },
-              { name: "ACF Academy", desc: "Training for executives and operators governing autonomous systems.", href: "/en/acf-certification#academy", color: C.pol },
-              { name: "ACF Certification", desc: "ACF TRUST™ and ACF CERTIFIED labels validating governance maturity.", href: "/en/acf-certification", color: C.gold },
-            ].map(p => (
+            {ecoProducts.map(p => (
               <Reveal key={p.name}>
                 <a href={p.href} style={{ display: "block", background: `${p.color}06`, border: `1px solid ${p.color}20`, borderRadius: 14, padding: "22px 26px", transition: "all .3s" }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = `${p.color}50`; e.currentTarget.style.transform = "translateY(-2px)"; }}
@@ -729,20 +753,20 @@ export default function TheStandardPage() {
          ═══════════════════════════════════════════════ */}
       <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px" }}>
-          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// A new operational discipline</div></Reveal>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>{t("standard.questionBadge")}</div></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>The transition to autonomous systems is not a technology shift. It is a governance shift.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>{t("standard.questionP1")}</p></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>Organizations must evolve from managing software to governing decision systems.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>{t("standard.questionP2")}</p></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 48 }}>The Agentic Commerce Framework® provides the structure required to do so.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 48 }}>{t("standard.questionP3")}</p></Reveal>
 
           <Reveal delay={0.15}>
             <div style={{ textAlign: "center", padding: "48px 0" }}>
-              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, color: C.gray, fontWeight: 500, marginBottom: 16 }}>Because in the age of autonomous systems,<br />the most important question is no longer:</p>
-              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, color: C.gray, fontWeight: 600, marginBottom: 20 }}>"What can AI do?"</p>
+              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, color: C.gray, fontWeight: 500, marginBottom: 16 }} dangerouslySetInnerHTML={{ __html: t("standard.questionIntro") }} />
+              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, color: C.gray, fontWeight: 600, marginBottom: 20 }}>{t("standard.questionOld")}</p>
               <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 800, color: "#fff" }}>
-                "Who governs the decisions <span style={{ color: C.gold }}>it makes</span>?"
+                {t("standard.questionNewPre")}<span style={{ color: C.gold }}>{t("standard.questionNewGold")}</span>{t("standard.questionNewPost")}
               </p>
             </div>
           </Reveal>
@@ -755,10 +779,10 @@ export default function TheStandardPage() {
       <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 600, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
           <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
-            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, display: "inline-block" }}>Assess your governance →</a>
+            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, display: "inline-block" }}>{t("standard.ctaAssess")}</a>
             <a href="/en/blog" style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 500, display: "inline-block", transition: "all .3s" }}
               onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
-              onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>Read the research</a>
+              onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>{t("standard.ctaResearch")}</a>
           </div>
         </div>
       </section>
@@ -771,17 +795,13 @@ export default function TheStandardPage() {
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 13, color: C.navy1, letterSpacing: 1 }}>ACF</div>
                 <div>
-                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff" }}>Agentic Commerce Framework®</div>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase" }}>GLOBAL STANDARD FOR AI GOVERNANCE</div>
+                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff" }}>{t("footer.logoText")}</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase" }}>{t("footer.logoSubtext")}</div>
                 </div>
               </div>
-              <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 320 }}>The governance standard for organizations deploying autonomous AI agents.</p>
+              <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 320 }}>{t("pages.home.the_governance_standard_for_organizations_deployin")}</p>
             </div>
-            {[
-              { title: "Framework", links: [{ label: "The Standard", href: "/en/standard" },{ label: "Blog", href: "/en/blog" },{ label: "Certification", href: "/en/acf-certification" }] },
-              { title: "Products", links: [{ label: "ACF Score®", href: "/en/acf-score" },{ label: "ACF Control", href: "/en/acf-control" },{ label: "Academy", href: "/en/acf-certification#academy" }] },
-              { title: "Organization", links: [{ label: "Partners", href: "/en/acf-partners" },{ label: "About", href: "/en/about" },{ label: "Contact", href: "/en/contact" },{ label: "Legal", href: "/en/legal" }] },
-            ].map(col => (
+            {footerCols.map(col => (
               <div key={col.title}>
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 20 }}>{col.title}</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -791,7 +811,7 @@ export default function TheStandardPage() {
             ))}
           </div>
           <div style={{ borderTop: `1px solid ${C.bd1}`, padding: "20px 0", textAlign: "center" }}>
-            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>© 2026 Agentic Commerce Framework® — Vincent Dorange. All rights reserved.</p>
+            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>{t("footer.copyright")}</p>
           </div>
         </div>
       </footer>

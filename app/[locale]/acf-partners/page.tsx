@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    ACF PARTNERS
@@ -31,8 +32,8 @@ function AnimatedCounter({ end, duration = 1600, suffix = "", prefix = "" }: { e
   useEffect(() => {
     if (!started) return;
     let s = 0; const step = end / (duration / 16);
-    const t = setInterval(() => { s += step; if (s >= end) { setCount(end); clearInterval(t); } else setCount(Math.floor(s)); }, 16);
-    return () => clearInterval(t);
+    const interval = setInterval(() => { s += step; if (s >= end) { setCount(end); clearInterval(interval); } else setCount(Math.floor(s)); }, 16);
+    return () => clearInterval(interval);
   }, [started, end, duration]);
   return <span ref={ref}>{prefix}{count}{suffix}</span>;
 }
@@ -179,13 +180,13 @@ function PartnerShield({ name, color, colorLight, stars }: { name: string; color
         {/* Dot */}
         <circle cx="70" cy="40" r="8" fill={colorLight} filter={`url(#dgl-${id})`} opacity="0.8" />
         <circle cx="70" cy="40" r="4" fill="#fff" opacity="0.4" />
-        {/* ACF PARTNER™ */}
-        <text x="70" y="68" textAnchor="middle" fontFamily="'Space Grotesk', sans-serif" fontSize="10.5" fontWeight="700" fill="#ffffff" letterSpacing="0.5">ACF PARTNER™</text>
+        {/* ACF PARTNER(TM) */}
+        <text x="70" y="68" textAnchor="middle" fontFamily="'Space Grotesk', sans-serif" fontSize="10.5" fontWeight="700" fill="#ffffff" letterSpacing="0.5">{"ACF PARTNER\u2122"}</text>
         <line x1="30" y1="76" x2="110" y2="76" stroke={color} strokeWidth="0.5" opacity="0.25" />
         {/* Stars */}
         <g transform={`translate(${70 - (stars * 8)}, 85)`}>
           {Array.from({ length: stars }).map((_, i) => (
-            <text key={i} x={i * 16} y="10" fontFamily="'Space Grotesk'" fontSize="14" fill={color} textAnchor="middle">★</text>
+            <text key={i} x={i * 16} y="10" fontFamily="'Space Grotesk'" fontSize="14" fill={color} textAnchor="middle">{"\u2605"}</text>
           ))}
         </g>
         {/* Name */}
@@ -231,9 +232,15 @@ function FormField({ label, type = "text", placeholder, required = true, options
    MAIN COMPONENT
    ═══════════════════════════════════════════════════ */
 export default function ACFPartnersPage() {
+  const t = useTranslations();
   const [activeSection, setActiveSection] = useState<"advantages" | "portal" | "apply">("advantages");
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const navLinks = ["Advantages", "Tiers", "Portal", "Apply"];
+  const navLinks = [
+    { label: t("acfPartners.navAdvantages"), href: "#advantages" },
+    { label: t("acfPartners.navTiers"), href: "#tiers" },
+    { label: t("acfPartners.navPortal"), href: "#portal" },
+    { label: t("acfPartners.navApply"), href: "#apply" },
+  ];
 
   return (
     <div style={{ minHeight: "100vh", background: C.navy1, color: "#fff", fontFamily: "'Inter', sans-serif" }}>
@@ -261,119 +268,69 @@ export default function ACFPartnersPage() {
         select option { background: ${C.navy1}; }
       `}</style>
 
-      {/* ━━━ NAV ━━━ */}
-      <nav style={{
-        position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: 72,
-        background: "rgba(5,12,26,.92)", backdropFilter: "blur(24px)",
-        borderBottom: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center",
-      }}>
+      {/* NAV */}
+      <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: 72, background: "rgba(5,12,26,.92)", backdropFilter: "blur(24px)", borderBottom: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center" }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px", width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <div style={{
-              width: 40, height: 40, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center",
-              background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1,
-            }}>ACF</div>
+            <div style={{ width: 40, height: 40, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1 }}>ACF</div>
             <div>
-              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>ACF PARTNERS</div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>PARTNER NETWORK</div>
+              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>{t("acfPartners.navTitle")}</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>{t("acfPartners.navSubtitle")}</div>
             </div>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
-            <a href="/" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Home</a>
-            {navLinks.map(l => (
-              <a key={l} href={`#${l.toLowerCase()}`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-                onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l}</a>
+            <a href="/" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{t("acfPartners.navHome")}</a>
+            {navLinks.map(item => (
+              <a key={item.href} href={item.href} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{item.label}</a>
             ))}
-            <a href="#portal" className="gold-glow" style={{
-              background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
-              border: "none", padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, cursor: "pointer", transition: "all .3s",
-              display: "inline-block",
-            }}>Partner Login</a>
+            <a href="#portal" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, border: "none", padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, cursor: "pointer", transition: "all .3s", display: "inline-block" }}>{t("acfPartners.navPartnerLogin")}</a>
           </div>
         </div>
       </nav>
 
-      {/* ━━━ HERO with animated icons ━━━ */}
+      {/* HERO */}
       <section style={{ paddingTop: 120, paddingBottom: 60, position: "relative", overflow: "hidden" }}>
-        {/* Gold grid bg */}
-        <div style={{
-          position: "absolute", inset: 0,
-          backgroundImage: "linear-gradient(rgba(201,168,76,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,.03) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-          maskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 100%)",
-          WebkitMaskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 100%)",
-        }} />
-
-        {/* Orbiting rings */}
+        <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(201,168,76,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,.03) 1px, transparent 1px)", backgroundSize: "60px 60px", maskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 100%)", WebkitMaskImage: "radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 100%)" }} />
         <div style={{ position: "absolute", top: "50%", left: "50%", width: 700, height: 700, transform: "translate(-50%,-50%)", pointerEvents: "none" }}>
           <div style={{ position: "absolute", inset: 0, borderRadius: "50%", border: "1px solid rgba(201,168,76,.06)", animation: "heroOrbitCW 60s linear infinite" }} />
           <div style={{ position: "absolute", inset: 60, borderRadius: "50%", border: "1px solid rgba(201,168,76,.04)", animation: "heroOrbitCCW 45s linear infinite" }} />
           <div style={{ position: "absolute", inset: 140, borderRadius: "50%", border: "1px dashed rgba(201,168,76,.06)", animation: "heroOrbitCW 80s linear infinite" }} />
           {[0,1,2,3,4,5].map(i => (
-            <div key={i} style={{
-              position: "absolute",
-              top: `${50 + 42 * Math.sin((i / 6) * Math.PI * 2)}%`,
-              left: `${50 + 42 * Math.cos((i / 6) * Math.PI * 2)}%`,
-              width: 4, height: 4, borderRadius: "50%", background: C.gold, opacity: 0,
-              animation: `sparkle ${2 + i * 0.3}s ease-in-out infinite ${i * 0.8}s`,
-            }} />
+            <div key={i} style={{ position: "absolute", top: `${50 + 42 * Math.sin((i / 6) * Math.PI * 2)}%`, left: `${50 + 42 * Math.cos((i / 6) * Math.PI * 2)}%`, width: 4, height: 4, borderRadius: "50%", background: C.gold, opacity: 0, animation: `sparkle ${2 + i * 0.3}s ease-in-out infinite ${i * 0.8}s` }} />
           ))}
         </div>
-
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px", position: "relative", zIndex: 2 }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr 1fr", gap: 40, alignItems: "center" }}>
-
-            {/* LEFT — Animated Handshake Shield */}
             <div className="fade-up" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
               <div className="hero-left" style={{ position: "relative" }}>
                 <HeroHandshake />
                 <div style={{ textAlign: "center", marginTop: 12 }}>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".14em", opacity: 0.6 }}>PARTNERSHIP</div>
-                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 13, fontWeight: 700, color: C.gray2, marginTop: 2 }}>Deploy the standard</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".14em", opacity: 0.6 }}>{t("acfPartners.heroPartnership")}</div>
+                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 13, fontWeight: 700, color: C.gray2, marginTop: 2 }}>{t("acfPartners.heroDeployTheStandard")}</div>
                 </div>
               </div>
             </div>
-
-            {/* CENTER — Text */}
             <div style={{ textAlign: "center" }} className="fade-up-d2">
-              <Badge>PARTNER NETWORK</Badge>
+              <Badge>{t("acfPartners.heroBadge")}</Badge>
               <h1 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 48, fontWeight: 800, lineHeight: 1.08, marginTop: 24, marginBottom: 24, letterSpacing: "-1px" }}>
-                <span style={{ color: "#fff" }}>Deploy the Standard.</span><br />
-                <span style={{ color: C.gold }}>Scale the Trust.</span>
+                <span style={{ color: "#fff" }}>{t("acfPartners.heroTitle1")}</span><br />
+                <span style={{ color: C.gold }}>{t("acfPartners.heroTitle2")}</span>
               </h1>
               <p style={{ fontSize: 16, color: C.gray2, lineHeight: 1.7, maxWidth: 520, margin: "0 auto 28px" }}>
-                Agentic governance needs trusted relays.<br />
-                Not resellers. Not affiliates.<br />
-                <strong style={{ color: "#fff" }}>Strategic partners who share the mission.</strong>
+                {t("acfPartners.heroParagraph1Line1")}<br />{t("acfPartners.heroParagraph1Line2")}<br /><strong style={{ color: "#fff" }}>{t("acfPartners.heroParagraph1Bold")}</strong>
               </p>
-              <p style={{ fontSize: 14, color: C.gray, maxWidth: 420, margin: "0 auto 32px" }}>
-                ACF Partners deploy, audit, train, and certify organizations worldwide.
-              </p>
+              <p style={{ fontSize: 14, color: C.gray, maxWidth: 420, margin: "0 auto 32px" }}>{t("acfPartners.heroParagraph2")}</p>
               <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
-                <a href="#apply" className="gold-glow" style={{
-                  background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
-                  border: "none", padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, cursor: "pointer", transition: "all .3s",
-                  display: "inline-block",
-                }}>Become a Partner →</a>
-                <a href="#portal" style={{
-                  background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
-                  padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 500, cursor: "pointer", transition: "all .3s",
-                  display: "inline-block",
-                }}
-                  onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
-                  onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}
-                >Partner Portal Login</a>
+                <a href="#apply" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, border: "none", padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, cursor: "pointer", transition: "all .3s", display: "inline-block" }}>{t("acfPartners.heroBtnBecome")}</a>
+                <a href="#portal" style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 500, cursor: "pointer", transition: "all .3s", display: "inline-block" }} onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }} onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>{t("acfPartners.heroBtnPortal")}</a>
               </div>
             </div>
-
-            {/* RIGHT — Animated Network Globe */}
             <div className="fade-up-d3" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
               <div className="hero-right" style={{ position: "relative" }}>
                 <HeroNetwork />
                 <div style={{ textAlign: "center", marginTop: 4 }}>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".14em", opacity: 0.6 }}>NETWORK</div>
-                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 13, fontWeight: 700, color: C.gray2, marginTop: 2 }}>Scale worldwide</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".14em", opacity: 0.6 }}>{t("acfPartners.heroNetwork")}</div>
+                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 13, fontWeight: 700, color: C.gray2, marginTop: 2 }}>{t("acfPartners.heroScaleWorldwide")}</div>
                 </div>
               </div>
             </div>
@@ -381,60 +338,25 @@ export default function ACFPartnersPage() {
         </div>
       </section>
 
-      {/* ━━━ WHY PARTNER ━━━ */}
+      {/* WHY PARTNER */}
       <section id="advantages" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <SectionLabel>Strategic Advantages</SectionLabel>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>
-              Why become an ACF <span style={{ color: C.gold }}>Partner</span>
-            </h2>
+            <SectionLabel>{t("acfPartners.advantagesLabel")}</SectionLabel>
+            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>{t("acfPartners.advantagesTitle1")}<span style={{ color: C.gold }}>{t("acfPartners.advantagesTitle2")}</span></h2>
             <GoldBar />
-            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 600, margin: "0 auto", lineHeight: 1.7 }}>
-              You don't just distribute a product. You <strong style={{ color: "#fff" }}>deploy a governance standard</strong>. That comes with territory, tools, revenue, and authority.
-            </p>
+            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 600, margin: "0 auto", lineHeight: 1.7 }}>{t("acfPartners.advantagesParagraph1")}<strong style={{ color: "#fff" }}>{t("acfPartners.advantagesParagraphBold")}</strong>{t("acfPartners.advantagesParagraph2")}</p>
           </div>
-
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
             {[
-              {
-                icon: "🌍", title: "Territory Exclusivity",
-                desc: "Secure your geographical zone. One region, one partner. No competition — only collaboration.",
-                color: C.green,
-              },
-              {
-                icon: "💰", title: "Revenue Share",
-                desc: "Commission on every ACF Score, Control license, and certification deployed through your network.",
-                color: C.gold,
-              },
-              {
-                icon: "🎓", title: "Academy Access",
-                desc: "Full access to ACF Academy training modules. Train your team, then train your clients.",
-                color: C.blue,
-              },
-              {
-                icon: "🏷️", title: "Co-Branding",
-                desc: "Use the ACF Partner badge. Your brand, backed by the global governance standard.",
-                color: C.amber,
-              },
-              {
-                icon: "📊", title: "Partner Dashboard",
-                desc: "Real-time data on deployments, certifications, revenue. Full visibility on your portfolio.",
-                color: C.purple,
-              },
-              {
-                icon: "🛡️", title: "Priority Support",
-                desc: "Direct access to ACF team. Dedicated onboarding, quarterly reviews, and escalation path.",
-                color: C.green,
-              },
+              { icon: "\u{1F30D}", title: t("acfPartners.advTerritoryTitle"), desc: t("acfPartners.advTerritoryDesc"), color: C.green },
+              { icon: "\u{1F4B0}", title: t("acfPartners.advRevenueTitle"), desc: t("acfPartners.advRevenueDesc"), color: C.gold },
+              { icon: "\u{1F393}", title: t("acfPartners.advAcademyTitle"), desc: t("acfPartners.advAcademyDesc"), color: C.blue },
+              { icon: "\u{1F3F7}\u{FE0F}", title: t("acfPartners.advCoBrandTitle"), desc: t("acfPartners.advCoBrandDesc"), color: C.amber },
+              { icon: "\u{1F4CA}", title: t("acfPartners.advDashboardTitle"), desc: t("acfPartners.advDashboardDesc"), color: C.purple },
+              { icon: "\u{1F6E1}\u{FE0F}", title: t("acfPartners.advSupportTitle"), desc: t("acfPartners.advSupportDesc"), color: C.green },
             ].map(a => (
-              <div key={a.title} style={{
-                background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 16, padding: "28px 24px",
-                transition: "all .3s",
-              }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = `${a.color}40`; e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = `0 12px 40px ${a.color}15`; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = C.bd1; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}
-              >
+              <div key={a.title} style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 16, padding: "28px 24px", transition: "all .3s" }} onMouseEnter={e => { e.currentTarget.style.borderColor = `${a.color}40`; e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = `0 12px 40px ${a.color}15`; }} onMouseLeave={e => { e.currentTarget.style.borderColor = C.bd1; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}>
                 <div style={{ fontSize: 28, marginBottom: 16 }}>{a.icon}</div>
                 <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 18, fontWeight: 700, color: "#fff", marginBottom: 8 }}>{a.title}</h3>
                 <p style={{ fontSize: 13, color: C.gray2, lineHeight: 1.6 }}>{a.desc}</p>
@@ -444,90 +366,35 @@ export default function ACFPartnersPage() {
         </div>
       </section>
 
-      {/* ━━━ PARTNER TIERS ━━━ */}
+      {/* PARTNER TIERS */}
       <section id="tiers" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <SectionLabel>Partnership Levels</SectionLabel>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>
-              ACF PARTNER<span style={{ color: C.gold }}>™</span> Tiers
-            </h2>
+            <SectionLabel>{t("acfPartners.tiersLabel")}</SectionLabel>
+            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>{t("acfPartners.tiersTitle1")}<span style={{ color: C.gold }}>{t("acfPartners.tiersTitle2")}</span>{t("acfPartners.tiersTitle3")}</h2>
             <GoldBar />
-            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 600, margin: "0 auto", lineHeight: 1.7 }}>
-              Three levels of partnership. Each unlocks deeper access, more territory, and greater authority.
-            </p>
+            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 600, margin: "0 auto", lineHeight: 1.7 }}>{t("acfPartners.tiersParagraph")}</p>
           </div>
-
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
             {[
-              {
-                stars: 1, name: "Affiliate", color: "#22c55e", colorLight: "#4ade80", glowColor: "rgba(34,197,94,.15)",
-                desc: "Entry-level partnership. You recommend and refer.",
-                items: ["Referral commission (15%)", "Partner badge usage", "Marketing materials", "Quarterly training webinars", "Partner directory listing"],
-                tagline: "You recommend trust.",
-                badge: null,
-              },
-              {
-                stars: 2, name: "Certified", color: "#c9a84c", colorLight: "#e8c96a", glowColor: "rgba(201,168,76,.15)",
-                desc: "You deploy, train, and audit ACF governance.",
-                items: ["Revenue share (25%)", "Territory exclusivity", "Full Academy access", "ACF Control deployment rights", "Co-branded audit reports", "Dedicated account manager"],
-                tagline: "You deploy governance.",
-                badge: "MOST POPULAR",
-              },
-              {
-                stars: 3, name: "Strategic", color: "#3b82f6", colorLight: "#60a5fa", glowColor: "rgba(59,130,246,.15)",
-                desc: "Enterprise-level alliance. Shape the standard.",
-                items: ["Revenue share (35%)", "Multi-territory exclusivity", "Executive program delivery", "Advisory board seat", "White-label options", "Custom integrations", "Joint go-to-market"],
-                tagline: "You shape the future.",
-                badge: null,
-              },
-            ].map(t => (
-              <div key={t.name} style={{
-                background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 16, padding: "32px 28px 28px",
-                position: "relative", transition: "all .3s", textAlign: "center",
-                display: "flex", flexDirection: "column",
-              }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = `${t.color}40`; e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = `0 12px 40px ${t.glowColor}`; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = C.bd1; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}
-              >
-                {t.badge && (
-                  <div style={{
-                    position: "absolute", top: -14, left: "50%", transform: "translateX(-50%)",
-                    background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
-                    fontSize: 10, fontWeight: 800, letterSpacing: ".1em", padding: "5px 16px", borderRadius: 100,
-                    fontFamily: "'JetBrains Mono', monospace", whiteSpace: "nowrap",
-                  }}>{t.badge}</div>
-                )}
-
-                <PartnerShield name={t.name} color={t.color} colorLight={t.colorLight} stars={t.stars} />
-
+              { stars: 1, name: t("acfPartners.tierAffiliateName"), color: "#22c55e", colorLight: "#4ade80", glowColor: "rgba(34,197,94,.15)", desc: t("acfPartners.tierAffiliateDesc"), items: [t("acfPartners.tierAffiliateItem1"), t("acfPartners.tierAffiliateItem2"), t("acfPartners.tierAffiliateItem3"), t("acfPartners.tierAffiliateItem4"), t("acfPartners.tierAffiliateItem5")], tagline: t("acfPartners.tierAffiliateTagline"), badge: null },
+              { stars: 2, name: t("acfPartners.tierCertifiedName"), color: "#c9a84c", colorLight: "#e8c96a", glowColor: "rgba(201,168,76,.15)", desc: t("acfPartners.tierCertifiedDesc"), items: [t("acfPartners.tierCertifiedItem1"), t("acfPartners.tierCertifiedItem2"), t("acfPartners.tierCertifiedItem3"), t("acfPartners.tierCertifiedItem4"), t("acfPartners.tierCertifiedItem5"), t("acfPartners.tierCertifiedItem6")], tagline: t("acfPartners.tierCertifiedTagline"), badge: t("acfPartners.tierCertifiedBadge") },
+              { stars: 3, name: t("acfPartners.tierStrategicName"), color: "#3b82f6", colorLight: "#60a5fa", glowColor: "rgba(59,130,246,.15)", desc: t("acfPartners.tierStrategicDesc"), items: [t("acfPartners.tierStrategicItem1"), t("acfPartners.tierStrategicItem2"), t("acfPartners.tierStrategicItem3"), t("acfPartners.tierStrategicItem4"), t("acfPartners.tierStrategicItem5"), t("acfPartners.tierStrategicItem6"), t("acfPartners.tierStrategicItem7")], tagline: t("acfPartners.tierStrategicTagline"), badge: null },
+            ].map(entry => (
+              <div key={entry.name} style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 16, padding: "32px 28px 28px", position: "relative", transition: "all .3s", textAlign: "center", display: "flex", flexDirection: "column" }} onMouseEnter={e => { e.currentTarget.style.borderColor = `${entry.color}40`; e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = `0 12px 40px ${entry.glowColor}`; }} onMouseLeave={e => { e.currentTarget.style.borderColor = C.bd1; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}>
+                {entry.badge && (<div style={{ position: "absolute", top: -14, left: "50%", transform: "translateX(-50%)", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, fontSize: 10, fontWeight: 800, letterSpacing: ".1em", padding: "5px 16px", borderRadius: 100, fontFamily: "'JetBrains Mono', monospace", whiteSpace: "nowrap" }}>{entry.badge}</div>)}
+                <PartnerShield name={entry.name} color={entry.color} colorLight={entry.colorLight} stars={entry.stars} />
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginBottom: 8 }}>
-                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: t.color, letterSpacing: ".14em" }}>
-                    {"★".repeat(t.stars)} TIER {t.stars}
-                  </span>
+                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: entry.color, letterSpacing: ".14em" }}>{"\u2605".repeat(entry.stars)} {t("acfPartners.tierLabel")} {entry.stars}</span>
                 </div>
-                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, fontWeight: 700, color: "#fff", marginBottom: 6 }}>{t.name}</h3>
-                <p style={{ fontSize: 13, color: C.gray, marginBottom: 16 }}>{t.desc}</p>
+                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, fontWeight: 700, color: "#fff", marginBottom: 6 }}>{entry.name}</h3>
+                <p style={{ fontSize: 13, color: C.gray, marginBottom: 16 }}>{entry.desc}</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 16, textAlign: "left", flex: 1 }}>
-                  {t.items.map(item => (
-                    <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: C.gray2 }}>
-                      <span style={{ color: t.color, fontSize: 11 }}>✓</span> {item}
-                    </div>
-                  ))}
+                  {entry.items.map(item => (<div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: C.gray2 }}><span style={{ color: entry.color, fontSize: 11 }}>{"\u2713"}</span> {item}</div>))}
                 </div>
                 <div style={{ marginTop: "auto" }}>
-                  <div style={{
-                    borderTop: `1px solid ${C.bd1}`, paddingTop: 12, marginBottom: 16,
-                    fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 600, color: t.color,
-                    fontStyle: "italic",
-                  }}>{t.tagline}</div>
-                  <a href="#apply" className="gold-glow" style={{
-                    display: "block", padding: "12px 20px", borderRadius: 10, fontSize: 13, fontWeight: 700, cursor: "pointer",
-                    transition: "all .3s", textAlign: "center",
-                    background: t.badge ? `linear-gradient(135deg, ${C.gold}, ${C.gold2})` : "transparent",
-                    color: t.badge ? C.navy1 : t.color,
-                    border: t.badge ? "none" : `1px solid ${t.color}40`,
-                  }}>Apply for {t.name} →</a>
+                  <div style={{ borderTop: `1px solid ${C.bd1}`, paddingTop: 12, marginBottom: 16, fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 600, color: entry.color, fontStyle: "italic" }}>{entry.tagline}</div>
+                  <a href="#apply" className="gold-glow" style={{ display: "block", padding: "12px 20px", borderRadius: 10, fontSize: 13, fontWeight: 700, cursor: "pointer", transition: "all .3s", textAlign: "center", background: entry.badge ? `linear-gradient(135deg, ${C.gold}, ${C.gold2})` : "transparent", color: entry.badge ? C.navy1 : entry.color, border: entry.badge ? "none" : `1px solid ${entry.color}40` }}>{t("acfPartners.tierApplyFor", { name: entry.name })}</a>
                 </div>
               </div>
             ))}
@@ -535,92 +402,49 @@ export default function ACFPartnersPage() {
         </div>
       </section>
 
-      {/* ━━━ PARTNER PORTAL (LOGIN) ━━━ */}
+      {/* PARTNER PORTAL */}
       <section id="portal" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 600, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <SectionLabel>Existing Partners</SectionLabel>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>
-              Partner <span style={{ color: C.gold }}>Portal</span>
-            </h2>
+            <SectionLabel>{t("acfPartners.portalLabel")}</SectionLabel>
+            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>{t("acfPartners.portalTitle1")}<span style={{ color: C.gold }}>{t("acfPartners.portalTitle2")}</span></h2>
             <GoldBar />
-            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 500, margin: "0 auto", lineHeight: 1.7 }}>
-              Access your dashboard, training materials, deployment data, certifications, and revenue reports.
-            </p>
+            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 500, margin: "0 auto", lineHeight: 1.7 }}>{t("acfPartners.portalParagraph")}</p>
           </div>
-
-          <div style={{
-            background: C.navy3, border: `1px solid ${C.goldBorder}`, borderRadius: 20, padding: 40,
-            position: "relative", overflow: "hidden",
-          }}>
-            {/* Subtle decorative element */}
-            <div style={{
-              position: "absolute", top: -60, right: -60, width: 180, height: 180, borderRadius: "50%",
-              background: `radial-gradient(circle, ${C.goldDim} 0%, transparent 70%)`,
-              pointerEvents: "none",
-            }} />
-
+          <div style={{ background: C.navy3, border: `1px solid ${C.goldBorder}`, borderRadius: 20, padding: 40, position: "relative", overflow: "hidden" }}>
+            <div style={{ position: "absolute", top: -60, right: -60, width: 180, height: 180, borderRadius: "50%", background: `radial-gradient(circle, ${C.goldDim} 0%, transparent 70%)`, pointerEvents: "none" }} />
             <div style={{ position: "relative", zIndex: 1 }}>
               <div style={{ textAlign: "center", marginBottom: 28 }}>
-                <div style={{
-                  width: 60, height: 60, borderRadius: 16, display: "flex", alignItems: "center", justifyContent: "center",
-                  background: C.goldDim, border: `1px solid ${C.goldBorder}`, margin: "0 auto 16px",
-                }}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={C.gold} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0110 0v4" />
-                  </svg>
+                <div style={{ width: 60, height: 60, borderRadius: 16, display: "flex", alignItems: "center", justifyContent: "center", background: C.goldDim, border: `1px solid ${C.goldBorder}`, margin: "0 auto 16px" }}>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={C.gold} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0110 0v4" /></svg>
                 </div>
-                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, fontWeight: 700, color: "#fff", marginBottom: 4 }}>Partner Access</h3>
-                <p style={{ fontSize: 13, color: C.gray }}>Sign in with your partner credentials</p>
+                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, fontWeight: 700, color: "#fff", marginBottom: 4 }}>{t("acfPartners.portalAccessTitle")}</h3>
+                <p style={{ fontSize: 13, color: C.gray }}>{t("acfPartners.portalAccessDesc")}</p>
               </div>
-
-              <FormField label="Email" type="email" placeholder="partner@company.com" />
-              <FormField label="Password" type="password" placeholder="••••••••" />
-
+              <FormField label={t("acfPartners.portalEmail")} type="email" placeholder="partner@company.com" />
+              <FormField label={t("acfPartners.portalPassword")} type="password" placeholder={"\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022"} />
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 24 }}>
-                <label style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: C.gray2, cursor: "pointer" }}>
-                  <input type="checkbox" style={{ accentColor: C.gold }} /> Remember me
-                </label>
-                <a href="#" style={{ fontSize: 13, color: C.gold, transition: "opacity .2s" }}
-                  onMouseEnter={e => (e.target as HTMLElement).style.opacity = "0.7"} onMouseLeave={e => (e.target as HTMLElement).style.opacity = "1"}>
-                  Forgot password?
-                </a>
+                <label style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: C.gray2, cursor: "pointer" }}><input type="checkbox" style={{ accentColor: C.gold }} /> {t("acfPartners.portalRememberMe")}</label>
+                <a href="#" style={{ fontSize: 13, color: C.gold, transition: "opacity .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.opacity = "0.7"} onMouseLeave={e => (e.target as HTMLElement).style.opacity = "1"}>{t("acfPartners.portalForgotPassword")}</a>
               </div>
-
-              <button className="gold-glow" style={{
-                width: "100%", padding: 14, borderRadius: 10, border: "none", fontSize: 14, fontWeight: 700,
-                cursor: "pointer", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
-                transition: "all .3s",
-              }}>Sign In →</button>
-
+              <button className="gold-glow" style={{ width: "100%", padding: 14, borderRadius: 10, border: "none", fontSize: 14, fontWeight: 700, cursor: "pointer", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, transition: "all .3s" }}>{t("acfPartners.portalSignIn")}</button>
               <div style={{ textAlign: "center", marginTop: 20, paddingTop: 20, borderTop: `1px solid ${C.bd1}` }}>
-                <p style={{ fontSize: 13, color: C.gray }}>Not a partner yet? <a href="#apply" style={{ color: C.gold, fontWeight: 600 }}>Apply now →</a></p>
+                <p style={{ fontSize: 13, color: C.gray }}>{t("acfPartners.portalNotPartner")} <a href="#apply" style={{ color: C.gold, fontWeight: 600 }}>{t("acfPartners.portalApplyNow")}</a></p>
               </div>
             </div>
           </div>
-
-          {/* Portal features preview */}
           <div style={{ marginTop: 32 }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 16, textAlign: "center" }}>
-              Inside the Portal
-            </div>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 16, textAlign: "center" }}>{t("acfPartners.portalInsideTitle")}</div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
               {[
-                { icon: "📊", label: "Deployment Dashboard", desc: "Track all ACF deployments" },
-                { icon: "🎓", label: "Training Hub", desc: "Academy modules & certifications" },
-                { icon: "💰", label: "Revenue Center", desc: "Commissions & invoicing" },
-                { icon: "📋", label: "Audit Reports", desc: "Generate co-branded reports" },
-                { icon: "👥", label: "Client Portfolio", desc: "Manage your certified clients" },
-                { icon: "🔔", label: "Updates & News", desc: "Latest from ACF Standard" },
+                { icon: "\u{1F4CA}", label: t("acfPartners.portalFeatureDashboardLabel"), desc: t("acfPartners.portalFeatureDashboardDesc") },
+                { icon: "\u{1F393}", label: t("acfPartners.portalFeatureTrainingLabel"), desc: t("acfPartners.portalFeatureTrainingDesc") },
+                { icon: "\u{1F4B0}", label: t("acfPartners.portalFeatureRevenueLabel"), desc: t("acfPartners.portalFeatureRevenueDesc") },
+                { icon: "\u{1F4CB}", label: t("acfPartners.portalFeatureAuditLabel"), desc: t("acfPartners.portalFeatureAuditDesc") },
+                { icon: "\u{1F465}", label: t("acfPartners.portalFeatureClientLabel"), desc: t("acfPartners.portalFeatureClientDesc") },
+                { icon: "\u{1F514}", label: t("acfPartners.portalFeatureUpdatesLabel"), desc: t("acfPartners.portalFeatureUpdatesDesc") },
               ].map(f => (
-                <div key={f.label} style={{
-                  display: "flex", alignItems: "center", gap: 12, padding: "14px 16px",
-                  background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 10,
-                  transition: "all .2s",
-                }}
-                  onMouseEnter={e => e.currentTarget.style.borderColor = C.goldBorder}
-                  onMouseLeave={e => e.currentTarget.style.borderColor = C.bd1}
-                >
+                <div key={f.label} style={{ display: "flex", alignItems: "center", gap: 12, padding: "14px 16px", background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 10, transition: "all .2s" }} onMouseEnter={e => e.currentTarget.style.borderColor = C.goldBorder} onMouseLeave={e => e.currentTarget.style.borderColor = C.bd1}>
                   <span style={{ fontSize: 20 }}>{f.icon}</span>
                   <div>
                     <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 13, fontWeight: 700, color: "#fff" }}>{f.label}</div>
@@ -633,94 +457,51 @@ export default function ACFPartnersPage() {
         </div>
       </section>
 
-      {/* ━━━ APPLICATION FORM ━━━ */}
+      {/* APPLICATION FORM */}
       <section id="apply" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <SectionLabel>Join the Network</SectionLabel>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>
-              Apply to become an ACF <span style={{ color: C.gold }}>Partner</span>
-            </h2>
+            <SectionLabel>{t("acfPartners.applyLabel")}</SectionLabel>
+            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>{t("acfPartners.applyTitle1")}<span style={{ color: C.gold }}>{t("acfPartners.applyTitle2")}</span></h2>
             <GoldBar />
-            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 550, margin: "0 auto", lineHeight: 1.7 }}>
-              We select partners carefully. We're looking for organizations that share our vision: <strong style={{ color: "#fff" }}>accountable autonomy</strong>.
-            </p>
+            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 550, margin: "0 auto", lineHeight: 1.7 }}>{t("acfPartners.applyParagraph1")}<strong style={{ color: "#fff" }}>{t("acfPartners.applyParagraphBold")}</strong>{t("acfPartners.applyParagraph2")}</p>
           </div>
-
           {!formSubmitted ? (
-            <div style={{
-              background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 20, padding: 40,
-            }}>
+            <div style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 20, padding: 40 }}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-                <FormField label="First Name" placeholder="Vincent" />
-                <FormField label="Last Name" placeholder="DORANGE" />
+                <FormField label={t("acfPartners.applyFirstName")} placeholder={t("acfPartners.applyFirstNamePlaceholder")} />
+                <FormField label={t("acfPartners.applyLastName")} placeholder={t("acfPartners.applyLastNamePlaceholder")} />
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-                <FormField label="Email" type="email" placeholder="partner@company.com" />
-                <FormField label="Phone" type="tel" placeholder="+33 6 00 00 00 00" required={false} />
+                <FormField label={t("acfPartners.applyEmail")} type="email" placeholder={t("acfPartners.applyEmailPlaceholder")} />
+                <FormField label={t("acfPartners.applyPhone")} type="tel" placeholder={t("acfPartners.applyPhonePlaceholder")} required={false} />
               </div>
-              <FormField label="Company Name" placeholder="Your organization" />
+              <FormField label={t("acfPartners.applyCompanyName")} placeholder={t("acfPartners.applyCompanyPlaceholder")} />
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-                <FormField label="Country / Territory" type="select" options={[
-                  "France", "United Kingdom", "Germany", "United States", "Canada",
-                  "Japan", "Australia", "United Arab Emirates", "Switzerland", "Netherlands",
-                  "Singapore", "India", "Brazil", "Other"
-                ]} />
-                <FormField label="Partnership Tier" type="select" options={[
-                  "Affiliate — Referral partner",
-                  "Certified — Deploy & train",
-                  "Strategic — Enterprise alliance",
-                ]} />
+                <FormField label={t("acfPartners.applyCountry")} type="select" options={[t("acfPartners.applyCountryFrance"), t("acfPartners.applyCountryUK"), t("acfPartners.applyCountryGermany"), t("acfPartners.applyCountryUS"), t("acfPartners.applyCountryCanada"), t("acfPartners.applyCountryJapan"), t("acfPartners.applyCountryAustralia"), t("acfPartners.applyCountryUAE"), t("acfPartners.applyCountrySwitzerland"), t("acfPartners.applyCountryNetherlands"), t("acfPartners.applyCountrySingapore"), t("acfPartners.applyCountryIndia"), t("acfPartners.applyCountryBrazil"), t("acfPartners.applyCountryOther")]} />
+                <FormField label={t("acfPartners.applyPartnershipTier")} type="select" options={[t("acfPartners.applyTierAffiliate"), t("acfPartners.applyTierCertified"), t("acfPartners.applyTierStrategic")]} />
               </div>
-              <FormField label="Industry" type="select" options={[
-                "Consulting / Advisory", "Technology / SaaS", "Financial Services",
-                "Legal / Compliance", "Healthcare", "Retail / E-Commerce",
-                "Manufacturing / Industry", "Education / Training", "Other"
-              ]} />
-              <FormField label="Team Size" type="select" options={[
-                "1-5", "6-20", "21-50", "51-200", "200+"
-              ]} />
-              <FormField label="Why do you want to become an ACF Partner?" type="textarea"
-                placeholder="Tell us about your organization, your experience with AI governance, and what motivates you to deploy the ACF standard in your territory..." />
-              <FormField label="Website" type="url" placeholder="https://yourcompany.com" required={false} />
-
+              <FormField label={t("acfPartners.applyIndustry")} type="select" options={[t("acfPartners.applyIndustryConsulting"), t("acfPartners.applyIndustryTech"), t("acfPartners.applyIndustryFinance"), t("acfPartners.applyIndustryLegal"), t("acfPartners.applyIndustryHealthcare"), t("acfPartners.applyIndustryRetail"), t("acfPartners.applyIndustryManufacturing"), t("acfPartners.applyIndustryEducation"), t("acfPartners.applyIndustryOther")]} />
+              <FormField label={t("acfPartners.applyTeamSize")} type="select" options={[t("acfPartners.applyTeamSize1"), t("acfPartners.applyTeamSize2"), t("acfPartners.applyTeamSize3"), t("acfPartners.applyTeamSize4"), t("acfPartners.applyTeamSize5")]} />
+              <FormField label={t("acfPartners.applyWhyPartner")} type="textarea" placeholder={t("acfPartners.applyWhyPlaceholder")} />
+              <FormField label={t("acfPartners.applyWebsite")} type="url" placeholder={t("acfPartners.applyWebsitePlaceholder")} required={false} />
               <div style={{ marginTop: 8 }}>
                 <label style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 13, color: C.gray2, cursor: "pointer", lineHeight: 1.5 }}>
                   <input type="checkbox" style={{ accentColor: C.gold, marginTop: 3, flexShrink: 0 }} />
-                  I agree to the ACF Partner Program Terms & Conditions and acknowledge that my application will be reviewed within 5 business days.
+                  {t("acfPartners.applyCheckbox")}
                 </label>
               </div>
-
-              <button
-                className="gold-glow"
-                onClick={() => setFormSubmitted(true)}
-                style={{
-                  width: "100%", padding: 16, borderRadius: 12, border: "none", fontSize: 15, fontWeight: 700,
-                  cursor: "pointer", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
-                  transition: "all .3s", marginTop: 28,
-                }}>Submit Application →</button>
+              <button className="gold-glow" onClick={() => setFormSubmitted(true)} style={{ width: "100%", padding: 16, borderRadius: 12, border: "none", fontSize: 15, fontWeight: 700, cursor: "pointer", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, transition: "all .3s", marginTop: 28 }}>{t("acfPartners.applySubmit")}</button>
             </div>
           ) : (
-            <div style={{
-              background: C.navy3, border: `1px solid ${C.green}40`, borderRadius: 20, padding: 60, textAlign: "center",
-            }}>
-              <div style={{ fontSize: 48, marginBottom: 20 }}>🎉</div>
-              <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 24, fontWeight: 700, color: "#fff", marginBottom: 12 }}>
-                Application Received!
-              </h3>
-              <p style={{ fontSize: 15, color: C.gray2, maxWidth: 400, margin: "0 auto 24px", lineHeight: 1.7 }}>
-                Thank you for your interest in the ACF Partner Network. Our team will review your application and get back to you within <strong style={{ color: "#fff" }}>5 business days</strong>.
-              </p>
+            <div style={{ background: C.navy3, border: `1px solid ${C.green}40`, borderRadius: 20, padding: 60, textAlign: "center" }}>
+              <div style={{ fontSize: 48, marginBottom: 20 }}>{"\u{1F389}"}</div>
+              <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 24, fontWeight: 700, color: "#fff", marginBottom: 12 }}>{t("acfPartners.applySuccessTitle")}</h3>
+              <p style={{ fontSize: 15, color: C.gray2, maxWidth: 400, margin: "0 auto 24px", lineHeight: 1.7 }}>{t("acfPartners.applySuccessParagraph1")}<strong style={{ color: "#fff" }}>{t("acfPartners.applySuccessParagraphBold")}</strong>{t("acfPartners.applySuccessParagraph2")}</p>
               <div style={{ display: "flex", flexDirection: "column", gap: 12, maxWidth: 320, margin: "0 auto" }}>
-                {["Application confirmation sent to your email", "Review by ACF partner team", "Interview & alignment call", "Onboarding & territory assignment"].map((step, i) => (
+                {[t("acfPartners.applySuccessStep1"), t("acfPartners.applySuccessStep2"), t("acfPartners.applySuccessStep3"), t("acfPartners.applySuccessStep4")].map((step, i) => (
                   <div key={step} style={{ display: "flex", alignItems: "center", gap: 12, textAlign: "left" }}>
-                    <div style={{
-                      width: 28, height: 28, borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center",
-                      background: i === 0 ? `${C.green}20` : C.goldDim,
-                      border: `1px solid ${i === 0 ? `${C.green}40` : C.goldBorder}`,
-                      fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700,
-                      color: i === 0 ? C.green : C.gold, flexShrink: 0,
-                    }}>{i === 0 ? "✓" : (i + 1)}</div>
+                    <div style={{ width: 28, height: 28, borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", background: i === 0 ? `${C.green}20` : C.goldDim, border: `1px solid ${i === 0 ? `${C.green}40` : C.goldBorder}`, fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, color: i === 0 ? C.green : C.gold, flexShrink: 0 }}>{i === 0 ? "\u2713" : (i + 1)}</div>
                     <span style={{ fontSize: 13, color: i === 0 ? C.green : C.gray2 }}>{step}</span>
                   </div>
                 ))}
@@ -730,29 +511,25 @@ export default function ACFPartnersPage() {
         </div>
       </section>
 
-      {/* ━━━ HOW IT WORKS ━━━ */}
+      {/* HOW IT WORKS */}
       <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <SectionLabel>Partner Journey</SectionLabel>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>
-              From application to <span style={{ color: C.gold }}>deployment</span>
-            </h2>
+            <SectionLabel>{t("acfPartners.journeyLabel")}</SectionLabel>
+            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>{t("acfPartners.journeyTitle1")}<span style={{ color: C.gold }}>{t("acfPartners.journeyTitle2")}</span></h2>
             <GoldBar />
           </div>
-
           <div style={{ display: "flex", flexDirection: "column", gap: 4, maxWidth: 600, margin: "0 auto" }}>
             {[
-              { step: "01", label: "Apply", desc: "Submit your partner application", color: C.green },
-              { step: "02", label: "Interview", desc: "Alignment call with ACF team", color: C.gold },
-              { step: "03", label: "Onboarding", desc: "Academy training & certification", color: C.amber },
-              { step: "04", label: "Territory", desc: "Exclusive zone assignment", color: C.blue },
-              { step: "05", label: "Deploy", desc: "Audit, train, and certify clients", color: C.gold },
-              { step: "06", label: "Grow", desc: "Revenue share, co-branding, scale", color: C.green },
+              { step: "01", label: t("acfPartners.journeyStep1Label"), desc: t("acfPartners.journeyStep1Desc"), color: C.green },
+              { step: "02", label: t("acfPartners.journeyStep2Label"), desc: t("acfPartners.journeyStep2Desc"), color: C.gold },
+              { step: "03", label: t("acfPartners.journeyStep3Label"), desc: t("acfPartners.journeyStep3Desc"), color: C.amber },
+              { step: "04", label: t("acfPartners.journeyStep4Label"), desc: t("acfPartners.journeyStep4Desc"), color: C.blue },
+              { step: "05", label: t("acfPartners.journeyStep5Label"), desc: t("acfPartners.journeyStep5Desc"), color: C.gold },
+              { step: "06", label: t("acfPartners.journeyStep6Label"), desc: t("acfPartners.journeyStep6Desc"), color: C.green },
             ].map((s, i) => (
               <div key={s.step}>
-                <div style={{ display: "flex", alignItems: "center", gap: 16, padding: "16px 20px", background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 12, transition: "all .3s" }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = C.goldBorder; }} onMouseLeave={e => { e.currentTarget.style.borderColor = C.bd1; }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 16, padding: "16px 20px", background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 12, transition: "all .3s" }} onMouseEnter={e => { e.currentTarget.style.borderColor = C.goldBorder; }} onMouseLeave={e => { e.currentTarget.style.borderColor = C.bd1; }}>
                   <div style={{ width: 36, height: 36, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `${s.color}15`, border: `1px solid ${s.color}40`, flexShrink: 0 }}>
                     <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: s.color }}>{s.step}</span>
                   </div>
@@ -761,21 +538,21 @@ export default function ACFPartnersPage() {
                     <div style={{ fontSize: 12, color: C.gray }}>{s.desc}</div>
                   </div>
                 </div>
-                {i < 5 && (<div style={{ display: "flex", justifyContent: "center", padding: "4px 0" }}><span style={{ color: C.gray, fontSize: 14 }}>↓</span></div>)}
+                {i < 5 && (<div style={{ display: "flex", justifyContent: "center", padding: "4px 0" }}><span style={{ color: C.gray, fontSize: 14 }}>{"\u2193"}</span></div>)}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ━━━ STATS BAR ━━━ */}
+      {/* STATS BAR */}
       <section style={{ padding: "40px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 24, textAlign: "center" }}>
           {[
-            { val: 3, suf: "", label: "Partnership tiers" },
-            { val: 35, suf: "%", label: "Max revenue share" },
-            { val: 6, suf: "", label: "Portal features" },
-            { val: 5, suf: " days", label: "Application review" },
+            { val: 3, suf: "", label: t("acfPartners.statTiers") },
+            { val: 35, suf: "%", label: t("acfPartners.statRevenue") },
+            { val: 6, suf: "", label: t("acfPartners.statPortalFeatures") },
+            { val: 5, suf: t("acfPartners.statDaysSuffix"), label: t("acfPartners.statReview") },
           ].map(s => (
             <div key={s.label}>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, color: C.gold }}><AnimatedCounter end={s.val} suffix={s.suf} /></div>
@@ -785,105 +562,52 @@ export default function ACFPartnersPage() {
         </div>
       </section>
 
-      {/* ━━━ FINAL CTA ━━━ */}
+      {/* FINAL CTA */}
       <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>
-            The standard is global.<br /><span style={{ color: C.gold }}>The network is yours.</span>
-          </h2>
-          <p style={{ fontSize: 15, color: C.gray2, maxWidth: 500, margin: "0 auto 32px" }}>
-            Whether you're a consultancy, a tech firm, or an enterprise — if you believe in accountable autonomy, there's a place for you.
-          </p>
+          <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>{t("acfPartners.ctaTitle1")}<br /><span style={{ color: C.gold }}>{t("acfPartners.ctaTitle2")}</span></h2>
+          <p style={{ fontSize: 15, color: C.gray2, maxWidth: 500, margin: "0 auto 32px" }}>{t("acfPartners.ctaParagraph")}</p>
           <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
-            <a href="#apply" className="gold-glow" style={{
-              background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
-              border: "none", padding: "16px 28px", borderRadius: 12, fontSize: 14, fontWeight: 700, cursor: "pointer", transition: "all .3s",
-              display: "inline-block",
-            }}>Become a Partner →</a>
-            <a href="#portal" style={{
-              background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
-              padding: "16px 28px", borderRadius: 12, fontSize: 14, fontWeight: 500, cursor: "pointer",
-              display: "inline-block",
-            }}
-              onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
-              onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>
-              Partner Portal Login
-            </a>
-            <a href="/en/acf-certification" style={{
-              background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
-              padding: "16px 28px", borderRadius: 12, fontSize: 14, fontWeight: 500, cursor: "pointer",
-              display: "inline-block",
-            }}
-              onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
-              onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>
-              View Certification
-            </a>
+            <a href="#apply" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, border: "none", padding: "16px 28px", borderRadius: 12, fontSize: 14, fontWeight: 700, cursor: "pointer", transition: "all .3s", display: "inline-block" }}>{t("acfPartners.ctaBtnBecome")}</a>
+            <a href="#portal" style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "16px 28px", borderRadius: 12, fontSize: 14, fontWeight: 500, cursor: "pointer", display: "inline-block" }} onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }} onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>{t("acfPartners.ctaBtnPortal")}</a>
+            <a href="/en/acf-certification" style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "16px 28px", borderRadius: 12, fontSize: 14, fontWeight: 500, cursor: "pointer", display: "inline-block" }} onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }} onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>{t("acfPartners.ctaBtnCertification")}</a>
           </div>
         </div>
       </section>
 
-      {/* ━━━ FOOTER ━━━ */}
+      {/* FOOTER */}
       <footer style={{ padding: "48px 0 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr", gap: 60, paddingBottom: 40 }}>
-            {/* Left column */}
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-                <div style={{
-                  width: 44, height: 44, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center",
-                  background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 13, color: C.navy1, letterSpacing: 1,
-                }}>ACF</div>
+                <div style={{ width: 44, height: 44, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 13, color: C.navy1, letterSpacing: 1 }}>ACF</div>
                 <div>
-                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff" }}>Agentic Commerce Framework®</div>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase" }}>GLOBAL STANDARD FOR AI GOVERNANCE</div>
+                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff" }}>{t("acfPartners.footerBrand")}</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase" }}>{t("acfPartners.footerTagline")}</div>
                 </div>
               </div>
-              <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 360 }}>
-                ACF Partners deploy, audit, and certify the governance standard worldwide. Join the network. Scale the trust.
-              </p>
+              <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 360 }}>{t("acfPartners.footerDesc")}</p>
             </div>
-
-            {/* Middle column — ACF Products */}
             <div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 20 }}>ACF Products</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 20 }}>{t("acfPartners.footerProducts")}</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                {[
-                  { label: "ACF Score®", href: "/en/acf-score" },
-                  { label: "ACF Control", href: "/en/acf-control" },
-                  { label: "ACF Certification", href: "/en/acf-certification" },
-                  { label: "ACF Partners", href: "/en/acf-partners" },
-                ].map(link => (
-                  <a key={link.label} href={link.href} style={{ fontSize: 14, color: C.gray2, transition: "color .2s" }}
-                    onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold}
-                    onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}
-                  >{link.label}</a>
+                {[{ label: t("acfPartners.footerAcfScore"), href: "/en/acf-score" }, { label: t("acfPartners.footerAcfControl"), href: "/en/acf-control" }, { label: t("acfPartners.footerAcfCertification"), href: "/en/acf-certification" }, { label: t("acfPartners.footerAcfPartners"), href: "/en/acf-partners" }].map(link => (
+                  <a key={link.label} href={link.href} style={{ fontSize: 14, color: C.gray2, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{link.label}</a>
                 ))}
               </div>
             </div>
-
-            {/* Right column — Framework */}
             <div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 20 }}>Framework</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 20 }}>{t("acfPartners.footerFramework")}</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                {[
-                  { label: "The Standard", href: "/" },
-                  { label: "About ACF", href: "/about" },
-                  { label: "Contact", href: "/contact" },
-                ].map(link => (
-                  <a key={link.label} href={link.href} style={{ fontSize: 14, color: C.gray2, transition: "color .2s" }}
-                    onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold}
-                    onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}
-                  >{link.label}</a>
+                {[{ label: t("acfPartners.footerTheStandard"), href: "/" }, { label: t("acfPartners.footerAbout"), href: "/about" }, { label: t("acfPartners.footerContact"), href: "/contact" }].map(link => (
+                  <a key={link.label} href={link.href} style={{ fontSize: 14, color: C.gray2, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{link.label}</a>
                 ))}
               </div>
             </div>
           </div>
-
-          {/* Bottom bar */}
           <div style={{ borderTop: `1px solid ${C.bd1}`, padding: "20px 0", textAlign: "center" }}>
-            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>
-              © 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved.
-            </p>
+            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>{t("acfPartners.footerCopyright")}</p>
           </div>
         </div>
       </footer>

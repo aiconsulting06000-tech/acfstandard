@@ -1,1 +1,797 @@
-{"meta":{"language":"SV","languageCode":"sv","locale":"sv-SE"},"common":{"readMore":"Läs mer","learnMore":"Lär dig mer","getStarted":"Kom igång","downloadPDF":"Ladda ner PDF","watchVideo":"Se video","close":"Stäng","open":"Öppna","loading":"Laddar","backToHome":"Tillbaka till start","menu":"Meny"},"regionSelector":{"title":"Välj din region och språk","close":"✕ Stäng","global":"Global (Engelska)","northAmerica":"Nordamerika","latinAmerica":"Latinamerika","westernEurope":"Västeuropa","nordicBaltic":"Nordiskt & Baltiskt","centralEasternEurope":"Central- & Östeuropa","middleEastAfrica":"Mellanöstern & Afrika","asiaPacific":"Asien & Stillahavsområdet"},"nav":{"menu":"Meny","logoText":"Agentic Commerce Framework®","logoSubtext":"Global Standard för AI-Styrning","region":"GLOBAL | SV","theStandard":"Standarden","acfScore":"ACF Score","acfControl":"ACF Control","acfCertification":"ACF-Certifiering","partners":"Partners","requestAssessment":"Begär Bedömning","partnerLogin":"Partnerinloggning","applyPartner":"Bli Partner","contact":"Kontakt"},"megaMenu":{"framework":{"title":"Ramverk","link":"ACF-Standard →","subtitle":"Den definitiva styrningsmetodiken för agentiska system i kommersiella miljöer.","architecture":{"title":"Arkitektur","principles":"4 Grundprinciper","layers":"4 Operativa Lager","maturity":"4 Mognadsnivåer"},"methodology":{"title":"Metodik","modules":"8 Implementeringsmoduler","constitution":"Agentisk Konstitution","dda":"DDA-Rollram","killSwitch":"Kill Switch-Protokoll"},"featured":{"label":"UTVALT","whitepaper":{"title":"Ladda ner ACF Vitbok","description":"Fullständig specifikation — gratis för registrerade användare."},"release":{"title":"ACF v1.0 — Februari 2026","description":"Officiell lansering. Vad är nytt i ramverket."}}},"products":{"title":"Produkter","link":"Produkter →","subtitle":"Tre verktyg som operationaliserar ACF-standarden i din organisation.","diagnostic":{"title":"Diagnostik","score":"ACF Score — Suveränitetsmått","methodology":"Poängmetodik","axes":"6 Styrningsaxlar"},"saas":{"title":"SaaS-Plattform","control":"ACF Control — Styrningspanel","kpis":"18 Suveränitets-KPI:er","gating":"Adaptivt Gating-System"},"certification":{"title":"Certifiering","program":"ACF-Certifieringsprogram","levels":"Certifieringsnivåer","audit":"Revisionsprocess"}},"resources":{"title":"Resurser","link":"Resurser →","subtitle":"Styrningsinsikter, forskning och teknisk dokumentation.","insights":{"title":"Senaste Insikter","aiAct":"EU AI Act & Agentiska System","dda":"DDA-Rollen Förklarad","killSwitch":"Designa en 3-Nivå Kill Switch"},"documentation":{"title":"Dokumentation","specs":"Tekniska Specifikationer","research":"Forskningspublikationer","academy":"ACF Academy"}},"about":{"title":"Om ACF","link":"Om ACF →","subtitle":"Historien, uppdraget och det juridiska skyddet bakom Agentic Commerce Framework®.","whoWeAre":{"title":"Vilka Vi Är","vincent":"Vincent DORANGE — Skapare","mission":"Uppdrag & Värderingar","legal":"Juridiskt Skydd (INPI)"},"howWeWork":{"title":"Hur Vi Arbetar","network":"Praktikernätverk","audit":"Revision & Certifiering","contact":"Kontakta Oss"},"registered":{"label":"REGISTRERAD","title":"INPI-Skyddad — Loi n° 2018-670","description":"ACF® är ett registrerat varumärke. All metodik och verktyg är juridiskt skyddade."}},"partners":{"title":"Partners","link":"Partners →","subtitle":"Gå med i ACF-Praktikernätverket och erbjud styrningstjänster till dina kunder.","portal":{"title":"Partnerportal","login":"Logga in på Partnerportalen","dashboard":"Instrumentpanel & Verktyg","training":"Utbildningsmaterial","toolkit":"ACF-Praktiker Verktygslåda"},"become":{"title":"Bli Partner","apply":"Ansök","tiers":"Partnernivåer","certified":"Bli ACF-Certifierad Först"}},"user":{"partnerAccess":"Partneråtkomst","partnerLogin":"Partnerinloggning","applyPartner":"Bli Partner","contact":"Kontakt"}},"hero":{"title":"Den Globala Standarden för","typing":{"word1":"Styrning","word2":"Suveränitet","word3":"Intelligens","word4":"Handel"},"description":"Agentic Commerce Framework® (ACF) är den definitiva styrningsmetodiken för att implementera, övervaka och kontrollera autonoma agentiska system i kommersiella miljöer.","cta":{"primary":"Begär en Styrningsbedömning →","secondary":"Läs Standarden"},"stats":{"principles":{"value":"4","label":"Grund<br>principer"},"modules":{"value":"8","label":"Implementerings<br>moduler"},"kpis":{"value":"18","label":"Suveränitets<br>KPI:er"},"tools":{"value":"17","label":"Proprietära<br>Verktyg"}},"satellites":{"score":{"name":"ACF Score","description":"Suveränitetsmått"},"control":{"name":"ACF Control","description":"Styrnings-SaaS"},"certification":{"name":"Certifiering","description":"Intyg"},"partners":{"name":"Partners","description":"Praktiker"}}},"statsBar":{"layers":{"value":"4","label":"Operativa Lager"},"kpis":{"value":"18","label":"Suveränitets-KPI:er"},"tools":{"value":"17","label":"Proprietära Verktyg"},"sovereignty":{"value":"100","suffix":"%","label":"Mänsklig Suveränitet"}},"principles":{"badge":"// Arkitektur","title":"4 Grundprinciper","subtitle":"Fyra oföränderliga axiom som definierar gränsen mellan mänsklig auktoritet och autonom agentutförande.","principle1":{"number":"01","title":"Beslutsuveränitet","description":"Kritiska strategiska beslut delegeras aldrig till autonoma agenter."},"principle2":{"number":"02","title":"Styrning genom Design","description":"Styrningsramar definieras före implementering, inte efter."},"principle3":{"number":"03","title":"Ultimat Mänsklig Kontroll","description":"Varje agentiskt system måste bevara möjligheten till mänsklig intervention."},"principle4":{"number":"04","title":"Spårbar Ansvarsskyldighet","description":"Varje autonom handling måste vara reviderbar och tillskrivbar."}},"layers":{"badge":"// Struktur","title":"4 Operativa Lager","subtitle":"En hierarkisk arkitektur från strategisk styrning till realtidsövervakning av utförande.","layer1":{"number":"LAYER_01","title":"Styrning & Suveränitet","description":"Suveränitetsstadga, styrningskommitté, RACI-matris, karta över icke-delegerbara zoner."},"layer2":{"number":"LAYER_02","title":"Beslutspolicy","description":"Viktade mål, skiljedomar, eskaleringströsklar, regulatoriska begränsningar."},"layer3":{"number":"LAYER_03","title":"Agentsystem","description":"Explicit mandat per agent, interaktionsperimeter, autonominivå, 5-kategori taxonomi."},"layer4":{"number":"LAYER_04","title":"Utförande & Övervakning","description":"Adaptiv gating-matris, flernivåvarningar, 18 suveränitets-KPI:er, live-instrumentpaneler."}},"maturity":{"badge":"// Progression","title":"4 Agentiska Mognadsnivåer","subtitle":"ACF klassificerar system efter autonominivå. Nivå 2 är det rekommenderade implementeringsmålet.","level0":{"code":"NIVÅ_0","name":"Klassisk Automatisering","risk":"Mycket Låg Risk","description":"Fasta regler, ingen ML. Mänsklig intervention för varje ändring."},"level1":{"code":"NIVÅ_1","name":"Assisterade Agenter","risk":"Låg Risk","description":"Agenter analyserar och rekommenderar. Varje slutgiltigt beslut stannar hos en människa."},"level2":{"code":"NIVÅ_2","name":"Styrda Agenter","risk":"Måttlig Risk","description":"Agenter beslutar inom strikt styrning. Icke-delegerbara zoner låsta.","badge":"★ Rekommenderat Mål"},"level3":{"code":"NIVÅ_3","name":"Övervakad Autonomi","risk":"Hög Risk","description":"Agenter beslutar och lär sig. Maximal styrning. Endast för mogna organisationer."}},"modules":{"badge":"// Metodik","title":"8 Implementeringsmoduler","subtitle":"En sekventiell väg som implementeras progressivt över 6-18 månader. Varje modul bygger på den föregående.","module1":{"code":"MOD_01","name":"Suveränitetdiagnostik","description":"Beräkning av Suveränitetsscore. Riskzonkartläggning."},"module2":{"code":"MOD_02","name":"Beslutskartläggning","description":"Kritikalitetsmatris. Icke-delegerbara zoner."},"module3":{"code":"MOD_03","name":"Agentisk Konstitution","description":"9 artiklar. Undertecknad av styrningskommittén."},"module4":{"code":"MOD_04","name":"Agentsystemdesign","description":"Mandatblad, interaktionsperimetrar."},"module5":{"code":"MOD_05","name":"Säkerhet & Reversibilitet","description":"Sandboxning, reversibilitetsplan. Kill switch-design."},"module6":{"code":"MOD_06","name":"Kontinuerlig Styrning","description":"Månatliga granskningar. Årlig efterlevnadsrevision."},"module7":{"code":"MOD_07","name":"Implementeringsfärdplan","description":"Progressiv implementering i 5 faser."},"module8":{"code":"MOD_08","name":"Krishantering","description":"3-nivå incidenter. Kill switch-övningar."}},"video":{"badge":"// Varför ACF","title":"Styrning Kan Inte Vänta.<br>Agenter Beslutar Redan.","description1":"Under 2026 utför autonoma agenter redan beslut i kommersiella miljöer — prissättning, leadkvalificering, skadehantering, kontraktshantering. De flesta organisationer har inget ramverk för att styra dem.","description2":"ACF skapades för att fylla det tomrummet — innan ett styrningsfel blir en juridisk, ekonomisk eller ryktesmässig kris.","quote":{"text":"Frågan är inte längre <em>om</em> man ska implementera agenter. Det är <em>hur</em> man implementerar dem utan att ge upp sin suveränitet.","author":"— Vincent DORANGE, Skapare av ACF-Standarden"},"player":{"badge":"ACF — GRUNDARMEDDELANDE","name":"Vincent DORANGE","role":"Skapare, Agentic Commerce Framework®","duration":"3:09"},"stats":{"release":{"value":"2026","label":"Officiell Lansering"},"documentation":{"value":"45s","label":"Fullständig Dokumentation"},"protection":{"value":"INPI","label":"Juridiskt Skyddad"}},"modal":{"placeholder":"VIDEO PLATSHÅLLARE","title":"Ladda upp din video för att aktivera uppspelning","description":"Ersätt denna modal med en YouTube- eller Vimeo-inbäddnings-URL i koden"}},"products":{"badge":"// Ekosystem","title":"ACF-Ekosystemet","subtitle":"Tre kompletterande produkter som operationaliserar ACF-standarden.","score":{"label":"DIAGNOSTISKT VERKTYG","title":"ACF Score","description":"Proprietär Suveränitetsscore som mäter ditt beslutsoberoende över 6 styrningsdimensioner.","features":{"feature1":"Sammansatt Suveränitetsscore-mått","feature2":"6-axlad radarvisualisering","feature3":"Personlig handlingsplan per axel"},"cta":"Mät din Score →"},"control":{"label":"SAAS-PLATTFORM","title":"ACF Control","description":"Realtidsstyrningspanel som övervakar dina 18 Suveränitets-KPI:er med adaptiv gating och automatiserad eskalering.","features":{"feature1":"18 KPI:er över 6 styrningsaxlar","feature2":"Adaptiv gating med mänsklig eskalering","feature3":"Manipuleringssäkra revisionsloggar"},"cta":"Upptäck ACF Control →"},"certification":{"label":"OBEROENDE INTYG","title":"ACF-Certifiering","description":"Oberoende certifiering som intygar efterlevnad av ACF-styrningsstandarden. Offentligt verifierbar.","features":{"feature1":"Nivå 1, 2 och 3 certifieringsvägar","feature2":"Offentligt verifierbart märke","feature3":"Årlig förnyelse + kontinuerlig övervakning"},"cta":"Bli Certifierad →"}},"blog":{"badge":"// Insikter","title":"Senaste från ACF-Bloggen","subtitle":"Styrningsinsikter, ramverksuppdateringar och agentisk intelligensforskning.","article1":{"category":"AI-REGLERING","title":"Hur EU AI Act Tillämpas på Agentiska System 2026","excerpt":"AI Acts riskbaserade tillvägagångssätt skapar specifika skyldigheter för autonoma agenter. Här är vad ACF Nivå 2-styrning täcker.","date":"2026-02-15","cta":"Läs →"},"article2":{"category":"STYRNING","title":"DDA: Varför Varje AI-Nativt Företag Behöver en Delegerad Beslutsagent Officer","excerpt":"DDA är den juridiska väktaren för dina autonoma agenter. Hur man skapar och stärker denna kritiska roll.","date":"2026-02-08","cta":"Läs →"},"article3":{"category":"TEKNISK","title":"Designa en Tre-Nivå Kill Switch för Autonoma Agentsystem","excerpt":"En effektiv kill switch är inte en enda knapp. ACF specificerar tre avbrottsnivåer med definierade svarstider.","date":"2026-01-29","cta":"Läs →"},"viewAll":"Visa Alla Artiklar →"},"cta":{"watermark":"ACF®","badge":"// Nästa Steg","title":"Redo att Styra Dina<br>Agentiska System?","description":"Begär en styrningsbedömning och upptäck din nuvarande Suveränitetsscore.","primary":"Begär en Styrningsbedömning →","secondary":"Bli en ACF-Partner"},"footer":{"logoText":"Agentic Commerce Framework®","logoSubtext":"Global Standard för AI-Styrning","description":"Den definitiva styrningsstandarden för organisationer som implementerar autonoma agentiska system. Skyddad — Loi n° 2018-670.","framework":{"title":"Ramverk","theStandard":"Standarden","methodology":"Metodik","research":"Forskning","certification":"ACF-Certifiering"},"products":{"title":"Produkter","score":"ACF Score","control":"ACF Control","certification":"Certifiering","academy":"Academy"},"organization":{"title":"Organisation","partnerPortal":"Partnerportal","about":"Om","contact":"Kontakt","legal":"Juridiskt"},"copyright":"© 2026 Agentic Commerce Framework® — Vincent DORANGE. Alla rättigheter förbehållna. INPI-registrerad.","legal":{"privacy":"Integritet","terms":"Villkor","cookies":"Kakor"}},"ai":{"button":{"label":"Fråga ACF-Agent","status":"AI-STYRNING · ONLINE"},"modal":{"close":"×","beta":"BETA","title":"Fråga ACF","subtitle":"En chatbot som svarar på frågor baserat på ACF-standarden och styrningsinsikter","placeholder":"Fråga om ACF-styrning...","send":"Skicka","trending":{"label":"TRENDANDE FRÅGOR","q1":"Vad är ACF-standarden?","q2":"Hur blir man ACF-certifierad?","q3":"Vad är DDA-rollen?","q4":"Vad är Suveränitetsscore?","q5":"De 4 Grundprinciperna?"},"disclaimer":"AI-experiment. Svar baserade på ACF-standarddokumentation.","seeMore":"Läs Mer"}}}
+{
+  "meta": {
+    "language": "SV",
+    "languageCode": "sv",
+    "locale": "sv-SE"
+  },
+  "common": {
+    "readMore": "Läs mer",
+    "learnMore": "Lär dig mer",
+    "getStarted": "Kom igång",
+    "downloadPDF": "Ladda ner PDF",
+    "watchVideo": "Se video",
+    "close": "Stäng",
+    "open": "Öppna",
+    "loading": "Laddar",
+    "backToHome": "Tillbaka till start",
+    "menu": "Meny",
+    "acf_standard_governance_methodology_for_autonomous": "ACF Standard — styrningsmetodik för autonoma agentsystem.",
+    "agentic_commerce_framework_acf_standard": "Agentic Commerce Framework — ACF Standard"
+  },
+  "regionSelector": {
+    "title": "Välj din region och språk",
+    "close": "✕ Stäng",
+    "global": "Global (Engelska)",
+    "northAmerica": "Nordamerika",
+    "latinAmerica": "Latinamerika",
+    "westernEurope": "Västeuropa",
+    "nordicBaltic": "Nordiskt & Baltiskt",
+    "centralEasternEurope": "Central- & Östeuropa",
+    "middleEastAfrica": "Mellanöstern & Afrika",
+    "asiaPacific": "Asien & Stillahavsområdet"
+  },
+  "nav": {
+    "menu": "Meny",
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Global Standard för AI-Styrning",
+    "region": "GLOBAL | SV",
+    "theStandard": "Standarden",
+    "acfScore": "ACF Score",
+    "acfControl": "ACF Control",
+    "acfCertification": "ACF-Certifiering",
+    "partners": "Partners",
+    "requestAssessment": "Begär Bedömning",
+    "partnerLogin": "Partnerinloggning",
+    "applyPartner": "Bli Partner",
+    "contact": "Kontakt"
+  },
+  "megaMenu": {
+    "framework": {
+      "title": "Ramverk",
+      "link": "ACF-Standard →",
+      "subtitle": "Den definitiva styrningsmetodiken för agentiska system i kommersiella miljöer.",
+      "architecture": {
+        "title": "Arkitektur",
+        "principles": "4 Grundprinciper",
+        "layers": "4 Operativa Lager",
+        "maturity": "4 Mognadsnivåer"
+      },
+      "methodology": {
+        "title": "Metodik",
+        "modules": "8 Implementeringsmoduler",
+        "constitution": "Agentisk Konstitution",
+        "dda": "DDA-Rollram",
+        "killSwitch": "Kill Switch-Protokoll"
+      },
+      "featured": {
+        "label": "UTVALT",
+        "whitepaper": {
+          "title": "Ladda ner ACF Vitbok",
+          "description": "Fullständig specifikation — gratis för registrerade användare."
+        },
+        "release": {
+          "title": "ACF v1.0 — Februari 2026",
+          "description": "Officiell lansering. Vad är nytt i ramverket."
+        }
+      }
+    },
+    "products": {
+      "title": "Produkter",
+      "link": "Produkter →",
+      "subtitle": "Tre verktyg som operationaliserar ACF-standarden i din organisation.",
+      "diagnostic": {
+        "title": "Diagnostik",
+        "score": "ACF Score — Suveränitetsmått",
+        "methodology": "Poängmetodik",
+        "axes": "6 Styrningsaxlar"
+      },
+      "saas": {
+        "title": "SaaS-Plattform",
+        "control": "ACF Control — Styrningspanel",
+        "kpis": "18 Suveränitets-KPI:er",
+        "gating": "Adaptivt Gating-System"
+      },
+      "certification": {
+        "title": "Certifiering",
+        "program": "ACF-Certifieringsprogram",
+        "levels": "Certifieringsnivåer",
+        "audit": "Revisionsprocess"
+      }
+    },
+    "resources": {
+      "title": "Resurser",
+      "link": "Resurser →",
+      "subtitle": "Styrningsinsikter, forskning och teknisk dokumentation.",
+      "insights": {
+        "title": "Senaste Insikter",
+        "aiAct": "EU AI Act & Agentiska System",
+        "dda": "DDA-Rollen Förklarad",
+        "killSwitch": "Designa en 3-Nivå Kill Switch"
+      },
+      "documentation": {
+        "title": "Dokumentation",
+        "specs": "Tekniska Specifikationer",
+        "research": "Forskningspublikationer",
+        "academy": "ACF Academy"
+      }
+    },
+    "about": {
+      "title": "Om ACF",
+      "link": "Om ACF →",
+      "subtitle": "Historien, uppdraget och det juridiska skyddet bakom Agentic Commerce Framework®.",
+      "whoWeAre": {
+        "title": "Vilka Vi Är",
+        "vincent": "Vincent DORANGE — Skapare",
+        "mission": "Uppdrag & Värderingar",
+        "legal": "Juridiskt Skydd (INPI)"
+      },
+      "howWeWork": {
+        "title": "Hur Vi Arbetar",
+        "network": "Praktikernätverk",
+        "audit": "Revision & Certifiering",
+        "contact": "Kontakta Oss"
+      },
+      "registered": {
+        "label": "REGISTRERAD",
+        "title": "INPI-Skyddad — Loi n° 2018-670",
+        "description": "ACF® är ett registrerat varumärke. All metodik och verktyg är juridiskt skyddade."
+      }
+    },
+    "partners": {
+      "title": "Partners",
+      "link": "Partners →",
+      "subtitle": "Gå med i ACF-Praktikernätverket och erbjud styrningstjänster till dina kunder.",
+      "portal": {
+        "title": "Partnerportal",
+        "login": "Logga in på Partnerportalen",
+        "dashboard": "Instrumentpanel & Verktyg",
+        "training": "Utbildningsmaterial",
+        "toolkit": "ACF-Praktiker Verktygslåda"
+      },
+      "become": {
+        "title": "Bli Partner",
+        "apply": "Ansök",
+        "tiers": "Partnernivåer",
+        "certified": "Bli ACF-Certifierad Först"
+      }
+    },
+    "user": {
+      "partnerAccess": "Partneråtkomst",
+      "partnerLogin": "Partnerinloggning",
+      "applyPartner": "Bli Partner",
+      "contact": "Kontakt"
+    }
+  },
+  "hero": {
+    "title": "Den Globala Standarden för",
+    "typing": {
+      "word1": "Styrning",
+      "word2": "Suveränitet",
+      "word3": "Intelligens",
+      "word4": "Handel"
+    },
+    "description": "Agentic Commerce Framework® (ACF) är den definitiva styrningsmetodiken för att implementera, övervaka och kontrollera autonoma agentiska system i kommersiella miljöer.",
+    "cta": {
+      "primary": "Begär en Styrningsbedömning →",
+      "secondary": "Läs Standarden"
+    },
+    "stats": {
+      "principles": {
+        "value": "4",
+        "label": "Grund<br>principer"
+      },
+      "modules": {
+        "value": "8",
+        "label": "Implementerings<br>moduler"
+      },
+      "kpis": {
+        "value": "18",
+        "label": "Suveränitets<br>KPI:er"
+      },
+      "tools": {
+        "value": "17",
+        "label": "Proprietära<br>Verktyg"
+      }
+    },
+    "satellites": {
+      "score": {
+        "name": "ACF Score",
+        "description": "Suveränitetsmått"
+      },
+      "control": {
+        "name": "ACF Control",
+        "description": "Styrnings-SaaS"
+      },
+      "certification": {
+        "name": "Certifiering",
+        "description": "Intyg"
+      },
+      "partners": {
+        "name": "Partners",
+        "description": "Praktiker"
+      }
+    }
+  },
+  "statsBar": {
+    "layers": {
+      "value": "4",
+      "label": "Operativa Lager"
+    },
+    "kpis": {
+      "value": "18",
+      "label": "Suveränitets-KPI:er"
+    },
+    "tools": {
+      "value": "17",
+      "label": "Proprietära Verktyg"
+    },
+    "sovereignty": {
+      "value": "100",
+      "suffix": "%",
+      "label": "Mänsklig Suveränitet"
+    }
+  },
+  "principles": {
+    "badge": "// Arkitektur",
+    "title": "4 Grundprinciper",
+    "subtitle": "Fyra oföränderliga axiom som definierar gränsen mellan mänsklig auktoritet och autonom agentutförande.",
+    "principle1": {
+      "number": "01",
+      "title": "Beslutsuveränitet",
+      "description": "Kritiska strategiska beslut delegeras aldrig till autonoma agenter."
+    },
+    "principle2": {
+      "number": "02",
+      "title": "Styrning genom Design",
+      "description": "Styrningsramar definieras före implementering, inte efter."
+    },
+    "principle3": {
+      "number": "03",
+      "title": "Ultimat Mänsklig Kontroll",
+      "description": "Varje agentiskt system måste bevara möjligheten till mänsklig intervention."
+    },
+    "principle4": {
+      "number": "04",
+      "title": "Spårbar Ansvarsskyldighet",
+      "description": "Varje autonom handling måste vara reviderbar och tillskrivbar."
+    }
+  },
+  "layers": {
+    "badge": "// Struktur",
+    "title": "4 Operativa Lager",
+    "subtitle": "En hierarkisk arkitektur från strategisk styrning till realtidsövervakning av utförande.",
+    "layer1": {
+      "number": "LAYER_01",
+      "title": "Styrning & Suveränitet",
+      "description": "Suveränitetsstadga, styrningskommitté, RACI-matris, karta över icke-delegerbara zoner."
+    },
+    "layer2": {
+      "number": "LAYER_02",
+      "title": "Beslutspolicy",
+      "description": "Viktade mål, skiljedomar, eskaleringströsklar, regulatoriska begränsningar."
+    },
+    "layer3": {
+      "number": "LAYER_03",
+      "title": "Agentsystem",
+      "description": "Explicit mandat per agent, interaktionsperimeter, autonominivå, 5-kategori taxonomi."
+    },
+    "layer4": {
+      "number": "LAYER_04",
+      "title": "Utförande & Övervakning",
+      "description": "Adaptiv gating-matris, flernivåvarningar, 18 suveränitets-KPI:er, live-instrumentpaneler."
+    }
+  },
+  "maturity": {
+    "badge": "// Progression",
+    "title": "4 Agentiska Mognadsnivåer",
+    "subtitle": "ACF klassificerar system efter autonominivå. Nivå 2 är det rekommenderade implementeringsmålet.",
+    "level0": {
+      "code": "NIVÅ_0",
+      "name": "Klassisk Automatisering",
+      "risk": "Mycket Låg Risk",
+      "description": "Fasta regler, ingen ML. Mänsklig intervention för varje ändring."
+    },
+    "level1": {
+      "code": "NIVÅ_1",
+      "name": "Assisterade Agenter",
+      "risk": "Låg Risk",
+      "description": "Agenter analyserar och rekommenderar. Varje slutgiltigt beslut stannar hos en människa."
+    },
+    "level2": {
+      "code": "NIVÅ_2",
+      "name": "Styrda Agenter",
+      "risk": "Måttlig Risk",
+      "description": "Agenter beslutar inom strikt styrning. Icke-delegerbara zoner låsta.",
+      "badge": "★ Rekommenderat Mål"
+    },
+    "level3": {
+      "code": "NIVÅ_3",
+      "name": "Övervakad Autonomi",
+      "risk": "Hög Risk",
+      "description": "Agenter beslutar och lär sig. Maximal styrning. Endast för mogna organisationer."
+    }
+  },
+  "modules": {
+    "badge": "// Metodik",
+    "title": "8 Implementeringsmoduler",
+    "subtitle": "En sekventiell väg som implementeras progressivt över 6-18 månader. Varje modul bygger på den föregående.",
+    "module1": {
+      "code": "MOD_01",
+      "name": "Suveränitetdiagnostik",
+      "description": "Beräkning av Suveränitetsscore. Riskzonkartläggning."
+    },
+    "module2": {
+      "code": "MOD_02",
+      "name": "Beslutskartläggning",
+      "description": "Kritikalitetsmatris. Icke-delegerbara zoner."
+    },
+    "module3": {
+      "code": "MOD_03",
+      "name": "Agentisk Konstitution",
+      "description": "9 artiklar. Undertecknad av styrningskommittén."
+    },
+    "module4": {
+      "code": "MOD_04",
+      "name": "Agentsystemdesign",
+      "description": "Mandatblad, interaktionsperimetrar."
+    },
+    "module5": {
+      "code": "MOD_05",
+      "name": "Säkerhet & Reversibilitet",
+      "description": "Sandboxning, reversibilitetsplan. Kill switch-design."
+    },
+    "module6": {
+      "code": "MOD_06",
+      "name": "Kontinuerlig Styrning",
+      "description": "Månatliga granskningar. Årlig efterlevnadsrevision."
+    },
+    "module7": {
+      "code": "MOD_07",
+      "name": "Implementeringsfärdplan",
+      "description": "Progressiv implementering i 5 faser."
+    },
+    "module8": {
+      "code": "MOD_08",
+      "name": "Krishantering",
+      "description": "3-nivå incidenter. Kill switch-övningar."
+    }
+  },
+  "video": {
+    "badge": "// Varför ACF",
+    "title": "Styrning Kan Inte Vänta.<br>Agenter Beslutar Redan.",
+    "description1": "Under 2026 utför autonoma agenter redan beslut i kommersiella miljöer — prissättning, leadkvalificering, skadehantering, kontraktshantering. De flesta organisationer har inget ramverk för att styra dem.",
+    "description2": "ACF skapades för att fylla det tomrummet — innan ett styrningsfel blir en juridisk, ekonomisk eller ryktesmässig kris.",
+    "quote": {
+      "text": "Frågan är inte längre <em>om</em> man ska implementera agenter. Det är <em>hur</em> man implementerar dem utan att ge upp sin suveränitet.",
+      "author": "— Vincent DORANGE, Skapare av ACF-Standarden"
+    },
+    "player": {
+      "badge": "ACF — GRUNDARMEDDELANDE",
+      "name": "Vincent DORANGE",
+      "role": "Skapare, Agentic Commerce Framework®",
+      "duration": "3:09"
+    },
+    "stats": {
+      "release": {
+        "value": "2026",
+        "label": "Officiell Lansering"
+      },
+      "documentation": {
+        "value": "45s",
+        "label": "Fullständig Dokumentation"
+      },
+      "protection": {
+        "value": "INPI",
+        "label": "Juridiskt Skyddad"
+      }
+    },
+    "modal": {
+      "placeholder": "VIDEO PLATSHÅLLARE",
+      "title": "Ladda upp din video för att aktivera uppspelning",
+      "description": "Ersätt denna modal med en YouTube- eller Vimeo-inbäddnings-URL i koden"
+    }
+  },
+  "products": {
+    "badge": "// Ekosystem",
+    "title": "ACF-Ekosystemet",
+    "subtitle": "Tre kompletterande produkter som operationaliserar ACF-standarden.",
+    "score": {
+      "label": "DIAGNOSTISKT VERKTYG",
+      "title": "ACF Score",
+      "description": "Proprietär Suveränitetsscore som mäter ditt beslutsoberoende över 6 styrningsdimensioner.",
+      "features": {
+        "feature1": "Sammansatt Suveränitetsscore-mått",
+        "feature2": "6-axlad radarvisualisering",
+        "feature3": "Personlig handlingsplan per axel"
+      },
+      "cta": "Mät din Score →"
+    },
+    "control": {
+      "label": "SAAS-PLATTFORM",
+      "title": "ACF Control",
+      "description": "Realtidsstyrningspanel som övervakar dina 18 Suveränitets-KPI:er med adaptiv gating och automatiserad eskalering.",
+      "features": {
+        "feature1": "18 KPI:er över 6 styrningsaxlar",
+        "feature2": "Adaptiv gating med mänsklig eskalering",
+        "feature3": "Manipuleringssäkra revisionsloggar"
+      },
+      "cta": "Upptäck ACF Control →"
+    },
+    "certification": {
+      "label": "OBEROENDE INTYG",
+      "title": "ACF-Certifiering",
+      "description": "Oberoende certifiering som intygar efterlevnad av ACF-styrningsstandarden. Offentligt verifierbar.",
+      "features": {
+        "feature1": "Nivå 1, 2 och 3 certifieringsvägar",
+        "feature2": "Offentligt verifierbart märke",
+        "feature3": "Årlig förnyelse + kontinuerlig övervakning"
+      },
+      "cta": "Bli Certifierad →"
+    }
+  },
+  "blog": {
+    "badge": "// Insikter",
+    "title": "Senaste från ACF-Bloggen",
+    "subtitle": "Styrningsinsikter, ramverksuppdateringar och agentisk intelligensforskning.",
+    "article1": {
+      "category": "AI-REGLERING",
+      "title": "Hur EU AI Act Tillämpas på Agentiska System 2026",
+      "excerpt": "AI Acts riskbaserade tillvägagångssätt skapar specifika skyldigheter för autonoma agenter. Här är vad ACF Nivå 2-styrning täcker.",
+      "date": "2026-02-15",
+      "cta": "Läs →"
+    },
+    "article2": {
+      "category": "STYRNING",
+      "title": "DDA: Varför Varje AI-Nativt Företag Behöver en Delegerad Beslutsagent Officer",
+      "excerpt": "DDA är den juridiska väktaren för dina autonoma agenter. Hur man skapar och stärker denna kritiska roll.",
+      "date": "2026-02-08",
+      "cta": "Läs →"
+    },
+    "article3": {
+      "category": "TEKNISK",
+      "title": "Designa en Tre-Nivå Kill Switch för Autonoma Agentsystem",
+      "excerpt": "En effektiv kill switch är inte en enda knapp. ACF specificerar tre avbrottsnivåer med definierade svarstider.",
+      "date": "2026-01-29",
+      "cta": "Läs →"
+    },
+    "viewAll": "Visa Alla Artiklar →"
+  },
+  "cta": {
+    "watermark": "ACF®",
+    "badge": "// Nästa Steg",
+    "title": "Redo att Styra Dina<br>Agentiska System?",
+    "description": "Begär en styrningsbedömning och upptäck din nuvarande Suveränitetsscore.",
+    "primary": "Begär en Styrningsbedömning →",
+    "secondary": "Bli en ACF-Partner"
+  },
+  "footer": {
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Global Standard för AI-Styrning",
+    "description": "Den definitiva styrningsstandarden för organisationer som implementerar autonoma agentiska system. Skyddad — Loi n° 2018-670.",
+    "framework": {
+      "title": "Ramverk",
+      "theStandard": "Standarden",
+      "methodology": "Metodik",
+      "research": "Forskning",
+      "certification": "ACF-Certifiering"
+    },
+    "products": {
+      "title": "Produkter",
+      "score": "ACF Score",
+      "control": "ACF Control",
+      "certification": "Certifiering",
+      "academy": "Academy"
+    },
+    "organization": {
+      "title": "Organisation",
+      "partnerPortal": "Partnerportal",
+      "about": "Om",
+      "contact": "Kontakt",
+      "legal": "Juridiskt"
+    },
+    "copyright": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Alla rättigheter förbehållna. INPI-registrerad.",
+    "legal": {
+      "privacy": "Integritet",
+      "terms": "Villkor",
+      "cookies": "Kakor"
+    }
+  },
+  "ai": {
+    "button": {
+      "label": "Fråga ACF-Agent",
+      "status": "AI-STYRNING · ONLINE"
+    },
+    "modal": {
+      "close": "×",
+      "beta": "BETA",
+      "title": "Fråga ACF",
+      "subtitle": "En chatbot som svarar på frågor baserat på ACF-standarden och styrningsinsikter",
+      "placeholder": "Fråga om ACF-styrning...",
+      "send": "Skicka",
+      "trending": {
+        "label": "TRENDANDE FRÅGOR",
+        "q1": "Vad är ACF-standarden?",
+        "q2": "Hur blir man ACF-certifierad?",
+        "q3": "Vad är DDA-rollen?",
+        "q4": "Vad är Suveränitetsscore?",
+        "q5": "De 4 Grundprinciperna?"
+      },
+      "disclaimer": "AI-experiment. Svar baserade på ACF-standarddokumentation.",
+      "seeMore": "Läs Mer"
+    }
+  },
+  "components": {
+    "src\\components\\home\\blog": {
+      "timely_writing_on_governance_deployments_and_case_": "Aktuella texter om styrning, implementeringar och fallstudier."
+    },
+    "src\\components\\home\\cta": {
+      "get_started_with_acf": "Kom igång med ACF"
+    },
+    "src\\components\\home\\ecosystem": {
+      "certified_governance_architects_and_implementation": "Certifierade styrningsarkitekter och implementeringsexperter.",
+      "companies_deploying_governed_agents_in_financial_h": "Företag som implementerar styrda agenter inom finansiella, hälsovårds- och offentliga sektorer.",
+      "integrations_with_major_ai_platforms_control_syste": "Integrationer med stora AI-plattformar, kontrollsystem och företagsprogramvara."
+    },
+    "src\\components\\home\\hero": {
+      "read_the_standard": "Läs standarden",
+      "the_global_standard_for": "Den globala standarden för"
+    },
+    "src\\components\\home\\layers": {
+      "adaptive_gating_matrix_multilevel_alerts_18_sovere": "Adaptiv portmatris, flernivålarm, 18 suveränitet-KPI:er, live-instrumentpaneler.",
+      "execution_amp_supervision": "Utförande & övervakning",
+      "governance_amp_sovereignty": "Styrning & suveränitet",
+      "sovereignty_charter_governance_committee_raci_matr": "Suveränitetsstadga, styrningskommitté, RACI-matris, karta över icke-delegerbara zoner."
+    },
+    "src\\components\\home\\maturity": {
+      "agents_decide_and_learn_maximum_governance_for_mat": "Agenter beslutar och lär sig. Maximal styrning. Endast för mogna organisationer.",
+      "agents_decide_within_strict_governance_nondelegabl": "Agenter beslutar inom strikt styrning. Icke-delegerbara zoner låsta.",
+      "fixed_rules_no_ml_human_intervention_for_any_modif": "Fasta regler, ingen ML. Mänsklig intervention för alla ändringar."
+    },
+    "src\\components\\home\\methodology": {
+      "assign_explicit_mandates_and_autonomy_levels": "Tilldela explicita mandat och autonominivåer",
+      "define_18_sovereignty_metrics_and_thresholds": "Definiera 18 suveränitetsmått och tröskelvärden",
+      "define_sovereignty_boundaries_raci_matrix_escalati": "Definiera suveränitetsgränser, RACI-matris, eskaleringsbehörighet",
+      "identify_decisions_only_humans_can_make": "Identifiera beslut som endast människor kan fatta",
+      "multilevel_alerts_and_human_decision_triggers": "Flernivålarm och mänskliga beslutsutlösare",
+      "quarterly_review_and_framework_evolution": "Kvartalsvis genomgång och ramverksutveckling",
+      "realtime_traceability_and_decision_logging": "Spårbarhet i realtid och beslutsloggning",
+      "set_agent_goals_constraints_and_success_metrics": "Sätt agentmål, begränsningar och framgångsmått",
+      "the_stepbystep_methodology_to_embed_acf_governance": "Den steg-för-steg-metodik för att integrera ACF-styrning i din agentbaserade infrastruktur."
+    },
+    "src\\components\\home\\principles": {
+      "certain_decisions_are_structurally_ethically_or_le": "Vissa beslut är strukturellt, etiskt eller juridiskt icke-automatiserbara. Den icke-delegeringsbara zonen är formellt definierad och tekniskt låst — aldrig konfigurerbar av agenterna själva.",
+      "four_immutable_axioms_defining_the_boundary_betwee": "Fyra oföränderliga axiom som definierar gränsen mellan mänsklig auktoritet och autonom agentexekvering.",
+      "traceability_amp_interruptibility": "Spårbarhet & Avbrytbarhet"
+    },
+    "src\\components\\home\\products": {
+      "products_integrations": "Produkter & Integrationer",
+      "sdks_connectors": "SDK:er & Kopplingar",
+      "tooling_connectors_and_governance_controls_to_oper": "Verktyg, kopplingar och styrningskontroller för att operationalisera agenter."
+    },
+    "src\\components\\home\\referencehome": {
+      "acf_certification_program": "ACF Certifieringsprogram",
+      "acf_control_governance_dashboard": "ACF Control — Styrningsinstrumentpanel",
+      "acf_practitioner_toolkit": "ACF Utövarverktygslåda",
+      "acf_score_sovereignty_metric": "ACF Score — Suveränitetsmått",
+      "acf_founder_message": "ACF — GRUNDARMEDDELANDE",
+      "ai_governance_online": "AI-STYRNING · ONLINE",
+      "adaptive_gating_system": "Adaptivt Grindningssystem",
+      "adaptive_gating_with_human_escalation": "Adaptiv grindning med mänsklig eskalering",
+      "agent_system_design": "Agentsystemdesign",
+      "agentic_commerce_framework": "Agentic Commerce Framework®",
+      "agents_already_decide": "Agenter Bestämmer Redan.",
+      "asia_amp_pacific": "Asien & Stillahavet",
+      "audit_amp_certification": "Revision & Certifiering",
+      "become_an_acf_partner": "Bli en ACF-Partner",
+      "composite_sovereignty_score_metric": "Sammansatt Suveränitetsmått",
+      "creator_agentic_commerce_framework": "Skapare, Agentic Commerce Framework®",
+      "criticality_matrix_nondelegable_zones": "Kriticitetsmatris. Icke-delegeringsbara zoner.",
+      "dda_role_framework": "DDA-Rollramverk",
+      "dashboard_amp_tools": "Instrumentpanel & Verktyg",
+      "download_the_acf_white_paper": "Ladda ner ACF-Vitboken",
+      "eu_ai_act_amp_agentic_systems": "EU AI-förordningen (EU AI Act) & Agentiska System",
+      "europe_middle_east_amp_africa": "Europa, Mellanöstern & Afrika",
+      "full_specification_free_for_registered_users": "Fullständig specifikation — gratis för registrerade användare.",
+      "get_acf_certified_first": "Bli ACF-Certifierad Först",
+      "global_standard_for_ai_governance": "Global Standard för AI-Styrning",
+      "governance_insights_framework_updates_and_agentic_": "Styrningsinsikter, ramverksuppdateringar och forskning om agentisk intelligens.",
+      "governance_insights_research_and_technical_documen": "Styrningsinsikter, forskning och teknisk dokumentation.",
+      "how_the_eu_ai_act_applies_to_agentic_systems_in_20_1": "Hur EU AI-förordningen Tillämpas på Agentiska System 2026",
+      "how_to_get_acf_certified": "Hur blir man ACF-certifierad?",
+      "in_2026_autonomous_agents_are_already_executing_de": "År 2026 utför redan autonoma agenter beslut i kommersiella miljöer — sätter priser, kvalificerar leads, behandlar anspråk, hanterar kontrakt. De flesta organisationer har inget ramverk för att styra dem.",
+      "independent_certification_attesting_compliance_wit": "Oberoende certifiering som intygar efterlevnad av ACF:s styrningsstandard. Offentligt verifierbar.",
+      "join_the_acf_practitioner_network_and_offer_govern": "Gå med i ACF Practitioner-nätverket och erbjud styrningstjänster till dina kunder.",
+      "kill_switch_protocol": "Kill Switch-protokoll",
+      "latest_from_the_acf_blog": "Senaste från ACF-bloggen",
+      "mission_amp_values": "Uppdrag & Värderingar",
+      "monthly_reviews_annual_compliance_audit": "Månatliga granskningar. Årlig efterlevnadsrevision.",
+      "north_amp_latin_america": "Nord- & Latinamerika",
+      "realtime_governance_dashboard_monitoring_your_18_s": "Realtidsstyrningsdashboard som övervakar dina 18 Suveränitet-KPI:er med adaptiv gating och automatiserad eskalering.",
+      "sandboxing_reversibility_plan_kill_switch_design": "Sandlådning, återställningsplan. Kill switch-design.",
+      "security_amp_reversibility": "Säkerhet & Återställbarhet",
+      "select_your_region_and_language": "Välj din region och språk",
+      "sovereignty_score_calculation_risk_zone_mapping": "Beräkning av Suveränitetspoäng. Kartläggning av riskzoner.",
+      "the_acf_ecosystem": "ACF-ekosystemet",
+      "the_dda_role_explained": "DDA-rollen förklarad",
+      "the_dda_is_the_legal_guardian_of_your_autonomous_a_1": "DDA är den juridiska vårdnadshavaren för dina autonoma agenter. Hur man skapar och bemyndigar denna kritiska roll.",
+      "the_definitive_governance_methodology_for_agentic__1": "Den definitiva styrningsmetodiken för agentiska system i kommersiella miljöer.",
+      "the_story_mission_and_legal_protection_behind_the_": "Historien, uppdraget och det juridiska skyddet bakom Agentic Commerce Framework®.",
+      "three_complementary_products_operationalizing_the_": "Tre kompletterande produkter som operationaliserar ACF-standarden.",
+      "three_tools_operationalizing_the_acf_standard_acro": "Tre verktyg som operationaliserar ACF-standarden över hela din organisation.",
+      "traçabilité_amp_interruptibilité": "Spårbarhet & Avbrytbarhet",
+      "vincent_dorange_creator": "Vincent DORANGE — Skapare",
+      "what_is_the_acf_sovereignty_score": "Vad är ACF Suveränitetsskåret?",
+      "what_is_the_acf_standard": "Vad är ACF-standarden?",
+      "what_is_the_dda_role": "Vad är DDA-rollen?",
+      "what_is_the_sovereignty_score": "Vad är Suveränitetsskåret?",
+      "zones_non_délégables": "Icke-Delegeringsbara Zoner"
+    },
+    "src\\components\\home\\videosection": {
+      "see_acf_in_action": "Se ACF i Aktion"
+    },
+    "src\\components\\layout\\megamenu": {
+      "acf_control_demo": "ACF Kontroll Demo",
+      "audit_reporting": "Revision & Rapportering",
+      "become_an_acf_governance_expert": "Bli en expert på ACF-styrning.",
+      "blog_insights": "Blogg & Insikter",
+      "events_workshops": "Event & Workshops",
+      "find_certified_partners_in_your_region": "Hitta certifierade partner i din region.",
+      "full_specification_and_research_foundations": "Fullständig specifikation och forskningsgrunder.",
+      "realtime_governance_monitoring_platform_for_autono_1": "Realtidsplattform för styrningsövervakning av autonoma agentoperationer.",
+      "research_innovation": "Forskning & Innovation",
+      "see_realtime_governance_in_action": "Se realtidsstyrning i aktion.",
+      "the_story_mission_and_vision_behind_the_agentic_co_1": "Berättelsen, uppdraget och visionen bakom Agentic Commerce Framework-standarden.",
+      "training_certification_and_knowledge_resources_for_1": "Utbildning, certifiering och kunskapsresurser för styrningsimplementering."
+    },
+    "src\\components\\ui\\aiwidget": {
+      "the_dda_delegated_decision_authority_is_the_named_": "DDA — Delegated Decision Authority — är den utsedda individ som ansvarar för slutgiltiga beslut."
+    }
+  },
+  "pages": {
+    "home": {
+      "acf_agentic_commerce_framework": "ACF — Agentic Commerce Framework®",
+      "central_amp_eastern_europe": "Central- & Östeuropa",
+      "login_to_partner_portal": "Logga in på Partnerportalen",
+      "middle_east_amp_africa": "Mellanöstern & Afrika",
+      "nordic_amp_baltic": "Norden & Baltikum",
+      "based_in_france_he_works_with_smes_midcap_companie": "Baserad i Frankrike arbetar han med små och medelstora företag, mid-cap-bolag och stora koncerner inom områden som digital transformation, AI-styrning och utvecklingen av affärsmodeller i eran av autonoma system.",
+      "education_training": "Utbildning & Träning",
+      "executive_education_research": "Chefsutbildning & Forskning",
+      "founder_agentic_governance": "Grundare · Agentic Governance",
+      "global_standard_for_ai_governance": "GLOBAL STANDARD FÖR AI-STYRNING",
+      "the_governance_standard_for_organizations_deployin": "Styrningsstandarden för organisationer som implementerar autonoma AI-agenter.",
+      "your_strategic_control_over_automated_decisions_is": "Din strategiska kontroll över automatiserade beslut är icke-förhandlingsbar.",
+      "acf_academy_core_track": "ACF Academy Grundkurs",
+      "annual_audit_required_to_maintain_certification_ce": "Årlig revision krävs för att upprätthålla certifiering. Certifierade organisationer visar ACF TRUST™-märket på sina digitala kontaktytor.",
+      "autonomy_amplifies_clarity_decisions_are_governed_": "Autonomi förstärker tydlighet. Beslut styrs. Människor har kommandot. Varje handling är spårbar, reversibel, ansvarig.",
+      "autonomy_amplifies_errors_agents_optimize_locally_": "Autonomi förstärker fel. Agenter optimerar lokalt, förstör värde globalt. Inget revisionsspår. Inget ansvar. Ingen väg tillbaka.",
+      "certification_academy": "CERTIFIERING & AKADEMI",
+      "certify_the_trust": "Certifiera Förtroendet.",
+      "dedicated_acf_team": "Dedikerat ACF-team",
+      "deliver_acf_implementations": "Leverera ACF-implementeringar",
+      "deploy_acf_at_enterprise_scale": "Distribuera ACF i företagsskala",
+      "deploy_acf_tools": "Distribuera ACF-verktyg",
+      "for_ceos_comex_board_members": "För VD:ar, COMEX & styrelsemedlemmar",
+      "for_agencies_and_consulting_firms": "För byråer och konsultföretag.",
+      "for_consultants_product_leaders_architects": "För konsulter, produktledare, arkitekter.",
+      "for_major_firms_and_system_integrators": "För stora företag och systemintegratörer.",
+      "govern_the_agents": "Styr agenterna.",
+      "it_trains_them_to_govern_autonomous_systems": "Det tränar dem att styra autonoma system.",
+      "learn_to_govern": "Lär dig att styra",
+      "learn_to_govern_1": "Lär dig att styra",
+      "manual_selection_by_acf": "Manuellt urval av ACF",
+      "no_certification_here_just_one_thing_they_leave_re": "Ingen certifiering här. Bara en sak: de lämnar ansvarsfulla.",
+      "prove_your_governance": "Bevisa din styrning",
+      "run_acf_diagnostics": "Kör ACF-diagnostik",
+      "sell_acf_control": "Sälj ACF Control",
+      "start_the_academy": "Starta akademin",
+      "when_you_see_the_acf_trust_badge_you_know": "När du ser ACF TRUST™-märket vet du:",
+      "you_operate_on_projects": "Du arbetar med projekt.",
+      "you_scale_delivery": "Du skalar leverans.",
+      "you_shape_the_ecosystem": "Du formar ekosystemet.",
+      "acf_control_investment": "ACF KONTROLLINVESTERING",
+      "agent_stability_scores": "AGENTSSTABILITETSVÄRDEN",
+      "agent_operator_view": "Agentoperatörsvy",
+      "agentic_commerce_framework_all_rights_reserved": "Agentic Commerce Framework® — Alla rättigheter förbehållna.",
+      "all_agents_will_be_suspended_upon_confirmation_act": "Alla agenter kommer att suspenderas vid bekräftelse. Åtgärd loggad.",
+      "annual_consultant_license_acf_certification_requir": "Årlig konsultlicens. ACF-certifiering krävs för klientåtkomst.",
+      "certified_partner_program": "CERTIFIERAT PARTNERPROGRAM",
+      "cost_of_ai_drift": "KOSTNAD FÖR AI-DRIFT",
+      "calculate_your_acf_score": "Beräkna ditt ACF-värde",
+      "certified_consultant_view": "Certifierad konsultvy",
+      "decision_governance_os": "BESLUTSSTYRNINGS-OS",
+      "drift_detection_stockai": "DRIFTDETEKTERING — STOCK-AI",
+      "distribution_decision_traffic_treasury": "Distribution · Beslut · Trafik · Ekonomi",
+      "eu_ai_act_fines": "EU AI-FÖRORDNING (EU AI Act) BÖTER",
+      "each_module_serves_one_purpose_keeping_humans_in_c": "Varje modul tjänar ett syfte: att hålla människor i kommando över maskimbeslut.",
+      "impact_frequency_irreversibility": "Påverkan × Frekvens × Irreversibilitet.",
+      "live_governance_system": "LIVE STYRNINGSSYSTEM",
+      "minimum_viable_supervision": "Minimum funktionsduglig övervakning",
+      "risk_without_governance": "RISK UTAN STYRNING",
+      "suspend_all_autonomous_agents_full_degraded_mode_w": "Avbryt ALLA autonoma agenter. Fullständigt degraderat läge inom 60 sekunder.",
+      "you_stay_in_control": "Du behåller kontrollen.",
+      "your_agents_decide": "Dina agenter bestämmer.",
+      "are_we_sovereign_today_1": "Är vi suveräna idag?",
+      "client_demo_org": "Klient: Demo Org",
+      "affiliate_referral_partner": "Affiliate — Remisspartner",
+      "certified_deploy_train": "Certifierad — Implementera & utbilda",
+      "commission_on_every_acf_score_control_license_and_": "Provision på varje ACF Score, Control-licens och certifiering som implementeras genom ditt nätverk.",
+      "deploy_the_standard": "Implementera standarden.",
+      "deploy_the_standard_1": "Implementera standarden",
+      "direct_access_to_acf_team_dedicated_onboarding_qua": "Direkt tillgång till ACF-teamet. Dedikerad introduktion, kvartalsvisa genomgångar och eskaleringsväg.",
+      "full_access_to_acf_academy_training_modules_train_": "Full tillgång till ACF Academy utbildningsmoduler. Utbilda ditt team, sedan dina klienter.",
+      "join_the_network": "Gå med i nätverket",
+      "partner_portal_login": "Partnerportal inloggning",
+      "realtime_data_on_deployments_certifications_revenu": "Realtidsdata om implementeringar, certifieringar, intäkter. Full insyn i din portfölj.",
+      "scale_the_trust": "Skala förtroendet.",
+      "secure_your_geographical_zone_one_region_one_partn": "Säkra din geografiska zon. En region, en partner. Ingen konkurrens — endast samarbete.",
+      "sign_in_with_your_partner_credentials": "Logga in med dina partneruppgifter",
+      "strategic_partners_who_share_the_mission": "Strategiska partners som delar uppdraget.",
+      "strategic_enterprise_alliance": "Strategisk — Företagsallians",
+      "the_network_is_yours": "Nätverket är ditt.",
+      "united_arab_emirates": "Förenade Arabemiraten",
+      "use_the_acf_partner_badge_your_brand_backed_by_the": "Använd ACF Partner-märket. Ditt varumärke, stödd av den globala styrningsstandarden.",
+      "why_do_you_want_to_become_an_acf_partner": "Varför vill du bli ACF Partner?",
+      "acf_score_is_the_official_diagnostic_tool_of_the_a_1": "ACF Score® är det officiella diagnostikverktyget för Agentic Commerce Framework. Gratis, omedelbart och handlingskraftigt.",
+      "acf_score_sovereignty_metric_agentic_commerce_fram": "ACF Score® — Suveränitetsmått | Agentic Commerce Framework",
+      "ai_decisions_against_your_business_interests": "AI-beslut som strider mot dina affärsintressen",
+      "agents_setting_prices_and_promotions_without_bound_1": "Agenter som sätter priser och kampanjer utan gränser kan förstöra lönsamheten på några timmar.",
+      "control_supervision": "Kontroll & övervakning",
+      "critical_platform_dependency": "Kritiskt plattformsberoende",
+      "critical_supplier_mapping_platform_risk_exposure_a": "Kritisk leverantörskartläggning, plattformsriskexponering och enskilda felpunkter.",
+      "diagnostic_tool_free": "DIAGNOSTIKVERKTYG — GRATIS",
+      "eu_ai_act_gdpr_and_sectorspecific_regulatory_align": "EU:s AI-lag (EU AI Act), GDPR och sektorspecifik bedömning av regelefterlevnad.",
+      "evaluates_the_technical_infrastructure_traceabilit": "Utvärderar den tekniska infrastrukturen: spårbarhet, revisionsloggar, sandlådemiljöer, återställningsmekanismer och åtkomstkontroll för dina AI-system.",
+      "evaluates_your_capacity_to_monitor_intervene_and_s_1": "Utvärderar din förmåga att övervaka, ingripa och stoppa autonoma agentoperationer när som helst genom dina nödstoppsprotokoll.",
+      "full_pdf_report": "Fullständig PDF-rapport",
+      "global_acf_score": "Global ACF® Score",
+      "governance_decision_policy_agent_system_and_execut": "Styrning, beslutspolicy, agentsystem och verkställighetsövervakningslager.",
+      "how_your_agents_currently_operate_from_assisted_to": "Hur dina agenter för närvarande fungerar — från assisterade till fullt autonoma.",
+      "inability_to_steer_audit_or_correct_your_ai_system": "Oförmåga att styra, granska eller korrigera dina AI-system i realtid när beslut går fel.",
+      "kill_switch_readiness_audit_trail_quality_and_huma": "Nödstoppsberedskap, revisionsspårkvalitet och mänskliga eskaleringsprotokoll.",
+      "legal_liability_on_automated_decisions": "Juridiskt Ansvar för Automatiserade Beslut",
+      "loss_of_strategic_control": "Förlust av Strategisk Kontroll",
+      "margin_erosion_via_uncontrolled_pricing": "Marginalerosion via Okontrollerad Prissättning",
+      "measures_alignment_with_eu_ai_act_gdpr_and_sectors": "Mäter överensstämmelse med EU:s AI-förordning (EU AI Act), GDPR och sektorspecifika regleringar som styr användningen av autonoma system i kommersiella miljöer.",
+      "measures_the_degree_to_which_your_ai_agents_make_d_1": "Mäter i vilken grad era AI-agenter fattar beslut självständigt — och huruvida dessa beslut håller sig inom definierade gränser.",
+      "result_in_10_minutes": "Resultat på 10 minuter",
+      "sector_company_size_current_ai_agent_usage_and_dep": "Sektor, företagsstorlek, nuvarande AI-agentanvändning och implementeringsomfattning.",
+      "without_agentic_governance_you_risk": "Utan Agentisk Styrning Riskerar Ni:",
+      "without_traceability_you_cannot_understand_explain_1": "Utan spårbarhet kan ni inte förstå, förklara eller korrigera vad era AI-agenter har gjort.",
+      "your_complete_governance_report": "Er Kompletta Styrningsrapport",
+      "your_score_report": "Ert Resultat & Rapport",
+      "blog_recherche": "BLOGG & FORSKNING",
+      "diagnostic_gratuit_en_10_minutes_score_immédiat_ra": "Gratis diagnos på 10 minuter. Omedelbart resultat. PDF-rapport.",
+      "fondateur_acf_ai_consulting": "Grundare ACF® · AI CONSULTING",
+      "la_couche_politique_transforme_les_principes_de_go": "Politikskiktet transformerar styrningsprinciper till operativa regler. Det formaliserar vad agenterna kan och inte kan göra, med vilka begränsningar och under vilka förhållanden.",
+      "le_score_acf_mesure_précisément_cet_équilibre_entr": "ACF®-resultatet mäter exakt denna balans mellan agentisk autonomi och styrningskontroll. Organisationer med de högsta resultaten är inte de mest konservativa — de är de mest strukturerade.",
+      "les_organisations_qui_attendent_la_mise_en_applica": "Organisationer som väntar på tillämpning för att strukturera sin agentiska styrning tar en avsevärd risk. Efterlevnad kräver tid: kartlägga agenter, definiera policyer, implementera tekniska kontroller och utbilda team.",
+      "les_organisations_qui_gouvernent_leurs_agents_ia_n": "Organisationer som styr sina AI-agenter är inte långsammare. De är snabbare — eftersom",
+      "founder_author_of_acf": "Grundare & Författare av ACF®",
+      "publisher_of_the_agentic_commerce_framework": "Utgivare av Agentic Commerce Framework®",
+      "request_an_assessment": "Begär en utvärdering",
+      "we_typically_respond_within_24_business_hours": "Vi svarar vanligtvis inom 24 arbetstimmar.",
+      "créateur_du_framework": "Skapare av ramverket",
+      "le_responsable_du_traitement_des_données_personnel": "Ansvarig för behandling av personuppgifter är AI CONSULTING, SASU, 38 Bis Boulevard Victor Hugo, 06000 Nice, Frankrike. Kontakt: via webbplatsens kontaktsida.",
+      "politique_de_confidentialité": "Integritetspolicy",
+      "acf_operating_system": "ACF-operativsystem",
+      "agents_traceability_kill_switch": "Agenter · Spårbarhet · Nödstoppsknapp",
+      "autonomous_systems_do_not_create_chaos": "Autonoma system skapar inte kaos.",
+      "five_integrated_tools_one_closedloop_system_diagno": "Fem integrerade verktyg. Ett slutet system. Diagnostisera → Träna → Övervaka → Certifiera → Skala.",
+      "leadership_strategy_accountability": "Ledarskap · Strategi · Ansvarsskyldighet",
+      "monitoring_incidents_sovereignty": "Övervakning · Incidenter · Suveränitet",
+      "organizations_must_evolve_from_managing_software_t": "Organisationer måste utvecklas från att hantera programvara till att styra beslutssystem.",
+      "organizations_spent_the_last_decade_adopting_ai_go": "Organisationer har ägnat det senaste decenniet åt att implementera AI. Styrningsmodellerna utvecklades aldrig.",
+      "read_the_research": "Läs forskningen",
+      "rules_constraints_ethical_guardrails": "Regler · Begränsningar · Etiska skyddsmekanism",
+      "the_governance_framework": "STYRNINGSRAMVERKET",
+      "the_agent_governance_loop": "Agentstyrningsloopen",
+      "the_agentic_commerce_framework_provides_the_struct": "Agentic Commerce Framework® tillhandahåller den struktur som krävs för att göra det.",
+      "the_governance_standard": "Styrningsstandarden",
+      "the_first_governance_architecture_for_autonomous_d": "Den första styrningsarkitekturen för autonoma beslutssystem.",
+      "the_framework_defines_how_organizations": "Ramverket definierar hur organisationer:",
+      "when_this_shift_occurs_without_structured_governan": "När denna förändring sker utan strukturerad styrning förlorar organisationer synlighet och kontroll över sina egna operativa beslut. Konsekvenserna är inte teoretiska:",
+      "who_decides_authority_constitution": "Vem bestämmer · Auktoritet · Konstitution"
+    }
+  }
+}

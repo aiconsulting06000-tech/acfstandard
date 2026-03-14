@@ -1,7 +1,9 @@
 'use client'
 import React, { useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 
 export default function StatsBar(){
+  const t = useTranslations()
   useEffect(()=>{
     const items = [{id:'c1',val:4},{id:'c2',val:18},{id:'c3',val:17},{id:'c4',val:100}]
     function run(){
@@ -24,10 +26,10 @@ export default function StatsBar(){
   return (
     <div className="sbar" id="statsbar">
       <div className="sgrid grid grid-cols-1 md:grid-cols-4 gap-2">
-        <div className="sc2"><div className="scw"><span className="ctr" id="c1">0</span></div><div className="slbl">Operational Layers</div></div>
-        <div className="sc2"><div className="scw"><span className="ctr" id="c2">0</span></div><div className="slbl">Sovereignty KPIs</div></div>
-        <div className="sc2"><div className="scw"><span className="ctr" id="c3">0</span></div><div className="slbl">Proprietary Tools</div></div>
-        <div className="sc2"><div className="scw"><span className="ctr" id="c4">0</span><span className="csuf">%</span></div><div className="slbl">Human Sovereignty</div></div>
+        <div className="sc2"><div className="scw"><span className="ctr" id="c1">0</span></div><div className="slbl">{t('statsBar.layers.label')}</div></div>
+        <div className="sc2"><div className="scw"><span className="ctr" id="c2">0</span></div><div className="slbl">{t('statsBar.kpis.label')}</div></div>
+        <div className="sc2"><div className="scw"><span className="ctr" id="c3">0</span></div><div className="slbl">{t('statsBar.tools.label')}</div></div>
+        <div className="sc2"><div className="scw"><span className="ctr" id="c4">0</span><span className="csuf">{t('statsBar.sovereignty.suffix')}</span></div><div className="slbl">{t('statsBar.sovereignty.label')}</div></div>
       </div>
     </div>
   )

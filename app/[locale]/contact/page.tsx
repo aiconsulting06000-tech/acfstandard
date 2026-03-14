@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    ACF CONTACT
@@ -24,11 +25,25 @@ function Badge({ children }: { children: React.ReactNode }) {
 
 export default function ACFContactPage() {
   const [sent, setSent] = useState(false);
+  const t = useTranslations();
 
   const inputStyle: React.CSSProperties = {
     width: "100%", padding: "12px 16px", borderRadius: 10, fontSize: 14, fontFamily: "'Inter', sans-serif",
     background: C.navy3, border: `1px solid ${C.bd1}`, color: "#fff", outline: "none", transition: "border-color .3s",
   };
+
+  const quickLinks = [
+    { icon: "📊", label: t("products.score.cta"), href: "https://www.acf-score.com/calculator" },
+    { icon: "🛡️", label: t("products.certification.cta"), href: "/en/acf-certification" },
+    { icon: "🤝", label: t("megaMenu.partners.become.apply"), href: "/en/acf-partners" },
+    { icon: "📖", label: t("footer.framework.theStandard"), href: "/en/" },
+  ];
+
+  const footerColumns = [
+    { title: t("footer.framework.title"), links: [{ label: t("footer.framework.theStandard"), href: "/en/" }, { label: t("footer.framework.methodology"), href: "/en/#methodology" }, { label: t("footer.products.certification"), href: "/en/acf-certification" }] },
+    { title: t("footer.products.title"), links: [{ label: t("footer.products.score"), href: "https://www.acf-score.com" }, { label: t("footer.products.control"), href: "/en/acf-control" }, { label: t("footer.products.academy"), href: "/en/acf-certification#academy" }] },
+    { title: t("footer.organization.title"), links: [{ label: t("footer.organization.partnerPortal"), href: "/en/acf-partners" }, { label: t("footer.organization.about"), href: "/en/about" }, { label: t("footer.organization.contact"), href: "/en/contact" }, { label: t("footer.organization.legal"), href: "/en/legal" }] },
+  ];
 
   return (
     <div style={{ minHeight: "100vh", background: C.navy1, color: "#fff", fontFamily: "'Inter', sans-serif" }}>
@@ -50,13 +65,13 @@ export default function ACFContactPage() {
             <div style={{ width: 40, height: 40, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1 }}>ACF</div>
             <div>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>ACF STANDARD</div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>CONTACT</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>{t("nav.contact")}</div>
             </div>
           </a>
           <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
             <a href="/en/" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Home</a>
-            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, transition: "all .3s", display: "inline-block" }}>Get Your Score →</a>
+              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{t("common.backToHome")}</a>
+            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, transition: "all .3s", display: "inline-block" }}>{t("products.score.cta")}</a>
           </div>
         </div>
       </nav>
@@ -64,12 +79,12 @@ export default function ACFContactPage() {
       {/* HERO */}
       <section style={{ paddingTop: 120, paddingBottom: 40, textAlign: "center" }}>
         <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px" }}>
-          <div className="fade-up"><Badge>GET IN TOUCH</Badge></div>
+          <div className="fade-up"><Badge>{t("nav.contact")}</Badge></div>
           <h1 className="fade-up-d2" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 44, fontWeight: 800, lineHeight: 1.1, marginTop: 24, marginBottom: 16, letterSpacing: "-1px" }}>
-            Let's talk <span style={{ color: C.gold }}>governance</span>
+            Let&apos;s talk <span style={{ color: C.gold }}>{t("hero.typing.word1")}</span>
           </h1>
           <p style={{ fontSize: 16, color: C.gray2, lineHeight: 1.7, maxWidth: 500, margin: "0 auto" }}>
-            Whether you need an assessment, want to become a partner, or have questions about the framework — we're here.
+            {t("megaMenu.about.howWeWork.contact")}
           </p>
         </div>
       </section>
@@ -82,7 +97,7 @@ export default function ACFContactPage() {
           {!sent ? (
             <div style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 20, padding: 40 }}>
               <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, fontWeight: 700, color: "#fff", marginBottom: 4 }}>Send us a message</h2>
-              <p style={{ fontSize: 13, color: C.gray, marginBottom: 28 }}>We typically respond within 24 business hours.</p>
+              <p style={{ fontSize: 13, color: C.gray, marginBottom: 28 }}>{t("pages.home.we_typically_respond_within_24_business_hours")}</p>
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
                 <div>
@@ -109,7 +124,7 @@ export default function ACFContactPage() {
                 <label style={{ display: "block", fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 8 }}>Subject <span style={{ color: "#ef4444" }}>*</span></label>
                 <select style={{ ...inputStyle, appearance: "none", cursor: "pointer" }} onFocus={e => e.target.style.borderColor = C.goldBorder} onBlur={e => e.target.style.borderColor = C.bd1}>
                   <option value="" style={{ background: C.navy1 }}>Select a topic...</option>
-                  <option value="assessment" style={{ background: C.navy1 }}>Request an Assessment</option>
+                  <option value="assessment" style={{ background: C.navy1 }}>{t("pages.home.request_an_assessment")}</option>
                   <option value="partnership" style={{ background: C.navy1 }}>Partnership Inquiry</option>
                   <option value="certification" style={{ background: C.navy1 }}>Certification Question</option>
                   <option value="enterprise" style={{ background: C.navy1 }}>Enterprise / ACF Control</option>
@@ -142,9 +157,9 @@ export default function ACFContactPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             {/* Company card */}
             <div style={{ background: C.navy3, border: `1px solid ${C.goldBorder}`, borderRadius: 16, padding: 32 }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 16 }}>Organization</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 16 }}>{t("footer.organization.title")}</div>
               <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, fontWeight: 700, color: "#fff", marginBottom: 4 }}>AI CONSULTING</h3>
-              <p style={{ fontSize: 13, color: C.gray, marginBottom: 20 }}>Publisher of the Agentic Commerce Framework®</p>
+              <p style={{ fontSize: 13, color: C.gray, marginBottom: 20 }}>{t("pages.home.publisher_of_the_agentic_commerce_framework")}</p>
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                 <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
                   <span style={{ color: C.gold, fontSize: 16, marginTop: 1, flexShrink: 0 }}>📍</span>
@@ -168,12 +183,7 @@ export default function ACFContactPage() {
             <div style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 16, padding: 28 }}>
               <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 16 }}>Quick Actions</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                {[
-                  { icon: "📊", label: "Get your free ACF Score®", href: "https://www.acf-score.com/calculator" },
-                  { icon: "🛡️", label: "View certification programs", href: "/en/acf-certification" },
-                  { icon: "🤝", label: "Become a partner", href: "/en/acf-partners" },
-                  { icon: "📖", label: "Read the standard", href: "/en/" },
-                ].map(a => (
+                {quickLinks.map(a => (
                   <a key={a.label} href={a.href} style={{
                     display: "flex", alignItems: "center", gap: 12, padding: "12px 14px",
                     background: C.navy1, border: `1px solid ${C.bd1}`, borderRadius: 10,
@@ -191,14 +201,14 @@ export default function ACFContactPage() {
 
             {/* Founder */}
             <div style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 16, padding: 28 }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 16 }}>Created By</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 16 }}>{t("pages.home.créateur_du_framework")}</div>
               <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
                 <div style={{ width: 48, height: 48, borderRadius: 12, background: C.goldDim, border: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 800, color: C.gold }}>VD</span>
                 </div>
                 <div>
                   <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 700, color: "#fff" }}>Vincent DORANGE</div>
-                  <div style={{ fontSize: 13, color: C.gray }}>Founder & Author of ACF®</div>
+                  <div style={{ fontSize: 13, color: C.gray }}>{t("pages.home.founder_author_of_acf")}</div>
                 </div>
               </div>
             </div>
@@ -214,17 +224,13 @@ export default function ACFContactPage() {
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 13, color: C.navy1, letterSpacing: 1 }}>ACF</div>
                 <div>
-                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff" }}>Agentic Commerce Framework®</div>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase" }}>GLOBAL STANDARD FOR AI GOVERNANCE</div>
+                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff" }}>{t("footer.logoText")}</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase" }}>{t("footer.logoSubtext")}</div>
                 </div>
               </div>
-              <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 320 }}>The governance standard for organizations deploying autonomous AI agents.</p>
+              <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 320 }}>{t("footer.description")}</p>
             </div>
-            {[
-              { title: "Framework", links: [{ label: "The Standard", href: "/en/" }, { label: "Methodology", href: "/en/#methodology" }, { label: "ACF Certification", href: "/en/acf-certification" }] },
-              { title: "Products", links: [{ label: "ACF Score", href: "https://www.acf-score.com" }, { label: "ACF Control", href: "/en/acf-control" }, { label: "Academy", href: "/en/acf-certification#academy" }] },
-              { title: "Organization", links: [{ label: "Partner Portal", href: "/en/acf-partners" }, { label: "About", href: "/en/about" }, { label: "Contact", href: "/en/contact" }, { label: "Legal", href: "/en/legal" }] },
-            ].map(col => (
+            {footerColumns.map(col => (
               <div key={col.title}>
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 20 }}>{col.title}</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -234,7 +240,7 @@ export default function ACFContactPage() {
             ))}
           </div>
           <div style={{ borderTop: `1px solid ${C.bd1}`, padding: "20px 0", textAlign: "center" }}>
-            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved.</p>
+            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>{t("footer.copyright")}</p>
           </div>
         </div>
       </footer>

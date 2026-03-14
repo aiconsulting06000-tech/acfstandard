@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    ACF CONTROL — Decision Governance Operating System
@@ -138,6 +139,7 @@ function ModuleCard({ id, title, subtitle, icon, children }: { id: string; title
    MAIN COMPONENT
    ═══════════════════════════════════════════════════ */
 export default function ACFControlPage() {
+  const t = useTranslations();
   const [activeTab, setActiveTab] = useState("ceo");
   const [killArmed, setKillArmed] = useState(false);
   const [clock, setClock] = useState(new Date());
@@ -168,7 +170,12 @@ export default function ACFControlPage() {
   const isKill = alertPhase === 3;
   const isRecovery = alertPhase === 4;
 
-  const navLinks = ["Modules", "Drift Engine", "Dashboard", "Risks"];
+  const navLinks = [
+    { label: t("acfControl.navModules"), id: "modules" },
+    { label: t("acfControl.navDriftEngine"), id: "drift-engine" },
+    { label: t("acfControl.navDashboard"), id: "dashboard" },
+    { label: t("acfControl.navRisks"), id: "risks" },
+  ];
 
   return (
     <div style={{ minHeight: "100vh", background: C.navy1, color: "#fff", fontFamily: "'Inter', sans-serif" }}>
@@ -200,21 +207,21 @@ export default function ACFControlPage() {
               background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1,
             }}>ACF</div>
             <div>
-              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>ACF CONTROL</div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>DECISION GOVERNANCE OS</div>
+              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>{t("acfControl.navTitle")}</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>{t("acfControl.navSubtitle")}</div>
             </div>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
             <a href="/en/" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Back to Standard</a>
+              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{t("acfControl.navBack")}</a>
             {navLinks.map(l => (
-              <a key={l} href={`#${l.toLowerCase().replace(" ", "-")}`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-                onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l}</a>
+              <a key={l.id} href={`#${l.id}`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+                onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l.label}</a>
             ))}
             <button className="gold-glow" style={{
               background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
               border: "none", padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, cursor: "pointer", transition: "all .3s",
-            }}>Request a Demo</button>
+            }}>{t("acfControl.navRequestDemo")}</button>
           </div>
         </div>
       </nav>
@@ -227,36 +234,36 @@ export default function ACFControlPage() {
             <div className="fade-up">
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, marginBottom: 24 }}>
                 <Pulse color="green" />
-                <Badge>LIVE GOVERNANCE SYSTEM</Badge>
+                <Badge>{t("acfControl.heroBadge")}</Badge>
               </div>
 
               <h1 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 52, fontWeight: 800, lineHeight: 1.08, marginBottom: 24, letterSpacing: "-1px" }}>
-                <span style={{ color: "#fff" }}>Your agents decide.</span><br />
-                <span style={{ color: C.gold }}>You stay in control.</span>
+                <span style={{ color: "#fff" }}>{t("acfControl.heroTitle1")}</span><br />
+                <span style={{ color: C.gold }}>{t("acfControl.heroTitle2")}</span>
               </h1>
 
               <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.7, marginBottom: 32, maxWidth: 480 }}>
-                ACF Control is the <strong style={{ color: "#fff" }}>decision governance operating system</strong> for organizations deploying autonomous AI agents. Detect drift, classify incidents, intervene instantly.
+                {t("acfControl.heroDescPre")}<strong style={{ color: "#fff" }}>{t("acfControl.heroDescBold")}</strong>{t("acfControl.heroDescPost")}
               </p>
 
               <div style={{ display: "flex", gap: 12, marginBottom: 32 }}>
                 <button className="gold-glow" style={{
                   background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
                   border: "none", padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, cursor: "pointer", transition: "all .3s",
-                }}>Book a Demo →</button>
+                }}>{t("acfControl.heroBookDemo")}</button>
                 <button style={{
                   background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
                   padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 500, cursor: "pointer", transition: "all .3s",
                 }}
                   onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
                   onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}
-                >Watch Demo</button>
+                >{t("acfControl.heroWatchDemo")}</button>
               </div>
 
               <div style={{ display: "flex", gap: 24, fontSize: 12, color: C.gray }}>
-                {["GDPR Compliant", "EU AI Act Ready", "Kill Switch 60s"].map(t => (
-                  <span key={t} style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                    <span style={{ color: C.green }}>✓</span> {t}
+                {[t("acfControl.heroBadge1"), t("acfControl.heroBadge2"), t("acfControl.heroBadge3")].map(item => (
+                  <span key={item} style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                    <span style={{ color: C.green }}>✓</span> {item}
                   </span>
                 ))}
               </div>
@@ -277,7 +284,7 @@ export default function ACFControlPage() {
                   <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                     <Pulse color={isAlert || isKill ? "red" : "green"} />
                     <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: isAlert || isKill ? C.red : C.gray, letterSpacing: ".1em", transition: "color .5s" }}>
-                      {isKill ? "⚠ KILL SWITCH ACTIVE" : isAlert ? "🚨 CRITICAL ALERT" : "ACF CONTROL — LIVE"}
+                      {isKill ? t("acfControl.dashKillActive") : isAlert ? t("acfControl.dashCriticalAlert") : t("acfControl.dashLive")}
                     </span>
                   </div>
                   <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: isAlert || isKill ? C.red : C.gold }}>{timeStr}</span>
@@ -288,7 +295,7 @@ export default function ACFControlPage() {
                   background: C.navy3, borderRadius: 12, padding: 16, marginBottom: 12, border: `1px solid ${isAlert ? "rgba(239,68,68,.3)" : C.bd1}`,
                   transition: "border-color .5s",
                 }}>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 8 }}>Sovereignty Score</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 8 }}>{t("acfControl.dashSovereigntyScore")}</div>
                   <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
                     <span style={{
                       fontFamily: "'Space Grotesk', sans-serif", fontSize: 44, fontWeight: 800,
@@ -300,7 +307,7 @@ export default function ACFControlPage() {
                       fontSize: 11, marginLeft: "auto", transition: "color .5s",
                       color: alertPhase === 0 || isRecovery ? C.green : C.red,
                     }}>
-                      {alertPhase === 0 || isRecovery ? "▲ +3.2 (30d)" : isKill ? "⬛ SUSPENDED" : "▼ −33 CRITICAL"}
+                      {alertPhase === 0 || isRecovery ? t("acfControl.dashTrendUp") : isKill ? t("acfControl.dashSuspended") : t("acfControl.dashTrendDown")}
                     </span>
                   </div>
                   <div style={{ width: "100%", height: 4, background: C.navy1, borderRadius: 4, marginTop: 8 }}>
@@ -339,30 +346,30 @@ export default function ACFControlPage() {
                 <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                   {isKill ? (
                     <>
-                      <TimelineEvent time={timeStr.slice(0,5)} label="⚠ KILL SWITCH ACTIVATED — All agents suspended" level="critical" />
-                      <TimelineEvent time={timeStr.slice(0,5)} label="STOCK-AI drift exceeded 300% — sovereignty breach" level="critical" />
-                      <TimelineEvent time={timeStr.slice(0,5)} label="Degraded mode active — human takeover required" level="alert" />
+                      <TimelineEvent time={timeStr.slice(0,5)} label={t("acfControl.dashKillActivated")} level="critical" />
+                      <TimelineEvent time={timeStr.slice(0,5)} label={t("acfControl.dashStockDriftBreach")} level="critical" />
+                      <TimelineEvent time={timeStr.slice(0,5)} label={t("acfControl.dashDegradedMode")} level="alert" />
                     </>
                   ) : isAlert ? (
                     <>
-                      <TimelineEvent time={timeStr.slice(0,5)} label="🚨 STOCK-AI CRITICAL — Score 12, drift +312%" level="critical" />
-                      <TimelineEvent time={timeStr.slice(0,5)} label="Sovereignty score below threshold (41/100)" level="critical" />
-                      <TimelineEvent time="14:28" label="STOCK-AI drift detected (−1.2%)" level="warning" />
-                      <TimelineEvent time="14:15" label="FRAUD-DET suspicious transaction blocked" level="ok" />
+                      <TimelineEvent time={timeStr.slice(0,5)} label={t("acfControl.dashStockCritical")} level="critical" />
+                      <TimelineEvent time={timeStr.slice(0,5)} label={t("acfControl.dashSovBelow")} level="critical" />
+                      <TimelineEvent time="14:28" label={t("acfControl.dashStockDrift")} level="warning" />
+                      <TimelineEvent time="14:15" label={t("acfControl.dashFraudBlocked")} level="ok" />
                     </>
                   ) : alertPhase === 1 ? (
                     <>
-                      <TimelineEvent time={timeStr.slice(0,5)} label="⚠ STOCK-AI drift accelerating (−4.8%)" level="warning" />
-                      <TimelineEvent time="14:32" label="PRICE-GOV margin adjusted +0.3%" level="ok" />
-                      <TimelineEvent time="14:28" label="STOCK-AI drift detected (−1.2%)" level="warning" />
-                      <TimelineEvent time="14:15" label="FRAUD-DET suspicious transaction blocked" level="ok" />
+                      <TimelineEvent time={timeStr.slice(0,5)} label={t("acfControl.dashStockAccel")} level="warning" />
+                      <TimelineEvent time="14:32" label={t("acfControl.dashPriceAdj")} level="ok" />
+                      <TimelineEvent time="14:28" label={t("acfControl.dashStockDrift")} level="warning" />
+                      <TimelineEvent time="14:15" label={t("acfControl.dashFraudBlocked")} level="ok" />
                     </>
                   ) : (
                     <>
-                      <TimelineEvent time="14:32" label="PRICE-GOV margin adjusted +0.3%" level="ok" />
-                      <TimelineEvent time="14:28" label="STOCK-AI drift detected (−1.2%)" level="warning" />
-                      <TimelineEvent time="14:15" label="FRAUD-DET suspicious transaction blocked" level="ok" />
-                      <TimelineEvent time="13:47" label="Escalation threshold approaching" level="alert" />
+                      <TimelineEvent time="14:32" label={t("acfControl.dashPriceAdj")} level="ok" />
+                      <TimelineEvent time="14:28" label={t("acfControl.dashStockDrift")} level="warning" />
+                      <TimelineEvent time="14:15" label={t("acfControl.dashFraudBlocked")} level="ok" />
+                      <TimelineEvent time="13:47" label={t("acfControl.dashEscalation")} level="alert" />
                     </>
                   )}
                 </div>
@@ -379,10 +386,10 @@ export default function ACFControlPage() {
                     <span style={{ fontSize: 16 }}>{isKill ? "🛑" : "⚠️"}</span>
                     <div>
                       <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, color: C.red, letterSpacing: ".08em" }}>
-                        {isKill ? "ALL AGENTS SUSPENDED" : "KILL SWITCH RECOMMENDED"}
+                        {isKill ? t("acfControl.dashAllSuspended") : t("acfControl.dashKillRecommended")}
                       </div>
                       <div style={{ fontSize: 11, color: "rgba(239,68,68,.7)", marginTop: 2 }}>
-                        {isKill ? "Human takeover active. Awaiting manual review." : "Sovereignty breach detected. Immediate intervention required."}
+                        {isKill ? t("acfControl.dashHumanTakeover") : t("acfControl.dashSovereigntyBreach")}
                       </div>
                     </div>
                   </div>
@@ -397,13 +404,13 @@ export default function ACFControlPage() {
       <section style={{ padding: "40px 0", borderTop: `1px solid ${C.bd1}`, borderBottom: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "center", gap: 24, flexWrap: "wrap" }}>
           {([
-            { label: "Observability", c: C.gold, bold: false },
+            { label: t("acfControl.eqObservability"), c: C.gold, bold: false },
             null,
-            { label: "Governance", c: C.green, bold: false },
+            { label: t("acfControl.eqGovernance"), c: C.green, bold: false },
             null,
-            { label: "Intervention", c: C.amber, bold: false },
+            { label: t("acfControl.eqIntervention"), c: C.amber, bold: false },
             "=",
-            { label: "Sovereignty", c: "#fff", bold: true },
+            { label: t("acfControl.eqSovereignty"), c: "#fff", bold: true },
           ] as (null | string | { label: string; c: string; bold: boolean })[]).map((item, i) => item === null ? (
             <span key={i} style={{ fontSize: 20, color: C.gray }}>+</span>
           ) : typeof item === "string" ? (
@@ -418,33 +425,33 @@ export default function ACFControlPage() {
       <section style={{ padding: "60px 0" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <SectionLabel>Positioning</SectionLabel>
+            <SectionLabel>{t("acfControl.posLabel")}</SectionLabel>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 12 }}>
-              Not another AI dashboard.
+              {t("acfControl.posTitle")}
             </h2>
             <p style={{ fontSize: 16, color: C.gray2, maxWidth: 600, margin: "0 auto" }}>
-              ACF Control is a <strong style={{ color: "#fff" }}>decision governance layer</strong> — the nervous system your organization needs to remain sovereign.
+              {t("acfControl.posDescPre")}<strong style={{ color: "#fff" }}>{t("acfControl.posDescBold")}</strong>{t("acfControl.posDescPost")}
             </p>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
             <div style={{ background: "rgba(239,68,68,.04)", border: "1px solid rgba(239,68,68,.15)", borderRadius: 16, padding: 32 }}>
               <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 17, fontWeight: 700, color: C.red, marginBottom: 20, display: "flex", alignItems: "center", gap: 8 }}>
-                <span style={{ fontSize: 20 }}>✕</span> ACF Control is NOT
+                <span style={{ fontSize: 20 }}>✕</span> {t("acfControl.posNotTitle")}
               </h3>
-              {["An AI tool or agent builder", "A repricer or marketing platform", "A passive reporting dashboard", "An optimization engine", "A data warehouse or BI tool"].map(t => (
-                <div key={t} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10, fontSize: 14, color: C.gray2 }}>
-                  <span style={{ color: "rgba(239,68,68,.4)" }}>—</span> {t}
+              {[t("acfControl.posNot1"), t("acfControl.posNot2"), t("acfControl.posNot3"), t("acfControl.posNot4"), t("acfControl.posNot5")].map(item => (
+                <div key={item} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10, fontSize: 14, color: C.gray2 }}>
+                  <span style={{ color: "rgba(239,68,68,.4)" }}>—</span> {item}
                 </div>
               ))}
             </div>
             <div style={{ background: "rgba(34,197,94,.04)", border: "1px solid rgba(34,197,94,.15)", borderRadius: 16, padding: 32 }}>
               <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 17, fontWeight: 700, color: C.green, marginBottom: 20, display: "flex", alignItems: "center", gap: 8 }}>
-                <span style={{ fontSize: 20 }}>✓</span> ACF Control IS
+                <span style={{ fontSize: 20 }}>✓</span> {t("acfControl.posIsTitle")}
               </h3>
-              {["A decision governance operating system", "A real-time drift detection center", "An incident classification & response hub", "A command authority intervention center", "A sovereignty supervision platform"].map(t => (
-                <div key={t} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10, fontSize: 14, color: C.gray2 }}>
-                  <span style={{ color: C.gold }}>→</span> {t}
+              {[t("acfControl.posIs1"), t("acfControl.posIs2"), t("acfControl.posIs3"), t("acfControl.posIs4"), t("acfControl.posIs5")].map(item => (
+                <div key={item} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10, fontSize: 14, color: C.gray2 }}>
+                  <span style={{ color: C.gold }}>→</span> {item}
                 </div>
               ))}
             </div>
@@ -456,28 +463,28 @@ export default function ACFControlPage() {
       <section id="modules" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <SectionLabel>Architecture</SectionLabel>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 12 }}>6 Core Modules</h2>
-            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 500, margin: "0 auto" }}>Each module serves one purpose: keeping humans in command of machine decisions.</p>
+            <SectionLabel>{t("acfControl.modLabel")}</SectionLabel>
+            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 12 }}>{t("acfControl.modTitle")}</h2>
+            <p style={{ fontSize: 15, color: C.gray2, maxWidth: 500, margin: "0 auto" }}>{t("acfControl.modSubtitle")}</p>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
-            <ModuleCard id="ACF-00" title="Sovereignty Score" subtitle="Your governance baseline — scored 0 to 100 across 4 axes." icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="3"/></svg>}>
+            <ModuleCard id="ACF-00" title={t("acfControl.mod00Title")} subtitle={t("acfControl.mod00Sub")} icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="3"/></svg>}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
                 <div>
                   <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 800, color: C.gold }}>74.5</div>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, marginTop: 4, letterSpacing: ".06em" }}>Distribution · Decision · Traffic · Treasury</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, marginTop: 4, letterSpacing: ".06em" }}>{t("acfControl.mod00Axes")}</div>
                 </div>
-                <span style={{ fontSize: 10, color: C.gold, background: C.goldDim, padding: "4px 10px", borderRadius: 6 }}>PDF Export</span>
+                <span style={{ fontSize: 10, color: C.gold, background: C.goldDim, padding: "4px 10px", borderRadius: 6 }}>{t("acfControl.mod00Export")}</span>
               </div>
             </ModuleCard>
 
-            <ModuleCard id="ACF-01" title="Decision Registry" subtitle="A living inventory: who decides what, with what, and how." icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg>}>
+            <ModuleCard id="ACF-01" title={t("acfControl.mod01Title")} subtitle={t("acfControl.mod01Sub")} icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg>}>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                 {[
-                  { name: "Price adjustment", status: "Governed", color: C.gold },
-                  { name: "Replenishment", status: "Assisted", color: C.green },
-                  { name: "Customer exclusion", status: "Human only", color: C.red },
+                  { name: t("acfControl.mod01d1Name"), status: t("acfControl.mod01d1Status"), color: C.gold },
+                  { name: t("acfControl.mod01d2Name"), status: t("acfControl.mod01d2Status"), color: C.green },
+                  { name: t("acfControl.mod01d3Name"), status: t("acfControl.mod01d3Status"), color: C.red },
                 ].map(d => (
                   <div key={d.name} style={{ display: "flex", justifyContent: "space-between", fontSize: 12 }}>
                     <span style={{ color: C.gray2 }}>{d.name}</span>
@@ -487,12 +494,12 @@ export default function ACFControlPage() {
               </div>
             </ModuleCard>
 
-            <ModuleCard id="ACF-02" title="Criticality Matrix" subtitle="Impact × Frequency × Irreversibility." icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>}>
+            <ModuleCard id="ACF-02" title={t("acfControl.mod02Title")} subtitle={t("acfControl.mod02Sub")} icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8 }}>
                 {[
-                  { label: "Optimizable", count: 12, color: C.green },
-                  { label: "Governed", count: 8, color: C.gold },
-                  { label: "Human only", count: 5, color: C.red },
+                  { label: t("acfControl.mod02c1"), count: 12, color: C.green },
+                  { label: t("acfControl.mod02c2"), count: 8, color: C.gold },
+                  { label: t("acfControl.mod02c3"), count: 5, color: C.red },
                 ].map(c => (
                   <div key={c.label} style={{ textAlign: "center", padding: 8, borderRadius: 8, background: `${c.color}11` }}>
                     <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 18, fontWeight: 700, color: c.color }}>{c.count}</div>
@@ -502,18 +509,18 @@ export default function ACFControlPage() {
               </div>
             </ModuleCard>
 
-            <ModuleCard id="ACF-03" title="Agentic Constitution" subtitle="Strategic governance document — versioned, signed, auditable." icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 13h6M9 17h4"/></svg>}>
+            <ModuleCard id="ACF-03" title={t("acfControl.mod03Title")} subtitle={t("acfControl.mod03Sub")} icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 13h6M9 17h4"/></svg>}>
               <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-                {["Priority objectives", "Critical thresholds", "Escalation rules", "Non-delegable zones", "Kill Switch owner"].map(t => (
-                  <div key={t} style={{ display: "flex", justifyContent: "space-between", fontSize: 12, color: C.gray2 }}>
-                    <span>{t}</span><span style={{ color: C.green }}>✓</span>
+                {[t("acfControl.mod03f1"), t("acfControl.mod03f2"), t("acfControl.mod03f3"), t("acfControl.mod03f4"), t("acfControl.mod03f5")].map(item => (
+                  <div key={item} style={{ display: "flex", justifyContent: "space-between", fontSize: 12, color: C.gray2 }}>
+                    <span>{item}</span><span style={{ color: C.green }}>✓</span>
                   </div>
                 ))}
-                <div style={{ fontSize: 9, color: C.gray, borderTop: `1px solid ${C.bd1}`, paddingTop: 8, marginTop: 4, fontFamily: "'JetBrains Mono', monospace" }}>Signed CEO — v2.1 — Feb 2026</div>
+                <div style={{ fontSize: 9, color: C.gray, borderTop: `1px solid ${C.bd1}`, paddingTop: 8, marginTop: 4, fontFamily: "'JetBrains Mono', monospace" }}>{t("acfControl.mod03signed")}</div>
               </div>
             </ModuleCard>
 
-            <ModuleCard id="ACF-04" title="Agent Registry" subtitle="Every agent documented: mandate, scope, limits, human owner." icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>}>
+            <ModuleCard id="ACF-04" title={t("acfControl.mod04Title")} subtitle={t("acfControl.mod04Sub")} icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>}>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                 {[
                   { name: "PRICE-GOV", level: "Lvl 2", active: true },
@@ -532,12 +539,12 @@ export default function ACFControlPage() {
               </div>
             </ModuleCard>
 
-            <ModuleCard id="ACF-05" title="Minimum Viable Supervision" subtitle="5 KPIs per agent. Thresholds. Alerts. 30-day history." icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/><path d="M2 20h20"/></svg>}>
+            <ModuleCard id="ACF-05" title={t("acfControl.mod05Title")} subtitle={t("acfControl.mod05Sub")} icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/><path d="M2 20h20"/></svg>}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
-                <KPIMini label="Margin" value="32.1" unit="%" trend="up" />
-                <KPIMini label="Escalations" value="3" trend="down" />
-                <KPIMini label="Overrides" value="1" trend="down" />
-                <KPIMini label="Human load" value="18" unit="%" trend="up" />
+                <KPIMini label={t("acfControl.kpiMargin")} value="32.1" unit="%" trend="up" />
+                <KPIMini label={t("acfControl.kpiEscalations")} value="3" trend="down" />
+                <KPIMini label={t("acfControl.kpiOverrides")} value="1" trend="down" />
+                <KPIMini label={t("acfControl.kpiHumanLoad")} value="18" unit="%" trend="up" />
               </div>
             </ModuleCard>
           </div>
@@ -549,19 +556,19 @@ export default function ACFControlPage() {
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
             <div>
-              <SectionLabel>Key Differentiator</SectionLabel>
-              <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 20 }}>Drift Engine™</h2>
+              <SectionLabel>{t("acfControl.driftLabel")}</SectionLabel>
+              <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 20 }}>{t("acfControl.driftTitle")}</h2>
               <p style={{ fontSize: 15, color: C.gray2, lineHeight: 1.7, marginBottom: 16 }}>
-                Catastrophic AI failures don't come from bugs — they come from <strong style={{ color: "#fff" }}>slow, invisible drift</strong>. The margin that slips from 32% → 28% without anyone noticing. Escalations that become "normal."
+                {t("acfControl.driftP1Pre")}<strong style={{ color: "#fff" }}>{t("acfControl.driftP1Bold")}</strong>{t("acfControl.driftP1Post")}
               </p>
               <p style={{ fontSize: 15, color: C.gray2, lineHeight: 1.7, marginBottom: 28 }}>
-                The Drift Engine computes <strong style={{ color: "#fff" }}>7-day and 30-day trends</strong> for every agent KPI. It triggers alerts <strong style={{ color: C.gold }}>before thresholds are even breached</strong>.
+                {t("acfControl.driftP2Pre")}<strong style={{ color: "#fff" }}>{t("acfControl.driftP2Bold")}</strong>{t("acfControl.driftP2Mid")}<strong style={{ color: C.gold }}>{t("acfControl.driftP2Gold")}</strong>{t("acfControl.driftP2Post")}
               </p>
 
               {[
-                { emoji: "🟡", label: "Low drift", desc: "Trend moving, within tolerance" },
-                { emoji: "🟠", label: "Significant drift", desc: "Approaching threshold boundary" },
-                { emoji: "🔴", label: "Critical drift", desc: "Immediate intervention required" },
+                { emoji: "🟡", label: t("acfControl.driftLow"), desc: t("acfControl.driftLowDesc") },
+                { emoji: "🟠", label: t("acfControl.driftSignificant"), desc: t("acfControl.driftSignificantDesc") },
+                { emoji: "🔴", label: t("acfControl.driftCritical"), desc: t("acfControl.driftCriticalDesc") },
               ].map(d => (
                 <div key={d.label} style={{ display: "flex", gap: 12, background: C.navy2, border: `1px solid ${C.bd1}`, borderRadius: 10, padding: 12, marginBottom: 8 }}>
                   <span style={{ fontSize: 18 }}>{d.emoji}</span>
@@ -575,18 +582,18 @@ export default function ACFControlPage() {
 
             {/* Drift Viz */}
             <div style={{ background: C.navy2, border: `1px solid ${C.bd1}`, borderRadius: 16, padding: 24 }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gray, letterSpacing: ".1em", marginBottom: 16 }}>AGENT STABILITY SCORES</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gray, letterSpacing: ".1em", marginBottom: 16 }}>{t("acfControl.driftStabilityScores")}</div>
               <div style={{ display: "flex", justifyContent: "space-around", marginBottom: 28 }}>
                 <StabilityRing value={92} label="PRICE-GOV" />
                 <StabilityRing value={67} label="STOCK-AI" />
                 <StabilityRing value={88} label="FRAUD-DET" />
               </div>
 
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gray, letterSpacing: ".1em", marginBottom: 10 }}>DRIFT DETECTION — STOCK-AI</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gray, letterSpacing: ".1em", marginBottom: 10 }}>{t("acfControl.driftDetection")}</div>
               <div style={{ background: C.navy3, borderRadius: 12, padding: 16, border: `1px solid rgba(245,158,11,.15)` }}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 10 }}>
-                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: C.amber }}>⚠ DRIFT DETECTED</span>
-                  <span style={{ fontSize: 9, color: C.gray }}>14d trend</span>
+                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: C.amber }}>{t("acfControl.driftDetected")}</span>
+                  <span style={{ fontSize: 9, color: C.gray }}>{t("acfControl.driftTrend14d")}</span>
                 </div>
                 <div style={{ display: "flex", alignItems: "flex-end", gap: 3, height: 56 }}>
                   {[85, 84, 83, 82, 80, 79, 78, 76, 74, 72, 70, 68, 67, 66].map((v, i) => (
@@ -599,11 +606,11 @@ export default function ACFControlPage() {
                   ))}
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between", marginTop: 6, fontFamily: "'JetBrains Mono', monospace", fontSize: 8, color: C.gray }}>
-                  <span>14d ago</span><span>now</span>
+                  <span>{t("acfControl.driftAgo")}</span><span>{t("acfControl.driftNow")}</span>
                 </div>
                 <div style={{ marginTop: 12, background: "rgba(245,158,11,.06)", border: "1px solid rgba(245,158,11,.15)", borderRadius: 8, padding: 10, fontSize: 12, color: C.gray2, lineHeight: 1.5 }}>
-                  ⚠ STOCK-AI margin drift: −1.8% over 14 days.<br />
-                  <span style={{ color: C.gold, fontWeight: 600 }}>→ Recommendation: review threshold or reduce scope.</span>
+                  {t("acfControl.driftRecommendation")}<br />
+                  <span style={{ color: C.gold, fontWeight: 600 }}>{t("acfControl.driftRecommendationAction")}</span>
                 </div>
               </div>
             </div>
@@ -614,19 +621,19 @@ export default function ACFControlPage() {
       {/* ━━━ KILL SWITCH & INTERVENTION ━━━ */}
       <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 1000, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
-          <SectionLabel>Command Authority</SectionLabel>
-          <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 12 }}>Immediate Intervention</h2>
+          <SectionLabel>{t("acfControl.killLabel")}</SectionLabel>
+          <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 12 }}>{t("acfControl.killTitle")}</h2>
           <p style={{ fontSize: 15, color: C.gray2, maxWidth: 500, margin: "0 auto 40px" }}>
-            ACF Control doesn't just alert — it gives you the power to <strong style={{ color: "#fff" }}>act within seconds</strong>.
+            {t("acfControl.killDescPre")}<strong style={{ color: "#fff" }}>{t("acfControl.killDescBold")}</strong>{t("acfControl.killDescPost")}
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 12, marginBottom: 48 }}>
             {[
-              { icon: "⏸", label: "Suspend Agent" },
-              { icon: "📐", label: "Reduce Scope" },
-              { icon: "🔄", label: "Force Escalation" },
-              { icon: "⚡", label: "Degraded Mode" },
-              { icon: "🛑", label: "Kill Switch", danger: true },
+              { icon: "⏸", label: t("acfControl.killSuspend") },
+              { icon: "📐", label: t("acfControl.killReduce") },
+              { icon: "🔄", label: t("acfControl.killEscalate") },
+              { icon: "⚡", label: t("acfControl.killDegraded") },
+              { icon: "🛑", label: t("acfControl.killSwitch"), danger: true },
             ].map(a => (
               <div key={a.label} style={{
                 background: a.danger ? "rgba(239,68,68,.06)" : C.navy3,
@@ -644,17 +651,17 @@ export default function ACFControlPage() {
 
           {/* Kill Switch Demo */}
           <div style={{ maxWidth: 400, margin: "0 auto", background: C.navy2, border: `1px solid rgba(239,68,68,.15)`, borderRadius: 16, padding: 24 }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.red, letterSpacing: ".1em", marginBottom: 8 }}>🛑 GLOBAL KILL SWITCH</div>
-            <p style={{ fontSize: 12, color: C.gray, marginBottom: 16 }}>Suspend ALL autonomous agents. Full degraded mode within 60 seconds.</p>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.red, letterSpacing: ".1em", marginBottom: 8 }}>{t("acfControl.killGlobalTitle")}</div>
+            <p style={{ fontSize: 12, color: C.gray, marginBottom: 16 }}>{t("acfControl.killGlobalDesc")}</p>
             <button onClick={() => setKillArmed(!killArmed)} style={{
               width: "100%", padding: 12, borderRadius: 10, border: "none", fontSize: 13, fontWeight: 700, cursor: "pointer", transition: "all .3s",
               background: killArmed ? C.red : "rgba(239,68,68,.08)",
               color: killArmed ? "#fff" : C.red,
               boxShadow: killArmed ? "0 0 20px rgba(239,68,68,.4)" : "none",
             }}>
-              {killArmed ? "⚠ KILL SWITCH ARMED — Click to disarm" : "Arm Kill Switch"}
+              {killArmed ? t("acfControl.killArmed") : t("acfControl.killArm")}
             </button>
-            {killArmed && <p style={{ fontSize: 11, color: "rgba(239,68,68,.5)", marginTop: 10 }}>All agents will be suspended upon confirmation. Action logged.</p>}
+            {killArmed && <p style={{ fontSize: 11, color: "rgba(239,68,68,.5)", marginTop: 10 }}>{t("acfControl.killArmedInfo")}</p>}
           </div>
         </div>
       </section>
@@ -663,26 +670,26 @@ export default function ACFControlPage() {
       <section id="dashboard" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <SectionLabel>One page, one answer</SectionLabel>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 12 }}>Executive Dashboard</h2>
+            <SectionLabel>{t("acfControl.dashLabel")}</SectionLabel>
+            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 12 }}>{t("acfControl.dashTitle")}</h2>
             <p style={{ fontSize: 15, color: C.gray2 }}>
-              One question, answered in 30 seconds: <strong style={{ color: "#fff", fontSize: 18 }}>"Are we sovereign today?"</strong>
+              {t("acfControl.dashQuestionPre")}<strong style={{ color: "#fff", fontSize: 18 }}>{t("acfControl.dashQuestionBold")}</strong>
             </p>
           </div>
 
           {/* Tabs */}
           <div style={{ display: "flex", justifyContent: "center", gap: 8, marginBottom: 24 }}>
             {[
-              { key: "ceo", label: "CEO View" },
-              { key: "ops", label: "Operator View" },
-              { key: "consultant", label: "Consultant View" },
-            ].map(t => (
-              <button key={t.key} onClick={() => setActiveTab(t.key)} style={{
+              { key: "ceo", label: t("acfControl.dashCeo") },
+              { key: "ops", label: t("acfControl.dashOps") },
+              { key: "consultant", label: t("acfControl.dashConsultant") },
+            ].map(tab => (
+              <button key={tab.key} onClick={() => setActiveTab(tab.key)} style={{
                 padding: "8px 20px", borderRadius: 8, fontSize: 13, fontWeight: 600, cursor: "pointer", transition: "all .2s", border: "none",
-                background: activeTab === t.key ? C.goldDim : "transparent",
-                color: activeTab === t.key ? C.gold : C.gray,
-                outline: activeTab === t.key ? `1px solid ${C.goldBorder}` : `1px solid ${C.bd1}`,
-              }}>{t.label}</button>
+                background: activeTab === tab.key ? C.goldDim : "transparent",
+                color: activeTab === tab.key ? C.gold : C.gray,
+                outline: activeTab === tab.key ? `1px solid ${C.goldBorder}` : `1px solid ${C.bd1}`,
+              }}>{tab.label}</button>
             ))}
           </div>
 
@@ -690,13 +697,13 @@ export default function ACFControlPage() {
             {activeTab === "ceo" && (
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 16 }}>
                 <div style={{ background: C.navy3, borderRadius: 12, padding: 20, border: `1px solid ${C.bd1}` }}>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 12 }}>Sovereignty Score</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 12 }}>{t("acfControl.dashSovereigntyScore")}</div>
                   <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 40, fontWeight: 800, color: C.green }}>74</div>
-                  <div style={{ fontSize: 11, color: C.green, opacity: .7 }}>▲ +3.2 vs last month</div>
+                  <div style={{ fontSize: 11, color: C.green, opacity: .7 }}>{t("acfControl.dashVsLastMonth")}</div>
                 </div>
                 <div style={{ background: C.navy3, borderRadius: 12, padding: 20, border: `1px solid ${C.bd1}` }}>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 12 }}>Active Agents</div>
-                  {[{ c: "green", l: "Stable", n: 5 }, { c: "amber", l: "Attention", n: 2 }, { c: "red", l: "Critical", n: 0 }].map(a => (
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 12 }}>{t("acfControl.dashActiveAgents")}</div>
+                  {[{ c: "green", l: t("acfControl.dashStable"), n: 5 }, { c: "amber", l: t("acfControl.dashAttention"), n: 2 }, { c: "red", l: t("acfControl.dashCriticalLabel"), n: 0 }].map(a => (
                     <div key={a.l} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 8 }}><Pulse color={a.c} /><span style={{ fontSize: 12, color: C.gray2 }}>{a.l}</span></div>
                       <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 17, fontWeight: 700, color: { green: C.green, amber: C.amber, red: C.red }[a.c] }}>{a.n}</span>
@@ -704,41 +711,41 @@ export default function ACFControlPage() {
                   ))}
                 </div>
                 <div style={{ background: C.navy3, borderRadius: 12, padding: 20, border: `1px solid ${C.bd1}` }}>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 12 }}>Recent Incidents</div>
-                  {[{ t: "14:28", l: "STOCK-AI drift", c: C.amber }, { t: "12:15", l: "Auto-corrected", c: C.green }, { t: "09:42", l: "Routine check", c: C.green }].map((e, i) => (
-                    <div key={i} style={{ fontSize: 12, marginBottom: 6 }}><span style={{ fontFamily: "'JetBrains Mono', monospace", color: e.c, marginRight: 8 }}>{e.t}</span><span style={{ color: C.gray2 }}>{e.l}</span></div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 12 }}>{t("acfControl.dashRecentIncidents")}</div>
+                  {[{ time: "14:28", l: t("acfControl.dashStockDriftShort"), c: C.amber }, { time: "12:15", l: t("acfControl.dashAutoCorrected"), c: C.green }, { time: "09:42", l: t("acfControl.dashRoutineCheck"), c: C.green }].map((e, i) => (
+                    <div key={i} style={{ fontSize: 12, marginBottom: 6 }}><span style={{ fontFamily: "'JetBrains Mono', monospace", color: e.c, marginRight: 8 }}>{e.time}</span><span style={{ color: C.gray2 }}>{e.l}</span></div>
                   ))}
                 </div>
                 <div style={{ background: C.navy3, borderRadius: 12, padding: 20, border: `1px solid ${C.bd1}` }}>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 12 }}>At-Risk Decisions</div>
-                  <div style={{ fontSize: 12, color: C.amber, marginBottom: 6 }}>Pricing → margin drift</div>
-                  <div style={{ fontSize: 12, color: C.amber, marginBottom: 6 }}>Inventory → low coverage</div>
-                  <div style={{ fontSize: 12, color: C.gray, marginBottom: 12 }}>No critical risks</div>
-                  <button style={{ width: "100%", background: "rgba(239,68,68,.06)", border: `1px solid rgba(239,68,68,.2)`, color: C.red, padding: 8, borderRadius: 8, fontSize: 11, fontFamily: "'JetBrains Mono', monospace", cursor: "pointer" }}>🛑 SUSPEND ALL</button>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 12 }}>{t("acfControl.dashAtRisk")}</div>
+                  <div style={{ fontSize: 12, color: C.amber, marginBottom: 6 }}>{t("acfControl.dashPricingDrift")}</div>
+                  <div style={{ fontSize: 12, color: C.amber, marginBottom: 6 }}>{t("acfControl.dashInventoryLow")}</div>
+                  <div style={{ fontSize: 12, color: C.gray, marginBottom: 12 }}>{t("acfControl.dashNoCritical")}</div>
+                  <button style={{ width: "100%", background: "rgba(239,68,68,.06)", border: `1px solid rgba(239,68,68,.2)`, color: C.red, padding: 8, borderRadius: 8, fontSize: 11, fontFamily: "'JetBrains Mono', monospace", cursor: "pointer" }}>{t("acfControl.dashSuspendAll")}</button>
                 </div>
               </div>
             )}
             {activeTab === "ops" && (
               <div style={{ textAlign: "center", padding: 40 }}>
                 <div style={{ fontSize: 36, marginBottom: 12 }}>🔧</div>
-                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 18, fontWeight: 700, marginBottom: 8 }}>Agent Operator View</h3>
-                <p style={{ fontSize: 14, color: C.gray2, maxWidth: 400, margin: "0 auto 20px" }}>Deep-dive into each agent's performance. Adjust rules, manage drift thresholds, resolve incidents.</p>
+                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 18, fontWeight: 700, marginBottom: 8 }}>{t("acfControl.dashOpsTitle")}</h3>
+                <p style={{ fontSize: 14, color: C.gray2, maxWidth: 400, margin: "0 auto 20px" }}>{t("acfControl.dashOpsDesc")}</p>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 12, maxWidth: 500, margin: "0 auto" }}>
-                  <KPIMini label="Margin" value="32.1" unit="%" trend="up" />
-                  <KPIMini label="Escalations" value="3" trend="down" />
-                  <KPIMini label="Overrides" value="1" trend="down" />
-                  <KPIMini label="Incidents" value="0" trend="down" />
+                  <KPIMini label={t("acfControl.kpiMargin")} value="32.1" unit="%" trend="up" />
+                  <KPIMini label={t("acfControl.kpiEscalations")} value="3" trend="down" />
+                  <KPIMini label={t("acfControl.kpiOverrides")} value="1" trend="down" />
+                  <KPIMini label={t("acfControl.kpiIncidents")} value="0" trend="down" />
                 </div>
               </div>
             )}
             {activeTab === "consultant" && (
               <div style={{ textAlign: "center", padding: 40 }}>
                 <div style={{ fontSize: 36, marginBottom: 12 }}>🗺</div>
-                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 18, fontWeight: 700, marginBottom: 8 }}>Certified Consultant View</h3>
-                <p style={{ fontSize: 14, color: C.gray2, maxWidth: 400, margin: "0 auto 20px" }}>Multi-client access, benchmarks, mission templates and audit-ready exports. Deliver a full ACF diagnostic in under 2 hours.</p>
+                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 18, fontWeight: 700, marginBottom: 8 }}>{t("acfControl.dashConsultantTitle")}</h3>
+                <p style={{ fontSize: 14, color: C.gray2, maxWidth: 400, margin: "0 auto 20px" }}>{t("acfControl.dashConsultantDesc")}</p>
                 <div style={{ display: "flex", justifyContent: "center", gap: 8, flexWrap: "wrap" }}>
-                  {["Multi-client", "Templates", "Benchmark", "PDF Export"].map(t => (
-                    <span key={t} style={{ background: C.goldDim, border: `1px solid ${C.goldBorder}`, color: C.gold, fontSize: 11, padding: "6px 14px", borderRadius: 8 }}>{t}</span>
+                  {[t("acfControl.dashMultiClient"), t("acfControl.dashTemplates"), t("acfControl.dashBenchmark"), t("acfControl.dashPdfExport")].map(item => (
+                    <span key={item} style={{ background: C.goldDim, border: `1px solid ${C.goldBorder}`, color: C.gold, fontSize: 11, padding: "6px 14px", borderRadius: 8 }}>{item}</span>
                   ))}
                 </div>
               </div>
@@ -751,12 +758,12 @@ export default function ACFControlPage() {
       <section id="risks" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <SectionLabel>The real math</SectionLabel>
+            <SectionLabel>{t("acfControl.riskLabel")}</SectionLabel>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 12 }}>
-              What does the <span style={{ color: C.red }}>absence</span> of governance cost?
+              {t("acfControl.riskTitle")}<span style={{ color: C.red }}>{t("acfControl.riskTitleRed")}</span>{t("acfControl.riskTitlePost")}
             </h2>
             <p style={{ fontSize: 16, color: C.gray2, maxWidth: 600, margin: "0 auto" }}>
-              The cost of ACF Control is <strong style={{ color: "#fff" }}>negligible</strong> compared to the financial, regulatory, and reputational risks you're taking without formalized governance.
+              {t("acfControl.riskDescPre")}<strong style={{ color: "#fff" }}>{t("acfControl.riskDescBold")}</strong>{t("acfControl.riskDescPost")}
             </p>
           </div>
 
@@ -765,36 +772,36 @@ export default function ACFControlPage() {
             {/* AI Act */}
             <div style={{ background: C.navy3, border: `1px solid rgba(239,68,68,.15)`, borderRadius: 16, padding: 28, textAlign: "center" }}>
               <div style={{ fontSize: 32, marginBottom: 12 }}>⚖️</div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.red, letterSpacing: ".1em", marginBottom: 8 }}>EU AI ACT FINES</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.red, letterSpacing: ".1em", marginBottom: 8 }}>{t("acfControl.riskAiAct")}</div>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, color: C.red, marginBottom: 8 }}>
                 <AnimatedCounter end={35} prefix="€" suffix="M" />
               </div>
               <p style={{ fontSize: 13, color: C.gray2, lineHeight: 1.5 }}>
-                Up to <strong style={{ color: "#fff" }}>€35 million</strong> or 7% of global annual turnover for non-compliance with transparency and supervision requirements for high-risk AI systems.
+                {t("acfControl.riskAiActDescPre")}<strong style={{ color: "#fff" }}>{t("acfControl.riskAiActDescBold")}</strong>{t("acfControl.riskAiActDescPost")}
               </p>
             </div>
 
             {/* GDPR */}
             <div style={{ background: C.navy3, border: `1px solid rgba(239,68,68,.15)`, borderRadius: 16, padding: 28, textAlign: "center" }}>
               <div style={{ fontSize: 32, marginBottom: 12 }}>🔒</div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.red, letterSpacing: ".1em", marginBottom: 8 }}>GDPR FINES</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.red, letterSpacing: ".1em", marginBottom: 8 }}>{t("acfControl.riskGdpr")}</div>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, color: C.red, marginBottom: 8 }}>
                 <AnimatedCounter end={20} prefix="€" suffix="M" />
               </div>
               <p style={{ fontSize: 13, color: C.gray2, lineHeight: 1.5 }}>
-                Up to <strong style={{ color: "#fff" }}>€20 million</strong> or 4% of global annual turnover. Ungoverned automated decisions multiply the risk of data violations.
+                {t("acfControl.riskGdprDescPre")}<strong style={{ color: "#fff" }}>{t("acfControl.riskGdprDescBold")}</strong>{t("acfControl.riskGdprDescPost")}
               </p>
             </div>
 
             {/* Drift Cost */}
             <div style={{ background: C.navy3, border: `1px solid rgba(239,68,68,.15)`, borderRadius: 16, padding: 28, textAlign: "center" }}>
               <div style={{ fontSize: 32, marginBottom: 12 }}>📉</div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.red, letterSpacing: ".1em", marginBottom: 8 }}>COST OF AI DRIFT</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.red, letterSpacing: ".1em", marginBottom: 8 }}>{t("acfControl.riskDrift")}</div>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, color: C.red, marginBottom: 8 }}>
                 €<AnimatedCounter end={2} suffix=".4M" />
               </div>
               <p style={{ fontSize: 13, color: C.gray2, lineHeight: 1.5 }}>
-                Average observed loss from <strong style={{ color: "#fff" }}>uncontrolled AI decisions</strong>: pricing errors, broken inventory, abusive customer exclusions, invisible margin erosion.
+                {t("acfControl.riskDriftDescPre")}<strong style={{ color: "#fff" }}>{t("acfControl.riskDriftDescBold")}</strong>{t("acfControl.riskDriftDescPost")}
               </p>
             </div>
           </div>
@@ -802,26 +809,26 @@ export default function ACFControlPage() {
           {/* Comparison */}
           <div style={{ background: C.navy3, border: `1px solid ${C.goldBorder}`, borderRadius: 16, padding: 32, display: "grid", gridTemplateColumns: "1fr auto 1fr", gap: 32, alignItems: "center" }}>
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.red, letterSpacing: ".1em", marginBottom: 8 }}>RISK WITHOUT GOVERNANCE</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.red, letterSpacing: ".1em", marginBottom: 8 }}>{t("acfControl.riskWithout")}</div>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 44, fontWeight: 800, color: C.red }}>€57.4M</div>
-              <div style={{ fontSize: 12, color: C.gray, marginTop: 4 }}>Maximum cumulative exposure</div>
+              <div style={{ fontSize: 12, color: C.gray, marginTop: 4 }}>{t("acfControl.riskMaxExposure")}</div>
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, fontWeight: 800, color: C.gold }}>vs</div>
             </div>
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.green, letterSpacing: ".1em", marginBottom: 8 }}>ACF CONTROL INVESTMENT</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.green, letterSpacing: ".1em", marginBottom: 8 }}>{t("acfControl.riskWith")}</div>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 44, fontWeight: 800, color: C.green }}>→ 0.01%</div>
-              <div style={{ fontSize: 12, color: C.gray, marginTop: 4 }}>A fraction of your risk exposure</div>
+              <div style={{ fontSize: 12, color: C.gray, marginTop: 4 }}>{t("acfControl.riskFraction")}</div>
             </div>
           </div>
 
           {/* Stats */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16, marginTop: 32 }}>
             {[
-              { stat: "73%", desc: "of companies use AI agents without formalized governance" },
-              { stat: "89%", desc: "of executives fear losing strategic control over their agents" },
-              { stat: "×12", desc: "incidents increase 12x faster in organizations without supervision" },
+              { stat: "73%", desc: t("acfControl.riskStat1") },
+              { stat: "89%", desc: t("acfControl.riskStat2") },
+              { stat: "×12", desc: t("acfControl.riskStat3") },
             ].map(s => (
               <div key={s.stat} style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 12, padding: 20, textAlign: "center" }}>
                 <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 32, fontWeight: 800, color: C.gold, marginBottom: 8 }}>{s.stat}</div>
@@ -835,27 +842,27 @@ export default function ACFControlPage() {
       {/* ━━━ PRICING — ON REQUEST ━━━ */}
       <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
-          <SectionLabel>Plans</SectionLabel>
+          <SectionLabel>{t("acfControl.planLabel")}</SectionLabel>
           <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 12 }}>
-            Bespoke governance, not commodity SaaS.
+            {t("acfControl.planTitle")}
           </h2>
           <p style={{ fontSize: 15, color: C.gray2, maxWidth: 550, margin: "0 auto 48px" }}>
-            Every organization has unique sovereignty challenges. We tailor ACF Control to your agent architecture, industry, and regulatory requirements.
+            {t("acfControl.planDesc")}
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16, marginBottom: 32 }}>
             {[
               {
-                tier: "ESSENTIAL", desc: "Up to 3 agents", icon: "🛡",
-                features: ["Sovereignty Score", "Decision Registry", "Criticality Matrix", "Basic alerts", "PDF exports"],
+                tier: t("acfControl.planEssential"), desc: t("acfControl.planEssentialDesc"), icon: "🛡",
+                features: [t("acfControl.planFeatSovereignty"), t("acfControl.planFeatRegistry"), t("acfControl.planFeatMatrix"), t("acfControl.planFeatAlerts"), t("acfControl.planFeatExports")],
               },
               {
-                tier: "PROFESSIONAL", desc: "Up to 10 agents", icon: "⚡", recommended: true,
-                features: ["Everything in Essential +", "Drift Engine™", "Incident Classification", "Kill Switch (3 levels)", "Agentic Constitution", "Smart Alerts (Slack + Email)", "Consultant Access"],
+                tier: t("acfControl.planProfessional"), desc: t("acfControl.planProfessionalDesc"), icon: "⚡", recommended: true,
+                features: [t("acfControl.planFeatEssentialPlus"), t("acfControl.planFeatDrift"), t("acfControl.planFeatIncident"), t("acfControl.planFeatKill3"), t("acfControl.planFeatConstitution"), t("acfControl.planFeatSmartAlerts"), t("acfControl.planFeatConsultantAccess")],
               },
               {
-                tier: "ENTERPRISE", desc: "Unlimited agents", icon: "🏛",
-                features: ["Everything in Professional +", "Multi-site / Multi-BU", "Custom integrations (API)", "Dedicated DDA support", "Audit trail (3 years)", "White-label option", "SLA 99.9%"],
+                tier: t("acfControl.planEnterprise"), desc: t("acfControl.planEnterpriseDesc"), icon: "🏛",
+                features: [t("acfControl.planFeatProfessionalPlus"), t("acfControl.planFeatMultiSite"), t("acfControl.planFeatApi"), t("acfControl.planFeatDda"), t("acfControl.planFeatAuditTrail"), t("acfControl.planFeatWhiteLabel"), t("acfControl.planFeatSla")],
               },
             ].map(plan => (
               <div key={plan.tier} style={{
@@ -868,7 +875,7 @@ export default function ACFControlPage() {
                     position: "absolute", top: -12, left: "50%", transform: "translateX(-50%)",
                     background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
                     fontSize: 9, fontWeight: 800, padding: "4px 14px", borderRadius: 100, letterSpacing: ".08em",
-                  }}>RECOMMENDED</div>
+                  }}>{t("acfControl.planRecommended")}</div>
                 )}
                 <div style={{ fontSize: 28, marginBottom: 8 }}>{plan.icon}</div>
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: plan.recommended ? C.gold : C.gray, letterSpacing: ".14em", marginBottom: 4 }}>{plan.tier}</div>
@@ -878,7 +885,7 @@ export default function ACFControlPage() {
                   fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, fontWeight: 800,
                   color: plan.recommended ? C.gold : "#fff", marginBottom: 20,
                 }}>
-                  Price on request
+                  {t("acfControl.planPrice")}
                 </div>
 
                 <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 20 }}>
@@ -894,22 +901,22 @@ export default function ACFControlPage() {
                   background: plan.recommended ? `linear-gradient(135deg, ${C.gold}, ${C.gold2})` : C.navy2,
                   color: plan.recommended ? C.navy1 : C.gray2,
                   outline: plan.recommended ? "none" : `1px solid ${C.bd1}`,
-                }}>{plan.recommended ? "Request a Demo →" : "Contact Us"}</button>
+                }}>{plan.recommended ? t("acfControl.planRequestDemo") : t("acfControl.planContactUs")}</button>
               </div>
             ))}
           </div>
 
           {/* Partner */}
           <div style={{ background: C.goldDim, border: `1px solid ${C.goldBorder}`, borderRadius: 16, padding: 24, textAlign: "center" }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".14em", marginBottom: 8 }}>CERTIFIED PARTNER PROGRAM</div>
-            <p style={{ fontSize: 13, color: C.gray2, marginBottom: 12 }}>Annual consultant license. ACF certification required for client access.</p>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".14em", marginBottom: 8 }}>{t("acfControl.partnerLabel")}</div>
+            <p style={{ fontSize: 13, color: C.gray2, marginBottom: 12 }}>{t("acfControl.partnerDesc")}</p>
             <button style={{
               background: "transparent", border: `1px solid ${C.goldBorder}`, color: C.gold,
               padding: "10px 24px", borderRadius: 10, fontSize: 13, fontWeight: 600, cursor: "pointer", transition: "all .3s",
             }}
               onMouseEnter={e => { (e.target as HTMLElement).style.background = C.goldDim; }}
               onMouseLeave={e => { (e.target as HTMLElement).style.background = "transparent"; }}
-            >Apply for Certification →</button>
+            >{t("acfControl.partnerApply")}</button>
           </div>
         </div>
       </section>
@@ -918,10 +925,10 @@ export default function ACFControlPage() {
       <section style={{ padding: "40px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 24, textAlign: "center" }}>
           {[
-            { val: 60, suf: "s", label: "Kill switch max" },
-            { val: 18, suf: "", label: "Sovereignty KPIs" },
-            { val: 7, suf: "", label: "Controls per agent" },
-            { val: 45, suf: "min", label: "Operational in" },
+            { val: 60, suf: "s", label: t("acfControl.statKillSwitch") },
+            { val: 18, suf: "", label: t("acfControl.statKpis") },
+            { val: 7, suf: "", label: t("acfControl.statControls") },
+            { val: 45, suf: "min", label: t("acfControl.statOperational") },
           ].map(s => (
             <div key={s.label}>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, color: C.gold }}>
@@ -937,24 +944,24 @@ export default function ACFControlPage() {
       <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
           <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>
-            Stop flying blind.<br />
-            <span style={{ color: C.gold }}>Start governing.</span>
+            {t("acfControl.ctaTitle1")}<br />
+            <span style={{ color: C.gold }}>{t("acfControl.ctaTitle2")}</span>
           </h2>
           <p style={{ fontSize: 15, color: C.gray2, marginBottom: 32, maxWidth: 500, margin: "0 auto 32px" }}>
-            Your agents are already making decisions. The only question is: <strong style={{ color: "#fff" }}>are you in command?</strong>
+            {t("acfControl.ctaDescPre")}<strong style={{ color: "#fff" }}>{t("acfControl.ctaDescBold")}</strong>
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 12 }}>
             <button className="gold-glow" style={{
               background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
               border: "none", padding: "16px 36px", borderRadius: 12, fontSize: 15, fontWeight: 700, cursor: "pointer", transition: "all .3s",
-            }}>Request a Demo →</button>
+            }}>{t("acfControl.ctaRequestDemo")}</button>
             <button style={{
               background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
               padding: "16px 36px", borderRadius: 12, fontSize: 15, fontWeight: 500, cursor: "pointer",
             }}
               onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
               onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}
-            >Calculate Your ACF Score</button>
+            >{t("acfControl.ctaCalcScore")}</button>
           </div>
         </div>
       </section>
@@ -964,13 +971,13 @@ export default function ACFControlPage() {
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
             <div style={{ width: 32, height: 32, borderRadius: 8, background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, fontWeight: 900, color: C.navy1 }}>ACF</div>
-            <span style={{ fontSize: 13, color: C.gray }}>Agentic Commerce Framework® — All rights reserved.</span>
+            <span style={{ fontSize: 13, color: C.gray }}>{t("acfControl.footerRights")}</span>
           </div>
           <div style={{ display: "flex", gap: 20, fontSize: 12, color: C.gray }}>
-            <span>© 2026 Vincent DORANGE</span>
-            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray}>Privacy</a>
-            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray}>Terms</a>
-            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray}>Contact</a>
+            <span>{t("acfControl.footerCopyright")}</span>
+            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray}>{t("acfControl.footerPrivacy")}</a>
+            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray}>{t("acfControl.footerTerms")}</a>
+            <a href="#" style={{ color: C.gray, transition: "color .2s" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray}>{t("acfControl.footerContact")}</a>
           </div>
         </div>
       </footer>

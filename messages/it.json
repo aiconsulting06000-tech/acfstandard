@@ -1,1 +1,797 @@
-{"meta":{"language":"IT","languageCode":"it","locale":"it-IT"},"common":{"readMore":"Leggi di più","learnMore":"Scopri di più","getStarted":"Inizia","downloadPDF":"Scarica PDF","watchVideo":"Guarda video","close":"Chiudi","open":"Apri","loading":"Caricamento","backToHome":"Torna alla home","menu":"Menu"},"regionSelector":{"title":"Seleziona la tua regione e lingua","close":"✕ Chiudi","global":"Globale (Inglese)","northAmerica":"Nord America","latinAmerica":"America Latina","westernEurope":"Europa Occidentale","nordicBaltic":"Nordico & Baltico","centralEasternEurope":"Europa Centrale & Orientale","middleEastAfrica":"Medio Oriente & Africa","asiaPacific":"Asia & Pacifico"},"nav":{"menu":"Menu","logoText":"Agentic Commerce Framework®","logoSubtext":"Standard Globale per la Governance IA","region":"GLOBALE | IT","theStandard":"Lo Standard","acfScore":"ACF Score","acfControl":"ACF Control","acfCertification":"Certificazione ACF","partners":"Partner","requestAssessment":"Richiedi Valutazione","partnerLogin":"Accesso Partner","applyPartner":"Diventa Partner","contact":"Contatti"},"megaMenu":{"framework":{"title":"Framework","link":"Standard ACF →","subtitle":"La metodologia di governance definitiva per sistemi agentici in ambienti commerciali.","architecture":{"title":"Architettura","principles":"4 Principi Fondamentali","layers":"4 Livelli Operativi","maturity":"4 Livelli di Maturità"},"methodology":{"title":"Metodologia","modules":"8 Moduli di Implementazione","constitution":"Costituzione Agentica","dda":"Framework del Ruolo DDA","killSwitch":"Protocollo Kill Switch"},"featured":{"label":"IN EVIDENZA","whitepaper":{"title":"Scarica il White Paper ACF","description":"Specifica completa — gratuita per utenti registrati."},"release":{"title":"ACF v1.0 — Febbraio 2026","description":"Rilascio ufficiale. Novità nel framework."}}},"products":{"title":"Prodotti","link":"Prodotti →","subtitle":"Tre strumenti che operazionalizzano lo Standard ACF nella tua organizzazione.","diagnostic":{"title":"Diagnostica","score":"ACF Score — Metrica di Sovranità","methodology":"Metodologia di Scoring","axes":"6 Assi di Governance"},"saas":{"title":"Piattaforma SaaS","control":"ACF Control — Dashboard di Governance","kpis":"18 KPI di Sovranità","gating":"Sistema di Gating Adattivo"},"certification":{"title":"Certificazione","program":"Programma di Certificazione ACF","levels":"Livelli di Certificazione","audit":"Processo di Audit"}},"resources":{"title":"Risorse","link":"Risorse →","subtitle":"Insights di governance, ricerca e documentazione tecnica.","insights":{"title":"Ultimi Insights","aiAct":"AI Act UE & Sistemi Agentici","dda":"Il Ruolo DDA Spiegato","killSwitch":"Progettazione di un Kill Switch a 3 Livelli"},"documentation":{"title":"Documentazione","specs":"Specifiche Tecniche","research":"Pubblicazioni di Ricerca","academy":"ACF Academy"}},"about":{"title":"Chi Siamo","link":"Chi Siamo →","subtitle":"La storia, la missione e la protezione legale dietro l'Agentic Commerce Framework®.","whoWeAre":{"title":"Chi Siamo","vincent":"Vincent DORANGE — Creatore","mission":"Missione & Valori","legal":"Protezione Legale (INPI)"},"howWeWork":{"title":"Come Lavoriamo","network":"Rete di Professionisti","audit":"Audit & Certificazione","contact":"Contattaci"},"registered":{"label":"REGISTRATO","title":"Protetto INPI — Loi n° 2018-670","description":"ACF® è un marchio registrato. Tutta la metodologia e gli strumenti sono legalmente protetti."}},"partners":{"title":"Partner","link":"Partner →","subtitle":"Unisciti alla rete di Professionisti ACF e offri servizi di governance ai tuoi clienti.","portal":{"title":"Portale Partner","login":"Accedi al Portale Partner","dashboard":"Dashboard & Strumenti","training":"Materiali di Formazione","toolkit":"Toolkit Professionista ACF"},"become":{"title":"Diventa Partner","apply":"Candidati","tiers":"Livelli di Partnership","certified":"Ottieni Prima la Certificazione ACF"}},"user":{"partnerAccess":"Accesso Partner","partnerLogin":"Accesso Partner","applyPartner":"Diventa Partner","contact":"Contatti"}},"hero":{"title":"Lo Standard Globale per la","typing":{"word1":"Governance","word2":"Sovranità","word3":"Intelligenza","word4":"Commercio"},"description":"L'Agentic Commerce Framework® (ACF) è la metodologia di governance definitiva per implementare, supervisionare e controllare sistemi agentici autonomi in ambienti commerciali.","cta":{"primary":"Richiedi una Valutazione di Governance →","secondary":"Leggi lo Standard"},"stats":{"principles":{"value":"4","label":"Principi<br>Fondamentali"},"modules":{"value":"8","label":"Moduli di<br>Implementazione"},"kpis":{"value":"18","label":"KPI di<br>Sovranità"},"tools":{"value":"17","label":"Strumenti<br>Proprietari"}},"satellites":{"score":{"name":"ACF Score","description":"Metrica di Sovranità"},"control":{"name":"ACF Control","description":"SaaS di Governance"},"certification":{"name":"Certificazione","description":"Attestazione"},"partners":{"name":"Partner","description":"Professionisti"}}},"statsBar":{"layers":{"value":"4","label":"Livelli Operativi"},"kpis":{"value":"18","label":"KPI di Sovranità"},"tools":{"value":"17","label":"Strumenti Proprietari"},"sovereignty":{"value":"100","suffix":"%","label":"Sovranità Umana"}},"principles":{"badge":"// Architettura","title":"4 Principi Fondamentali","subtitle":"Quattro assiomi immutabili che definiscono il confine tra autorità umana ed esecuzione autonoma degli agenti.","principle1":{"number":"01","title":"Sovranità Decisionale","description":"Le decisioni strategiche critiche non vengono mai delegate ad agenti autonomi."},"principle2":{"number":"02","title":"Governance by Design","description":"I framework di governance sono definiti prima dell'implementazione, non dopo."},"principle3":{"number":"03","title":"Controllo Umano Finale","description":"Ogni sistema agentico deve preservare la capacità di intervento umano."},"principle4":{"number":"04","title":"Responsabilità Tracciabile","description":"Ogni azione autonoma deve essere verificabile e attribuibile."}},"layers":{"badge":"// Struttura","title":"4 Livelli Operativi","subtitle":"Un'architettura gerarchica dalla governance strategica alla supervisione dell'esecuzione in tempo reale.","layer1":{"number":"LAYER_01","title":"Governance & Sovranità","description":"Carta di sovranità, comitato di governance, matrice RACI, mappa delle zone non delegabili."},"layer2":{"number":"LAYER_02","title":"Politica Decisionale","description":"Obiettivi ponderati, regole di arbitrato, soglie di escalation, vincoli normativi."},"layer3":{"number":"LAYER_03","title":"Sistema Agenti","description":"Mandato esplicito per agente, perimetro di interazione, livello di autonomia, tassonomia a 5 categorie."},"layer4":{"number":"LAYER_04","title":"Esecuzione & Supervisione","description":"Matrice di gating adattiva, avvisi multilivello, 18 KPI di sovranità, dashboard live."}},"maturity":{"badge":"// Progressione","title":"4 Livelli di Maturità Agentica","subtitle":"ACF classifica i sistemi per livello di autonomia. Il Livello 2 è l'obiettivo di implementazione raccomandato.","level0":{"code":"LIVELLO_0","name":"Automazione Classica","risk":"Rischio Molto Basso","description":"Regole fisse, nessun ML. Intervento umano per qualsiasi modifica."},"level1":{"code":"LIVELLO_1","name":"Agenti Assistiti","risk":"Rischio Basso","description":"Gli agenti analizzano e raccomandano. Ogni decisione finale rimane con un umano."},"level2":{"code":"LIVELLO_2","name":"Agenti Governati","risk":"Rischio Moderato","description":"Gli agenti decidono entro una governance rigorosa. Zone non delegabili bloccate.","badge":"★ Obiettivo Raccomandato"},"level3":{"code":"LIVELLO_3","name":"Autonomia Supervisionata","risk":"Rischio Alto","description":"Gli agenti decidono e imparano. Governance massima. Solo per organizzazioni mature."}},"modules":{"badge":"// Metodologia","title":"8 Moduli di Implementazione","subtitle":"Un percorso sequenziale implementato progressivamente in 6-18 mesi. Ogni modulo si basa sul precedente.","module1":{"code":"MOD_01","name":"Diagnosi di Sovranità","description":"Calcolo del Score di Sovranità. Mappatura delle zone a rischio."},"module2":{"code":"MOD_02","name":"Mappatura Decisionale","description":"Matrice di Criticità. Zone non delegabili."},"module3":{"code":"MOD_03","name":"Costituzione Agentica","description":"9 articoli. Firmata dal comitato di governance."},"module4":{"code":"MOD_04","name":"Progettazione Sistema Agenti","description":"Schede di mandato, perimetri di interazione."},"module5":{"code":"MOD_05","name":"Sicurezza & Reversibilità","description":"Sandboxing, piano di reversibilità. Progettazione kill switch."},"module6":{"code":"MOD_06","name":"Governance Continua","description":"Revisioni mensili. Audit di conformità annuale."},"module7":{"code":"MOD_07","name":"Roadmap di Implementazione","description":"Implementazione progressiva in 5 fasi."},"module8":{"code":"MOD_08","name":"Gestione delle Crisi","description":"Incidenti a 3 livelli. Esercitazioni kill switch."}},"video":{"badge":"// Perché ACF","title":"La Governance Non Può Aspettare.<br>Gli Agenti Già Decidono.","description1":"Nel 2026, gli agenti autonomi stanno già eseguendo decisioni in ambienti commerciali — definizione prezzi, qualificazione lead, gestione reclami, gestione contratti. La maggior parte delle organizzazioni non ha un framework per governarli.","description2":"ACF è stato creato per colmare questo vuoto — prima che un fallimento di governance diventi una crisi legale, finanziaria o reputazionale.","quote":{"text":"La domanda non è più <em>se</em> implementare agenti. È <em>come</em> implementarli senza rinunciare alla propria sovranità.","author":"— Vincent DORANGE, Creatore dello Standard ACF"},"player":{"badge":"ACF — MESSAGGIO DEL FONDATORE","name":"Vincent DORANGE","role":"Creatore, Agentic Commerce Framework®","duration":"3:09"},"stats":{"release":{"value":"2026","label":"Rilascio Ufficiale"},"documentation":{"value":"45p","label":"Documentazione Completa"},"protection":{"value":"INPI","label":"Protetto Legalmente"}},"modal":{"placeholder":"SEGNAPOSTO VIDEO","title":"Carica il tuo video per abilitare la riproduzione","description":"Sostituisci questa modale con un URL di incorporamento YouTube o Vimeo nel codice"}},"products":{"badge":"// Ecosistema","title":"L'Ecosistema ACF","subtitle":"Tre prodotti complementari che operazionalizzano lo Standard ACF.","score":{"label":"STRUMENTO DIAGNOSTICO","title":"ACF Score","description":"Score di Sovranità proprietario che misura la tua indipendenza decisionale su 6 dimensioni di governance.","features":{"feature1":"Metrica composita Score di Sovranità","feature2":"Visualizzazione radar a 6 assi","feature3":"Piano d'azione personalizzato per asse"},"cta":"Misura il tuo Score →"},"control":{"label":"PIATTAFORMA SAAS","title":"ACF Control","description":"Dashboard di governance in tempo reale che monitora i tuoi 18 KPI di Sovranità con gating adattivo ed escalation automatizzata.","features":{"feature1":"18 KPI su 6 assi di governance","feature2":"Gating adattivo con escalation umana","feature3":"Log di audit a prova di manomissione"},"cta":"Scopri ACF Control →"},"certification":{"label":"ATTESTAZIONE INDIPENDENTE","title":"Certificazione ACF","description":"Certificazione indipendente che attesta la conformità allo standard di governance ACF. Verificabile pubblicamente.","features":{"feature1":"Percorsi di certificazione Livello 1, 2 e 3","feature2":"Badge verificabile pubblicamente","feature3":"Rinnovo annuale + monitoraggio continuo"},"cta":"Ottieni la Certificazione →"}},"blog":{"badge":"// Insights","title":"Ultimi Articoli dal Blog ACF","subtitle":"Insights di governance, aggiornamenti del framework e ricerca sull'intelligenza agentica.","article1":{"category":"REGOLAMENTAZIONE IA","title":"Come l'AI Act UE Si Applica ai Sistemi Agentici nel 2026","excerpt":"L'approccio basato sul rischio dell'AI Act crea obblighi specifici per gli agenti autonomi. Ecco cosa copre la governance ACF Livello 2.","date":"2026-02-15","cta":"Leggi →"},"article2":{"category":"GOVERNANCE","title":"Il DDA: Perché Ogni Azienda Nativa IA Ha Bisogno di un Responsabile Agenti Decisionali Delegati","excerpt":"Il DDA è il guardiano legale dei tuoi agenti autonomi. Come creare e potenziare questo ruolo critico.","date":"2026-02-08","cta":"Leggi →"},"article3":{"category":"TECNICO","title":"Progettazione di un Kill Switch a Tre Livelli per Sistemi di Agenti Autonomi","excerpt":"Un kill switch efficace non è un singolo pulsante. ACF specifica tre livelli di interruzione con tempi di risposta definiti.","date":"2026-01-29","cta":"Leggi →"},"viewAll":"Vedi Tutti gli Articoli →"},"cta":{"watermark":"ACF®","badge":"// Prossimo Passo","title":"Pronto a Governare i Tuoi<br>Sistemi Agentici?","description":"Richiedi una valutazione di governance e scopri il tuo Score di Sovranità attuale.","primary":"Richiedi una Valutazione di Governance →","secondary":"Diventa Partner ACF"},"footer":{"logoText":"Agentic Commerce Framework®","logoSubtext":"Standard Globale per la Governance IA","description":"Lo standard di governance definitivo per organizzazioni che implementano sistemi agentici autonomi. Protetto — Loi n° 2018-670.","framework":{"title":"Framework","theStandard":"Lo Standard","methodology":"Metodologia","research":"Ricerca","certification":"Certificazione ACF"},"products":{"title":"Prodotti","score":"ACF Score","control":"ACF Control","certification":"Certificazione","academy":"Academy"},"organization":{"title":"Organizzazione","partnerPortal":"Portale Partner","about":"Chi Siamo","contact":"Contatti","legal":"Note Legali"},"copyright":"© 2026 Agentic Commerce Framework® — Vincent DORANGE. Tutti i diritti riservati. Registrato INPI.","legal":{"privacy":"Privacy","terms":"Termini","cookies":"Cookie"}},"ai":{"button":{"label":"Chiedi all'Agente ACF","status":"GOVERNANCE IA · ONLINE"},"modal":{"close":"×","beta":"BETA","title":"Chiedi ad ACF","subtitle":"Un chatbot che risponde a domande basate sullo Standard ACF e insights di governance","placeholder":"Chiedi sulla governance ACF...","send":"Invia","trending":{"label":"DOMANDE POPOLARI","q1":"Cos'è lo Standard ACF?","q2":"Come ottenere la certificazione ACF?","q3":"Cos'è il ruolo DDA?","q4":"Cos'è lo Score di Sovranità?","q5":"I 4 Principi Fondamentali?"},"disclaimer":"Esperimento IA. Risposte basate sulla documentazione dello Standard ACF.","seeMore":"Scopri di Più"}}}
+{
+  "meta": {
+    "language": "IT",
+    "languageCode": "it",
+    "locale": "it-IT"
+  },
+  "common": {
+    "readMore": "Leggi di più",
+    "learnMore": "Scopri di più",
+    "getStarted": "Inizia",
+    "downloadPDF": "Scarica PDF",
+    "watchVideo": "Guarda video",
+    "close": "Chiudi",
+    "open": "Apri",
+    "loading": "Caricamento",
+    "backToHome": "Torna alla home",
+    "menu": "Menu",
+    "acf_standard_governance_methodology_for_autonomous": "ACF Standard — metodologia di governance per sistemi agentici autonomi.",
+    "agentic_commerce_framework_acf_standard": "Agentic Commerce Framework — ACF Standard"
+  },
+  "regionSelector": {
+    "title": "Seleziona la tua regione e lingua",
+    "close": "✕ Chiudi",
+    "global": "Globale (Inglese)",
+    "northAmerica": "Nord America",
+    "latinAmerica": "America Latina",
+    "westernEurope": "Europa Occidentale",
+    "nordicBaltic": "Nordico & Baltico",
+    "centralEasternEurope": "Europa Centrale & Orientale",
+    "middleEastAfrica": "Medio Oriente & Africa",
+    "asiaPacific": "Asia & Pacifico"
+  },
+  "nav": {
+    "menu": "Menu",
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Standard Globale per la Governance IA",
+    "region": "GLOBALE | IT",
+    "theStandard": "Lo Standard",
+    "acfScore": "ACF Score",
+    "acfControl": "ACF Control",
+    "acfCertification": "Certificazione ACF",
+    "partners": "Partner",
+    "requestAssessment": "Richiedi Valutazione",
+    "partnerLogin": "Accesso Partner",
+    "applyPartner": "Diventa Partner",
+    "contact": "Contatti"
+  },
+  "megaMenu": {
+    "framework": {
+      "title": "Framework",
+      "link": "Standard ACF →",
+      "subtitle": "La metodologia di governance definitiva per sistemi agentici in ambienti commerciali.",
+      "architecture": {
+        "title": "Architettura",
+        "principles": "4 Principi Fondamentali",
+        "layers": "4 Livelli Operativi",
+        "maturity": "4 Livelli di Maturità"
+      },
+      "methodology": {
+        "title": "Metodologia",
+        "modules": "8 Moduli di Implementazione",
+        "constitution": "Costituzione Agentica",
+        "dda": "Framework del Ruolo DDA",
+        "killSwitch": "Protocollo Kill Switch"
+      },
+      "featured": {
+        "label": "IN EVIDENZA",
+        "whitepaper": {
+          "title": "Scarica il White Paper ACF",
+          "description": "Specifica completa — gratuita per utenti registrati."
+        },
+        "release": {
+          "title": "ACF v1.0 — Febbraio 2026",
+          "description": "Rilascio ufficiale. Novità nel framework."
+        }
+      }
+    },
+    "products": {
+      "title": "Prodotti",
+      "link": "Prodotti →",
+      "subtitle": "Tre strumenti che operazionalizzano lo Standard ACF nella tua organizzazione.",
+      "diagnostic": {
+        "title": "Diagnostica",
+        "score": "ACF Score — Metrica di Sovranità",
+        "methodology": "Metodologia di Scoring",
+        "axes": "6 Assi di Governance"
+      },
+      "saas": {
+        "title": "Piattaforma SaaS",
+        "control": "ACF Control — Dashboard di Governance",
+        "kpis": "18 KPI di Sovranità",
+        "gating": "Sistema di Gating Adattivo"
+      },
+      "certification": {
+        "title": "Certificazione",
+        "program": "Programma di Certificazione ACF",
+        "levels": "Livelli di Certificazione",
+        "audit": "Processo di Audit"
+      }
+    },
+    "resources": {
+      "title": "Risorse",
+      "link": "Risorse →",
+      "subtitle": "Insights di governance, ricerca e documentazione tecnica.",
+      "insights": {
+        "title": "Ultimi Insights",
+        "aiAct": "AI Act UE & Sistemi Agentici",
+        "dda": "Il Ruolo DDA Spiegato",
+        "killSwitch": "Progettazione di un Kill Switch a 3 Livelli"
+      },
+      "documentation": {
+        "title": "Documentazione",
+        "specs": "Specifiche Tecniche",
+        "research": "Pubblicazioni di Ricerca",
+        "academy": "ACF Academy"
+      }
+    },
+    "about": {
+      "title": "Chi Siamo",
+      "link": "Chi Siamo →",
+      "subtitle": "La storia, la missione e la protezione legale dietro l'Agentic Commerce Framework®.",
+      "whoWeAre": {
+        "title": "Chi Siamo",
+        "vincent": "Vincent DORANGE — Creatore",
+        "mission": "Missione & Valori",
+        "legal": "Protezione Legale (INPI)"
+      },
+      "howWeWork": {
+        "title": "Come Lavoriamo",
+        "network": "Rete di Professionisti",
+        "audit": "Audit & Certificazione",
+        "contact": "Contattaci"
+      },
+      "registered": {
+        "label": "REGISTRATO",
+        "title": "Protetto INPI — Loi n° 2018-670",
+        "description": "ACF® è un marchio registrato. Tutta la metodologia e gli strumenti sono legalmente protetti."
+      }
+    },
+    "partners": {
+      "title": "Partner",
+      "link": "Partner →",
+      "subtitle": "Unisciti alla rete di Professionisti ACF e offri servizi di governance ai tuoi clienti.",
+      "portal": {
+        "title": "Portale Partner",
+        "login": "Accedi al Portale Partner",
+        "dashboard": "Dashboard & Strumenti",
+        "training": "Materiali di Formazione",
+        "toolkit": "Toolkit Professionista ACF"
+      },
+      "become": {
+        "title": "Diventa Partner",
+        "apply": "Candidati",
+        "tiers": "Livelli di Partnership",
+        "certified": "Ottieni Prima la Certificazione ACF"
+      }
+    },
+    "user": {
+      "partnerAccess": "Accesso Partner",
+      "partnerLogin": "Accesso Partner",
+      "applyPartner": "Diventa Partner",
+      "contact": "Contatti"
+    }
+  },
+  "hero": {
+    "title": "Lo Standard Globale per la",
+    "typing": {
+      "word1": "Governance",
+      "word2": "Sovranità",
+      "word3": "Intelligenza",
+      "word4": "Commercio"
+    },
+    "description": "L'Agentic Commerce Framework® (ACF) è la metodologia di governance definitiva per implementare, supervisionare e controllare sistemi agentici autonomi in ambienti commerciali.",
+    "cta": {
+      "primary": "Richiedi una Valutazione di Governance →",
+      "secondary": "Leggi lo Standard"
+    },
+    "stats": {
+      "principles": {
+        "value": "4",
+        "label": "Principi<br>Fondamentali"
+      },
+      "modules": {
+        "value": "8",
+        "label": "Moduli di<br>Implementazione"
+      },
+      "kpis": {
+        "value": "18",
+        "label": "KPI di<br>Sovranità"
+      },
+      "tools": {
+        "value": "17",
+        "label": "Strumenti<br>Proprietari"
+      }
+    },
+    "satellites": {
+      "score": {
+        "name": "ACF Score",
+        "description": "Metrica di Sovranità"
+      },
+      "control": {
+        "name": "ACF Control",
+        "description": "SaaS di Governance"
+      },
+      "certification": {
+        "name": "Certificazione",
+        "description": "Attestazione"
+      },
+      "partners": {
+        "name": "Partner",
+        "description": "Professionisti"
+      }
+    }
+  },
+  "statsBar": {
+    "layers": {
+      "value": "4",
+      "label": "Livelli Operativi"
+    },
+    "kpis": {
+      "value": "18",
+      "label": "KPI di Sovranità"
+    },
+    "tools": {
+      "value": "17",
+      "label": "Strumenti Proprietari"
+    },
+    "sovereignty": {
+      "value": "100",
+      "suffix": "%",
+      "label": "Sovranità Umana"
+    }
+  },
+  "principles": {
+    "badge": "// Architettura",
+    "title": "4 Principi Fondamentali",
+    "subtitle": "Quattro assiomi immutabili che definiscono il confine tra autorità umana ed esecuzione autonoma degli agenti.",
+    "principle1": {
+      "number": "01",
+      "title": "Sovranità Decisionale",
+      "description": "Le decisioni strategiche critiche non vengono mai delegate ad agenti autonomi."
+    },
+    "principle2": {
+      "number": "02",
+      "title": "Governance by Design",
+      "description": "I framework di governance sono definiti prima dell'implementazione, non dopo."
+    },
+    "principle3": {
+      "number": "03",
+      "title": "Controllo Umano Finale",
+      "description": "Ogni sistema agentico deve preservare la capacità di intervento umano."
+    },
+    "principle4": {
+      "number": "04",
+      "title": "Responsabilità Tracciabile",
+      "description": "Ogni azione autonoma deve essere verificabile e attribuibile."
+    }
+  },
+  "layers": {
+    "badge": "// Struttura",
+    "title": "4 Livelli Operativi",
+    "subtitle": "Un'architettura gerarchica dalla governance strategica alla supervisione dell'esecuzione in tempo reale.",
+    "layer1": {
+      "number": "LAYER_01",
+      "title": "Governance & Sovranità",
+      "description": "Carta di sovranità, comitato di governance, matrice RACI, mappa delle zone non delegabili."
+    },
+    "layer2": {
+      "number": "LAYER_02",
+      "title": "Politica Decisionale",
+      "description": "Obiettivi ponderati, regole di arbitrato, soglie di escalation, vincoli normativi."
+    },
+    "layer3": {
+      "number": "LAYER_03",
+      "title": "Sistema Agenti",
+      "description": "Mandato esplicito per agente, perimetro di interazione, livello di autonomia, tassonomia a 5 categorie."
+    },
+    "layer4": {
+      "number": "LAYER_04",
+      "title": "Esecuzione & Supervisione",
+      "description": "Matrice di gating adattiva, avvisi multilivello, 18 KPI di sovranità, dashboard live."
+    }
+  },
+  "maturity": {
+    "badge": "// Progressione",
+    "title": "4 Livelli di Maturità Agentica",
+    "subtitle": "ACF classifica i sistemi per livello di autonomia. Il Livello 2 è l'obiettivo di implementazione raccomandato.",
+    "level0": {
+      "code": "LIVELLO_0",
+      "name": "Automazione Classica",
+      "risk": "Rischio Molto Basso",
+      "description": "Regole fisse, nessun ML. Intervento umano per qualsiasi modifica."
+    },
+    "level1": {
+      "code": "LIVELLO_1",
+      "name": "Agenti Assistiti",
+      "risk": "Rischio Basso",
+      "description": "Gli agenti analizzano e raccomandano. Ogni decisione finale rimane con un umano."
+    },
+    "level2": {
+      "code": "LIVELLO_2",
+      "name": "Agenti Governati",
+      "risk": "Rischio Moderato",
+      "description": "Gli agenti decidono entro una governance rigorosa. Zone non delegabili bloccate.",
+      "badge": "★ Obiettivo Raccomandato"
+    },
+    "level3": {
+      "code": "LIVELLO_3",
+      "name": "Autonomia Supervisionata",
+      "risk": "Rischio Alto",
+      "description": "Gli agenti decidono e imparano. Governance massima. Solo per organizzazioni mature."
+    }
+  },
+  "modules": {
+    "badge": "// Metodologia",
+    "title": "8 Moduli di Implementazione",
+    "subtitle": "Un percorso sequenziale implementato progressivamente in 6-18 mesi. Ogni modulo si basa sul precedente.",
+    "module1": {
+      "code": "MOD_01",
+      "name": "Diagnosi di Sovranità",
+      "description": "Calcolo del Score di Sovranità. Mappatura delle zone a rischio."
+    },
+    "module2": {
+      "code": "MOD_02",
+      "name": "Mappatura Decisionale",
+      "description": "Matrice di Criticità. Zone non delegabili."
+    },
+    "module3": {
+      "code": "MOD_03",
+      "name": "Costituzione Agentica",
+      "description": "9 articoli. Firmata dal comitato di governance."
+    },
+    "module4": {
+      "code": "MOD_04",
+      "name": "Progettazione Sistema Agenti",
+      "description": "Schede di mandato, perimetri di interazione."
+    },
+    "module5": {
+      "code": "MOD_05",
+      "name": "Sicurezza & Reversibilità",
+      "description": "Sandboxing, piano di reversibilità. Progettazione kill switch."
+    },
+    "module6": {
+      "code": "MOD_06",
+      "name": "Governance Continua",
+      "description": "Revisioni mensili. Audit di conformità annuale."
+    },
+    "module7": {
+      "code": "MOD_07",
+      "name": "Roadmap di Implementazione",
+      "description": "Implementazione progressiva in 5 fasi."
+    },
+    "module8": {
+      "code": "MOD_08",
+      "name": "Gestione delle Crisi",
+      "description": "Incidenti a 3 livelli. Esercitazioni kill switch."
+    }
+  },
+  "video": {
+    "badge": "// Perché ACF",
+    "title": "La Governance Non Può Aspettare.<br>Gli Agenti Già Decidono.",
+    "description1": "Nel 2026, gli agenti autonomi stanno già eseguendo decisioni in ambienti commerciali — definizione prezzi, qualificazione lead, gestione reclami, gestione contratti. La maggior parte delle organizzazioni non ha un framework per governarli.",
+    "description2": "ACF è stato creato per colmare questo vuoto — prima che un fallimento di governance diventi una crisi legale, finanziaria o reputazionale.",
+    "quote": {
+      "text": "La domanda non è più <em>se</em> implementare agenti. È <em>come</em> implementarli senza rinunciare alla propria sovranità.",
+      "author": "— Vincent DORANGE, Creatore dello Standard ACF"
+    },
+    "player": {
+      "badge": "ACF — MESSAGGIO DEL FONDATORE",
+      "name": "Vincent DORANGE",
+      "role": "Creatore, Agentic Commerce Framework®",
+      "duration": "3:09"
+    },
+    "stats": {
+      "release": {
+        "value": "2026",
+        "label": "Rilascio Ufficiale"
+      },
+      "documentation": {
+        "value": "45p",
+        "label": "Documentazione Completa"
+      },
+      "protection": {
+        "value": "INPI",
+        "label": "Protetto Legalmente"
+      }
+    },
+    "modal": {
+      "placeholder": "SEGNAPOSTO VIDEO",
+      "title": "Carica il tuo video per abilitare la riproduzione",
+      "description": "Sostituisci questa modale con un URL di incorporamento YouTube o Vimeo nel codice"
+    }
+  },
+  "products": {
+    "badge": "// Ecosistema",
+    "title": "L'Ecosistema ACF",
+    "subtitle": "Tre prodotti complementari che operazionalizzano lo Standard ACF.",
+    "score": {
+      "label": "STRUMENTO DIAGNOSTICO",
+      "title": "ACF Score",
+      "description": "Score di Sovranità proprietario che misura la tua indipendenza decisionale su 6 dimensioni di governance.",
+      "features": {
+        "feature1": "Metrica composita Score di Sovranità",
+        "feature2": "Visualizzazione radar a 6 assi",
+        "feature3": "Piano d'azione personalizzato per asse"
+      },
+      "cta": "Misura il tuo Score →"
+    },
+    "control": {
+      "label": "PIATTAFORMA SAAS",
+      "title": "ACF Control",
+      "description": "Dashboard di governance in tempo reale che monitora i tuoi 18 KPI di Sovranità con gating adattivo ed escalation automatizzata.",
+      "features": {
+        "feature1": "18 KPI su 6 assi di governance",
+        "feature2": "Gating adattivo con escalation umana",
+        "feature3": "Log di audit a prova di manomissione"
+      },
+      "cta": "Scopri ACF Control →"
+    },
+    "certification": {
+      "label": "ATTESTAZIONE INDIPENDENTE",
+      "title": "Certificazione ACF",
+      "description": "Certificazione indipendente che attesta la conformità allo standard di governance ACF. Verificabile pubblicamente.",
+      "features": {
+        "feature1": "Percorsi di certificazione Livello 1, 2 e 3",
+        "feature2": "Badge verificabile pubblicamente",
+        "feature3": "Rinnovo annuale + monitoraggio continuo"
+      },
+      "cta": "Ottieni la Certificazione →"
+    }
+  },
+  "blog": {
+    "badge": "// Insights",
+    "title": "Ultimi Articoli dal Blog ACF",
+    "subtitle": "Insights di governance, aggiornamenti del framework e ricerca sull'intelligenza agentica.",
+    "article1": {
+      "category": "REGOLAMENTAZIONE IA",
+      "title": "Come l'AI Act UE Si Applica ai Sistemi Agentici nel 2026",
+      "excerpt": "L'approccio basato sul rischio dell'AI Act crea obblighi specifici per gli agenti autonomi. Ecco cosa copre la governance ACF Livello 2.",
+      "date": "2026-02-15",
+      "cta": "Leggi →"
+    },
+    "article2": {
+      "category": "GOVERNANCE",
+      "title": "Il DDA: Perché Ogni Azienda Nativa IA Ha Bisogno di un Responsabile Agenti Decisionali Delegati",
+      "excerpt": "Il DDA è il guardiano legale dei tuoi agenti autonomi. Come creare e potenziare questo ruolo critico.",
+      "date": "2026-02-08",
+      "cta": "Leggi →"
+    },
+    "article3": {
+      "category": "TECNICO",
+      "title": "Progettazione di un Kill Switch a Tre Livelli per Sistemi di Agenti Autonomi",
+      "excerpt": "Un kill switch efficace non è un singolo pulsante. ACF specifica tre livelli di interruzione con tempi di risposta definiti.",
+      "date": "2026-01-29",
+      "cta": "Leggi →"
+    },
+    "viewAll": "Vedi Tutti gli Articoli →"
+  },
+  "cta": {
+    "watermark": "ACF®",
+    "badge": "// Prossimo Passo",
+    "title": "Pronto a Governare i Tuoi<br>Sistemi Agentici?",
+    "description": "Richiedi una valutazione di governance e scopri il tuo Score di Sovranità attuale.",
+    "primary": "Richiedi una Valutazione di Governance →",
+    "secondary": "Diventa Partner ACF"
+  },
+  "footer": {
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Standard Globale per la Governance IA",
+    "description": "Lo standard di governance definitivo per organizzazioni che implementano sistemi agentici autonomi. Protetto — Loi n° 2018-670.",
+    "framework": {
+      "title": "Framework",
+      "theStandard": "Lo Standard",
+      "methodology": "Metodologia",
+      "research": "Ricerca",
+      "certification": "Certificazione ACF"
+    },
+    "products": {
+      "title": "Prodotti",
+      "score": "ACF Score",
+      "control": "ACF Control",
+      "certification": "Certificazione",
+      "academy": "Academy"
+    },
+    "organization": {
+      "title": "Organizzazione",
+      "partnerPortal": "Portale Partner",
+      "about": "Chi Siamo",
+      "contact": "Contatti",
+      "legal": "Note Legali"
+    },
+    "copyright": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Tutti i diritti riservati. Registrato INPI.",
+    "legal": {
+      "privacy": "Privacy",
+      "terms": "Termini",
+      "cookies": "Cookie"
+    }
+  },
+  "ai": {
+    "button": {
+      "label": "Chiedi all'Agente ACF",
+      "status": "GOVERNANCE IA · ONLINE"
+    },
+    "modal": {
+      "close": "×",
+      "beta": "BETA",
+      "title": "Chiedi ad ACF",
+      "subtitle": "Un chatbot che risponde a domande basate sullo Standard ACF e insights di governance",
+      "placeholder": "Chiedi sulla governance ACF...",
+      "send": "Invia",
+      "trending": {
+        "label": "DOMANDE POPOLARI",
+        "q1": "Cos'è lo Standard ACF?",
+        "q2": "Come ottenere la certificazione ACF?",
+        "q3": "Cos'è il ruolo DDA?",
+        "q4": "Cos'è lo Score di Sovranità?",
+        "q5": "I 4 Principi Fondamentali?"
+      },
+      "disclaimer": "Esperimento IA. Risposte basate sulla documentazione dello Standard ACF.",
+      "seeMore": "Scopri di Più"
+    }
+  },
+  "components": {
+    "src\\components\\home\\blog": {
+      "timely_writing_on_governance_deployments_and_case_": "Contenuti tempestivi su governance, implementazioni e casi di studio."
+    },
+    "src\\components\\home\\cta": {
+      "get_started_with_acf": "Inizia con ACF"
+    },
+    "src\\components\\home\\ecosystem": {
+      "certified_governance_architects_and_implementation": "Architetti di governance certificati ed esperti di implementazione.",
+      "companies_deploying_governed_agents_in_financial_h": "Aziende che implementano agenti governati nei settori finanziario, sanitario e pubblico.",
+      "integrations_with_major_ai_platforms_control_syste": "Integrazioni con le principali piattaforme AI, sistemi di controllo e software aziendali."
+    },
+    "src\\components\\home\\hero": {
+      "read_the_standard": "Leggi lo Standard",
+      "the_global_standard_for": "Lo Standard Globale per"
+    },
+    "src\\components\\home\\layers": {
+      "adaptive_gating_matrix_multilevel_alerts_18_sovere": "Matrice di controllo adattiva, allerte multi-livello, 18 KPI di sovranità, dashboard in tempo reale.",
+      "execution_amp_supervision": "Esecuzione & Supervisione",
+      "governance_amp_sovereignty": "Governance & Sovranità",
+      "sovereignty_charter_governance_committee_raci_matr": "Carta di sovranità, comitato di governance, matrice RACI, mappa delle zone non delegabili."
+    },
+    "src\\components\\home\\maturity": {
+      "agents_decide_and_learn_maximum_governance_for_mat": "Gli agenti decidono e apprendono. Governance massima. Solo per organizzazioni mature.",
+      "agents_decide_within_strict_governance_nondelegabl": "Gli agenti decidono entro una governance rigorosa. Zone non delegabili bloccate.",
+      "fixed_rules_no_ml_human_intervention_for_any_modif": "Regole fisse, nessun ML. Intervento umano per qualsiasi modifica."
+    },
+    "src\\components\\home\\methodology": {
+      "assign_explicit_mandates_and_autonomy_levels": "Assegnare mandati espliciti e livelli di autonomia",
+      "define_18_sovereignty_metrics_and_thresholds": "Definire 18 metriche di sovranità e soglie",
+      "define_sovereignty_boundaries_raci_matrix_escalati": "Definire confini di sovranità, matrice RACI, autorità di escalation",
+      "identify_decisions_only_humans_can_make": "Identificare decisioni che solo gli esseri umani possono prendere",
+      "multilevel_alerts_and_human_decision_triggers": "Avvisi multi-livello e trigger decisionali umani",
+      "quarterly_review_and_framework_evolution": "Revisione trimestrale ed evoluzione del framework",
+      "realtime_traceability_and_decision_logging": "Tracciabilità in tempo reale e registrazione delle decisioni",
+      "set_agent_goals_constraints_and_success_metrics": "Definire obiettivi degli agenti, vincoli e metriche di successo",
+      "the_stepbystep_methodology_to_embed_acf_governance": "La metodologia passo-passo per integrare la governance ACF nella vostra infrastruttura agenziale."
+    },
+    "src\\components\\home\\principles": {
+      "certain_decisions_are_structurally_ethically_or_le": "Certe decisioni sono strutturalmente, eticamente o legalmente non automatizzabili. La zona non delegabile è formalmente definita e tecnicamente bloccata — mai configurabile dagli agenti stessi.",
+      "four_immutable_axioms_defining_the_boundary_betwee": "Quattro assiomi immutabili che definiscono il confine tra autorità umana ed esecuzione di agenti autonomi.",
+      "traceability_amp_interruptibility": "Tracciabilità & Interrompibilità"
+    },
+    "src\\components\\home\\products": {
+      "products_integrations": "Prodotti & Integrazioni",
+      "sdks_connectors": "SDK & Connettori",
+      "tooling_connectors_and_governance_controls_to_oper": "Strumenti, connettori e controlli di governance per rendere operativi gli agenti."
+    },
+    "src\\components\\home\\referencehome": {
+      "acf_certification_program": "Programma di Certificazione ACF",
+      "acf_control_governance_dashboard": "ACF Control — Dashboard di Governance",
+      "acf_practitioner_toolkit": "Toolkit del Professionista ACF",
+      "acf_score_sovereignty_metric": "ACF Score — Metrica di Sovranità",
+      "acf_founder_message": "ACF — MESSAGGIO DEL FONDATORE",
+      "ai_governance_online": "GOVERNANCE IA · ONLINE",
+      "adaptive_gating_system": "Sistema di Gating Adattivo",
+      "adaptive_gating_with_human_escalation": "Gating adattivo con escalation umana",
+      "agent_system_design": "Progettazione del Sistema Agenziale",
+      "agentic_commerce_framework": "Framework per il Commercio Agenziale®",
+      "agents_already_decide": "Gli Agenti Decidono Già.",
+      "asia_amp_pacific": "Asia & Pacifico",
+      "audit_amp_certification": "Audit & Certificazione",
+      "become_an_acf_partner": "Diventa un Partner ACF",
+      "composite_sovereignty_score_metric": "Metrica del Punteggio di Sovranità Composito",
+      "creator_agentic_commerce_framework": "Creatore, Framework per il Commercio Agenziale®",
+      "criticality_matrix_nondelegable_zones": "Matrice di Criticità. Zone non delegabili.",
+      "dda_role_framework": "Framework dei Ruoli DDA",
+      "dashboard_amp_tools": "Dashboard & Strumenti",
+      "download_the_acf_white_paper": "Scarica il White Paper ACF",
+      "eu_ai_act_amp_agentic_systems": "Legge UE sull'IA (EU AI Act) & Sistemi Agenziali",
+      "europe_middle_east_amp_africa": "Europa, Medio Oriente & Africa",
+      "full_specification_free_for_registered_users": "Specifica completa — gratuita per utenti registrati.",
+      "get_acf_certified_first": "Ottieni Prima la Certificazione ACF",
+      "global_standard_for_ai_governance": "Standard Globale per la Governance dell'IA",
+      "governance_insights_framework_updates_and_agentic_": "Approfondimenti sulla governance, aggiornamenti del framework e ricerca sull'intelligenza agenziale.",
+      "governance_insights_research_and_technical_documen": "Approfondimenti sulla governance, ricerca e documentazione tecnica.",
+      "how_the_eu_ai_act_applies_to_agentic_systems_in_20_1": "Come la Legge UE sull'IA si Applica ai Sistemi Agenziali nel 2026",
+      "how_to_get_acf_certified": "Come ottenere la certificazione ACF?",
+      "in_2026_autonomous_agents_are_already_executing_de": "Nel 2026, gli agenti autonomi stanno già eseguendo decisioni in ambienti commerciali — stabilendo prezzi, qualificando lead, elaborando reclami, gestendo contratti. La maggior parte delle organizzazioni non ha un framework per governarli.",
+      "independent_certification_attesting_compliance_wit": "Certificazione indipendente che attesta la conformità allo standard di governance ACF. Pubblicamente verificabile.",
+      "join_the_acf_practitioner_network_and_offer_govern": "Unisciti alla rete ACF Practitioner e offri servizi di governance ai tuoi clienti.",
+      "kill_switch_protocol": "Protocollo Kill Switch",
+      "latest_from_the_acf_blog": "Ultime dal Blog ACF",
+      "mission_amp_values": "Missione & Valori",
+      "monthly_reviews_annual_compliance_audit": "Revisioni mensili. Audit di conformità annuale.",
+      "north_amp_latin_america": "Nord & America Latina",
+      "realtime_governance_dashboard_monitoring_your_18_s": "Dashboard di governance in tempo reale che monitora i tuoi 18 KPI di Sovranità con gating adattivo ed escalation automatizzata.",
+      "sandboxing_reversibility_plan_kill_switch_design": "Sandboxing, piano di reversibilità. Progettazione kill switch.",
+      "security_amp_reversibility": "Sicurezza & Reversibilità",
+      "select_your_region_and_language": "Seleziona la tua regione e lingua",
+      "sovereignty_score_calculation_risk_zone_mapping": "Calcolo del Punteggio di Sovranità. Mappatura delle zone di rischio.",
+      "the_acf_ecosystem": "L'Ecosistema ACF",
+      "the_dda_role_explained": "Il Ruolo DDA Spiegato",
+      "the_dda_is_the_legal_guardian_of_your_autonomous_a_1": "Il DDA è il tutore legale dei tuoi agenti autonomi. Come creare e potenziare questo ruolo critico.",
+      "the_definitive_governance_methodology_for_agentic__1": "La metodologia di governance definitiva per sistemi agentici in ambienti commerciali.",
+      "the_story_mission_and_legal_protection_behind_the_": "La storia, missione e protezione legale dietro l'Agentic Commerce Framework®.",
+      "three_complementary_products_operationalizing_the_": "Tre prodotti complementari che operazionalizzano lo Standard ACF.",
+      "three_tools_operationalizing_the_acf_standard_acro": "Tre strumenti che operazionalizzano lo Standard ACF in tutta la tua organizzazione.",
+      "traçabilité_amp_interruptibilité": "Tracciabilità & Interrompibilità",
+      "vincent_dorange_creator": "Vincent DORANGE — Creatore",
+      "what_is_the_acf_sovereignty_score": "Cos'è il Punteggio di Sovranità ACF?",
+      "what_is_the_acf_standard": "Cos'è lo Standard ACF?",
+      "what_is_the_dda_role": "Qual è il ruolo del DDA?",
+      "what_is_the_sovereignty_score": "Cos'è il Punteggio di Sovranità?",
+      "zones_non_délégables": "Zone Non Delegabili"
+    },
+    "src\\components\\home\\videosection": {
+      "see_acf_in_action": "Vedi ACF in Azione"
+    },
+    "src\\components\\layout\\megamenu": {
+      "acf_control_demo": "Demo di Controllo ACF",
+      "audit_reporting": "Audit e Reporting",
+      "become_an_acf_governance_expert": "Diventa un esperto di governance ACF.",
+      "blog_insights": "Blog e Approfondimenti",
+      "events_workshops": "Eventi e Workshop",
+      "find_certified_partners_in_your_region": "Trova partner certificati nella tua regione.",
+      "full_specification_and_research_foundations": "Specifica completa e basi di ricerca.",
+      "realtime_governance_monitoring_platform_for_autono_1": "Piattaforma di monitoraggio della governance in tempo reale per operazioni di agenti autonomi.",
+      "research_innovation": "Ricerca e Innovazione",
+      "see_realtime_governance_in_action": "Vedi la governance in tempo reale in azione.",
+      "the_story_mission_and_vision_behind_the_agentic_co_1": "La storia, la missione e la visione dietro lo standard Agentic Commerce Framework.",
+      "training_certification_and_knowledge_resources_for_1": "Formazione, certificazione e risorse di conoscenza per l'implementazione della governance."
+    },
+    "src\\components\\ui\\aiwidget": {
+      "the_dda_delegated_decision_authority_is_the_named_": "Il DDA — Delegated Decision Authority (Autorità Decisionale Delegata) — è l'individuo designato responsabile delle decisioni finali."
+    }
+  },
+  "pages": {
+    "home": {
+      "acf_agentic_commerce_framework": "ACF — Agentic Commerce Framework®",
+      "central_amp_eastern_europe": "Europa Centrale & Orientale",
+      "login_to_partner_portal": "Accedi al Portale Partner",
+      "middle_east_amp_africa": "Medio Oriente & Africa",
+      "nordic_amp_baltic": "Paesi Nordici & Baltici",
+      "based_in_france_he_works_with_smes_midcap_companie": "Con sede in Francia, lavora con PMI, aziende mid-cap e grandi corporation su questioni di trasformazione digitale, governance dell'IA e l'evoluzione dei modelli di business nell'era dei sistemi autonomi.",
+      "education_training": "Formazione & Addestramento",
+      "executive_education_research": "Formazione Manageriale & Ricerca",
+      "founder_agentic_governance": "Fondatore · Agentic Governance",
+      "global_standard_for_ai_governance": "STANDARD GLOBALE PER LA GOVERNANCE DELL'IA",
+      "the_governance_standard_for_organizations_deployin": "Lo standard di governance per organizzazioni che implementano agenti IA autonomi.",
+      "your_strategic_control_over_automated_decisions_is": "Il vostro controllo strategico sulle decisioni automatizzate è innegociabile.",
+      "acf_academy_core_track": "ACF Academy Percorso Base",
+      "annual_audit_required_to_maintain_certification_ce": "Audit annuale richiesto per mantenere la certificazione. Le organizzazioni certificate mostrano il badge ACF TRUST™ sui loro punti di contatto digitali.",
+      "autonomy_amplifies_clarity_decisions_are_governed_": "L'autonomia amplifica la chiarezza. Le decisioni sono governate. Gli esseri umani sono al comando. Ogni azione è tracciabile, reversibile, responsabile.",
+      "autonomy_amplifies_errors_agents_optimize_locally_": "L'autonomia amplifica gli errori. Gli agenti ottimizzano localmente, distruggono valore globalmente. Nessuna traccia di audit. Nessuna responsabilità. Nessuna via di ritorno.",
+      "certification_academy": "CERTIFICAZIONE & ACADEMY",
+      "certify_the_trust": "Certifica la Fiducia.",
+      "dedicated_acf_team": "Team ACF dedicato",
+      "deliver_acf_implementations": "Fornire implementazioni ACF",
+      "deploy_acf_at_enterprise_scale": "Implementare ACF su scala aziendale",
+      "deploy_acf_tools": "Implementare strumenti ACF",
+      "for_ceos_comex_board_members": "Per CEO, COMEX e Membri del Consiglio",
+      "for_agencies_and_consulting_firms": "Per agenzie e società di consulenza.",
+      "for_consultants_product_leaders_architects": "Per consulenti, product leader, architetti.",
+      "for_major_firms_and_system_integrators": "Per grandi aziende e system integrator.",
+      "govern_the_agents": "Governare gli Agenti.",
+      "it_trains_them_to_govern_autonomous_systems": "Li forma per governare sistemi autonomi.",
+      "learn_to_govern": "Imparare a Governare",
+      "learn_to_govern_1": "Imparare a governare",
+      "manual_selection_by_acf": "Selezione manuale da parte di ACF",
+      "no_certification_here_just_one_thing_they_leave_re": "Nessuna certificazione qui. Solo una cosa: se ne vanno responsabili.",
+      "prove_your_governance": "Dimostra la tua governance",
+      "run_acf_diagnostics": "Eseguire diagnostiche ACF",
+      "sell_acf_control": "Vendere ACF Control",
+      "start_the_academy": "Avviare l'Academy",
+      "when_you_see_the_acf_trust_badge_you_know": "Quando vedi il badge ACF TRUST™, sai che:",
+      "you_operate_on_projects": "Operi su progetti.",
+      "you_scale_delivery": "Aumenti la consegna.",
+      "you_shape_the_ecosystem": "Tu plasmi l'ecosistema.",
+      "acf_control_investment": "ACF INVESTIMENTO DI CONTROLLO",
+      "agent_stability_scores": "PUNTEGGI DI STABILITÀ DEGLI AGENTI",
+      "agent_operator_view": "Vista Operatore Agente",
+      "agentic_commerce_framework_all_rights_reserved": "Agentic Commerce Framework® — Tutti i diritti riservati.",
+      "all_agents_will_be_suspended_upon_confirmation_act": "Tutti gli agenti saranno sospesi dopo conferma. Azione registrata.",
+      "annual_consultant_license_acf_certification_requir": "Licenza consultente annuale. Certificazione ACF richiesta per l'accesso clienti.",
+      "certified_partner_program": "PROGRAMMA PARTNER CERTIFICATO",
+      "cost_of_ai_drift": "COSTO DELLA DERIVA IA",
+      "calculate_your_acf_score": "Calcola il Tuo Punteggio ACF",
+      "certified_consultant_view": "Vista Consulente Certificato",
+      "decision_governance_os": "SISTEMA OPERATIVO GOVERNANCE DECISIONALE",
+      "drift_detection_stockai": "RILEVAMENTO DERIVA — STOCK-AI",
+      "distribution_decision_traffic_treasury": "Distribuzione · Decisione · Traffico · Tesoreria",
+      "eu_ai_act_fines": "MULTE LEGGE UE SULL'IA (EU AI ACT)",
+      "each_module_serves_one_purpose_keeping_humans_in_c": "Ogni modulo serve un unico scopo: mantenere gli umani al comando delle decisioni delle macchine.",
+      "impact_frequency_irreversibility": "Impatto × Frequenza × Irreversibilità.",
+      "live_governance_system": "SISTEMA DI GOVERNANCE LIVE",
+      "minimum_viable_supervision": "Supervisione Minima Viabile",
+      "risk_without_governance": "RISCHIO SENZA GOVERNANCE",
+      "suspend_all_autonomous_agents_full_degraded_mode_w": "Sospendi TUTTI gli agenti autonomi. Modalità degradata completa entro 60 secondi.",
+      "you_stay_in_control": "Mantieni il controllo.",
+      "your_agents_decide": "I tuoi agenti decidono.",
+      "are_we_sovereign_today_1": "Siamo sovrani oggi?",
+      "client_demo_org": "Cliente: Demo Org",
+      "affiliate_referral_partner": "Affiliato — Partner di referral",
+      "certified_deploy_train": "Certificato — Implementa e forma",
+      "commission_on_every_acf_score_control_license_and_": "Commissione su ogni ACF Score, licenza Control e certificazione implementata attraverso la tua rete.",
+      "deploy_the_standard": "Implementa lo Standard.",
+      "deploy_the_standard_1": "Implementa lo standard",
+      "direct_access_to_acf_team_dedicated_onboarding_qua": "Accesso diretto al team ACF. Onboarding dedicato, revisioni trimestrali e percorso di escalation.",
+      "full_access_to_acf_academy_training_modules_train_": "Accesso completo ai moduli formativi di ACF Academy. Forma il tuo team, poi forma i tuoi clienti.",
+      "join_the_network": "Unisciti alla Rete",
+      "partner_portal_login": "Accesso Portale Partner",
+      "realtime_data_on_deployments_certifications_revenu": "Dati in tempo reale su implementazioni, certificazioni, ricavi. Visibilità completa sul tuo portafoglio.",
+      "scale_the_trust": "Scala la Fiducia.",
+      "secure_your_geographical_zone_one_region_one_partn": "Proteggi la tua zona geografica. Una regione, un partner. Nessuna competizione — solo collaborazione.",
+      "sign_in_with_your_partner_credentials": "Accedi con le tue credenziali partner",
+      "strategic_partners_who_share_the_mission": "Partner strategici che condividono la missione.",
+      "strategic_enterprise_alliance": "Strategico — Alleanza enterprise",
+      "the_network_is_yours": "La rete è tua.",
+      "united_arab_emirates": "Emirati Arabi Uniti",
+      "use_the_acf_partner_badge_your_brand_backed_by_the": "Utilizza il badge ACF Partner. Il tuo brand, supportato dallo standard globale di governance.",
+      "why_do_you_want_to_become_an_acf_partner": "Perché vuoi diventare un ACF Partner?",
+      "acf_score_is_the_official_diagnostic_tool_of_the_a_1": "ACF Score® è lo strumento diagnostico ufficiale dell'Agentic Commerce Framework. Gratuito, immediato e operativo.",
+      "acf_score_sovereignty_metric_agentic_commerce_fram": "ACF Score® — Metrica di Sovranità | Agentic Commerce Framework",
+      "ai_decisions_against_your_business_interests": "Decisioni AI Contro i Tuoi Interessi Commerciali",
+      "agents_setting_prices_and_promotions_without_bound_1": "Gli agenti che stabiliscono prezzi e promozioni senza limiti possono distruggere la redditività in poche ore.",
+      "control_supervision": "Controllo e Supervisione",
+      "critical_platform_dependency": "Dipendenza Critica dalla Piattaforma",
+      "critical_supplier_mapping_platform_risk_exposure_a": "Mappatura dei fornitori critici, esposizione al rischio delle piattaforme e punti singoli di fallimento.",
+      "diagnostic_tool_free": "STRUMENTO DIAGNOSTICO — GRATUITO",
+      "eu_ai_act_gdpr_and_sectorspecific_regulatory_align": "Valutazione dell'allineamento normativo con Legge UE sull'IA (EU AI Act), GDPR e regolamentazioni specifiche del settore.",
+      "evaluates_the_technical_infrastructure_traceabilit": "Valuta l'infrastruttura tecnica: tracciabilità, log di audit, sandboxing, meccanismi di reversibilità e controllo degli accessi per i tuoi sistemi AI.",
+      "evaluates_your_capacity_to_monitor_intervene_and_s_1": "Valuta la tua capacità di monitorare, intervenire e fermare le operazioni degli agenti autonomi in qualsiasi momento attraverso i tuoi protocolli di kill switch.",
+      "full_pdf_report": "Report completo in PDF",
+      "global_acf_score": "Punteggio ACF® Globale",
+      "governance_decision_policy_agent_system_and_execut": "Livelli di Governance, Politica Decisionale, Sistema Agenti e Supervisione dell'Esecuzione.",
+      "how_your_agents_currently_operate_from_assisted_to": "Come operano attualmente i tuoi agenti — da assistiti a completamente autonomi.",
+      "inability_to_steer_audit_or_correct_your_ai_system": "Incapacità di dirigere, verificare o correggere i tuoi sistemi AI in tempo reale quando le decisioni vanno male.",
+      "kill_switch_readiness_audit_trail_quality_and_huma": "Disponibilità del kill switch, qualità dell'audit trail e protocolli di escalation umana.",
+      "legal_liability_on_automated_decisions": "Responsabilità Legale sulle Decisioni Automatizzate",
+      "loss_of_strategic_control": "Perdita del Controllo Strategico",
+      "margin_erosion_via_uncontrolled_pricing": "Erosione dei Margini tramite Prezzi Incontrollati",
+      "measures_alignment_with_eu_ai_act_gdpr_and_sectors": "Misura l'allineamento con l'EU AI Act (Regolamento UE sull'IA), GDPR e normative settoriali che disciplinano l'uso di sistemi autonomi in ambienti commerciali.",
+      "measures_the_degree_to_which_your_ai_agents_make_d_1": "Misura il grado con cui i vostri agenti IA prendono decisioni in modo indipendente — e se tali decisioni rimangono entro i confini definiti.",
+      "result_in_10_minutes": "Risultato in 10 minuti",
+      "sector_company_size_current_ai_agent_usage_and_dep": "Settore, dimensione aziendale, utilizzo attuale degli agenti IA e portata del deployment.",
+      "without_agentic_governance_you_risk": "Senza Governance Agentica, Rischi:",
+      "without_traceability_you_cannot_understand_explain_1": "Senza tracciabilità, non puoi comprendere, spiegare o correggere ciò che i tuoi agenti IA hanno fatto.",
+      "your_complete_governance_report": "Il Tuo Rapporto Completo di Governance",
+      "your_score_report": "Il Tuo Punteggio & Rapporto",
+      "blog_recherche": "BLOG & RICERCA",
+      "diagnostic_gratuit_en_10_minutes_score_immédiat_ra": "Diagnostica gratuita in 10 minuti. Punteggio immediato. Rapporto PDF.",
+      "fondateur_acf_ai_consulting": "Fondatore ACF® · AI CONSULTING",
+      "la_couche_politique_transforme_les_principes_de_go": "Il livello Politico trasforma i principi di governance in regole operative. Formalizza ciò che gli agenti possono e non possono fare, con quali limiti e in quali condizioni.",
+      "le_score_acf_mesure_précisément_cet_équilibre_entr": "Il Punteggio ACF® misura precisamente questo equilibrio tra autonomia agentica e controllo di governance. Le organizzazioni con i punteggi più alti non sono le più conservative — sono le più strutturate.",
+      "les_organisations_qui_attendent_la_mise_en_applica": "Le organizzazioni che aspettano l'applicazione per strutturare la loro governance agentica corrono un rischio considerevole. La conformità richiede tempo: mappare gli agenti, definire le politiche, implementare i controlli tecnici e formare i team.",
+      "les_organisations_qui_gouvernent_leurs_agents_ia_n": "Le organizzazioni che governano i loro agenti IA non sono più lente. Sono più veloci — perché",
+      "founder_author_of_acf": "Fondatore & Autore di ACF®",
+      "publisher_of_the_agentic_commerce_framework": "Editore del Framework di Commercio Agenziale®",
+      "request_an_assessment": "Richiedi una Valutazione",
+      "we_typically_respond_within_24_business_hours": "Rispondiamo tipicamente entro 24 ore lavorative.",
+      "créateur_du_framework": "Creatore del Framework",
+      "le_responsable_du_traitement_des_données_personnel": "Il responsabile del trattamento dei dati personali è AI CONSULTING, SASU, 38 Bis Boulevard Victor Hugo, 06000 Nice, France. Contatto: tramite la pagina Contatto del sito.",
+      "politique_de_confidentialité": "Politica sulla Privacy",
+      "acf_operating_system": "Sistema Operativo ACF",
+      "agents_traceability_kill_switch": "Agenti · Tracciabilità · Interruttore di emergenza",
+      "autonomous_systems_do_not_create_chaos": "I sistemi autonomi non creano caos.",
+      "five_integrated_tools_one_closedloop_system_diagno": "Cinque strumenti integrati. Un sistema a ciclo chiuso. Diagnosticare → Addestrare → Monitorare → Certificare → Scalare.",
+      "leadership_strategy_accountability": "Leadership · Strategia · Responsabilità",
+      "monitoring_incidents_sovereignty": "Monitoraggio · Incidenti · Sovranità",
+      "organizations_must_evolve_from_managing_software_t": "Le organizzazioni devono evolvere dalla gestione del software alla governance dei sistemi decisionali.",
+      "organizations_spent_the_last_decade_adopting_ai_go": "Le organizzazioni hanno trascorso l'ultimo decennio ad adottare l'IA. I modelli di governance non si sono mai evoluti.",
+      "read_the_research": "Leggi la ricerca",
+      "rules_constraints_ethical_guardrails": "Regole · Vincoli · Protezioni etiche",
+      "the_governance_framework": "IL FRAMEWORK DI GOVERNANCE",
+      "the_agent_governance_loop": "Il Ciclo di Governance degli Agenti",
+      "the_agentic_commerce_framework_provides_the_struct": "Il Framework di Commercio Agenziale® fornisce la struttura necessaria per farlo.",
+      "the_governance_standard": "Lo Standard di Governance",
+      "the_first_governance_architecture_for_autonomous_d": "La prima architettura di governance per sistemi decisionali autonomi.",
+      "the_framework_defines_how_organizations": "Il framework definisce come le organizzazioni:",
+      "when_this_shift_occurs_without_structured_governan": "Quando questo cambiamento avviene senza una governance strutturata, le organizzazioni perdono visibilità e controllo sulle proprie decisioni operative. Le conseguenze non sono teoriche:",
+      "who_decides_authority_constitution": "Chi decide · Autorità · Costituzione"
+    }
+  }
+}

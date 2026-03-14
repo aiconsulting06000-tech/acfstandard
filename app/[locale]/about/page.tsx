@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const C = {
   navy1: "#050c1a", navy2: "#071122", navy3: "#0d1f3c",
@@ -20,6 +21,23 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 }
 
 export default function AboutPage() {
+  const t = useTranslations();
+
+  const timeline = [
+    { year: "2000–2024", event: "25 years of e-commerce and digital transformation experience — observing the loss of control linked to automation", color: C.gray },
+    { year: "Early 2025", event: "Emergence of autonomous AI agents in commerce — observation of the total absence of governance framework", color: C.blue },
+    { year: "Q1 2025", event: "Creation of the Agentic Commerce Framework® — 4-layer governance methodology", color: C.green },
+    { year: "Q2 2025", event: "Launch of ACF Score® — free online agentic governance diagnostic", color: C.gold },
+    { year: "Q3 2025", event: "Design of ACF Control (dashboard) and ACF TRUST™ / ACF CERTIFIED certification program", color: C.amber },
+    { year: "2026", event: "ACF Standard — complete ecosystem platform. Partners Program. Academy. Research Blog.", color: C.gold },
+  ];
+
+  const footerColumns = [
+    { title: t("footer.framework.title"), links: [{ label: t("footer.framework.theStandard"), href: "/en/standard" },{ label: t("blog.title"), href: "/en/blog" },{ label: t("footer.products.certification"), href: "/en/acf-certification" }] },
+    { title: t("footer.products.title"), links: [{ label: t("footer.products.score"), href: "/en/acf-score" },{ label: t("footer.products.control"), href: "/en/acf-control" },{ label: t("footer.products.academy"), href: "/en/acf-certification#academy" }] },
+    { title: t("footer.organization.title"), links: [{ label: t("footer.organization.partnerPortal"), href: "/en/acf-partners" },{ label: t("footer.organization.about"), href: "/en/about" },{ label: t("footer.organization.contact"), href: "/en/contact" },{ label: t("footer.organization.legal"), href: "/en/legal" }] },
+  ];
+
   return (
     <div style={{ minHeight: "100vh", background: C.navy1, color: "#fff", fontFamily: "'Inter', sans-serif" }}>
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -39,13 +57,13 @@ export default function AboutPage() {
             <div style={{ width: 40, height: 40, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1 }}>ACF</div>
             <div>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>ACF STANDARD</div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>ABOUT</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>{t("megaMenu.about.title")}</div>
             </div>
           </a>
           <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
             <a href="/" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Home</a>
-            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, transition: "all .3s", display: "inline-block" }}>Get Your Score →</a>
+              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{t("common.backToHome")}</a>
+            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, transition: "all .3s", display: "inline-block" }}>{t("products.score.cta")}</a>
           </div>
         </div>
       </nav>
@@ -54,12 +72,12 @@ export default function AboutPage() {
       <section style={{ paddingTop: 120, paddingBottom: 50, textAlign: "center", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: "-20%", left: "50%", width: 600, height: 600, transform: "translateX(-50%)", background: "radial-gradient(circle, rgba(201,168,76,.06) 0%, transparent 70%)", pointerEvents: "none" }} />
         <div style={{ maxWidth: 760, margin: "0 auto", padding: "0 40px", position: "relative", zIndex: 2 }}>
-          <div className="fade-up"><Badge>ABOUT</Badge></div>
+          <div className="fade-up"><Badge>{t("megaMenu.about.title")}</Badge></div>
           <h1 className="fade-up-d2" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 46, fontWeight: 800, lineHeight: 1.08, marginTop: 24, marginBottom: 16, letterSpacing: "-1px" }}>
-            Who We <span style={{ color: C.gold }}>Are</span>
+            {t("megaMenu.about.whoWeAre.title")}
           </h1>
           <p className="fade-up-d3" style={{ fontSize: 16, color: C.gray2, lineHeight: 1.7, maxWidth: 580, margin: "0 auto" }}>
-            The team behind ACF Score® and the Agentic Commerce Framework® methodology.
+            {t("megaMenu.about.subtitle")}
           </p>
         </div>
       </section>
@@ -73,21 +91,14 @@ export default function AboutPage() {
             <GoldBar />
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            {[
-              { year: "2000–2024", event: "25 years of e-commerce and digital transformation experience — observing the loss of control linked to automation", color: C.gray },
-              { year: "Early 2025", event: "Emergence of autonomous AI agents in commerce — observation of the total absence of governance framework", color: C.blue },
-              { year: "Q1 2025", event: "Creation of the Agentic Commerce Framework® — 4-layer governance methodology", color: C.green },
-              { year: "Q2 2025", event: "Launch of ACF Score® — free online agentic governance diagnostic", color: C.gold },
-              { year: "Q3 2025", event: "Design of ACF Control (dashboard) and ACF TRUST™ / ACF CERTIFIED certification program", color: C.amber },
-              { year: "2026", event: "ACF Standard — complete ecosystem platform. Partners Program. Academy. Research Blog.", color: C.gold },
-            ].map((t, i) => (
+            {timeline.map((item, i) => (
               <div key={i} style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
-                <div style={{ minWidth: 90, fontFamily: "'JetBrains Mono', monospace", fontSize: 12, fontWeight: 700, color: t.color, paddingTop: 14, textAlign: "right" }}>{t.year}</div>
+                <div style={{ minWidth: 90, fontFamily: "'JetBrains Mono', monospace", fontSize: 12, fontWeight: 700, color: item.color, paddingTop: 14, textAlign: "right" }}>{item.year}</div>
                 <div style={{ width: 12, display: "flex", flexDirection: "column", alignItems: "center", paddingTop: 14, flexShrink: 0 }}>
-                  <div style={{ width: 10, height: 10, borderRadius: "50%", background: t.color, border: `2px solid ${C.navy1}`, flexShrink: 0 }} />
+                  <div style={{ width: 10, height: 10, borderRadius: "50%", background: item.color, border: `2px solid ${C.navy1}`, flexShrink: 0 }} />
                   {i < 5 && <div style={{ width: 1, flex: 1, background: C.bd1, marginTop: 4 }} />}
                 </div>
-                <div style={{ flex: 1, padding: "10px 16px", background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 10, fontSize: 14, color: C.gray2, lineHeight: 1.6 }}>{t.event}</div>
+                <div style={{ flex: 1, padding: "10px 16px", background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 10, fontSize: 14, color: C.gray2, lineHeight: 1.6 }}>{item.event}</div>
               </div>
             ))}
           </div>
@@ -102,7 +113,7 @@ export default function AboutPage() {
               <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 48, fontWeight: 800, color: C.gold }}>VD</span>
             </div>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, fontWeight: 800, color: "#fff", marginBottom: 4 }}>Vincent DORANGE</h2>
-            <p style={{ fontSize: 13, color: C.gray2, lineHeight: 1.5, marginBottom: 4 }}>Founder · Agentic Governance</p>
+            <p style={{ fontSize: 13, color: C.gray2, lineHeight: 1.5, marginBottom: 4 }}>{t("pages.home.founder_agentic_governance")}</p>
             <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: "1px", marginBottom: 20 }}>AI CONSULTING</p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6, justifyContent: "center", marginBottom: 24 }}>
               {["ACF® Creator", "AI Governance", "E-commerce Expert"].map(tag => (
@@ -125,7 +136,7 @@ export default function AboutPage() {
               <p style={{ marginBottom: 20 }}>Vincent DORANGE has been working in e-commerce and digital strategy for over 25 years. Over these two decades, he has observed from the inside the profound transformations of digital commerce: the rise of platforms, the centralization of decisions in algorithms, and the growing dependence of companies on technological infrastructures.</p>
               <p style={{ marginBottom: 20 }}>His work has progressively focused on a question that has become central in the digital economy: <strong style={{ color: "#fff" }}>who really holds decision-making power in organizations driven by data and automated systems?</strong></p>
               <p style={{ marginBottom: 20 }}>Facing the emergence of autonomous artificial intelligence agents, he developed in 2025 the <strong style={{ color: C.gold }}>Agentic Commerce Framework® (ACF®), a methodological framework designed to help organizations govern the use of AI agents and preserve their decision-making sovereignty in the agentic economy.</strong></p>
-              <p>Based in France, he works with SMEs, mid-cap companies, and large corporations on issues of digital transformation, AI governance, and the evolution of business models in the era of autonomous systems.</p>
+              <p>{t("pages.home.based_in_france_he_works_with_smes_midcap_companie")}</p>
             </div>
           </div>
         </div>
@@ -135,7 +146,7 @@ export default function AboutPage() {
       <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 1000, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <SectionLabel>Education & Training</SectionLabel>
+            <SectionLabel>{t("pages.home.education_training")}</SectionLabel>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 26, fontWeight: 800, letterSpacing: "-.5px", marginBottom: 8 }}>Academic <span style={{ color: C.gold }}>Background</span></h2>
             <GoldBar />
           </div>
@@ -156,7 +167,7 @@ export default function AboutPage() {
             </div>
 
             <div style={{ background: C.navy3, border: `1px solid ${C.goldBorder}`, borderRadius: 16, padding: 28 }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 18 }}>Executive Education & Research</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 18 }}>{t("pages.home.executive_education_research")}</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {[
                   "HEC Paris",
@@ -209,18 +220,18 @@ export default function AboutPage() {
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 26, fontWeight: 800, letterSpacing: "-.5px", marginBottom: 8 }}>AI <span style={{ color: C.gold }}>CONSULTING</span></h2>
             <GoldBar />
           </div>
-          
+
           <div style={{ background: C.navy3, border: `1px solid ${C.goldBorder}`, borderRadius: 16, padding: 40, marginBottom: 32 }}>
             <div style={{ fontSize: 15, color: C.gray2, lineHeight: 1.9, textAlign: "center" }}>
               <p style={{ marginBottom: 20 }}>AI CONSULTING is a consulting firm specialized in artificial intelligence, particularly in automation and AI agents with a focus on <strong style={{ color: "#fff" }}>agentic governance</strong>.</p>
               <p style={{ marginBottom: 20 }}>We support organizations in their transition towards <strong style={{ color: C.gold }}>sovereign and controlled use of autonomous AI agents</strong>.</p>
-              <p>Our approach is pragmatic and operational: we don't theorize about AI, we structure your capacity to govern it. Our interventions are essentially based on the <strong style={{ color: C.gold }}>ACF® methodology</strong>.</p>
+              <p>Our approach is pragmatic and operational: we don&apos;t theorize about AI, we structure your capacity to govern it. Our interventions are essentially based on the <strong style={{ color: C.gold }}>ACF® methodology</strong>.</p>
             </div>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
             {[
-              { icon: "🎯", title: "Sovereignty First", desc: "Your strategic control over automated decisions is non-negotiable.", color: C.gold },
+              { icon: "🎯", title: "Sovereignty First", desc: t("pages.home.your_strategic_control_over_automated_decisions_is"), color: C.gold },
               { icon: "⚡", title: "Operational Pragmatism", desc: "Actionable recommendations within 30 days, not abstract theory.", color: C.green },
               { icon: "🔍", title: "Total Transparency", desc: "Documented methodology, explainable scoring, verifiable results.", color: C.blue },
             ].map(v => (
@@ -239,13 +250,13 @@ export default function AboutPage() {
       {/* CTA */}
       <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, letterSpacing: "-.5px", marginBottom: 12 }}>Let's Work <span style={{ color: C.gold }}>Together</span></h2>
-          <p style={{ fontSize: 15, color: C.gray2, maxWidth: 500, margin: "0 auto 28px", lineHeight: 1.7 }}>Whether you want a diagnostic, support, or a partnership, let's talk.</p>
+          <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, letterSpacing: "-.5px", marginBottom: 12 }}>Let&apos;s Work <span style={{ color: C.gold }}>Together</span></h2>
+          <p style={{ fontSize: 15, color: C.gray2, maxWidth: 500, margin: "0 auto 28px", lineHeight: 1.7 }}>{t("cta.description")}</p>
           <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
-            <a href="/en/contact" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, display: "inline-block", transition: "all .3s" }}>Get in Touch →</a>
+            <a href="/en/contact" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, display: "inline-block", transition: "all .3s" }}>{t("nav.contact")} →</a>
             <a href="https://www.acf-score.com/calculator" style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 500, display: "inline-block", transition: "all .3s" }}
               onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
-              onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>Get Your Score</a>
+              onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>{t("products.score.cta")}</a>
           </div>
         </div>
       </section>
@@ -258,17 +269,13 @@ export default function AboutPage() {
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
                 <div style={{ width: 44, height: 44, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 13, color: C.navy1, letterSpacing: 1 }}>ACF</div>
                 <div>
-                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff" }}>Agentic Commerce Framework®</div>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase" }}>GLOBAL STANDARD FOR AI GOVERNANCE</div>
+                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff" }}>{t("footer.logoText")}</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase" }}>{t("footer.logoSubtext")}</div>
                 </div>
               </div>
-              <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 320 }}>The governance standard for organizations deploying autonomous AI agents.</p>
+              <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 320 }}>{t("footer.description")}</p>
             </div>
-            {[
-              { title: "Framework", links: [{ label: "The Standard", href: "/en/standard" },{ label: "Blog", href: "/en/blog" },{ label: "ACF Certification", href: "/en/acf-certification" }] },
-              { title: "Products", links: [{ label: "ACF Score®", href: "/en/acf-score" },{ label: "ACF Control", href: "/en/acf-control" },{ label: "Academy", href: "/en/acf-certification#academy" }] },
-              { title: "Organization", links: [{ label: "Partner Portal", href: "/en/acf-partners" },{ label: "About", href: "/en/about" },{ label: "Contact", href: "/en/contact" },{ label: "Legal", href: "/en/legal" }] },
-            ].map(col => (
+            {footerColumns.map(col => (
               <div key={col.title}>
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 20 }}>{col.title}</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -278,7 +285,7 @@ export default function AboutPage() {
             ))}
           </div>
           <div style={{ borderTop: `1px solid ${C.bd1}`, padding: "20px 0", textAlign: "center" }}>
-            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved.</p>
+            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>{t("footer.copyright")}</p>
           </div>
         </div>
       </footer>

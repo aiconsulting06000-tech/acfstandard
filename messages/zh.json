@@ -1,1 +1,797 @@
-{"meta":{"language":"ZH","languageCode":"zh","locale":"zh-CN"},"common":{"readMore":"阅读更多","learnMore":"了解更多","getStarted":"开始","downloadPDF":"下载PDF","watchVideo":"观看视频","close":"关闭","open":"打开","loading":"加载中","backToHome":"返回首页","menu":"菜单"},"regionSelector":{"title":"选择您的地区和语言","close":"✕ 关闭","global":"全球（英语）","northAmerica":"北美","latinAmerica":"拉丁美洲","westernEurope":"西欧","nordicBaltic":"北欧和波罗的海","centralEasternEurope":"中欧和东欧","middleEastAfrica":"中东和非洲","asiaPacific":"亚太地区"},"nav":{"menu":"菜单","logoText":"代理商业框架®","logoSubtext":"AI治理全球标准","region":"全球 | 中文","theStandard":"标准","acfScore":"ACF评分","acfControl":"ACF控制","acfCertification":"ACF认证","partners":"合作伙伴","requestAssessment":"请求评估","partnerLogin":"合作伙伴登录","applyPartner":"成为合作伙伴","contact":"联系"},"megaMenu":{"framework":{"title":"框架","link":"ACF标准 →","subtitle":"商业环境中代理系统的最终治理方法论。","architecture":{"title":"架构","principles":"4个基本原则","layers":"4个操作层","maturity":"4个成熟度级别"},"methodology":{"title":"方法论","modules":"8个实施模块","constitution":"代理宪法","dda":"DDA角色框架","killSwitch":"Kill Switch协议"},"featured":{"label":"精选","whitepaper":{"title":"下载ACF白皮书","description":"完整规范 — 注册用户免费。"},"release":{"title":"ACF v1.0 — 2026年2月","description":"正式发布。框架的新特性。"}}},"products":{"title":"产品","link":"产品 →","subtitle":"在您的组织中实施ACF标准的三个工具。","diagnostic":{"title":"诊断","score":"ACF评分 — 主权指标","methodology":"评分方法","axes":"6个治理维度"},"saas":{"title":"SaaS平台","control":"ACF控制 — 治理仪表板","kpis":"18个主权KPI","gating":"自适应门控系统"},"certification":{"title":"认证","program":"ACF认证计划","levels":"认证级别","audit":"审计流程"}},"resources":{"title":"资源","link":"资源 →","subtitle":"治理见解、研究和技术文档。","insights":{"title":"最新见解","aiAct":"欧盟AI法案与代理系统","dda":"DDA角色解释","killSwitch":"设计3级Kill Switch"},"documentation":{"title":"文档","specs":"技术规范","research":"研究出版物","academy":"ACF学院"}},"about":{"title":"关于ACF","link":"关于ACF →","subtitle":"代理商业框架®背后的故事、使命和法律保护。","whoWeAre":{"title":"我们是谁","vincent":"Vincent DORANGE — 创始人","mission":"使命与价值观","legal":"法律保护（INPI）"},"howWeWork":{"title":"我们如何工作","network":"从业者网络","audit":"审计与认证","contact":"联系我们"},"registered":{"label":"已注册","title":"INPI保护 — Loi n° 2018-670","description":"ACF®是注册商标。所有方法论和工具均受法律保护。"}},"partners":{"title":"合作伙伴","link":"合作伙伴 →","subtitle":"加入ACF从业者网络，为您的客户提供治理服务。","portal":{"title":"合作伙伴门户","login":"登录合作伙伴门户","dashboard":"仪表板和工具","training":"培训材料","toolkit":"ACF从业者工具包"},"become":{"title":"成为合作伙伴","apply":"申请","tiers":"合作伙伴级别","certified":"首先获得ACF认证"}},"user":{"partnerAccess":"合作伙伴访问","partnerLogin":"合作伙伴登录","applyPartner":"成为合作伙伴","contact":"联系"}},"hero":{"title":"全球标准","typing":{"word1":"治理","word2":"主权","word3":"智能","word4":"商业"},"description":"代理商业框架®（ACF）是在商业环境中部署、监督和控制自主代理系统的最终治理方法论。","cta":{"primary":"请求治理评估 →","secondary":"阅读标准"},"stats":{"principles":{"value":"4","label":"基本<br>原则"},"modules":{"value":"8","label":"实施<br>模块"},"kpis":{"value":"18","label":"主权<br>KPI"},"tools":{"value":"17","label":"专有<br>工具"}},"satellites":{"score":{"name":"ACF评分","description":"主权指标"},"control":{"name":"ACF控制","description":"治理SaaS"},"certification":{"name":"认证","description":"证明"},"partners":{"name":"合作伙伴","description":"从业者"}}},"statsBar":{"layers":{"value":"4","label":"操作层"},"kpis":{"value":"18","label":"主权KPI"},"tools":{"value":"17","label":"专有工具"},"sovereignty":{"value":"100","suffix":"%","label":"人类主权"}},"principles":{"badge":"// 架构","title":"4个基本原则","subtitle":"定义人类权威与自主代理执行之间界限的四个不变公理。","principle1":{"number":"01","title":"决策主权","description":"关键战略决策永远不会委托给自主代理。"},"principle2":{"number":"02","title":"设计治理","description":"治理框架在部署前定义，而非之后。"},"principle3":{"number":"03","title":"最终人类控制","description":"每个代理系统都必须保留人类干预的可能性。"},"principle4":{"number":"04","title":"可追溯问责","description":"每个自主行动都必须可审计和可归因。"}},"layers":{"badge":"// 结构","title":"4个操作层","subtitle":"从战略治理到实时执行监督的分层架构。","layer1":{"number":"LAYER_01","title":"治理与主权","description":"主权宪章、治理委员会、RACI矩阵、不可委托区域地图。"},"layer2":{"number":"LAYER_02","title":"决策政策","description":"加权目标、仲裁规则、升级阈值、监管约束。"},"layer3":{"number":"LAYER_03","title":"代理系统","description":"每个代理的明确授权、交互边界、自主级别、5类分类法。"},"layer4":{"number":"LAYER_04","title":"执行与监督","description":"自适应门控矩阵、多级警报、18个主权KPI、实时仪表板。"}},"maturity":{"badge":"// 进展","title":"4个代理成熟度级别","subtitle":"ACF按自主级别对系统进行分类。级别2是推荐的部署目标。","level0":{"code":"级别_0","name":"经典自动化","risk":"极低风险","description":"固定规则，无ML。任何修改都需要人工干预。"},"level1":{"code":"级别_1","name":"辅助代理","risk":"低风险","description":"代理分析和建议。每个最终决定都由人类做出。"},"level2":{"code":"级别_2","name":"受管理代理","risk":"中等风险","description":"代理在严格治理下做出决策。不可委托区域已锁定。","badge":"★ 推荐目标"},"level3":{"code":"级别_3","name":"监督自主","risk":"高风险","description":"代理做出决策并学习。最大治理。仅适用于成熟组织。"}},"modules":{"badge":"// 方法论","title":"8个实施模块","subtitle":"在6-18个月内逐步实施的顺序路径。每个模块都建立在前一个模块之上。","module1":{"code":"MOD_01","name":"主权诊断","description":"主权评分计算。风险区域映射。"},"module2":{"code":"MOD_02","name":"决策映射","description":"关键性矩阵。不可委托区域。"},"module3":{"code":"MOD_03","name":"代理宪法","description":"9条。由治理委员会签署。"},"module4":{"code":"MOD_04","name":"代理系统设计","description":"授权表、交互边界。"},"module5":{"code":"MOD_05","name":"安全与可逆性","description":"沙箱、可逆性计划。Kill switch设计。"},"module6":{"code":"MOD_06","name":"持续治理","description":"每月审查。年度合规审计。"},"module7":{"code":"MOD_07","name":"实施路线图","description":"5个阶段的渐进式部署。"},"module8":{"code":"MOD_08","name":"危机管理","description":"3级事件。Kill switch演练。"}},"video":{"badge":"// 为什么选择ACF","title":"治理不能等待。<br>代理已经在决策。","description1":"2026年，自主代理已经在商业环境中执行决策——定价、潜在客户资格、索赔处理、合同管理。大多数组织没有框架来治理它们。","description2":"ACF的创建就是为了填补这一空白——在治理失败变成法律、财务或声誉危机之前。","quote":{"text":"问题不再是<em>是否</em>部署代理。而是<em>如何</em>在不放弃主权的情况下部署它们。","author":"— Vincent DORANGE，ACF标准创始人"},"player":{"badge":"ACF — 创始人致辞","name":"Vincent DORANGE","role":"创始人，代理商业框架®","duration":"3:09"},"stats":{"release":{"value":"2026","label":"正式发布"},"documentation":{"value":"45页","label":"完整文档"},"protection":{"value":"INPI","label":"法律保护"}},"modal":{"placeholder":"视频占位符","title":"上传您的视频以启用播放","description":"在代码中用YouTube或Vimeo嵌入URL替换此模态框"}},"products":{"badge":"// 生态系统","title":"ACF生态系统","subtitle":"实施ACF标准的三个互补产品。","score":{"label":"诊断工具","title":"ACF评分","description":"专有主权评分，衡量您在6个治理维度上的决策独立性。","features":{"feature1":"综合主权评分指标","feature2":"6轴雷达可视化","feature3":"每轴个性化行动计划"},"cta":"测量您的评分 →"},"control":{"label":"SAAS平台","title":"ACF控制","description":"实时治理仪表板，通过自适应门控和自动升级监控您的18个主权KPI。","features":{"feature1":"跨6个治理轴的18个KPI","feature2":"带人工升级的自适应门控","feature3":"防篡改审计日志"},"cta":"发现ACF控制 →"},"certification":{"label":"独立证明","title":"ACF认证","description":"独立认证，证明符合ACF治理标准。可公开验证。","features":{"feature1":"1、2和3级认证路径","feature2":"可公开验证的徽章","feature3":"年度更新+持续监控"},"cta":"获得认证 →"}},"blog":{"badge":"// 见解","title":"来自ACF博客的最新文章","subtitle":"治理见解、框架更新和代理智能研究。","article1":{"category":"AI监管","title":"欧盟AI法案如何适用于2026年的代理系统","excerpt":"AI法案基于风险的方法为自主代理创建了特定义务。这是ACF 2级治理涵盖的内容。","date":"2026-02-15","cta":"阅读 →"},"article2":{"category":"治理","title":"DDA：为什么每个AI原生公司都需要委托决策代理官","excerpt":"DDA是您的自主代理的法律监护人。如何创建和赋权这一关键角色。","date":"2026-02-08","cta":"阅读 →"},"article3":{"category":"技术","title":"为自主代理系统设计三级Kill Switch","excerpt":"有效的kill switch不是一个按钮。ACF规定了具有定义响应时间的三个中断级别。","date":"2026-01-29","cta":"阅读 →"},"viewAll":"查看所有文章 →"},"cta":{"watermark":"ACF®","badge":"// 下一步","title":"准备好治理您的<br>代理系统了吗？","description":"请求治理评估并发现您当前的主权评分。","primary":"请求治理评估 →","secondary":"成为ACF合作伙伴"},"footer":{"logoText":"代理商业框架®","logoSubtext":"AI治理全球标准","description":"部署自主代理系统的组织的最终治理标准。受保护 — Loi n° 2018-670。","framework":{"title":"框架","theStandard":"标准","methodology":"方法论","research":"研究","certification":"ACF认证"},"products":{"title":"产品","score":"ACF评分","control":"ACF控制","certification":"认证","academy":"学院"},"organization":{"title":"组织","partnerPortal":"合作伙伴门户","about":"关于","contact":"联系","legal":"法律"},"copyright":"© 2026 代理商业框架® — Vincent DORANGE。保留所有权利。INPI注册。","legal":{"privacy":"隐私","terms":"条款","cookies":"Cookie"}},"ai":{"button":{"label":"询问ACF代理","status":"AI治理 · 在线"},"modal":{"close":"×","beta":"测试版","title":"询问ACF","subtitle":"基于ACF标准和治理见解回答问题的聊天机器人","placeholder":"询问ACF治理...","send":"发送","trending":{"label":"热门问题","q1":"什么是ACF标准？","q2":"如何获得ACF认证？","q3":"什么是DDA角色？","q4":"什么是主权评分？","q5":"4个基本原则？"},"disclaimer":"AI实验。答案基于ACF标准文档。","seeMore":"了解更多"}}}
+{
+  "meta": {
+    "language": "ZH",
+    "languageCode": "zh",
+    "locale": "zh-CN"
+  },
+  "common": {
+    "readMore": "阅读更多",
+    "learnMore": "了解更多",
+    "getStarted": "开始",
+    "downloadPDF": "下载PDF",
+    "watchVideo": "观看视频",
+    "close": "关闭",
+    "open": "打开",
+    "loading": "加载中",
+    "backToHome": "返回首页",
+    "menu": "菜单",
+    "acf_standard_governance_methodology_for_autonomous": "ACF标准 — 自主智能体系统的治理方法论。",
+    "agentic_commerce_framework_acf_standard": "智能体商务框架 — ACF标准"
+  },
+  "regionSelector": {
+    "title": "选择您的地区和语言",
+    "close": "✕ 关闭",
+    "global": "全球（英语）",
+    "northAmerica": "北美",
+    "latinAmerica": "拉丁美洲",
+    "westernEurope": "西欧",
+    "nordicBaltic": "北欧和波罗的海",
+    "centralEasternEurope": "中欧和东欧",
+    "middleEastAfrica": "中东和非洲",
+    "asiaPacific": "亚太地区"
+  },
+  "nav": {
+    "menu": "菜单",
+    "logoText": "代理商业框架®",
+    "logoSubtext": "AI治理全球标准",
+    "region": "全球 | 中文",
+    "theStandard": "标准",
+    "acfScore": "ACF评分",
+    "acfControl": "ACF控制",
+    "acfCertification": "ACF认证",
+    "partners": "合作伙伴",
+    "requestAssessment": "请求评估",
+    "partnerLogin": "合作伙伴登录",
+    "applyPartner": "成为合作伙伴",
+    "contact": "联系"
+  },
+  "megaMenu": {
+    "framework": {
+      "title": "框架",
+      "link": "ACF标准 →",
+      "subtitle": "商业环境中代理系统的最终治理方法论。",
+      "architecture": {
+        "title": "架构",
+        "principles": "4个基本原则",
+        "layers": "4个操作层",
+        "maturity": "4个成熟度级别"
+      },
+      "methodology": {
+        "title": "方法论",
+        "modules": "8个实施模块",
+        "constitution": "代理宪法",
+        "dda": "DDA角色框架",
+        "killSwitch": "Kill Switch协议"
+      },
+      "featured": {
+        "label": "精选",
+        "whitepaper": {
+          "title": "下载ACF白皮书",
+          "description": "完整规范 — 注册用户免费。"
+        },
+        "release": {
+          "title": "ACF v1.0 — 2026年2月",
+          "description": "正式发布。框架的新特性。"
+        }
+      }
+    },
+    "products": {
+      "title": "产品",
+      "link": "产品 →",
+      "subtitle": "在您的组织中实施ACF标准的三个工具。",
+      "diagnostic": {
+        "title": "诊断",
+        "score": "ACF评分 — 主权指标",
+        "methodology": "评分方法",
+        "axes": "6个治理维度"
+      },
+      "saas": {
+        "title": "SaaS平台",
+        "control": "ACF控制 — 治理仪表板",
+        "kpis": "18个主权KPI",
+        "gating": "自适应门控系统"
+      },
+      "certification": {
+        "title": "认证",
+        "program": "ACF认证计划",
+        "levels": "认证级别",
+        "audit": "审计流程"
+      }
+    },
+    "resources": {
+      "title": "资源",
+      "link": "资源 →",
+      "subtitle": "治理见解、研究和技术文档。",
+      "insights": {
+        "title": "最新见解",
+        "aiAct": "欧盟AI法案与代理系统",
+        "dda": "DDA角色解释",
+        "killSwitch": "设计3级Kill Switch"
+      },
+      "documentation": {
+        "title": "文档",
+        "specs": "技术规范",
+        "research": "研究出版物",
+        "academy": "ACF学院"
+      }
+    },
+    "about": {
+      "title": "关于ACF",
+      "link": "关于ACF →",
+      "subtitle": "代理商业框架®背后的故事、使命和法律保护。",
+      "whoWeAre": {
+        "title": "我们是谁",
+        "vincent": "Vincent DORANGE — 创始人",
+        "mission": "使命与价值观",
+        "legal": "法律保护（INPI）"
+      },
+      "howWeWork": {
+        "title": "我们如何工作",
+        "network": "从业者网络",
+        "audit": "审计与认证",
+        "contact": "联系我们"
+      },
+      "registered": {
+        "label": "已注册",
+        "title": "INPI保护 — Loi n° 2018-670",
+        "description": "ACF®是注册商标。所有方法论和工具均受法律保护。"
+      }
+    },
+    "partners": {
+      "title": "合作伙伴",
+      "link": "合作伙伴 →",
+      "subtitle": "加入ACF从业者网络，为您的客户提供治理服务。",
+      "portal": {
+        "title": "合作伙伴门户",
+        "login": "登录合作伙伴门户",
+        "dashboard": "仪表板和工具",
+        "training": "培训材料",
+        "toolkit": "ACF从业者工具包"
+      },
+      "become": {
+        "title": "成为合作伙伴",
+        "apply": "申请",
+        "tiers": "合作伙伴级别",
+        "certified": "首先获得ACF认证"
+      }
+    },
+    "user": {
+      "partnerAccess": "合作伙伴访问",
+      "partnerLogin": "合作伙伴登录",
+      "applyPartner": "成为合作伙伴",
+      "contact": "联系"
+    }
+  },
+  "hero": {
+    "title": "全球标准",
+    "typing": {
+      "word1": "治理",
+      "word2": "主权",
+      "word3": "智能",
+      "word4": "商业"
+    },
+    "description": "代理商业框架®（ACF）是在商业环境中部署、监督和控制自主代理系统的最终治理方法论。",
+    "cta": {
+      "primary": "请求治理评估 →",
+      "secondary": "阅读标准"
+    },
+    "stats": {
+      "principles": {
+        "value": "4",
+        "label": "基本<br>原则"
+      },
+      "modules": {
+        "value": "8",
+        "label": "实施<br>模块"
+      },
+      "kpis": {
+        "value": "18",
+        "label": "主权<br>KPI"
+      },
+      "tools": {
+        "value": "17",
+        "label": "专有<br>工具"
+      }
+    },
+    "satellites": {
+      "score": {
+        "name": "ACF评分",
+        "description": "主权指标"
+      },
+      "control": {
+        "name": "ACF控制",
+        "description": "治理SaaS"
+      },
+      "certification": {
+        "name": "认证",
+        "description": "证明"
+      },
+      "partners": {
+        "name": "合作伙伴",
+        "description": "从业者"
+      }
+    }
+  },
+  "statsBar": {
+    "layers": {
+      "value": "4",
+      "label": "操作层"
+    },
+    "kpis": {
+      "value": "18",
+      "label": "主权KPI"
+    },
+    "tools": {
+      "value": "17",
+      "label": "专有工具"
+    },
+    "sovereignty": {
+      "value": "100",
+      "suffix": "%",
+      "label": "人类主权"
+    }
+  },
+  "principles": {
+    "badge": "// 架构",
+    "title": "4个基本原则",
+    "subtitle": "定义人类权威与自主代理执行之间界限的四个不变公理。",
+    "principle1": {
+      "number": "01",
+      "title": "决策主权",
+      "description": "关键战略决策永远不会委托给自主代理。"
+    },
+    "principle2": {
+      "number": "02",
+      "title": "设计治理",
+      "description": "治理框架在部署前定义，而非之后。"
+    },
+    "principle3": {
+      "number": "03",
+      "title": "最终人类控制",
+      "description": "每个代理系统都必须保留人类干预的可能性。"
+    },
+    "principle4": {
+      "number": "04",
+      "title": "可追溯问责",
+      "description": "每个自主行动都必须可审计和可归因。"
+    }
+  },
+  "layers": {
+    "badge": "// 结构",
+    "title": "4个操作层",
+    "subtitle": "从战略治理到实时执行监督的分层架构。",
+    "layer1": {
+      "number": "LAYER_01",
+      "title": "治理与主权",
+      "description": "主权宪章、治理委员会、RACI矩阵、不可委托区域地图。"
+    },
+    "layer2": {
+      "number": "LAYER_02",
+      "title": "决策政策",
+      "description": "加权目标、仲裁规则、升级阈值、监管约束。"
+    },
+    "layer3": {
+      "number": "LAYER_03",
+      "title": "代理系统",
+      "description": "每个代理的明确授权、交互边界、自主级别、5类分类法。"
+    },
+    "layer4": {
+      "number": "LAYER_04",
+      "title": "执行与监督",
+      "description": "自适应门控矩阵、多级警报、18个主权KPI、实时仪表板。"
+    }
+  },
+  "maturity": {
+    "badge": "// 进展",
+    "title": "4个代理成熟度级别",
+    "subtitle": "ACF按自主级别对系统进行分类。级别2是推荐的部署目标。",
+    "level0": {
+      "code": "级别_0",
+      "name": "经典自动化",
+      "risk": "极低风险",
+      "description": "固定规则，无ML。任何修改都需要人工干预。"
+    },
+    "level1": {
+      "code": "级别_1",
+      "name": "辅助代理",
+      "risk": "低风险",
+      "description": "代理分析和建议。每个最终决定都由人类做出。"
+    },
+    "level2": {
+      "code": "级别_2",
+      "name": "受管理代理",
+      "risk": "中等风险",
+      "description": "代理在严格治理下做出决策。不可委托区域已锁定。",
+      "badge": "★ 推荐目标"
+    },
+    "level3": {
+      "code": "级别_3",
+      "name": "监督自主",
+      "risk": "高风险",
+      "description": "代理做出决策并学习。最大治理。仅适用于成熟组织。"
+    }
+  },
+  "modules": {
+    "badge": "// 方法论",
+    "title": "8个实施模块",
+    "subtitle": "在6-18个月内逐步实施的顺序路径。每个模块都建立在前一个模块之上。",
+    "module1": {
+      "code": "MOD_01",
+      "name": "主权诊断",
+      "description": "主权评分计算。风险区域映射。"
+    },
+    "module2": {
+      "code": "MOD_02",
+      "name": "决策映射",
+      "description": "关键性矩阵。不可委托区域。"
+    },
+    "module3": {
+      "code": "MOD_03",
+      "name": "代理宪法",
+      "description": "9条。由治理委员会签署。"
+    },
+    "module4": {
+      "code": "MOD_04",
+      "name": "代理系统设计",
+      "description": "授权表、交互边界。"
+    },
+    "module5": {
+      "code": "MOD_05",
+      "name": "安全与可逆性",
+      "description": "沙箱、可逆性计划。Kill switch设计。"
+    },
+    "module6": {
+      "code": "MOD_06",
+      "name": "持续治理",
+      "description": "每月审查。年度合规审计。"
+    },
+    "module7": {
+      "code": "MOD_07",
+      "name": "实施路线图",
+      "description": "5个阶段的渐进式部署。"
+    },
+    "module8": {
+      "code": "MOD_08",
+      "name": "危机管理",
+      "description": "3级事件。Kill switch演练。"
+    }
+  },
+  "video": {
+    "badge": "// 为什么选择ACF",
+    "title": "治理不能等待。<br>代理已经在决策。",
+    "description1": "2026年，自主代理已经在商业环境中执行决策——定价、潜在客户资格、索赔处理、合同管理。大多数组织没有框架来治理它们。",
+    "description2": "ACF的创建就是为了填补这一空白——在治理失败变成法律、财务或声誉危机之前。",
+    "quote": {
+      "text": "问题不再是<em>是否</em>部署代理。而是<em>如何</em>在不放弃主权的情况下部署它们。",
+      "author": "— Vincent DORANGE，ACF标准创始人"
+    },
+    "player": {
+      "badge": "ACF — 创始人致辞",
+      "name": "Vincent DORANGE",
+      "role": "创始人，代理商业框架®",
+      "duration": "3:09"
+    },
+    "stats": {
+      "release": {
+        "value": "2026",
+        "label": "正式发布"
+      },
+      "documentation": {
+        "value": "45页",
+        "label": "完整文档"
+      },
+      "protection": {
+        "value": "INPI",
+        "label": "法律保护"
+      }
+    },
+    "modal": {
+      "placeholder": "视频占位符",
+      "title": "上传您的视频以启用播放",
+      "description": "在代码中用YouTube或Vimeo嵌入URL替换此模态框"
+    }
+  },
+  "products": {
+    "badge": "// 生态系统",
+    "title": "ACF生态系统",
+    "subtitle": "实施ACF标准的三个互补产品。",
+    "score": {
+      "label": "诊断工具",
+      "title": "ACF评分",
+      "description": "专有主权评分，衡量您在6个治理维度上的决策独立性。",
+      "features": {
+        "feature1": "综合主权评分指标",
+        "feature2": "6轴雷达可视化",
+        "feature3": "每轴个性化行动计划"
+      },
+      "cta": "测量您的评分 →"
+    },
+    "control": {
+      "label": "SAAS平台",
+      "title": "ACF控制",
+      "description": "实时治理仪表板，通过自适应门控和自动升级监控您的18个主权KPI。",
+      "features": {
+        "feature1": "跨6个治理轴的18个KPI",
+        "feature2": "带人工升级的自适应门控",
+        "feature3": "防篡改审计日志"
+      },
+      "cta": "发现ACF控制 →"
+    },
+    "certification": {
+      "label": "独立证明",
+      "title": "ACF认证",
+      "description": "独立认证，证明符合ACF治理标准。可公开验证。",
+      "features": {
+        "feature1": "1、2和3级认证路径",
+        "feature2": "可公开验证的徽章",
+        "feature3": "年度更新+持续监控"
+      },
+      "cta": "获得认证 →"
+    }
+  },
+  "blog": {
+    "badge": "// 见解",
+    "title": "来自ACF博客的最新文章",
+    "subtitle": "治理见解、框架更新和代理智能研究。",
+    "article1": {
+      "category": "AI监管",
+      "title": "欧盟AI法案如何适用于2026年的代理系统",
+      "excerpt": "AI法案基于风险的方法为自主代理创建了特定义务。这是ACF 2级治理涵盖的内容。",
+      "date": "2026-02-15",
+      "cta": "阅读 →"
+    },
+    "article2": {
+      "category": "治理",
+      "title": "DDA：为什么每个AI原生公司都需要委托决策代理官",
+      "excerpt": "DDA是您的自主代理的法律监护人。如何创建和赋权这一关键角色。",
+      "date": "2026-02-08",
+      "cta": "阅读 →"
+    },
+    "article3": {
+      "category": "技术",
+      "title": "为自主代理系统设计三级Kill Switch",
+      "excerpt": "有效的kill switch不是一个按钮。ACF规定了具有定义响应时间的三个中断级别。",
+      "date": "2026-01-29",
+      "cta": "阅读 →"
+    },
+    "viewAll": "查看所有文章 →"
+  },
+  "cta": {
+    "watermark": "ACF®",
+    "badge": "// 下一步",
+    "title": "准备好治理您的<br>代理系统了吗？",
+    "description": "请求治理评估并发现您当前的主权评分。",
+    "primary": "请求治理评估 →",
+    "secondary": "成为ACF合作伙伴"
+  },
+  "footer": {
+    "logoText": "代理商业框架®",
+    "logoSubtext": "AI治理全球标准",
+    "description": "部署自主代理系统的组织的最终治理标准。受保护 — Loi n° 2018-670。",
+    "framework": {
+      "title": "框架",
+      "theStandard": "标准",
+      "methodology": "方法论",
+      "research": "研究",
+      "certification": "ACF认证"
+    },
+    "products": {
+      "title": "产品",
+      "score": "ACF评分",
+      "control": "ACF控制",
+      "certification": "认证",
+      "academy": "学院"
+    },
+    "organization": {
+      "title": "组织",
+      "partnerPortal": "合作伙伴门户",
+      "about": "关于",
+      "contact": "联系",
+      "legal": "法律"
+    },
+    "copyright": "© 2026 代理商业框架® — Vincent DORANGE。保留所有权利。INPI注册。",
+    "legal": {
+      "privacy": "隐私",
+      "terms": "条款",
+      "cookies": "Cookie"
+    }
+  },
+  "ai": {
+    "button": {
+      "label": "询问ACF代理",
+      "status": "AI治理 · 在线"
+    },
+    "modal": {
+      "close": "×",
+      "beta": "测试版",
+      "title": "询问ACF",
+      "subtitle": "基于ACF标准和治理见解回答问题的聊天机器人",
+      "placeholder": "询问ACF治理...",
+      "send": "发送",
+      "trending": {
+        "label": "热门问题",
+        "q1": "什么是ACF标准？",
+        "q2": "如何获得ACF认证？",
+        "q3": "什么是DDA角色？",
+        "q4": "什么是主权评分？",
+        "q5": "4个基本原则？"
+      },
+      "disclaimer": "AI实验。答案基于ACF标准文档。",
+      "seeMore": "了解更多"
+    }
+  },
+  "components": {
+    "src\\components\\home\\blog": {
+      "timely_writing_on_governance_deployments_and_case_": "关于治理、部署和案例研究的及时文章。"
+    },
+    "src\\components\\home\\cta": {
+      "get_started_with_acf": "开始使用ACF"
+    },
+    "src\\components\\home\\ecosystem": {
+      "certified_governance_architects_and_implementation": "认证的治理架构师和实施专家。",
+      "companies_deploying_governed_agents_in_financial_h": "在金融、医疗和公共部门部署受治理智能体的企业。",
+      "integrations_with_major_ai_platforms_control_syste": "与主要AI平台、控制系统和企业软件的集成。"
+    },
+    "src\\components\\home\\hero": {
+      "read_the_standard": "阅读标准",
+      "the_global_standard_for": "全球标准"
+    },
+    "src\\components\\home\\layers": {
+      "adaptive_gating_matrix_multilevel_alerts_18_sovere": "自适应门控矩阵、多级警报、18项主权KPI、实时仪表板。",
+      "execution_amp_supervision": "执行&监督",
+      "governance_amp_sovereignty": "治理&主权",
+      "sovereignty_charter_governance_committee_raci_matr": "主权章程、治理委员会、RACI矩阵、不可委托区域图。"
+    },
+    "src\\components\\home\\maturity": {
+      "agents_decide_and_learn_maximum_governance_for_mat": "智能体决策和学习。最大治理。仅适用于成熟组织。",
+      "agents_decide_within_strict_governance_nondelegabl": "智能体在严格治理内决策。不可委托区域锁定。",
+      "fixed_rules_no_ml_human_intervention_for_any_modif": "固定规则，无机器学习。任何修改都需人工干预。"
+    },
+    "src\\components\\home\\methodology": {
+      "assign_explicit_mandates_and_autonomy_levels": "分配明确的授权和自主级别",
+      "define_18_sovereignty_metrics_and_thresholds": "定义18项主权指标和阈值",
+      "define_sovereignty_boundaries_raci_matrix_escalati": "定义主权边界、RACI矩阵、升级权限",
+      "identify_decisions_only_humans_can_make": "识别只有人类才能做出的决策",
+      "multilevel_alerts_and_human_decision_triggers": "多级警报和人工决策触发器",
+      "quarterly_review_and_framework_evolution": "季度审查和框架演进",
+      "realtime_traceability_and_decision_logging": "实时可追溯性和决策记录",
+      "set_agent_goals_constraints_and_success_metrics": "设定智能体目标、约束条件和成功指标",
+      "the_stepbystep_methodology_to_embed_acf_governance": "将ACF治理嵌入您的智能体基础设施的分步方法论。"
+    },
+    "src\\components\\home\\principles": {
+      "certain_decisions_are_structurally_ethically_or_le": "某些决策在结构上、伦理上或法律上无法自动化。不可委派区域被正式定义并技术锁定——绝不允许智能体自行配置。",
+      "four_immutable_axioms_defining_the_boundary_betwee": "定义人类权威与自主智能体执行边界的四个不可变公理。",
+      "traceability_amp_interruptibility": "可追溯性 & 可中断性"
+    },
+    "src\\components\\home\\products": {
+      "products_integrations": "产品 & 集成",
+      "sdks_connectors": "SDK & 连接器",
+      "tooling_connectors_and_governance_controls_to_oper": "用于智能体运营化的工具、连接器和治理控制。"
+    },
+    "src\\components\\home\\referencehome": {
+      "acf_certification_program": "ACF认证项目",
+      "acf_control_governance_dashboard": "ACF Control — 治理仪表板",
+      "acf_practitioner_toolkit": "ACF从业者工具包",
+      "acf_score_sovereignty_metric": "ACF Score — 主权度量",
+      "acf_founder_message": "ACF — 创始人寄语",
+      "ai_governance_online": "AI治理 · 在线",
+      "adaptive_gating_system": "自适应门控系统",
+      "adaptive_gating_with_human_escalation": "具有人工升级的自适应门控",
+      "agent_system_design": "智能体系统设计",
+      "agentic_commerce_framework": "智能代理商务框架®",
+      "agents_already_decide": "智能代理已在决策。",
+      "asia_amp_pacific": "亚洲&太平洋地区",
+      "audit_amp_certification": "审计&认证",
+      "become_an_acf_partner": "成为ACF合作伙伴",
+      "composite_sovereignty_score_metric": "复合主权评分指标",
+      "creator_agentic_commerce_framework": "智能代理商务框架®创始人",
+      "criticality_matrix_nondelegable_zones": "关键性矩阵。不可委托区域。",
+      "dda_role_framework": "DDA角色框架",
+      "dashboard_amp_tools": "控制台&工具",
+      "download_the_acf_white_paper": "下载ACF白皮书",
+      "eu_ai_act_amp_agentic_systems": "欧盟人工智能法案(EU AI Act)&智能代理系统",
+      "europe_middle_east_amp_africa": "欧洲、中东&非洲",
+      "full_specification_free_for_registered_users": "完整规范——注册用户免费获取。",
+      "get_acf_certified_first": "首先获得ACF认证",
+      "global_standard_for_ai_governance": "人工智能治理全球标准",
+      "governance_insights_framework_updates_and_agentic_": "治理洞察、框架更新和智能代理研究。",
+      "governance_insights_research_and_technical_documen": "治理洞察、研究和技术文档。",
+      "how_the_eu_ai_act_applies_to_agentic_systems_in_20_1": "2026年欧盟人工智能法案(EU AI Act)如何适用于智能代理系统",
+      "how_to_get_acf_certified": "如何获得ACF认证？",
+      "in_2026_autonomous_agents_are_already_executing_de": "到2026年，自主代理已经在商业环境中执行决策——设定价格、筛选潜在客户、处理索赔、管理合同。大多数组织没有框架来治理它们。",
+      "independent_certification_attesting_compliance_wit": "独立认证证明符合ACF治理标准。可公开验证。",
+      "join_the_acf_practitioner_network_and_offer_govern": "加入ACF执业者网络，为您的客户提供治理服务。",
+      "kill_switch_protocol": "紧急停止协议",
+      "latest_from_the_acf_blog": "ACF博客最新资讯",
+      "mission_amp_values": "使命&价值观",
+      "monthly_reviews_annual_compliance_audit": "月度审查。年度合规审计。",
+      "north_amp_latin_america": "北美&拉丁美洲",
+      "realtime_governance_dashboard_monitoring_your_18_s": "实时治理仪表板监控您的18个主权关键绩效指标，具备自适应门控和自动升级功能。",
+      "sandboxing_reversibility_plan_kill_switch_design": "沙箱化，可逆性计划。紧急停止开关设计。",
+      "security_amp_reversibility": "安全性&可逆性",
+      "select_your_region_and_language": "选择您的地区和语言",
+      "sovereignty_score_calculation_risk_zone_mapping": "主权评分计算。风险区域映射。",
+      "the_acf_ecosystem": "ACF生态系统",
+      "the_dda_role_explained": "DDA角色解释",
+      "the_dda_is_the_legal_guardian_of_your_autonomous_a_1": "DDA是您自主代理的法律监护人。如何创建并赋权这一关键角色。",
+      "the_definitive_governance_methodology_for_agentic__1": "商业环境中代理系统的权威治理方法论。",
+      "the_story_mission_and_legal_protection_behind_the_": "代理商务框架®背后的故事、使命和法律保护。",
+      "three_complementary_products_operationalizing_the_": "三个互补产品将ACF标准运营化。",
+      "three_tools_operationalizing_the_acf_standard_acro": "三个工具在您的组织中将ACF标准运营化。",
+      "traçabilité_amp_interruptibilité": "可追溯性 & 可中断性",
+      "vincent_dorange_creator": "Vincent DORANGE — 创始人",
+      "what_is_the_acf_sovereignty_score": "什么是 ACF 主权评分？",
+      "what_is_the_acf_standard": "什么是 ACF 标准？",
+      "what_is_the_dda_role": "什么是 DDA 角色？",
+      "what_is_the_sovereignty_score": "什么是主权评分？",
+      "zones_non_délégables": "不可委托区域"
+    },
+    "src\\components\\home\\videosection": {
+      "see_acf_in_action": "查看 ACF 实际应用"
+    },
+    "src\\components\\layout\\megamenu": {
+      "acf_control_demo": "ACF 控制演示",
+      "audit_reporting": "审计与报告",
+      "become_an_acf_governance_expert": "成为 ACF 治理专家。",
+      "blog_insights": "博客与洞察",
+      "events_workshops": "活动与研讨会",
+      "find_certified_partners_in_your_region": "在您所在地区寻找认证合作伙伴。",
+      "full_specification_and_research_foundations": "完整规范和研究基础。",
+      "realtime_governance_monitoring_platform_for_autono_1": "自主代理操作的实时治理监控平台。",
+      "research_innovation": "研究与创新",
+      "see_realtime_governance_in_action": "查看实时治理的实际应用。",
+      "the_story_mission_and_vision_behind_the_agentic_co_1": "代理商务框架标准背后的故事、使命和愿景。",
+      "training_certification_and_knowledge_resources_for_1": "治理实施的培训、认证和知识资源。"
+    },
+    "src\\components\\ui\\aiwidget": {
+      "the_dda_delegated_decision_authority_is_the_named_": "DDA — 委托决策授权 — 是负责最终决策的指定个人。"
+    }
+  },
+  "pages": {
+    "home": {
+      "acf_agentic_commerce_framework": "ACF — 自主商务框架®",
+      "central_amp_eastern_europe": "中欧 & 东欧",
+      "login_to_partner_portal": "登录合作伙伴门户",
+      "middle_east_amp_africa": "中东 & 非洲",
+      "nordic_amp_baltic": "北欧 & 波罗的海",
+      "based_in_france_he_works_with_smes_midcap_companie": "他常驻法国，与中小企业、中型企业和大型企业合作，专注于数字化转型、AI治理以及自主系统时代商业模式演进等议题。",
+      "education_training": "教育 & 培训",
+      "executive_education_research": "高管教育 & 研究",
+      "founder_agentic_governance": "创始人 · Agentic Governance",
+      "global_standard_for_ai_governance": "AI治理全球标准",
+      "the_governance_standard_for_organizations_deployin": "面向部署自主AI代理的组织的治理标准。",
+      "your_strategic_control_over_automated_decisions_is": "您对自动化决策的战略控制不容妥协。",
+      "acf_academy_core_track": "ACF学院核心课程",
+      "annual_audit_required_to_maintain_certification_ce": "需要年度审计以维持认证。获得认证的组织在其数字化接触点上展示ACF TRUST™徽章。",
+      "autonomy_amplifies_clarity_decisions_are_governed_": "自主性提升透明度。决策受到治理。人类掌控全局。每个行动都可追溯、可逆转、可问责。",
+      "autonomy_amplifies_errors_agents_optimize_locally_": "自主性放大错误。代理局部优化，全局价值破坏。无审计轨迹。无问责机制。无法回退。",
+      "certification_academy": "认证 & 学院",
+      "certify_the_trust": "认证信任。",
+      "dedicated_acf_team": "专属ACF团队",
+      "deliver_acf_implementations": "交付ACF实施方案",
+      "deploy_acf_at_enterprise_scale": "在企业规模部署ACF",
+      "deploy_acf_tools": "部署ACF工具",
+      "for_ceos_comex_board_members": "面向首席执行官、COMEX和董事会成员",
+      "for_agencies_and_consulting_firms": "面向代理机构和咨询公司。",
+      "for_consultants_product_leaders_architects": "面向顾问、产品负责人、架构师。",
+      "for_major_firms_and_system_integrators": "面向大型企业和系统集成商。",
+      "govern_the_agents": "治理智能体。",
+      "it_trains_them_to_govern_autonomous_systems": "它培训他们治理自主系统。",
+      "learn_to_govern": "学会治理",
+      "learn_to_govern_1": "学会治理",
+      "manual_selection_by_acf": "由ACF手动选择",
+      "no_certification_here_just_one_thing_they_leave_re": "这里没有认证。只有一件事：他们负责任地离开。",
+      "prove_your_governance": "证明你的治理能力",
+      "run_acf_diagnostics": "运行ACF诊断",
+      "sell_acf_control": "销售ACF Control",
+      "start_the_academy": "启动学院",
+      "when_you_see_the_acf_trust_badge_you_know": "当你看到ACF TRUST™徽章时，你知道：",
+      "you_operate_on_projects": "你在项目上运营。",
+      "you_scale_delivery": "你规模化交付。",
+      "you_shape_the_ecosystem": "您塑造生态系统。",
+      "acf_control_investment": "ACF 控制投资",
+      "agent_stability_scores": "智能体稳定性评分",
+      "agent_operator_view": "智能体操作员视图",
+      "agentic_commerce_framework_all_rights_reserved": "智能体商务框架® — 版权所有。",
+      "all_agents_will_be_suspended_upon_confirmation_act": "确认后所有智能体将被暂停。操作已记录。",
+      "annual_consultant_license_acf_certification_requir": "年度顾问许可证。客户访问需要 ACF 认证。",
+      "certified_partner_program": "认证合作伙伴计划",
+      "cost_of_ai_drift": "AI 漂移成本",
+      "calculate_your_acf_score": "计算您的 ACF 评分",
+      "certified_consultant_view": "认证顾问视图",
+      "decision_governance_os": "决策治理操作系统",
+      "drift_detection_stockai": "漂移检测 — STOCK-AI",
+      "distribution_decision_traffic_treasury": "分发 · 决策 · 流量 · 资金",
+      "eu_ai_act_fines": "欧盟人工智能法案 (EU AI ACT) 罚款",
+      "each_module_serves_one_purpose_keeping_humans_in_c": "每个模块都有一个目的：让人类掌控机器决策。",
+      "impact_frequency_irreversibility": "影响 × 频率 × 不可逆性。",
+      "live_governance_system": "实时治理系统",
+      "minimum_viable_supervision": "最小可行监督",
+      "risk_without_governance": "无治理风险",
+      "suspend_all_autonomous_agents_full_degraded_mode_w": "暂停所有自主代理。60秒内进入完全降级模式。",
+      "you_stay_in_control": "您保持控制。",
+      "your_agents_decide": "您的代理决定。",
+      "are_we_sovereign_today_1": "我们今天拥有主权吗？",
+      "client_demo_org": "客户：Demo Org",
+      "affiliate_referral_partner": "联盟伙伴 — 推荐合作伙伴",
+      "certified_deploy_train": "认证伙伴 — 部署与培训",
+      "commission_on_every_acf_score_control_license_and_": "通过您的网络部署的每个ACF评分、控制许可证和认证都可获得佣金。",
+      "deploy_the_standard": "部署标准。",
+      "deploy_the_standard_1": "部署标准",
+      "direct_access_to_acf_team_dedicated_onboarding_qua": "直接联系ACF团队。专属入职培训、季度审查和升级路径。",
+      "full_access_to_acf_academy_training_modules_train_": "完全访问ACF学院培训模块。先培训您的团队，再培训您的客户。",
+      "join_the_network": "加入网络",
+      "partner_portal_login": "合作伙伴门户登录",
+      "realtime_data_on_deployments_certifications_revenu": "部署、认证、收入的实时数据。完全掌握您的投资组合。",
+      "scale_the_trust": "扩展信任。",
+      "secure_your_geographical_zone_one_region_one_partn": "保障您的地理区域。一个地区，一个合作伙伴。无竞争——只有合作。",
+      "sign_in_with_your_partner_credentials": "使用您的合作伙伴凭证登录",
+      "strategic_partners_who_share_the_mission": "共享使命的战略合作伙伴。",
+      "strategic_enterprise_alliance": "战略伙伴 — 企业联盟",
+      "the_network_is_yours": "网络属于您。",
+      "united_arab_emirates": "阿拉伯联合酋长国",
+      "use_the_acf_partner_badge_your_brand_backed_by_the": "使用ACF合作伙伴徽章。您的品牌，由全球治理标准支持。",
+      "why_do_you_want_to_become_an_acf_partner": "您为什么想成为ACF合作伙伴？",
+      "acf_score_is_the_official_diagnostic_tool_of_the_a_1": "ACF Score®是智能体商务框架的官方诊断工具。免费、即时且可操作。",
+      "acf_score_sovereignty_metric_agentic_commerce_fram": "ACF Score® — 主权指标 | 智能体商务框架",
+      "ai_decisions_against_your_business_interests": "违背您业务利益的AI决策",
+      "agents_setting_prices_and_promotions_without_bound_1": "智能体无边界地设定价格和促销可能在数小时内摧毁盈利能力。",
+      "control_supervision": "控制与监督",
+      "critical_platform_dependency": "关键平台依赖",
+      "critical_supplier_mapping_platform_risk_exposure_a": "关键供应商映射、平台风险暴露和单点故障。",
+      "diagnostic_tool_free": "诊断工具 — 免费",
+      "eu_ai_act_gdpr_and_sectorspecific_regulatory_align": "欧盟人工智能法案(EU AI Act)、GDPR和特定行业监管合规评估。",
+      "evaluates_the_technical_infrastructure_traceabilit": "评估技术基础设施：您的AI系统的可追溯性、审计日志、沙箱环境、可逆机制和访问控制。",
+      "evaluates_your_capacity_to_monitor_intervene_and_s_1": "评估您通过终止开关协议随时监控、干预和停止自主智能体操作的能力。",
+      "full_pdf_report": "完整PDF报告",
+      "global_acf_score": "全球ACF®评分",
+      "governance_decision_policy_agent_system_and_execut": "治理、决策政策、智能体系统和执行监督层。",
+      "how_your_agents_currently_operate_from_assisted_to": "您的智能体当前如何运作——从辅助到完全自主。",
+      "inability_to_steer_audit_or_correct_your_ai_system": "当决策出错时无法实时引导、审计或纠正您的AI系统。",
+      "kill_switch_readiness_audit_trail_quality_and_huma": "紧急停止准备、审计跟踪质量和人工升级协议。",
+      "legal_liability_on_automated_decisions": "自动化决策的法律责任",
+      "loss_of_strategic_control": "战略控制力丧失",
+      "margin_erosion_via_uncontrolled_pricing": "不受控定价导致的利润侵蚀",
+      "measures_alignment_with_eu_ai_act_gdpr_and_sectors": "衡量与欧盟人工智能法案(EU AI Act)、通用数据保护条例(GDPR)以及管理商业环境中自主系统使用的行业特定法规的一致性。",
+      "measures_the_degree_to_which_your_ai_agents_make_d_1": "衡量您的AI智能体独立决策的程度——以及这些决策是否保持在既定边界内。",
+      "result_in_10_minutes": "10分钟内出结果",
+      "sector_company_size_current_ai_agent_usage_and_dep": "行业、公司规模、当前AI智能体使用情况和部署范围。",
+      "without_agentic_governance_you_risk": "缺乏智能体治理，您面临的风险：",
+      "without_traceability_you_cannot_understand_explain_1": "缺乏可追溯性，您无法理解、解释或纠正AI智能体的行为。",
+      "your_complete_governance_report": "您的完整治理报告",
+      "your_score_report": "您的评分与报告",
+      "blog_recherche": "博客与研究",
+      "diagnostic_gratuit_en_10_minutes_score_immédiat_ra": "10分钟免费诊断。即时评分。PDF报告。",
+      "fondateur_acf_ai_consulting": "ACF®创始人 · AI咨询",
+      "la_couche_politique_transforme_les_principes_de_go": "政策层将治理原则转化为运营规则。它正式规定了智能体可以做什么和不可以做什么，以及在什么限制和条件下进行。",
+      "le_score_acf_mesure_précisément_cet_équilibre_entr": "ACF®评分精确衡量智能体自主性与治理控制之间的平衡。得分最高的组织并不是最保守的——而是最有条理的。",
+      "les_organisations_qui_attendent_la_mise_en_applica": "等待法规实施才开始构建智能体治理的组织承担着相当大的风险。合规需要时间：梳理智能体、制定政策、实施技术控制和培训团队。",
+      "les_organisations_qui_gouvernent_leurs_agents_ia_n": "治理其AI智能体的组织并不更慢。它们更快——因为",
+      "founder_author_of_acf": "ACF®创始人兼作者",
+      "publisher_of_the_agentic_commerce_framework": "代理商业框架®发布商",
+      "request_an_assessment": "申请评估",
+      "we_typically_respond_within_24_business_hours": "我们通常在24个工作小时内回复。",
+      "créateur_du_framework": "框架创建者",
+      "le_responsable_du_traitement_des_données_personnel": "个人数据处理负责人为AI CONSULTING, SASU，地址：法国尼斯06000维克多·雨果大道38号。联系方式：通过网站联系页面。",
+      "politique_de_confidentialité": "隐私政策",
+      "acf_operating_system": "ACF操作系统",
+      "agents_traceability_kill_switch": "代理 · 可追溯性 · 终止开关",
+      "autonomous_systems_do_not_create_chaos": "自主系统不会产生混乱。",
+      "five_integrated_tools_one_closedloop_system_diagno": "五个集成工具。一个闭环系统。诊断 → 训练 → 监控 → 认证 → 扩展。",
+      "leadership_strategy_accountability": "领导力 · 战略 · 问责制",
+      "monitoring_incidents_sovereignty": "监控 · 事件 · 主权",
+      "organizations_must_evolve_from_managing_software_t": "组织必须从管理软件演进到治理决策系统。",
+      "organizations_spent_the_last_decade_adopting_ai_go": "组织在过去十年中采用人工智能。治理模式却从未演进。",
+      "read_the_research": "阅读研究报告",
+      "rules_constraints_ethical_guardrails": "规则 · 约束 · 道德护栏",
+      "the_governance_framework": "治理框架",
+      "the_agent_governance_loop": "代理治理循环",
+      "the_agentic_commerce_framework_provides_the_struct": "代理商业框架®提供了实现这一目标所需的结构。",
+      "the_governance_standard": "治理标准",
+      "the_first_governance_architecture_for_autonomous_d": "首个自主决策系统治理架构。",
+      "the_framework_defines_how_organizations": "该框架定义了组织如何：",
+      "when_this_shift_occurs_without_structured_governan": "当这种转变在缺乏结构化治理的情况下发生时，组织会失去对自身运营决策的可见性和控制力。这些后果并非理论上的：",
+      "who_decides_authority_constitution": "谁决策 · 权威 · 章程"
+    }
+  }
+}
