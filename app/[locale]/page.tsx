@@ -1229,13 +1229,18 @@ document.getElementById('aibtn').addEventListener('click',function(){document.ge
 function closeAI(){document.getElementById('aimodal').classList.remove('open');document.body.style.overflow=''}
 </script>
 <script>
+var REMAP={'/certification':'/acf-certification','/partners':'/acf-partners','/score':'/acf-score','/partners/login':'/acf-partners','/partners/apply':'/acf-partners'};
 document.addEventListener('click',function(e){
   var a=e.target.closest('a');
   if(!a)return;
   var h=a.getAttribute('href');
   if(!h||h.charAt(0)!=='/')return;
+  if(h.indexOf('http')===0)return;
   if(a.getAttribute('onclick'))return;
   e.preventDefault();
+  var path=h.split('#')[0].split('?')[0];
+  if(path.indexOf('/blog/')===0)path='/blog';
+  if(REMAP[path])h=REMAP[path]+h.substring(path.length);
   window.parent.location.href='/${locale}'+h;
 });
 </script>
