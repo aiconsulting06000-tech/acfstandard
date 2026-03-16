@@ -1,6 +1,7 @@
 "use client"
-const HTML = `<!DOCTYPE html>
-<html lang="en">
+import { useLocale } from 'next-intl'
+const buildHTML = (locale: string) => `<!DOCTYPE html>
+<html lang="${locale}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1227,14 +1228,26 @@ document.getElementById('aiminp').addEventListener('keydown',function(e){if(e.ke
 document.getElementById('aibtn').addEventListener('click',function(){document.getElementById('aimodal').classList.add('open');document.body.style.overflow='hidden'});
 function closeAI(){document.getElementById('aimodal').classList.remove('open');document.body.style.overflow=''}
 </script>
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a');
+  if(!a)return;
+  var h=a.getAttribute('href');
+  if(!h||h.charAt(0)!=='/')return;
+  if(a.getAttribute('onclick'))return;
+  e.preventDefault();
+  window.parent.location.href='/${locale}'+h;
+});
+</script>
 </body>
 </html>
 `
 
 export default function Home() {
+  const locale = useLocale()
   return (
     <iframe
-      srcDoc={HTML}
+      srcDoc={buildHTML(locale)}
       style={{position:"fixed",top:0,left:0,width:"100vw",height:"100vh",border:"none",zIndex:9999}}
       title="ACF Standard"
     />
