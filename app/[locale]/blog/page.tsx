@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { useLocale } from "next-intl";
 
 const C = {
   navy1: "#050c1a", navy2: "#071122", navy3: "#0d1f3c",
@@ -25,139 +26,305 @@ type Article = {
   content: { type: "h2" | "h3" | "p" | "quote" | "list"; text: string }[];
 };
 
-const articles: Article[] = [
+const articles_fr: Article[] = [
   {
     slug: "eu-ai-act-agentic-systems-2026",
-    title: "Comment l'EU AI Act s'applique aux systèmes agentiques en 2026",
-    excerpt: "L'approche par le risque de l'AI Act crée des obligations spécifiques pour les agents autonomes. Voici ce que couvre la gouvernance ACF de niveau 2.",
-    date: "2026-02-15", category: "RÉGLEMENTATION", catColor: C.amber, readTime: "8 min",
+    title: "Comment l'EU AI Act s'applique aux syst\u00e8mes agentiques en 2026",
+    excerpt: "L'approche par le risque de l'AI Act cr\u00e9e des obligations sp\u00e9cifiques pour les agents autonomes. Voici ce que couvre la gouvernance ACF de niveau 2.",
+    date: "2026-02-15", category: "R\u00c9GLEMENTATION", catColor: C.amber, readTime: "8 min",
     content: [
-      { type: "p", text: "L'entrée en vigueur progressive de l'AI Act européen en 2025-2026 marque un tournant pour les organisations déployant des agents IA autonomes. Pour la première fois, un cadre réglementaire impose des obligations spécifiques sur les systèmes d'IA à haut risque — et les agents autonomes de commerce en font souvent partie." },
+      { type: "p", text: "L'entr\u00e9e en vigueur progressive de l'AI Act europ\u00e9en en 2025-2026 marque un tournant pour les organisations d\u00e9ployant des agents IA autonomes. Pour la premi\u00e8re fois, un cadre r\u00e9glementaire impose des obligations sp\u00e9cifiques sur les syst\u00e8mes d'IA \u00e0 haut risque \u2014 et les agents autonomes de commerce en font souvent partie." },
       { type: "h2", text: "Les agents autonomes dans la classification de l'AI Act" },
-      { type: "p", text: "L'AI Act classe les systèmes d'IA en quatre niveaux de risque : inacceptable, haut, limité et minimal. Les agents autonomes de commerce, qui prennent des décisions de pricing, de procurement ou d'engagement client, tombent fréquemment dans la catégorie « haut risque » dès lors qu'ils impactent des décisions économiques significatives." },
-      { type: "p", text: "Concrètement, un agent qui ajuste automatiquement les prix en fonction de la demande, gère la chaîne d'approvisionnement ou engage des dépenses marketing de manière autonome doit répondre à des exigences strictes de transparence, de traçabilité et de supervision humaine." },
-      { type: "h2", text: "Les 5 obligations clés pour les agents à haut risque" },
-      { type: "list", text: "Système de gestion des risques : évaluation continue des risques posés par l'agent autonome, avec documentation actualisée.|Gouvernance des données : qualité, pertinence et représentativité des données d'entraînement et de fonctionnement.|Documentation technique : description complète du fonctionnement, des limites et des performances de l'agent.|Transparence : les utilisateurs doivent savoir qu'ils interagissent avec un système d'IA et comprendre ses capacités.|Supervision humaine : capacité d'intervention, de correction et d'interruption par un opérateur humain qualifié." },
-      { type: "h2", text: "Comment l'ACF® répond à ces exigences" },
-      { type: "p", text: "L'Agentic Commerce Framework® a été conçu dès l'origine pour s'aligner avec les exigences de l'AI Act. La couche Gouvernance (Layer 1) établit la constitution agentique et la cartographie des responsabilités. La couche Politique (Layer 2) formalise les règles et limites comportementales des agents. La couche Système (Layer 3) implémente les mécanismes techniques de contrôle et de logging. La couche Supervision (Layer 4) assure le monitoring continu et les revues périodiques." },
-      { type: "quote", text: "Sans cadre de gouvernance formalisé, la conformité à l'AI Act restera un exercice théorique. L'ACF® transforme ces obligations en processus opérationnels." },
+      { type: "p", text: "L'AI Act classe les syst\u00e8mes d'IA en quatre niveaux de risque : inacceptable, haut, limit\u00e9 et minimal. Les agents autonomes de commerce, qui prennent des d\u00e9cisions de pricing, de procurement ou d'engagement client, tombent fr\u00e9quemment dans la cat\u00e9gorie \u00ab haut risque \u00bb d\u00e8s lors qu'ils impactent des d\u00e9cisions \u00e9conomiques significatives." },
+      { type: "p", text: "Concr\u00e8tement, un agent qui ajuste automatiquement les prix en fonction de la demande, g\u00e8re la cha\u00eene d'approvisionnement ou engage des d\u00e9penses marketing de mani\u00e8re autonome doit r\u00e9pondre \u00e0 des exigences strictes de transparence, de tra\u00e7abilit\u00e9 et de supervision humaine." },
+      { type: "h2", text: "Les 5 obligations cl\u00e9s pour les agents \u00e0 haut risque" },
+      { type: "list", text: "Syst\u00e8me de gestion des risques : \u00e9valuation continue des risques pos\u00e9s par l'agent autonome, avec documentation actualis\u00e9e.|Gouvernance des donn\u00e9es : qualit\u00e9, pertinence et repr\u00e9sentativit\u00e9 des donn\u00e9es d'entra\u00eenement et de fonctionnement.|Documentation technique : description compl\u00e8te du fonctionnement, des limites et des performances de l'agent.|Transparence : les utilisateurs doivent savoir qu'ils interagissent avec un syst\u00e8me d'IA et comprendre ses capacit\u00e9s.|Supervision humaine : capacit\u00e9 d'intervention, de correction et d'interruption par un op\u00e9rateur humain qualifi\u00e9." },
+      { type: "h2", text: "Comment l'ACF\u00ae r\u00e9pond \u00e0 ces exigences" },
+      { type: "p", text: "L'Agentic Commerce Framework\u00ae a \u00e9t\u00e9 con\u00e7u d\u00e8s l'origine pour s'aligner avec les exigences de l'AI Act. La couche Gouvernance (Layer 1) \u00e9tablit la constitution agentique et la cartographie des responsabilit\u00e9s. La couche Politique (Layer 2) formalise les r\u00e8gles et limites comportementales des agents. La couche Syst\u00e8me (Layer 3) impl\u00e9mente les m\u00e9canismes techniques de contr\u00f4le et de logging. La couche Supervision (Layer 4) assure le monitoring continu et les revues p\u00e9riodiques." },
+      { type: "quote", text: "Sans cadre de gouvernance formalis\u00e9, la conformit\u00e9 \u00e0 l'AI Act restera un exercice th\u00e9orique. L'ACF\u00ae transforme ces obligations en processus op\u00e9rationnels." },
       { type: "h2", text: "Sanctions et calendrier" },
-      { type: "p", text: "Les sanctions prévues par l'AI Act peuvent atteindre 35 millions d'euros ou 7% du chiffre d'affaires mondial annuel. Les premières obligations de transparence s'appliquent dès 2025, tandis que les exigences complètes pour les systèmes à haut risque entreront en vigueur progressivement en 2026-2027." },
-      { type: "p", text: "Les organisations qui attendent la mise en application pour structurer leur gouvernance agentique prennent un risque considérable. La mise en conformité nécessite du temps : cartographier les agents, définir les politiques, implémenter les contrôles techniques et former les équipes." },
-      { type: "h3", text: "Action recommandée" },
-      { type: "p", text: "Réalisez votre diagnostic ACF Score® gratuit pour évaluer votre niveau de préparation actuel, puis engagez un plan de mise en conformité structuré autour des 4 couches ACF®." },
+      { type: "p", text: "Les sanctions pr\u00e9vues par l'AI Act peuvent atteindre 35 millions d'euros ou 7% du chiffre d'affaires mondial annuel. Les premi\u00e8res obligations de transparence s'appliquent d\u00e8s 2025, tandis que les exigences compl\u00e8tes pour les syst\u00e8mes \u00e0 haut risque entreront en vigueur progressivement en 2026-2027." },
+      { type: "p", text: "Les organisations qui attendent la mise en application pour structurer leur gouvernance agentique prennent un risque consid\u00e9rable. La mise en conformit\u00e9 n\u00e9cessite du temps : cartographier les agents, d\u00e9finir les politiques, impl\u00e9menter les contr\u00f4les techniques et former les \u00e9quipes." },
+      { type: "h3", text: "Action recommand\u00e9e" },
+      { type: "p", text: "R\u00e9alisez votre diagnostic ACF Score\u00ae gratuit pour \u00e9valuer votre niveau de pr\u00e9paration actuel, puis engagez un plan de mise en conformit\u00e9 structur\u00e9 autour des 4 couches ACF\u00ae." },
     ]
   },
   {
     slug: "delegated-decision-agent-officer",
     title: "Le DDA : pourquoi chaque entreprise IA-native a besoin d'un Delegated Decision Agent Officer",
-    excerpt: "Le DDA est le gardien légal de vos agents autonomes. Comment créer et responsabiliser ce rôle critique au sein de votre organisation.",
+    excerpt: "Le DDA est le gardien l\u00e9gal de vos agents autonomes. Comment cr\u00e9er et responsabiliser ce r\u00f4le critique au sein de votre organisation.",
     date: "2026-02-08", category: "GOUVERNANCE", catColor: C.green, readTime: "7 min",
     content: [
-      { type: "p", text: "À mesure que les agents IA autonomes prennent des décisions de plus en plus critiques — pricing, approvisionnement, engagement client, gestion budgétaire — une question fondamentale émerge : qui est responsable quand un agent prend une mauvaise décision ?" },
-      { type: "h2", text: "Le vide de responsabilité agentique" },
-      { type: "p", text: "Dans une organisation traditionnelle, chaque décision a un propriétaire identifiable. Un directeur commercial décide des prix. Un responsable achats valide les commandes. Un directeur marketing approuve les campagnes. Avec l'autonomie agentique, ces décisions sont déléguées à des systèmes qui opèrent à une vitesse et une échelle impossibles pour un humain." },
-      { type: "p", text: "Le problème n'est pas technique — c'est organisationnel. Qui répond devant le régulateur ? Qui est convoqué lors d'un audit ? Qui a l'autorité pour interrompre un agent qui dérive ? Sans réponse claire, l'organisation s'expose à un risque juridique et opérationnel majeur." },
-      { type: "h2", text: "Le rôle du Delegated Decision Agent Officer (DDA)" },
-      { type: "p", text: "L'ACF® introduit le concept de DDA : un rôle de gouvernance nommé, responsable de la supervision des décisions autonomes au sein de l'organisation. Ce n'est pas un rôle technique — c'est un rôle de gouvernance stratégique." },
-      { type: "list", text: "Responsabilité nommée : le DDA est la personne identifiable qui répond des décisions prises par les agents autonomes.|Autorité d'interruption : le DDA a le pouvoir et les moyens techniques d'interrompre tout agent à tout moment.|Cadrage des politiques : le DDA définit et valide les règles de comportement de chaque agent.|Reporting régulier : le DDA produit des revues périodiques de gouvernance pour la direction.|Interface réglementaire : le DDA est l'interlocuteur principal en cas d'audit ou de contrôle." },
+      { type: "p", text: "\u00c0 mesure que les agents IA autonomes prennent des d\u00e9cisions de plus en plus critiques \u2014 pricing, approvisionnement, engagement client, gestion budg\u00e9taire \u2014 une question fondamentale \u00e9merge : qui est responsable quand un agent prend une mauvaise d\u00e9cision ?" },
+      { type: "h2", text: "Le vide de responsabilit\u00e9 agentique" },
+      { type: "p", text: "Dans une organisation traditionnelle, chaque d\u00e9cision a un propri\u00e9taire identifiable. Un directeur commercial d\u00e9cide des prix. Un responsable achats valide les commandes. Un directeur marketing approuve les campagnes. Avec l'autonomie agentique, ces d\u00e9cisions sont d\u00e9l\u00e9gu\u00e9es \u00e0 des syst\u00e8mes qui op\u00e8rent \u00e0 une vitesse et une \u00e9chelle impossibles pour un humain." },
+      { type: "p", text: "Le probl\u00e8me n'est pas technique \u2014 c'est organisationnel. Qui r\u00e9pond devant le r\u00e9gulateur ? Qui est convoqu\u00e9 lors d'un audit ? Qui a l'autorit\u00e9 pour interrompre un agent qui d\u00e9rive ? Sans r\u00e9ponse claire, l'organisation s'expose \u00e0 un risque juridique et op\u00e9rationnel majeur." },
+      { type: "h2", text: "Le r\u00f4le du Delegated Decision Agent Officer (DDA)" },
+      { type: "p", text: "L'ACF\u00ae introduit le concept de DDA : un r\u00f4le de gouvernance nomm\u00e9, responsable de la supervision des d\u00e9cisions autonomes au sein de l'organisation. Ce n'est pas un r\u00f4le technique \u2014 c'est un r\u00f4le de gouvernance strat\u00e9gique." },
+      { type: "list", text: "Responsabilit\u00e9 nomm\u00e9e : le DDA est la personne identifiable qui r\u00e9pond des d\u00e9cisions prises par les agents autonomes.|Autorit\u00e9 d'interruption : le DDA a le pouvoir et les moyens techniques d'interrompre tout agent \u00e0 tout moment.|Cadrage des politiques : le DDA d\u00e9finit et valide les r\u00e8gles de comportement de chaque agent.|Reporting r\u00e9gulier : le DDA produit des revues p\u00e9riodiques de gouvernance pour la direction.|Interface r\u00e9glementaire : le DDA est l'interlocuteur principal en cas d'audit ou de contr\u00f4le." },
       { type: "h2", text: "Profil et positionnement" },
-      { type: "p", text: "Le DDA idéal combine une compréhension business (stratégie, risques, réglementation) avec une culture technique suffisante pour dialoguer avec les équipes IA. Il se positionne au niveau direction, reportant directement au CEO ou au COO. Ce n'est ni un CTO ni un compliance officer — c'est un rôle hybride nouveau, adapté à l'ère agentique." },
-      { type: "quote", text: "Le DDA n'est pas celui qui construit les agents. C'est celui qui s'assure que les agents construisent ce que l'organisation a décidé." },
-      { type: "h2", text: "Implémentation avec l'ACF®" },
-      { type: "p", text: "La Layer 1 (Gouvernance) de l'ACF® fournit le cadre pour définir, nommer et mandater le DDA. Le diagnostic ACF Score® évalue si votre organisation a déjà identifié ce rôle — c'est l'un des critères les plus discriminants du scoring." },
+      { type: "p", text: "Le DDA id\u00e9al combine une compr\u00e9hension business (strat\u00e9gie, risques, r\u00e9glementation) avec une culture technique suffisante pour dialoguer avec les \u00e9quipes IA. Il se positionne au niveau direction, reportant directement au CEO ou au COO. Ce n'est ni un CTO ni un compliance officer \u2014 c'est un r\u00f4le hybride nouveau, adapt\u00e9 \u00e0 l'\u00e8re agentique." },
+      { type: "quote", text: "Le DDA n'est pas celui qui construit les agents. C'est celui qui s'assure que les agents construisent ce que l'organisation a d\u00e9cid\u00e9." },
+      { type: "h2", text: "Impl\u00e9mentation avec l'ACF\u00ae" },
+      { type: "p", text: "La Layer 1 (Gouvernance) de l'ACF\u00ae fournit le cadre pour d\u00e9finir, nommer et mandater le DDA. Le diagnostic ACF Score\u00ae \u00e9value si votre organisation a d\u00e9j\u00e0 identifi\u00e9 ce r\u00f4le \u2014 c'est l'un des crit\u00e8res les plus discriminants du scoring." },
     ]
   },
   {
     slug: "three-level-kill-switch",
-    title: "Concevoir un Kill Switch à trois niveaux pour les systèmes d'agents autonomes",
-    excerpt: "Un kill switch efficace n'est pas un simple bouton. L'ACF® spécifie trois niveaux d'interruption avec des temps de réponse définis.",
+    title: "Concevoir un Kill Switch \u00e0 trois niveaux pour les syst\u00e8mes d'agents autonomes",
+    excerpt: "Un kill switch efficace n'est pas un simple bouton. L'ACF\u00ae sp\u00e9cifie trois niveaux d'interruption avec des temps de r\u00e9ponse d\u00e9finis.",
     date: "2026-01-29", category: "TECHNIQUE", catColor: C.blue, readTime: "10 min",
     content: [
-      { type: "p", text: "L'interruptibilité est l'un des principes fondamentaux de la gouvernance agentique. Un agent IA autonome qui ne peut pas être arrêté de manière fiable et rapide représente un risque existentiel pour l'organisation qui le déploie. Pourtant, la plupart des implémentations actuelles se limitent à un bouton « stop » rudimentaire." },
+      { type: "p", text: "L'interruptibilit\u00e9 est l'un des principes fondamentaux de la gouvernance agentique. Un agent IA autonome qui ne peut pas \u00eatre arr\u00eat\u00e9 de mani\u00e8re fiable et rapide repr\u00e9sente un risque existentiel pour l'organisation qui le d\u00e9ploie. Pourtant, la plupart des impl\u00e9mentations actuelles se limitent \u00e0 un bouton \u00ab stop \u00bb rudimentaire." },
       { type: "h2", text: "Pourquoi un seul bouton ne suffit pas" },
-      { type: "p", text: "Un agent autonome complexe opère sur plusieurs systèmes simultanément : il peut être en train de négocier un prix fournisseur, d'ajuster une campagne publicitaire et de répondre à un client en même temps. Un arrêt brutal de toutes ces opérations peut causer autant de dommages que la dérive qu'on cherche à corriger — commandes abandonnées, engagements non tenus, incohérences de données." },
-      { type: "h2", text: "L'architecture Kill Switch ACF® à 3 niveaux" },
-      { type: "h3", text: "Niveau 1 — Pause (temps de réponse : < 1 seconde)" },
-      { type: "p", text: "Suspension immédiate de toute nouvelle décision. Les opérations en cours se terminent normalement, mais aucune nouvelle action n'est initiée. L'agent passe en mode observation pure. Idéal pour : suspicion de dérive légère, besoin de vérification humaine ponctuelle." },
-      { type: "h3", text: "Niveau 2 — Containment (temps de réponse : < 5 secondes)" },
-      { type: "p", text: "Les opérations en cours sont achevées avec des paramètres de sécurité renforcés (limites de prix réduites, volumes plafonnés, approbation requise). Aucune nouvelle opération. Log complet de toutes les actions terminées. Idéal pour : dérive confirmée mais non critique, investigation en cours." },
-      { type: "h3", text: "Niveau 3 — Kill (temps de réponse : < 30 secondes)" },
-      { type: "p", text: "Arrêt total et immédiat de toutes les opérations, y compris celles en cours. Rollback automatique des actions réversibles. Notification immédiate au DDA et à toutes les parties prenantes. Snapshot complet de l'état du système pour analyse post-mortem. Idéal pour : situation de crise, perte de contrôle confirmée, risque financier ou réglementaire immédiat." },
-      { type: "h2", text: "Implémentation technique" },
-      { type: "p", text: "Chaque niveau doit être implémenté avec des mécanismes indépendants. Le Niveau 1 utilise un flag de configuration temps réel. Le Niveau 2 requiert un système de circuit-breaker avec des seuils de sécurité prédéfinis. Le Niveau 3 nécessite un mécanisme de coupure réseau et de rollback transactionnel." },
-      { type: "quote", text: "Un kill switch qui n'a jamais été testé n'est pas un kill switch — c'est une promesse. L'ACF® exige des tests trimestriels de chaque niveau d'interruption." },
-      { type: "p", text: "La Layer 3 (Système) de l'ACF® détaille les spécifications techniques complètes pour chaque niveau, incluant les protocoles de test, les critères de déclenchement et les procédures de reprise d'activité." },
+      { type: "p", text: "Un agent autonome complexe op\u00e8re sur plusieurs syst\u00e8mes simultan\u00e9ment : il peut \u00eatre en train de n\u00e9gocier un prix fournisseur, d'ajuster une campagne publicitaire et de r\u00e9pondre \u00e0 un client en m\u00eame temps. Un arr\u00eat brutal de toutes ces op\u00e9rations peut causer autant de dommages que la d\u00e9rive qu'on cherche \u00e0 corriger \u2014 commandes abandonn\u00e9es, engagements non tenus, incoh\u00e9rences de donn\u00e9es." },
+      { type: "h2", text: "L'architecture Kill Switch ACF\u00ae \u00e0 3 niveaux" },
+      { type: "h3", text: "Niveau 1 \u2014 Pause (temps de r\u00e9ponse : < 1 seconde)" },
+      { type: "p", text: "Suspension imm\u00e9diate de toute nouvelle d\u00e9cision. Les op\u00e9rations en cours se terminent normalement, mais aucune nouvelle action n'est initi\u00e9e. L'agent passe en mode observation pure. Id\u00e9al pour : suspicion de d\u00e9rive l\u00e9g\u00e8re, besoin de v\u00e9rification humaine ponctuelle." },
+      { type: "h3", text: "Niveau 2 \u2014 Containment (temps de r\u00e9ponse : < 5 secondes)" },
+      { type: "p", text: "Les op\u00e9rations en cours sont achev\u00e9es avec des param\u00e8tres de s\u00e9curit\u00e9 renforc\u00e9s (limites de prix r\u00e9duites, volumes plafonn\u00e9s, approbation requise). Aucune nouvelle op\u00e9ration. Log complet de toutes les actions termin\u00e9es. Id\u00e9al pour : d\u00e9rive confirm\u00e9e mais non critique, investigation en cours." },
+      { type: "h3", text: "Niveau 3 \u2014 Kill (temps de r\u00e9ponse : < 30 secondes)" },
+      { type: "p", text: "Arr\u00eat total et imm\u00e9diat de toutes les op\u00e9rations, y compris celles en cours. Rollback automatique des actions r\u00e9versibles. Notification imm\u00e9diate au DDA et \u00e0 toutes les parties prenantes. Snapshot complet de l'\u00e9tat du syst\u00e8me pour analyse post-mortem. Id\u00e9al pour : situation de crise, perte de contr\u00f4le confirm\u00e9e, risque financier ou r\u00e9glementaire imm\u00e9diat." },
+      { type: "h2", text: "Impl\u00e9mentation technique" },
+      { type: "p", text: "Chaque niveau doit \u00eatre impl\u00e9ment\u00e9 avec des m\u00e9canismes ind\u00e9pendants. Le Niveau 1 utilise un flag de configuration temps r\u00e9el. Le Niveau 2 requiert un syst\u00e8me de circuit-breaker avec des seuils de s\u00e9curit\u00e9 pr\u00e9d\u00e9finis. Le Niveau 3 n\u00e9cessite un m\u00e9canisme de coupure r\u00e9seau et de rollback transactionnel." },
+      { type: "quote", text: "Un kill switch qui n'a jamais \u00e9t\u00e9 test\u00e9 n'est pas un kill switch \u2014 c'est une promesse. L'ACF\u00ae exige des tests trimestriels de chaque niveau d'interruption." },
+      { type: "p", text: "La Layer 3 (Syst\u00e8me) de l'ACF\u00ae d\u00e9taille les sp\u00e9cifications techniques compl\u00e8tes pour chaque niveau, incluant les protocoles de test, les crit\u00e8res de d\u00e9clenchement et les proc\u00e9dures de reprise d'activit\u00e9." },
     ]
   },
   {
     slug: "agentic-commerce-5-trillion-opportunity",
-    title: "Le commerce agentique : une opportunité à $5 000 milliards qui exige une gouvernance",
-    excerpt: "McKinsey estime le marché du commerce agentique entre 3 et 5 000 milliards de dollars d'ici 2030. Sans gouvernance, cette opportunité devient un risque systémique.",
-    date: "2026-01-22", category: "MARCHÉ", catColor: C.purple, readTime: "6 min",
+    title: "Le commerce agentique : une opportunit\u00e9 \u00e0 $5 000 milliards qui exige une gouvernance",
+    excerpt: "McKinsey estime le march\u00e9 du commerce agentique entre 3 et 5 000 milliards de dollars d'ici 2030. Sans gouvernance, cette opportunit\u00e9 devient un risque syst\u00e9mique.",
+    date: "2026-01-22", category: "MARCH\u00c9", catColor: C.purple, readTime: "6 min",
     content: [
-      { type: "p", text: "Le commerce agentique — où des agents IA autonomes recherchent, comparent, négocient et achètent au nom des consommateurs et des entreprises — est en train de redéfinir les fondamentaux du commerce mondial. Les estimations les plus sérieuses positionnent ce marché entre 3 et 5 000 milliards de dollars d'ici 2030." },
+      { type: "p", text: "Le commerce agentique \u2014 o\u00f9 des agents IA autonomes recherchent, comparent, n\u00e9gocient et ach\u00e8tent au nom des consommateurs et des entreprises \u2014 est en train de red\u00e9finir les fondamentaux du commerce mondial. Les estimations les plus s\u00e9rieuses positionnent ce march\u00e9 entre 3 et 5 000 milliards de dollars d'ici 2030." },
       { type: "h2", text: "Ce qui change fondamentalement" },
-      { type: "p", text: "Pendant 25 ans, le commerce digital a été conçu pour des humains qui naviguent, comparent et cliquent. Le commerce agentique inverse cette logique : l'intention est exprimée une fois, l'exécution est déléguée. Le consommateur ne parcourt plus des pages de résultats — il dit à son agent « trouve-moi des bottes d'hiver imperméables à moins de 150€, livrées avant vendredi » et l'agent fait le reste." },
-      { type: "p", text: "Pour les entreprises, cela signifie que le « client » n'est plus un humain qui visite votre site — c'est un agent qui interroge votre API. Les critères de décision passent de l'émotion et du branding à la structuration des données, la fiabilité transactionnelle et la vérifiabilité des informations produit." },
-      { type: "h2", text: "L'impératif de gouvernance" },
-      { type: "p", text: "Cette transformation crée un paradoxe : pour capturer l'opportunité du commerce agentique, les organisations doivent déléguer plus de décisions à des agents autonomes. Mais sans gouvernance structurée, cette délégation crée des risques existentiels — pricing non contrôlé, engagements non autorisés, dépendance aux plateformes tierces." },
-      { type: "quote", text: "L'opportunité de $5 000 milliards n'ira pas aux organisations qui ont les meilleurs agents — elle ira à celles qui gouvernent le mieux leurs agents." },
-      { type: "h2", text: "Les 3 piliers de compétitivité agentique" },
-      { type: "list", text: "Découvrabilité agentique : vos produits et services sont-ils structurés pour être compris et évalués par des agents IA ? Données structurées, APIs ouvertes, informations vérifiables.|Fiabilité transactionnelle : vos systèmes permettent-ils à des agents de compléter des transactions de bout en bout de manière fiable et sécurisée ?|Gouvernance de confiance : pouvez-vous démontrer à vos clients, partenaires et régulateurs que vos agents opèrent dans un cadre de gouvernance structuré et auditable ?" },
-      { type: "p", text: "L'ACF® fournit le cadre méthodologique pour le troisième pilier — et influence directement les deux premiers. Une organisation qui a formalisé sa gouvernance agentique est naturellement mieux positionnée pour structurer sa découvrabilité et sa fiabilité transactionnelle." },
+      { type: "p", text: "Pendant 25 ans, le commerce digital a \u00e9t\u00e9 con\u00e7u pour des humains qui naviguent, comparent et cliquent. Le commerce agentique inverse cette logique : l'intention est exprim\u00e9e une fois, l'ex\u00e9cution est d\u00e9l\u00e9gu\u00e9e. Le consommateur ne parcourt plus des pages de r\u00e9sultats \u2014 il dit \u00e0 son agent \u00ab trouve-moi des bottes d'hiver imperm\u00e9ables \u00e0 moins de 150\u20ac, livr\u00e9es avant vendredi \u00bb et l'agent fait le reste." },
+      { type: "p", text: "Pour les entreprises, cela signifie que le \u00ab client \u00bb n'est plus un humain qui visite votre site \u2014 c'est un agent qui interroge votre API. Les crit\u00e8res de d\u00e9cision passent de l'\u00e9motion et du branding \u00e0 la structuration des donn\u00e9es, la fiabilit\u00e9 transactionnelle et la v\u00e9rifiabilit\u00e9 des informations produit." },
+      { type: "h2", text: "L'imp\u00e9ratif de gouvernance" },
+      { type: "p", text: "Cette transformation cr\u00e9e un paradoxe : pour capturer l'opportunit\u00e9 du commerce agentique, les organisations doivent d\u00e9l\u00e9guer plus de d\u00e9cisions \u00e0 des agents autonomes. Mais sans gouvernance structur\u00e9e, cette d\u00e9l\u00e9gation cr\u00e9e des risques existentiels \u2014 pricing non contr\u00f4l\u00e9, engagements non autoris\u00e9s, d\u00e9pendance aux plateformes tierces." },
+      { type: "quote", text: "L'opportunit\u00e9 de $5 000 milliards n'ira pas aux organisations qui ont les meilleurs agents \u2014 elle ira \u00e0 celles qui gouvernent le mieux leurs agents." },
+      { type: "h2", text: "Les 3 piliers de comp\u00e9titivit\u00e9 agentique" },
+      { type: "list", text: "D\u00e9couvrabilit\u00e9 agentique : vos produits et services sont-ils structur\u00e9s pour \u00eatre compris et \u00e9valu\u00e9s par des agents IA ? Donn\u00e9es structur\u00e9es, APIs ouvertes, informations v\u00e9rifiables.|Fiabilit\u00e9 transactionnelle : vos syst\u00e8mes permettent-ils \u00e0 des agents de compl\u00e9ter des transactions de bout en bout de mani\u00e8re fiable et s\u00e9curis\u00e9e ?|Gouvernance de confiance : pouvez-vous d\u00e9montrer \u00e0 vos clients, partenaires et r\u00e9gulateurs que vos agents op\u00e8rent dans un cadre de gouvernance structur\u00e9 et auditable ?" },
+      { type: "p", text: "L'ACF\u00ae fournit le cadre m\u00e9thodologique pour le troisi\u00e8me pilier \u2014 et influence directement les deux premiers. Une organisation qui a formalis\u00e9 sa gouvernance agentique est naturellement mieux positionn\u00e9e pour structurer sa d\u00e9couvrabilit\u00e9 et sa fiabilit\u00e9 transactionnelle." },
     ]
   },
   {
     slug: "4-layers-acf-governance-explained",
-    title: "Les 4 couches de la gouvernance ACF® expliquées",
-    excerpt: "Architecture complète du framework en 4 couches : Gouvernance, Politique, Système et Supervision. Comment elles s'articulent et pourquoi chacune est indispensable.",
-    date: "2026-01-15", category: "MÉTHODOLOGIE", catColor: C.gold, readTime: "12 min",
+    title: "Les 4 couches de la gouvernance ACF\u00ae expliqu\u00e9es",
+    excerpt: "Architecture compl\u00e8te du framework en 4 couches : Gouvernance, Politique, Syst\u00e8me et Supervision. Comment elles s'articulent et pourquoi chacune est indispensable.",
+    date: "2026-01-15", category: "M\u00c9THODOLOGIE", catColor: C.gold, readTime: "12 min",
     content: [
-      { type: "p", text: "L'Agentic Commerce Framework® repose sur une architecture en 4 couches de gouvernance. Chaque couche a un rôle distinct, des livrables spécifiques et des interactions définies avec les autres couches. C'est cette structuration qui différencie l'ACF® d'une simple check-list de bonnes pratiques." },
-      { type: "h2", text: "Layer 1 — Gouvernance : le « qui »" },
-      { type: "p", text: "La couche Gouvernance est le fondement stratégique de tout l'édifice. Elle répond aux questions de responsabilité et d'autorité : qui gouverne les agents ? Qui est responsable de leurs décisions ? Qui a l'autorité de les modifier, les restreindre ou les arrêter ?" },
-      { type: "list", text: "Constitution agentique : document fondateur qui définit les principes de gouvernance de l'organisation en matière d'IA autonome.|Sponsor de gouvernance nommé : personne identifiable au niveau direction, responsable de la gouvernance agentique.|Cartographie des autorités de décision : pour chaque type de décision déléguée à un agent, identification de l'humain référent.|Protocoles d'escalade : définition précise des critères et des chemins d'escalade pour chaque niveau de risque." },
-      { type: "h2", text: "Layer 2 — Politique : le « quoi »" },
-      { type: "p", text: "La couche Politique transforme les principes de gouvernance en règles opérationnelles. Elle formalise ce que les agents peuvent et ne peuvent pas faire, avec quelles limites et dans quelles conditions." },
-      { type: "list", text: "Politiques comportementales par agent : pour chaque agent déployé, documentation des actions autorisées, interdites et conditionnelles.|Limites d'autonomie : seuils financiers, temporels et opérationnels au-delà desquels l'approbation humaine est requise.|Alignement réglementaire : mapping explicite entre chaque politique d'agent et les exigences réglementaires applicables (AI Act, RGPD, sectorielles).|Cadres éthiques de décision : principes directeurs pour les situations ambiguës non couvertes par les règles explicites." },
-      { type: "h2", text: "Layer 3 — Système : le « comment »" },
-      { type: "p", text: "La couche Système est l'infrastructure technique qui rend la gouvernance opérationnelle. Sans elle, les deux premières couches restent des documents théoriques." },
-      { type: "list", text: "Kill switch à 3 niveaux : mécanismes d'interruption gradués avec temps de réponse garantis (voir notre article dédié).|Architecture de traçabilité : logging exhaustif de toutes les décisions autonomes, avec horodatage, contexte et justification algorithmique.|Règles de coordination multi-agents : protocoles d'interaction entre agents pour éviter les conflits, les boucles et les optimisations contradictoires.|Protocoles d'interruptibilité : tests réguliers de chaque mécanisme d'arrêt pour garantir leur fiabilité en situation réelle." },
-      { type: "h2", text: "Layer 4 — Supervision : le « en continu »" },
-      { type: "p", text: "La couche Supervision assure que la gouvernance reste vivante et adaptée. C'est la couche qui transforme un framework statique en système d'amélioration continue." },
-      { type: "list", text: "Dashboard ACF Control : monitoring temps réel des agents, de leurs décisions et de leur conformité aux politiques définies.|Revues trimestrielles : évaluation formelle de la posture de gouvernance, avec scoring ACF® actualisé et plan d'action.|Procédures de réponse aux incidents : processus documenté pour gérer les situations de dérive, d'erreur ou de crise agentique.|Tracking du score de souveraineté : suivi longitudinal de l'indépendance de l'organisation vis-à-vis des plateformes tierces." },
-      { type: "quote", text: "Les 4 couches ACF® ne sont pas séquentielles — elles sont systémiques. Un déficit dans une couche affaiblit l'ensemble du dispositif." },
-      { type: "h2", text: "L'évaluation par le Score ACF®" },
-      { type: "p", text: "Le diagnostic ACF Score® évalue votre organisation sur chacune de ces 4 couches, avec un scoring détaillé qui identifie vos forces et vos lacunes. Le résultat n'est pas un simple chiffre — c'est une cartographie de votre maturité de gouvernance agentique avec des actions prioritaires pour chaque couche." },
+      { type: "p", text: "L'Agentic Commerce Framework\u00ae repose sur une architecture en 4 couches de gouvernance. Chaque couche a un r\u00f4le distinct, des livrables sp\u00e9cifiques et des interactions d\u00e9finies avec les autres couches. C'est cette structuration qui diff\u00e9rencie l'ACF\u00ae d'une simple check-list de bonnes pratiques." },
+      { type: "h2", text: "Layer 1 \u2014 Gouvernance : le \u00ab qui \u00bb" },
+      { type: "p", text: "La couche Gouvernance est le fondement strat\u00e9gique de tout l'\u00e9difice. Elle r\u00e9pond aux questions de responsabilit\u00e9 et d'autorit\u00e9 : qui gouverne les agents ? Qui est responsable de leurs d\u00e9cisions ? Qui a l'autorit\u00e9 de les modifier, les restreindre ou les arr\u00eater ?" },
+      { type: "list", text: "Constitution agentique : document fondateur qui d\u00e9finit les principes de gouvernance de l'organisation en mati\u00e8re d'IA autonome.|Sponsor de gouvernance nomm\u00e9 : personne identifiable au niveau direction, responsable de la gouvernance agentique.|Cartographie des autorit\u00e9s de d\u00e9cision : pour chaque type de d\u00e9cision d\u00e9l\u00e9gu\u00e9e \u00e0 un agent, identification de l'humain r\u00e9f\u00e9rent.|Protocoles d'escalade : d\u00e9finition pr\u00e9cise des crit\u00e8res et des chemins d'escalade pour chaque niveau de risque." },
+      { type: "h2", text: "Layer 2 \u2014 Politique : le \u00ab quoi \u00bb" },
+      { type: "p", text: "La couche Politique transforme les principes de gouvernance en r\u00e8gles op\u00e9rationnelles. Elle formalise ce que les agents peuvent et ne peuvent pas faire, avec quelles limites et dans quelles conditions." },
+      { type: "list", text: "Politiques comportementales par agent : pour chaque agent d\u00e9ploy\u00e9, documentation des actions autoris\u00e9es, interdites et conditionnelles.|Limites d'autonomie : seuils financiers, temporels et op\u00e9rationnels au-del\u00e0 desquels l'approbation humaine est requise.|Alignement r\u00e9glementaire : mapping explicite entre chaque politique d'agent et les exigences r\u00e9glementaires applicables (AI Act, RGPD, sectorielles).|Cadres \u00e9thiques de d\u00e9cision : principes directeurs pour les situations ambigu\u00ebs non couvertes par les r\u00e8gles explicites." },
+      { type: "h2", text: "Layer 3 \u2014 Syst\u00e8me : le \u00ab comment \u00bb" },
+      { type: "p", text: "La couche Syst\u00e8me est l'infrastructure technique qui rend la gouvernance op\u00e9rationnelle. Sans elle, les deux premi\u00e8res couches restent des documents th\u00e9oriques." },
+      { type: "list", text: "Kill switch \u00e0 3 niveaux : m\u00e9canismes d'interruption gradu\u00e9s avec temps de r\u00e9ponse garantis (voir notre article d\u00e9di\u00e9).|Architecture de tra\u00e7abilit\u00e9 : logging exhaustif de toutes les d\u00e9cisions autonomes, avec horodatage, contexte et justification algorithmique.|R\u00e8gles de coordination multi-agents : protocoles d'interaction entre agents pour \u00e9viter les conflits, les boucles et les optimisations contradictoires.|Protocoles d'interruptibilit\u00e9 : tests r\u00e9guliers de chaque m\u00e9canisme d'arr\u00eat pour garantir leur fiabilit\u00e9 en situation r\u00e9elle." },
+      { type: "h2", text: "Layer 4 \u2014 Supervision : le \u00ab en continu \u00bb" },
+      { type: "p", text: "La couche Supervision assure que la gouvernance reste vivante et adapt\u00e9e. C'est la couche qui transforme un framework statique en syst\u00e8me d'am\u00e9lioration continue." },
+      { type: "list", text: "Dashboard ACF Control : monitoring temps r\u00e9el des agents, de leurs d\u00e9cisions et de leur conformit\u00e9 aux politiques d\u00e9finies.|Revues trimestrielles : \u00e9valuation formelle de la posture de gouvernance, avec scoring ACF\u00ae actualis\u00e9 et plan d'action.|Proc\u00e9dures de r\u00e9ponse aux incidents : processus document\u00e9 pour g\u00e9rer les situations de d\u00e9rive, d'erreur ou de crise agentique.|Tracking du score de souverainet\u00e9 : suivi longitudinal de l'ind\u00e9pendance de l'organisation vis-\u00e0-vis des plateformes tierces." },
+      { type: "quote", text: "Les 4 couches ACF\u00ae ne sont pas s\u00e9quentielles \u2014 elles sont syst\u00e9miques. Un d\u00e9ficit dans une couche affaiblit l'ensemble du dispositif." },
+      { type: "h2", text: "L'\u00e9valuation par le Score ACF\u00ae" },
+      { type: "p", text: "Le diagnostic ACF Score\u00ae \u00e9value votre organisation sur chacune de ces 4 couches, avec un scoring d\u00e9taill\u00e9 qui identifie vos forces et vos lacunes. Le r\u00e9sultat n'est pas un simple chiffre \u2014 c'est une cartographie de votre maturit\u00e9 de gouvernance agentique avec des actions prioritaires pour chaque couche." },
     ]
   },
   {
     slug: "sovereignty-vs-efficiency-false-dilemma",
-    title: "Souveraineté vs. efficacité : le faux dilemme de l'autonomie IA",
-    excerpt: "On vous dit que gouverner les agents IA ralentit l'innovation. C'est faux. Voici pourquoi les organisations les mieux gouvernées seront les plus compétitives.",
-    date: "2026-01-08", category: "STRATÉGIE", catColor: C.amber, readTime: "7 min",
+    title: "Souverainet\u00e9 vs. efficacit\u00e9 : le faux dilemme de l'autonomie IA",
+    excerpt: "On vous dit que gouverner les agents IA ralentit l'innovation. C'est faux. Voici pourquoi les organisations les mieux gouvern\u00e9es seront les plus comp\u00e9titives.",
+    date: "2026-01-08", category: "STRAT\u00c9GIE", catColor: C.amber, readTime: "7 min",
     content: [
-      { type: "p", text: "L'objection la plus fréquente face à la gouvernance agentique est prévisible : « Mettre des contraintes sur nos agents IA va nous ralentir. Nos concurrents qui ne gouvernent pas seront plus rapides. » C'est un argument séduisant. Il est aussi profondément erroné." },
-      { type: "h2", text: "Le mythe de la vitesse non gouvernée" },
-      { type: "p", text: "Un agent IA autonome sans gouvernance n'est pas « rapide » — il est incontrôlé. La rapidité sans direction n'est pas de la performance, c'est du bruit. Un agent qui optimise un prix localement mais détruit la marge globalement n'est pas efficace. Un agent qui conclut 1 000 transactions par jour dont 5% devront être annulées manuellement n'est pas productif." },
-      { type: "p", text: "Les données montrent le contraire de l'intuition : les organisations avec une gouvernance formalisée de leurs agents IA ont des taux d'incident 73% plus bas, des coûts de correction 4x inférieurs et des temps de déploiement de nouveaux agents 2x plus rapides — parce que le cadre est déjà en place." },
-      { type: "h2", text: "La gouvernance comme accélérateur" },
-      { type: "p", text: "La gouvernance agentique n'est pas un frein — c'est un accélérateur structurel. Pensez à une autoroute : les règles de conduite (vitesse maximale, voies, signalisation) ne ralentissent pas le trafic. Elles permettent à des millions de véhicules de circuler simultanément à haute vitesse sans chaos." },
-      { type: "list", text: "Déploiement accéléré : quand le cadre de gouvernance est établi, chaque nouvel agent peut être déployé dans un environnement déjà sécurisé. Pas de réinvention de la roue.|Confiance stakeholder : clients, partenaires et régulateurs font confiance aux organisations qui démontrent une gouvernance structurée. Cette confiance ouvre des marchés.|Résilience opérationnelle : une dérive détectée et contenue en 30 secondes n'a pas le même impact qu'une dérive découverte après 3 semaines.|Attractivité talents : les meilleurs ingénieurs IA veulent travailler dans des environnements structurés, pas dans le chaos." },
+      { type: "p", text: "L'objection la plus fr\u00e9quente face \u00e0 la gouvernance agentique est pr\u00e9visible : \u00ab Mettre des contraintes sur nos agents IA va nous ralentir. Nos concurrents qui ne gouvernent pas seront plus rapides. \u00bb C'est un argument s\u00e9duisant. Il est aussi profond\u00e9ment erron\u00e9." },
+      { type: "h2", text: "Le mythe de la vitesse non gouvern\u00e9e" },
+      { type: "p", text: "Un agent IA autonome sans gouvernance n'est pas \u00ab rapide \u00bb \u2014 il est incontr\u00f4l\u00e9. La rapidit\u00e9 sans direction n'est pas de la performance, c'est du bruit. Un agent qui optimise un prix localement mais d\u00e9truit la marge globalement n'est pas efficace. Un agent qui conclut 1 000 transactions par jour dont 5% devront \u00eatre annul\u00e9es manuellement n'est pas productif." },
+      { type: "p", text: "Les donn\u00e9es montrent le contraire de l'intuition : les organisations avec une gouvernance formalis\u00e9e de leurs agents IA ont des taux d'incident 73% plus bas, des co\u00fbts de correction 4x inf\u00e9rieurs et des temps de d\u00e9ploiement de nouveaux agents 2x plus rapides \u2014 parce que le cadre est d\u00e9j\u00e0 en place." },
+      { type: "h2", text: "La gouvernance comme acc\u00e9l\u00e9rateur" },
+      { type: "p", text: "La gouvernance agentique n'est pas un frein \u2014 c'est un acc\u00e9l\u00e9rateur structurel. Pensez \u00e0 une autoroute : les r\u00e8gles de conduite (vitesse maximale, voies, signalisation) ne ralentissent pas le trafic. Elles permettent \u00e0 des millions de v\u00e9hicules de circuler simultan\u00e9ment \u00e0 haute vitesse sans chaos." },
+      { type: "list", text: "D\u00e9ploiement acc\u00e9l\u00e9r\u00e9 : quand le cadre de gouvernance est \u00e9tabli, chaque nouvel agent peut \u00eatre d\u00e9ploy\u00e9 dans un environnement d\u00e9j\u00e0 s\u00e9curis\u00e9. Pas de r\u00e9invention de la roue.|Confiance stakeholder : clients, partenaires et r\u00e9gulateurs font confiance aux organisations qui d\u00e9montrent une gouvernance structur\u00e9e. Cette confiance ouvre des march\u00e9s.|R\u00e9silience op\u00e9rationnelle : une d\u00e9rive d\u00e9tect\u00e9e et contenue en 30 secondes n'a pas le m\u00eame impact qu'une d\u00e9rive d\u00e9couverte apr\u00e8s 3 semaines.|Attractivit\u00e9 talents : les meilleurs ing\u00e9nieurs IA veulent travailler dans des environnements structur\u00e9s, pas dans le chaos." },
       { type: "h2", text: "Le vrai dilemme" },
-      { type: "p", text: "Le vrai choix n'est pas entre souveraineté et efficacité. C'est entre gouvernance proactive et gouvernance réactive. L'une coûte un investissement structurel anticipé. L'autre coûte des millions en gestion de crise, sanctions réglementaires et perte de confiance." },
-      { type: "quote", text: "Les organisations qui gouvernent leurs agents IA ne sont pas plus lentes. Elles sont plus rapides — parce qu'elles ne s'arrêtent pas pour éteindre des incendies." },
-      { type: "p", text: "Le Score ACF® mesure précisément cet équilibre entre autonomie agentique et contrôle de gouvernance. Les organisations avec les scores les plus élevés ne sont pas les plus conservatrices — ce sont les plus structurées." },
+      { type: "p", text: "Le vrai choix n'est pas entre souverainet\u00e9 et efficacit\u00e9. C'est entre gouvernance proactive et gouvernance r\u00e9active. L'une co\u00fbte un investissement structurel anticip\u00e9. L'autre co\u00fbte des millions en gestion de crise, sanctions r\u00e9glementaires et perte de confiance." },
+      { type: "quote", text: "Les organisations qui gouvernent leurs agents IA ne sont pas plus lentes. Elles sont plus rapides \u2014 parce qu'elles ne s'arr\u00eatent pas pour \u00e9teindre des incendies." },
+      { type: "p", text: "Le Score ACF\u00ae mesure pr\u00e9cis\u00e9ment cet \u00e9quilibre entre autonomie agentique et contr\u00f4le de gouvernance. Les organisations avec les scores les plus \u00e9lev\u00e9s ne sont pas les plus conservatrices \u2014 ce sont les plus structur\u00e9es." },
     ]
   },
 ];
 
-const categoryFilters = ["TOUS", "RÉGLEMENTATION", "GOUVERNANCE", "TECHNIQUE", "MARCHÉ", "MÉTHODOLOGIE", "STRATÉGIE"];
+const articles_en: Article[] = [
+  {
+    slug: "eu-ai-act-agentic-systems-2026",
+    title: "How the EU AI Act Applies to Agentic Systems in 2026",
+    excerpt: "The AI Act's risk-based approach creates specific obligations for autonomous agents. Here's what ACF Level 2 governance covers.",
+    date: "2026-02-15", category: "REGULATION", catColor: C.amber, readTime: "8 min",
+    content: [
+      { type: "p", text: "The progressive enforcement of the European AI Act in 2025-2026 marks a turning point for organizations deploying autonomous AI agents. For the first time, a regulatory framework imposes specific obligations on high-risk AI systems \u2014 and autonomous commerce agents often fall into this category." },
+      { type: "h2", text: "Autonomous Agents in the AI Act Classification" },
+      { type: "p", text: "The AI Act classifies AI systems into four risk levels: unacceptable, high, limited, and minimal. Autonomous commerce agents, which make pricing, procurement, or customer engagement decisions, frequently fall into the 'high risk' category when they impact significant economic decisions." },
+      { type: "p", text: "Concretely, an agent that automatically adjusts prices based on demand, manages the supply chain, or autonomously commits marketing spend must meet strict requirements for transparency, traceability, and human oversight." },
+      { type: "h2", text: "5 Key Obligations for High-Risk Agents" },
+      { type: "list", text: "Risk management system: continuous assessment of risks posed by the autonomous agent, with up-to-date documentation.|Data governance: quality, relevance, and representativeness of training and operational data.|Technical documentation: complete description of the agent's operation, limitations, and performance.|Transparency: users must know they are interacting with an AI system and understand its capabilities.|Human oversight: ability for intervention, correction, and interruption by a qualified human operator." },
+      { type: "h2", text: "How ACF\u00ae Addresses These Requirements" },
+      { type: "p", text: "The Agentic Commerce Framework\u00ae was designed from the outset to align with the AI Act's requirements. The Governance layer (Layer 1) establishes the agentic constitution and responsibility mapping. The Policy layer (Layer 2) formalizes the behavioral rules and limits for agents. The System layer (Layer 3) implements the technical control and logging mechanisms. The Supervision layer (Layer 4) ensures continuous monitoring and periodic reviews." },
+      { type: "quote", text: "Without a formalized governance framework, AI Act compliance will remain a theoretical exercise. ACF\u00ae transforms these obligations into operational processes." },
+      { type: "h2", text: "Penalties and Timeline" },
+      { type: "p", text: "Penalties under the AI Act can reach \u20ac35 million or 7% of annual global revenue. The first transparency obligations apply from 2025, while full requirements for high-risk systems will come into force progressively in 2026-2027." },
+      { type: "p", text: "Organizations waiting for enforcement to structure their agentic governance are taking considerable risk. Compliance takes time: mapping agents, defining policies, implementing technical controls, and training teams." },
+      { type: "h3", text: "Recommended Action" },
+      { type: "p", text: "Take the free ACF Score\u00ae diagnostic to assess your current readiness level, then engage a structured compliance plan built around the 4 ACF\u00ae layers." },
+    ]
+  },
+  {
+    slug: "delegated-decision-agent-officer",
+    title: "The DDA: Why Every AI-Native Company Needs a Delegated Decision Agent Officer",
+    excerpt: "The DDA is the legal guardian of your autonomous agents. How to create and empower this critical role within your organization.",
+    date: "2026-02-08", category: "GOVERNANCE", catColor: C.green, readTime: "7 min",
+    content: [
+      { type: "p", text: "As autonomous AI agents make increasingly critical decisions \u2014 pricing, procurement, customer engagement, budget management \u2014 a fundamental question emerges: who is responsible when an agent makes a bad decision?" },
+      { type: "h2", text: "The Agentic Accountability Gap" },
+      { type: "p", text: "In a traditional organization, every decision has an identifiable owner. A sales director decides on pricing. A procurement manager validates orders. A marketing director approves campaigns. With agentic autonomy, these decisions are delegated to systems operating at speeds and scales impossible for humans." },
+      { type: "p", text: "The problem isn't technical \u2014 it's organizational. Who answers to the regulator? Who is summoned during an audit? Who has the authority to stop a drifting agent? Without clear answers, the organization faces major legal and operational risk." },
+      { type: "h2", text: "The Delegated Decision Agent Officer (DDA) Role" },
+      { type: "p", text: "ACF\u00ae introduces the DDA concept: a named governance role responsible for overseeing autonomous decisions within the organization. This is not a technical role \u2014 it's a strategic governance role." },
+      { type: "list", text: "Named accountability: the DDA is the identifiable person who answers for decisions made by autonomous agents.|Interruption authority: the DDA has the power and technical means to interrupt any agent at any time.|Policy framing: the DDA defines and validates the behavioral rules for each agent.|Regular reporting: the DDA produces periodic governance reviews for leadership.|Regulatory interface: the DDA is the primary point of contact for audits or regulatory inquiries." },
+      { type: "h2", text: "Profile and Positioning" },
+      { type: "p", text: "The ideal DDA combines business understanding (strategy, risk, regulation) with sufficient technical literacy to engage with AI teams. They sit at the executive level, reporting directly to the CEO or COO. They are neither a CTO nor a compliance officer \u2014 it's a new hybrid role, designed for the agentic era." },
+      { type: "quote", text: "The DDA is not the one who builds agents. They are the one who ensures agents build what the organization has decided." },
+      { type: "h2", text: "Implementation with ACF\u00ae" },
+      { type: "p", text: "Layer 1 (Governance) of ACF\u00ae provides the framework for defining, naming, and mandating the DDA. The ACF Score\u00ae diagnostic evaluates whether your organization has already identified this role \u2014 it's one of the most discriminating criteria in the scoring." },
+    ]
+  },
+  {
+    slug: "three-level-kill-switch",
+    title: "Designing a Three-Level Kill Switch for Autonomous Agent Systems",
+    excerpt: "An effective kill switch is not a single button. ACF\u00ae specifies three interrupt levels with defined response times.",
+    date: "2026-01-29", category: "TECHNICAL", catColor: C.blue, readTime: "10 min",
+    content: [
+      { type: "p", text: "Interruptibility is one of the fundamental principles of agentic governance. An autonomous AI agent that cannot be reliably and quickly stopped represents an existential risk to the deploying organization. Yet most current implementations are limited to a rudimentary 'stop' button." },
+      { type: "h2", text: "Why a Single Button Isn't Enough" },
+      { type: "p", text: "A complex autonomous agent operates across multiple systems simultaneously: it may be negotiating a supplier price, adjusting an ad campaign, and responding to a customer at the same time. An abrupt halt to all these operations can cause as much damage as the drift being corrected \u2014 abandoned orders, unfulfilled commitments, data inconsistencies." },
+      { type: "h2", text: "The ACF\u00ae 3-Level Kill Switch Architecture" },
+      { type: "h3", text: "Level 1 \u2014 Pause (response time: < 1 second)" },
+      { type: "p", text: "Immediate suspension of all new decisions. Ongoing operations complete normally, but no new actions are initiated. The agent switches to pure observation mode. Ideal for: suspected minor drift, need for ad-hoc human verification." },
+      { type: "h3", text: "Level 2 \u2014 Containment (response time: < 5 seconds)" },
+      { type: "p", text: "Ongoing operations are completed with enhanced safety parameters (reduced price limits, capped volumes, approval required). No new operations. Complete log of all completed actions. Ideal for: confirmed but non-critical drift, ongoing investigation." },
+      { type: "h3", text: "Level 3 \u2014 Kill (response time: < 30 seconds)" },
+      { type: "p", text: "Total and immediate halt of all operations, including those in progress. Automatic rollback of reversible actions. Immediate notification to the DDA and all stakeholders. Complete system state snapshot for post-mortem analysis. Ideal for: crisis situation, confirmed loss of control, immediate financial or regulatory risk." },
+      { type: "h2", text: "Technical Implementation" },
+      { type: "p", text: "Each level must be implemented with independent mechanisms. Level 1 uses a real-time configuration flag. Level 2 requires a circuit-breaker system with predefined safety thresholds. Level 3 requires a network cutoff mechanism and transactional rollback." },
+      { type: "quote", text: "A kill switch that has never been tested is not a kill switch \u2014 it's a promise. ACF\u00ae requires quarterly tests of each interrupt level." },
+      { type: "p", text: "Layer 3 (System) of ACF\u00ae details the complete technical specifications for each level, including test protocols, trigger criteria, and activity recovery procedures." },
+    ]
+  },
+  {
+    slug: "agentic-commerce-5-trillion-opportunity",
+    title: "Agentic Commerce: A $5 Trillion Opportunity That Demands Governance",
+    excerpt: "McKinsey estimates the agentic commerce market at $3-5 trillion by 2030. Without governance, this opportunity becomes a systemic risk.",
+    date: "2026-01-22", category: "MARKET", catColor: C.purple, readTime: "6 min",
+    content: [
+      { type: "p", text: "Agentic commerce \u2014 where autonomous AI agents search, compare, negotiate, and purchase on behalf of consumers and businesses \u2014 is redefining the fundamentals of global commerce. The most serious estimates position this market between $3 and $5 trillion by 2030." },
+      { type: "h2", text: "What Fundamentally Changes" },
+      { type: "p", text: "For 25 years, digital commerce has been designed for humans who browse, compare, and click. Agentic commerce reverses this logic: intent is expressed once, execution is delegated. The consumer no longer scrolls through results pages \u2014 they tell their agent 'find me waterproof winter boots under \u20ac150, delivered before Friday' and the agent does the rest." },
+      { type: "p", text: "For businesses, this means the 'customer' is no longer a human visiting your site \u2014 it's an agent querying your API. Decision criteria shift from emotion and branding to data structuring, transactional reliability, and product information verifiability." },
+      { type: "h2", text: "The Governance Imperative" },
+      { type: "p", text: "This transformation creates a paradox: to capture the agentic commerce opportunity, organizations must delegate more decisions to autonomous agents. But without structured governance, this delegation creates existential risks \u2014 uncontrolled pricing, unauthorized commitments, dependency on third-party platforms." },
+      { type: "quote", text: "The $5 trillion opportunity won't go to organizations with the best agents \u2014 it will go to those who govern their agents best." },
+      { type: "h2", text: "The 3 Pillars of Agentic Competitiveness" },
+      { type: "list", text: "Agentic discoverability: are your products and services structured to be understood and evaluated by AI agents? Structured data, open APIs, verifiable information.|Transactional reliability: do your systems allow agents to complete end-to-end transactions reliably and securely?|Trust governance: can you demonstrate to customers, partners, and regulators that your agents operate within a structured and auditable governance framework?" },
+      { type: "p", text: "ACF\u00ae provides the methodological framework for the third pillar \u2014 and directly influences the first two. An organization that has formalized its agentic governance is naturally better positioned to structure its discoverability and transactional reliability." },
+    ]
+  },
+  {
+    slug: "4-layers-acf-governance-explained",
+    title: "The 4 Layers of ACF\u00ae Governance Explained",
+    excerpt: "Complete framework architecture in 4 layers: Governance, Policy, System, and Supervision. How they interact and why each is essential.",
+    date: "2026-01-15", category: "METHODOLOGY", catColor: C.gold, readTime: "12 min",
+    content: [
+      { type: "p", text: "The Agentic Commerce Framework\u00ae is built on a 4-layer governance architecture. Each layer has a distinct role, specific deliverables, and defined interactions with other layers. This structuring is what differentiates ACF\u00ae from a simple best-practices checklist." },
+      { type: "h2", text: "Layer 1 \u2014 Governance: The 'Who'" },
+      { type: "p", text: "The Governance layer is the strategic foundation of the entire edifice. It answers questions of responsibility and authority: who governs the agents? Who is responsible for their decisions? Who has the authority to modify, restrict, or stop them?" },
+      { type: "list", text: "Agentic constitution: founding document that defines the organization's governance principles for autonomous AI.|Named governance sponsor: an identifiable executive-level person responsible for agentic governance.|Decision authority mapping: for each type of decision delegated to an agent, identification of the human referent.|Escalation protocols: precise definition of criteria and escalation paths for each risk level." },
+      { type: "h2", text: "Layer 2 \u2014 Policy: The 'What'" },
+      { type: "p", text: "The Policy layer transforms governance principles into operational rules. It formalizes what agents can and cannot do, within what limits, and under what conditions." },
+      { type: "list", text: "Per-agent behavioral policies: for each deployed agent, documentation of authorized, prohibited, and conditional actions.|Autonomy limits: financial, temporal, and operational thresholds beyond which human approval is required.|Regulatory alignment: explicit mapping between each agent policy and applicable regulatory requirements (AI Act, GDPR, sector-specific).|Ethical decision frameworks: guiding principles for ambiguous situations not covered by explicit rules." },
+      { type: "h2", text: "Layer 3 \u2014 System: The 'How'" },
+      { type: "p", text: "The System layer is the technical infrastructure that makes governance operational. Without it, the first two layers remain theoretical documents." },
+      { type: "list", text: "3-level kill switch: graduated interruption mechanisms with guaranteed response times (see our dedicated article).|Traceability architecture: exhaustive logging of all autonomous decisions, with timestamps, context, and algorithmic justification.|Multi-agent coordination rules: interaction protocols between agents to prevent conflicts, loops, and contradictory optimizations.|Interruptibility protocols: regular testing of each shutdown mechanism to ensure reliability in real situations." },
+      { type: "h2", text: "Layer 4 \u2014 Supervision: The 'Continuous'" },
+      { type: "p", text: "The Supervision layer ensures governance remains alive and adapted. It's the layer that transforms a static framework into a continuous improvement system." },
+      { type: "list", text: "ACF Control Dashboard: real-time monitoring of agents, their decisions, and their compliance with defined policies.|Quarterly reviews: formal assessment of governance posture, with updated ACF\u00ae scoring and action plan.|Incident response procedures: documented process for managing drift, error, or agentic crisis situations.|Sovereignty score tracking: longitudinal tracking of the organization's independence from third-party platforms." },
+      { type: "quote", text: "The 4 ACF\u00ae layers are not sequential \u2014 they are systemic. A deficit in one layer weakens the entire framework." },
+      { type: "h2", text: "Assessment via ACF Score\u00ae" },
+      { type: "p", text: "The ACF Score\u00ae diagnostic evaluates your organization across each of these 4 layers, with detailed scoring that identifies your strengths and gaps. The result is not a simple number \u2014 it's a map of your agentic governance maturity with priority actions for each layer." },
+    ]
+  },
+  {
+    slug: "sovereignty-vs-efficiency-false-dilemma",
+    title: "Sovereignty vs. Efficiency: The False Dilemma of AI Autonomy",
+    excerpt: "You're told governing AI agents slows innovation. That's wrong. Here's why the best-governed organizations will be the most competitive.",
+    date: "2026-01-08", category: "STRATEGY", catColor: C.amber, readTime: "7 min",
+    content: [
+      { type: "p", text: "The most common objection to agentic governance is predictable: 'Putting constraints on our AI agents will slow us down. Our competitors who don't govern will be faster.' It's a seductive argument. It's also profoundly wrong." },
+      { type: "h2", text: "The Myth of Ungoverned Speed" },
+      { type: "p", text: "An autonomous AI agent without governance isn't 'fast' \u2014 it's uncontrolled. Speed without direction isn't performance, it's noise. An agent that optimizes a price locally but destroys the margin globally isn't efficient. An agent that closes 1,000 transactions per day of which 5% need to be manually reversed isn't productive." },
+      { type: "p", text: "The data shows the opposite of intuition: organizations with formalized governance of their AI agents have 73% lower incident rates, 4x lower correction costs, and 2x faster deployment times for new agents \u2014 because the framework is already in place." },
+      { type: "h2", text: "Governance as an Accelerator" },
+      { type: "p", text: "Agentic governance is not a brake \u2014 it's a structural accelerator. Think of a highway: the rules of the road (speed limits, lanes, signage) don't slow traffic. They allow millions of vehicles to move simultaneously at high speed without chaos." },
+      { type: "list", text: "Accelerated deployment: when the governance framework is established, each new agent can be deployed in an already-secured environment. No reinventing the wheel.|Stakeholder trust: customers, partners, and regulators trust organizations that demonstrate structured governance. That trust opens markets.|Operational resilience: a drift detected and contained in 30 seconds doesn't have the same impact as a drift discovered after 3 weeks.|Talent attractiveness: the best AI engineers want to work in structured environments, not in chaos." },
+      { type: "h2", text: "The Real Dilemma" },
+      { type: "p", text: "The real choice isn't between sovereignty and efficiency. It's between proactive governance and reactive governance. One costs a planned structural investment. The other costs millions in crisis management, regulatory penalties, and lost trust." },
+      { type: "quote", text: "Organizations that govern their AI agents aren't slower. They're faster \u2014 because they don't stop to put out fires." },
+      { type: "p", text: "The ACF Score\u00ae precisely measures this balance between agentic autonomy and governance control. Organizations with the highest scores aren't the most conservative \u2014 they're the most structured." },
+    ]
+  },
+];
+
+const categoryFilters_fr = ["TOUS", "R\u00c9GLEMENTATION", "GOUVERNANCE", "TECHNIQUE", "MARCH\u00c9", "M\u00c9THODOLOGIE", "STRAT\u00c9GIE"];
+const categoryFilters_en = ["ALL", "REGULATION", "GOVERNANCE", "TECHNICAL", "MARKET", "METHODOLOGY", "STRATEGY"];
+
+const ui = {
+  fr: {
+    badge: "BLOG & RECHERCHE",
+    title: "Gouvernance",
+    titleHighlight: "agentique",
+    subtitle: "Recherche, m\u00e9thodologie et perspectives sur la gouvernance des agents IA autonomes.",
+    readCta: "Lire \u2192",
+    backAll: "\u2190 Tous les articles",
+    readSuffix: "de lecture",
+    authorRole: "Fondateur ACF\u00ae \u00b7 AI CONSULTING",
+    ctaTitle: "\u00c9valuez votre gouvernance agentique",
+    ctaSubtitle: "Diagnostic gratuit en 10 minutes. Score imm\u00e9diat. Rapport PDF.",
+    ctaButton: "Calculer mon Score ACF\u00ae \u2192",
+    allFilter: "TOUS",
+  },
+  en: {
+    badge: "BLOG & RESEARCH",
+    title: "Agentic",
+    titleHighlight: "Governance",
+    subtitle: "Research, methodology, and insights on autonomous AI agent governance.",
+    readCta: "Read \u2192",
+    backAll: "\u2190 All Articles",
+    readSuffix: "read",
+    authorRole: "Founder ACF\u00ae \u00b7 AI CONSULTING",
+    ctaTitle: "Assess your agentic governance",
+    ctaSubtitle: "Free diagnostic in 10 minutes. Instant score. PDF report.",
+    ctaButton: "Calculate my ACF Score\u00ae \u2192",
+    allFilter: "ALL",
+  },
+};
 
 export default function BlogPage() {
+  const locale = useLocale();
+  const lang = locale === "fr" ? "fr" : "en";
+  const articles = lang === "fr" ? articles_fr : articles_en;
+  const categoryFilters = lang === "fr" ? categoryFilters_fr : categoryFilters_en;
+  const t = ui[lang];
+
   const [activeArticle, setActiveArticle] = useState<string | null>(null);
-  const [filter, setFilter] = useState("TOUS");
+  const [filter, setFilter] = useState(t.allFilter);
 
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
@@ -166,7 +333,7 @@ export default function BlogPage() {
 
   useEffect(() => { window.scrollTo(0, 0); }, [activeArticle]);
 
-  const filtered = filter === "TOUS" ? articles : articles.filter(a => a.category === filter);
+  const filtered = filter === t.allFilter ? articles : articles.filter(a => a.category === filter);
   const current = articles.find(a => a.slug === activeArticle);
 
   return (
@@ -183,7 +350,7 @@ export default function BlogPage() {
       {/* NAV */}
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: 72, background: "rgba(5,12,26,.92)", backdropFilter: "blur(24px)", borderBottom: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center" }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px", width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <a href="/en/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <a href={`/${locale}/`} style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <div style={{ width: 40, height: 40, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1 }}>ACF</div>
             <div>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>ACF STANDARD</div>
@@ -191,9 +358,9 @@ export default function BlogPage() {
             </div>
           </a>
           <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
-            <a href="/en/" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Home</a>
-            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, transition: "all .3s", display: "inline-block" }}>Get Your Score →</a>
+            <a href={`/${locale}/`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{"\u2190 Home"}</a>
+            <a href="https://www.acf-score.com/" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, transition: "all .3s", display: "inline-block" }}>Get Your Score {"\u2192"}</a>
           </div>
         </div>
       </nav>
@@ -203,12 +370,12 @@ export default function BlogPage() {
           {/* LISTING HERO */}
           <section style={{ paddingTop: 120, paddingBottom: 40, textAlign: "center" }}>
             <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px" }}>
-              <div className="fade-up"><Badge>BLOG & RECHERCHE</Badge></div>
+              <div className="fade-up"><Badge>{t.badge}</Badge></div>
               <h1 className="fade-up-d2" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 44, fontWeight: 800, lineHeight: 1.1, marginTop: 24, marginBottom: 14, letterSpacing: "-1px" }}>
-                Gouvernance <span style={{ color: C.gold }}>agentique</span>
+                {t.title} <span style={{ color: C.gold }}>{t.titleHighlight}</span>
               </h1>
               <p style={{ fontSize: 16, color: C.gray2, lineHeight: 1.7, maxWidth: 540, margin: "0 auto" }}>
-                Recherche, méthodologie et perspectives sur la gouvernance des agents IA autonomes.
+                {t.subtitle}
               </p>
             </div>
           </section>
@@ -244,7 +411,7 @@ export default function BlogPage() {
                   <p style={{ fontSize: 14, color: C.gray2, lineHeight: 1.65, marginBottom: 16 }}>{a.excerpt}</p>
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                     <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray }}>{a.date}</span>
-                    <span style={{ color: C.gold, fontSize: 13, fontWeight: 600 }}>Lire →</span>
+                    <span style={{ color: C.gold, fontSize: 13, fontWeight: 600 }}>{t.readCta}</span>
                   </div>
                 </article>
               ))}
@@ -260,13 +427,13 @@ export default function BlogPage() {
               color: C.gray2, fontSize: 13, cursor: "pointer", marginBottom: 32, transition: "all .2s",
             }}
               onMouseEnter={e => { e.currentTarget.style.borderColor = C.goldBorder; e.currentTarget.style.color = "#fff"; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = C.bd1; e.currentTarget.style.color = C.gray2; }}>← Tous les articles</button>
+              onMouseLeave={e => { e.currentTarget.style.borderColor = C.bd1; e.currentTarget.style.color = C.gray2; }}>{t.backAll}</button>
 
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
               <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, color: current.catColor, letterSpacing: ".1em", background: `${current.catColor}15`, border: `1px solid ${current.catColor}30`, padding: "4px 10px", borderRadius: 100 }}>{current.category}</span>
               <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray }}>{current.date}</span>
-              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray }}>·</span>
-              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray }}>{current.readTime} de lecture</span>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray }}>{"\u00b7"}</span>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray }}>{current.readTime} {t.readSuffix}</span>
             </div>
 
             <h1 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, lineHeight: 1.15, marginBottom: 20, letterSpacing: "-.5px" }}>{current.title}</h1>
@@ -286,7 +453,7 @@ export default function BlogPage() {
                   <div key={i} style={{ margin: "16px 0 20px", display: "flex", flexDirection: "column", gap: 10 }}>
                     {block.text.split("|").map((item, j) => (
                       <div key={j} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-                        <span style={{ color: C.gold, marginTop: 5, flexShrink: 0 }}>▸</span>
+                        <span style={{ color: C.gold, marginTop: 5, flexShrink: 0 }}>{"\u25b8"}</span>
                         <span style={{ fontSize: 14, color: C.gray2, lineHeight: 1.7 }}>{item.trim()}</span>
                       </div>
                     ))}
@@ -303,15 +470,15 @@ export default function BlogPage() {
               </div>
               <div>
                 <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 700, color: "#fff" }}>Vincent DORANGE</div>
-                <div style={{ fontSize: 13, color: C.gray }}>Fondateur ACF® · AI CONSULTING</div>
+                <div style={{ fontSize: 13, color: C.gray }}>{t.authorRole}</div>
               </div>
             </div>
 
             {/* CTA */}
             <div style={{ marginTop: 32, padding: 32, background: C.navy2, border: `1px solid ${C.goldBorder}`, borderRadius: 16, textAlign: "center" }}>
-              <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, fontWeight: 700, marginBottom: 8 }}>Évaluez votre gouvernance agentique</h3>
-              <p style={{ fontSize: 14, color: C.gray2, marginBottom: 20 }}>Diagnostic gratuit en 10 minutes. Score immédiat. Rapport PDF.</p>
-              <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "12px 24px", borderRadius: 10, fontSize: 14, fontWeight: 700, display: "inline-block", transition: "all .3s" }}>Calculer mon Score ACF® →</a>
+              <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, fontWeight: 700, marginBottom: 8 }}>{t.ctaTitle}</h3>
+              <p style={{ fontSize: 14, color: C.gray2, marginBottom: 20 }}>{t.ctaSubtitle}</p>
+              <a href="https://www.acf-score.com/" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "12px 24px", borderRadius: 10, fontSize: 14, fontWeight: 700, display: "inline-block", transition: "all .3s" }}>{t.ctaButton}</a>
             </div>
           </div>
         </section>
@@ -332,9 +499,9 @@ export default function BlogPage() {
               <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 320 }}>The governance standard for organizations deploying autonomous AI agents.</p>
             </div>
             {[
-              { title: "Framework", links: [{ label: "The Standard", href: "/en/standard" },{ label: "Blog", href: "/en/blog" },{ label: "ACF Certification", href: "/en/acf-certification" }] },
-              { title: "Products", links: [{ label: "ACF Score®", href: "/en/acf-score" },{ label: "ACF Control", href: "/en/acf-control" },{ label: "Academy", href: "/en/acf-certification#academy" }] },
-              { title: "Organization", links: [{ label: "Partner Portal", href: "/en/acf-partners" },{ label: "About", href: "/en/about" },{ label: "Contact", href: "/en/contact" },{ label: "Legal", href: "/en/legal" }] },
+              { title: "Framework", links: [{ label: "The Standard", href: `/${locale}/standard` },{ label: "Blog", href: `/${locale}/blog` },{ label: "ACF Certification", href: `/${locale}/acf-certification` }] },
+              { title: "Products", links: [{ label: "ACF Score\u00ae", href: `/${locale}/acf-score` },{ label: "ACF Control", href: `/${locale}/acf-control` },{ label: "Academy", href: `/${locale}/acf-certification#academy` }] },
+              { title: "Organization", links: [{ label: "Partner Portal", href: `/${locale}/acf-partners` },{ label: "About", href: `/${locale}/about` },{ label: "Contact", href: `/${locale}/contact` },{ label: "Legal", href: `/${locale}/legal` }] },
             ].map(col => (
               <div key={col.title}>
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 20 }}>{col.title}</div>
@@ -345,7 +512,7 @@ export default function BlogPage() {
             ))}
           </div>
           <div style={{ borderTop: `1px solid ${C.bd1}`, padding: "20px 0", textAlign: "center" }}>
-            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved.</p>
+            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>{"\u00a9"} 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved.</p>
           </div>
         </div>
       </footer>

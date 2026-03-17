@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useLocale } from "next-intl";
 
 const C = {
   navy1: "#050c1a", navy2: "#071122", navy3: "#0d1f3c",
@@ -14,7 +15,9 @@ function Badge({ children }: { children: React.ReactNode }) {
   return <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 700, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", background: C.goldDim, border: `1px solid ${C.goldBorder}`, padding: "5px 14px", borderRadius: 100, display: "inline-block" }}>{children}</span>;
 }
 
-const sections = [
+type Section = { id: string; label: string; content: { title: string; text: string }[] };
+
+const sections_fr: Section[] = [
   {
     id: "mentions",
     label: "Mentions Légales",
@@ -64,7 +67,84 @@ const sections = [
   },
 ];
 
+const sections_en: Section[] = [
+  {
+    id: "mentions",
+    label: "Legal Notice",
+    content: [
+      { title: "Website Publisher", text: "The website acfstandard.vercel.app is published by AI CONSULTING, a simplified joint-stock company (SASU) with variable capital, headquartered at 38 Bis Boulevard Victor Hugo, 06000 Nice, France. RCS Nice registration: 909116329. Intra-community VAT number: FR96909116329. Publication Director: Vincent DORANGE." },
+      { title: "Hosting", text: "The website is hosted by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, United States. Website: vercel.com." },
+      { title: "Intellectual Property", text: "All content on this website (text, graphics, logos, icons, images, methodologies, frameworks) is the exclusive property of AI CONSULTING or is used under license. 'Agentic Commerce Framework\u00ae' and 'ACF\u00ae' are registered trademarks. Any reproduction, representation, modification, publication, or adaptation of all or part of the website elements is prohibited without prior written authorization." },
+      { title: "Framework Creator", text: "The Agentic Commerce Framework\u00ae (ACF\u00ae) is a proprietary methodology designed and developed by Vincent DORANGE. All rights reserved." },
+      { title: "Contact", text: "For any questions regarding this legal notice, you can contact us via the Contact page or by mail to the registered office address." },
+    ]
+  },
+  {
+    id: "cgu",
+    label: "Terms of Use",
+    content: [
+      { title: "Purpose", text: "These Terms of Use define the conditions for accessing and using the website acfstandard.vercel.app and its associated services, including the ACF Score\u00ae diagnostic and information related to the Agentic Commerce Framework\u00ae." },
+      { title: "Website Access", text: "Access to the website is free. The ACF Score\u00ae diagnostic is accessible without registration and at no cost. Certain premium services (ACF Control, Certification, Support) may be subject to specific conditions and pricing communicated at the time of subscription." },
+      { title: "Use of ACF Score\u00ae", text: "The ACF Score\u00ae is an indicative diagnostic tool. It does not constitute a regulatory audit, official certification, or legal advice. Results and recommendations are provided for informational purposes only and shall not engage the liability of AI CONSULTING. Users are solely responsible for interpreting and implementing the recommendations." },
+      { title: "Intellectual Property", text: "The ACF\u00ae methodology, scoring algorithms, 4-layer framework structure, and all associated deliverables are protected by intellectual property law. Any unauthorized commercial use is strictly prohibited." },
+      { title: "Liability", text: "AI CONSULTING endeavors to provide accurate and up-to-date information. However, AI CONSULTING does not guarantee the accuracy, completeness, or timeliness of information published on the website. AI CONSULTING shall not be liable for any direct or indirect damages resulting from the use of the website or the inability to access it." },
+      { title: "Modification of Terms", text: "AI CONSULTING reserves the right to modify these Terms at any time. Modifications shall take effect upon publication on the website. Continued use of the website after publication of modifications constitutes acceptance of the new Terms." },
+    ]
+  },
+  {
+    id: "confidentialite",
+    label: "Privacy Policy",
+    content: [
+      { title: "Data Controller", text: "The data controller for personal data is AI CONSULTING, SASU, 38 Bis Boulevard Victor Hugo, 06000 Nice, France. Contact: via the Contact page." },
+      { title: "Data Collected", text: "For the ACF Score\u00ae diagnostic: questionnaire responses are processed in real-time to calculate your score and are not stored without your explicit consent. If you provide your email address: it is used solely for sending your PDF report and, with your consent, for communications related to ACF\u00ae." },
+      { title: "Contact Form", text: "Information entered in the contact form (name, email, company, message) is used exclusively to respond to your request. It is neither resold nor shared with third parties." },
+      { title: "Cookies", text: "The website uses technical cookies necessary for its operation. No advertising or third-party tracking cookies are used. Analytics cookies (if enabled) are anonymized and used solely to improve user experience." },
+      { title: "Data Hosting", text: "Data is hosted by Vercel Inc. (United States) under the EU-US Data Privacy Framework. Vercel complies with applicable data protection standards." },
+      { title: "Your Rights (GDPR)", text: "In accordance with the General Data Protection Regulation (GDPR), you have the right to access, rectify, erase, restrict processing, data portability, and object regarding your personal data. To exercise these rights, contact us via the Contact page specifying your request. You also have the right to lodge a complaint with the CNIL (French National Commission on Informatics and Liberty)." },
+      { title: "Data Retention", text: "Personal data is retained for the period strictly necessary for the purposes for which it is processed. Contact form data is retained for a maximum of 12 months. Diagnostic data is not retained without explicit consent." },
+    ]
+  },
+  {
+    id: "cookies",
+    label: "Cookie Policy",
+    content: [
+      { title: "What is a Cookie?", text: "A cookie is a small text file stored on your device (computer, tablet, smartphone) when you visit a website. It allows the website to remember information about your visit." },
+      { title: "Cookies Used", text: "The website exclusively uses essential technical cookies for site operation (session management, language preferences, display). These cookies do not require your prior consent as they are strictly necessary for providing the service." },
+      { title: "Analytics Cookies", text: "If analytics tools are implemented, they will use anonymized data and will not allow personal identification. You will be informed and your consent will be obtained before activating these cookies." },
+      { title: "Third-Party Cookies", text: "The website does not use any advertising cookies or social media cookies. No data is shared with advertising platforms." },
+      { title: "Managing Cookies", text: "You can manage your cookie preferences at any time through your browser settings. Disabling certain cookies may affect your browsing experience." },
+    ]
+  },
+];
+
+const ui = {
+  fr: {
+    heroTitle: "Informations",
+    heroHighlight: "légales",
+    heroSubtitle: "Mentions légales, conditions d'utilisation, politique de confidentialité et cookies.",
+    lastUpdate: "Dernière mise à jour : Mars 2026",
+    contactTitle: "Une question sur vos droits ou nos conditions ?",
+    contactText: "Contactez-nous via notre",
+    contactLink: "formulaire de contact",
+    contactAfter: "ou par courrier au siège social : 38 Bis Bd Victor Hugo, 06000 Nice.",
+  },
+  en: {
+    heroTitle: "Legal",
+    heroHighlight: "Information",
+    heroSubtitle: "Legal notice, terms of use, privacy policy, and cookies.",
+    lastUpdate: "Last updated: March 2026",
+    contactTitle: "Questions about your rights or our terms?",
+    contactText: "Contact us via our",
+    contactLink: "contact form",
+    contactAfter: "or by mail to our registered office: 38 Bis Bd Victor Hugo, 06000 Nice.",
+  },
+};
+
 export default function LegalPage() {
+  const locale = useLocale();
+  const lang = locale === "fr" ? "fr" : "en";
+  const sections = lang === "fr" ? sections_fr : sections_en;
+  const t = ui[lang];
   const [activeTab, setActiveTab] = useState("mentions");
 
   const activeSection = sections.find(s => s.id === activeTab)!;
@@ -82,7 +162,7 @@ export default function LegalPage() {
       {/* NAV */}
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: 72, background: "rgba(5,12,26,.92)", backdropFilter: "blur(24px)", borderBottom: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center" }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px", width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <a href="/en/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <a href={`/${locale}/`} style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <div style={{ width: 40, height: 40, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1 }}>ACF</div>
             <div>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>ACF STANDARD</div>
@@ -90,9 +170,9 @@ export default function LegalPage() {
             </div>
           </a>
           <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
-            <a href="/en/" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Home</a>
-            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, transition: "all .3s", display: "inline-block" }}>Get Your Score →</a>
+            <a href={`/${locale}/`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{"\u2190 Home"}</a>
+            <a href="https://www.acf-score.com/" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, transition: "all .3s", display: "inline-block" }}>Get Your Score {"\u2192"}</a>
           </div>
         </div>
       </nav>
@@ -102,10 +182,10 @@ export default function LegalPage() {
         <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px" }}>
           <div className="fade-up"><Badge>LEGAL</Badge></div>
           <h1 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 40, fontWeight: 800, lineHeight: 1.1, marginTop: 24, marginBottom: 14, letterSpacing: "-1px" }}>
-            Informations <span style={{ color: C.gold }}>légales</span>
+            {t.heroTitle} <span style={{ color: C.gold }}>{t.heroHighlight}</span>
           </h1>
           <p style={{ fontSize: 15, color: C.gray2, lineHeight: 1.7 }}>
-            Mentions légales, conditions d'utilisation, politique de confidentialité et cookies.
+            {t.heroSubtitle}
           </p>
         </div>
       </section>
@@ -136,7 +216,7 @@ export default function LegalPage() {
           <div style={{ background: C.navy2, border: `1px solid ${C.goldBorder}`, borderRadius: 16, overflow: "hidden" }}>
             <div style={{ padding: "20px 28px 18px", borderBottom: `1px solid rgba(201,168,76,.12)` }}>
               <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".1em", textTransform: "uppercase" }}>{activeSection.label}</div>
-              <div style={{ fontSize: 12, color: C.gray, marginTop: 4 }}>Dernière mise à jour : Mars 2026</div>
+              <div style={{ fontSize: 12, color: C.gray, marginTop: 4 }}>{t.lastUpdate}</div>
             </div>
             <div style={{ padding: "28px 28px 36px" }}>
               {activeSection.content.map((block, i) => (
@@ -153,11 +233,11 @@ export default function LegalPage() {
 
           {/* CONTACT NOTE */}
           <div style={{ marginTop: 32, padding: 28, background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 12, display: "flex", alignItems: "center", gap: 20 }}>
-            <div style={{ fontSize: 28, flexShrink: 0 }}>📬</div>
+            <div style={{ fontSize: 28, flexShrink: 0 }}>{"\uD83D\uDCEC"}</div>
             <div>
-              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff", marginBottom: 4 }}>Une question sur vos droits ou nos conditions ?</div>
+              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff", marginBottom: 4 }}>{t.contactTitle}</div>
               <p style={{ fontSize: 14, color: C.gray2, lineHeight: 1.6 }}>
-                Contactez-nous via notre <a href="/en/contact" style={{ color: C.gold, textDecoration: "underline" }}>formulaire de contact</a> ou par courrier au siège social : 38 Bis Bd Victor Hugo, 06000 Nice.
+                {t.contactText} <a href={`/${locale}/contact`} style={{ color: C.gold, textDecoration: "underline" }}>{t.contactLink}</a> {t.contactAfter}
               </p>
             </div>
           </div>
@@ -179,9 +259,9 @@ export default function LegalPage() {
               <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 320 }}>The governance standard for organizations deploying autonomous AI agents.</p>
             </div>
             {[
-              { title: "Framework", links: [{ label: "The Standard", href: "/en/" },{ label: "Methodology", href: "/en/#methodology" },{ label: "Research", href: "/en/#research" },{ label: "ACF Certification", href: "/en/acf-certification" }] },
-              { title: "Products", links: [{ label: "ACF Score®", href: "/en/acf-score" },{ label: "ACF Control", href: "/en/acf-control" },{ label: "Certification", href: "/en/acf-certification" },{ label: "Academy", href: "/en/acf-certification#academy" }] },
-              { title: "Organization", links: [{ label: "Partner Portal", href: "/en/acf-partners" },{ label: "About", href: "/en/about" },{ label: "Contact", href: "/en/contact" },{ label: "Legal", href: "/en/legal" }] },
+              { title: "Framework", links: [{ label: "The Standard", href: `/${locale}/` },{ label: "Methodology", href: `/${locale}/#methodology` },{ label: "Research", href: `/${locale}/#research` },{ label: "ACF Certification", href: `/${locale}/acf-certification` }] },
+              { title: "Products", links: [{ label: "ACF Score\u00ae", href: `/${locale}/acf-score` },{ label: "ACF Control", href: `/${locale}/acf-control` },{ label: "Certification", href: `/${locale}/acf-certification` },{ label: "Academy", href: `/${locale}/acf-certification#academy` }] },
+              { title: "Organization", links: [{ label: "Partner Portal", href: `/${locale}/acf-partners` },{ label: "About", href: `/${locale}/about` },{ label: "Contact", href: `/${locale}/contact` },{ label: "Legal", href: `/${locale}/legal` }] },
             ].map(col => (
               <div key={col.title}>
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 20 }}>{col.title}</div>
@@ -192,7 +272,7 @@ export default function LegalPage() {
             ))}
           </div>
           <div style={{ borderTop: `1px solid ${C.bd1}`, padding: "20px 0", textAlign: "center" }}>
-            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved.</p>
+            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>{"\u00a9"} 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved.</p>
           </div>
         </div>
       </footer>
