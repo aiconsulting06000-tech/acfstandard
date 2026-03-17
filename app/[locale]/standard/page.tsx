@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { useLocale } from "next-intl";
 import Footer from "../components/Footer";
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -298,6 +299,7 @@ function EcosystemFlowSVG() {
    MAIN PAGE
    ══════════════════════════════════════════════════════════ */
 export default function TheStandardPage() {
+  const locale = useLocale();
   return (
     <div style={{ minHeight: "100vh", background: C.navy1, color: "#fff", fontFamily: "'Inter', sans-serif", overflowX: "hidden" }}>
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -318,7 +320,7 @@ export default function TheStandardPage() {
       {/* ── NAV ── */}
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: 72, background: "rgba(5,12,26,.88)", backdropFilter: "blur(24px)", borderBottom: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center" }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px", width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <a href="/en/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <a href={`/${locale}/`} style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <div style={{ width: 40, height: 40, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1 }}>ACF</div>
             <div>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>ACF STANDARD</div>
@@ -326,10 +328,10 @@ export default function TheStandardPage() {
             </div>
           </a>
           <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-            <a href="/en/" className="hide-mobile" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+            <a href={`/${locale}/`} className="hide-mobile" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
               onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Home</a>
             {["Framework", "Architecture", "Ecosystem", "Blog"].map(l => (
-              <a key={l} href={l === "Blog" ? "/en/blog" : `#${l.toLowerCase()}`} className="hide-mobile" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+              <a key={l} href={l === "Blog" ? `/${locale}/blog` : `#${l.toLowerCase()}`} className="hide-mobile" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
                 onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l}</a>
             ))}
             <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, display: "inline-block" }}>Get Your Score →</a>
@@ -707,10 +709,10 @@ export default function TheStandardPage() {
 
           <div className="eco-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginTop: 40 }}>
             {[
-              { name: "ACF Score®", desc: "Rapid diagnostic measuring decision sovereignty and governance maturity.", href: "/en/acf-score", color: C.sup },
-              { name: "ACF Control", desc: "Real-time platform for supervising autonomous systems.", href: "/en/acf-control", color: C.amber },
-              { name: "ACF Academy", desc: "Training for executives and operators governing autonomous systems.", href: "/en/acf-certification#academy", color: C.pol },
-              { name: "ACF Certification", desc: "ACF TRUST™ and ACF CERTIFIED labels validating governance maturity.", href: "/en/acf-certification", color: C.gold },
+              { name: "ACF Score®", desc: "Rapid diagnostic measuring decision sovereignty and governance maturity.", href: `/${locale}/acf-score`, color: C.sup },
+              { name: "ACF Control", desc: "Real-time platform for supervising autonomous systems.", href: `/${locale}/acf-control`, color: C.amber },
+              { name: "ACF Academy", desc: "Training for executives and operators governing autonomous systems.", href: `/${locale}/acf-certification#academy`, color: C.pol },
+              { name: "ACF Certification", desc: "ACF TRUST™ and ACF CERTIFIED labels validating governance maturity.", href: `/${locale}/acf-certification`, color: C.gold },
             ].map(p => (
               <Reveal key={p.name}>
                 <a href={p.href} style={{ display: "block", background: `${p.color}06`, border: `1px solid ${p.color}20`, borderRadius: 14, padding: "22px 26px", transition: "all .3s" }}
@@ -757,7 +759,7 @@ export default function TheStandardPage() {
         <div style={{ maxWidth: 600, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
           <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
             <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, display: "inline-block" }}>Assess your governance →</a>
-            <a href="/en/blog" style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 500, display: "inline-block", transition: "all .3s" }}
+            <a href={`/${locale}/blog`} style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 500, display: "inline-block", transition: "all .3s" }}
               onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
               onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>Read the research</a>
           </div>

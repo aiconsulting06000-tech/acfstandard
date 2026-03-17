@@ -570,7 +570,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div class="nr">
       <div class="nlm">
         <a href="/standard">${m.nav.theStandard}</a>
-        <a href="/en/acf-score">${m.nav.acfScore}</a>
+        <a href="/${locale}/acf-score">${m.nav.acfScore}</a>
         <a href="/control">${m.nav.acfControl}</a>
         <a href="/certification">${m.nav.acfCertification}</a>
       </div>
@@ -619,15 +619,15 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div class="mp" id="panel-products">
       <div class="mpt"><a href="/standard">${m.megaMenu.products.link}</a></div>
       <div class="mpd">${m.megaMenu.products.subtitle}</div>
-      <div class="mgroup"><div class="mgtitle">${m.megaMenu.products.diagnostic.title}</div><ul class="mlinks"><li><a href="https://acf-score.com">${m.megaMenu.products.diagnostic.score}</a></li><li><a href="/en/acf-score">${m.megaMenu.products.diagnostic.methodology}</a></li><li><a href="/en/acf-score">${m.megaMenu.products.diagnostic.axes}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.products.diagnostic.title}</div><ul class="mlinks"><li><a href="https://acf-score.com">${m.megaMenu.products.diagnostic.score}</a></li><li><a href="/${locale}/acf-score">${m.megaMenu.products.diagnostic.methodology}</a></li><li><a href="/${locale}/acf-score">${m.megaMenu.products.diagnostic.axes}</a></li></ul></div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.products.saas.title}</div><ul class="mlinks"><li><a href="/control">${m.megaMenu.products.saas.control}</a></li><li><a href="/control">${m.megaMenu.products.saas.kpis}</a></li><li><a href="/control">${m.megaMenu.products.saas.gating}</a></li></ul></div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.products.certification.title}</div><ul class="mlinks"><li><a href="/certification">${m.megaMenu.products.certification.program}</a></li><li><a href="/certification">${m.megaMenu.products.certification.levels}</a></li><li><a href="/certification">${m.megaMenu.products.certification.audit}</a></li></ul></div>
     </div>
     <div class="mp" id="panel-resources">
-      <div class="mpt"><a href="/en/blog">${m.megaMenu.resources.link}</a></div>
+      <div class="mpt"><a href="/${locale}/blog">${m.megaMenu.resources.link}</a></div>
       <div class="mpd">${m.megaMenu.resources.subtitle}</div>
-      <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.insights.title}</div><ul class="mlinks"><li><a href="/en/blog">${m.megaMenu.resources.insights.aiAct}</a></li><li><a href="/en/blog">${m.megaMenu.resources.insights.dda}</a></li><li><a href="/en/blog">${m.megaMenu.resources.insights.killSwitch}</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.documentation.title}</div><ul class="mlinks"><li><a href="/en/blog">${m.megaMenu.resources.documentation.specs}</a></li><li><a href="/en/blog">${m.megaMenu.resources.documentation.research}</a></li><li><a href="/academy">${m.megaMenu.resources.documentation.academy}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.insights.title}</div><ul class="mlinks"><li><a href="/${locale}/blog">${m.megaMenu.resources.insights.aiAct}</a></li><li><a href="/${locale}/blog">${m.megaMenu.resources.insights.dda}</a></li><li><a href="/${locale}/blog">${m.megaMenu.resources.insights.killSwitch}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.documentation.title}</div><ul class="mlinks"><li><a href="/${locale}/blog">${m.megaMenu.resources.documentation.specs}</a></li><li><a href="/${locale}/blog">${m.megaMenu.resources.documentation.research}</a></li><li><a href="/academy">${m.megaMenu.resources.documentation.academy}</a></li></ul></div>
     </div>
     <div class="mp" id="panel-about">
       <div class="mpt"><a href="/about">${m.megaMenu.about.link}</a></div>

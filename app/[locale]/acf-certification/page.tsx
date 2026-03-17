@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { useLocale } from "next-intl";
 import Footer from "../components/Footer";
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -184,6 +185,7 @@ function HeroAcademyCap() {
    MAIN COMPONENT
    ═══════════════════════════════════════════════════ */
 export default function ACFCertificationPage() {
+  const locale = useLocale();
   const [activeTrack, setActiveTrack] = useState("core");
   const navLinks = ["Trust", "Certified", "Academy", "Ecosystem"];
 
@@ -573,9 +575,9 @@ export default function ACFCertificationPage() {
           <p style={{ fontSize: 15, color: C.gray2, maxWidth: 500, margin: "0 auto 40px", lineHeight: 1.7 }}>Every piece feeds the next. A system, not a product.</p>
           <div style={{ display: "flex", flexDirection: "column", gap: 4, maxWidth: 600, margin: "0 auto" }}>
             {[
-              { step: "01", label: "ACF Score", desc: "Free diagnostic — assess your sovereignty", color: C.green, link: "/en/acf-score" },
+              { step: "01", label: "ACF Score", desc: "Free diagnostic — assess your sovereignty", color: C.green, link: `/${locale}/acf-score` },
               { step: "02", label: "ACF Academy", desc: "Train teams to govern autonomous systems", color: C.gold, link: "#academy" },
-              { step: "03", label: "ACF Control", desc: "Governance platform — operate in real time", color: C.amber, link: "/en/acf-control" },
+              { step: "03", label: "ACF Control", desc: "Governance platform — operate in real time", color: C.amber, link: `/${locale}/acf-control` },
               { step: "04", label: "ACF TRUST™", desc: "Public label — prove it to customers", color: C.blue, link: "#trust" },
               { step: "05", label: "ACF CERTIFIED", desc: "Partners deploy & audit organizations", color: C.gold, link: "#certified" },
             ].map((s, i) => (

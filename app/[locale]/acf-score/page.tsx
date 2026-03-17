@@ -1,5 +1,6 @@
 "use client"
-const HTML = `<!DOCTYPE html>
+import { useLocale } from "next-intl";
+const buildHTML = (locale: string) => `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -160,7 +161,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- NAV -->
 <nav>
   <div class="nw">
-    <a href="/en/acf-score" target="_top" class="logo">
+    <a href="/${locale}/acf-score" target="_top" class="logo">
       <div class="lb">ACF</div>
       <div>
         <div class="ln">ACF SCORE</div>
@@ -168,7 +169,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       </div>
     </a>
     <div class="nr">
-      <a href="/en/" target="_top" class="nback">← Home</a>
+      <a href="/${locale}/" target="_top" class="nback">← Home</a>
       <a href="https://www.acf-score.com/" target="_blank" class="ncta">Calculate My Score →</a>
     </div>
   </div>
@@ -422,7 +423,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <p>10 minutes. A complete diagnostic of your agentic governance. Understand where you stand before a failure forces you to find out.</p>
     <div class="ctabtns">
       <a href="https://www.acf-score.com/" target="_blank" class="btng" style="font-size:15px;padding:16px 32px">Start the Diagnostic — Free →</a>
-      <a href="/en/contact" target="_top" class="btno">Request a Custom Assessment</a>
+      <a href="/${locale}/contact" target="_top" class="btno">Request a Custom Assessment</a>
     </div>
   </div>
 </section>
@@ -432,7 +433,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   <div class="ctn">
     <div class="fgrid" style="grid-template-columns:1.5fr 1fr 1fr 1fr">
       <div>
-        <a href="/en/" target="_top" class="logo">
+        <a href="/${locale}/" target="_top" class="logo">
           <div class="lb">ACF</div>
           <div><div class="ln">Agentic Commerce Framework®</div><div class="ls">Global Standard for AI Governance</div></div>
         </a>
@@ -441,26 +442,26 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div>
         <div class="ftitle">Framework</div>
         <ul class="flinks">
-          <li><a href="/en/standard" target="_top">The Standard</a></li>
-          <li><a href="/en/blog" target="_top">Blog</a></li>
-          <li><a href="/en/acf-certification" target="_top">ACF Certification</a></li>
+          <li><a href="/${locale}/standard" target="_top">The Standard</a></li>
+          <li><a href="/${locale}/blog" target="_top">Blog</a></li>
+          <li><a href="/${locale}/acf-certification" target="_top">ACF Certification</a></li>
         </ul>
       </div>
       <div>
         <div class="ftitle">Products</div>
         <ul class="flinks">
-          <li><a href="/en/acf-score" target="_top">ACF Score®</a></li>
-          <li><a href="/en/acf-control" target="_top">ACF Control</a></li>
-          <li><a href="/en/acf-certification#academy" target="_top">Academy</a></li>
+          <li><a href="/${locale}/acf-score" target="_top">ACF Score®</a></li>
+          <li><a href="/${locale}/acf-control" target="_top">ACF Control</a></li>
+          <li><a href="/${locale}/acf-certification#academy" target="_top">Academy</a></li>
         </ul>
       </div>
       <div>
         <div class="ftitle">Organization</div>
         <ul class="flinks">
-          <li><a href="/en/acf-partners" target="_top">Partner Portal</a></li>
-          <li><a href="/en/about" target="_top">About</a></li>
-          <li><a href="/en/contact" target="_top">Contact</a></li>
-          <li><a href="/en/legal" target="_top">Legal</a></li>
+          <li><a href="/${locale}/acf-partners" target="_top">Partner Portal</a></li>
+          <li><a href="/${locale}/about" target="_top">About</a></li>
+          <li><a href="/${locale}/contact" target="_top">Contact</a></li>
+          <li><a href="/${locale}/legal" target="_top">Legal</a></li>
         </ul>
       </div>
     </div>
@@ -539,9 +540,10 @@ new IntersectionObserver(function(entries){
 `
 
 export default function ACFScore() {
+  const locale = useLocale();
   return (
     <iframe
-      srcDoc={HTML}
+      srcDoc={buildHTML(locale)}
       style={{position:"fixed",top:0,left:0,width:"100vw",height:"100vh",border:"none",zIndex:9999}}
       title="ACF Score"
     />

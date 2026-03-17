@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { useLocale } from "next-intl";
 import Footer from "../components/Footer";
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -232,6 +233,7 @@ function FormField({ label, type = "text", placeholder, required = true, options
    MAIN COMPONENT
    ═══════════════════════════════════════════════════ */
 export default function ACFPartnersPage() {
+  const locale = useLocale();
   const [activeSection, setActiveSection] = useState<"advantages" | "portal" | "apply">("advantages");
   const [formSubmitted, setFormSubmitted] = useState(false);
   const navLinks = ["Advantages", "Tiers", "Portal", "Apply"];
@@ -810,7 +812,7 @@ export default function ACFPartnersPage() {
               onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>
               Partner Portal Login
             </a>
-            <a href="/en/acf-certification" style={{
+            <a href={`/${locale}/acf-certification`} style={{
               background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
               padding: "16px 28px", borderRadius: 12, fontSize: 14, fontWeight: 500, cursor: "pointer",
               display: "inline-block",

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useLocale } from "next-intl";
 import Footer from "../components/Footer";
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -24,6 +25,7 @@ function Badge({ children }: { children: React.ReactNode }) {
 }
 
 export default function ACFContactPage() {
+  const locale = useLocale();
   const [sent, setSent] = useState(false);
 
   const inputStyle: React.CSSProperties = {
@@ -47,7 +49,7 @@ export default function ACFContactPage() {
       {/* NAV */}
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: 72, background: "rgba(5,12,26,.92)", backdropFilter: "blur(24px)", borderBottom: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center" }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px", width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <a href="/en/" style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <a href={`/${locale}/`} style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <div style={{ width: 40, height: 40, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1 }}>ACF</div>
             <div>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>ACF STANDARD</div>
@@ -55,7 +57,7 @@ export default function ACFContactPage() {
             </div>
           </a>
           <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
-            <a href="/en/" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+            <a href={`/${locale}/`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
               onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Home</a>
             <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, transition: "all .3s", display: "inline-block" }}>Get Your Score →</a>
           </div>
@@ -171,9 +173,9 @@ export default function ACFContactPage() {
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {[
                   { icon: "📊", label: "Get your free ACF Score®", href: "https://www.acf-score.com/calculator" },
-                  { icon: "🛡️", label: "View certification programs", href: "/en/acf-certification" },
-                  { icon: "🤝", label: "Become a partner", href: "/en/acf-partners" },
-                  { icon: "📖", label: "Read the standard", href: "/en/" },
+                  { icon: "🛡️", label: "View certification programs", href: `/${locale}/acf-certification` },
+                  { icon: "🤝", label: "Become a partner", href: `/${locale}/acf-partners` },
+                  { icon: "📖", label: "Read the standard", href: `/${locale}/` },
                 ].map(a => (
                   <a key={a.label} href={a.href} style={{
                     display: "flex", alignItems: "center", gap: 12, padding: "12px 14px",
