@@ -1,6 +1,9 @@
 "use client"
 import { useLocale } from 'next-intl'
-const buildHTML = (locale: string) => `<!DOCTYPE html>
+import messagesEn from '../../messages/en.json'
+import messagesFr from '../../messages/fr.json'
+const messagesMap: Record<string, any> = { en: messagesEn, fr: messagesFr }
+const buildHTML = (locale: string, m: Record<string, any>) => `<!DOCTYPE html>
 <html lang="${locale}">
 <head>
 <meta charset="UTF-8">
@@ -455,20 +458,20 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <div class="rmo" id="rmo" onclick="closeRegion()"></div>
 <div class="rpanel" id="rpanel">
   <div class="rphdr">
-    <div class="rptitle">Select your region and language</div>
-    <button class="rpclose" onclick="closeRegion()">✕ Close</button>
+    <div class="rptitle">${m.regionSelector.title}</div>
+    <button class="rpclose" onclick="closeRegion()">${m.regionSelector.close}</button>
   </div>
   <div class="rpcols" style="grid-template-columns:repeat(5,1fr);gap:28px">
     <div>
       <div class="rpcol-title">Global</div>
-      <a class="rpglobal" href="#" onclick="switchLocale('en');return false"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span><span>Global (English)</span></a>
-      <div class="rpcol-title" style="margin-top:20px">North America</div>
+      <a class="rpglobal" href="#" onclick="switchLocale('en');return false"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span><span>${m.regionSelector.global}</span></a>
+      <div class="rpcol-title" style="margin-top:20px">${m.regionSelector.northAmerica}</div>
       <ul class="rplinks">
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇺🇸</span>United States <span class="rplang">(English)</span></a></li>
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇨🇦</span>Canada <span class="rplang">(EN/FR)</span></a></li>
         <li><a href="#" onclick="switchLocale('es');return false"><span class="rpflag">🇲🇽</span>Mexico <span class="rplang">(Español)</span></a></li>
       </ul>
-      <div class="rpcol-title" style="margin-top:20px">Latin America</div>
+      <div class="rpcol-title" style="margin-top:20px">${m.regionSelector.latinAmerica}</div>
       <ul class="rplinks">
         <li><a href="#" onclick="switchLocale('pt');return false"><span class="rpflag">🇧🇷</span>Brazil <span class="rplang">(Português)</span></a></li>
         <li><a href="#" onclick="switchLocale('es');return false"><span class="rpflag">🇦🇷</span>Argentina <span class="rplang">(Español)</span></a></li>
@@ -477,7 +480,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       </ul>
     </div>
     <div>
-      <div class="rpcol-title">Western Europe</div>
+      <div class="rpcol-title">${m.regionSelector.westernEurope}</div>
       <ul class="rplinks">
         <li><a href="#" onclick="switchLocale('fr');return false"><span class="rpflag">🇫🇷</span>France <span class="rplang">(Français)</span></a></li>
         <li><a href="#" onclick="switchLocale('de');return false"><span class="rpflag">🇩🇪</span>Germany <span class="rplang">(Deutsch)</span></a></li>
@@ -494,7 +497,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       </ul>
     </div>
     <div>
-      <div class="rpcol-title">Nordic &amp; Baltic</div>
+      <div class="rpcol-title">${m.regionSelector.nordicBaltic}</div>
       <ul class="rplinks">
         <li><a href="#" onclick="switchLocale('sv');return false"><span class="rpflag">🇸🇪</span>Sweden <span class="rplang">(Svenska)</span></a></li>
         <li><a href="#" onclick="switchLocale('no');return false"><span class="rpflag">🇳🇴</span>Norway <span class="rplang">(Norsk)</span></a></li>
@@ -505,7 +508,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇱🇻</span>Latvia <span class="rplang">(Latviešu)</span></a></li>
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇱🇹</span>Lithuania <span class="rplang">(Lietuvių)</span></a></li>
       </ul>
-      <div class="rpcol-title" style="margin-top:20px">Central &amp; Eastern Europe</div>
+      <div class="rpcol-title" style="margin-top:20px">${m.regionSelector.centralEasternEurope}</div>
       <ul class="rplinks">
         <li><a href="#" onclick="switchLocale('pl');return false"><span class="rpflag">🇵🇱</span>Poland <span class="rplang">(Polski)</span></a></li>
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇨🇿</span>Czech Republic <span class="rplang">(Čeština)</span></a></li>
@@ -521,7 +524,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       </ul>
     </div>
     <div>
-      <div class="rpcol-title">Middle East &amp; Africa</div>
+      <div class="rpcol-title">${m.regionSelector.middleEastAfrica}</div>
       <ul class="rplinks">
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇦🇪</span>UAE <span class="rplang">(العربية)</span></a></li>
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇸🇦</span>Saudi Arabia <span class="rplang">(العربية)</span></a></li>
@@ -535,7 +538,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       </ul>
     </div>
     <div>
-      <div class="rpcol-title">Asia &amp; Pacific</div>
+      <div class="rpcol-title">${m.regionSelector.asiaPacific}</div>
       <ul class="rplinks">
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇯🇵</span>Japan <span class="rplang">(日本語)</span></a></li>
         <li><a href="#" onclick="switchLocale('zh');return false"><span class="rpflag">🇨🇳</span>China <span class="rplang">(中文)</span></a></li>
@@ -562,26 +565,26 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <button class="ham" id="hambtn" aria-label="Menu"><span></span><span></span><span></span></button>
     <a href="/" class="logo">
       <div class="lb">ACF</div>
-      <div><div class="ln">Agentic Commerce Framework®</div><div class="ls">Global Standard for AI Governance</div></div>
+      <div><div class="ln">${m.nav.logoText}</div><div class="ls">${m.nav.logoSubtext}</div></div>
     </a>
     <div class="nr">
       <div class="nlm">
-        <a href="/standard">The Standard</a>
-        <a href="/en/acf-score">ACF Score</a>
-        <a href="/control">ACF Control</a>
-        <a href="/certification">ACF Certification</a>
+        <a href="/standard">${m.nav.theStandard}</a>
+        <a href="/en/acf-score">${m.nav.acfScore}</a>
+        <a href="/control">${m.nav.acfControl}</a>
+        <a href="/certification">${m.nav.acfCertification}</a>
       </div>
       <!-- Region selector Bain-style -->
       <button class="regionbtn" id="regionbtn" onclick="openRegion()">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-        <span>GLOBAL | EN</span>
+        <span>${m.nav.region}</span>
         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
       <a href="/partners/login" class="npart">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v2h20v-2c0-3.3-6.7-5-10-5z"/></svg>
-        Partners
+        ${m.nav.partners}
       </a>
-      <a href="/contact" class="ncta">Request Assessment</a>
+      <a href="/contact" class="ncta">${m.nav.requestAssessment}</a>
     </div>
   </div>
 </nav>
@@ -591,53 +594,53 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <div class="md" id="megadrawer">
   <button class="mclose" onclick="closeMega()">×</button>
   <div class="ms">
-    <div class="mni active" data-panel="framework" onclick="showPanel('framework')"><span>Framework</span><span class="marr">›</span></div>
-    <div class="mni" data-panel="products" onclick="showPanel('products')"><span>Products</span><span class="marr">›</span></div>
-    <div class="mni" data-panel="resources" onclick="showPanel('resources')"><span>Resources</span><span class="marr">›</span></div>
-    <div class="mni" data-panel="about" onclick="showPanel('about')"><span>About ACF</span><span class="marr">›</span></div>
-    <div class="mni" data-panel="partners" onclick="showPanel('partners')"><span>Partners</span><span class="marr">›</span></div>
+    <div class="mni active" data-panel="framework" onclick="showPanel('framework')"><span>${m.megaMenu.framework.title}</span><span class="marr">›</span></div>
+    <div class="mni" data-panel="products" onclick="showPanel('products')"><span>${m.megaMenu.products.title}</span><span class="marr">›</span></div>
+    <div class="mni" data-panel="resources" onclick="showPanel('resources')"><span>${m.megaMenu.resources.title}</span><span class="marr">›</span></div>
+    <div class="mni" data-panel="about" onclick="showPanel('about')"><span>${m.megaMenu.about.title}</span><span class="marr">›</span></div>
+    <div class="mni" data-panel="partners" onclick="showPanel('partners')"><span>${m.megaMenu.partners.title}</span><span class="marr">›</span></div>
     <div class="muser">
-      <div class="muname">Partner Access</div>
+      <div class="muname">${m.megaMenu.user.partnerAccess}</div>
       <div class="mulinks">
-        <a href="/partners/login"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Partner Login</a>
-        <a href="/partners/apply">Apply to become Partner</a>
-        <a href="/contact">Contact</a>
+        <a href="/partners/login"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> ${m.megaMenu.user.partnerLogin}</a>
+        <a href="/partners/apply">${m.megaMenu.user.applyPartner}</a>
+        <a href="/contact">${m.megaMenu.user.contact}</a>
       </div>
     </div>
   </div>
   <div class="mc">
     <div class="mp active" id="panel-framework">
-      <div class="mpt"><a href="/standard">ACF Standard →</a></div>
-      <div class="mpd">The definitive governance methodology for agentic systems in commercial environments.</div>
-      <div class="mgroup"><div class="mgtitle">Architecture</div><ul class="mlinks"><li><a href="/standard#principles">4 Founding Principles</a></li><li><a href="/standard#layers">4 Operational Layers</a></li><li><a href="/standard#maturity">4 Maturity Levels</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">Methodology</div><ul class="mlinks"><li><a href="/method">8 Implementation Modules</a></li><li><a href="/method#constitution">Agentic Constitution</a></li><li><a href="/method#dda">DDA Role Framework</a></li><li><a href="/method#killswitch">Kill Switch Protocol</a></li></ul></div>
-      <div class="mfeat"><div class="mflbl">FEATURED</div><div class="mfitem"><div class="mftitle">Download the ACF White Paper</div><div class="mfdesc">Full specification — free for registered users.</div></div><div class="mfitem"><div class="mftitle">ACF v1.0 — February 2026</div><div class="mfdesc">Official release. What's new in the framework.</div></div></div>
+      <div class="mpt"><a href="/standard">${m.megaMenu.framework.link}</a></div>
+      <div class="mpd">${m.megaMenu.framework.subtitle}</div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.framework.architecture.title}</div><ul class="mlinks"><li><a href="/standard#principles">${m.megaMenu.framework.architecture.principles}</a></li><li><a href="/standard#layers">${m.megaMenu.framework.architecture.layers}</a></li><li><a href="/standard#maturity">${m.megaMenu.framework.architecture.maturity}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.framework.methodology.title}</div><ul class="mlinks"><li><a href="/method">${m.megaMenu.framework.methodology.modules}</a></li><li><a href="/method#constitution">${m.megaMenu.framework.methodology.constitution}</a></li><li><a href="/method#dda">${m.megaMenu.framework.methodology.dda}</a></li><li><a href="/method#killswitch">${m.megaMenu.framework.methodology.killSwitch}</a></li></ul></div>
+      <div class="mfeat"><div class="mflbl">${m.megaMenu.framework.featured.label}</div><div class="mfitem"><div class="mftitle">${m.megaMenu.framework.featured.whitepaper.title}</div><div class="mfdesc">${m.megaMenu.framework.featured.whitepaper.description}</div></div><div class="mfitem"><div class="mftitle">${m.megaMenu.framework.featured.release.title}</div><div class="mfdesc">${m.megaMenu.framework.featured.release.description}</div></div></div>
     </div>
     <div class="mp" id="panel-products">
-      <div class="mpt"><a href="/standard">Products →</a></div>
-      <div class="mpd">Three tools operationalizing the ACF Standard across your organization.</div>
-      <div class="mgroup"><div class="mgtitle">Diagnostic</div><ul class="mlinks"><li><a href="https://acf-score.com">ACF Score — Sovereignty Metric</a></li><li><a href="/en/acf-score">Scoring Methodology</a></li><li><a href="/en/acf-score">6 Governance Axes</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">SaaS Platform</div><ul class="mlinks"><li><a href="/control">ACF Control — Governance Dashboard</a></li><li><a href="/control">18 Sovereignty KPIs</a></li><li><a href="/control">Adaptive Gating System</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">Certification</div><ul class="mlinks"><li><a href="/certification">ACF Certification Program</a></li><li><a href="/certification">Certification Levels</a></li><li><a href="/certification">Audit Process</a></li></ul></div>
+      <div class="mpt"><a href="/standard">${m.megaMenu.products.link}</a></div>
+      <div class="mpd">${m.megaMenu.products.subtitle}</div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.products.diagnostic.title}</div><ul class="mlinks"><li><a href="https://acf-score.com">${m.megaMenu.products.diagnostic.score}</a></li><li><a href="/en/acf-score">${m.megaMenu.products.diagnostic.methodology}</a></li><li><a href="/en/acf-score">${m.megaMenu.products.diagnostic.axes}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.products.saas.title}</div><ul class="mlinks"><li><a href="/control">${m.megaMenu.products.saas.control}</a></li><li><a href="/control">${m.megaMenu.products.saas.kpis}</a></li><li><a href="/control">${m.megaMenu.products.saas.gating}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.products.certification.title}</div><ul class="mlinks"><li><a href="/certification">${m.megaMenu.products.certification.program}</a></li><li><a href="/certification">${m.megaMenu.products.certification.levels}</a></li><li><a href="/certification">${m.megaMenu.products.certification.audit}</a></li></ul></div>
     </div>
     <div class="mp" id="panel-resources">
-      <div class="mpt"><a href="/en/blog">Resources →</a></div>
-      <div class="mpd">Governance insights, research and technical documentation.</div>
-      <div class="mgroup"><div class="mgtitle">Latest Insights</div><ul class="mlinks"><li><a href="/en/blog">EU AI Act &amp; Agentic Systems</a></li><li><a href="/en/blog">The DDA Role Explained</a></li><li><a href="/en/blog">Designing a 3-Level Kill Switch</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">Documentation</div><ul class="mlinks"><li><a href="/en/blog">Technical Specifications</a></li><li><a href="/en/blog">Research Papers</a></li><li><a href="/academy">ACF Academy</a></li></ul></div>
+      <div class="mpt"><a href="/en/blog">${m.megaMenu.resources.link}</a></div>
+      <div class="mpd">${m.megaMenu.resources.subtitle}</div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.insights.title}</div><ul class="mlinks"><li><a href="/en/blog">${m.megaMenu.resources.insights.aiAct}</a></li><li><a href="/en/blog">${m.megaMenu.resources.insights.dda}</a></li><li><a href="/en/blog">${m.megaMenu.resources.insights.killSwitch}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.documentation.title}</div><ul class="mlinks"><li><a href="/en/blog">${m.megaMenu.resources.documentation.specs}</a></li><li><a href="/en/blog">${m.megaMenu.resources.documentation.research}</a></li><li><a href="/academy">${m.megaMenu.resources.documentation.academy}</a></li></ul></div>
     </div>
     <div class="mp" id="panel-about">
-      <div class="mpt"><a href="/about">About ACF →</a></div>
-      <div class="mpd">The story, mission, and legal protection behind the Agentic Commerce Framework®.</div>
-      <div class="mgroup"><div class="mgtitle">Who We Are</div><ul class="mlinks"><li><a href="/about#vincent">Vincent DORANGE — Creator</a></li><li><a href="/about#mission">Mission &amp; Values</a></li><li><a href="/about#legal">Legal Protection (INPI)</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">How We Work</div><ul class="mlinks"><li><a href="/partners">Practitioner Network</a></li><li><a href="/certification">Audit &amp; Certification</a></li><li><a href="/contact">Contact Us</a></li></ul></div>
-      <div class="mfeat"><div class="mflbl">REGISTERED</div><div class="mfitem"><div class="mftitle">INPI Protected — Loi n° 2018-670</div><div class="mfdesc">ACF® is a registered trademark. All methodology and tools are legally protected.</div></div></div>
+      <div class="mpt"><a href="/about">${m.megaMenu.about.link}</a></div>
+      <div class="mpd">${m.megaMenu.about.subtitle}</div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.about.whoWeAre.title}</div><ul class="mlinks"><li><a href="/about#vincent">${m.megaMenu.about.whoWeAre.vincent}</a></li><li><a href="/about#mission">${m.megaMenu.about.whoWeAre.mission}</a></li><li><a href="/about#legal">${m.megaMenu.about.whoWeAre.legal}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.about.howWeWork.title}</div><ul class="mlinks"><li><a href="/partners">${m.megaMenu.about.howWeWork.network}</a></li><li><a href="/certification">${m.megaMenu.about.howWeWork.audit}</a></li><li><a href="/contact">${m.megaMenu.about.howWeWork.contact}</a></li></ul></div>
+      <div class="mfeat"><div class="mflbl">${m.megaMenu.about.registered.label}</div><div class="mfitem"><div class="mftitle">${m.megaMenu.about.registered.title}</div><div class="mfdesc">${m.megaMenu.about.registered.description}</div></div></div>
     </div>
     <div class="mp" id="panel-partners">
-      <div class="mpt"><a href="/partners">Partners →</a></div>
-      <div class="mpd">Join the ACF Practitioner network and offer governance services to your clients.</div>
-      <div class="mgroup"><div class="mgtitle">Partner Portal</div><ul class="mlinks"><li><a href="/partners"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Login to Partner Portal</a></li><li><a href="/partners">Dashboard &amp; Tools</a></li><li><a href="/partners">Training Materials</a></li><li><a href="/partners">ACF Practitioner Toolkit</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">Become a Partner</div><ul class="mlinks"><li><a href="/partners">Apply to Join</a></li><li><a href="/partners">Partner Tiers</a></li><li><a href="/certification">Get ACF Certified First</a></li></ul></div>
+      <div class="mpt"><a href="/partners">${m.megaMenu.partners.link}</a></div>
+      <div class="mpd">${m.megaMenu.partners.subtitle}</div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.partners.portal.title}</div><ul class="mlinks"><li><a href="/partners"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> ${m.megaMenu.partners.portal.login}</a></li><li><a href="/partners">${m.megaMenu.partners.portal.dashboard}</a></li><li><a href="/partners">${m.megaMenu.partners.portal.training}</a></li><li><a href="/partners">${m.megaMenu.partners.portal.toolkit}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.partners.become.title}</div><ul class="mlinks"><li><a href="/partners">${m.megaMenu.partners.become.apply}</a></li><li><a href="/partners">${m.megaMenu.partners.become.tiers}</a></li><li><a href="/certification">${m.megaMenu.partners.become.certified}</a></li></ul></div>
     </div>
   </div>
 </div>
@@ -649,19 +652,19 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div>
       
       <h1 class="rev d1">
-        <span class="hl1">The Global Standard for</span>
+        <span class="hl1">${m.hero.title}</span>
         <span class="hl2"><span id="typed"></span><span class="tc"></span></span>
       </h1>
-      <p class="hdesc rev d2">The Agentic Commerce Framework® (ACF) is the definitive governance methodology for deploying, supervising, and controlling autonomous agentic systems in commercial environments.</p>
+      <p class="hdesc rev d2">${m.hero.description}</p>
       <div class="hact rev d3">
-        <a href="/contact" class="btng">Request a Governance Assessment →</a>
-        <a href="/standard" class="btno">Read the Standard</a>
+        <a href="/contact" class="btng">${m.hero.cta.primary}</a>
+        <a href="/standard" class="btno">${m.hero.cta.secondary}</a>
       </div>
       <div class="hstats rev d4">
-        <div class="hs"><div class="hsn">4</div><div class="hsl">Founding<br>Principles</div></div>
-        <div class="hs"><div class="hsn">8</div><div class="hsl">Implementation<br>Modules</div></div>
-        <div class="hs"><div class="hsn">18</div><div class="hsl">Sovereignty<br>KPIs</div></div>
-        <div class="hs"><div class="hsn">17</div><div class="hsl">Proprietary<br>Tools</div></div>
+        <div class="hs"><div class="hsn">${m.hero.stats.principles.value}</div><div class="hsl">${m.hero.stats.principles.label}</div></div>
+        <div class="hs"><div class="hsn">${m.hero.stats.modules.value}</div><div class="hsl">${m.hero.stats.modules.label}</div></div>
+        <div class="hs"><div class="hsn">${m.hero.stats.kpis.value}</div><div class="hsl">${m.hero.stats.kpis.label}</div></div>
+        <div class="hs"><div class="hsn">${m.hero.stats.tools.value}</div><div class="hsl">${m.hero.stats.tools.label}</div></div>
       </div>
     </div>
     <div class="hvis rev d2">
@@ -669,10 +672,10 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="orb">
         <div class="oring"><div class="ocore"><div class="oacf">ACF®</div><div class="ostd">Standard</div></div></div>
       </div>
-      <div class="sat stop"><div class="sc"><div class="si"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><div class="sn">ACF Score</div><div class="ss">Sovereignty Metric</div></div></div></div>
-      <div class="sat sright"><div class="sc"><div class="si"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div><div><div class="sn">ACF Control</div><div class="ss">Governance SaaS</div></div></div></div>
-      <div class="sat sbott"><div class="sc"><div class="si"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg></div><div><div class="sn">Certification</div><div class="ss">Attestation</div></div></div></div>
-      <div class="sat sleft"><div class="sc"><div class="si"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div><div class="sn">Partners</div><div class="ss">Practitioners</div></div></div></div>
+      <div class="sat stop"><div class="sc"><div class="si"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><div class="sn">${m.hero.satellites.score.name}</div><div class="ss">${m.hero.satellites.score.description}</div></div></div></div>
+      <div class="sat sright"><div class="sc"><div class="si"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div><div><div class="sn">${m.hero.satellites.control.name}</div><div class="ss">${m.hero.satellites.control.description}</div></div></div></div>
+      <div class="sat sbott"><div class="sc"><div class="si"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg></div><div><div class="sn">${m.hero.satellites.certification.name}</div><div class="ss">${m.hero.satellites.certification.description}</div></div></div></div>
+      <div class="sat sleft"><div class="sc"><div class="si"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div><div class="sn">${m.hero.satellites.partners.name}</div><div class="ss">${m.hero.satellites.partners.description}</div></div></div></div>
     </div>
   </div>
 </section>
@@ -680,25 +683,25 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- STATS BAR -->
 <div class="sbar" id="statsbar">
   <div class="sgrid">
-    <div class="sc2"><div class="scw"><span class="ctr" id="c1">0</span></div><div class="slbl">Operational Layers</div></div>
-    <div class="sc2"><div class="scw"><span class="ctr" id="c2">0</span></div><div class="slbl">Sovereignty KPIs</div></div>
-    <div class="sc2"><div class="scw"><span class="ctr" id="c3">0</span></div><div class="slbl">Proprietary Tools</div></div>
-    <div class="sc2"><div class="scw"><span class="ctr" id="c4">0</span><span class="csuf">%</span></div><div class="slbl">Human Sovereignty</div></div>
+    <div class="sc2"><div class="scw"><span class="ctr" id="c1">0</span></div><div class="slbl">${m.statsBar.layers.label}</div></div>
+    <div class="sc2"><div class="scw"><span class="ctr" id="c2">0</span></div><div class="slbl">${m.statsBar.kpis.label}</div></div>
+    <div class="sc2"><div class="scw"><span class="ctr" id="c3">0</span></div><div class="slbl">${m.statsBar.tools.label}</div></div>
+    <div class="sc2"><div class="scw"><span class="ctr" id="c4">0</span><span class="csuf">${m.statsBar.sovereignty.suffix}</span></div><div class="slbl">${m.statsBar.sovereignty.label}</div></div>
   </div>
 </div>
 
 <!-- PRINCIPLES -->
 <section class="secdark">
   <div class="ctn">
-    <span class="ew rev">// Architecture</span>
-    <h2 class="st rev d1">4 Founding Principles</h2>
+    <span class="ew rev">${m.principles.badge}</span>
+    <h2 class="st rev d1">${m.principles.title}</h2>
     <div class="gb rev d1"></div>
-    <p class="sd rev d2">Four immutable axioms defining the boundary between human authority and autonomous agent execution.</p>
+    <p class="sd rev d2">${m.principles.subtitle}</p>
     <div class="pgrid">
-      <div class="pcard rev d1"><div class="pnw"><span class="pnum">01</span><span class="pnl">PRINCIPLE</span></div><div class="pt">Séparation Décision / Exécution</div><p class="pd">No autonomous agent defines its own objectives. Humans define the ends; agents execute exclusively within the defined perimeter. Technically enforced — not a policy, a constraint.</p><span class="ptag">SOVEREIGNTY</span></div>
-      <div class="pcard rev d2"><div class="pnw"><span class="pnum">02</span><span class="pnl">PRINCIPLE</span></div><div class="pt">Zones Non Délégables</div><p class="pd">Certain decisions are structurally, ethically, or legally non-automatable. The non-delegable zone is formally defined and technically locked — never configurable by agents themselves.</p><span class="ptag">PROTECTION</span></div>
-      <div class="pcard rev d3"><div class="pnw"><span class="pnum">03</span><span class="pnl">PRINCIPLE</span></div><div class="pt">Traçabilité &amp; Interruptibilité</div><p class="pd">Every agent decision is fully traceable, explainable, and stoppable at any time. Three-level kill switch: module stop (&lt;10s), agent stop (&lt;30s), emergency (&lt;60s). Complete auditable log chain, always.</p><span class="ptag">CONTROL</span></div>
-      <div class="pcard rev d4"><div class="pnw"><span class="pnum">04</span><span class="pnl">PRINCIPLE</span></div><div class="pt">Gouvernance Vivante</div><p class="pd">Any agentic autonomy requires active, permanent, evolving governance — with dedicated roles (DDA), regular review rituals, and recurring independent audits. Governance is a continuous practice, not a document.</p><span class="ptag">CONTINUITY</span></div>
+      <div class="pcard rev d1"><div class="pnw"><span class="pnum">${m.principles.principle1.number}</span><span class="pnl">PRINCIPLE</span></div><div class="pt">${m.principles.principle1.title}</div><p class="pd">${m.principles.principle1.description}</p><span class="ptag">SOVEREIGNTY</span></div>
+      <div class="pcard rev d2"><div class="pnw"><span class="pnum">${m.principles.principle2.number}</span><span class="pnl">PRINCIPLE</span></div><div class="pt">${m.principles.principle2.title}</div><p class="pd">${m.principles.principle2.description}</p><span class="ptag">PROTECTION</span></div>
+      <div class="pcard rev d3"><div class="pnw"><span class="pnum">${m.principles.principle3.number}</span><span class="pnl">PRINCIPLE</span></div><div class="pt">${m.principles.principle3.title}</div><p class="pd">${m.principles.principle3.description}</p><span class="ptag">CONTROL</span></div>
+      <div class="pcard rev d4"><div class="pnw"><span class="pnum">${m.principles.principle4.number}</span><span class="pnl">PRINCIPLE</span></div><div class="pt">${m.principles.principle4.title}</div><p class="pd">${m.principles.principle4.description}</p><span class="ptag">CONTINUITY</span></div>
     </div>
   </div>
 </section>
@@ -706,26 +709,26 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- LAYERS -->
 <section>
   <div class="ctn">
-    <span class="ew rev">// Structure</span>
-    <h2 class="st rev d1">4 Operational Layers</h2>
+    <span class="ew rev">${m.layers.badge}</span>
+    <h2 class="st rev d1">${m.layers.title}</h2>
     <div class="gb rev d1"></div>
-    <p class="sd rev d2">A hierarchical architecture from strategic governance to real-time execution supervision.</p>
+    <p class="sd rev d2">${m.layers.subtitle}</p>
     <div class="lgrid">
       <div class="lcard rev d1">
         <div class="lico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <div class="lnum">LAYER_01</div><div class="lt">Governance &amp; Sovereignty</div><div class="ld">Sovereignty charter, governance committee, RACI matrix, non-delegable zone map.</div>
+        <div class="lnum">${m.layers.layer1.number}</div><div class="lt">${m.layers.layer1.title}</div><div class="ld">${m.layers.layer1.description}</div>
       </div>
       <div class="lcard rev d2">
         <div class="lico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/></svg></div>
-        <div class="lnum">LAYER_02</div><div class="lt">Decision Policy</div><div class="ld">Weighted objectives, arbitration rules, escalation thresholds, regulatory constraints.</div>
+        <div class="lnum">${m.layers.layer2.number}</div><div class="lt">${m.layers.layer2.title}</div><div class="ld">${m.layers.layer2.description}</div>
       </div>
       <div class="lcard rev d3">
         <div class="lico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <div class="lnum">LAYER_03</div><div class="lt">Agent System</div><div class="ld">Explicit mandate per agent, interaction perimeter, autonomy level, 5-category taxonomy.</div>
+        <div class="lnum">${m.layers.layer3.number}</div><div class="lt">${m.layers.layer3.title}</div><div class="ld">${m.layers.layer3.description}</div>
       </div>
       <div class="lcard rev d4">
         <div class="lico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-        <div class="lnum">LAYER_04</div><div class="lt">Execution &amp; Supervision</div><div class="ld">Adaptive gating matrix, multi-level alerts, 18 sovereignty KPIs, live dashboards.</div>
+        <div class="lnum">${m.layers.layer4.number}</div><div class="lt">${m.layers.layer4.title}</div><div class="ld">${m.layers.layer4.description}</div>
       </div>
     </div>
   </div>
@@ -734,18 +737,18 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- MATURITY -->
 <section class="secdark">
   <div class="ctn">
-    <span class="ew rev">// Progression</span>
-    <h2 class="st rev d1">4 Agentic Maturity Levels</h2>
+    <span class="ew rev">${m.maturity.badge}</span>
+    <h2 class="st rev d1">${m.maturity.title}</h2>
     <div class="gb rev d1"></div>
-    <p class="sd rev d2">ACF classifies systems by autonomy level. Level 2 is the recommended deployment target.</p>
+    <p class="sd rev d2">${m.maturity.subtitle}</p>
     <div class="matwrap rev d2" id="matwrap">
       <div class="matlinebg"></div>
       <div class="matlinefg" id="matline"></div>
       <div class="mattrack">
-        <div class="matcol" id="mc0"><div class="dotw"><div class="dot"></div></div><div class="mlvl">LEVEL_0</div><div class="mname">Classical Automation</div><div class="risk rl">Very Low Risk</div><p class="mdesc">Fixed rules, no ML. Human intervention for any modification.</p></div>
-        <div class="matcol" id="mc1"><div class="dotw"><div class="dot"></div></div><div class="mlvl">LEVEL_1</div><div class="mname">Assisted Agents</div><div class="risk rl">Low Risk</div><p class="mdesc">Agents analyze and recommend. Every final decision remains with a human.</p></div>
-        <div class="matcol" id="mc2"><div class="dotw"><div class="dot"></div></div><div class="mlvl">LEVEL_2</div><div class="mname">Governed Agents</div><div class="risk rm">Moderate Risk</div><p class="mdesc">Agents decide within strict governance. Non-delegable zones locked.</p><div class="tbadge">★ Recommended Target</div></div>
-        <div class="matcol" id="mc3"><div class="dotw"><div class="dot"></div></div><div class="mlvl">LEVEL_3</div><div class="mname">Supervised Autonomous</div><div class="risk rh">High Risk</div><p class="mdesc">Agents decide and learn. Maximum governance. For mature organizations only.</p></div>
+        <div class="matcol" id="mc0"><div class="dotw"><div class="dot"></div></div><div class="mlvl">${m.maturity.level0.code}</div><div class="mname">${m.maturity.level0.name}</div><div class="risk rl">${m.maturity.level0.risk}</div><p class="mdesc">${m.maturity.level0.description}</p></div>
+        <div class="matcol" id="mc1"><div class="dotw"><div class="dot"></div></div><div class="mlvl">${m.maturity.level1.code}</div><div class="mname">${m.maturity.level1.name}</div><div class="risk rl">${m.maturity.level1.risk}</div><p class="mdesc">${m.maturity.level1.description}</p></div>
+        <div class="matcol" id="mc2"><div class="dotw"><div class="dot"></div></div><div class="mlvl">${m.maturity.level2.code}</div><div class="mname">${m.maturity.level2.name}</div><div class="risk rm">${m.maturity.level2.risk}</div><p class="mdesc">${m.maturity.level2.description}</p><div class="tbadge">${m.maturity.level2.badge}</div></div>
+        <div class="matcol" id="mc3"><div class="dotw"><div class="dot"></div></div><div class="mlvl">${m.maturity.level3.code}</div><div class="mname">${m.maturity.level3.name}</div><div class="risk rh">${m.maturity.level3.risk}</div><p class="mdesc">${m.maturity.level3.description}</p></div>
       </div>
     </div>
   </div>
@@ -754,10 +757,10 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- HEX PATH MODULES -->
 <section class="hexsec">
   <div class="ctn">
-    <span class="ew rev">// Methodology</span>
-    <h2 class="st rev d1">8 Implementation Modules</h2>
+    <span class="ew rev">${m.modules.badge}</span>
+    <h2 class="st rev d1">${m.modules.title}</h2>
     <div class="gb rev d1"></div>
-    <p class="sd rev d2">A sequential path deployed progressively over 6–18 months. Each module builds on the previous.</p>
+    <p class="sd rev d2">${m.modules.subtitle}</p>
   </div>
   <div class="hextrack rev d2">
     <!-- ROW 1: MOD 01 → 04 — labels alternate above/below -->
@@ -773,17 +776,17 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         </div>
         <div class="hxdot"></div><div class="hxstem"></div>
         <div class="hxlabel">
-          <div class="hxmod">MOD_01</div>
-          <div class="hxname">Sovereignty Diagnostic</div>
-          <div class="hxdesc">Sovereignty Score calculation. Risk zone mapping.</div>
+          <div class="hxmod">${m.modules.module1.code}</div>
+          <div class="hxname">${m.modules.module1.name}</div>
+          <div class="hxdesc">${m.modules.module1.description}</div>
         </div>
       </div>
       <!-- MOD 02 - label above -->
       <div class="hxitem alt">
         <div class="hxlabel">
-          <div class="hxmod">MOD_02</div>
-          <div class="hxname">Decision Mapping</div>
-          <div class="hxdesc">Criticality Matrix. Non-delegable zones.</div>
+          <div class="hxmod">${m.modules.module2.code}</div>
+          <div class="hxname">${m.modules.module2.name}</div>
+          <div class="hxdesc">${m.modules.module2.description}</div>
         </div>
         <div class="hxstem" style="transform:scaleY(-1)"></div><div class="hxdot"></div>
         <div class="hxhex" style="background:linear-gradient(160deg,#0e2218,#081808)">
@@ -803,17 +806,17 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         </div>
         <div class="hxdot"></div><div class="hxstem"></div>
         <div class="hxlabel">
-          <div class="hxmod">MOD_03</div>
-          <div class="hxname">Agentic Constitution</div>
-          <div class="hxdesc">9 articles. Signed by governance committee.</div>
+          <div class="hxmod">${m.modules.module3.code}</div>
+          <div class="hxname">${m.modules.module3.name}</div>
+          <div class="hxdesc">${m.modules.module3.description}</div>
         </div>
       </div>
       <!-- MOD 04 - label above -->
       <div class="hxitem alt">
         <div class="hxlabel">
-          <div class="hxmod">MOD_04</div>
-          <div class="hxname">Agent System Design</div>
-          <div class="hxdesc">Mandate sheets, interaction perimeters.</div>
+          <div class="hxmod">${m.modules.module4.code}</div>
+          <div class="hxname">${m.modules.module4.name}</div>
+          <div class="hxdesc">${m.modules.module4.description}</div>
         </div>
         <div class="hxstem" style="transform:scaleY(-1)"></div><div class="hxdot"></div>
         <div class="hxhex" style="background:linear-gradient(160deg,#201808,#180e04)">
@@ -836,9 +839,9 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <!-- MOD 08 - label above, leftmost in reversed row -->
       <div class="hxitem alt">
         <div class="hxlabel">
-          <div class="hxmod">MOD_08</div>
-          <div class="hxname">Crisis Management</div>
-          <div class="hxdesc">3-level incidents. Kill switch drills.</div>
+          <div class="hxmod">${m.modules.module8.code}</div>
+          <div class="hxname">${m.modules.module8.name}</div>
+          <div class="hxdesc">${m.modules.module8.description}</div>
         </div>
         <div class="hxstem" style="transform:scaleY(-1)"></div><div class="hxdot"></div>
         <div class="hxhex" style="background:linear-gradient(160deg,#200808,#180404)">
@@ -858,17 +861,17 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         </div>
         <div class="hxdot"></div><div class="hxstem"></div>
         <div class="hxlabel">
-          <div class="hxmod">MOD_07</div>
-          <div class="hxname">Implementation Roadmap</div>
-          <div class="hxdesc">5-phase progressive deployment.</div>
+          <div class="hxmod">${m.modules.module7.code}</div>
+          <div class="hxname">${m.modules.module7.name}</div>
+          <div class="hxdesc">${m.modules.module7.description}</div>
         </div>
       </div>
       <!-- MOD 06 - label above -->
       <div class="hxitem alt">
         <div class="hxlabel">
-          <div class="hxmod">MOD_06</div>
-          <div class="hxname">Continuous Governance</div>
-          <div class="hxdesc">Monthly reviews. Annual compliance audit.</div>
+          <div class="hxmod">${m.modules.module6.code}</div>
+          <div class="hxname">${m.modules.module6.name}</div>
+          <div class="hxdesc">${m.modules.module6.description}</div>
         </div>
         <div class="hxstem" style="transform:scaleY(-1)"></div><div class="hxdot"></div>
         <div class="hxhex" style="background:linear-gradient(160deg,#0e2218,#081808)">
@@ -888,9 +891,9 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         </div>
         <div class="hxdot"></div><div class="hxstem"></div>
         <div class="hxlabel">
-          <div class="hxmod">MOD_05</div>
-          <div class="hxname">Security &amp; Reversibility</div>
-          <div class="hxdesc">Sandboxing, reversibility plan. Kill switch design.</div>
+          <div class="hxmod">${m.modules.module5.code}</div>
+          <div class="hxname">${m.modules.module5.name}</div>
+          <div class="hxdesc">${m.modules.module5.description}</div>
         </div>
       </div>
     </div>
@@ -902,16 +905,16 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   <div class="ctn">
     <div class="videogrid">
       <div>
-        <span class="ew rev">// Why ACF</span>
-        <h2 class="st rev d1">Governance Cannot Wait.<br>Agents Already Decide.</h2>
+        <span class="ew rev">${m.video.badge}</span>
+        <h2 class="st rev d1">${m.video.title}</h2>
         <div class="gb rev d1"></div>
-        <p class="vdesc rev d2">In 2026, autonomous agents are already executing decisions in commercial environments — setting prices, qualifying leads, processing claims, managing contracts. Most organizations have no framework to govern them.</p>
-        <p class="vdesc rev d3" style="margin-top:16px">ACF was created to fill that void — before a governance failure becomes a legal, financial, or reputational crisis.</p>
+        <p class="vdesc rev d2">${m.video.description1}</p>
+        <p class="vdesc rev d3" style="margin-top:16px">${m.video.description2}</p>
         <div class="vquote rev d3">
           <div class="vqline"></div>
           <div class="vqbody">
-            <div class="vqtext">"The question is no longer <em>whether</em> to deploy agents. It is <em>how</em> to deploy them without surrendering your sovereignty."</div>
-            <div class="vqauthor">— Vincent DORANGE, Creator of the ACF Standard</div>
+            <div class="vqtext">"${m.video.quote.text}"</div>
+            <div class="vqauthor">${m.video.quote.author}</div>
           </div>
         </div>
       </div>
@@ -920,9 +923,9 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
           <div class="vthumbnail">
             <div class="vtgrid"></div>
             <div class="vtcontent">
-              <div class="vtbadge">ACF — FOUNDER MESSAGE</div>
-              <div class="vtname">Vincent DORANGE</div>
-              <div class="vtrole">Creator, Agentic Commerce Framework®</div>
+              <div class="vtbadge">${m.video.player.badge}</div>
+              <div class="vtname">${m.video.player.name}</div>
+              <div class="vtrole">${m.video.player.role}</div>
             </div>
           </div>
           <div class="vplaybtn">
@@ -930,13 +933,13 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
               <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--navy)"><path d="M8 5v14l11-7z"/></svg>
             </div>
           </div>
-          <div class="vduration">3:09</div>
+          <div class="vduration">${m.video.player.duration}</div>
           <div class="vtframes"></div>
         </div>
         <div class="vstats">
-          <div class="vstat"><span class="vsn">2026</span><span class="vsl">Official Release</span></div>
-          <div class="vstat"><span class="vsn">45p</span><span class="vsl">Full Documentation</span></div>
-          <div class="vstat"><span class="vsn">INPI</span><span class="vsl">Legally Protected</span></div>
+          <div class="vstat"><span class="vsn">${m.video.stats.release.value}</span><span class="vsl">${m.video.stats.release.label}</span></div>
+          <div class="vstat"><span class="vsn">${m.video.stats.documentation.value}</span><span class="vsl">${m.video.stats.documentation.label}</span></div>
+          <div class="vstat"><span class="vsn">${m.video.stats.protection.value}</span><span class="vsl">${m.video.stats.protection.label}</span></div>
         </div>
       </div>
     </div>
@@ -949,9 +952,9 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   <div style="position:relative;z-index:1;width:900px;max-width:95vw;background:#000;border-radius:14px;overflow:hidden;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;">
     <button onclick="closeVideoModal()" style="position:absolute;top:12px;right:12px;z-index:10;background:rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">×</button>
     <div style="text-align:center;padding:40px;color:var(--gr2)">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);margin-bottom:16px;letter-spacing:.1em">VIDEO PLACEHOLDER</div>
-      <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;color:#fff;margin-bottom:10px">Upload your video to enable playback</div>
-      <div style="font-size:14px">Replace this modal with a YouTube or Vimeo embed URL in the code</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);margin-bottom:16px;letter-spacing:.1em">${m.video.modal.placeholder}</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;color:#fff;margin-bottom:10px">${m.video.modal.title}</div>
+      <div style="font-size:14px">${m.video.modal.description}</div>
     </div>
   </div>
 </div>
@@ -959,32 +962,32 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- PRODUCTS -->
 <section class="secdark">
   <div class="ctn">
-    <span class="ew rev">// Ecosystem</span>
-    <h2 class="st rev d1">The ACF Ecosystem</h2>
+    <span class="ew rev">${m.products.badge}</span>
+    <h2 class="st rev d1">${m.products.title}</h2>
     <div class="gb rev d1"></div>
-    <p class="sd rev d2">Three complementary products operationalizing the ACF Standard.</p>
+    <p class="sd rev d2">${m.products.subtitle}</p>
   </div>
   <div class="prodgrid" style="max-width:1320px;margin:60px auto 0;padding:0 40px">
     <div class="pc rev d1">
       <div class="piw"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-      <div class="plbl">DIAGNOSTIC TOOL</div><div class="ptitle">ACF Score</div>
-      <div class="pdesc">Proprietary Sovereignty Score measuring your decisional independence across 6 governance dimensions.</div>
-      <ul class="pfeat"><li>Composite Sovereignty Score metric</li><li>6-axis radar visualization</li><li>Personalized action plan per axis</li></ul>
-      <a href="https://acf-score.com" class="plink" target="_blank">Measure your Score →</a>
+      <div class="plbl">${m.products.score.label}</div><div class="ptitle">${m.products.score.title}</div>
+      <div class="pdesc">${m.products.score.description}</div>
+      <ul class="pfeat"><li>${m.products.score.features.feature1}</li><li>${m.products.score.features.feature2}</li><li>${m.products.score.features.feature3}</li></ul>
+      <a href="https://acf-score.com" class="plink" target="_blank">${m.products.score.cta}</a>
     </div>
     <div class="pc rev d2">
       <div class="piw"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div>
-      <div class="plbl">SAAS PLATFORM</div><div class="ptitle">ACF Control</div>
-      <div class="pdesc">Real-time governance dashboard monitoring your 18 Sovereignty KPIs with adaptive gating and automated escalation.</div>
-      <ul class="pfeat"><li>18 KPIs across 6 governance axes</li><li>Adaptive gating with human escalation</li><li>Tamper-evident audit logs</li></ul>
-      <a href="/control" class="plink">Discover ACF Control →</a>
+      <div class="plbl">${m.products.control.label}</div><div class="ptitle">${m.products.control.title}</div>
+      <div class="pdesc">${m.products.control.description}</div>
+      <ul class="pfeat"><li>${m.products.control.features.feature1}</li><li>${m.products.control.features.feature2}</li><li>${m.products.control.features.feature3}</li></ul>
+      <a href="/control" class="plink">${m.products.control.cta}</a>
     </div>
     <div class="pc rev d3">
       <div class="piw"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg></div>
-      <div class="plbl">INDEPENDENT ATTESTATION</div><div class="ptitle">ACF Certification</div>
-      <div class="pdesc">Independent certification attesting compliance with the ACF governance standard. Publicly verifiable.</div>
-      <ul class="pfeat"><li>Level 1, 2, and 3 certification paths</li><li>Publicly verifiable badge</li><li>Annual renewal + continuous monitoring</li></ul>
-      <a href="/certification" class="plink">Get Certified →</a>
+      <div class="plbl">${m.products.certification.label}</div><div class="ptitle">${m.products.certification.title}</div>
+      <div class="pdesc">${m.products.certification.description}</div>
+      <ul class="pfeat"><li>${m.products.certification.features.feature1}</li><li>${m.products.certification.features.feature2}</li><li>${m.products.certification.features.feature3}</li></ul>
+      <a href="/certification" class="plink">${m.products.certification.cta}</a>
     </div>
   </div>
 </section>
@@ -992,38 +995,38 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- BLOG -->
 <section>
   <div class="ctn">
-    <span class="ew rev">// Insights</span>
-    <h2 class="st rev d1">Latest from the ACF Blog</h2>
+    <span class="ew rev">${m.blog.badge}</span>
+    <h2 class="st rev d1">${m.blog.title}</h2>
     <div class="gb rev d1"></div>
-    <p class="sd rev d2">Governance insights, framework updates, and agentic intelligence research.</p>
+    <p class="sd rev d2">${m.blog.subtitle}</p>
     <div class="bgrid">
       <a href="/blog/ai-act" class="bcard rev d1">
-        <div class="bimg"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=400&fit=crop&q=80" alt="" loading="lazy"><div class="bovl"></div><span class="bcat">AI REGULATION</span></div>
-        <div class="bbody"><div class="btitle">How the EU AI Act Applies to Agentic Systems in 2026</div><div class="bexc">The AI Act's risk-based approach creates specific obligations for autonomous agents. Here's what ACF Level 2 governance covers.</div><div class="bmeta"><span class="bdate">2026-02-15</span><span class="bread">Read →</span></div></div>
+        <div class="bimg"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&h=400&fit=crop&q=80" alt="" loading="lazy"><div class="bovl"></div><span class="bcat">${m.blog.article1.category}</span></div>
+        <div class="bbody"><div class="btitle">${m.blog.article1.title}</div><div class="bexc">${m.blog.article1.excerpt}</div><div class="bmeta"><span class="bdate">${m.blog.article1.date}</span><span class="bread">${m.blog.article1.cta}</span></div></div>
       </a>
       <a href="/blog/dda" class="bcard rev d2">
-        <div class="bimg"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&q=80" alt="" loading="lazy"><div class="bovl"></div><span class="bcat">GOVERNANCE</span></div>
-        <div class="bbody"><div class="btitle">The DDA: Why Every AI-Native Company Needs a Delegated Decision Agent Officer</div><div class="bexc">The DDA is the legal guardian of your autonomous agents. How to create and empower this critical role.</div><div class="bmeta"><span class="bdate">2026-02-08</span><span class="bread">Read →</span></div></div>
+        <div class="bimg"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&q=80" alt="" loading="lazy"><div class="bovl"></div><span class="bcat">${m.blog.article2.category}</span></div>
+        <div class="bbody"><div class="btitle">${m.blog.article2.title}</div><div class="bexc">${m.blog.article2.excerpt}</div><div class="bmeta"><span class="bdate">${m.blog.article2.date}</span><span class="bread">${m.blog.article2.cta}</span></div></div>
       </a>
       <a href="/blog/kill-switch" class="bcard rev d3">
-        <div class="bimg"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&q=80" alt="" loading="lazy"><div class="bovl"></div><span class="bcat">TECHNICAL</span></div>
-        <div class="bbody"><div class="btitle">Designing a Three-Level Kill Switch for Autonomous Agent Systems</div><div class="bexc">An effective kill switch is not a single button. ACF specifies three interrupt levels with defined response times.</div><div class="bmeta"><span class="bdate">2026-01-29</span><span class="bread">Read →</span></div></div>
+        <div class="bimg"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&q=80" alt="" loading="lazy"><div class="bovl"></div><span class="bcat">${m.blog.article3.category}</span></div>
+        <div class="bbody"><div class="btitle">${m.blog.article3.title}</div><div class="bexc">${m.blog.article3.excerpt}</div><div class="bmeta"><span class="bdate">${m.blog.article3.date}</span><span class="bread">${m.blog.article3.cta}</span></div></div>
       </a>
     </div>
-    <div style="text-align:center;margin-top:40px" class="rev"><a href="/blog" class="btno">View All Articles →</a></div>
+    <div style="text-align:center;margin-top:40px" class="rev"><a href="/blog" class="btno">${m.blog.viewAll}</a></div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="ctasec">
-  <div class="ctawm">ACF®</div>
+  <div class="ctawm">${m.cta.watermark}</div>
   <div class="ctn ctain">
-    <span class="ew">// Next Step</span>
-    <h2>Ready to Govern Your<br>Agentic Systems?</h2>
-    <p>Request a governance assessment and discover your current Sovereignty Score.</p>
+    <span class="ew">${m.cta.badge}</span>
+    <h2>${m.cta.title}</h2>
+    <p>${m.cta.description}</p>
     <div class="ctabtns">
-      <a href="/contact" class="btng">Request a Governance Assessment →</a>
-      <a href="/partners/apply" class="btno">Become an ACF Partner</a>
+      <a href="/contact" class="btng">${m.cta.primary}</a>
+      <a href="/partners/apply" class="btno">${m.cta.secondary}</a>
     </div>
   </div>
 </section>
@@ -1032,14 +1035,14 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <footer>
   <div class="ctn">
     <div class="fgrid">
-      <div><a href="/" class="logo"><div class="lb">ACF</div><div><div class="ln">Agentic Commerce Framework®</div><div class="ls">Global Standard for AI Governance</div></div></a><p class="fdesc">The definitive governance standard for organizations deploying autonomous agentic systems. Protected — Loi n° 2018-670.</p></div>
-      <div><div class="ftitle">Framework</div><ul class="flinks"><li><a href="/standard">The Standard</a></li><li><a href="/method">Methodology</a></li><li><a href="/research">Research</a></li><li><a href="/certification">ACF Certification</a></li></ul></div>
-      <div><div class="ftitle">Products</div><ul class="flinks"><li><a href="https://acf-score.com">ACF Score</a></li><li><a href="/control">ACF Control</a></li><li><a href="/certification">Certification</a></li><li><a href="/academy">Academy</a></li></ul></div>
-      <div><div class="ftitle">Organization</div><ul class="flinks"><li><a href="/partners/login">Partner Portal</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/legal">Legal</a></li></ul></div>
+      <div><a href="/" class="logo"><div class="lb">ACF</div><div><div class="ln">${m.footer.logoText}</div><div class="ls">${m.footer.logoSubtext}</div></div></a><p class="fdesc">${m.footer.description}</p></div>
+      <div><div class="ftitle">${m.footer.framework.title}</div><ul class="flinks"><li><a href="/standard">${m.footer.framework.theStandard}</a></li><li><a href="/method">${m.footer.framework.methodology}</a></li><li><a href="/research">${m.footer.framework.research}</a></li><li><a href="/certification">${m.footer.framework.certification}</a></li></ul></div>
+      <div><div class="ftitle">${m.footer.products.title}</div><ul class="flinks"><li><a href="https://acf-score.com">${m.footer.products.score}</a></li><li><a href="/control">${m.footer.products.control}</a></li><li><a href="/certification">${m.footer.products.certification}</a></li><li><a href="/academy">${m.footer.products.academy}</a></li></ul></div>
+      <div><div class="ftitle">${m.footer.organization.title}</div><ul class="flinks"><li><a href="/partners/login">${m.footer.organization.partnerPortal}</a></li><li><a href="/about">${m.footer.organization.about}</a></li><li><a href="/contact">${m.footer.organization.contact}</a></li><li><a href="/legal">${m.footer.organization.legal}</a></li></ul></div>
     </div>
     <div class="fbot">
-      <div class="fcopy">© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved. Registered INPI.</div>
-      <div class="flegal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/cookies">Cookies</a></div>
+      <div class="fcopy">${m.footer.copyright}</div>
+      <div class="flegal"><a href="/privacy">${m.footer.legal.privacy}</a><a href="/terms">${m.footer.legal.terms}</a><a href="/cookies">${m.footer.legal.cookies}</a></div>
     </div>
   </div>
 </footer>
@@ -1047,7 +1050,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- AI BUTTON -->
 <button class="aibtn" id="aibtn">
   <div class="aidonline"></div>
-  <div class="aiblabel"><strong>Ask ACF Agent</strong><span>AI GOVERNANCE · ONLINE</span></div>
+  <div class="aiblabel"><strong>${m.ai.button.label}</strong><span>${m.ai.button.status}</span></div>
   <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--navy)"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
 </button>
 
@@ -1056,29 +1059,29 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   <div class="aimodalbg" onclick="closeAI()"></div>
   <div class="aimodalbox">
     <div class="aimodalhdr">
-      <button class="aimclose" onclick="closeAI()">×</button>
-      <div class="aimbeta">BETA</div>
-      <div class="aimtitle"><span>Ask ACF</span> ★</div>
-      <p class="aimsub">A chatbot answering questions based on the ACF Standard and governance insights</p>
+      <button class="aimclose" onclick="closeAI()">${m.ai.modal.close}</button>
+      <div class="aimbeta">${m.ai.modal.beta}</div>
+      <div class="aimtitle"><span>${m.ai.modal.title}</span> ★</div>
+      <p class="aimsub">${m.ai.modal.subtitle}</p>
     </div>
     <div class="aimmsgs" id="aimmsgs"></div>
     <div class="aiminpwrap">
-      <input class="aiminp" id="aiminp" placeholder="Ask about ACF governance..." autocomplete="off">
+      <input class="aiminp" id="aiminp" placeholder="${m.ai.modal.placeholder}" autocomplete="off">
       <button class="aimsend" id="aimsend">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
       </button>
     </div>
     <div class="aimtrend">
-      <div class="aimtlabel">TRENDING QUESTIONS</div>
+      <div class="aimtlabel">${m.ai.modal.trending.label}</div>
       <div class="aimqs">
-        <button class="aimq" onclick="askQ('What is the ACF Standard?')">What is the ACF Standard?</button>
-        <button class="aimq" onclick="askQ('How do I get ACF certified?')">How to get ACF certified?</button>
-        <button class="aimq" onclick="askQ('What is the DDA role?')">What is the DDA role?</button>
-        <button class="aimq" onclick="askQ('What is the ACF Sovereignty Score?')">What is the Sovereignty Score?</button>
-        <button class="aimq" onclick="askQ('What are the 4 Founding Principles of ACF?')">The 4 Founding Principles?</button>
+        <button class="aimq" onclick="askQ('${m.ai.modal.trending.q1}')">${m.ai.modal.trending.q1}</button>
+        <button class="aimq" onclick="askQ('${m.ai.modal.trending.q2}')">${m.ai.modal.trending.q2}</button>
+        <button class="aimq" onclick="askQ('${m.ai.modal.trending.q3}')">${m.ai.modal.trending.q3}</button>
+        <button class="aimq" onclick="askQ('${m.ai.modal.trending.q4}')">${m.ai.modal.trending.q4}</button>
+        <button class="aimq" onclick="askQ('${m.ai.modal.trending.q5}')">${m.ai.modal.trending.q5}</button>
       </div>
     </div>
-    <div class="aimdiscl">AI experiment. Responses based on ACF Standard documentation. <a href="/legal">See More</a></div>
+    <div class="aimdiscl">${m.ai.modal.disclaimer} <a href="/legal">${m.ai.modal.seeMore}</a></div>
   </div>
 </div>
 
@@ -1183,7 +1186,7 @@ new IntersectionObserver(function(entries){
 },{threshold:.3}).observe(document.getElementById('matwrap'));
 
 // ══ TYPING ══
-var words=['Governance','Sovereignty','Intelligence','Commerce'],wi=0,ci=0,del=false,paused=false;
+var words=['${m.hero.typing.word1}','${m.hero.typing.word2}','${m.hero.typing.word3}','${m.hero.typing.word4}'],wi=0,ci=0,del=false,paused=false;
 var tel=document.getElementById('typed');
 if(tel){
   tel.textContent=words[0];ci=words[0].length;
@@ -1254,9 +1257,10 @@ document.addEventListener('click',function(e){
 
 export default function Home() {
   const locale = useLocale()
+  const m = messagesMap[locale] || messagesMap.en
   return (
     <iframe
-      srcDoc={buildHTML(locale)}
+      srcDoc={buildHTML(locale, m)}
       style={{position:"fixed",top:0,left:0,width:"100vw",height:"100vh",border:"none",zIndex:9999}}
       title="ACF Standard"
     />
