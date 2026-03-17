@@ -168,8 +168,8 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       </div>
     </a>
     <div class="nr">
-      <a href="/en/" target="_top" class="nback">← Back to Standard</a>
-      <a href="https://acf-score.com/calculator" target="_blank" class="ncta">Calculate My Score →</a>
+      <a href="/en/" target="_top" class="nback">← Home</a>
+      <a href="https://www.acf-score.com/" target="_blank" class="ncta">Calculate My Score →</a>
     </div>
   </div>
 </nav>
@@ -186,7 +186,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       </h1>
       <p class="hdesc rev d2">Are you ready for the era of autonomous AI agents? Evaluate the robustness of your agentic governance in 10 minutes. Get your ACF Score® across 6 governance axes with personalized recommendations.</p>
       <div class="hact rev d2">
-        <a href="https://acf-score.com/calculator" target="_blank" class="btng">Calculate My Score — Free →</a>
+        <a href="https://www.acf-score.com/" target="_blank" class="btng">Calculate My Score — Free →</a>
         <a href="#how" class="btno">How It Works</a>
       </div>
       <div class="hbadges rev d2">
@@ -345,7 +345,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         <div class="step-n" style="color:rgba(201,168,76,.3)">→</div>
         <div class="step-title" style="color:var(--gold)">Ready?</div>
         <div class="step-desc">10 minutes. Free. No sign-up. Immediate results.</div>
-        <a href="https://acf-score.com/calculator" target="_blank" class="btng" style="margin-top:16px;font-size:13px;padding:10px 18px">Start Now →</a>
+        <a href="https://www.acf-score.com/" target="_blank" class="btng" style="margin-top:16px;font-size:13px;padding:10px 18px">Start Now →</a>
       </div>
     </div>
   </div>
@@ -421,7 +421,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <h2>Calculate Your<br><span style="color:var(--gold)">Sovereignty Score</span> Now</h2>
     <p>10 minutes. A complete diagnostic of your agentic governance. Understand where you stand before a failure forces you to find out.</p>
     <div class="ctabtns">
-      <a href="https://acf-score.com/calculator" target="_blank" class="btng" style="font-size:15px;padding:16px 32px">Start the Diagnostic — Free →</a>
+      <a href="https://www.acf-score.com/" target="_blank" class="btng" style="font-size:15px;padding:16px 32px">Start the Diagnostic — Free →</a>
       <a href="/en/contact" target="_top" class="btno">Request a Custom Assessment</a>
     </div>
   </div>
