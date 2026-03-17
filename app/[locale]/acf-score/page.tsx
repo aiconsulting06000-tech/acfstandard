@@ -430,28 +430,37 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- FOOTER -->
 <footer>
   <div class="ctn">
-    <div class="fgrid">
+    <div class="fgrid" style="grid-template-columns:1.5fr 1fr 1fr 1fr">
       <div>
         <a href="/en/" target="_top" class="logo">
           <div class="lb">ACF</div>
           <div><div class="ln">Agentic Commerce Framework®</div><div class="ls">Global Standard for AI Governance</div></div>
         </a>
-        <p class="fdesc">ACF Score® is the official diagnostic tool of the Agentic Commerce Framework. Free, immediate, and actionable.</p>
-      </div>
-      <div>
-        <div class="ftitle">ACF Products</div>
-        <ul class="flinks">
-          <li><a href="/en/acf-score" target="_top">ACF Score®</a></li>
-          <li><a href="/en/acf-control" target="_top">ACF Control</a></li>
-          <li><a href="/en/certification" target="_top">ACF Certification</a></li>
-        </ul>
+        <p class="fdesc">The governance standard for organizations deploying autonomous AI agents.</p>
       </div>
       <div>
         <div class="ftitle">Framework</div>
         <ul class="flinks">
-          <li><a href="/en/" target="_top">The Standard</a></li>
-          <li><a href="/en/about" target="_top">About ACF</a></li>
+          <li><a href="/en/standard" target="_top">The Standard</a></li>
+          <li><a href="/en/blog" target="_top">Blog</a></li>
+          <li><a href="/en/acf-certification" target="_top">ACF Certification</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ftitle">Products</div>
+        <ul class="flinks">
+          <li><a href="/en/acf-score" target="_top">ACF Score®</a></li>
+          <li><a href="/en/acf-control" target="_top">ACF Control</a></li>
+          <li><a href="/en/acf-certification#academy" target="_top">Academy</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ftitle">Organization</div>
+        <ul class="flinks">
+          <li><a href="/en/acf-partners" target="_top">Partner Portal</a></li>
+          <li><a href="/en/about" target="_top">About</a></li>
           <li><a href="/en/contact" target="_top">Contact</a></li>
+          <li><a href="/en/legal" target="_top">Legal</a></li>
         </ul>
       </div>
     </div>
