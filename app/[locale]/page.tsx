@@ -1230,6 +1230,7 @@ function closeAI(){document.getElementById('aimodal').classList.remove('open');d
 </script>
 <script>
 var REMAP={'/certification':'/acf-certification','/partners':'/acf-partners','/score':'/acf-score','/partners/login':'/acf-partners','/partners/apply':'/acf-partners'};
+var LOCALES=['en','fr','es','de','it','pt','nl','pl','sv','da','no','fi','zh','ru'];
 document.addEventListener('click',function(e){
   var a=e.target.closest('a');
   if(!a)return;
@@ -1238,8 +1239,10 @@ document.addEventListener('click',function(e){
   if(h.indexOf('http')===0)return;
   if(a.getAttribute('onclick'))return;
   e.preventDefault();
+  var parts=h.split('/');
+  if(parts.length>1&&LOCALES.indexOf(parts[1])!==-1){h='/'+parts.slice(2).join('/');}
   var path=h.split('#')[0].split('?')[0];
-  if(path.indexOf('/blog/')===0)path='/blog';
+  if(path.indexOf('/blog/')===0)h='/blog';
   if(REMAP[path])h=REMAP[path]+h.substring(path.length);
   window.parent.location.href='/${locale}'+h;
 });
