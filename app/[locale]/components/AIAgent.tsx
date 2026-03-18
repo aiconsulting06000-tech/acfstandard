@@ -14,7 +14,7 @@ const ui = {
   en: {
     btnLabel: "ACF Agent",
     btnStatus: "Online",
-    beta: "POWERED BY CLAUDE AI",
+    beta: "",
     title: "ACF Agent",
     subtitle: "Your AI governance expert. Ask anything about the Agentic Commerce Framework®.",
     placeholder: "Ask about ACF governance...",
@@ -33,7 +33,7 @@ const ui = {
   fr: {
     btnLabel: "ACF Agent",
     btnStatus: "En ligne",
-    beta: "PROPULSÉ PAR CLAUDE AI",
+    beta: "",
     title: "ACF Agent",
     subtitle: "Votre expert en gouvernance IA. Posez vos questions sur l'Agentic Commerce Framework®.",
     placeholder: "Posez une question sur la gouvernance ACF...",
@@ -247,7 +247,7 @@ export default function AIAgent() {
             {/* Header */}
             <div style={{ padding: "24px 28px 16px", borderBottom: `1px solid ${C.bd1}`, position: "relative" }}>
               <button onClick={() => setOpen(false)} style={{ position: "absolute", top: 16, right: 20, background: "none", border: "none", color: C.gray, fontSize: 20, cursor: "pointer" }}>{t.close}</button>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 8 }}>{t.beta}</div>
+              {t.beta && <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 8 }}>{t.beta}</div>}
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, fontWeight: 800, color: "#fff", marginBottom: 4 }}>{t.title} <span style={{ color: C.gold }}>&#9733;</span></div>
               <p style={{ fontSize: 13, color: C.gray, lineHeight: 1.5 }}>{t.subtitle}</p>
             </div>

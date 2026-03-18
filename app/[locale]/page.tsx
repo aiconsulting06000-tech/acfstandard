@@ -274,6 +274,7 @@ section{padding:60px 0;position:relative;z-index:1}
 @keyframes cinGlitch{0%{clip-path:inset(40% 0 61% 0)}20%{clip-path:inset(92% 0 1% 0)}40%{clip-path:inset(43% 0 1% 0)}60%{clip-path:inset(25% 0 58% 0)}80%{clip-path:inset(54% 0 7% 0)}100%{clip-path:inset(58% 0 43% 0)}}
 @keyframes cinScanline{0%{top:-5%}100%{top:105%}}
 @keyframes cinPulseRing{0%{transform:translate(-50%,-50%) scale(.3);opacity:1}100%{transform:translate(-50%,-50%) scale(3);opacity:0}}
+@keyframes cinBlink{0%,100%{opacity:1}50%{opacity:.3}}
 @keyframes cinFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 @keyframes cinShake{0%,100%{transform:translateX(0)}10%{transform:translateX(-8px)}20%{transform:translateX(8px)}30%{transform:translateX(-5px)}40%{transform:translateX(5px)}50%{transform:translateX(-2px)}60%{transform:translateX(2px)}}
 @keyframes cinTypeBar{0%,100%{opacity:1}50%{opacity:0}}
@@ -587,7 +588,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="mpd">${m.megaMenu.framework.subtitle}</div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.framework.architecture.title}</div><ul class="mlinks"><li><a href="/${locale}/standard#principles">${m.megaMenu.framework.architecture.principles}</a></li><li><a href="/${locale}/standard#layers">${m.megaMenu.framework.architecture.layers}</a></li><li><a href="/${locale}/standard#maturity">${m.megaMenu.framework.architecture.maturity}</a></li></ul></div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.framework.methodology.title}</div><ul class="mlinks"><li><a href="/${locale}/standard#modules">${m.megaMenu.framework.methodology.modules}</a></li><li><a href="/${locale}/standard#modules">${m.megaMenu.framework.methodology.constitution}</a></li><li><a href="/${locale}/blog#delegated-decision-agent-officer">${m.megaMenu.framework.methodology.dda}</a></li><li><a href="/${locale}/blog#three-level-kill-switch">${m.megaMenu.framework.methodology.killSwitch}</a></li></ul></div>
-      <div class="mfeat"><div class="mflbl">${m.megaMenu.framework.featured.label}</div><a href="#" onclick="event.preventDefault();event.stopPropagation();var a=document.createElement('a');a.href='/acf-whitepaper-${locale === 'fr' ? 'fr' : 'en'}.pdf';a.download='acf-whitepaper-${locale === 'fr' ? 'fr' : 'en'}.pdf';a.target='_parent';window.parent.document.body.appendChild(a);a.click();a.remove()" class="mfitem" style="display:block;text-decoration:none;color:inherit;cursor:pointer"><div class="mftitle">${m.megaMenu.framework.featured.whitepaper.title}</div><div class="mfdesc">${m.megaMenu.framework.featured.whitepaper.description}</div></a><div class="mfitem"><div class="mftitle">${m.megaMenu.framework.featured.release.title}</div><div class="mfdesc">${m.megaMenu.framework.featured.release.description}</div></div></div>
+      <div class="mfeat"><div class="mflbl">${m.megaMenu.framework.featured.label}</div><a href="#" onclick="event.preventDefault();event.stopPropagation();var a=document.createElement('a');a.href='/acf-whitepaper-${locale === 'fr' ? 'fr' : 'en'}.pdf';a.download='acf-whitepaper-${locale === 'fr' ? 'fr' : 'en'}.pdf';a.target='_parent';window.parent.document.body.appendChild(a);a.click();a.remove()" class="mfitem" style="display:block;text-decoration:none;color:inherit;cursor:pointer"><div class="mftitle">${m.megaMenu.framework.featured.whitepaper.title}</div><div class="mfdesc">${m.megaMenu.framework.featured.whitepaper.description}</div></a></div>
     </div>
     <div class="mp" id="panel-products">
       <div class="mpt"><a href="/standard">${m.megaMenu.products.link}</a></div>
@@ -1008,8 +1009,41 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         </div>
       </div>
 
-      <!-- Scene 6: CTA — grand finale -->
-      <div class="cin-scene" id="cin-s6" style="opacity:0">
+      <!-- Scene 6: ACF Control Dashboard — live monitoring -->
+      <div class="cin-scene" id="cin-s6" style="opacity:0;width:100%">
+        <div id="ctrl-dash" style="max-width:580px;margin:0 auto;background:rgba(5,12,26,.85);border:1px solid rgba(201,168,76,.25);border-radius:16px;padding:24px 28px;font-family:'JetBrains Mono',monospace;backdrop-filter:blur(10px)">
+          <!-- Header -->
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+            <div style="display:flex;align-items:center;gap:10px"><div style="width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;animation:cinBlink 2s infinite"></div><span style="font-size:12px;letter-spacing:.15em;color:rgba(255,255,255,.7)">${locale === 'fr' ? 'ACF CONTROL \u2014 EN DIRECT' : 'ACF CONTROL \u2014 LIVE'}</span></div>
+            <div id="ctrl-clock" style="font-size:13px;color:#22c55e;font-weight:700;letter-spacing:.05em">--:--:--</div>
+          </div>
+          <!-- Score -->
+          <div style="background:rgba(255,255,255,.04);border-radius:12px;padding:18px 22px;margin-bottom:16px">
+            <div style="font-size:10px;letter-spacing:.15em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:8px">${locale === 'fr' ? 'SCORE DE SOUVERAINETE' : 'SOVEREIGNTY SCORE'}</div>
+            <div style="display:flex;justify-content:space-between;align-items:flex-end">
+              <div><span id="ctrl-score" style="font-family:'Space Grotesk',sans-serif;font-size:52px;font-weight:900;color:#22c55e;line-height:1">0</span><span style="font-size:18px;color:rgba(255,255,255,.3);margin-left:4px">/100</span></div>
+              <div style="font-size:12px;color:#22c55e">&#9650; +3,2 (30j)</div>
+            </div>
+            <div style="margin-top:10px;height:4px;background:rgba(255,255,255,.08);border-radius:4px;overflow:hidden"><div id="ctrl-bar" style="height:100%;width:0%;background:linear-gradient(90deg,#22c55e,#c9a84c);border-radius:4px;transition:width 1.5s cubic-bezier(.16,1,.3,1)"></div></div>
+          </div>
+          <!-- Agent cards -->
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px">
+            <div class="ctrl-agent" style="opacity:0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:12px 14px"><div style="display:flex;align-items:center;gap:6px;margin-bottom:6px"><div style="width:6px;height:6px;border-radius:50%;background:#22c55e"></div><span style="font-size:9px;letter-spacing:.1em;color:rgba(255,255,255,.5)">PRICE-GOV</span></div><div style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:900;color:#22c55e">92</div></div>
+            <div class="ctrl-agent" style="opacity:0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:12px 14px"><div style="display:flex;align-items:center;gap:6px;margin-bottom:6px"><div style="width:6px;height:6px;border-radius:50%;background:#f59e0b"></div><span style="font-size:9px;letter-spacing:.1em;color:rgba(255,255,255,.5)">STOCK-AI</span></div><div style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:900;color:#f59e0b">67</div></div>
+            <div class="ctrl-agent" style="opacity:0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:12px 14px"><div style="display:flex;align-items:center;gap:6px;margin-bottom:6px"><div style="width:6px;height:6px;border-radius:50%;background:#22c55e"></div><span style="font-size:9px;letter-spacing:.1em;color:rgba(255,255,255,.5)">FRAUD-DET</span></div><div style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:900;color:#22c55e">88</div></div>
+          </div>
+          <!-- Log entries -->
+          <div id="ctrl-logs" style="display:flex;flex-direction:column;gap:6px">
+            <div class="ctrl-log" style="opacity:0;display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border-left:3px solid #22c55e;background:rgba(34,197,94,.06);font-size:11px"><span style="color:rgba(255,255,255,.35);min-width:40px">14:32</span><span style="color:#22c55e">&#10004;</span><span style="color:rgba(255,255,255,.7)">${locale === 'fr' ? 'PRICE-GOV marge ajustee +0,3%' : 'PRICE-GOV margin adjusted +0.3%'}</span></div>
+            <div class="ctrl-log" style="opacity:0;display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border-left:3px solid #f59e0b;background:rgba(245,158,11,.06);font-size:11px"><span style="color:rgba(255,255,255,.35);min-width:40px">14:28</span><span style="color:#f59e0b">&#9888;</span><span style="color:rgba(255,255,255,.7)">${locale === 'fr' ? 'Derive STOCK-AI detectee (-1,2%)' : 'STOCK-AI drift detected (-1.2%)'}</span></div>
+            <div class="ctrl-log" style="opacity:0;display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border-left:3px solid #22c55e;background:rgba(34,197,94,.06);font-size:11px"><span style="color:rgba(255,255,255,.35);min-width:40px">14:15</span><span style="color:#22c55e">&#10004;</span><span style="color:rgba(255,255,255,.7)">${locale === 'fr' ? 'FRAUD-DET transaction suspecte bloquee' : 'FRAUD-DET suspicious transaction blocked'}</span></div>
+            <div class="ctrl-log" style="opacity:0;display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:8px;border-left:3px solid #f59e0b;background:rgba(245,158,11,.06);font-size:11px"><span style="color:rgba(255,255,255,.35);min-width:40px">13:47</span><span style="color:#f59e0b">&#9670;</span><span style="color:rgba(255,255,255,.7)">${locale === 'fr' ? 'Seuil escalade en approche' : 'Escalation threshold approaching'}</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scene 7: CTA — grand finale -->
+      <div class="cin-scene" id="cin-s7" style="opacity:0">
         <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(20px,3vw,36px);font-weight:800;color:#fff;margin-bottom:28px;line-height:1.2">
           ${locale === 'fr' ? 'Pret a gouverner<br>vos agents ?' : 'Ready to govern<br>your agents?'}
         </div>
@@ -1388,7 +1422,7 @@ function startCinematic(){
   document.querySelectorAll('.cin-counter').forEach(function(c){c.textContent='0';c.style.textShadow='none'});
   document.querySelectorAll('.cin-card').forEach(function(c){c.style.transition='none';c.style.opacity='0'});
   var progress=document.getElementById('cin-progress');
-  var total=26000;var t0=Date.now();
+  var total=34000;var t0=Date.now();
   var pInt=setInterval(function(){var p=Math.min((Date.now()-t0)/total*100,100);progress.style.width=p+'%';if(p>=100)clearInterval(pInt)},60);
 
   initParticles();
@@ -1411,7 +1445,7 @@ function startCinematic(){
   }).then(function(){
     showScene('cin-s1',{fadeIn:.6});
     var typeEl=document.getElementById('cin-type1');
-    var msg='${locale === 'fr' ? 'Vos agents prennent des decisions sans vous.' : 'Your agents make decisions without you.'}';
+    var msg='${locale === 'fr' ? 'Vos agents prennent<br>des decisions sans vous.' : 'Your agents make<br>decisions without you.'}';
     return typeText(typeEl,msg,30);
   }).then(function(){
     document.getElementById('cin-sub1').style.opacity='1';
@@ -1496,10 +1530,38 @@ function startCinematic(){
     });
     return cinDelay(4200);
   }).then(function(){
-    // === SCENE 6: CTA — stays ===
+    // === SCENE 6: ACF Control Dashboard (6s) ===
     return hideScene('cin-s5');
   }).then(function(){
-    showScene('cin-s6',{fadeIn:.8});
+    showScene('cin-s6',{fadeIn:.5});
+    // Animate clock
+    var clockEl=document.getElementById('ctrl-clock');
+    if(clockEl){var now=new Date();clockEl.textContent=now.toLocaleTimeString('fr-FR')}
+    var clockInt=setInterval(function(){if(clockEl){var n=new Date();clockEl.textContent=n.toLocaleTimeString('fr-FR')}},1000);
+    cinTimers.push(clockInt);
+    // Animate score counter 0->74
+    cinDelay(400).then(function(){
+      var scoreEl=document.getElementById('ctrl-score');
+      var barEl=document.getElementById('ctrl-bar');
+      if(barEl)barEl.style.width='74%';
+      if(scoreEl){var sv=0;var sint=setInterval(function(){sv+=2;if(sv>=74){sv=74;clearInterval(sint)}scoreEl.textContent=sv},25);cinTimers.push(sint)}
+    });
+    // Agent cards appear one by one
+    var agents=document.querySelectorAll('.ctrl-agent');
+    agents.forEach(function(a,i){
+      cinDelay(1000+i*400).then(function(){a.style.transition='opacity .4s,transform .4s';a.style.opacity='1';a.style.transform='translateY(0)'});
+    });
+    // Log entries slide in
+    var logs=document.querySelectorAll('.ctrl-log');
+    logs.forEach(function(l,i){
+      cinDelay(2200+i*500).then(function(){l.style.transition='opacity .4s,transform .4s';l.style.opacity='1'});
+    });
+    return cinDelay(6000);
+  }).then(function(){
+    // === SCENE 7: CTA — stays ===
+    return hideScene('cin-s6');
+  }).then(function(){
+    showScene('cin-s7',{fadeIn:.8});
     if(window._cinSpawnBurst)window._cinSpawnBurst(null,null,25);
     spawnShockwave('rgba(201,168,76,.5)');
     clearInterval(pInt);progress.style.width='100%';
