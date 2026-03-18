@@ -590,17 +590,17 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.tools.title}</div><ul class="mlinks"><li><a href="/${locale}/compliance-checker">${m.megaMenu.resources.tools.complianceChecker}</a></li><li><a href="https://artificialintelligenceact.eu/fr/evaluation/verificateur-de-conformite-a-l-acte-de-l-ai-de-l-ue/" target="_blank" rel="noopener">${m.megaMenu.resources.tools.euAiAct}</a></li></ul></div>
     </div>
     <div class="mp" id="panel-about">
-      <div class="mpt"><a href="/about">${m.megaMenu.about.link}</a></div>
+      <div class="mpt"><a href="/${locale}/about">${m.megaMenu.about.link}</a></div>
       <div class="mpd">${m.megaMenu.about.subtitle}</div>
-      <div class="mgroup"><div class="mgtitle">${m.megaMenu.about.whoWeAre.title}</div><ul class="mlinks"><li><a href="/about#vincent">${m.megaMenu.about.whoWeAre.vincent}</a></li><li><a href="/about#mission">${m.megaMenu.about.whoWeAre.mission}</a></li><li><a href="/legal">${m.megaMenu.about.whoWeAre.legal}</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">${m.megaMenu.about.howWeWork.title}</div><ul class="mlinks"><li><a href="/partners">${m.megaMenu.about.howWeWork.network}</a></li><li><a href="/certification">${m.megaMenu.about.howWeWork.audit}</a></li><li><a href="/contact">${m.megaMenu.about.howWeWork.contact}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.about.whoWeAre.title}</div><ul class="mlinks"><li><a href="/${locale}/about#vincent">${m.megaMenu.about.whoWeAre.vincent}</a></li><li><a href="/${locale}/about#mission">${m.megaMenu.about.whoWeAre.mission}</a></li><li><a href="/${locale}/legal">${m.megaMenu.about.whoWeAre.legal}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.about.howWeWork.title}</div><ul class="mlinks"><li><a href="/${locale}/acf-partners">${m.megaMenu.about.howWeWork.network}</a></li><li><a href="/${locale}/acf-certification">${m.megaMenu.about.howWeWork.audit}</a></li><li><a href="/${locale}/contact">${m.megaMenu.about.howWeWork.contact}</a></li></ul></div>
       <div class="mfeat"><div class="mflbl">${m.megaMenu.about.registered.label}</div><div class="mfitem"><div class="mftitle">${m.megaMenu.about.registered.title}</div><div class="mfdesc">${m.megaMenu.about.registered.description}</div></div></div>
     </div>
     <div class="mp" id="panel-partners">
-      <div class="mpt"><a href="/partners">${m.megaMenu.partners.link}</a></div>
+      <div class="mpt"><a href="/${locale}/acf-partners">${m.megaMenu.partners.link}</a></div>
       <div class="mpd">${m.megaMenu.partners.subtitle}</div>
-      <div class="mgroup"><div class="mgtitle">${m.megaMenu.partners.portal.title}</div><ul class="mlinks"><li><a href="/partners"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> ${m.megaMenu.partners.portal.login}</a></li><li><a href="/partners">${m.megaMenu.partners.portal.dashboard}</a></li><li><a href="/partners">${m.megaMenu.partners.portal.training}</a></li><li><a href="/partners">${m.megaMenu.partners.portal.toolkit}</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">${m.megaMenu.partners.become.title}</div><ul class="mlinks"><li><a href="/partners">${m.megaMenu.partners.become.apply}</a></li><li><a href="/partners">${m.megaMenu.partners.become.tiers}</a></li><li><a href="/certification">${m.megaMenu.partners.become.certified}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.partners.portal.title}</div><ul class="mlinks"><li><a href="/${locale}/acf-partners"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> ${m.megaMenu.partners.portal.login}</a></li><li><a href="/${locale}/acf-partners">${m.megaMenu.partners.portal.dashboard}</a></li><li><a href="/${locale}/acf-partners">${m.megaMenu.partners.portal.training}</a></li><li><a href="/${locale}/acf-partners">${m.megaMenu.partners.portal.toolkit}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.partners.become.title}</div><ul class="mlinks"><li><a href="/${locale}/acf-partners">${m.megaMenu.partners.become.apply}</a></li><li><a href="/${locale}/acf-partners">${m.megaMenu.partners.become.tiers}</a></li><li><a href="/${locale}/acf-certification">${m.megaMenu.partners.become.certified}</a></li></ul></div>
     </div>
   </div>
 </div>
