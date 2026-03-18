@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLocale } from "next-intl";
 import Footer from "../components/Footer";
+import AIAgent from "../components/AIAgent";
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    ACF CERTIFICATION & ACADEMY
@@ -830,6 +831,7 @@ export default function ACFCertificationPage() {
       </section>
 
       <Footer />
+      <AIAgent />
     </div>
   );
 }

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocale } from "next-intl";
 import Footer from "../components/Footer";
+import AIAgent from "../components/AIAgent";
 
 const C = {
   navy1: "#050c1a", navy2: "#071122", navy3: "#0d1f3c",
@@ -486,6 +487,7 @@ export default function BlogPage() {
       )}
 
       <Footer />
+      <AIAgent />
     </div>
   );
 }

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useLocale } from "next-intl";
 import Footer from "../components/Footer";
+import AIAgent from "../components/AIAgent";
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    ACF CONTACT
@@ -285,6 +286,7 @@ export default function ACFContactPage() {
       </section>
 
       <Footer />
+      <AIAgent />
     </div>
   );
 }

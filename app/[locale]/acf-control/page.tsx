@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLocale } from "next-intl";
 import Footer from "../components/Footer";
+import AIAgent from "../components/AIAgent";
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    ACF CONTROL — Decision Governance Operating System
@@ -1497,6 +1498,7 @@ export default function ACFControlPage() {
       </section>
 
       <Footer />
+      <AIAgent />
     </div>
   );
 }

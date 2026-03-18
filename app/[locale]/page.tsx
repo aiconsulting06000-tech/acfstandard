@@ -1139,7 +1139,7 @@ addEventListener('scroll',function(){document.getElementById('nav').classList.to
 // ══ REGION SELECTOR ══
 function openRegion(){document.getElementById('rmo').classList.add('open');document.getElementById('rpanel').classList.add('open');document.body.style.overflow='hidden'}
 function closeRegion(){document.getElementById('rmo').classList.remove('open');document.getElementById('rpanel').classList.remove('open');document.body.style.overflow=''}
-function switchLocale(loc){closeRegion();window.parent.location.href='/'+loc+'/'}
+function switchLocale(loc){closeRegion();document.cookie='NEXT_LOCALE='+loc+';path=/;max-age=31536000;samesite=lax';window.parent.location.href='/'+loc+'/'}
 
 // ══ MEGA MENU ══
 function openMega(){document.getElementById('mo').classList.add('open');document.getElementById('megadrawer').classList.add('open');document.body.style.overflow='hidden'}

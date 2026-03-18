@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocale } from "next-intl";
 import Footer from "../components/Footer";
+import AIAgent from "../components/AIAgent";
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    ACF STANDARD — THE GOVERNANCE FRAMEWORK
@@ -1009,6 +1010,7 @@ export default function TheStandardPage() {
       </section>
 
       <Footer />
+      <AIAgent />
     </div>
   );
 }
