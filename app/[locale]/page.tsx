@@ -571,8 +571,8 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div class="mp active" id="panel-framework">
       <div class="mpt"><a href="/standard">${m.megaMenu.framework.link}</a></div>
       <div class="mpd">${m.megaMenu.framework.subtitle}</div>
-      <div class="mgroup"><div class="mgtitle">${m.megaMenu.framework.architecture.title}</div><ul class="mlinks"><li><a href="/standard#principles">${m.megaMenu.framework.architecture.principles}</a></li><li><a href="/standard#layers">${m.megaMenu.framework.architecture.layers}</a></li><li><a href="/standard#maturity">${m.megaMenu.framework.architecture.maturity}</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">${m.megaMenu.framework.methodology.title}</div><ul class="mlinks"><li><a href="/method">${m.megaMenu.framework.methodology.modules}</a></li><li><a href="/method#methodology">${m.megaMenu.framework.methodology.constitution}</a></li><li><a href="/method#methodology">${m.megaMenu.framework.methodology.dda}</a></li><li><a href="/method#methodology">${m.megaMenu.framework.methodology.killSwitch}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.framework.architecture.title}</div><ul class="mlinks"><li><a href="#principles">${m.megaMenu.framework.architecture.principles}</a></li><li><a href="#layers">${m.megaMenu.framework.architecture.layers}</a></li><li><a href="#maturity">${m.megaMenu.framework.architecture.maturity}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.framework.methodology.title}</div><ul class="mlinks"><li><a href="#methodology">${m.megaMenu.framework.methodology.modules}</a></li><li><a href="#methodology">${m.megaMenu.framework.methodology.constitution}</a></li><li><a href="/${locale}/blog#delegated-decision-agent-officer">${m.megaMenu.framework.methodology.dda}</a></li><li><a href="/${locale}/blog#three-level-kill-switch">${m.megaMenu.framework.methodology.killSwitch}</a></li></ul></div>
       <div class="mfeat"><div class="mflbl">${m.megaMenu.framework.featured.label}</div><div class="mfitem"><div class="mftitle">${m.megaMenu.framework.featured.whitepaper.title}</div><div class="mfdesc">${m.megaMenu.framework.featured.whitepaper.description}</div></div><div class="mfitem"><div class="mftitle">${m.megaMenu.framework.featured.release.title}</div><div class="mfdesc">${m.megaMenu.framework.featured.release.description}</div></div></div>
     </div>
     <div class="mp" id="panel-products">
@@ -650,7 +650,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 </div>
 
 <!-- PRINCIPLES -->
-<section class="secdark">
+<section class="secdark" id="principles">
   <div class="ctn">
     <span class="ew rev">${m.principles.badge}</span>
     <h2 class="st rev d1">${m.principles.title}</h2>
@@ -666,7 +666,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 </section>
 
 <!-- LAYERS -->
-<section>
+<section id="layers">
   <div class="ctn">
     <span class="ew rev">${m.layers.badge}</span>
     <h2 class="st rev d1">${m.layers.title}</h2>
@@ -694,7 +694,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 </section>
 
 <!-- MATURITY -->
-<section class="secdark">
+<section class="secdark" id="maturity">
   <div class="ctn">
     <span class="ew rev">${m.maturity.badge}</span>
     <h2 class="st rev d1">${m.maturity.title}</h2>
@@ -714,7 +714,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 </section>
 
 <!-- HEX PATH MODULES -->
-<section class="hexsec">
+<section class="hexsec" id="methodology">
   <div class="ctn">
     <span class="ew rev">${m.modules.badge}</span>
     <h2 class="st rev d1">${m.modules.title}</h2>
@@ -1136,6 +1136,7 @@ document.addEventListener('click',function(e){
   var h=a.getAttribute('href');
   if(!h)return;
   if(h.indexOf('http')===0){e.preventDefault();window.open(h,'_blank');return;}
+  if(h.charAt(0)==='#'){closeMega();return;}
   if(h.charAt(0)!=='/')return;
   if(a.getAttribute('onclick'))return;
   e.preventDefault();
