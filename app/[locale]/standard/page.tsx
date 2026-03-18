@@ -91,6 +91,53 @@ const ui = {
     centralLine1: "AI automates execution.",
     centralLine2: "ACF governs decisions.",
     centralP: "Without governance, autonomous systems create opacity. With governance, they become scalable instruments of strategic control.",
+    matBadge: "Progression",
+    matTitle: "4 Agentic Maturity Levels",
+    matSubtitle: "A progressive scale from classical automation to supervised autonomy. Each level increases agent decision authority — and governance requirements.",
+    matL0Code: "Level 0",
+    matL0Name: "Classical Automation",
+    matL0Risk: "Very Low Risk",
+    matL0Desc: "Fixed rules, no ML. Human intervention for any modification.",
+    matL1Code: "Level 1",
+    matL1Name: "Assisted Agents",
+    matL1Risk: "Low Risk",
+    matL1Desc: "Agents analyze and recommend. Every final decision remains with a human.",
+    matL2Code: "Level 2",
+    matL2Name: "Governed Agents",
+    matL2Risk: "Moderate Risk",
+    matL2Desc: "Agents decide within strict governance. Non-delegable zones locked.",
+    matL2Recommended: "Recommended Target",
+    matL3Code: "Level 3",
+    matL3Name: "Supervised Autonomous",
+    matL3Risk: "High Risk",
+    matL3Desc: "Agents decide and learn. Maximum governance. For mature organizations only.",
+    modBadge: "Methodology",
+    modTitle: "8 Implementation Modules",
+    modSubtitle: "A sequential path deployed progressively over 6–18 months.",
+    mod01Code: "MOD_01",
+    mod01Name: "Sovereignty Diagnostic",
+    mod01Desc: "Sovereignty Score calculation. Risk zone mapping.",
+    mod02Code: "MOD_02",
+    mod02Name: "Decision Mapping",
+    mod02Desc: "Criticality Matrix. Non-delegable zones.",
+    mod03Code: "MOD_03",
+    mod03Name: "Agentic Constitution",
+    mod03Desc: "9 articles. Signed by governance committee.",
+    mod04Code: "MOD_04",
+    mod04Name: "Agent System Design",
+    mod04Desc: "Mandate sheets, interaction perimeters.",
+    mod05Code: "MOD_05",
+    mod05Name: "Security & Reversibility",
+    mod05Desc: "Sandboxing, reversibility plan. Kill switch design.",
+    mod06Code: "MOD_06",
+    mod06Name: "Continuous Governance",
+    mod06Desc: "Monthly reviews. Annual compliance audit.",
+    mod07Code: "MOD_07",
+    mod07Name: "Implementation Roadmap",
+    mod07Desc: "5-phase progressive deployment.",
+    mod08Code: "MOD_08",
+    mod08Name: "Crisis Management",
+    mod08Desc: "3-level incidents. Kill switch drills.",
     loopBadge: "Operational discipline",
     loopTitle: "The Agent Governance Loop",
     loopSubtitle: "Governance is not configuration. It is a continuous operational loop — define, constrain, execute, monitor, intervene, improve. Then loop again.",
@@ -210,6 +257,53 @@ const ui = {
     centralLine1: "L'IA automatise l'exécution.",
     centralLine2: "ACF gouverne les décisions.",
     centralP: "Sans gouvernance, les systèmes autonomes créent de l'opacité. Avec une gouvernance, ils deviennent des instruments évolutifs de contrôle stratégique.",
+    matBadge: "Progression",
+    matTitle: "4 niveaux de maturité agentique",
+    matSubtitle: "Une échelle progressive de l'automatisation classique à l'autonomie supervisée. Chaque niveau accroît l'autorité décisionnelle des agents — et les exigences de gouvernance.",
+    matL0Code: "Niveau 0",
+    matL0Name: "Automatisation classique",
+    matL0Risk: "Risque très faible",
+    matL0Desc: "Règles fixes, pas de ML. Intervention humaine pour toute modification.",
+    matL1Code: "Niveau 1",
+    matL1Name: "Agents assistés",
+    matL1Risk: "Risque faible",
+    matL1Desc: "Les agents analysent et recommandent. Chaque décision finale reste humaine.",
+    matL2Code: "Niveau 2",
+    matL2Name: "Agents gouvernés",
+    matL2Risk: "Risque modéré",
+    matL2Desc: "Les agents décident dans un cadre de gouvernance strict. Zones non-déléguables verrouillées.",
+    matL2Recommended: "Cible recommandée",
+    matL3Code: "Niveau 3",
+    matL3Name: "Autonomie supervisée",
+    matL3Risk: "Risque élevé",
+    matL3Desc: "Les agents décident et apprennent. Gouvernance maximale. Réservé aux organisations matures.",
+    modBadge: "Méthodologie",
+    modTitle: "8 modules de mise en œuvre",
+    modSubtitle: "Un parcours séquentiel déployé progressivement sur 6 à 18 mois.",
+    mod01Code: "MOD_01",
+    mod01Name: "Diagnostic de souveraineté",
+    mod01Desc: "Calcul du score de souveraineté. Cartographie des zones à risque.",
+    mod02Code: "MOD_02",
+    mod02Name: "Cartographie décisionnelle",
+    mod02Desc: "Matrice de criticité. Zones non-déléguables.",
+    mod03Code: "MOD_03",
+    mod03Name: "Constitution agentique",
+    mod03Desc: "9 articles. Signé par le comité de gouvernance.",
+    mod04Code: "MOD_04",
+    mod04Name: "Conception du système d'agents",
+    mod04Desc: "Fiches de mandat, périmètres d'interaction.",
+    mod05Code: "MOD_05",
+    mod05Name: "Sécurité & réversibilité",
+    mod05Desc: "Sandboxing, plan de réversibilité. Conception du kill switch.",
+    mod06Code: "MOD_06",
+    mod06Name: "Gouvernance continue",
+    mod06Desc: "Revues mensuelles. Audit de conformité annuel.",
+    mod07Code: "MOD_07",
+    mod07Name: "Feuille de route",
+    mod07Desc: "Déploiement progressif en 5 phases.",
+    mod08Code: "MOD_08",
+    mod08Name: "Gestion de crise",
+    mod08Desc: "Incidents à 3 niveaux. Exercices de kill switch.",
     loopBadge: "Discipline opérationnelle",
     loopTitle: "La boucle de gouvernance des agents",
     loopSubtitle: "La gouvernance n'est pas une configuration. C'est une boucle opérationnelle continue — définir, encadrer, exécuter, surveiller, intervenir, améliorer. Puis recommencer.",
@@ -927,9 +1021,105 @@ export default function TheStandardPage() {
       </section>
 
       {/* ═══════════════════════════════════════════════
+           MATURITY LEVELS — 4 progressive levels
+         ═══════════════════════════════════════════════ */}
+      <section id="maturity" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px" }}>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24, textAlign: "center" }}>// {t.matBadge}</div></Reveal>
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16, textAlign: "center" }}>{t.matTitle}</h2></Reveal>
+          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, textAlign: "center", maxWidth: 560, margin: "0 auto 48px" }}>{t.matSubtitle}</p></Reveal>
+
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+            {[
+              { code: t.matL0Code, name: t.matL0Name, risk: t.matL0Risk, desc: t.matL0Desc, riskColor: "#22c55e", recommended: false },
+              { code: t.matL1Code, name: t.matL1Name, risk: t.matL1Risk, desc: t.matL1Desc, riskColor: "#22c55e", recommended: false },
+              { code: t.matL2Code, name: t.matL2Name, risk: t.matL2Risk, desc: t.matL2Desc, riskColor: C.gold, recommended: true },
+              { code: t.matL3Code, name: t.matL3Name, risk: t.matL3Risk, desc: t.matL3Desc, riskColor: "#ef4444", recommended: false },
+            ].map((level, i) => (
+              <Reveal key={i} delay={i * 0.1}>
+                <div style={{
+                  background: level.recommended ? `rgba(201,168,76,.06)` : `rgba(255,255,255,.02)`,
+                  border: `1px solid ${level.recommended ? C.goldBorder : C.bd1}`,
+                  borderRadius: 14,
+                  padding: "28px 26px",
+                  position: "relative",
+                  transition: "all .3s",
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
+                    <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".08em" }}>{level.code}</span>
+                    <span style={{
+                      fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 600,
+                      color: level.riskColor, background: `${level.riskColor}15`,
+                      border: `1px solid ${level.riskColor}30`, borderRadius: 6,
+                      padding: "3px 8px", letterSpacing: ".04em",
+                    }}>{level.risk}</span>
+                  </div>
+                  <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 18, fontWeight: 700, color: "#fff", marginBottom: 8 }}>{level.name}</h3>
+                  <p style={{ fontSize: 14, color: C.gray2, lineHeight: 1.7, margin: 0 }}>{level.desc}</p>
+                  {level.recommended && (
+                    <div style={{ marginTop: 14, fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".06em" }}>
+                      ★ {t.matL2Recommended}
+                    </div>
+                  )}
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════
+           IMPLEMENTATION MODULES — 8 sequential modules
+         ═══════════════════════════════════════════════ */}
+      <div id="methodology">
+      <section id="modules" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px" }}>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24, textAlign: "center" }}>// {t.modBadge}</div></Reveal>
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16, textAlign: "center" }}>{t.modTitle}</h2></Reveal>
+          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, textAlign: "center", maxWidth: 560, margin: "0 auto 48px" }}>{t.modSubtitle}</p></Reveal>
+
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+            {[
+              { code: t.mod01Code, name: t.mod01Name, desc: t.mod01Desc },
+              { code: t.mod02Code, name: t.mod02Name, desc: t.mod02Desc },
+              { code: t.mod03Code, name: t.mod03Name, desc: t.mod03Desc },
+              { code: t.mod04Code, name: t.mod04Name, desc: t.mod04Desc },
+              { code: t.mod05Code, name: t.mod05Name, desc: t.mod05Desc },
+              { code: t.mod06Code, name: t.mod06Name, desc: t.mod06Desc },
+              { code: t.mod07Code, name: t.mod07Name, desc: t.mod07Desc },
+              { code: t.mod08Code, name: t.mod08Name, desc: t.mod08Desc },
+            ].map((mod, i) => (
+              <Reveal key={i} delay={i * 0.06}>
+                <div style={{
+                  background: "rgba(255,255,255,.02)",
+                  border: `1px solid ${C.bd1}`,
+                  borderRadius: 14,
+                  padding: "24px 26px",
+                  borderLeft: `3px solid ${C.gold}`,
+                  transition: "all .3s",
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
+                    <span style={{
+                      fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700,
+                      color: C.gold, background: C.goldDim,
+                      border: `1px solid ${C.goldBorder}`, borderRadius: 6,
+                      padding: "3px 8px", letterSpacing: ".06em",
+                    }}>{mod.code}</span>
+                  </div>
+                  <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 700, color: "#fff", marginBottom: 6 }}>{mod.name}</h3>
+                  <p style={{ fontSize: 14, color: C.gray2, lineHeight: 1.7, margin: 0 }}>{mod.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+      </div>
+
+      {/* ═══════════════════════════════════════════════
            GOVERNANCE LOOP — Animated diagram
          ═══════════════════════════════════════════════ */}
-      <section id="methodology" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
+      <section id="governance-loop" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
           <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// {t.loopBadge}</div></Reveal>
           <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16 }}>{t.loopTitle}</h2></Reveal>
@@ -943,7 +1133,7 @@ export default function TheStandardPage() {
            ECOSYSTEM — Flow diagram + cards
          ═══════════════════════════════════════════════ */}
       <section id="ecosystem" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
-        <div id="maturity" style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px" }}>
           <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24, textAlign: "center" }}>// {t.ecoBadge}</div></Reveal>
           <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16, textAlign: "center" }}>{t.ecoTitle}</h2></Reveal>
           <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, textAlign: "center", maxWidth: 560, margin: "0 auto" }}>{t.ecoSubtitle}</p></Reveal>

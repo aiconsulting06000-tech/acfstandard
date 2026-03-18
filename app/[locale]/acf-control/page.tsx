@@ -221,9 +221,9 @@ const ui = {
       "A sovereignty supervision platform",
     ],
 
-    // 6 Core Modules
+    // 8 Core Modules
     sectionArchitecture: "Architecture",
-    modulesTitle: "6 Core Modules",
+    modulesTitle: "8 Core Modules",
     modulesSubtitle: "Each module serves one purpose: keeping humans in command of machine decisions.",
 
     mod00Title: "Sovereignty Score",
@@ -260,6 +260,14 @@ const ui = {
     mod05Escalations: "Escalations",
     mod05Overrides: "Overrides",
     mod05HumanLoad: "Human load",
+
+    mod06Title: "Continuous Governance",
+    mod06Sub: "Monthly reviews, annual compliance audits, governance evolution tracking.",
+    mod06Timeline: "Monthly review → Quarterly audit → Annual certification",
+
+    mod07Title: "Crisis Management",
+    mod07Sub: "3-level incident classification, kill switch drills, post-mortem protocols.",
+    mod07Levels: "Level 1: Pause · Level 2: Contain · Level 3: Kill",
 
     // Drift Engine
     sectionKeyDiff: "Key Differentiator",
@@ -480,9 +488,9 @@ const ui = {
       "Une plateforme de supervision de la souveraineté",
     ],
 
-    // 6 Core Modules
+    // 8 Core Modules
     sectionArchitecture: "Architecture",
-    modulesTitle: "6 modules fondamentaux",
+    modulesTitle: "8 modules fondamentaux",
     modulesSubtitle: "Chaque module a un objectif : maintenir l'humain aux commandes des décisions machines.",
 
     mod00Title: "Score de souveraineté",
@@ -519,6 +527,14 @@ const ui = {
     mod05Escalations: "Escalades",
     mod05Overrides: "Dérogations",
     mod05HumanLoad: "Charge humaine",
+
+    mod06Title: "Gouvernance continue",
+    mod06Sub: "Revues mensuelles, audits de conformité annuels, suivi de l'évolution de la gouvernance.",
+    mod06Timeline: "Revue mensuelle → Audit trimestriel → Certification annuelle",
+
+    mod07Title: "Gestion de crise",
+    mod07Sub: "Classification d'incidents à 3 niveaux, exercices de kill switch, protocoles post-mortem.",
+    mod07Levels: "Niveau 1 : Pause · Niveau 2 : Contenir · Niveau 3 : Kill",
 
     // Drift Engine
     sectionKeyDiff: "Différenciateur clé",
@@ -1072,6 +1088,28 @@ export default function ACFControlPage() {
                 <KPIMini label={t.mod05Escalations} value="3" trend="down" />
                 <KPIMini label={t.mod05Overrides} value="1" trend="down" />
                 <KPIMini label={t.mod05HumanLoad} value="18" unit="%" trend="up" />
+              </div>
+            </ModuleCard>
+
+            <ModuleCard id="ACF-06" title={t.mod06Title} subtitle={t.mod06Sub} icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {t.mod06Timeline.split(" → ").map((step: string, i: number) => (
+                  <div key={i} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <div style={{ width: 8, height: 8, borderRadius: "50%", background: i === 0 ? C.green : i === 1 ? C.amber : C.gold, flexShrink: 0 }} />
+                    <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray2 }}>{step}</span>
+                  </div>
+                ))}
+              </div>
+            </ModuleCard>
+
+            <ModuleCard id="ACF-07" title={t.mod07Title} subtitle={t.mod07Sub} icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                {t.mod07Levels.split(" · ").map((level: string, i: number) => (
+                  <div key={i} style={{ display: "flex", alignItems: "center", gap: 8, background: C.navy2, border: `1px solid ${C.bd1}`, borderRadius: 8, padding: "6px 10px" }}>
+                    <div style={{ width: 8, height: 8, borderRadius: "50%", background: i === 0 ? C.amber : i === 1 ? "#f97316" : C.red, flexShrink: 0 }} />
+                    <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray2 }}>{level}</span>
+                  </div>
+                ))}
               </div>
             </ModuleCard>
           </div>

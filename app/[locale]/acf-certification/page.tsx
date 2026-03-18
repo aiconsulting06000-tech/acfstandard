@@ -513,7 +513,7 @@ export default function ACFCertificationPage() {
       </section>
 
       {/* ━━━ ACF TRUST™ ━━━ */}
-      <section id="trust" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
+      <section id="levels" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <SectionLabel>{t.trustSectionLabel}</SectionLabel>
@@ -563,7 +563,7 @@ export default function ACFCertificationPage() {
       </section>
 
       {/* ━━━ WHAT ACF TRUST GUARANTEES ━━━ */}
-      <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
+      <section id="process" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <SectionLabel>{t.guaranteeLabel}</SectionLabel>
