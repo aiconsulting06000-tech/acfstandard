@@ -1,5 +1,6 @@
 "use client"
 import { useLocale } from 'next-intl'
+import AIAgent from "./components/AIAgent"
 import messagesEn from '../../messages/en.json'
 import messagesFr from '../../messages/fr.json'
 const messagesMap: Record<string, any> = { en: messagesEn, fr: messagesFr }
@@ -349,50 +350,10 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 .flegal a{font-size:12px;color:var(--gr);text-decoration:none}
 .flegal a:hover{color:var(--gold)}
 
-/* ═══ AI WIDGET ═══ */
-.aibtn{position:fixed;bottom:28px;right:28px;z-index:700;display:flex;align-items:center;gap:10px;background:var(--gold);border:none;border-radius:100px;padding:14px 22px;cursor:pointer;box-shadow:0 8px 32px var(--gold-glow);transition:.3s;font-family:'Inter',sans-serif}
-.aibtn:hover{background:var(--gold2);transform:translateY(-2px)}
-.aidonline{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0}
-.aiblabel strong{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;color:var(--navy);display:block}
-.aiblabel span{font-size:10px;font-family:'JetBrains Mono',monospace;color:var(--navy);opacity:.7}
+/* ═══ VIDEO MODAL OVERLAY ═══ */
 .aimodal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center}
 .aimodal.open{display:flex}
 .aimodalbg{position:absolute;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(6px)}
-.aimodalbox{position:relative;z-index:1;background:var(--w);color:var(--navy);border-radius:20px;width:800px;max-width:95vw;max-height:90vh;display:flex;flex-direction:column;overflow:hidden;animation:modin .3s cubic-bezier(.16,1,.3,1)}
-@keyframes modin{from{opacity:0;transform:scale(.95) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
-.aimodalhdr{padding:32px 40px 0;text-align:center;position:relative}
-.aimclose{position:absolute;top:20px;right:24px;background:transparent;border:none;font-size:24px;cursor:pointer;color:#999;line-height:1;transition:.2s}
-.aimclose:hover{color:var(--navy)}
-.aimbeta{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;color:#666;margin-bottom:8px}
-.aimtitle{font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:800;color:var(--navy);margin-bottom:4px;display:flex;align-items:center;justify-content:center;gap:10px}
-.aimtitle span{color:var(--gold)}
-.aimsub{font-size:15px;color:#555;margin-bottom:28px}
-.aiminpwrap{position:relative;padding:0 40px 20px}
-.aiminp{width:100%;border:2px solid var(--navy);border-radius:12px;padding:18px 56px 18px 22px;font-size:16px;font-family:'Inter',sans-serif;outline:none;color:var(--navy);background:var(--w);transition:.2s}
-.aiminp:focus{border-color:var(--gold)}
-.aiminp::placeholder{color:#999}
-.aimsend{position:absolute;right:56px;top:50%;transform:translateY(-50%);background:transparent;border:none;cursor:pointer;color:#999;transition:.2s;padding:4px}
-.aimsend:hover{color:var(--gold)}
-.aimtrend{padding:0 40px 24px}
-.aimtlabel{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.1em;color:#666;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.aimtlabel::before{content:'★';color:var(--gold)}
-.aimqs{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px}
-.aimqs::-webkit-scrollbar{height:3px}
-.aimqs::-webkit-scrollbar-thumb{background:#ddd;border-radius:2px}
-.aimq{border:1px solid #ddd;border-radius:10px;padding:12px 16px;font-size:13px;cursor:pointer;transition:.2s;background:var(--w);color:var(--navy);font-family:'Inter',sans-serif;flex-shrink:0;text-align:left;line-height:1.4;max-width:200px}
-.aimq:hover{border-color:var(--gold);color:var(--gold)}
-.aimdiscl{padding:16px 40px;border-top:1px solid #eee;font-size:11.5px;color:#888;text-align:center;line-height:1.5}
-.aimdiscl a{color:var(--navy);font-weight:700;text-decoration:none}
-.aimmsgs{padding:0 40px 16px;display:none;flex-direction:column;gap:10px;max-height:280px;overflow-y:auto}
-.aimmsgs.show{display:flex}
-.aimmsg{padding:12px 16px;border-radius:10px;font-size:14px;line-height:1.65;max-width:80%}
-.aimmsgb{background:#f0f4f8;color:var(--navy);align-self:flex-start}
-.aimmsgu{background:var(--navy3);color:var(--w);align-self:flex-end}
-.aimtyp{display:flex;gap:4px;align-items:center;padding:12px 16px;align-self:flex-start}
-.aimtyp span{width:6px;height:6px;background:var(--gold);border-radius:50%;animation:tdots 1.2s infinite}
-.aimtyp span:nth-child(2){animation-delay:.2s}
-.aimtyp span:nth-child(3){animation-delay:.4s}
-@keyframes tdots{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(-4px);opacity:1}}
 
 /* ═══ RESPONSIVE ═══ */
 @media(max-width:1024px){
@@ -423,8 +384,6 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   .mattrack{grid-template-columns:1fr 1fr;gap:20px}
   .matlinebg,.matlinefg{display:none}
   .ctasec{padding:80px 0}
-  .aibtn{right:16px;bottom:16px;padding:12px 16px}
-  .aiblabel span{display:none}
   .hstats{grid-template-columns:repeat(2,1fr)}
   .hs:nth-child(2){border-right:none}
   .hs:nth-child(3){border-top:1px solid var(--bd)}
@@ -1047,43 +1006,6 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   </div>
 </footer>
 
-<!-- AI BUTTON -->
-<button class="aibtn" id="aibtn">
-  <div class="aidonline"></div>
-  <div class="aiblabel"><strong>${m.ai.button.label}</strong><span>${m.ai.button.status}</span></div>
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--navy)"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
-</button>
-
-<!-- AI MODAL -->
-<div class="aimodal" id="aimodal">
-  <div class="aimodalbg" onclick="closeAI()"></div>
-  <div class="aimodalbox">
-    <div class="aimodalhdr">
-      <button class="aimclose" onclick="closeAI()">${m.ai.modal.close}</button>
-      <div class="aimbeta">${m.ai.modal.beta}</div>
-      <div class="aimtitle"><span>${m.ai.modal.title}</span> ★</div>
-      <p class="aimsub">${m.ai.modal.subtitle}</p>
-    </div>
-    <div class="aimmsgs" id="aimmsgs"></div>
-    <div class="aiminpwrap">
-      <input class="aiminp" id="aiminp" placeholder="${m.ai.modal.placeholder}" autocomplete="off">
-      <button class="aimsend" id="aimsend">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
-      </button>
-    </div>
-    <div class="aimtrend">
-      <div class="aimtlabel">${m.ai.modal.trending.label}</div>
-      <div class="aimqs">
-        <button class="aimq" onclick="askQ('${m.ai.modal.trending.q1}')">${m.ai.modal.trending.q1}</button>
-        <button class="aimq" onclick="askQ('${m.ai.modal.trending.q2}')">${m.ai.modal.trending.q2}</button>
-        <button class="aimq" onclick="askQ('${m.ai.modal.trending.q3}')">${m.ai.modal.trending.q3}</button>
-        <button class="aimq" onclick="askQ('${m.ai.modal.trending.q4}')">${m.ai.modal.trending.q4}</button>
-        <button class="aimq" onclick="askQ('${m.ai.modal.trending.q5}')">${m.ai.modal.trending.q5}</button>
-      </div>
-    </div>
-    <div class="aimdiscl">${m.ai.modal.disclaimer} <a href="/legal">${m.ai.modal.seeMore}</a></div>
-  </div>
-</div>
 
 <script>
 // ══ NEURAL ══
@@ -1149,7 +1071,7 @@ function showPanel(id){
   document.querySelectorAll('.mp').forEach(function(el){el.classList.toggle('active',el.id==='panel-'+id)});
 }
 document.getElementById('hambtn').addEventListener('click',openMega);
-addEventListener('keydown',function(e){if(e.key==='Escape'){closeMega();closeRegion();closeAI();closeVideoModal()}});
+addEventListener('keydown',function(e){if(e.key==='Escape'){closeMega();closeRegion();closeVideoModal()}});
 
 // ══ SCROLL REVEAL ══
 var ro=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.1});
@@ -1204,33 +1126,6 @@ if(tel){
 function openVideoModal(){document.getElementById('videomodal').classList.add('open');document.body.style.overflow='hidden'}
 function closeVideoModal(){document.getElementById('videomodal').classList.remove('open');document.body.style.overflow=''}
 
-// ══ AI ══
-var KB={
-  acf:'ACF — Agentic Commerce Framework® — is a proprietary governance methodology created by Vincent DORANGE. It defines how organizations deploy and supervise autonomous agentic systems. Built on 4 founding principles, 4 operational layers, 8 modules, and 17 proprietary tools. Released February 2026, registered INPI.',
-  cert:'ACF Certification: (1) Complete ACF Score Diagnostic, (2) Implement governance to Level 2, (3) Request independent audit by an ACF Practitioner, (4) Receive time-bound certification badge. Visit /certification for the 3 certification levels.',
-  dda:'The DDA — Délégué à la Décision Agentique — is the legal guardian of autonomous agents. They arbitrate inter-agent conflicts, validate non-delegable zones, manage the kill switch, and are accountable for governance compliance. Mandatory for ACF Level 2+.',
-  score:'ACF Score measures your Sovereignty Score across 6 axes: Autonomy, Control, Resilience, Dependency, Compliance, Technical Controls. Visit acf-score.com to run your assessment.',
-  principles:'ACF has 4 founding principles: (1) Séparation Décision/Exécution — humans define ends, agents execute within perimeters. (2) Zones Non Délégables — certain decisions are structurally locked. (3) Traçabilité & Interruptibilité — full traceability and 3-level kill switch. (4) Gouvernance Vivante — active, permanent governance with dedicated roles.',
-  def:'Great question. For detailed information, visit /standard or contact us at /contact. Our Practitioners provide personalized governance assessments for your organization.'
-};
-function getReply(m){
-  var l=m.toLowerCase();
-  if(l.includes('what is acf')||l.includes('who created')||l.includes('framework'))return KB.acf;
-  if(l.includes('certif'))return KB.cert;
-  if(l.includes('dda')||l.includes('delegat'))return KB.dda;
-  if(l.includes('score')||l.includes('sovereignty score'))return KB.score;
-  if(l.includes('principle'))return KB.principles;
-  return KB.def;
-}
-function addMsg(text,type){var msgs=document.getElementById('aimmsgs');msgs.classList.add('show');var d=document.createElement('div');d.className='aimmsg aimmsg'+type;d.textContent=text;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight}
-function showTyping(){var msgs=document.getElementById('aimmsgs');msgs.classList.add('show');var d=document.createElement('div');d.className='aimtyp';d.id='aimtyp';d.innerHTML='<span></span><span></span><span></span>';msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight}
-function hideTyping(){var t=document.getElementById('aimtyp');if(t)t.remove()}
-function sendMsg(text){if(!text)return;addMsg(text,'u');showTyping();setTimeout(function(){hideTyping();addMsg(getReply(text),'b')},700+Math.random()*400)}
-function askQ(q){document.getElementById('aiminp').value=q;sendMsg(q)}
-document.getElementById('aimsend').addEventListener('click',function(){var v=document.getElementById('aiminp').value.trim();if(v){document.getElementById('aiminp').value='';sendMsg(v)}});
-document.getElementById('aiminp').addEventListener('keydown',function(e){if(e.key==='Enter'){var v=this.value.trim();if(v){this.value='';sendMsg(v)}}});
-document.getElementById('aibtn').addEventListener('click',function(){document.getElementById('aimodal').classList.add('open');document.body.style.overflow='hidden'});
-function closeAI(){document.getElementById('aimodal').classList.remove('open');document.body.style.overflow=''}
 </script>
 <script>
 var REMAP={'/certification':'/acf-certification','/partners':'/acf-partners','/score':'/acf-score','/control':'/acf-control','/partners/login':'/acf-partners','/partners/apply':'/acf-partners','/method':'/standard','/academy':'/acf-certification','/research':'/blog','/privacy':'/legal','/terms':'/legal','/cookies':'/legal'};
@@ -1260,10 +1155,15 @@ export default function Home() {
   const locale = useLocale()
   const m = messagesMap[locale] || messagesMap.en
   return (
-    <iframe
-      srcDoc={buildHTML(locale, m)}
-      style={{position:"fixed",top:0,left:0,width:"100vw",height:"100vh",border:"none",zIndex:9999}}
-      title="ACF Standard"
-    />
+    <>
+      <iframe
+        srcDoc={buildHTML(locale, m)}
+        style={{position:"fixed",top:0,left:0,width:"100vw",height:"100vh",border:"none",zIndex:9999}}
+        title="ACF Standard"
+      />
+      <div style={{position:"fixed",bottom:0,right:0,zIndex:10000}}>
+        <AIAgent />
+      </div>
+    </>
   )
 }
