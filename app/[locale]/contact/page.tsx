@@ -265,6 +265,7 @@ export default function ACFContactPage() {
                   { icon: "🛡️", label: t.quickAction2, href: `/${locale}/acf-certification` },
                   { icon: "🤝", label: t.quickAction3, href: `/${locale}/acf-partners` },
                   { icon: "📖", label: t.quickAction4, href: `/${locale}/standard` },
+                  { icon: "📄", label: lang === "fr" ? "Télécharger le Livre Blanc ACF®" : "Download the ACF® White Paper", href: "/acf-whitepaper-fr.pdf" },
                 ].map(a => (
                   <a key={a.label} href={a.href} style={{
                     display: "flex", alignItems: "center", gap: 12, padding: "12px 14px",

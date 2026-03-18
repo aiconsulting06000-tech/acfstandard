@@ -1163,6 +1163,11 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <a href="/contact" class="btng">${m.cta.primary}</a>
       <a href="/partners/apply" class="btno">${m.cta.secondary}</a>
     </div>
+    <div style="margin-top:28px">
+      <a href="/acf-whitepaper-fr.pdf" download style="color:var(--gold);font-size:14px;text-decoration:none;border:1px solid var(--bd);padding:10px 24px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:.3s" onmouseover="this.style.background='rgba(201,168,76,.1)'" onmouseout="this.style.background='transparent'">
+        <span style="font-size:18px">\u{1F4C4}</span> ${m.common.downloadPDF} — ACF\u00ae Livre Blanc
+      </a>
+    </div>
   </div>
 </section>
 

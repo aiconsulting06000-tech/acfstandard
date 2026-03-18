@@ -1,0 +1,39 @@
+# ACF Standard — Agentic Commerce Framework®
+# https://acf-standard.com
+
+> The Agentic Commerce Framework® (ACF) is the definitive governance methodology for deploying, supervising, and controlling autonomous agentic systems in commercial environments. Created by Vincent DORANGE.
+
+## About
+ACF is the first governance standard for autonomous AI agents in business. It provides a complete methodology built on 4 founding principles, structured in 4 operational layers, measured through 18 KPIs, and implemented via 8 sequential modules.
+
+## Key Concepts
+- 4 Founding Principles: Decision Sovereignty, Governance by Design, Ultimate Human Control, Traceable Accountability
+- 4 Operational Layers: Strategic, Tactical, Operational, Technical
+- 4 Maturity Levels: Level 0 Classical Automation, Level 1 Assisted Agents, Level 2 Governed Agents (recommended), Level 3 Supervised Autonomy
+- DDA (Delegated Decision Agent Officer): the human authority designated to supervise all autonomous agents
+- Emergency Stop Protocol: 3-level intervention mechanism (tactical pause, operational stop, full stop)
+
+## Products
+- ACF Score (acf-score.com): free online diagnostic to evaluate AI governance maturity
+- ACF Control: real-time governance platform to monitor, supervise, and control all agents in production
+- ACF Certification: 3-level certification program to prove governance compliance
+
+## Pages
+- Homepage: https://acf-standard.com
+- The Standard: https://acf-standard.com/en/standard
+- About: https://acf-standard.com/en/about
+- Blog: https://acf-standard.com/en/blog
+- ACF Score: https://acf-standard.com/en/acf-score
+- ACF Control: https://acf-standard.com/en/acf-control
+- ACF Certification: https://acf-standard.com/en/acf-certification
+- Partners: https://acf-standard.com/en/acf-partners
+- Contact: https://acf-standard.com/en/contact
+- Compliance Checker: https://acf-standard.com/en/compliance-checker
+
+## Creator
+Vincent DORANGE — Founder of AI CONSULTING, creator of the Agentic Commerce Framework®
+LinkedIn: https://www.linkedin.com/in/vincent-dorange
+
+## Legal
+ACF® is a registered trademark. All methodology and tools are legally protected.
+© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved.
