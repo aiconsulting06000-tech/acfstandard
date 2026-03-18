@@ -1,4 +1,4 @@
-export async function callClaude(userMessage: string, locale: string = "en"): Promise<string> {
+export async function callClaude(userMessage: string, locale: string = "en", history: Array<{role: string; content: string}> = []): Promise<string> {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) throw new Error("Missing ANTHROPIC_API_KEY environment variable.");
 
@@ -22,7 +22,8 @@ WHAT YOU KNOW:
 - Partners: ACF works through a network of certified partners (consultants, integrators) who can audit and implement in your organization
 - Budget: ACF Score is free. ACF Control and Certification pricing depends on organization size and needs — contact the team for a quote.
 - Implementation: timeline depends on current maturity. Typically a few weeks for initial assessment, a few months for full deployment.
-- Audits: ACF Score is self-service online. For in-depth audits, certified partners can intervene on-site.
+- IMPORTANT — Audit is MANDATORY: before deploying ACF, an audit of the organization is performed to assess the current state of AI governance, identify gaps, map decision zones, and define the deployment roadmap. This audit is a prerequisite — you cannot skip it. It covers agent inventory, decision mapping, risk zones, and maturity assessment. It can be done by the ACF team or by certified partners on-site.
+- Audits: ACF Score is the first self-service diagnostic online (free). But for full ACF deployment, an in-depth organizational audit is required. Certified partners or the ACF team can perform this audit on-site in your organization.
 
 PRODUCT RECOMMENDATIONS (be specific, not always the same):
 - General curiosity about ACF -> explain briefly, suggest ACF Score to start
@@ -60,7 +61,10 @@ Answer in ${locale === "fr" ? "French" : "English"}. Plain text only. Be helpful
       model: "claude-sonnet-4-20250514",
       max_tokens: 350,
       system: systemPrompt,
-      messages: [{ role: "user", content: userMessage }],
+      messages: [
+        ...history.slice(-10).map(m => ({ role: m.role as "user" | "assistant", content: m.content })),
+        { role: "user" as const, content: userMessage },
+      ],
     }),
   });
 

@@ -186,10 +186,15 @@ export default function AIAgent() {
     setLoading(true);
 
     try {
+      // Build conversation history for context
+      const history = messages.map(m => ({
+        role: m.type === "user" ? "user" : "assistant",
+        content: m.text,
+      }));
       const res = await fetch("/api/claude", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt: text.trim(), locale }),
+        body: JSON.stringify({ prompt: text.trim(), locale, history }),
       });
       const data = await res.json();
       const botText = data.text || data.error || "Error";
