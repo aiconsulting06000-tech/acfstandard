@@ -979,7 +979,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
           <div id="cin-logo" style="position:relative;width:90px;height:90px;border-radius:18px;background:linear-gradient(135deg,#c9a84c,#e8c96a);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:900;color:#050c1a;margin:0 auto;transform:scale(0) rotate(-180deg);transition:none">ACF</div>
         </div>
         <div id="cin-title1" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,3.2vw,40px);font-weight:800;color:#fff;opacity:0;transform:translateY(15px);transition:all .6s cubic-bezier(.16,1,.3,1)">Agentic Commerce</div>
-        <div id="cin-title2" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,3.2vw,40px);font-weight:800;opacity:0;transform:translateY(15px);transition:all .6s cubic-bezier(.16,1,.3,1) .15s" class="cin-glow">Framework<span style="color:#e8c96a">(R)</span></div>
+        <div id="cin-title2" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,3.2vw,40px);font-weight:800;opacity:0;transform:translateY(15px);transition:all .6s cubic-bezier(.16,1,.3,1) .15s" class="cin-glow">Framework<span style="color:#e8c96a;font-size:clamp(14px,2vw,24px);vertical-align:super">\u00ae</span></div>
         <div id="cin-tagline" style="font-size:clamp(12px,1.3vw,15px);color:rgba(255,255,255,.45);margin-top:16px;letter-spacing:.08em;opacity:0;transition:opacity .8s .5s">
           ${locale === 'fr' ? 'Le standard mondial de gouvernance des agents IA' : 'The global standard for AI agent governance'}
         </div>
@@ -996,6 +996,17 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         </div>
       </div>
 
+      <!-- Scene 4b: 4 Operational Layers -->
+      <div class="cin-scene" id="cin-s4b" style="opacity:0;width:100%">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(201,168,76,.5);margin-bottom:28px">// ${locale === 'fr' ? '4 COUCHES OPERATIONNELLES' : '4 OPERATIONAL LAYERS'}</div>
+        <div style="display:flex;flex-direction:column;gap:10px;max-width:600px;margin:0 auto">
+          <div class="cin-layer" style="opacity:0;display:flex;align-items:center;gap:16px;padding:14px 20px;border-radius:12px;border:1px solid rgba(201,168,76,.15);background:rgba(201,168,76,.06);backdrop-filter:blur(4px)"><div style="font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:900;color:#c9a84c;min-width:32px">01</div><div><div style="font-size:14px;font-weight:700;color:#fff">${locale === 'fr' ? 'Strategique' : 'Strategic'}</div><div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:2px">${locale === 'fr' ? 'Charte de souverainete, comite de gouvernance' : 'Sovereignty charter, governance committee'}</div></div></div>
+          <div class="cin-layer" style="opacity:0;display:flex;align-items:center;gap:16px;padding:14px 20px;border-radius:12px;border:1px solid rgba(201,168,76,.15);background:rgba(201,168,76,.06);backdrop-filter:blur(4px)"><div style="font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:900;color:#c9a84c;min-width:32px">02</div><div><div style="font-size:14px;font-weight:700;color:#fff">${locale === 'fr' ? 'Tactique' : 'Tactical'}</div><div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:2px">${locale === 'fr' ? 'Objectifs ponderes, seuils d escalade, role DDA' : 'Weighted objectives, escalation thresholds, DDA role'}</div></div></div>
+          <div class="cin-layer" style="opacity:0;display:flex;align-items:center;gap:16px;padding:14px 20px;border-radius:12px;border:1px solid rgba(201,168,76,.15);background:rgba(201,168,76,.06);backdrop-filter:blur(4px)"><div style="font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:900;color:#c9a84c;min-width:32px">03</div><div><div style="font-size:14px;font-weight:700;color:#fff">${locale === 'fr' ? 'Operationnelle' : 'Operational'}</div><div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:2px">${locale === 'fr' ? 'Mandat par agent, perimetre d interaction' : 'Per-agent mandate, interaction perimeter'}</div></div></div>
+          <div class="cin-layer" style="opacity:0;display:flex;align-items:center;gap:16px;padding:14px 20px;border-radius:12px;border:1px solid rgba(201,168,76,.15);background:rgba(201,168,76,.06);backdrop-filter:blur(4px)"><div style="font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:900;color:#c9a84c;min-width:32px">04</div><div><div style="font-size:14px;font-weight:700;color:#fff">${locale === 'fr' ? 'Technique' : 'Technical'}</div><div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:2px">${locale === 'fr' ? '18 KPIs de souverainete, tableaux de bord temps reel' : '18 sovereignty KPIs, real-time dashboards'}</div></div></div>
+        </div>
+      </div>
+
       <!-- Scene 5: Stats — explosive counters -->
       <div class="cin-scene" id="cin-s5" style="opacity:0;width:100%">
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:740px;margin:0 auto">
@@ -1006,6 +1017,24 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         </div>
         <div id="cin-punchline" style="margin-top:36px;font-family:'Space Grotesk',sans-serif;font-size:clamp(16px,2vw,24px);font-weight:700;color:#fff;opacity:0;transition:opacity .8s .6s">
           ${locale === 'fr' ? 'Un framework. Une vision. Un standard.' : 'One framework. One vision. One standard.'}
+        </div>
+      </div>
+
+      <!-- Scene 5b: Audit + DDA — mandatory step -->
+      <div class="cin-scene" id="cin-s5b" style="opacity:0;width:100%">
+        <div style="max-width:600px;margin:0 auto;text-align:center">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(239,68,68,.6);margin-bottom:16px">// ${locale === 'fr' ? 'PREREQUIS OBLIGATOIRE' : 'MANDATORY PREREQUISITE'}</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(20px,3vw,32px);font-weight:800;color:#fff;line-height:1.3;margin-bottom:20px">
+            ${locale === 'fr' ? 'Pas de deploiement<br>sans audit prealable.' : 'No deployment<br>without prior audit.'}
+          </div>
+          <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:24px">
+            <div class="cin-audit-step" style="opacity:0;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:12px;padding:16px 20px;flex:1;min-width:140px;max-width:180px;text-align:center"><div style="font-size:20px;margin-bottom:6px">&#128270;</div><div style="font-size:12px;font-weight:700;color:#c9a84c">${locale === 'fr' ? 'Cartographie' : 'Mapping'}</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">${locale === 'fr' ? 'Inventaire agents & decisions' : 'Agent & decision inventory'}</div></div>
+            <div class="cin-audit-step" style="opacity:0;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:12px;padding:16px 20px;flex:1;min-width:140px;max-width:180px;text-align:center"><div style="font-size:20px;margin-bottom:6px">&#9888;&#65039;</div><div style="font-size:12px;font-weight:700;color:#c9a84c">${locale === 'fr' ? 'Zones de risque' : 'Risk zones'}</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">${locale === 'fr' ? 'Identification des failles' : 'Identify vulnerabilities'}</div></div>
+            <div class="cin-audit-step" style="opacity:0;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:12px;padding:16px 20px;flex:1;min-width:140px;max-width:180px;text-align:center"><div style="font-size:20px;margin-bottom:6px">&#128203;</div><div style="font-size:12px;font-weight:700;color:#c9a84c">${locale === 'fr' ? 'Feuille de route' : 'Roadmap'}</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">${locale === 'fr' ? 'Plan de deploiement' : 'Deployment plan'}</div></div>
+          </div>
+          <div style="display:inline-flex;align-items:center;gap:10px;padding:12px 24px;border-radius:10px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25)">
+            <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#c9a84c">${locale === 'fr' ? 'Supervise par le DDA — Delegated Decision Agent Officer' : 'Supervised by the DDA — Delegated Decision Agent Officer'}</div>
+          </div>
         </div>
       </div>
 
@@ -1422,7 +1451,7 @@ function startCinematic(){
   document.querySelectorAll('.cin-counter').forEach(function(c){c.textContent='0';c.style.textShadow='none'});
   document.querySelectorAll('.cin-card').forEach(function(c){c.style.transition='none';c.style.opacity='0'});
   var progress=document.getElementById('cin-progress');
-  var total=34000;var t0=Date.now();
+  var total=65000;var t0=Date.now();
   var pInt=setInterval(function(){var p=Math.min((Date.now()-t0)/total*100,100);progress.style.width=p+'%';if(p>=100)clearInterval(pInt)},60);
 
   initParticles();
@@ -1496,20 +1525,18 @@ function startCinematic(){
     cinDelay(1000).then(function(){
       document.getElementById('cin-tagline').style.opacity='1';
     });
-    return cinDelay(4200);
+    return cinDelay(5000);
   }).then(function(){
-    // === SCENE 4: Principles (4.5s) ===
+    // === SCENE 4: Principles (6s) ===
     return hideScene('cin-s3');
   }).then(function(){
     showScene('cin-s4',{fadeIn:.5});
-    // Cards fly in from different directions
     var cards=document.querySelectorAll('.cin-card');
     cards.forEach(function(card,i){
-      cinDelay(200+i*250).then(function(){
+      cinDelay(300+i*350).then(function(){
         card.style.transition='all .7s cubic-bezier(.16,1,.3,1)';
         card.style.opacity='1';
         card.style.transform='translateX(0) translateY(0) scale(1)';
-        // Mini burst on each card
         if(window._cinSpawnBurst){
           var rect=card.getBoundingClientRect();
           var cr=document.getElementById('cinematic-particles').getBoundingClientRect();
@@ -1517,46 +1544,69 @@ function startCinematic(){
         }
       });
     });
-    return cinDelay(4200);
+    return cinDelay(6000);
   }).then(function(){
-    // === SCENE 5: Stats (4.5s) ===
+    // === SCENE 4b: Layers (6s) ===
     return hideScene('cin-s4');
+  }).then(function(){
+    showScene('cin-s4b',{fadeIn:.5});
+    var layers=document.querySelectorAll('.cin-layer');
+    layers.forEach(function(l,i){
+      cinDelay(400+i*500).then(function(){
+        l.style.transition='opacity .5s,transform .5s';
+        l.style.opacity='1';
+        l.style.transform='translateX(0)';
+      });
+    });
+    return cinDelay(6000);
+  }).then(function(){
+    // === SCENE 5: Stats (6s) ===
+    return hideScene('cin-s4b');
   }).then(function(){
     showScene('cin-s5',{fadeIn:.5});
     animateCounters();
-    cinDelay(1500).then(function(){
+    cinDelay(2000).then(function(){
       document.getElementById('cin-punchline').style.opacity='1';
       spawnShockwave();
     });
-    return cinDelay(4200);
+    return cinDelay(6000);
   }).then(function(){
-    // === SCENE 6: ACF Control Dashboard (6s) ===
+    // === SCENE 5b: Audit + DDA (7s) ===
     return hideScene('cin-s5');
   }).then(function(){
+    showScene('cin-s5b',{fadeIn:.5});
+    var steps=document.querySelectorAll('.cin-audit-step');
+    steps.forEach(function(s,i){
+      cinDelay(600+i*600).then(function(){
+        s.style.transition='opacity .5s,transform .5s';
+        s.style.opacity='1';
+      });
+    });
+    return cinDelay(7000);
+  }).then(function(){
+    // === SCENE 6: ACF Control Dashboard (8s) ===
+    return hideScene('cin-s5b');
+  }).then(function(){
     showScene('cin-s6',{fadeIn:.5});
-    // Animate clock
     var clockEl=document.getElementById('ctrl-clock');
     if(clockEl){var now=new Date();clockEl.textContent=now.toLocaleTimeString('fr-FR')}
     var clockInt=setInterval(function(){if(clockEl){var n=new Date();clockEl.textContent=n.toLocaleTimeString('fr-FR')}},1000);
     cinTimers.push(clockInt);
-    // Animate score counter 0->74
     cinDelay(400).then(function(){
       var scoreEl=document.getElementById('ctrl-score');
       var barEl=document.getElementById('ctrl-bar');
       if(barEl)barEl.style.width='74%';
       if(scoreEl){var sv=0;var sint=setInterval(function(){sv+=2;if(sv>=74){sv=74;clearInterval(sint)}scoreEl.textContent=sv},25);cinTimers.push(sint)}
     });
-    // Agent cards appear one by one
     var agents=document.querySelectorAll('.ctrl-agent');
     agents.forEach(function(a,i){
-      cinDelay(1000+i*400).then(function(){a.style.transition='opacity .4s,transform .4s';a.style.opacity='1';a.style.transform='translateY(0)'});
+      cinDelay(1200+i*500).then(function(){a.style.transition='opacity .4s,transform .4s';a.style.opacity='1';a.style.transform='translateY(0)'});
     });
-    // Log entries slide in
     var logs=document.querySelectorAll('.ctrl-log');
     logs.forEach(function(l,i){
-      cinDelay(2200+i*500).then(function(){l.style.transition='opacity .4s,transform .4s';l.style.opacity='1'});
+      cinDelay(2800+i*600).then(function(){l.style.transition='opacity .4s,transform .4s';l.style.opacity='1'});
     });
-    return cinDelay(6000);
+    return cinDelay(8000);
   }).then(function(){
     // === SCENE 7: CTA — stays ===
     return hideScene('cin-s6');
