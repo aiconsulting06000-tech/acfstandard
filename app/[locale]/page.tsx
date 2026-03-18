@@ -267,10 +267,19 @@ section{padding:60px 0;position:relative;z-index:1}
 .hxflow-dot.rev{animation:hxflowrev 3s linear infinite}
 @keyframes hxflowrev{0%{right:80px;left:auto;opacity:0}5%{opacity:1}95%{opacity:1}100%{right:calc(100% - 80px);opacity:0}}
 
-/* ═══ CINEMATIC CARDS ═══ */
-.cin-card{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px 16px;text-align:center;transition:all .5s cubic-bezier(.16,1,.3,1)}
-.cin-card:hover{border-color:rgba(201,168,76,.4);background:rgba(201,168,76,.1)}
-.cin-scene{will-change:opacity,transform}
+/* ═══ CINEMATIC ═══ */
+.cin-scene{will-change:opacity,transform;position:absolute;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.cin-card{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px 16px;text-align:center;transition:all .6s cubic-bezier(.16,1,.3,1)}
+.cin-card:hover{border-color:rgba(201,168,76,.5);background:rgba(201,168,76,.12);transform:translateY(-4px) !important}
+@keyframes cinGlitch{0%{clip-path:inset(40% 0 61% 0)}20%{clip-path:inset(92% 0 1% 0)}40%{clip-path:inset(43% 0 1% 0)}60%{clip-path:inset(25% 0 58% 0)}80%{clip-path:inset(54% 0 7% 0)}100%{clip-path:inset(58% 0 43% 0)}}
+@keyframes cinScanline{0%{top:-5%}100%{top:105%}}
+@keyframes cinPulseRing{0%{transform:translate(-50%,-50%) scale(.3);opacity:1}100%{transform:translate(-50%,-50%) scale(3);opacity:0}}
+@keyframes cinFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes cinShake{0%,100%{transform:translateX(0)}10%{transform:translateX(-8px)}20%{transform:translateX(8px)}30%{transform:translateX(-5px)}40%{transform:translateX(5px)}50%{transform:translateX(-2px)}60%{transform:translateX(2px)}}
+@keyframes cinTypeBar{0%,100%{opacity:1}50%{opacity:0}}
+.cin-typing-cursor{display:inline-block;width:2px;height:.85em;background:#c9a84c;vertical-align:middle;margin-left:3px;animation:cinTypeBar .6s step-end infinite}
+.cin-glow{text-shadow:0 0 20px rgba(201,168,76,.6),0 0 40px rgba(201,168,76,.3),0 0 80px rgba(201,168,76,.15)}
+.cin-scanline{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.15),transparent);z-index:5;pointer-events:none;animation:cinScanline 3s linear infinite}
 
 /* ═══ VIDEO SECTION ═══ */
 .videosec{background:var(--navy3);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
@@ -914,96 +923,111 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- VIDEO MODAL — CINEMATIC ANIMATION -->
 <div class="aimodal" id="videomodal" style="z-index:1100">
   <div class="aimodalbg" onclick="closeVideoModal()"></div>
-  <div id="cinematic-container" style="position:relative;z-index:1;width:960px;max-width:95vw;background:#000;border-radius:14px;overflow:hidden;aspect-ratio:16/9;">
-    <button onclick="closeVideoModal()" style="position:absolute;top:12px;right:12px;z-index:100;background:rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">×</button>
+  <div id="cinematic-container" style="position:relative;z-index:1;width:1060px;max-width:96vw;background:#030810;border-radius:16px;overflow:hidden;aspect-ratio:16/9;border:1px solid rgba(201,168,76,.15);box-shadow:0 0 80px rgba(201,168,76,.08)">
+    <button onclick="closeVideoModal()" style="position:absolute;top:14px;right:14px;z-index:100;background:rgba(0,0,0,.8);border:1px solid rgba(255,255,255,.15);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;backdrop-filter:blur(10px)" onmouseover="this.style.borderColor='#c9a84c';this.style.color='#c9a84c'" onmouseout="this.style.borderColor='rgba(255,255,255,.15)';this.style.color='#fff'">x</button>
 
-    <!-- Canvas for particles -->
+    <!-- Canvas: particles + effects -->
     <canvas id="cinematic-particles" style="position:absolute;inset:0;width:100%;height:100%;z-index:1"></canvas>
 
-    <!-- Grid overlay -->
-    <div style="position:absolute;inset:0;z-index:2;background-image:linear-gradient(rgba(201,168,76,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none"></div>
+    <!-- Scanline effect -->
+    <div class="cin-scanline"></div>
 
-    <!-- Cinematic content layers -->
+    <!-- Vignette overlay -->
+    <div style="position:absolute;inset:0;z-index:3;background:radial-gradient(ellipse at center,transparent 50%,rgba(0,0,0,.6));pointer-events:none"></div>
+
+    <!-- Grid overlay -->
+    <div id="cin-grid" style="position:absolute;inset:0;z-index:2;background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;opacity:0;transition:opacity 1.5s"></div>
+
+    <!-- Shockwave ring container -->
+    <div id="cin-shockwave" style="position:absolute;inset:0;z-index:4;pointer-events:none;overflow:hidden"></div>
+
+    <!-- Content -->
     <div id="cin-content" style="position:absolute;inset:0;z-index:10;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:40px">
 
-      <!-- Scene 1: The Problem -->
+      <!-- Scene 0: Blackout + glitch intro -->
+      <div class="cin-scene" id="cin-s0" style="opacity:0">
+        <div id="cin-glitch-text" style="font-family:'JetBrains Mono',monospace;font-size:clamp(11px,1.2vw,14px);color:rgba(201,168,76,.8);letter-spacing:.3em;text-transform:uppercase"></div>
+      </div>
+
+      <!-- Scene 1: The Problem — typing effect -->
       <div class="cin-scene" id="cin-s1" style="opacity:0">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(201,168,76,.6);margin-bottom:20px">// ${locale === 'fr' ? 'LE CONSTAT' : 'THE REALITY'}</div>
-        <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,3.5vw,42px);font-weight:800;color:#fff;line-height:1.2;max-width:700px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(201,168,76,.5);margin-bottom:20px">// ${locale === 'fr' ? 'ALERTE SYSTEME' : 'SYSTEM ALERT'}</div>
+        <div id="cin-type1" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,3.5vw,44px);font-weight:800;color:#fff;line-height:1.2;max-width:750px"></div>
+        <div id="cin-sub1" style="font-size:clamp(13px,1.5vw,16px);color:rgba(255,255,255,.4);margin-top:20px;max-width:550px;opacity:0;transition:opacity .8s">
           ${locale === 'fr'
-            ? 'Les agents autonomes prennent des <span style="color:#c9a84c">décisions</span> à votre place.'
-            : 'Autonomous agents are making <span style="color:#c9a84c">decisions</span> on your behalf.'}
+            ? 'Pricing. Scoring. Engagement client. Logistique. Supply chain. RH.'
+            : 'Pricing. Scoring. Customer engagement. Logistics. Supply chain. HR.'}
         </div>
-        <div style="font-size:clamp(13px,1.5vw,16px);color:rgba(255,255,255,.5);margin-top:16px;max-width:500px">
+      </div>
+
+      <!-- Scene 2: The Question — dramatic shake -->
+      <div class="cin-scene" id="cin-s2" style="opacity:0">
+        <div id="cin-question" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4.5vw,56px);font-weight:900;color:#fff;line-height:1.1">
           ${locale === 'fr'
-            ? 'Pricing, scoring, engagement client, logistique...<br>Sans cadre de gouvernance.'
-            : 'Pricing, scoring, customer engagement, logistics...<br>Without a governance framework.'}
+            ? 'Qui <span style="color:#ef4444;text-shadow:0 0 30px rgba(239,68,68,.5)">gouverne</span><br>vos agents ?'
+            : 'Who <span style="color:#ef4444;text-shadow:0 0 30px rgba(239,68,68,.5)">governs</span><br>your agents?'}
+        </div>
+        <div style="width:60px;height:2px;background:linear-gradient(90deg,transparent,#ef4444,transparent);margin:20px auto 0;opacity:.6"></div>
+      </div>
+
+      <!-- Scene 3: ACF Logo — explosive reveal -->
+      <div class="cin-scene" id="cin-s3" style="opacity:0">
+        <div id="cin-logo-wrap" style="position:relative;margin-bottom:28px">
+          <div id="cin-logo-ring1" style="position:absolute;top:50%;left:50%;width:120px;height:120px;border:1px solid rgba(201,168,76,.3);border-radius:50%;transform:translate(-50%,-50%) scale(0);opacity:0"></div>
+          <div id="cin-logo-ring2" style="position:absolute;top:50%;left:50%;width:180px;height:180px;border:1px solid rgba(201,168,76,.15);border-radius:50%;transform:translate(-50%,-50%) scale(0);opacity:0"></div>
+          <div id="cin-logo" style="position:relative;width:90px;height:90px;border-radius:18px;background:linear-gradient(135deg,#c9a84c,#e8c96a);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:900;color:#050c1a;margin:0 auto;transform:scale(0) rotate(-180deg);transition:none">ACF</div>
+        </div>
+        <div id="cin-title1" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,3.2vw,40px);font-weight:800;color:#fff;opacity:0;transform:translateY(15px);transition:all .6s cubic-bezier(.16,1,.3,1)">Agentic Commerce</div>
+        <div id="cin-title2" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,3.2vw,40px);font-weight:800;opacity:0;transform:translateY(15px);transition:all .6s cubic-bezier(.16,1,.3,1) .15s" class="cin-glow">Framework<span style="color:#e8c96a">(R)</span></div>
+        <div id="cin-tagline" style="font-size:clamp(12px,1.3vw,15px);color:rgba(255,255,255,.45);margin-top:16px;letter-spacing:.08em;opacity:0;transition:opacity .8s .5s">
+          ${locale === 'fr' ? 'Le standard mondial de gouvernance des agents IA' : 'The global standard for AI agent governance'}
         </div>
       </div>
 
-      <!-- Scene 2: The Question -->
-      <div class="cin-scene" id="cin-s2" style="opacity:0;position:absolute">
-        <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,4vw,48px);font-weight:800;color:#fff;line-height:1.15">
-          ${locale === 'fr'
-            ? 'Qui <span style="color:#ef4444">gouverne</span><br>vos agents ?'
-            : 'Who <span style="color:#ef4444">governs</span><br>your agents?'}
+      <!-- Scene 4: 4 Principles — cards fly in from sides -->
+      <div class="cin-scene" id="cin-s4" style="opacity:0;width:100%">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(201,168,76,.5);margin-bottom:28px">// ${locale === 'fr' ? '4 PRINCIPES FONDATEURS' : '4 FOUNDING PRINCIPLES'}</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:840px;margin:0 auto">
+          <div class="cin-card" data-dir="left" style="opacity:0;transform:translateX(-80px) scale(.8)"><div style="font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:900;color:#c9a84c;line-height:1">01</div><div style="font-size:12px;color:#fff;margin-top:8px;font-weight:700">${locale === 'fr' ? 'Separation' : 'Separation'}</div><div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:4px;line-height:1.4">${locale === 'fr' ? 'Decision / Execution' : 'Decision / Execution'}</div></div>
+          <div class="cin-card" data-dir="bottom" style="opacity:0;transform:translateY(60px) scale(.8)"><div style="font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:900;color:#c9a84c;line-height:1">02</div><div style="font-size:12px;color:#fff;margin-top:8px;font-weight:700">${locale === 'fr' ? 'Zones' : 'Zones'}</div><div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:4px;line-height:1.4">${locale === 'fr' ? 'Non delegables' : 'Non-delegable'}</div></div>
+          <div class="cin-card" data-dir="top" style="opacity:0;transform:translateY(-60px) scale(.8)"><div style="font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:900;color:#c9a84c;line-height:1">03</div><div style="font-size:12px;color:#fff;margin-top:8px;font-weight:700">${locale === 'fr' ? 'Tracabilite' : 'Traceability'}</div><div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:4px;line-height:1.4">${locale === 'fr' ? '& Interruptibilite' : '& Interruptibility'}</div></div>
+          <div class="cin-card" data-dir="right" style="opacity:0;transform:translateX(80px) scale(.8)"><div style="font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:900;color:#c9a84c;line-height:1">04</div><div style="font-size:12px;color:#fff;margin-top:8px;font-weight:700">${locale === 'fr' ? 'Gouvernance' : 'Governance'}</div><div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:4px;line-height:1.4">${locale === 'fr' ? 'Vivante' : 'Living'}</div></div>
         </div>
       </div>
 
-      <!-- Scene 3: The Answer — ACF -->
-      <div class="cin-scene" id="cin-s3" style="opacity:0;position:absolute">
-        <div id="cin-logo" style="width:80px;height:80px;border-radius:16px;background:linear-gradient(135deg,#c9a84c,#e8c96a);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:900;color:#050c1a;margin:0 auto 24px;box-shadow:0 0 60px rgba(201,168,76,.4);transform:scale(0)">ACF</div>
-        <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(20px,3vw,36px);font-weight:800;color:#fff;margin-bottom:6px">Agentic Commerce</div>
-        <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(20px,3vw,36px);font-weight:800;color:#c9a84c">Framework®</div>
-        <div style="font-size:clamp(12px,1.3vw,15px);color:rgba(255,255,255,.5);margin-top:14px;letter-spacing:.06em">
-          ${locale === 'fr' ? 'Le standard mondial de gouvernance IA' : 'The global standard for AI governance'}
+      <!-- Scene 5: Stats — explosive counters -->
+      <div class="cin-scene" id="cin-s5" style="opacity:0;width:100%">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:740px;margin:0 auto">
+          <div style="text-align:center"><div class="cin-counter" data-target="4" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(40px,5.5vw,64px);font-weight:900;color:#c9a84c;line-height:1" class="cin-glow">0</div><div style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:8px">${locale === 'fr' ? 'Principes' : 'Principles'}</div></div>
+          <div style="text-align:center"><div class="cin-counter" data-target="8" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(40px,5.5vw,64px);font-weight:900;color:#c9a84c;line-height:1" class="cin-glow">0</div><div style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:8px">Modules</div></div>
+          <div style="text-align:center"><div class="cin-counter" data-target="18" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(40px,5.5vw,64px);font-weight:900;color:#c9a84c;line-height:1" class="cin-glow">0</div><div style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:8px">KPIs</div></div>
+          <div style="text-align:center"><div class="cin-counter" data-target="3" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(40px,5.5vw,64px);font-weight:900;color:#c9a84c;line-height:1" class="cin-glow">0</div><div style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.12em;margin-top:8px">${locale === 'fr' ? 'Certifications' : 'Certifications'}</div></div>
         </div>
-      </div>
-
-      <!-- Scene 4: The 4 Principles -->
-      <div class="cin-scene" id="cin-s4" style="opacity:0;position:absolute;width:100%">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(201,168,76,.6);margin-bottom:24px">// ${locale === 'fr' ? '4 PRINCIPES FONDATEURS' : '4 FOUNDING PRINCIPLES'}</div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:800px;margin:0 auto">
-          <div class="cin-card" style="opacity:0;transform:translateY(30px)"><div style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:900;color:#c9a84c">01</div><div style="font-size:12px;color:#fff;margin-top:6px;font-weight:600">${locale === 'fr' ? 'Séparation' : 'Separation'}</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">${locale === 'fr' ? 'Décision / Exécution' : 'Decision / Execution'}</div></div>
-          <div class="cin-card" style="opacity:0;transform:translateY(30px)"><div style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:900;color:#c9a84c">02</div><div style="font-size:12px;color:#fff;margin-top:6px;font-weight:600">${locale === 'fr' ? 'Zones' : 'Zones'}</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">${locale === 'fr' ? 'Non délégables' : 'Non-delegable'}</div></div>
-          <div class="cin-card" style="opacity:0;transform:translateY(30px)"><div style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:900;color:#c9a84c">03</div><div style="font-size:12px;color:#fff;margin-top:6px;font-weight:600">${locale === 'fr' ? 'Traçabilité' : 'Traceability'}</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">${locale === 'fr' ? '& Interruptibilité' : '& Interruptibility'}</div></div>
-          <div class="cin-card" style="opacity:0;transform:translateY(30px)"><div style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:900;color:#c9a84c">04</div><div style="font-size:12px;color:#fff;margin-top:6px;font-weight:600">${locale === 'fr' ? 'Gouvernance' : 'Governance'}</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">${locale === 'fr' ? 'Vivante' : 'Living'}</div></div>
-        </div>
-      </div>
-
-      <!-- Scene 5: Stats Counter -->
-      <div class="cin-scene" id="cin-s5" style="opacity:0;position:absolute;width:100%">
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:700px;margin:0 auto">
-          <div style="text-align:center"><div class="cin-counter" data-target="4" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;color:#c9a84c">0</div><div style="font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em">${locale === 'fr' ? 'Principes' : 'Principles'}</div></div>
-          <div style="text-align:center"><div class="cin-counter" data-target="8" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;color:#c9a84c">0</div><div style="font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em">Modules</div></div>
-          <div style="text-align:center"><div class="cin-counter" data-target="18" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;color:#c9a84c">0</div><div style="font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em">KPIs</div></div>
-          <div style="text-align:center"><div class="cin-counter" data-target="3" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;color:#c9a84c">0</div><div style="font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em">${locale === 'fr' ? 'Certifications' : 'Certifications'}</div></div>
-        </div>
-        <div style="margin-top:32px;font-family:'Space Grotesk',sans-serif;font-size:clamp(16px,2vw,22px);font-weight:700;color:#fff">
+        <div id="cin-punchline" style="margin-top:36px;font-family:'Space Grotesk',sans-serif;font-size:clamp(16px,2vw,24px);font-weight:700;color:#fff;opacity:0;transition:opacity .8s .6s">
           ${locale === 'fr' ? 'Un framework. Une vision. Un standard.' : 'One framework. One vision. One standard.'}
         </div>
       </div>
 
-      <!-- Scene 6: CTA -->
-      <div class="cin-scene" id="cin-s6" style="opacity:0;position:absolute">
-        <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(18px,2.5vw,32px);font-weight:800;color:#fff;margin-bottom:24px">
-          ${locale === 'fr' ? 'Prêt à gouverner vos agents ?' : 'Ready to govern your agents?'}
+      <!-- Scene 6: CTA — grand finale -->
+      <div class="cin-scene" id="cin-s6" style="opacity:0">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(20px,3vw,36px);font-weight:800;color:#fff;margin-bottom:28px;line-height:1.2">
+          ${locale === 'fr' ? 'Pret a gouverner<br>vos agents ?' : 'Ready to govern<br>your agents?'}
         </div>
         <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-          <a href="https://www.acf-score.com/" target="_blank" rel="noopener" onclick="closeVideoModal()" style="display:inline-block;padding:14px 32px;border-radius:10px;background:linear-gradient(135deg,#c9a84c,#e8c96a);color:#050c1a;font-weight:700;font-size:14px;text-decoration:none;transition:.3s;font-family:'Space Grotesk',sans-serif">${locale === 'fr' ? 'Diagnostic gratuit' : 'Free diagnostic'} →</a>
-          <a href="/${locale}/standard" onclick="closeVideoModal()" style="display:inline-block;padding:14px 32px;border-radius:10px;border:1px solid rgba(201,168,76,.3);color:#c9a84c;font-weight:600;font-size:14px;text-decoration:none;transition:.3s;font-family:'Space Grotesk',sans-serif">${locale === 'fr' ? 'Lire le standard' : 'Read the standard'} →</a>
+          <a href="https://www.acf-score.com/" target="_blank" rel="noopener" onclick="closeVideoModal()" style="display:inline-block;padding:16px 36px;border-radius:12px;background:linear-gradient(135deg,#c9a84c,#e8c96a);color:#050c1a;font-weight:800;font-size:15px;text-decoration:none;transition:.3s;font-family:'Space Grotesk',sans-serif;box-shadow:0 0 30px rgba(201,168,76,.3)" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 40px rgba(201,168,76,.5)'" onmouseout="this.style.transform='';this.style.boxShadow='0 0 30px rgba(201,168,76,.3)'">${locale === 'fr' ? 'Diagnostic gratuit' : 'Free diagnostic'} &#8594;</a>
+          <a href="/${locale}/standard" onclick="closeVideoModal()" style="display:inline-block;padding:16px 36px;border-radius:12px;border:1px solid rgba(201,168,76,.3);color:#c9a84c;font-weight:700;font-size:15px;text-decoration:none;transition:.3s;font-family:'Space Grotesk',sans-serif;backdrop-filter:blur(10px)" onmouseover="this.style.borderColor='#c9a84c';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(201,168,76,.3)';this.style.transform=''">${locale === 'fr' ? 'Lire le standard' : 'Read the standard'} &#8594;</a>
         </div>
       </div>
 
     </div>
 
     <!-- Progress bar -->
-    <div style="position:absolute;bottom:0;left:0;right:0;height:3px;z-index:20;background:rgba(255,255,255,.1)">
-      <div id="cin-progress" style="height:100%;width:0%;background:linear-gradient(90deg,#c9a84c,#e8c96a);transition:width .1s linear"></div>
+    <div style="position:absolute;bottom:0;left:0;right:0;height:3px;z-index:20;background:rgba(255,255,255,.06)">
+      <div id="cin-progress" style="height:100%;width:0%;background:linear-gradient(90deg,#c9a84c,#e8c96a);box-shadow:0 0 10px rgba(201,168,76,.5);transition:width .1s linear"></div>
     </div>
 
-    <!-- Replay button (hidden until end) -->
-    <button id="cin-replay" onclick="startCinematic()" style="display:none;position:absolute;bottom:16px;right:16px;z-index:20;background:rgba(0,0,0,.7);border:1px solid rgba(201,168,76,.3);color:#c9a84c;font-size:11px;padding:6px 14px;border-radius:6px;cursor:pointer;font-family:'JetBrains Mono',monospace;letter-spacing:.05em">↻ Replay</button>
+    <!-- Replay -->
+    <button id="cin-replay" onclick="startCinematic()" style="display:none;position:absolute;bottom:14px;right:14px;z-index:20;background:rgba(0,0,0,.8);border:1px solid rgba(201,168,76,.3);color:#c9a84c;font-size:11px;padding:8px 16px;border-radius:8px;cursor:pointer;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;backdrop-filter:blur(10px);transition:.2s" onmouseover="this.style.borderColor='#c9a84c'" onmouseout="this.style.borderColor='rgba(201,168,76,.3)'">&#8635; Replay</button>
   </div>
 </div>
 
@@ -1212,177 +1236,276 @@ if(tel){
 }
 
 // ══ VIDEO MODAL — CINEMATIC ANIMATION ══
-var cinTimer=null;
+var cinTimers=[];
 function openVideoModal(){
   document.getElementById('videomodal').classList.add('open');
   document.body.style.overflow='hidden';
-  startCinematic();
+  setTimeout(startCinematic,100);
 }
 function closeVideoModal(){
   document.getElementById('videomodal').classList.remove('open');
   document.body.style.overflow='';
-  if(cinTimer)clearTimeout(cinTimer);
-  cinTimer=null;
-  // Stop particles
-  if(window._cinParticlesRAF)cancelAnimationFrame(window._cinParticlesRAF);
+  cinTimers.forEach(function(t){clearTimeout(t)});
+  cinTimers=[];
+  if(window._cinRAF)cancelAnimationFrame(window._cinRAF);
 }
+function cinDelay(ms){return new Promise(function(r){cinTimers.push(setTimeout(r,ms))})}
 
-// ══ PARTICLE SYSTEM ══
-function initParticles(){
+// ══ ADVANCED PARTICLE SYSTEM ══
+function initParticles(mode){
   var canvas=document.getElementById('cinematic-particles');
   if(!canvas)return;
   var ctx=canvas.getContext('2d');
-  canvas.width=canvas.offsetWidth*2;
-  canvas.height=canvas.offsetHeight*2;
-  ctx.scale(2,2);
+  var dpr=window.devicePixelRatio||1;
+  canvas.width=canvas.offsetWidth*dpr;
+  canvas.height=canvas.offsetHeight*dpr;
+  ctx.scale(dpr,dpr);
   var W=canvas.offsetWidth,H=canvas.offsetHeight;
-  var particles=[];
-  for(var i=0;i<60;i++){
-    particles.push({
-      x:Math.random()*W,y:Math.random()*H,
-      vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,
-      r:Math.random()*1.5+.5,
-      o:Math.random()*.5+.2
-    });
+  var cx=W/2,cy=H/2;
+  var particles=[];var sparks=[];var time=0;
+  // Ambient particles
+  for(var i=0;i<80;i++){
+    particles.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.2+.4,o:Math.random()*.35+.1,phase:Math.random()*Math.PI*2});
   }
+  window._cinSpawnBurst=function(x,y,count,color){
+    for(var i=0;i<count;i++){
+      var angle=Math.random()*Math.PI*2;
+      var speed=1+Math.random()*4;
+      sparks.push({x:x||cx,y:y||cy,vx:Math.cos(angle)*speed,vy:Math.sin(angle)*speed,life:1,decay:.01+Math.random()*.02,r:Math.random()*2+1,color:color||'201,168,76'});
+    }
+  };
   function draw(){
     ctx.clearRect(0,0,W,H);
+    time+=.016;
+    // Ambient particles
     for(var i=0;i<particles.length;i++){
       var p=particles[i];
       p.x+=p.vx;p.y+=p.vy;
       if(p.x<0)p.x=W;if(p.x>W)p.x=0;
       if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+      var flicker=.5+.5*Math.sin(time*2+p.phase);
       ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle='rgba(201,168,76,'+p.o+')';ctx.fill();
-      // Draw connections
+      ctx.fillStyle='rgba(201,168,76,'+(p.o*flicker)+')';ctx.fill();
       for(var j=i+1;j<particles.length;j++){
-        var q=particles[j];
-        var dx=p.x-q.x,dy=p.y-q.y,d=Math.sqrt(dx*dx+dy*dy);
-        if(d<120){
-          ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);
-          ctx.strokeStyle='rgba(201,168,76,'+(1-d/120)*.15+')';
-          ctx.lineWidth=.5;ctx.stroke();
-        }
+        var q=particles[j];var dx=p.x-q.x,dy=p.y-q.y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<100){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.strokeStyle='rgba(201,168,76,'+(1-d/100)*.08+')';ctx.lineWidth=.4;ctx.stroke()}
       }
     }
-    window._cinParticlesRAF=requestAnimationFrame(draw);
+    // Sparks (burst particles)
+    for(var i=sparks.length-1;i>=0;i--){
+      var s=sparks[i];
+      s.x+=s.vx;s.y+=s.vy;s.vx*=.97;s.vy*=.97;s.life-=s.decay;
+      if(s.life<=0){sparks.splice(i,1);continue}
+      ctx.beginPath();ctx.arc(s.x,s.y,s.r*s.life,0,Math.PI*2);
+      ctx.fillStyle='rgba('+s.color+','+s.life+')';ctx.fill();
+      // Trail
+      ctx.beginPath();ctx.moveTo(s.x,s.y);ctx.lineTo(s.x-s.vx*3,s.y-s.vy*3);
+      ctx.strokeStyle='rgba('+s.color+','+(s.life*.4)+')';ctx.lineWidth=s.r*s.life*.6;ctx.stroke();
+    }
+    window._cinRAF=requestAnimationFrame(draw);
   }
   draw();
 }
 
-// ══ COUNTER ANIMATION ══
+// ══ SHOCKWAVE ══
+function spawnShockwave(color){
+  var container=document.getElementById('cin-shockwave');
+  if(!container)return;
+  var ring=document.createElement('div');
+  ring.style.cssText='position:absolute;top:50%;left:50%;width:80px;height:80px;border:2px solid '+(color||'rgba(201,168,76,.6)')+';border-radius:50%;animation:cinPulseRing 1.2s ease-out forwards;pointer-events:none';
+  container.appendChild(ring);
+  setTimeout(function(){ring.remove()},1300);
+}
+
+// ══ TYPING EFFECT ══
+function typeText(el,text,speed){
+  return new Promise(function(resolve){
+    el.innerHTML='';var i=0;
+    var cursor=document.createElement('span');cursor.className='cin-typing-cursor';
+    function type(){
+      if(i<text.length){
+        // Handle HTML tags
+        if(text[i]==='<'){var end=text.indexOf('>',i);el.innerHTML+=text.substring(i,end+1);i=end+1}
+        else{el.innerHTML+=text[i];i++}
+        el.appendChild(cursor);
+        cinTimers.push(setTimeout(type,speed||35));
+      }else{setTimeout(function(){cursor.remove();resolve()},400)}
+    }
+    type();
+  });
+}
+
+// ══ COUNTER ANIMATION (explosive) ══
 function animateCounters(){
   var counters=document.querySelectorAll('.cin-counter');
-  counters.forEach(function(el){
+  counters.forEach(function(el,idx){
     var target=parseInt(el.getAttribute('data-target'),10);
-    var current=0;var duration=1200;var start=null;
+    var duration=800+idx*200;var start=null;
     function step(ts){
       if(!start)start=ts;
       var progress=Math.min((ts-start)/duration,1);
-      var eased=1-Math.pow(1-progress,3);
-      current=Math.round(eased*target);
-      el.textContent=current;
-      if(progress<1)requestAnimationFrame(step);
+      var eased=1-Math.pow(1-progress,4);
+      el.textContent=Math.round(eased*target);
+      if(progress>=1){
+        el.style.textShadow='0 0 20px rgba(201,168,76,.6),0 0 40px rgba(201,168,76,.3)';
+        if(window._cinSpawnBurst){
+          var rect=el.getBoundingClientRect();
+          var container=document.getElementById('cinematic-particles');
+          if(container){var cr=container.getBoundingClientRect();window._cinSpawnBurst(rect.left-cr.left+rect.width/2,rect.top-cr.top+rect.height/2,8)}
+        }
+      }else{requestAnimationFrame(step)}
     }
-    requestAnimationFrame(step);
+    cinTimers.push(setTimeout(function(){requestAnimationFrame(step)},idx*150));
   });
 }
 
-// ══ SCENE TRANSITIONS ══
-function showScene(id,duration,onShow){
+// ══ SCENE SHOW/HIDE ══
+function showScene(id,opts){
+  var el=document.getElementById(id);if(!el)return;
+  opts=opts||{};
+  el.style.transition='opacity '+(opts.fadeIn||.7)+'s ease, transform '+(opts.fadeIn||.7)+'s cubic-bezier(.16,1,.3,1)';
+  el.style.opacity='1';
+  el.style.transform='scale(1) translate(0,0)';
+}
+function hideScene(id,opts){
   return new Promise(function(resolve){
-    var el=document.getElementById(id);
-    if(!el){resolve();return;}
-    // Fade in
-    el.style.transition='opacity .8s ease, transform .8s cubic-bezier(.16,1,.3,1)';
+    var el=document.getElementById(id);if(!el){resolve();return}
+    opts=opts||{};
+    el.style.transition='opacity '+(opts.fadeOut||.5)+'s ease, transform '+(opts.fadeOut||.5)+'s ease';
     el.style.opacity='0';
-    el.style.transform='scale(.95) translateY(10px)';
-    requestAnimationFrame(function(){
-      el.style.opacity='1';
-      el.style.transform='scale(1) translateY(0)';
-    });
-    if(onShow)setTimeout(onShow,400);
-    // Hold
-    cinTimer=setTimeout(function(){
-      // Fade out
-      el.style.transition='opacity .5s ease, transform .5s ease';
-      el.style.opacity='0';
-      el.style.transform='scale(1.02) translateY(-10px)';
-      setTimeout(resolve,550);
-    },duration);
+    el.style.transform=opts.exitTransform||'scale(1.05) translateY(-15px)';
+    cinTimers.push(setTimeout(resolve,(opts.fadeOut||.5)*1000+50));
   });
 }
 
+// ══ MAIN SEQUENCE ══
 function startCinematic(){
-  // Reset all scenes
-  var scenes=document.querySelectorAll('.cin-scene');
-  scenes.forEach(function(s){s.style.opacity='0';s.style.transform='scale(.95)';});
+  // Reset
+  document.querySelectorAll('.cin-scene').forEach(function(s){s.style.opacity='0';s.style.transform='scale(.9)';s.style.transition='none'});
   document.getElementById('cin-replay').style.display='none';
+  document.getElementById('cin-progress').style.width='0%';
+  document.getElementById('cin-grid').style.opacity='0';
+  document.querySelectorAll('.cin-counter').forEach(function(c){c.textContent='0';c.style.textShadow='none'});
+  document.querySelectorAll('.cin-card').forEach(function(c){c.style.transition='none';c.style.opacity='0'});
   var progress=document.getElementById('cin-progress');
-  progress.style.width='0%';
+  var total=26000;var t0=Date.now();
+  var pInt=setInterval(function(){var p=Math.min((Date.now()-t0)/total*100,100);progress.style.width=p+'%';if(p>=100)clearInterval(pInt)},60);
 
-  // Reset counters
-  var counters=document.querySelectorAll('.cin-counter');
-  counters.forEach(function(c){c.textContent='0';});
-
-  // Start particles
   initParticles();
 
-  // Total duration: ~24s
-  var totalDuration=24000;
-  var startTime=Date.now();
-  var progressInterval=setInterval(function(){
-    var elapsed=Date.now()-startTime;
-    var pct=Math.min(elapsed/totalDuration*100,100);
-    progress.style.width=pct+'%';
-    if(pct>=100)clearInterval(progressInterval);
+  // === SCENE 0: Glitch intro (2s) ===
+  var s0text='${locale === 'fr' ? 'INITIALISATION DU PROTOCOLE...' : 'INITIALIZING PROTOCOL...'}';
+  showScene('cin-s0',{fadeIn:.3});
+  var glitchEl=document.getElementById('cin-glitch-text');
+  var gi=0;var glitchInt=setInterval(function(){
+    if(gi<s0text.length){glitchEl.textContent=s0text.substring(0,gi+1);gi++}
+    else{clearInterval(glitchInt)}
   },50);
+  // Flash effect
+  cinDelay(800).then(function(){spawnShockwave('rgba(201,168,76,.4)')});
+  cinDelay(1200).then(function(){document.getElementById('cin-grid').style.opacity='1'});
 
-  // Scene 1: The Problem (4s)
-  showScene('cin-s1',4000).then(function(){
-    // Scene 2: The Question (3.5s)
-    return showScene('cin-s2',3500);
+  // === SCENE 1: The Problem (4.5s) ===
+  cinDelay(2200).then(function(){
+    return hideScene('cin-s0',{fadeOut:.3});
   }).then(function(){
-    // Scene 3: ACF Logo reveal (4s)
-    return showScene('cin-s3',4000,function(){
-      // Animate logo scale
-      var logo=document.getElementById('cin-logo');
-      if(logo){
-        logo.style.transition='transform .8s cubic-bezier(.16,1,.3,1)';
-        logo.style.transform='scale(1)';
-      }
+    showScene('cin-s1',{fadeIn:.6});
+    var typeEl=document.getElementById('cin-type1');
+    var msg='${locale === 'fr'
+      ? "Vos agents prennent des <span style=\\"color:#c9a84c\\">decisions</span> sans vous."
+      : "Your agents make <span style=\\"color:#c9a84c\\">decisions</span> without you."}';
+    return typeText(typeEl,msg,30);
+  }).then(function(){
+    document.getElementById('cin-sub1').style.opacity='1';
+    return cinDelay(2500);
+  }).then(function(){
+    // === SCENE 2: The Question (3.5s) ===
+    return hideScene('cin-s1');
+  }).then(function(){
+    showScene('cin-s2',{fadeIn:.4});
+    spawnShockwave('rgba(239,68,68,.4)');
+    // Shake the question
+    var q=document.getElementById('cin-question');
+    if(q){q.style.animation='cinShake .6s ease .3s'}
+    return cinDelay(3200);
+  }).then(function(){
+    // === SCENE 3: ACF Logo reveal (4.5s) ===
+    return hideScene('cin-s2',{exitTransform:'scale(.9) translateY(10px)'});
+  }).then(function(){
+    showScene('cin-s3',{fadeIn:.3});
+    // Logo: spin + scale in
+    var logo=document.getElementById('cin-logo');
+    if(logo){
+      logo.style.transition='transform .9s cubic-bezier(.16,1,.3,1), box-shadow .9s';
+      logo.style.transform='scale(1) rotate(0deg)';
+      logo.style.boxShadow='0 0 80px rgba(201,168,76,.6),0 0 160px rgba(201,168,76,.2)';
+    }
+    // Rings expand
+    cinDelay(200).then(function(){
+      var r1=document.getElementById('cin-logo-ring1');
+      var r2=document.getElementById('cin-logo-ring2');
+      if(r1){r1.style.transition='all 1s cubic-bezier(.16,1,.3,1)';r1.style.transform='translate(-50%,-50%) scale(1)';r1.style.opacity='1'}
+      if(r2){r2.style.transition='all 1.2s cubic-bezier(.16,1,.3,1) .15s';r2.style.transform='translate(-50%,-50%) scale(1)';r2.style.opacity='1'}
     });
+    // Burst
+    cinDelay(300).then(function(){
+      if(window._cinSpawnBurst)window._cinSpawnBurst(null,null,40);
+      spawnShockwave();spawnShockwave('rgba(232,201,106,.3)');
+    });
+    // Titles fade in
+    cinDelay(600).then(function(){
+      document.getElementById('cin-title1').style.opacity='1';
+      document.getElementById('cin-title1').style.transform='translateY(0)';
+    });
+    cinDelay(800).then(function(){
+      document.getElementById('cin-title2').style.opacity='1';
+      document.getElementById('cin-title2').style.transform='translateY(0)';
+    });
+    cinDelay(1000).then(function(){
+      document.getElementById('cin-tagline').style.opacity='1';
+    });
+    return cinDelay(4200);
   }).then(function(){
-    // Scene 4: 4 Principles (4.5s) with staggered cards
-    return showScene('cin-s4',4500,function(){
-      var cards=document.querySelectorAll('.cin-card');
-      cards.forEach(function(card,i){
-        setTimeout(function(){
-          card.style.transition='opacity .5s ease, transform .5s cubic-bezier(.16,1,.3,1)';
-          card.style.opacity='1';
-          card.style.transform='translateY(0)';
-        },i*200);
+    // === SCENE 4: Principles (4.5s) ===
+    return hideScene('cin-s3');
+  }).then(function(){
+    showScene('cin-s4',{fadeIn:.5});
+    // Cards fly in from different directions
+    var cards=document.querySelectorAll('.cin-card');
+    cards.forEach(function(card,i){
+      cinDelay(200+i*250).then(function(){
+        card.style.transition='all .7s cubic-bezier(.16,1,.3,1)';
+        card.style.opacity='1';
+        card.style.transform='translateX(0) translateY(0) scale(1)';
+        // Mini burst on each card
+        if(window._cinSpawnBurst){
+          var rect=card.getBoundingClientRect();
+          var cr=document.getElementById('cinematic-particles').getBoundingClientRect();
+          window._cinSpawnBurst(rect.left-cr.left+rect.width/2,rect.top-cr.top+rect.height/2,6);
+        }
       });
     });
+    return cinDelay(4200);
   }).then(function(){
-    // Scene 5: Stats counter (4.5s)
-    return showScene('cin-s5',4500,function(){
-      animateCounters();
+    // === SCENE 5: Stats (4.5s) ===
+    return hideScene('cin-s4');
+  }).then(function(){
+    showScene('cin-s5',{fadeIn:.5});
+    animateCounters();
+    cinDelay(1500).then(function(){
+      document.getElementById('cin-punchline').style.opacity='1';
+      spawnShockwave();
     });
+    return cinDelay(4200);
   }).then(function(){
-    // Scene 6: CTA (stays visible)
-    var el=document.getElementById('cin-s6');
-    if(el){
-      el.style.transition='opacity .8s ease, transform .8s cubic-bezier(.16,1,.3,1)';
-      el.style.opacity='1';
-      el.style.transform='scale(1) translateY(0)';
-    }
-    clearInterval(progressInterval);
-    progress.style.width='100%';
-    // Show replay
-    setTimeout(function(){
-      document.getElementById('cin-replay').style.display='block';
-    },1000);
+    // === SCENE 6: CTA — stays ===
+    return hideScene('cin-s5');
+  }).then(function(){
+    showScene('cin-s6',{fadeIn:.8});
+    if(window._cinSpawnBurst)window._cinSpawnBurst(null,null,25);
+    spawnShockwave('rgba(201,168,76,.5)');
+    clearInterval(pInt);progress.style.width='100%';
+    cinDelay(1200).then(function(){document.getElementById('cin-replay').style.display='block'});
   });
 }
 
