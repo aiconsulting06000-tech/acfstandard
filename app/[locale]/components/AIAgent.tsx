@@ -91,11 +91,19 @@ export default function AIAgent() {
   const [ttsEnabled, setTtsEnabled] = useState(true);
   const msgsRef = useRef<HTMLDivElement>(null);
   const recognitionRef = useRef<ISpeechRecognition | null>(null);
+  const cachedVoiceRef = useRef<SpeechSynthesisVoice | null>(null);
 
-  /* ── Check voice support on mount ── */
+  /* ── Check voice support + preload voices on mount ── */
   useEffect(() => {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     setVoiceSupported(!!SR && !!window.speechSynthesis);
+    // Preload voices (they load async on most browsers)
+    if (window.speechSynthesis) {
+      window.speechSynthesis.getVoices();
+      window.speechSynthesis.onvoiceschanged = () => {
+        cachedVoiceRef.current = null; // reset cache so it re-selects
+      };
+    }
   }, []);
 
   /* ── Start/Stop speech recognition ── */
@@ -120,12 +128,7 @@ export default function AIAgent() {
         transcript += event.results[i][0].transcript;
       }
       setInput(transcript);
-      // Auto-send when final result
-      if (event.results[event.results.length - 1].isFinal) {
-        setTimeout(() => {
-          if (transcript.trim()) sendMessage(transcript.trim());
-        }, 300);
-      }
+      // Don't auto-send — let user review and press Enter or Send button
     };
 
     recognition.onerror = () => setIsListening(false);
@@ -136,23 +139,57 @@ export default function AIAgent() {
     setIsListening(true);
   }
 
+  /* ── Find best male voice ── */
+  function findMaleVoice(): SpeechSynthesisVoice | null {
+    if (cachedVoiceRef.current) return cachedVoiceRef.current;
+    const voices = window.speechSynthesis.getVoices();
+    if (!voices.length) return null;
+    const targetLang = lang === "fr" ? "fr" : "en";
+    const langVoices = voices.filter(v => v.lang.startsWith(targetLang));
+    // Female names to exclude
+    const femaleNames = ["samantha","karen","victoria","amelie","fiona","moira","tessa","zira","susan","hazel","jenny","aria","sara","elsa","alice","ellen","nora","paulina","kathy","ava","allison","joana","luciana","monica","francisca","female","woman"];
+    // Male names to prefer
+    const maleNames = ["daniel","thomas","james","david","mark","guy","liam","eric","henri","jacques","mathieu","philippe","remy","pierre","alex","fred","bruce","lee","aaron","gordon","oliver","william","ryan","sean","roger","male"];
+    // Premium quality keywords
+    const premiumKw = ["natural","enhanced","premium","neural","online"];
+
+    const notFemale = (v: SpeechSynthesisVoice) => !femaleNames.some(f => v.name.toLowerCase().includes(f));
+    const isMale = (v: SpeechSynthesisVoice) => maleNames.some(m => v.name.toLowerCase().includes(m));
+    const isPremium = (v: SpeechSynthesisVoice) => premiumKw.some(k => v.name.toLowerCase().includes(k));
+
+    const pick =
+      // 1. Premium male voice (best quality)
+      langVoices.find(v => isMale(v) && isPremium(v)) ||
+      // 2. Any male voice
+      langVoices.find(v => isMale(v)) ||
+      // 3. Premium non-female voice
+      langVoices.find(v => notFemale(v) && isPremium(v)) ||
+      // 4. Google non-female voice
+      langVoices.find(v => v.name.includes("Google") && notFemale(v)) ||
+      // 5. Microsoft non-female voice
+      langVoices.find(v => v.name.includes("Microsoft") && notFemale(v)) ||
+      // 6. Any non-female
+      langVoices.find(v => notFemale(v)) ||
+      // 7. Fallback
+      langVoices[0] || voices[0];
+
+    if (pick) cachedVoiceRef.current = pick;
+    return pick;
+  }
+
   /* ── Text-to-Speech for bot responses ── */
   function speakText(text: string) {
     if (!window.speechSynthesis || !ttsEnabled) return;
-    // Cancel any ongoing speech
     window.speechSynthesis.cancel();
 
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = lang === "fr" ? "fr-FR" : "en-US";
-    utterance.rate = 1.0;
-    utterance.pitch = 1.0;
 
-    // Try to find a good voice
-    const voices = window.speechSynthesis.getVoices();
-    const targetLang = lang === "fr" ? "fr" : "en";
-    const preferredVoice = voices.find(v => v.lang.startsWith(targetLang) && v.name.includes("Google")) ||
-                           voices.find(v => v.lang.startsWith(targetLang));
-    if (preferredVoice) utterance.voice = preferredVoice;
+    const voice = findMaleVoice();
+    if (voice) utterance.voice = voice;
+    // Lower pitch + slightly slower for warm male tone
+    utterance.pitch = 0.85;
+    utterance.rate = 0.92;
 
     utterance.onstart = () => setIsSpeaking(true);
     utterance.onend = () => setIsSpeaking(false);

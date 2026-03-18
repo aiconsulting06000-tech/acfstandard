@@ -267,6 +267,11 @@ section{padding:60px 0;position:relative;z-index:1}
 .hxflow-dot.rev{animation:hxflowrev 3s linear infinite}
 @keyframes hxflowrev{0%{right:80px;left:auto;opacity:0}5%{opacity:1}95%{opacity:1}100%{right:calc(100% - 80px);opacity:0}}
 
+/* ═══ CINEMATIC CARDS ═══ */
+.cin-card{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);border-radius:12px;padding:20px 16px;text-align:center;transition:all .5s cubic-bezier(.16,1,.3,1)}
+.cin-card:hover{border-color:rgba(201,168,76,.4);background:rgba(201,168,76,.1)}
+.cin-scene{will-change:opacity,transform}
+
 /* ═══ VIDEO SECTION ═══ */
 .videosec{background:var(--navy3);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
 .videogrid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
@@ -573,7 +578,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="mpd">${m.megaMenu.framework.subtitle}</div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.framework.architecture.title}</div><ul class="mlinks"><li><a href="/${locale}/standard#principles">${m.megaMenu.framework.architecture.principles}</a></li><li><a href="/${locale}/standard#layers">${m.megaMenu.framework.architecture.layers}</a></li><li><a href="/${locale}/standard#maturity">${m.megaMenu.framework.architecture.maturity}</a></li></ul></div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.framework.methodology.title}</div><ul class="mlinks"><li><a href="/${locale}/standard#modules">${m.megaMenu.framework.methodology.modules}</a></li><li><a href="/${locale}/standard#modules">${m.megaMenu.framework.methodology.constitution}</a></li><li><a href="/${locale}/blog#delegated-decision-agent-officer">${m.megaMenu.framework.methodology.dda}</a></li><li><a href="/${locale}/blog#three-level-kill-switch">${m.megaMenu.framework.methodology.killSwitch}</a></li></ul></div>
-      <div class="mfeat"><div class="mflbl">${m.megaMenu.framework.featured.label}</div><a href="/acf-whitepaper-${locale === 'fr' ? 'fr' : 'en'}.pdf" download class="mfitem" style="display:block;text-decoration:none;color:inherit;cursor:pointer"><div class="mftitle">${m.megaMenu.framework.featured.whitepaper.title}</div><div class="mfdesc">${m.megaMenu.framework.featured.whitepaper.description}</div></a><div class="mfitem"><div class="mftitle">${m.megaMenu.framework.featured.release.title}</div><div class="mfdesc">${m.megaMenu.framework.featured.release.description}</div></div></div>
+      <div class="mfeat"><div class="mflbl">${m.megaMenu.framework.featured.label}</div><a href="#" onclick="event.preventDefault();event.stopPropagation();var a=document.createElement('a');a.href='/acf-whitepaper-${locale === 'fr' ? 'fr' : 'en'}.pdf';a.download='acf-whitepaper-${locale === 'fr' ? 'fr' : 'en'}.pdf';a.target='_parent';window.parent.document.body.appendChild(a);a.click();a.remove()" class="mfitem" style="display:block;text-decoration:none;color:inherit;cursor:pointer"><div class="mftitle">${m.megaMenu.framework.featured.whitepaper.title}</div><div class="mfdesc">${m.megaMenu.framework.featured.whitepaper.description}</div></a><div class="mfitem"><div class="mftitle">${m.megaMenu.framework.featured.release.title}</div><div class="mfdesc">${m.megaMenu.framework.featured.release.description}</div></div></div>
     </div>
     <div class="mp" id="panel-products">
       <div class="mpt"><a href="/standard">${m.megaMenu.products.link}</a></div>
@@ -906,16 +911,99 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   </div>
 </section>
 
-<!-- VIDEO MODAL -->
+<!-- VIDEO MODAL — CINEMATIC ANIMATION -->
 <div class="aimodal" id="videomodal" style="z-index:1100">
   <div class="aimodalbg" onclick="closeVideoModal()"></div>
-  <div style="position:relative;z-index:1;width:900px;max-width:95vw;background:#000;border-radius:14px;overflow:hidden;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;">
-    <button onclick="closeVideoModal()" style="position:absolute;top:12px;right:12px;z-index:10;background:rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">×</button>
-    <div style="text-align:center;padding:40px;color:var(--gr2)">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);margin-bottom:16px;letter-spacing:.1em">${m.video.modal.placeholder}</div>
-      <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;color:#fff;margin-bottom:10px">${m.video.modal.title}</div>
-      <div style="font-size:14px">${m.video.modal.description}</div>
+  <div id="cinematic-container" style="position:relative;z-index:1;width:960px;max-width:95vw;background:#000;border-radius:14px;overflow:hidden;aspect-ratio:16/9;">
+    <button onclick="closeVideoModal()" style="position:absolute;top:12px;right:12px;z-index:100;background:rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.2);color:#fff;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">×</button>
+
+    <!-- Canvas for particles -->
+    <canvas id="cinematic-particles" style="position:absolute;inset:0;width:100%;height:100%;z-index:1"></canvas>
+
+    <!-- Grid overlay -->
+    <div style="position:absolute;inset:0;z-index:2;background-image:linear-gradient(rgba(201,168,76,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none"></div>
+
+    <!-- Cinematic content layers -->
+    <div id="cin-content" style="position:absolute;inset:0;z-index:10;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:40px">
+
+      <!-- Scene 1: The Problem -->
+      <div class="cin-scene" id="cin-s1" style="opacity:0">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;color:rgba(201,168,76,.6);margin-bottom:20px">// ${locale === 'fr' ? 'LE CONSTAT' : 'THE REALITY'}</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,3.5vw,42px);font-weight:800;color:#fff;line-height:1.2;max-width:700px">
+          ${locale === 'fr'
+            ? 'Les agents autonomes prennent des <span style="color:#c9a84c">décisions</span> à votre place.'
+            : 'Autonomous agents are making <span style="color:#c9a84c">decisions</span> on your behalf.'}
+        </div>
+        <div style="font-size:clamp(13px,1.5vw,16px);color:rgba(255,255,255,.5);margin-top:16px;max-width:500px">
+          ${locale === 'fr'
+            ? 'Pricing, scoring, engagement client, logistique...<br>Sans cadre de gouvernance.'
+            : 'Pricing, scoring, customer engagement, logistics...<br>Without a governance framework.'}
+        </div>
+      </div>
+
+      <!-- Scene 2: The Question -->
+      <div class="cin-scene" id="cin-s2" style="opacity:0;position:absolute">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,4vw,48px);font-weight:800;color:#fff;line-height:1.15">
+          ${locale === 'fr'
+            ? 'Qui <span style="color:#ef4444">gouverne</span><br>vos agents ?'
+            : 'Who <span style="color:#ef4444">governs</span><br>your agents?'}
+        </div>
+      </div>
+
+      <!-- Scene 3: The Answer — ACF -->
+      <div class="cin-scene" id="cin-s3" style="opacity:0;position:absolute">
+        <div id="cin-logo" style="width:80px;height:80px;border-radius:16px;background:linear-gradient(135deg,#c9a84c,#e8c96a);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:900;color:#050c1a;margin:0 auto 24px;box-shadow:0 0 60px rgba(201,168,76,.4);transform:scale(0)">ACF</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(20px,3vw,36px);font-weight:800;color:#fff;margin-bottom:6px">Agentic Commerce</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(20px,3vw,36px);font-weight:800;color:#c9a84c">Framework®</div>
+        <div style="font-size:clamp(12px,1.3vw,15px);color:rgba(255,255,255,.5);margin-top:14px;letter-spacing:.06em">
+          ${locale === 'fr' ? 'Le standard mondial de gouvernance IA' : 'The global standard for AI governance'}
+        </div>
+      </div>
+
+      <!-- Scene 4: The 4 Principles -->
+      <div class="cin-scene" id="cin-s4" style="opacity:0;position:absolute;width:100%">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;color:rgba(201,168,76,.6);margin-bottom:24px">// ${locale === 'fr' ? '4 PRINCIPES FONDATEURS' : '4 FOUNDING PRINCIPLES'}</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:800px;margin:0 auto">
+          <div class="cin-card" style="opacity:0;transform:translateY(30px)"><div style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:900;color:#c9a84c">01</div><div style="font-size:12px;color:#fff;margin-top:6px;font-weight:600">${locale === 'fr' ? 'Séparation' : 'Separation'}</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">${locale === 'fr' ? 'Décision / Exécution' : 'Decision / Execution'}</div></div>
+          <div class="cin-card" style="opacity:0;transform:translateY(30px)"><div style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:900;color:#c9a84c">02</div><div style="font-size:12px;color:#fff;margin-top:6px;font-weight:600">${locale === 'fr' ? 'Zones' : 'Zones'}</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">${locale === 'fr' ? 'Non délégables' : 'Non-delegable'}</div></div>
+          <div class="cin-card" style="opacity:0;transform:translateY(30px)"><div style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:900;color:#c9a84c">03</div><div style="font-size:12px;color:#fff;margin-top:6px;font-weight:600">${locale === 'fr' ? 'Traçabilité' : 'Traceability'}</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">${locale === 'fr' ? '& Interruptibilité' : '& Interruptibility'}</div></div>
+          <div class="cin-card" style="opacity:0;transform:translateY(30px)"><div style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:900;color:#c9a84c">04</div><div style="font-size:12px;color:#fff;margin-top:6px;font-weight:600">${locale === 'fr' ? 'Gouvernance' : 'Governance'}</div><div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:4px">${locale === 'fr' ? 'Vivante' : 'Living'}</div></div>
+        </div>
+      </div>
+
+      <!-- Scene 5: Stats Counter -->
+      <div class="cin-scene" id="cin-s5" style="opacity:0;position:absolute;width:100%">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:700px;margin:0 auto">
+          <div style="text-align:center"><div class="cin-counter" data-target="4" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;color:#c9a84c">0</div><div style="font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em">${locale === 'fr' ? 'Principes' : 'Principles'}</div></div>
+          <div style="text-align:center"><div class="cin-counter" data-target="8" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;color:#c9a84c">0</div><div style="font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em">Modules</div></div>
+          <div style="text-align:center"><div class="cin-counter" data-target="18" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;color:#c9a84c">0</div><div style="font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em">KPIs</div></div>
+          <div style="text-align:center"><div class="cin-counter" data-target="3" style="font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;color:#c9a84c">0</div><div style="font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.1em">${locale === 'fr' ? 'Certifications' : 'Certifications'}</div></div>
+        </div>
+        <div style="margin-top:32px;font-family:'Space Grotesk',sans-serif;font-size:clamp(16px,2vw,22px);font-weight:700;color:#fff">
+          ${locale === 'fr' ? 'Un framework. Une vision. Un standard.' : 'One framework. One vision. One standard.'}
+        </div>
+      </div>
+
+      <!-- Scene 6: CTA -->
+      <div class="cin-scene" id="cin-s6" style="opacity:0;position:absolute">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(18px,2.5vw,32px);font-weight:800;color:#fff;margin-bottom:24px">
+          ${locale === 'fr' ? 'Prêt à gouverner vos agents ?' : 'Ready to govern your agents?'}
+        </div>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+          <a href="https://www.acf-score.com/" target="_blank" rel="noopener" onclick="closeVideoModal()" style="display:inline-block;padding:14px 32px;border-radius:10px;background:linear-gradient(135deg,#c9a84c,#e8c96a);color:#050c1a;font-weight:700;font-size:14px;text-decoration:none;transition:.3s;font-family:'Space Grotesk',sans-serif">${locale === 'fr' ? 'Diagnostic gratuit' : 'Free diagnostic'} →</a>
+          <a href="/${locale}/standard" onclick="closeVideoModal()" style="display:inline-block;padding:14px 32px;border-radius:10px;border:1px solid rgba(201,168,76,.3);color:#c9a84c;font-weight:600;font-size:14px;text-decoration:none;transition:.3s;font-family:'Space Grotesk',sans-serif">${locale === 'fr' ? 'Lire le standard' : 'Read the standard'} →</a>
+        </div>
+      </div>
+
     </div>
+
+    <!-- Progress bar -->
+    <div style="position:absolute;bottom:0;left:0;right:0;height:3px;z-index:20;background:rgba(255,255,255,.1)">
+      <div id="cin-progress" style="height:100%;width:0%;background:linear-gradient(90deg,#c9a84c,#e8c96a);transition:width .1s linear"></div>
+    </div>
+
+    <!-- Replay button (hidden until end) -->
+    <button id="cin-replay" onclick="startCinematic()" style="display:none;position:absolute;bottom:16px;right:16px;z-index:20;background:rgba(0,0,0,.7);border:1px solid rgba(201,168,76,.3);color:#c9a84c;font-size:11px;padding:6px 14px;border-radius:6px;cursor:pointer;font-family:'JetBrains Mono',monospace;letter-spacing:.05em">↻ Replay</button>
   </div>
 </div>
 
@@ -1123,9 +1211,180 @@ if(tel){
   setTimeout(typeStep,2600);
 }
 
-// ══ VIDEO MODAL ══
-function openVideoModal(){document.getElementById('videomodal').classList.add('open');document.body.style.overflow='hidden'}
-function closeVideoModal(){document.getElementById('videomodal').classList.remove('open');document.body.style.overflow=''}
+// ══ VIDEO MODAL — CINEMATIC ANIMATION ══
+var cinTimer=null;
+function openVideoModal(){
+  document.getElementById('videomodal').classList.add('open');
+  document.body.style.overflow='hidden';
+  startCinematic();
+}
+function closeVideoModal(){
+  document.getElementById('videomodal').classList.remove('open');
+  document.body.style.overflow='';
+  if(cinTimer)clearTimeout(cinTimer);
+  cinTimer=null;
+  // Stop particles
+  if(window._cinParticlesRAF)cancelAnimationFrame(window._cinParticlesRAF);
+}
+
+// ══ PARTICLE SYSTEM ══
+function initParticles(){
+  var canvas=document.getElementById('cinematic-particles');
+  if(!canvas)return;
+  var ctx=canvas.getContext('2d');
+  canvas.width=canvas.offsetWidth*2;
+  canvas.height=canvas.offsetHeight*2;
+  ctx.scale(2,2);
+  var W=canvas.offsetWidth,H=canvas.offsetHeight;
+  var particles=[];
+  for(var i=0;i<60;i++){
+    particles.push({
+      x:Math.random()*W,y:Math.random()*H,
+      vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,
+      r:Math.random()*1.5+.5,
+      o:Math.random()*.5+.2
+    });
+  }
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<particles.length;i++){
+      var p=particles[i];
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=W;if(p.x>W)p.x=0;
+      if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(201,168,76,'+p.o+')';ctx.fill();
+      // Draw connections
+      for(var j=i+1;j<particles.length;j++){
+        var q=particles[j];
+        var dx=p.x-q.x,dy=p.y-q.y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<120){
+          ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);
+          ctx.strokeStyle='rgba(201,168,76,'+(1-d/120)*.15+')';
+          ctx.lineWidth=.5;ctx.stroke();
+        }
+      }
+    }
+    window._cinParticlesRAF=requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+// ══ COUNTER ANIMATION ══
+function animateCounters(){
+  var counters=document.querySelectorAll('.cin-counter');
+  counters.forEach(function(el){
+    var target=parseInt(el.getAttribute('data-target'),10);
+    var current=0;var duration=1200;var start=null;
+    function step(ts){
+      if(!start)start=ts;
+      var progress=Math.min((ts-start)/duration,1);
+      var eased=1-Math.pow(1-progress,3);
+      current=Math.round(eased*target);
+      el.textContent=current;
+      if(progress<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+}
+
+// ══ SCENE TRANSITIONS ══
+function showScene(id,duration,onShow){
+  return new Promise(function(resolve){
+    var el=document.getElementById(id);
+    if(!el){resolve();return;}
+    // Fade in
+    el.style.transition='opacity .8s ease, transform .8s cubic-bezier(.16,1,.3,1)';
+    el.style.opacity='0';
+    el.style.transform='scale(.95) translateY(10px)';
+    requestAnimationFrame(function(){
+      el.style.opacity='1';
+      el.style.transform='scale(1) translateY(0)';
+    });
+    if(onShow)setTimeout(onShow,400);
+    // Hold
+    cinTimer=setTimeout(function(){
+      // Fade out
+      el.style.transition='opacity .5s ease, transform .5s ease';
+      el.style.opacity='0';
+      el.style.transform='scale(1.02) translateY(-10px)';
+      setTimeout(resolve,550);
+    },duration);
+  });
+}
+
+function startCinematic(){
+  // Reset all scenes
+  var scenes=document.querySelectorAll('.cin-scene');
+  scenes.forEach(function(s){s.style.opacity='0';s.style.transform='scale(.95)';});
+  document.getElementById('cin-replay').style.display='none';
+  var progress=document.getElementById('cin-progress');
+  progress.style.width='0%';
+
+  // Reset counters
+  var counters=document.querySelectorAll('.cin-counter');
+  counters.forEach(function(c){c.textContent='0';});
+
+  // Start particles
+  initParticles();
+
+  // Total duration: ~24s
+  var totalDuration=24000;
+  var startTime=Date.now();
+  var progressInterval=setInterval(function(){
+    var elapsed=Date.now()-startTime;
+    var pct=Math.min(elapsed/totalDuration*100,100);
+    progress.style.width=pct+'%';
+    if(pct>=100)clearInterval(progressInterval);
+  },50);
+
+  // Scene 1: The Problem (4s)
+  showScene('cin-s1',4000).then(function(){
+    // Scene 2: The Question (3.5s)
+    return showScene('cin-s2',3500);
+  }).then(function(){
+    // Scene 3: ACF Logo reveal (4s)
+    return showScene('cin-s3',4000,function(){
+      // Animate logo scale
+      var logo=document.getElementById('cin-logo');
+      if(logo){
+        logo.style.transition='transform .8s cubic-bezier(.16,1,.3,1)';
+        logo.style.transform='scale(1)';
+      }
+    });
+  }).then(function(){
+    // Scene 4: 4 Principles (4.5s) with staggered cards
+    return showScene('cin-s4',4500,function(){
+      var cards=document.querySelectorAll('.cin-card');
+      cards.forEach(function(card,i){
+        setTimeout(function(){
+          card.style.transition='opacity .5s ease, transform .5s cubic-bezier(.16,1,.3,1)';
+          card.style.opacity='1';
+          card.style.transform='translateY(0)';
+        },i*200);
+      });
+    });
+  }).then(function(){
+    // Scene 5: Stats counter (4.5s)
+    return showScene('cin-s5',4500,function(){
+      animateCounters();
+    });
+  }).then(function(){
+    // Scene 6: CTA (stays visible)
+    var el=document.getElementById('cin-s6');
+    if(el){
+      el.style.transition='opacity .8s ease, transform .8s cubic-bezier(.16,1,.3,1)';
+      el.style.opacity='1';
+      el.style.transform='scale(1) translateY(0)';
+    }
+    clearInterval(progressInterval);
+    progress.style.width='100%';
+    // Show replay
+    setTimeout(function(){
+      document.getElementById('cin-replay').style.display='block';
+    },1000);
+  });
+}
 
 </script>
 <script>
@@ -1140,6 +1399,8 @@ document.addEventListener('click',function(e){
   if(h.charAt(0)==='#'){closeMega();return;}
   if(h.charAt(0)!=='/')return;
   if(a.getAttribute('onclick'))return;
+  // Let PDF/file downloads go through to parent directly
+  if(h.match(/\\.(pdf|zip|doc|docx|xls|xlsx)$/i)){e.preventDefault();window.parent.location.href=h;return;}
   e.preventDefault();
   var parts=h.split('/');
   if(parts.length>1&&LOCALES.indexOf(parts[1])!==-1){h='/'+parts.slice(2).join('/');}
