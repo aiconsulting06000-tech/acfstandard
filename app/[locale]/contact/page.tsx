@@ -60,7 +60,7 @@ const ui = {
     sentDesc1: "Thank you for reaching out. Our team will get back to you within ",
     sentDesc2: "24 business hours",
     orgLabel: "Organization",
-    orgDesc: "Publisher of the Agentic Commerce Framework®",
+    orgDesc: "Strategic partner of the Agentic Commerce Framework®",
     quickActionsLabel: "Quick Actions",
     quickAction1: "Get your free ACF Score®",
     quickAction2: "View certification programs",
@@ -104,7 +104,7 @@ const ui = {
     sentDesc1: "Merci de nous avoir contactés. Notre équipe vous répondra sous ",
     sentDesc2: "24 heures ouvrées",
     orgLabel: "Organisation",
-    orgDesc: "Éditeur de l'Agentic Commerce Framework®",
+    orgDesc: "Partenaire stratégique de l'Agentic Commerce Framework®",
     quickActionsLabel: "Actions rapides",
     quickAction1: "Obtenez votre ACF Score® gratuit",
     quickAction2: "Voir les programmes de certification",
@@ -152,7 +152,7 @@ export default function ACFContactPage() {
           <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
             <a href={`/${locale}/`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
               onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{t.navHome}</a>
-            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, transition: "all .3s", display: "inline-block" }}>{t.navCta}</a>
+            <a href="https://www.acf-score.com/" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, transition: "all .3s", display: "inline-block" }}>{t.navCta}</a>
           </div>
         </div>
       </nav>
@@ -262,7 +262,7 @@ export default function ACFContactPage() {
               <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 16 }}>{t.quickActionsLabel}</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {[
-                  { icon: "📊", label: t.quickAction1, href: "https://www.acf-score.com/calculator" },
+                  { icon: "📊", label: t.quickAction1, href: "https://www.acf-score.com/" },
                   { icon: "🛡️", label: t.quickAction2, href: `/${locale}/acf-certification` },
                   { icon: "🤝", label: t.quickAction3, href: `/${locale}/acf-partners` },
                   { icon: "📖", label: t.quickAction4, href: `/${locale}/` },

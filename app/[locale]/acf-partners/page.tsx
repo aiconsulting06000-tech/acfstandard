@@ -268,9 +268,9 @@ const ui = {
     tiersLabel: "Partnership Levels",
     tiersTitle: "ACF PARTNER",
     tiersDesc: "Three levels of partnership. Each unlocks deeper access, more territory, and greater authority.",
-    tierAffiliate: { name: "Affiliate", desc: "Entry-level partnership. You recommend and refer.", items: ["Referral commission (15%)", "Partner badge usage", "Marketing materials", "Quarterly training webinars", "Partner directory listing"], tagline: "You recommend trust.", applyText: "Apply for Affiliate →" },
-    tierCertified: { name: "Certified", desc: "You deploy, train, and audit ACF governance.", items: ["Revenue share (25%)", "Territory exclusivity", "Full Academy access", "ACF Control deployment rights", "Co-branded audit reports", "Dedicated account manager"], tagline: "You deploy governance.", applyText: "Apply for Certified →" },
-    tierStrategic: { name: "Strategic", desc: "Enterprise-level alliance. Shape the standard.", items: ["Revenue share (35%)", "Multi-territory exclusivity", "Executive program delivery", "Advisory board seat", "White-label options", "Custom integrations", "Joint go-to-market"], tagline: "You shape the future.", applyText: "Apply for Strategic →" },
+    tierAffiliate: { name: "Affiliate", desc: "Entry-level partnership. You recommend and refer.", items: ["Referral commission", "Partner badge usage", "Marketing materials", "Quarterly training webinars", "Partner directory listing"], tagline: "You recommend trust.", applyText: "Apply for Affiliate →" },
+    tierCertified: { name: "Certified", desc: "You deploy, train, and audit ACF governance.", items: ["Revenue share", "Territory exclusivity", "Full Academy access", "ACF Control deployment rights", "Co-branded audit reports", "Dedicated account manager"], tagline: "You deploy governance.", applyText: "Apply for Certified →" },
+    tierStrategic: { name: "Strategic", desc: "Enterprise-level alliance. Shape the standard.", items: ["Premium revenue share", "Multi-territory exclusivity", "Executive program delivery", "Advisory board seat", "White-label options", "Custom integrations", "Joint go-to-market"], tagline: "You shape the future.", applyText: "Apply for Strategic →" },
     mostPopular: "MOST POPULAR",
     portalLabel: "Existing Partners",
     portalTitle1: "Partner ",
@@ -329,8 +329,8 @@ const ui = {
       { step: "05", label: "Deploy", desc: "Audit, train, and certify clients" },
       { step: "06", label: "Grow", desc: "Revenue share, co-branding, scale" },
     ],
-    statsLabels: ["Partnership tiers", "Max revenue share", "Portal features", "Application review"],
-    statsSuffixes: ["", "%", "", " days"],
+    statsLabels: ["Partnership tiers", "Countries covered", "Portal features", "Application review"],
+    statsSuffixes: ["", "+", "", " days"],
     finalTitle1: "The standard is global.",
     finalTitle2: "The network is yours.",
     finalDesc: "Whether you're a consultancy, a tech firm, or an enterprise — if you believe in accountable autonomy, there's a place for you.",
@@ -373,9 +373,9 @@ const ui = {
     tiersLabel: "Niveaux de partenariat",
     tiersTitle: "ACF PARTNER",
     tiersDesc: "Trois niveaux de partenariat. Chacun débloque un accès plus profond, plus de territoire et plus d'autorité.",
-    tierAffiliate: { name: "Affilié", desc: "Partenariat d'entrée. Vous recommandez et référez.", items: ["Commission de référencement (15%)", "Utilisation du badge partenaire", "Supports marketing", "Webinaires de formation trimestriels", "Inscription annuaire partenaire"], tagline: "Vous recommandez la confiance.", applyText: "Candidater affilié →" },
-    tierCertified: { name: "Certifié", desc: "Vous déployez, formez et auditez la gouvernance ACF.", items: ["Partage de revenus (25%)", "Exclusivité territoriale", "Accès complet Academy", "Droits de déploiement ACF Control", "Rapports d'audit co-brandés", "Account manager dédié"], tagline: "Vous déployez la gouvernance.", applyText: "Candidater certifié →" },
-    tierStrategic: { name: "Stratégique", desc: "Alliance de niveau entreprise. Façonnez le standard.", items: ["Partage de revenus (35%)", "Exclusivité multi-territoire", "Livraison programme exécutif", "Siège au conseil consultatif", "Options marque blanche", "Intégrations personnalisées", "Go-to-market conjoint"], tagline: "Vous façonnez l'avenir.", applyText: "Candidater stratégique →" },
+    tierAffiliate: { name: "Affilié", desc: "Partenariat d'entrée. Vous recommandez et référez.", items: ["Commission de référencement", "Utilisation du badge partenaire", "Supports marketing", "Webinaires de formation trimestriels", "Inscription annuaire partenaire"], tagline: "Vous recommandez la confiance.", applyText: "Candidater affilié →" },
+    tierCertified: { name: "Certifié", desc: "Vous déployez, formez et auditez la gouvernance ACF.", items: ["Partage de revenus", "Exclusivité territoriale", "Accès complet Academy", "Droits de déploiement ACF Control", "Rapports d'audit co-brandés", "Account manager dédié"], tagline: "Vous déployez la gouvernance.", applyText: "Candidater certifié →" },
+    tierStrategic: { name: "Stratégique", desc: "Alliance de niveau entreprise. Façonnez le standard.", items: ["Partage de revenus premium", "Exclusivité multi-territoire", "Livraison programme exécutif", "Siège au conseil consultatif", "Options marque blanche", "Intégrations personnalisées", "Go-to-market conjoint"], tagline: "Vous façonnez l'avenir.", applyText: "Candidater stratégique →" },
     mostPopular: "LE PLUS POPULAIRE",
     portalLabel: "Partenaires existants",
     portalTitle1: "Portail ",
@@ -434,8 +434,8 @@ const ui = {
       { step: "05", label: "Déployer", desc: "Auditer, former et certifier les clients" },
       { step: "06", label: "Croître", desc: "Partage de revenus, co-branding, passage à l'échelle" },
     ],
-    statsLabels: ["Niveaux de partenariat", "Partage de revenus max", "Fonctionnalités portail", "Examen candidature"],
-    statsSuffixes: ["", "%", "", " jours"],
+    statsLabels: ["Niveaux de partenariat", "Pays couverts", "Fonctionnalités portail", "Examen candidature"],
+    statsSuffixes: ["", "+", "", " jours"],
     finalTitle1: "Le standard est mondial.",
     finalTitle2: "Le réseau est le vôtre.",
     finalDesc: "Que vous soyez un cabinet de conseil, une entreprise tech ou une grande entreprise — si vous croyez en l'autonomie responsable, il y a une place pour vous.",
@@ -454,7 +454,9 @@ export default function ACFPartnersPage() {
   const t = ui[lang];
   const [activeSection, setActiveSection] = useState<"advantages" | "portal" | "apply">("advantages");
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const navLinks = ["Advantages", "Tiers", "Portal", "Apply"];
+  const navLinks = lang === "fr"
+    ? ["Avantages", "Niveaux", "Portail", "Candidater"]
+    : ["Advantages", "Tiers", "Portal", "Apply"];
 
   return (
     <div style={{ minHeight: "100vh", background: C.navy1, color: "#fff", fontFamily: "'Inter', sans-serif" }}>
@@ -500,7 +502,7 @@ export default function ACFPartnersPage() {
             </div>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
-            <a href="/" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+            <a href={`/${locale}/`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
               onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{t.navHome}</a>
             {navLinks.map(l => (
               <a key={l} href={`#${l.toLowerCase()}`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
@@ -953,7 +955,7 @@ export default function ACFPartnersPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 24, textAlign: "center" }}>
           {[
             { val: 3, suf: t.statsSuffixes[0], label: t.statsLabels[0] },
-            { val: 35, suf: t.statsSuffixes[1], label: t.statsLabels[1] },
+            { val: 14, suf: t.statsSuffixes[1], label: t.statsLabels[1] },
             { val: 6, suf: t.statsSuffixes[2], label: t.statsLabels[2] },
             { val: 5, suf: t.statsSuffixes[3], label: t.statsLabels[3] },
           ].map(s => (
