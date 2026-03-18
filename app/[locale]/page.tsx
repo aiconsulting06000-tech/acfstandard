@@ -1411,9 +1411,7 @@ function startCinematic(){
   }).then(function(){
     showScene('cin-s1',{fadeIn:.6});
     var typeEl=document.getElementById('cin-type1');
-    var msg='${locale === 'fr'
-      ? "Vos agents prennent des <span style=\\"color:#c9a84c\\">decisions</span> sans vous."
-      : "Your agents make <span style=\\"color:#c9a84c\\">decisions</span> without you."}';
+    var msg='${locale === 'fr' ? 'Vos agents prennent des decisions sans vous.' : 'Your agents make decisions without you.'}';
     return typeText(typeEl,msg,30);
   }).then(function(){
     document.getElementById('cin-sub1').style.opacity='1';
