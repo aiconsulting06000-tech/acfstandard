@@ -1,1 +1,526 @@
-{"meta":{"language":"LT","languageCode":"lt","locale":"lt-LT"},"common":{"readMore":"Skaityti daugiau","learnMore":"Sužinoti daugiau","getStarted":"Pradėti","downloadPDF":"Atsisiųsti PDF","watchVideo":"Žiūrėti vaizdo įrašą","close":"Uždaryti","open":"Atidaryti","loading":"Kraunama","backToHome":"Grįžti į pradžią","menu":"Meniu"},"regionSelector":{"title":"Pasirinkite savo regioną ir kalbą","close":"✕ Uždaryti","global":"Pasaulinis (anglų)","northAmerica":"Šiaurės Amerika","latinAmerica":"Lotynų Amerika","westernEurope":"Vakarų Europa","nordicBaltic":"Skandinavija ir Baltija","centralEasternEurope":"Vidurio ir Rytų Europa","middleEastAfrica":"Artimieji Rytai ir Afrika","asiaPacific":"Azija ir Ramusis vandenynas"},"nav":{"menu":"Meniu","logoText":"Agentic Commerce Framework®","logoSubtext":"Pasaulinis dirbtinio intelekto valdymo standartas","region":"GLOBAL | LT","theStandard":"Standartas","acfScore":"ACF Score","acfControl":"ACF Control","acfCertification":"ACF Certification","partners":"Partneriai","requestAssessment":"Prašyti vertinimo","partnerLogin":"Partnerio prisijungimas","applyPartner":"Tapti partneriu","contact":"Kontaktai"},"megaMenu":{"framework":{"title":"Sistema","link":"ACF standartas →","subtitle":"Galutinė valdymo metodologija autonominėms sistemoms komercinėje aplinkoje.","architecture":{"title":"Architektūra","principles":"4 pagrindiniai principai","layers":"4 veiklos sluoksniai","maturity":"4 brandos lygiai"},"methodology":{"title":"Metodologija","modules":"8 diegimo moduliai","constitution":"Agentų konstitucija","dda":"DDA vaidmenų sistema","killSwitch":"Avarinio sustabdymo protokolas"},"featured":{"label":"REKOMENDUOJAMA","whitepaper":{"title":"Atsisiųskite ACF baltąją knygą","description":"Pilna specifikacija — nemokama registruotiems vartotojams."},"release":{"title":"ACF — 2026 m. vasaris","description":"Oficialus išleidimas. Kas naujo sistemoje."}}},"products":{"title":"Produktai","link":"Produktai →","subtitle":"Trys įrankiai, įgyvendinantys ACF standartą jūsų organizacijoje.","diagnostic":{"title":"Diagnostika","score":"ACF Score — suvereniteto matavimas","methodology":"Vertinimo metodologija","axes":"6 valdymo ašys"},"saas":{"title":"Valdymo platforma","control":"ACF Control — valdymo skydelis","kpis":"18 suvereniteto KPI","gating":"Adaptyvios vartų sistema"},"certification":{"title":"Sertifikavimas","program":"ACF Certification sertifikavimo programa","levels":"Sertifikavimo lygiai","audit":"Audito procesas"}},"resources":{"title":"Ištekliai","link":"Ištekliai →","subtitle":"Valdymo įžvalgos, tyrimai ir techninė dokumentacija.","insights":{"title":"Naujausios įžvalgos","aiAct":"ES DI aktas ir autonominės sistemos","dda":"DDA vaidmuo paaiškintas","killSwitch":"Trijų lygių avarinio sustabdymo projektavimas"},"documentation":{"title":"Dokumentacija","specs":"Techninės specifikacijos","research":"Moksliniai tyrimai","academy":"ACF Academy"}},"about":{"title":"Apie ACF","link":"Apie ACF →","subtitle":"Istorija, misija ir teisinė apsauga už Agentic Commerce Framework®.","whoWeAre":{"title":"Kas mes esame","vincent":"Vincent DORANGE — kūrėjas","mission":"Misija ir vertybės","legal":"Teisinė apsauga"},"howWeWork":{"title":"Kaip dirbame","network":"Praktikų tinklas","audit":"Auditas ir sertifikavimas","contact":"Susisiekite su mumis"},"registered":{"label":"REGISTRUOTAS","title":"Registruotas prekių ženklas ACF®","description":"ACF® yra registruotas prekių ženklas. Visa metodologija ir įrankiai yra teisiškai apsaugoti."}},"partners":{"title":"Partneriai","link":"Partneriai →","subtitle":"Prisijunkite prie ACF praktikų tinklo ir siūlykite valdymo paslaugas savo klientams.","portal":{"title":"Partnerių portalas","login":"Prisijungti prie partnerių portalo","dashboard":"Skydelis ir įrankiai","training":"Mokymo medžiaga","toolkit":"ACF praktiko įrankių rinkinys"},"become":{"title":"Tapti partneriu","apply":"Teikti paraišką","tiers":"Partnerių lygiai","certified":"Pirmiausia gaukite ACF sertifikatą"}},"user":{"partnerAccess":"Partnerio prieiga","partnerLogin":"Partnerio prisijungimas","applyPartner":"Tapti partneriu","contact":"Kontaktai"}},"hero":{"title":"Pasaulinis standartas","typing":{"word1":"Valdymui","word2":"Suverenitetui","word3":"Intelektui","word4":"Komercijai"},"description":"Agentic Commerce Framework® (ACF) yra galutinė valdymo metodologija autonominių sistemų diegimui, priežiūrai ir kontrolei komercinėje aplinkoje.","cta":{"primary":"Prašyti valdymo vertinimo →","secondary":"Skaityti standartą"},"stats":{"principles":{"value":"4","label":"Pagrindiniai<br>principai"},"modules":{"value":"8","label":"Diegimo<br>moduliai"},"kpis":{"value":"18","label":"Suvereniteto<br>KPI"},"tools":{"value":"17","label":"Patentuoti<br>įrankiai"}},"satellites":{"score":{"name":"ACF Score","description":"Suvereniteto matavimas"},"control":{"name":"ACF Control","description":"Valdymo platforma"},"certification":{"name":"Certification","description":"Patvirtinimas"},"partners":{"name":"Partneriai","description":"Praktikai"}}},"statsBar":{"layers":{"value":"4","label":"Veiklos sluoksniai"},"kpis":{"value":"18","label":"Suvereniteto KPI"},"tools":{"value":"17","label":"Patentuoti įrankiai"},"sovereignty":{"value":"100","suffix":"%","label":"Žmogaus suverenitetas"}},"principles":{"badge":"// Architektūra","title":"4 pagrindiniai principai","subtitle":"Keturios nekintamos aksiomos, apibrėžiančios ribą tarp žmogaus valdžios ir autonominio vykdymo.","principle1":{"number":"01","title":"Sprendimų suverenitetas","description":"Kritiniai strateginiai sprendimai niekada nėra deleguojami autonominėms sistemoms."},"principle2":{"number":"02","title":"Valdymas nuo pat pradžių","description":"Valdymo sistemos apibrėžiamos prieš diegimą, o ne po jo."},"principle3":{"number":"03","title":"Aukščiausia žmogaus kontrolė","description":"Kiekviena autonominė sistema turi išsaugoti žmogaus įsikišimo galimybę."},"principle4":{"number":"04","title":"Atsekama atsakomybė","description":"Kiekvienas autonominis veiksmas turi būti audituojamas ir priskiriamas."}},"layers":{"badge":"// Struktūra","title":"4 veiklos sluoksniai","subtitle":"Hierarchinė architektūra nuo strateginio valdymo iki realaus laiko vykdymo priežiūros.","layer1":{"number":"LAYER_01","title":"Valdymas ir suverenitetas","description":"Suvereniteto chartija, valdymo komitetas, RACI matrica, nedeleguojamų zonų žemėlapis."},"layer2":{"number":"LAYER_02","title":"Sprendimų politika","description":"Svertiniai tikslai, arbitražo taisyklės, eskalacijos ribos, reguliavimo apribojimai."},"layer3":{"number":"LAYER_03","title":"Agentų sistema","description":"Aiškus mandatas kiekvienam agentui, sąveikos perimetras, autonomijos lygis, 5 kategorijų taksonomija."},"layer4":{"number":"LAYER_04","title":"Vykdymas ir priežiūra","description":"Adaptyvi vartų matrica, daugiapakopiai įspėjimai, 18 suvereniteto KPI, tiesioginiai skydeliai."}},"maturity":{"badge":"// Progresas","title":"4 agentų brandos lygiai","subtitle":"ACF klasifikuoja sistemas pagal autonomijos lygį. 2 lygis yra rekomenduojamas diegimo tikslas.","level0":{"code":"LEVEL_0","name":"Klasikinė automatizacija","risk":"Labai maža rizika","description":"Fiksuotos taisyklės, jokio mašininio mokymosi. Žmogaus įsikišimas bet kokiam pakeitimui."},"level1":{"code":"LEVEL_1","name":"Pagalbiniai agentai","risk":"Maža rizika","description":"Agentai analizuoja ir rekomenduoja. Kiekvienas galutinis sprendimas lieka žmogui."},"level2":{"code":"LEVEL_2","name":"Valdomi agentai","risk":"Vidutinė rizika","description":"Agentai sprendžia griežto valdymo ribose. Nedeleguojamos zonos užrakintos.","badge":"★ Rekomenduojamas tikslas"},"level3":{"code":"LEVEL_3","name":"Prižiūrimi autonominiai","risk":"Didelė rizika","description":"Agentai sprendžia ir mokosi. Maksimalus valdymas. Tik subrendusioms organizacijoms."}},"modules":{"badge":"// Metodologija","title":"8 diegimo moduliai","subtitle":"Nuoseklus kelias, diegiamas palaipsniui per 6–18 mėnesių. Kiekvienas modulis remiasi ankstesniu.","module1":{"code":"MOD_01","name":"Suvereniteto diagnostika","description":"Suvereniteto balo skaičiavimas. Rizikos zonų žemėlapių sudarymas."},"module2":{"code":"MOD_02","name":"Sprendimų žemėlapių sudarymas","description":"Kritiškumo matrica. Nedeleguojamos zonos."},"module3":{"code":"MOD_03","name":"Agentų konstitucija","description":"9 straipsniai. Pasirašyta valdymo komiteto."},"module4":{"code":"MOD_04","name":"Agentų sistemos dizainas","description":"Mandato lapai, sąveikos perimetrai."},"module5":{"code":"MOD_05","name":"Saugumas ir grįžtamumas","description":"Smėlio dėžė, grįžtamumo planas. Avarinio sustabdymo dizainas."},"module6":{"code":"MOD_06","name":"Nuolatinis valdymas","description":"Mėnesinės peržiūros. Metinis atitikties auditas."},"module7":{"code":"MOD_07","name":"Diegimo veiksmų planas","description":"5 fazių laipsniškas diegimas."},"module8":{"code":"MOD_08","name":"Krizių valdymas","description":"3 lygių incidentai. Avarinio sustabdymo pratybos."}},"video":{"badge":"// Kodėl ACF","title":"Valdymas negali laukti.<br>Agentai jau sprendžia.","description1":"2026 metais autonominiai agentai jau vykdo sprendimus komercinėje aplinkoje — nustato kainas, kvalifikuoja potencialius klientus, apdoroja pretenzijas, valdo sutartis. Dauguma organizacijų neturi sistemos jiems valdyti.","description2":"ACF buvo sukurtas užpildyti šią spragą — kol valdymo nesėkmė netapo teisine, finansine ar reputacine krize.","quote":{"text":"Klausimas nebėra <em>ar</em> diegti agentus. Tai yra <em>kaip</em> juos diegti neatsisakant savo suvereniteto.","author":"— Agentic Commerce Framework®"},"player":{"badge":"ACF — AGENTŲ REVOLIUCIJA","name":"Agentinės komercijos pakilimas","role":"Nuo nekontroliuojamos automatizacijos iki valdomo suvereniteto","duration":"1:05"},"stats":{"release":{"value":"2026","label":"Oficialus išleidimas"},"documentation":{"value":"45p","label":"Pilna dokumentacija"},"protection":{"value":"ACF®","label":"Registruotas prekių ženklas"}},"modal":{"placeholder":"NETRUKUS","title":"Agentinės komercijos revoliucija","description":"Naratyvinė kelionė: nuo kontrolės praradimo iki ACF valdymo sistemos. Autonominiai agentai pertvarko komerciją — klausimas yra, kas juos valdo."}},"products":{"badge":"// Ekosistema","title":"ACF ekosistema","subtitle":"Trys papildomi produktai, įgyvendinantys ACF standartą.","score":{"label":"DIAGNOSTIKOS ĮRANKIS","title":"ACF Score","description":"Patentuotas suvereniteto balas, matuojantis jūsų sprendimų nepriklausomumą 6 valdymo dimensijose.","features":{"feature1":"Sudėtinio suvereniteto balo metrika","feature2":"6 ašių radaro vizualizacija","feature3":"Individualizuotas veiksmų planas kiekvienai ašiai"},"cta":"Išmatuokite savo balą →"},"control":{"label":"VALDYMO PLATFORMA","title":"ACF Control","description":"Realaus laiko valdymo skydelis, stebintis jūsų 18 suvereniteto KPI su adaptyvia vartų sistema ir automatine eskalacija.","features":{"feature1":"18 KPI 6 valdymo ašyse","feature2":"Adaptyvi vartų sistema su žmogaus eskalacija","feature3":"Nepadirbami audito žurnalai"},"cta":"Atraskite ACF Control →"},"certification":{"label":"NEPRIKLAUSOMAS PATVIRTINIMAS","title":"ACF Certification","description":"Nepriklausomas sertifikavimas, patvirtinantis atitiktį ACF valdymo standartui. Viešai patikrinamas.","features":{"feature1":"1, 2 ir 3 lygio sertifikavimo keliai","feature2":"Viešai patikrinamas ženklas","feature3":"Metinis atnaujinimas + nuolatinė stebėsena"},"cta":"Gaukite sertifikatą →"}},"blog":{"badge":"// Įžvalgos","title":"Naujausi ACF tinklaraščio įrašai","subtitle":"Valdymo įžvalgos, sistemos atnaujinimai ir agentinio intelekto tyrimai.","article1":{"category":"DI REGULIAVIMAS","title":"Kaip ES DI aktas taikomas autonominėms sistemoms 2026 metais","excerpt":"DI akto rizika pagrįstas požiūris sukuria konkrečius įpareigojimus autonominiams agentams. Štai ką ACF 2 lygio valdymas apima.","date":"2026-02-15","cta":"Skaityti →"},"article2":{"category":"VALDYMAS","title":"DDA: kodėl kiekvienai DI įmonei reikia deleguotų sprendimų agento pareigūno","excerpt":"DDA yra jūsų autonominių agentų teisinis globėjas. Kaip sukurti ir įgalinti šį kritinį vaidmenį.","date":"2026-02-08","cta":"Skaityti →"},"article3":{"category":"TECHNINIS","title":"Trijų lygių avarinio sustabdymo projektavimas autonominėms sistemoms","excerpt":"Efektyvus avarinis sustabdymas nėra vienas mygtukas. ACF nurodo tris pertraukimo lygius su apibrėžtais reakcijos laikais.","date":"2026-01-29","cta":"Skaityti →"},"viewAll":"Žiūrėti visus straipsnius →"},"cta":{"watermark":"ACF®","badge":"// Kitas žingsnis","title":"Pasiruošę valdyti savo<br>autonomines sistemas?","description":"Prašykite valdymo vertinimo ir sužinokite savo dabartinį suvereniteto balą.","primary":"Prašyti valdymo vertinimo →","secondary":"Tapti ACF partneriu"},"footer":{"logoText":"Agentic Commerce Framework®","logoSubtext":"Pasaulinis dirbtinio intelekto valdymo standartas","description":"Galutinis valdymo standartas organizacijoms, diegiančioms autonomines sistemas. Registruotas prekių ženklas.","framework":{"title":"Sistema","theStandard":"Standartas","methodology":"Metodologija","research":"Tyrimai","certification":"ACF Certification"},"products":{"title":"Produktai","score":"ACF Score","control":"ACF Control","certification":"Sertifikavimas","academy":"Academy"},"organization":{"title":"Organizacija","partnerPortal":"Partnerių portalas","about":"Apie mus","contact":"Kontaktai","legal":"Teisinė informacija"},"copyright":"© 2026 Agentic Commerce Framework® — Vincent DORANGE. Visos teisės saugomos.","legal":{"privacy":"Privatumas","terms":"Sąlygos","cookies":"Slapukai"}},"ai":{"button":{"label":"Klausti ACF agento","status":"DI VALDYMAS · PRISIJUNGĘS"},"modal":{"close":"×","beta":"","title":"Klausti ACF","subtitle":"Pokalbių robotas, atsakantis į klausimus pagal ACF standartą ir valdymo įžvalgas","placeholder":"Klauskite apie ACF valdymą...","send":"Siųsti","trending":{"label":"POPULIARŪS KLAUSIMAI","q1":"Kas yra ACF standartas?","q2":"Kaip gauti ACF sertifikatą?","q3":"Kas yra DDA vaidmuo?","q4":"Kas yra suvereniteto balas?","q5":"4 pagrindiniai principai?"},"disclaimer":"DI eksperimentas. Atsakymai pagrįsti ACF standarto dokumentacija.","seeMore":"Žiūrėti daugiau"}}}
+{
+  "meta": {
+    "language": "LT",
+    "languageCode": "lt",
+    "locale": "lt-LT"
+  },
+  "common": {
+    "readMore": "Skaityti daugiau",
+    "learnMore": "Sužinoti daugiau",
+    "getStarted": "Pradėti",
+    "downloadPDF": "Atsisiųsti PDF",
+    "watchVideo": "Žiūrėti vaizdo įrašą",
+    "close": "Uždaryti",
+    "open": "Atidaryti",
+    "loading": "Kraunama",
+    "backToHome": "Grįžti į pradžią",
+    "menu": "Meniu"
+  },
+  "regionSelector": {
+    "title": "Pasirinkite savo regioną ir kalbą",
+    "close": "✕ Uždaryti",
+    "global": "Pasaulinis (anglų)",
+    "northAmerica": "Šiaurės Amerika",
+    "latinAmerica": "Lotynų Amerika",
+    "westernEurope": "Vakarų Europa",
+    "nordicBaltic": "Skandinavija ir Baltija",
+    "centralEasternEurope": "Vidurio ir Rytų Europa",
+    "middleEastAfrica": "Artimieji Rytai ir Afrika",
+    "asiaPacific": "Azija ir Ramusis vandenynas"
+  },
+  "nav": {
+    "menu": "Meniu",
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Pasaulinis dirbtinio intelekto valdymo standartas",
+    "region": "GLOBAL | LT",
+    "theStandard": "Standartas",
+    "acfScore": "ACF Score",
+    "acfControl": "ACF Control",
+    "acfCertification": "ACF Certification",
+    "partners": "Partneriai",
+    "requestAssessment": "Prašyti vertinimo",
+    "partnerLogin": "Partnerio prisijungimas",
+    "applyPartner": "Tapti partneriu",
+    "contact": "Kontaktai"
+  },
+  "megaMenu": {
+    "framework": {
+      "title": "Sistema",
+      "link": "ACF standartas →",
+      "subtitle": "Galutinė valdymo metodologija autonominėms sistemoms komercinėje aplinkoje.",
+      "architecture": {
+        "title": "Architektūra",
+        "principles": "4 pagrindiniai principai",
+        "layers": "4 veiklos sluoksniai",
+        "maturity": "4 brandos lygiai"
+      },
+      "methodology": {
+        "title": "Metodologija",
+        "modules": "8 diegimo moduliai",
+        "constitution": "Agentų konstitucija",
+        "dda": "DDA vaidmenų sistema",
+        "killSwitch": "Avarinio sustabdymo protokolas"
+      },
+      "featured": {
+        "label": "REKOMENDUOJAMA",
+        "whitepaper": {
+          "title": "Atsisiųskite ACF baltąją knygą",
+          "description": "Pilna specifikacija — nemokama registruotiems vartotojams."
+        },
+        "release": {
+          "title": "ACF — 2026 m. vasaris",
+          "description": "Oficialus išleidimas. Kas naujo sistemoje."
+        }
+      }
+    },
+    "products": {
+      "title": "Produktai",
+      "link": "Produktai →",
+      "subtitle": "Trys įrankiai, įgyvendinantys ACF standartą jūsų organizacijoje.",
+      "diagnostic": {
+        "title": "Diagnostika",
+        "score": "ACF Score — suvereniteto matavimas",
+        "methodology": "Vertinimo metodologija",
+        "axes": "6 valdymo ašys"
+      },
+      "saas": {
+        "title": "Valdymo platforma",
+        "control": "ACF Control — valdymo skydelis",
+        "kpis": "18 suvereniteto KPI",
+        "gating": "Adaptyvios vartų sistema"
+      },
+      "certification": {
+        "title": "Sertifikavimas",
+        "program": "ACF Certification sertifikavimo programa",
+        "levels": "Sertifikavimo lygiai",
+        "audit": "Audito procesas"
+      }
+    },
+    "resources": {
+      "title": "Ištekliai",
+      "link": "Ištekliai →",
+      "subtitle": "Valdymo įžvalgos, tyrimai ir techninė dokumentacija.",
+      "insights": {
+        "title": "Naujausios įžvalgos",
+        "aiAct": "ES DI aktas ir autonominės sistemos",
+        "dda": "DDA vaidmuo paaiškintas",
+        "killSwitch": "Trijų lygių avarinio sustabdymo projektavimas"
+      },
+      "documentation": {
+        "title": "Dokumentacija",
+        "specs": "Techninės specifikacijos",
+        "research": "Moksliniai tyrimai",
+        "academy": "ACF Academy"
+      },
+      "tools": {
+        "title": "Įrankiai",
+        "complianceChecker": "ACF Atitikties tikrintuvas",
+        "euAiAct": "EU AI Act Checker ↗"
+      }
+    },
+    "about": {
+      "title": "Apie ACF",
+      "link": "Apie ACF →",
+      "subtitle": "Istorija, misija ir teisinė apsauga už Agentic Commerce Framework®.",
+      "whoWeAre": {
+        "title": "Kas mes esame",
+        "vincent": "Vincent DORANGE — kūrėjas",
+        "mission": "Misija ir vertybės",
+        "legal": "Teisinė apsauga"
+      },
+      "howWeWork": {
+        "title": "Kaip dirbame",
+        "network": "Praktikų tinklas",
+        "audit": "Auditas ir sertifikavimas",
+        "contact": "Susisiekite su mumis"
+      },
+      "registered": {
+        "label": "REGISTRUOTAS",
+        "title": "Registruotas prekių ženklas ACF®",
+        "description": "ACF® yra registruotas prekių ženklas. Visa metodologija ir įrankiai yra teisiškai apsaugoti."
+      }
+    },
+    "partners": {
+      "title": "Partneriai",
+      "link": "Partneriai →",
+      "subtitle": "Prisijunkite prie ACF praktikų tinklo ir siūlykite valdymo paslaugas savo klientams.",
+      "portal": {
+        "title": "Partnerių portalas",
+        "login": "Prisijungti prie partnerių portalo",
+        "dashboard": "Skydelis ir įrankiai",
+        "training": "Mokymo medžiaga",
+        "toolkit": "ACF praktiko įrankių rinkinys"
+      },
+      "become": {
+        "title": "Tapti partneriu",
+        "apply": "Teikti paraišką",
+        "tiers": "Partnerių lygiai",
+        "certified": "Pirmiausia gaukite ACF sertifikatą"
+      }
+    },
+    "user": {
+      "partnerAccess": "Partnerio prieiga",
+      "partnerLogin": "Partnerio prisijungimas",
+      "applyPartner": "Tapti partneriu",
+      "contact": "Kontaktai"
+    }
+  },
+  "hero": {
+    "title": "Pasaulinis standartas",
+    "typing": {
+      "word1": "Valdymui",
+      "word2": "Suverenitetui",
+      "word3": "Intelektui",
+      "word4": "Komercijai"
+    },
+    "description": "Agentic Commerce Framework® (ACF) yra galutinė valdymo metodologija autonominių sistemų diegimui, priežiūrai ir kontrolei komercinėje aplinkoje.",
+    "cta": {
+      "primary": "Prašyti valdymo vertinimo →",
+      "secondary": "Skaityti standartą"
+    },
+    "stats": {
+      "principles": {
+        "value": "4",
+        "label": "Pagrindiniai<br>principai"
+      },
+      "modules": {
+        "value": "8",
+        "label": "Diegimo<br>moduliai"
+      },
+      "kpis": {
+        "value": "18",
+        "label": "Suvereniteto<br>KPI"
+      },
+      "tools": {
+        "value": "17",
+        "label": "Patentuoti<br>įrankiai"
+      }
+    },
+    "satellites": {
+      "score": {
+        "name": "ACF Score",
+        "description": "Suvereniteto matavimas"
+      },
+      "control": {
+        "name": "ACF Control",
+        "description": "Valdymo platforma"
+      },
+      "certification": {
+        "name": "Certification",
+        "description": "Patvirtinimas"
+      },
+      "partners": {
+        "name": "Partneriai",
+        "description": "Praktikai"
+      }
+    }
+  },
+  "statsBar": {
+    "layers": {
+      "value": "4",
+      "label": "Veiklos sluoksniai"
+    },
+    "kpis": {
+      "value": "18",
+      "label": "Suvereniteto KPI"
+    },
+    "tools": {
+      "value": "17",
+      "label": "Patentuoti įrankiai"
+    },
+    "sovereignty": {
+      "value": "100",
+      "suffix": "%",
+      "label": "Žmogaus suverenitetas"
+    }
+  },
+  "principles": {
+    "badge": "// Architektūra",
+    "title": "4 pagrindiniai principai",
+    "subtitle": "Keturios nekintamos aksiomos, apibrėžiančios ribą tarp žmogaus valdžios ir autonominio vykdymo.",
+    "principle1": {
+      "number": "01",
+      "title": "Sprendimų suverenitetas",
+      "description": "Kritiniai strateginiai sprendimai niekada nėra deleguojami autonominėms sistemoms."
+    },
+    "principle2": {
+      "number": "02",
+      "title": "Valdymas nuo pat pradžių",
+      "description": "Valdymo sistemos apibrėžiamos prieš diegimą, o ne po jo."
+    },
+    "principle3": {
+      "number": "03",
+      "title": "Aukščiausia žmogaus kontrolė",
+      "description": "Kiekviena autonominė sistema turi išsaugoti žmogaus įsikišimo galimybę."
+    },
+    "principle4": {
+      "number": "04",
+      "title": "Atsekama atsakomybė",
+      "description": "Kiekvienas autonominis veiksmas turi būti audituojamas ir priskiriamas."
+    }
+  },
+  "layers": {
+    "badge": "// Struktūra",
+    "title": "4 veiklos sluoksniai",
+    "subtitle": "Hierarchinė architektūra nuo strateginio valdymo iki realaus laiko vykdymo priežiūros.",
+    "layer1": {
+      "number": "LAYER_01",
+      "title": "Valdymas ir suverenitetas",
+      "description": "Suvereniteto chartija, valdymo komitetas, RACI matrica, nedeleguojamų zonų žemėlapis."
+    },
+    "layer2": {
+      "number": "LAYER_02",
+      "title": "Sprendimų politika",
+      "description": "Svertiniai tikslai, arbitražo taisyklės, eskalacijos ribos, reguliavimo apribojimai."
+    },
+    "layer3": {
+      "number": "LAYER_03",
+      "title": "Agentų sistema",
+      "description": "Aiškus mandatas kiekvienam agentui, sąveikos perimetras, autonomijos lygis, 5 kategorijų taksonomija."
+    },
+    "layer4": {
+      "number": "LAYER_04",
+      "title": "Vykdymas ir priežiūra",
+      "description": "Adaptyvi vartų matrica, daugiapakopiai įspėjimai, 18 suvereniteto KPI, tiesioginiai skydeliai."
+    }
+  },
+  "maturity": {
+    "badge": "// Progresas",
+    "title": "4 agentų brandos lygiai",
+    "subtitle": "ACF klasifikuoja sistemas pagal autonomijos lygį. 2 lygis yra rekomenduojamas diegimo tikslas.",
+    "level0": {
+      "code": "LEVEL_0",
+      "name": "Klasikinė automatizacija",
+      "risk": "Labai maža rizika",
+      "description": "Fiksuotos taisyklės, jokio mašininio mokymosi. Žmogaus įsikišimas bet kokiam pakeitimui."
+    },
+    "level1": {
+      "code": "LEVEL_1",
+      "name": "Pagalbiniai agentai",
+      "risk": "Maža rizika",
+      "description": "Agentai analizuoja ir rekomenduoja. Kiekvienas galutinis sprendimas lieka žmogui."
+    },
+    "level2": {
+      "code": "LEVEL_2",
+      "name": "Valdomi agentai",
+      "risk": "Vidutinė rizika",
+      "description": "Agentai sprendžia griežto valdymo ribose. Nedeleguojamos zonos užrakintos.",
+      "badge": "★ Rekomenduojamas tikslas"
+    },
+    "level3": {
+      "code": "LEVEL_3",
+      "name": "Prižiūrimi autonominiai",
+      "risk": "Didelė rizika",
+      "description": "Agentai sprendžia ir mokosi. Maksimalus valdymas. Tik subrendusioms organizacijoms."
+    }
+  },
+  "modules": {
+    "badge": "// Metodologija",
+    "title": "8 diegimo moduliai",
+    "subtitle": "Nuoseklus kelias, diegiamas palaipsniui per 6–18 mėnesių. Kiekvienas modulis remiasi ankstesniu.",
+    "module1": {
+      "code": "MOD_01",
+      "name": "Suvereniteto diagnostika",
+      "description": "Suvereniteto balo skaičiavimas. Rizikos zonų žemėlapių sudarymas."
+    },
+    "module2": {
+      "code": "MOD_02",
+      "name": "Sprendimų žemėlapių sudarymas",
+      "description": "Kritiškumo matrica. Nedeleguojamos zonos."
+    },
+    "module3": {
+      "code": "MOD_03",
+      "name": "Agentų konstitucija",
+      "description": "9 straipsniai. Pasirašyta valdymo komiteto."
+    },
+    "module4": {
+      "code": "MOD_04",
+      "name": "Agentų sistemos dizainas",
+      "description": "Mandato lapai, sąveikos perimetrai."
+    },
+    "module5": {
+      "code": "MOD_05",
+      "name": "Saugumas ir grįžtamumas",
+      "description": "Smėlio dėžė, grįžtamumo planas. Avarinio sustabdymo dizainas."
+    },
+    "module6": {
+      "code": "MOD_06",
+      "name": "Nuolatinis valdymas",
+      "description": "Mėnesinės peržiūros. Metinis atitikties auditas."
+    },
+    "module7": {
+      "code": "MOD_07",
+      "name": "Diegimo veiksmų planas",
+      "description": "5 fazių laipsniškas diegimas."
+    },
+    "module8": {
+      "code": "MOD_08",
+      "name": "Krizių valdymas",
+      "description": "3 lygių incidentai. Avarinio sustabdymo pratybos."
+    }
+  },
+  "video": {
+    "badge": "// Kodėl ACF",
+    "title": "Valdymas negali laukti.<br>Agentai jau sprendžia.",
+    "description1": "2026 metais autonominiai agentai jau vykdo sprendimus komercinėje aplinkoje — nustato kainas, kvalifikuoja potencialius klientus, apdoroja pretenzijas, valdo sutartis. Dauguma organizacijų neturi sistemos jiems valdyti.",
+    "description2": "ACF buvo sukurtas užpildyti šią spragą — kol valdymo nesėkmė netapo teisine, finansine ar reputacine krize.",
+    "quote": {
+      "text": "Klausimas nebėra <em>ar</em> diegti agentus. Tai yra <em>kaip</em> juos diegti neatsisakant savo suvereniteto.",
+      "author": "— Agentic Commerce Framework®"
+    },
+    "player": {
+      "badge": "ACF — AGENTŲ REVOLIUCIJA",
+      "name": "Agentinės komercijos pakilimas",
+      "role": "Nuo nekontroliuojamos automatizacijos iki valdomo suvereniteto",
+      "duration": "1:05"
+    },
+    "stats": {
+      "release": {
+        "value": "2026",
+        "label": "Oficialus išleidimas"
+      },
+      "documentation": {
+        "value": "45p",
+        "label": "Pilna dokumentacija"
+      },
+      "protection": {
+        "value": "ACF®",
+        "label": "Registruotas prekių ženklas"
+      }
+    },
+    "modal": {
+      "placeholder": "NETRUKUS",
+      "title": "Agentinės komercijos revoliucija",
+      "description": "Naratyvinė kelionė: nuo kontrolės praradimo iki ACF valdymo sistemos. Autonominiai agentai pertvarko komerciją — klausimas yra, kas juos valdo."
+    }
+  },
+  "products": {
+    "badge": "// Ekosistema",
+    "title": "ACF ekosistema",
+    "subtitle": "Trys papildomi produktai, įgyvendinantys ACF standartą.",
+    "score": {
+      "label": "DIAGNOSTIKOS ĮRANKIS",
+      "title": "ACF Score",
+      "description": "Patentuotas suvereniteto balas, matuojantis jūsų sprendimų nepriklausomumą 6 valdymo dimensijose.",
+      "features": {
+        "feature1": "Sudėtinio suvereniteto balo metrika",
+        "feature2": "6 ašių radaro vizualizacija",
+        "feature3": "Individualizuotas veiksmų planas kiekvienai ašiai"
+      },
+      "cta": "Išmatuokite savo balą →"
+    },
+    "control": {
+      "label": "VALDYMO PLATFORMA",
+      "title": "ACF Control",
+      "description": "Realaus laiko valdymo skydelis, stebintis jūsų 18 suvereniteto KPI su adaptyvia vartų sistema ir automatine eskalacija.",
+      "features": {
+        "feature1": "18 KPI 6 valdymo ašyse",
+        "feature2": "Adaptyvi vartų sistema su žmogaus eskalacija",
+        "feature3": "Nepadirbami audito žurnalai"
+      },
+      "cta": "Atraskite ACF Control →"
+    },
+    "certification": {
+      "label": "NEPRIKLAUSOMAS PATVIRTINIMAS",
+      "title": "ACF Certification",
+      "description": "Nepriklausomas sertifikavimas, patvirtinantis atitiktį ACF valdymo standartui. Viešai patikrinamas.",
+      "features": {
+        "feature1": "1, 2 ir 3 lygio sertifikavimo keliai",
+        "feature2": "Viešai patikrinamas ženklas",
+        "feature3": "Metinis atnaujinimas + nuolatinė stebėsena"
+      },
+      "cta": "Gaukite sertifikatą →"
+    }
+  },
+  "blog": {
+    "badge": "// Įžvalgos",
+    "title": "Naujausi ACF tinklaraščio įrašai",
+    "subtitle": "Valdymo įžvalgos, sistemos atnaujinimai ir agentinio intelekto tyrimai.",
+    "article1": {
+      "category": "DI REGULIAVIMAS",
+      "title": "Kaip ES DI aktas taikomas autonominėms sistemoms 2026 metais",
+      "excerpt": "DI akto rizika pagrįstas požiūris sukuria konkrečius įpareigojimus autonominiams agentams. Štai ką ACF 2 lygio valdymas apima.",
+      "date": "2026-02-15",
+      "cta": "Skaityti →"
+    },
+    "article2": {
+      "category": "VALDYMAS",
+      "title": "DDA: kodėl kiekvienai DI įmonei reikia deleguotų sprendimų agento pareigūno",
+      "excerpt": "DDA yra jūsų autonominių agentų teisinis globėjas. Kaip sukurti ir įgalinti šį kritinį vaidmenį.",
+      "date": "2026-02-08",
+      "cta": "Skaityti →"
+    },
+    "article3": {
+      "category": "TECHNINIS",
+      "title": "Trijų lygių avarinio sustabdymo projektavimas autonominėms sistemoms",
+      "excerpt": "Efektyvus avarinis sustabdymas nėra vienas mygtukas. ACF nurodo tris pertraukimo lygius su apibrėžtais reakcijos laikais.",
+      "date": "2026-01-29",
+      "cta": "Skaityti →"
+    },
+    "viewAll": "Žiūrėti visus straipsnius →"
+  },
+  "cta": {
+    "watermark": "ACF®",
+    "badge": "// Kitas žingsnis",
+    "title": "Pasiruošę valdyti savo<br>autonomines sistemas?",
+    "description": "Prašykite valdymo vertinimo ir sužinokite savo dabartinį suvereniteto balą.",
+    "primary": "Prašyti valdymo vertinimo →",
+    "secondary": "Tapti ACF partneriu"
+  },
+  "footer": {
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Pasaulinis dirbtinio intelekto valdymo standartas",
+    "description": "Galutinis valdymo standartas organizacijoms, diegiančioms autonomines sistemas. Registruotas prekių ženklas.",
+    "framework": {
+      "title": "Sistema",
+      "theStandard": "Standartas",
+      "methodology": "Metodologija",
+      "research": "Tyrimai",
+      "certification": "ACF Certification"
+    },
+    "products": {
+      "title": "Produktai",
+      "score": "ACF Score",
+      "control": "ACF Control",
+      "certification": "Sertifikavimas",
+      "academy": "Academy"
+    },
+    "organization": {
+      "title": "Organizacija",
+      "partnerPortal": "Partnerių portalas",
+      "about": "Apie mus",
+      "contact": "Kontaktai",
+      "legal": "Teisinė informacija"
+    },
+    "copyright": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Visos teisės saugomos.",
+    "legal": {
+      "privacy": "Privatumas",
+      "terms": "Sąlygos",
+      "cookies": "Slapukai"
+    }
+  },
+  "ai": {
+    "button": {
+      "label": "Klausti ACF agento",
+      "status": "DI VALDYMAS · PRISIJUNGĘS"
+    },
+    "modal": {
+      "close": "×",
+      "beta": "",
+      "title": "Klausti ACF",
+      "subtitle": "Pokalbių robotas, atsakantis į klausimus pagal ACF standartą ir valdymo įžvalgas",
+      "placeholder": "Klauskite apie ACF valdymą...",
+      "send": "Siųsti",
+      "trending": {
+        "label": "POPULIARŪS KLAUSIMAI",
+        "q1": "Kas yra ACF standartas?",
+        "q2": "Kaip gauti ACF sertifikatą?",
+        "q3": "Kas yra DDA vaidmuo?",
+        "q4": "Kas yra suvereniteto balas?",
+        "q5": "4 pagrindiniai principai?"
+      },
+      "disclaimer": "DI eksperimentas. Atsakymai pagrįsti ACF standarto dokumentacija.",
+      "seeMore": "Žiūrėti daugiau"
+    }
+  }
+}

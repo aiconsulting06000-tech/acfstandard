@@ -1,1 +1,526 @@
-{"meta":{"language":"ID","languageCode":"id","locale":"id-ID"},"common":{"readMore":"Baca selengkapnya","learnMore":"Pelajari lebih lanjut","getStarted":"Mulai","downloadPDF":"Unduh PDF","watchVideo":"Tonton video","close":"Tutup","open":"Buka","loading":"Memuat","backToHome":"Kembali ke beranda","menu":"Menu"},"regionSelector":{"title":"Pilih wilayah dan bahasa Anda","close":"✕ Tutup","global":"Global (Inggris)","northAmerica":"Amerika Utara","latinAmerica":"Amerika Latin","westernEurope":"Eropa Barat","nordicBaltic":"Nordik & Baltik","centralEasternEurope":"Eropa Tengah & Timur","middleEastAfrica":"Timur Tengah & Afrika","asiaPacific":"Asia & Pasifik"},"nav":{"menu":"Menu","logoText":"Agentic Commerce Framework®","logoSubtext":"Standar Global untuk Tata Kelola AI","region":"GLOBAL | ID","theStandard":"Standar","acfScore":"ACF Score","acfControl":"ACF Control","acfCertification":"ACF Certification","partners":"Mitra","requestAssessment":"Minta Penilaian","partnerLogin":"Login Mitra","applyPartner":"Ajukan Menjadi Mitra","contact":"Kontak"},"megaMenu":{"framework":{"title":"Kerangka Kerja","link":"Standar ACF →","subtitle":"Metodologi tata kelola definitif untuk sistem agentik dalam lingkungan komersial.","architecture":{"title":"Arsitektur","principles":"4 Prinsip Dasar","layers":"4 Lapisan Operasional","maturity":"4 Tingkat Kematangan"},"methodology":{"title":"Metodologi","modules":"8 Modul Implementasi","constitution":"Konstitusi Agentik","dda":"Kerangka Peran DDA","killSwitch":"Protokol Penghentian Darurat"},"featured":{"label":"UNGGULAN","whitepaper":{"title":"Unduh White Paper ACF","description":"Spesifikasi lengkap — gratis untuk pengguna terdaftar."},"release":{"title":"ACF — Februari 2026","description":"Rilis resmi. Apa yang baru dalam kerangka kerja."}}},"products":{"title":"Produk","link":"Produk →","subtitle":"Tiga alat yang mengoperasionalkan Standar ACF di seluruh organisasi Anda.","diagnostic":{"title":"Diagnostik","score":"ACF Score — Metrik Kedaulatan","methodology":"Metodologi Penilaian","axes":"6 Sumbu Tata Kelola"},"saas":{"title":"Platform Tata Kelola","control":"ACF Control — Dasbor Tata Kelola","kpis":"18 KPI Kedaulatan","gating":"Sistem Gating Adaptif"},"certification":{"title":"Sertifikasi","program":"Program ACF Certification","levels":"Tingkat Sertifikasi","audit":"Proses Audit"}},"resources":{"title":"Sumber Daya","link":"Sumber Daya →","subtitle":"Wawasan tata kelola, penelitian, dan dokumentasi teknis.","insights":{"title":"Wawasan Terbaru","aiAct":"EU AI Act & Sistem Agentik","dda":"Peran DDA Dijelaskan","killSwitch":"Merancang Penghentian Darurat 3 Tingkat"},"documentation":{"title":"Dokumentasi","specs":"Spesifikasi Teknis","research":"Makalah Penelitian","academy":"Akademi ACF"}},"about":{"title":"Tentang ACF","link":"Tentang ACF →","subtitle":"Kisah, misi, dan perlindungan hukum di balik Agentic Commerce Framework®.","whoWeAre":{"title":"Tentang Kami","vincent":"Vincent DORANGE — Pencipta","mission":"Misi & Nilai","legal":"Perlindungan Hukum"},"howWeWork":{"title":"Cara Kami Bekerja","network":"Jaringan Praktisi","audit":"Audit & Sertifikasi","contact":"Hubungi Kami"},"registered":{"label":"MEREK TERDAFTAR","title":"Merek Terdaftar ACF®","description":"ACF® adalah merek terdaftar. Semua metodologi dan alat dilindungi secara hukum."}},"partners":{"title":"Mitra","link":"Mitra →","subtitle":"Bergabunglah dengan jaringan Praktisi ACF dan tawarkan layanan tata kelola kepada klien Anda.","portal":{"title":"Portal Mitra","login":"Login ke Portal Mitra","dashboard":"Dasbor & Alat","training":"Materi Pelatihan","toolkit":"Perangkat Praktisi ACF"},"become":{"title":"Menjadi Mitra","apply":"Ajukan untuk Bergabung","tiers":"Tingkatan Mitra","certified":"Dapatkan Sertifikasi ACF Terlebih Dahulu"}},"user":{"partnerAccess":"Akses Mitra","partnerLogin":"Login Mitra","applyPartner":"Ajukan Menjadi Mitra","contact":"Kontak"}},"hero":{"title":"Standar Global untuk","typing":{"word1":"Tata Kelola","word2":"Kedaulatan","word3":"Kecerdasan","word4":"Perdagangan"},"description":"Agentic Commerce Framework® (ACF) adalah metodologi tata kelola definitif untuk menerapkan, mengawasi, dan mengendalikan sistem agentik otonom dalam lingkungan komersial.","cta":{"primary":"Minta Penilaian Tata Kelola →","secondary":"Baca Standar"},"stats":{"principles":{"value":"4","label":"Prinsip<br>Dasar"},"modules":{"value":"8","label":"Modul<br>Implementasi"},"kpis":{"value":"18","label":"KPI<br>Kedaulatan"},"tools":{"value":"17","label":"Alat<br>Eksklusif"}},"satellites":{"score":{"name":"ACF Score","description":"Metrik Kedaulatan"},"control":{"name":"ACF Control","description":"Platform Tata Kelola"},"certification":{"name":"Certification","description":"Atestasi"},"partners":{"name":"Mitra","description":"Praktisi"}}},"statsBar":{"layers":{"value":"4","label":"Lapisan Operasional"},"kpis":{"value":"18","label":"KPI Kedaulatan"},"tools":{"value":"17","label":"Alat Eksklusif"},"sovereignty":{"value":"100","suffix":"%","label":"Kedaulatan Manusia"}},"principles":{"badge":"// Arsitektur","title":"4 Prinsip Dasar","subtitle":"Empat aksioma yang tidak dapat diubah yang mendefinisikan batas antara otoritas manusia dan eksekusi agen otonom.","principle1":{"number":"01","title":"Kedaulatan Keputusan","description":"Keputusan strategis kritis tidak pernah didelegasikan kepada agen otonom."},"principle2":{"number":"02","title":"Tata Kelola berdasarkan Desain","description":"Kerangka tata kelola didefinisikan sebelum penerapan, bukan setelahnya."},"principle3":{"number":"03","title":"Kendali Manusia Tertinggi","description":"Setiap sistem agentik harus mempertahankan kemampuan intervensi manusia."},"principle4":{"number":"04","title":"Akuntabilitas yang Dapat Dilacak","description":"Setiap tindakan otonom harus dapat diaudit dan diatribusikan."}},"layers":{"badge":"// Struktur","title":"4 Lapisan Operasional","subtitle":"Arsitektur hierarkis dari tata kelola strategis hingga pengawasan eksekusi waktu nyata.","layer1":{"number":"LAYER_01","title":"Tata Kelola & Kedaulatan","description":"Piagam kedaulatan, komite tata kelola, matriks RACI, peta zona non-delegasi."},"layer2":{"number":"LAYER_02","title":"Kebijakan Keputusan","description":"Tujuan berbobot, aturan arbitrase, ambang batas eskalasi, kendala regulasi."},"layer3":{"number":"LAYER_03","title":"Sistem Agen","description":"Mandat eksplisit per agen, perimeter interaksi, tingkat otonomi, taksonomi 5 kategori."},"layer4":{"number":"LAYER_04","title":"Eksekusi & Pengawasan","description":"Matriks gating adaptif, peringatan multi-level, 18 KPI kedaulatan, dasbor langsung."}},"maturity":{"badge":"// Progesi","title":"4 Tingkat Kematangan Agentik","subtitle":"ACF mengklasifikasikan sistem berdasarkan tingkat otonomi. Level 2 adalah target penerapan yang direkomendasikan.","level0":{"code":"LEVEL_0","name":"Otomasi Klasik","risk":"Risiko Sangat Rendah","description":"Aturan tetap, tanpa ML. Intervensi manusia untuk setiap modifikasi."},"level1":{"code":"LEVEL_1","name":"Agen Terasistens","risk":"Risiko Rendah","description":"Agen menganalisis dan merekomendasikan. Setiap keputusan akhir tetap pada manusia."},"level2":{"code":"LEVEL_2","name":"Agen Terkelola","risk":"Risiko Sedang","description":"Agen memutuskan dalam tata kelola ketat. Zona non-delegasi terkunci.","badge":"★ Target yang Direkomendasikan"},"level3":{"code":"LEVEL_3","name":"Otonom Terawasi","risk":"Risiko Tinggi","description":"Agen memutuskan dan belajar. Tata kelola maksimal. Hanya untuk organisasi matang."}},"modules":{"badge":"// Metodologi","title":"8 Modul Implementasi","subtitle":"Jalur sekuensial yang diterapkan secara progresif selama 6–18 bulan. Setiap modul dibangun di atas modul sebelumnya.","module1":{"code":"MOD_01","name":"Diagnostik Kedaulatan","description":"Perhitungan Skor Kedaulatan. Pemetaan zona risiko."},"module2":{"code":"MOD_02","name":"Pemetaan Keputusan","description":"Matriks Kritis. Zona non-delegasi."},"module3":{"code":"MOD_03","name":"Konstitusi Agentik","description":"9 pasal. Ditandatangani oleh komite tata kelola."},"module4":{"code":"MOD_04","name":"Desain Sistem Agen","description":"Lembar mandat, perimeter interaksi."},"module5":{"code":"MOD_05","name":"Keamanan & Reversibilitas","description":"Sandboxing, rencana reversibilitas. Desain penghentian darurat."},"module6":{"code":"MOD_06","name":"Tata Kelola Berkelanjutan","description":"Tinjauan bulanan. Audit kepatuhan tahunan."},"module7":{"code":"MOD_07","name":"Peta Jalan Implementasi","description":"Penerapan progresif 5 fase."},"module8":{"code":"MOD_08","name":"Manajemen Krisis","description":"Insiden 3 tingkat. Latihan penghentian darurat."}},"video":{"badge":"// Mengapa ACF","title":"Tata Kelola Tidak Bisa Menunggu.<br>Agen Sudah Memutuskan.","description1":"Pada tahun 2026, agen otonom sudah mengeksekusi keputusan di lingkungan komersial — menetapkan harga, mengkualifikasi prospek, memproses klaim, mengelola kontrak. Sebagian besar organisasi tidak memiliki kerangka untuk mengelolanya.","description2":"ACF diciptakan untuk mengisi kekosongan itu — sebelum kegagalan tata kelola menjadi krisis hukum, finansial, atau reputasi.","quote":{"text":"Pertanyaannya bukan lagi <em>apakah</em> akan menerapkan agen. Melainkan <em>bagaimana</em> menerapkannya tanpa menyerahkan kedaulatan Anda.","author":"— Agentic Commerce Framework®"},"player":{"badge":"ACF — REVOLUSI AGENTIK","name":"Kebangkitan Perdagangan Agentik","role":"Dari otomasi tak terkendali menuju kedaulatan yang dikelola","duration":"1:05"},"stats":{"release":{"value":"2026","label":"Rilis Resmi"},"documentation":{"value":"45p","label":"Dokumentasi Lengkap"},"protection":{"value":"ACF®","label":"Merek Terdaftar"}},"modal":{"placeholder":"SEGERA HADIR","title":"Revolusi Perdagangan Agentik","description":"Perjalanan naratif: dari kehilangan kendali menuju kerangka tata kelola ACF. Agen otonom sedang mengubah perdagangan — pertanyaannya siapa yang mengelola mereka."}},"products":{"badge":"// Ekosistem","title":"Ekosistem ACF","subtitle":"Tiga produk komplementer yang mengoperasionalkan Standar ACF.","score":{"label":"ALAT DIAGNOSTIK","title":"ACF Score","description":"Skor Kedaulatan eksklusif yang mengukur independensi keputusan Anda di 6 dimensi tata kelola.","features":{"feature1":"Metrik Skor Kedaulatan komposit","feature2":"Visualisasi radar 6 sumbu","feature3":"Rencana aksi yang dipersonalisasi per sumbu"},"cta":"Ukur Skor Anda →"},"control":{"label":"PLATFORM TATA KELOLA","title":"ACF Control","description":"Dasbor tata kelola waktu nyata yang memantau 18 KPI Kedaulatan Anda dengan gating adaptif dan eskalasi otomatis.","features":{"feature1":"18 KPI di 6 sumbu tata kelola","feature2":"Gating adaptif dengan eskalasi manusia","feature3":"Log audit anti-manipulasi"},"cta":"Temukan ACF Control →"},"certification":{"label":"ATESTASI INDEPENDEN","title":"ACF Certification","description":"Sertifikasi independen yang membuktikan kepatuhan terhadap standar tata kelola ACF. Dapat diverifikasi secara publik.","features":{"feature1":"Jalur sertifikasi Level 1, 2, dan 3","feature2":"Lencana yang dapat diverifikasi secara publik","feature3":"Pembaruan tahunan + pemantauan berkelanjutan"},"cta":"Dapatkan Sertifikasi →"}},"blog":{"badge":"// Wawasan","title":"Terbaru dari Blog ACF","subtitle":"Wawasan tata kelola, pembaruan kerangka kerja, dan penelitian kecerdasan agentik.","article1":{"category":"REGULASI AI","title":"Bagaimana EU AI Act berlaku untuk sistem agentik di 2026","excerpt":"Pendekatan berbasis risiko AI Act menciptakan kewajiban khusus untuk agen otonom. Berikut yang dicakup tata kelola ACF Level 2.","date":"2026-02-15","cta":"Baca →"},"article2":{"category":"TATA KELOLA","title":"DDA: mengapa setiap perusahaan AI-native membutuhkan Pejabat Agen Keputusan Terdelegasi","excerpt":"DDA adalah penjaga hukum agen otonom Anda. Cara membuat dan memberdayakan peran kritis ini.","date":"2026-02-08","cta":"Baca →"},"article3":{"category":"TEKNIS","title":"Merancang penghentian darurat tiga tingkat untuk sistem agen otonom","excerpt":"Penghentian darurat yang efektif bukan satu tombol. ACF menentukan tiga tingkat interupsi dengan waktu respons yang ditentukan.","date":"2026-01-29","cta":"Baca →"},"viewAll":"Lihat Semua Artikel →"},"cta":{"watermark":"ACF®","badge":"// Langkah Selanjutnya","title":"Siap Mengelola Sistem<br>Agentik Anda?","description":"Minta penilaian tata kelola dan temukan Skor Kedaulatan Anda saat ini.","primary":"Minta Penilaian Tata Kelola →","secondary":"Menjadi Mitra ACF"},"footer":{"logoText":"Agentic Commerce Framework®","logoSubtext":"Standar Global untuk Tata Kelola AI","description":"Standar tata kelola definitif untuk organisasi yang menerapkan sistem agentik otonom. Merek terdaftar.","framework":{"title":"Kerangka Kerja","theStandard":"Standar","methodology":"Metodologi","research":"Penelitian","certification":"ACF Certification"},"products":{"title":"Produk","score":"ACF Score","control":"ACF Control","certification":"Sertifikasi","academy":"Akademi"},"organization":{"title":"Organisasi","partnerPortal":"Portal Mitra","about":"Tentang","contact":"Kontak","legal":"Hukum"},"copyright":"© 2026 Agentic Commerce Framework® — Vincent DORANGE. Hak cipta dilindungi.","legal":{"privacy":"Privasi","terms":"Ketentuan","cookies":"Cookie"}},"ai":{"button":{"label":"Tanya Agen ACF","status":"TATA KELOLA AI · ONLINE"},"modal":{"close":"×","beta":"","title":"Tanya ACF","subtitle":"Chatbot yang menjawab pertanyaan berdasarkan Standar ACF dan wawasan tata kelola","placeholder":"Tanyakan tentang tata kelola ACF...","send":"Kirim","trending":{"label":"PERTANYAAN POPULER","q1":"Apa itu Standar ACF?","q2":"Bagaimana cara mendapatkan sertifikasi ACF?","q3":"Apa itu peran DDA?","q4":"Apa itu Skor Kedaulatan?","q5":"4 Prinsip Dasar?"},"disclaimer":"Eksperimen AI. Respons berdasarkan dokumentasi Standar ACF.","seeMore":"Lihat Lebih Banyak"}}}
+{
+  "meta": {
+    "language": "ID",
+    "languageCode": "id",
+    "locale": "id-ID"
+  },
+  "common": {
+    "readMore": "Baca selengkapnya",
+    "learnMore": "Pelajari lebih lanjut",
+    "getStarted": "Mulai",
+    "downloadPDF": "Unduh PDF",
+    "watchVideo": "Tonton video",
+    "close": "Tutup",
+    "open": "Buka",
+    "loading": "Memuat",
+    "backToHome": "Kembali ke beranda",
+    "menu": "Menu"
+  },
+  "regionSelector": {
+    "title": "Pilih wilayah dan bahasa Anda",
+    "close": "✕ Tutup",
+    "global": "Global (Inggris)",
+    "northAmerica": "Amerika Utara",
+    "latinAmerica": "Amerika Latin",
+    "westernEurope": "Eropa Barat",
+    "nordicBaltic": "Nordik & Baltik",
+    "centralEasternEurope": "Eropa Tengah & Timur",
+    "middleEastAfrica": "Timur Tengah & Afrika",
+    "asiaPacific": "Asia & Pasifik"
+  },
+  "nav": {
+    "menu": "Menu",
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Standar Global untuk Tata Kelola AI",
+    "region": "GLOBAL | ID",
+    "theStandard": "Standar",
+    "acfScore": "ACF Score",
+    "acfControl": "ACF Control",
+    "acfCertification": "ACF Certification",
+    "partners": "Mitra",
+    "requestAssessment": "Minta Penilaian",
+    "partnerLogin": "Login Mitra",
+    "applyPartner": "Ajukan Menjadi Mitra",
+    "contact": "Kontak"
+  },
+  "megaMenu": {
+    "framework": {
+      "title": "Kerangka Kerja",
+      "link": "Standar ACF →",
+      "subtitle": "Metodologi tata kelola definitif untuk sistem agentik dalam lingkungan komersial.",
+      "architecture": {
+        "title": "Arsitektur",
+        "principles": "4 Prinsip Dasar",
+        "layers": "4 Lapisan Operasional",
+        "maturity": "4 Tingkat Kematangan"
+      },
+      "methodology": {
+        "title": "Metodologi",
+        "modules": "8 Modul Implementasi",
+        "constitution": "Konstitusi Agentik",
+        "dda": "Kerangka Peran DDA",
+        "killSwitch": "Protokol Penghentian Darurat"
+      },
+      "featured": {
+        "label": "UNGGULAN",
+        "whitepaper": {
+          "title": "Unduh White Paper ACF",
+          "description": "Spesifikasi lengkap — gratis untuk pengguna terdaftar."
+        },
+        "release": {
+          "title": "ACF — Februari 2026",
+          "description": "Rilis resmi. Apa yang baru dalam kerangka kerja."
+        }
+      }
+    },
+    "products": {
+      "title": "Produk",
+      "link": "Produk →",
+      "subtitle": "Tiga alat yang mengoperasionalkan Standar ACF di seluruh organisasi Anda.",
+      "diagnostic": {
+        "title": "Diagnostik",
+        "score": "ACF Score — Metrik Kedaulatan",
+        "methodology": "Metodologi Penilaian",
+        "axes": "6 Sumbu Tata Kelola"
+      },
+      "saas": {
+        "title": "Platform Tata Kelola",
+        "control": "ACF Control — Dasbor Tata Kelola",
+        "kpis": "18 KPI Kedaulatan",
+        "gating": "Sistem Gating Adaptif"
+      },
+      "certification": {
+        "title": "Sertifikasi",
+        "program": "Program ACF Certification",
+        "levels": "Tingkat Sertifikasi",
+        "audit": "Proses Audit"
+      }
+    },
+    "resources": {
+      "title": "Sumber Daya",
+      "link": "Sumber Daya →",
+      "subtitle": "Wawasan tata kelola, penelitian, dan dokumentasi teknis.",
+      "insights": {
+        "title": "Wawasan Terbaru",
+        "aiAct": "EU AI Act & Sistem Agentik",
+        "dda": "Peran DDA Dijelaskan",
+        "killSwitch": "Merancang Penghentian Darurat 3 Tingkat"
+      },
+      "documentation": {
+        "title": "Dokumentasi",
+        "specs": "Spesifikasi Teknis",
+        "research": "Makalah Penelitian",
+        "academy": "Akademi ACF"
+      },
+      "tools": {
+        "title": "Alat",
+        "complianceChecker": "Pemeriksa Kepatuhan ACF",
+        "euAiAct": "EU AI Act Checker ↗"
+      }
+    },
+    "about": {
+      "title": "Tentang ACF",
+      "link": "Tentang ACF →",
+      "subtitle": "Kisah, misi, dan perlindungan hukum di balik Agentic Commerce Framework®.",
+      "whoWeAre": {
+        "title": "Tentang Kami",
+        "vincent": "Vincent DORANGE — Pencipta",
+        "mission": "Misi & Nilai",
+        "legal": "Perlindungan Hukum"
+      },
+      "howWeWork": {
+        "title": "Cara Kami Bekerja",
+        "network": "Jaringan Praktisi",
+        "audit": "Audit & Sertifikasi",
+        "contact": "Hubungi Kami"
+      },
+      "registered": {
+        "label": "MEREK TERDAFTAR",
+        "title": "Merek Terdaftar ACF®",
+        "description": "ACF® adalah merek terdaftar. Semua metodologi dan alat dilindungi secara hukum."
+      }
+    },
+    "partners": {
+      "title": "Mitra",
+      "link": "Mitra →",
+      "subtitle": "Bergabunglah dengan jaringan Praktisi ACF dan tawarkan layanan tata kelola kepada klien Anda.",
+      "portal": {
+        "title": "Portal Mitra",
+        "login": "Login ke Portal Mitra",
+        "dashboard": "Dasbor & Alat",
+        "training": "Materi Pelatihan",
+        "toolkit": "Perangkat Praktisi ACF"
+      },
+      "become": {
+        "title": "Menjadi Mitra",
+        "apply": "Ajukan untuk Bergabung",
+        "tiers": "Tingkatan Mitra",
+        "certified": "Dapatkan Sertifikasi ACF Terlebih Dahulu"
+      }
+    },
+    "user": {
+      "partnerAccess": "Akses Mitra",
+      "partnerLogin": "Login Mitra",
+      "applyPartner": "Ajukan Menjadi Mitra",
+      "contact": "Kontak"
+    }
+  },
+  "hero": {
+    "title": "Standar Global untuk",
+    "typing": {
+      "word1": "Tata Kelola",
+      "word2": "Kedaulatan",
+      "word3": "Kecerdasan",
+      "word4": "Perdagangan"
+    },
+    "description": "Agentic Commerce Framework® (ACF) adalah metodologi tata kelola definitif untuk menerapkan, mengawasi, dan mengendalikan sistem agentik otonom dalam lingkungan komersial.",
+    "cta": {
+      "primary": "Minta Penilaian Tata Kelola →",
+      "secondary": "Baca Standar"
+    },
+    "stats": {
+      "principles": {
+        "value": "4",
+        "label": "Prinsip<br>Dasar"
+      },
+      "modules": {
+        "value": "8",
+        "label": "Modul<br>Implementasi"
+      },
+      "kpis": {
+        "value": "18",
+        "label": "KPI<br>Kedaulatan"
+      },
+      "tools": {
+        "value": "17",
+        "label": "Alat<br>Eksklusif"
+      }
+    },
+    "satellites": {
+      "score": {
+        "name": "ACF Score",
+        "description": "Metrik Kedaulatan"
+      },
+      "control": {
+        "name": "ACF Control",
+        "description": "Platform Tata Kelola"
+      },
+      "certification": {
+        "name": "Certification",
+        "description": "Atestasi"
+      },
+      "partners": {
+        "name": "Mitra",
+        "description": "Praktisi"
+      }
+    }
+  },
+  "statsBar": {
+    "layers": {
+      "value": "4",
+      "label": "Lapisan Operasional"
+    },
+    "kpis": {
+      "value": "18",
+      "label": "KPI Kedaulatan"
+    },
+    "tools": {
+      "value": "17",
+      "label": "Alat Eksklusif"
+    },
+    "sovereignty": {
+      "value": "100",
+      "suffix": "%",
+      "label": "Kedaulatan Manusia"
+    }
+  },
+  "principles": {
+    "badge": "// Arsitektur",
+    "title": "4 Prinsip Dasar",
+    "subtitle": "Empat aksioma yang tidak dapat diubah yang mendefinisikan batas antara otoritas manusia dan eksekusi agen otonom.",
+    "principle1": {
+      "number": "01",
+      "title": "Kedaulatan Keputusan",
+      "description": "Keputusan strategis kritis tidak pernah didelegasikan kepada agen otonom."
+    },
+    "principle2": {
+      "number": "02",
+      "title": "Tata Kelola berdasarkan Desain",
+      "description": "Kerangka tata kelola didefinisikan sebelum penerapan, bukan setelahnya."
+    },
+    "principle3": {
+      "number": "03",
+      "title": "Kendali Manusia Tertinggi",
+      "description": "Setiap sistem agentik harus mempertahankan kemampuan intervensi manusia."
+    },
+    "principle4": {
+      "number": "04",
+      "title": "Akuntabilitas yang Dapat Dilacak",
+      "description": "Setiap tindakan otonom harus dapat diaudit dan diatribusikan."
+    }
+  },
+  "layers": {
+    "badge": "// Struktur",
+    "title": "4 Lapisan Operasional",
+    "subtitle": "Arsitektur hierarkis dari tata kelola strategis hingga pengawasan eksekusi waktu nyata.",
+    "layer1": {
+      "number": "LAYER_01",
+      "title": "Tata Kelola & Kedaulatan",
+      "description": "Piagam kedaulatan, komite tata kelola, matriks RACI, peta zona non-delegasi."
+    },
+    "layer2": {
+      "number": "LAYER_02",
+      "title": "Kebijakan Keputusan",
+      "description": "Tujuan berbobot, aturan arbitrase, ambang batas eskalasi, kendala regulasi."
+    },
+    "layer3": {
+      "number": "LAYER_03",
+      "title": "Sistem Agen",
+      "description": "Mandat eksplisit per agen, perimeter interaksi, tingkat otonomi, taksonomi 5 kategori."
+    },
+    "layer4": {
+      "number": "LAYER_04",
+      "title": "Eksekusi & Pengawasan",
+      "description": "Matriks gating adaptif, peringatan multi-level, 18 KPI kedaulatan, dasbor langsung."
+    }
+  },
+  "maturity": {
+    "badge": "// Progesi",
+    "title": "4 Tingkat Kematangan Agentik",
+    "subtitle": "ACF mengklasifikasikan sistem berdasarkan tingkat otonomi. Level 2 adalah target penerapan yang direkomendasikan.",
+    "level0": {
+      "code": "LEVEL_0",
+      "name": "Otomasi Klasik",
+      "risk": "Risiko Sangat Rendah",
+      "description": "Aturan tetap, tanpa ML. Intervensi manusia untuk setiap modifikasi."
+    },
+    "level1": {
+      "code": "LEVEL_1",
+      "name": "Agen Terasistens",
+      "risk": "Risiko Rendah",
+      "description": "Agen menganalisis dan merekomendasikan. Setiap keputusan akhir tetap pada manusia."
+    },
+    "level2": {
+      "code": "LEVEL_2",
+      "name": "Agen Terkelola",
+      "risk": "Risiko Sedang",
+      "description": "Agen memutuskan dalam tata kelola ketat. Zona non-delegasi terkunci.",
+      "badge": "★ Target yang Direkomendasikan"
+    },
+    "level3": {
+      "code": "LEVEL_3",
+      "name": "Otonom Terawasi",
+      "risk": "Risiko Tinggi",
+      "description": "Agen memutuskan dan belajar. Tata kelola maksimal. Hanya untuk organisasi matang."
+    }
+  },
+  "modules": {
+    "badge": "// Metodologi",
+    "title": "8 Modul Implementasi",
+    "subtitle": "Jalur sekuensial yang diterapkan secara progresif selama 6–18 bulan. Setiap modul dibangun di atas modul sebelumnya.",
+    "module1": {
+      "code": "MOD_01",
+      "name": "Diagnostik Kedaulatan",
+      "description": "Perhitungan Skor Kedaulatan. Pemetaan zona risiko."
+    },
+    "module2": {
+      "code": "MOD_02",
+      "name": "Pemetaan Keputusan",
+      "description": "Matriks Kritis. Zona non-delegasi."
+    },
+    "module3": {
+      "code": "MOD_03",
+      "name": "Konstitusi Agentik",
+      "description": "9 pasal. Ditandatangani oleh komite tata kelola."
+    },
+    "module4": {
+      "code": "MOD_04",
+      "name": "Desain Sistem Agen",
+      "description": "Lembar mandat, perimeter interaksi."
+    },
+    "module5": {
+      "code": "MOD_05",
+      "name": "Keamanan & Reversibilitas",
+      "description": "Sandboxing, rencana reversibilitas. Desain penghentian darurat."
+    },
+    "module6": {
+      "code": "MOD_06",
+      "name": "Tata Kelola Berkelanjutan",
+      "description": "Tinjauan bulanan. Audit kepatuhan tahunan."
+    },
+    "module7": {
+      "code": "MOD_07",
+      "name": "Peta Jalan Implementasi",
+      "description": "Penerapan progresif 5 fase."
+    },
+    "module8": {
+      "code": "MOD_08",
+      "name": "Manajemen Krisis",
+      "description": "Insiden 3 tingkat. Latihan penghentian darurat."
+    }
+  },
+  "video": {
+    "badge": "// Mengapa ACF",
+    "title": "Tata Kelola Tidak Bisa Menunggu.<br>Agen Sudah Memutuskan.",
+    "description1": "Pada tahun 2026, agen otonom sudah mengeksekusi keputusan di lingkungan komersial — menetapkan harga, mengkualifikasi prospek, memproses klaim, mengelola kontrak. Sebagian besar organisasi tidak memiliki kerangka untuk mengelolanya.",
+    "description2": "ACF diciptakan untuk mengisi kekosongan itu — sebelum kegagalan tata kelola menjadi krisis hukum, finansial, atau reputasi.",
+    "quote": {
+      "text": "Pertanyaannya bukan lagi <em>apakah</em> akan menerapkan agen. Melainkan <em>bagaimana</em> menerapkannya tanpa menyerahkan kedaulatan Anda.",
+      "author": "— Agentic Commerce Framework®"
+    },
+    "player": {
+      "badge": "ACF — REVOLUSI AGENTIK",
+      "name": "Kebangkitan Perdagangan Agentik",
+      "role": "Dari otomasi tak terkendali menuju kedaulatan yang dikelola",
+      "duration": "1:05"
+    },
+    "stats": {
+      "release": {
+        "value": "2026",
+        "label": "Rilis Resmi"
+      },
+      "documentation": {
+        "value": "45p",
+        "label": "Dokumentasi Lengkap"
+      },
+      "protection": {
+        "value": "ACF®",
+        "label": "Merek Terdaftar"
+      }
+    },
+    "modal": {
+      "placeholder": "SEGERA HADIR",
+      "title": "Revolusi Perdagangan Agentik",
+      "description": "Perjalanan naratif: dari kehilangan kendali menuju kerangka tata kelola ACF. Agen otonom sedang mengubah perdagangan — pertanyaannya siapa yang mengelola mereka."
+    }
+  },
+  "products": {
+    "badge": "// Ekosistem",
+    "title": "Ekosistem ACF",
+    "subtitle": "Tiga produk komplementer yang mengoperasionalkan Standar ACF.",
+    "score": {
+      "label": "ALAT DIAGNOSTIK",
+      "title": "ACF Score",
+      "description": "Skor Kedaulatan eksklusif yang mengukur independensi keputusan Anda di 6 dimensi tata kelola.",
+      "features": {
+        "feature1": "Metrik Skor Kedaulatan komposit",
+        "feature2": "Visualisasi radar 6 sumbu",
+        "feature3": "Rencana aksi yang dipersonalisasi per sumbu"
+      },
+      "cta": "Ukur Skor Anda →"
+    },
+    "control": {
+      "label": "PLATFORM TATA KELOLA",
+      "title": "ACF Control",
+      "description": "Dasbor tata kelola waktu nyata yang memantau 18 KPI Kedaulatan Anda dengan gating adaptif dan eskalasi otomatis.",
+      "features": {
+        "feature1": "18 KPI di 6 sumbu tata kelola",
+        "feature2": "Gating adaptif dengan eskalasi manusia",
+        "feature3": "Log audit anti-manipulasi"
+      },
+      "cta": "Temukan ACF Control →"
+    },
+    "certification": {
+      "label": "ATESTASI INDEPENDEN",
+      "title": "ACF Certification",
+      "description": "Sertifikasi independen yang membuktikan kepatuhan terhadap standar tata kelola ACF. Dapat diverifikasi secara publik.",
+      "features": {
+        "feature1": "Jalur sertifikasi Level 1, 2, dan 3",
+        "feature2": "Lencana yang dapat diverifikasi secara publik",
+        "feature3": "Pembaruan tahunan + pemantauan berkelanjutan"
+      },
+      "cta": "Dapatkan Sertifikasi →"
+    }
+  },
+  "blog": {
+    "badge": "// Wawasan",
+    "title": "Terbaru dari Blog ACF",
+    "subtitle": "Wawasan tata kelola, pembaruan kerangka kerja, dan penelitian kecerdasan agentik.",
+    "article1": {
+      "category": "REGULASI AI",
+      "title": "Bagaimana EU AI Act berlaku untuk sistem agentik di 2026",
+      "excerpt": "Pendekatan berbasis risiko AI Act menciptakan kewajiban khusus untuk agen otonom. Berikut yang dicakup tata kelola ACF Level 2.",
+      "date": "2026-02-15",
+      "cta": "Baca →"
+    },
+    "article2": {
+      "category": "TATA KELOLA",
+      "title": "DDA: mengapa setiap perusahaan AI-native membutuhkan Pejabat Agen Keputusan Terdelegasi",
+      "excerpt": "DDA adalah penjaga hukum agen otonom Anda. Cara membuat dan memberdayakan peran kritis ini.",
+      "date": "2026-02-08",
+      "cta": "Baca →"
+    },
+    "article3": {
+      "category": "TEKNIS",
+      "title": "Merancang penghentian darurat tiga tingkat untuk sistem agen otonom",
+      "excerpt": "Penghentian darurat yang efektif bukan satu tombol. ACF menentukan tiga tingkat interupsi dengan waktu respons yang ditentukan.",
+      "date": "2026-01-29",
+      "cta": "Baca →"
+    },
+    "viewAll": "Lihat Semua Artikel →"
+  },
+  "cta": {
+    "watermark": "ACF®",
+    "badge": "// Langkah Selanjutnya",
+    "title": "Siap Mengelola Sistem<br>Agentik Anda?",
+    "description": "Minta penilaian tata kelola dan temukan Skor Kedaulatan Anda saat ini.",
+    "primary": "Minta Penilaian Tata Kelola →",
+    "secondary": "Menjadi Mitra ACF"
+  },
+  "footer": {
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Standar Global untuk Tata Kelola AI",
+    "description": "Standar tata kelola definitif untuk organisasi yang menerapkan sistem agentik otonom. Merek terdaftar.",
+    "framework": {
+      "title": "Kerangka Kerja",
+      "theStandard": "Standar",
+      "methodology": "Metodologi",
+      "research": "Penelitian",
+      "certification": "ACF Certification"
+    },
+    "products": {
+      "title": "Produk",
+      "score": "ACF Score",
+      "control": "ACF Control",
+      "certification": "Sertifikasi",
+      "academy": "Akademi"
+    },
+    "organization": {
+      "title": "Organisasi",
+      "partnerPortal": "Portal Mitra",
+      "about": "Tentang",
+      "contact": "Kontak",
+      "legal": "Hukum"
+    },
+    "copyright": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Hak cipta dilindungi.",
+    "legal": {
+      "privacy": "Privasi",
+      "terms": "Ketentuan",
+      "cookies": "Cookie"
+    }
+  },
+  "ai": {
+    "button": {
+      "label": "Tanya Agen ACF",
+      "status": "TATA KELOLA AI · ONLINE"
+    },
+    "modal": {
+      "close": "×",
+      "beta": "",
+      "title": "Tanya ACF",
+      "subtitle": "Chatbot yang menjawab pertanyaan berdasarkan Standar ACF dan wawasan tata kelola",
+      "placeholder": "Tanyakan tentang tata kelola ACF...",
+      "send": "Kirim",
+      "trending": {
+        "label": "PERTANYAAN POPULER",
+        "q1": "Apa itu Standar ACF?",
+        "q2": "Bagaimana cara mendapatkan sertifikasi ACF?",
+        "q3": "Apa itu peran DDA?",
+        "q4": "Apa itu Skor Kedaulatan?",
+        "q5": "4 Prinsip Dasar?"
+      },
+      "disclaimer": "Eksperimen AI. Respons berdasarkan dokumentasi Standar ACF.",
+      "seeMore": "Lihat Lebih Banyak"
+    }
+  }
+}

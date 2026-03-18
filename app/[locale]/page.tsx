@@ -1,6 +1,12 @@
 "use client"
 import { useLocale, useMessages } from 'next-intl'
 import AIAgent from "./components/AIAgent"
+
+/* Safe deep access — returns '' instead of crashing on missing keys */
+function deepGet(obj: any, path: string): any {
+  return path.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : ''), obj)
+}
+
 const buildHTML = (locale: string, m: Record<string, any>) => `<!DOCTYPE html>
 <html lang="${locale}">
 <head>
@@ -1655,6 +1661,18 @@ document.addEventListener('click',function(e){
 export default function Home() {
   const locale = useLocale()
   const m = useMessages() as Record<string, any>
+
+  /* Ensure deeply nested objects exist to prevent template literal crashes */
+  if (!m.megaMenu) m.megaMenu = {}
+  if (!m.megaMenu.resources) m.megaMenu.resources = {}
+  if (!m.megaMenu.resources.tools) m.megaMenu.resources.tools = { title: 'Tools', complianceChecker: 'ACF Compliance Checker', euAiAct: 'EU AI Act Checker ↗' }
+  if (!m.megaMenu.resources.insights) m.megaMenu.resources.insights = {}
+  if (!m.megaMenu.resources.documentation) m.megaMenu.resources.documentation = {}
+  if (!m.megaMenu.framework) m.megaMenu.framework = {}
+  if (!m.megaMenu.products) m.megaMenu.products = {}
+  if (!m.megaMenu.about) m.megaMenu.about = {}
+  if (!m.megaMenu.partners) m.megaMenu.partners = {}
+
   return (
     <>
       <iframe

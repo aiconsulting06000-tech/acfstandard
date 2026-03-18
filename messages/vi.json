@@ -1,1 +1,526 @@
-{"meta":{"language":"VI","languageCode":"vi","locale":"vi-VN"},"common":{"readMore":"Đọc thêm","learnMore":"Tìm hiểu thêm","getStarted":"Bắt đầu","downloadPDF":"Tải xuống PDF","watchVideo":"Xem video","close":"Đóng","open":"Mở","loading":"Đang tải","backToHome":"Quay lại trang chủ","menu":"Menu"},"regionSelector":{"title":"Chọn khu vực và ngôn ngữ của bạn","close":"✕ Đóng","global":"Toàn cầu (Tiếng Anh)","northAmerica":"Bắc Mỹ","latinAmerica":"Mỹ Latinh","westernEurope":"Tây Âu","nordicBaltic":"Bắc Âu & Baltic","centralEasternEurope":"Trung & Đông Âu","middleEastAfrica":"Trung Đông & Châu Phi","asiaPacific":"Châu Á Thái Bình Dương"},"nav":{"menu":"Menu","logoText":"Agentic Commerce Framework®","logoSubtext":"Tiêu chuẩn Toàn cầu về Quản trị AI","region":"GLOBAL | VI","theStandard":"Tiêu chuẩn","acfScore":"ACF Score","acfControl":"ACF Control","acfCertification":"ACF Certification","partners":"Đối tác","requestAssessment":"Yêu cầu Đánh giá","partnerLogin":"Đăng nhập Đối tác","applyPartner":"Đăng ký làm Đối tác","contact":"Liên hệ"},"megaMenu":{"framework":{"title":"Khung","link":"Tiêu chuẩn ACF →","subtitle":"Phương pháp quản trị chính thức cho các hệ thống tác tử trong môi trường thương mại.","architecture":{"title":"Kiến trúc","principles":"4 Nguyên tắc Nền tảng","layers":"4 Tầng Vận hành","maturity":"4 Cấp độ Trưởng thành"},"methodology":{"title":"Phương pháp","modules":"8 Mô-đun Triển khai","constitution":"Hiến chương Tác tử","dda":"Khung Vai trò DDA","killSwitch":"Giao thức Dừng Khẩn cấp"},"featured":{"label":"NỔI BẬT","whitepaper":{"title":"Tải xuống Sách trắng ACF","description":"Đặc tả đầy đủ — miễn phí cho người dùng đã đăng ký."},"release":{"title":"ACF — Tháng 2 năm 2026","description":"Phát hành chính thức. Có gì mới trong khung."}}},"products":{"title":"Sản phẩm","link":"Sản phẩm →","subtitle":"Ba công cụ vận hành hóa Tiêu chuẩn ACF trong toàn tổ chức.","diagnostic":{"title":"Chẩn đoán","score":"ACF Score — Chỉ số Chủ quyền","methodology":"Phương pháp Chấm điểm","axes":"6 Trục Quản trị"},"saas":{"title":"Nền tảng Quản trị","control":"ACF Control — Bảng điều khiển Quản trị","kpis":"18 KPI Chủ quyền","gating":"Hệ thống Gating Thích ứng"},"certification":{"title":"Chứng nhận","program":"Chương trình ACF Certification","levels":"Cấp độ Chứng nhận","audit":"Quy trình Kiểm toán"}},"resources":{"title":"Tài nguyên","link":"Tài nguyên →","subtitle":"Thông tin chuyên sâu về quản trị, nghiên cứu và tài liệu kỹ thuật.","insights":{"title":"Thông tin Mới nhất","aiAct":"Đạo luật AI EU & Hệ thống Tác tử","dda":"Giải thích Vai trò DDA","killSwitch":"Thiết kế Dừng Khẩn cấp 3 Cấp độ"},"documentation":{"title":"Tài liệu","specs":"Đặc tả Kỹ thuật","research":"Bài nghiên cứu","academy":"Học viện ACF"}},"about":{"title":"Về ACF","link":"Về ACF →","subtitle":"Câu chuyện, sứ mệnh và bảo hộ pháp lý đằng sau Agentic Commerce Framework®.","whoWeAre":{"title":"Về Chúng tôi","vincent":"Vincent DORANGE — Người sáng lập","mission":"Sứ mệnh & Giá trị","legal":"Bảo hộ Pháp lý"},"howWeWork":{"title":"Cách Chúng tôi Làm việc","network":"Mạng lưới Chuyên gia","audit":"Kiểm toán & Chứng nhận","contact":"Liên hệ"},"registered":{"label":"NHÃN HIỆU ĐÃ ĐĂNG KÝ","title":"Nhãn hiệu Đã đăng ký ACF®","description":"ACF® là nhãn hiệu đã đăng ký. Tất cả phương pháp và công cụ đều được bảo hộ pháp lý."}},"partners":{"title":"Đối tác","link":"Đối tác →","subtitle":"Tham gia mạng lưới Chuyên gia ACF và cung cấp dịch vụ quản trị cho khách hàng của bạn.","portal":{"title":"Cổng Đối tác","login":"Đăng nhập Cổng Đối tác","dashboard":"Bảng điều khiển & Công cụ","training":"Tài liệu Đào tạo","toolkit":"Bộ Công cụ Chuyên gia ACF"},"become":{"title":"Trở thành Đối tác","apply":"Đăng ký Tham gia","tiers":"Cấp bậc Đối tác","certified":"Đạt Chứng nhận ACF Trước"}},"user":{"partnerAccess":"Truy cập Đối tác","partnerLogin":"Đăng nhập Đối tác","applyPartner":"Đăng ký làm Đối tác","contact":"Liên hệ"}},"hero":{"title":"Tiêu chuẩn Toàn cầu về","typing":{"word1":"Quản trị","word2":"Chủ quyền","word3":"Trí tuệ","word4":"Thương mại"},"description":"Agentic Commerce Framework® (ACF) là phương pháp quản trị chính thức để triển khai, giám sát và kiểm soát các hệ thống tác tử tự trị trong môi trường thương mại.","cta":{"primary":"Yêu cầu Đánh giá Quản trị →","secondary":"Đọc Tiêu chuẩn"},"stats":{"principles":{"value":"4","label":"Nguyên tắc<br>Nền tảng"},"modules":{"value":"8","label":"Mô-đun<br>Triển khai"},"kpis":{"value":"18","label":"KPI<br>Chủ quyền"},"tools":{"value":"17","label":"Công cụ<br>Độc quyền"}},"satellites":{"score":{"name":"ACF Score","description":"Chỉ số Chủ quyền"},"control":{"name":"ACF Control","description":"Nền tảng Quản trị"},"certification":{"name":"Certification","description":"Chứng nhận"},"partners":{"name":"Đối tác","description":"Chuyên gia"}}},"statsBar":{"layers":{"value":"4","label":"Tầng Vận hành"},"kpis":{"value":"18","label":"KPI Chủ quyền"},"tools":{"value":"17","label":"Công cụ Độc quyền"},"sovereignty":{"value":"100","suffix":"%","label":"Chủ quyền Con người"}},"principles":{"badge":"// Kiến trúc","title":"4 Nguyên tắc Nền tảng","subtitle":"Bốn tiên đề bất biến xác định ranh giới giữa quyền hạn con người và thực thi của tác tử tự trị.","principle1":{"number":"01","title":"Chủ quyền Quyết định","description":"Các quyết định chiến lược quan trọng không bao giờ được ủy quyền cho tác tử tự trị."},"principle2":{"number":"02","title":"Quản trị theo Thiết kế","description":"Khung quản trị được xác định trước khi triển khai, không phải sau."},"principle3":{"number":"03","title":"Kiểm soát Tối cao của Con người","description":"Mọi hệ thống tác tử phải bảo toàn khả năng can thiệp của con người."},"principle4":{"number":"04","title":"Trách nhiệm Truy vết được","description":"Mọi hành động tự trị phải có thể kiểm toán và quy trách."}},"layers":{"badge":"// Cấu trúc","title":"4 Tầng Vận hành","subtitle":"Kiến trúc phân cấp từ quản trị chiến lược đến giám sát thực thi thời gian thực.","layer1":{"number":"LAYER_01","title":"Quản trị & Chủ quyền","description":"Hiến chương chủ quyền, ủy ban quản trị, ma trận RACI, bản đồ vùng không thể ủy quyền."},"layer2":{"number":"LAYER_02","title":"Chính sách Quyết định","description":"Mục tiêu có trọng số, quy tắc phân xử, ngưỡng leo thang, ràng buộc pháp lý."},"layer3":{"number":"LAYER_03","title":"Hệ thống Tác tử","description":"Ủy quyền rõ ràng cho mỗi tác tử, phạm vi tương tác, mức độ tự trị, phân loại 5 danh mục."},"layer4":{"number":"LAYER_04","title":"Thực thi & Giám sát","description":"Ma trận gating thích ứng, cảnh báo đa cấp, 18 KPI chủ quyền, bảng điều khiển trực tiếp."}},"maturity":{"badge":"// Tiến triển","title":"4 Cấp độ Trưởng thành Tác tử","subtitle":"ACF phân loại hệ thống theo mức độ tự trị. Cấp độ 2 là mục tiêu triển khai được khuyến nghị.","level0":{"code":"LEVEL_0","name":"Tự động hóa Truyền thống","risk":"Rủi ro Rất thấp","description":"Quy tắc cố định, không có ML. Can thiệp con người cho mọi thay đổi."},"level1":{"code":"LEVEL_1","name":"Tác tử Hỗ trợ","risk":"Rủi ro Thấp","description":"Tác tử phân tích và đề xuất. Mọi quyết định cuối cùng thuộc về con người."},"level2":{"code":"LEVEL_2","name":"Tác tử có Quản trị","risk":"Rủi ro Trung bình","description":"Tác tử quyết định trong khuôn khổ quản trị nghiêm ngặt. Vùng không thể ủy quyền bị khóa.","badge":"★ Mục tiêu Khuyến nghị"},"level3":{"code":"LEVEL_3","name":"Tự trị có Giám sát","risk":"Rủi ro Cao","description":"Tác tử quyết định và học hỏi. Quản trị tối đa. Chỉ dành cho tổ chức trưởng thành."}},"modules":{"badge":"// Phương pháp","title":"8 Mô-đun Triển khai","subtitle":"Lộ trình tuần tự triển khai dần dần trong 6–18 tháng. Mỗi mô-đun xây dựng trên mô-đun trước.","module1":{"code":"MOD_01","name":"Chẩn đoán Chủ quyền","description":"Tính toán Điểm Chủ quyền. Lập bản đồ vùng rủi ro."},"module2":{"code":"MOD_02","name":"Lập bản đồ Quyết định","description":"Ma trận Mức độ Quan trọng. Vùng không thể ủy quyền."},"module3":{"code":"MOD_03","name":"Hiến chương Tác tử","description":"9 điều khoản. Ký bởi ủy ban quản trị."},"module4":{"code":"MOD_04","name":"Thiết kế Hệ thống Tác tử","description":"Bảng ủy quyền, phạm vi tương tác."},"module5":{"code":"MOD_05","name":"Bảo mật & Khả năng Hoàn nguyên","description":"Sandboxing, kế hoạch hoàn nguyên. Thiết kế dừng khẩn cấp."},"module6":{"code":"MOD_06","name":"Quản trị Liên tục","description":"Đánh giá hàng tháng. Kiểm toán tuân thủ hàng năm."},"module7":{"code":"MOD_07","name":"Lộ trình Triển khai","description":"Triển khai dần dần 5 giai đoạn."},"module8":{"code":"MOD_08","name":"Quản lý Khủng hoảng","description":"Sự cố 3 cấp độ. Diễn tập dừng khẩn cấp."}},"video":{"badge":"// Tại sao ACF","title":"Quản trị Không thể Chờ đợi.<br>Tác tử Đã Quyết định.","description1":"Năm 2026, các tác tử tự trị đã thực thi quyết định trong môi trường thương mại — định giá, sàng lọc khách hàng tiềm năng, xử lý yêu cầu bồi thường, quản lý hợp đồng. Hầu hết các tổ chức không có khung quản trị cho chúng.","description2":"ACF được tạo ra để lấp đầy khoảng trống đó — trước khi thất bại quản trị trở thành khủng hoảng pháp lý, tài chính hoặc uy tín.","quote":{"text":"Câu hỏi không còn là <em>có nên</em> triển khai tác tử hay không. Mà là <em>làm thế nào</em> để triển khai mà không từ bỏ chủ quyền.","author":"— Agentic Commerce Framework®"},"player":{"badge":"ACF — CUỘC CÁCH MẠNG TÁC TỬ","name":"Sự Trỗi dậy của Thương mại Tác tử","role":"Từ tự động hóa mất kiểm soát đến chủ quyền có quản trị","duration":"1:05"},"stats":{"release":{"value":"2026","label":"Phát hành Chính thức"},"documentation":{"value":"45p","label":"Tài liệu Đầy đủ"},"protection":{"value":"ACF®","label":"Nhãn hiệu Đã đăng ký"}},"modal":{"placeholder":"SẮP RA MẮT","title":"Cuộc Cách mạng Thương mại Tác tử","description":"Hành trình tường thuật: từ mất kiểm soát đến khung quản trị ACF. Tác tử tự trị đang định hình lại thương mại — câu hỏi là ai quản trị chúng."}},"products":{"badge":"// Hệ sinh thái","title":"Hệ sinh thái ACF","subtitle":"Ba sản phẩm bổ sung vận hành hóa Tiêu chuẩn ACF.","score":{"label":"CÔNG CỤ CHẨN ĐOÁN","title":"ACF Score","description":"Điểm Chủ quyền độc quyền đo lường mức độ độc lập quyết định của bạn trên 6 chiều quản trị.","features":{"feature1":"Chỉ số Điểm Chủ quyền tổng hợp","feature2":"Trực quan hóa radar 6 trục","feature3":"Kế hoạch hành động cá nhân hóa theo trục"},"cta":"Đo Điểm của bạn →"},"control":{"label":"NỀN TẢNG QUẢN TRỊ","title":"ACF Control","description":"Bảng điều khiển quản trị thời gian thực giám sát 18 KPI Chủ quyền với gating thích ứng và leo thang tự động.","features":{"feature1":"18 KPI trên 6 trục quản trị","feature2":"Gating thích ứng với leo thang con người","feature3":"Nhật ký kiểm toán chống giả mạo"},"cta":"Khám phá ACF Control →"},"certification":{"label":"CHỨNG NHẬN ĐỘC LẬP","title":"ACF Certification","description":"Chứng nhận độc lập xác nhận tuân thủ tiêu chuẩn quản trị ACF. Có thể xác minh công khai.","features":{"feature1":"Lộ trình chứng nhận Cấp 1, 2 và 3","feature2":"Huy hiệu có thể xác minh công khai","feature3":"Gia hạn hàng năm + giám sát liên tục"},"cta":"Đạt Chứng nhận →"}},"blog":{"badge":"// Thông tin chuyên sâu","title":"Mới nhất từ Blog ACF","subtitle":"Thông tin chuyên sâu về quản trị, cập nhật khung và nghiên cứu trí tuệ tác tử.","article1":{"category":"QUY ĐỊNH AI","title":"Đạo luật AI EU áp dụng cho hệ thống tác tử năm 2026 như thế nào","excerpt":"Cách tiếp cận dựa trên rủi ro của Đạo luật AI tạo ra các nghĩa vụ cụ thể cho tác tử tự trị. Đây là những gì quản trị ACF Cấp 2 bao gồm.","date":"2026-02-15","cta":"Đọc →"},"article2":{"category":"QUẢN TRỊ","title":"DDA: tại sao mọi công ty AI-native cần Chuyên viên Tác tử Quyết định Ủy quyền","excerpt":"DDA là người bảo hộ pháp lý cho các tác tử tự trị của bạn. Cách tạo và trao quyền cho vai trò quan trọng này.","date":"2026-02-08","cta":"Đọc →"},"article3":{"category":"KỸ THUẬT","title":"Thiết kế dừng khẩn cấp ba cấp cho hệ thống tác tử tự trị","excerpt":"Dừng khẩn cấp hiệu quả không phải là một nút đơn. ACF quy định ba cấp ngắt với thời gian phản hồi xác định.","date":"2026-01-29","cta":"Đọc →"},"viewAll":"Xem Tất cả Bài viết →"},"cta":{"watermark":"ACF®","badge":"// Bước Tiếp theo","title":"Sẵn sàng Quản trị<br>Hệ thống Tác tử của bạn?","description":"Yêu cầu đánh giá quản trị và khám phá Điểm Chủ quyền hiện tại của bạn.","primary":"Yêu cầu Đánh giá Quản trị →","secondary":"Trở thành Đối tác ACF"},"footer":{"logoText":"Agentic Commerce Framework®","logoSubtext":"Tiêu chuẩn Toàn cầu về Quản trị AI","description":"Tiêu chuẩn quản trị chính thức cho các tổ chức triển khai hệ thống tác tử tự trị. Nhãn hiệu đã đăng ký.","framework":{"title":"Khung","theStandard":"Tiêu chuẩn","methodology":"Phương pháp","research":"Nghiên cứu","certification":"ACF Certification"},"products":{"title":"Sản phẩm","score":"ACF Score","control":"ACF Control","certification":"Chứng nhận","academy":"Học viện"},"organization":{"title":"Tổ chức","partnerPortal":"Cổng Đối tác","about":"Giới thiệu","contact":"Liên hệ","legal":"Pháp lý"},"copyright":"© 2026 Agentic Commerce Framework® — Vincent DORANGE. Bảo lưu mọi quyền.","legal":{"privacy":"Quyền riêng tư","terms":"Điều khoản","cookies":"Cookie"}},"ai":{"button":{"label":"Hỏi Tác tử ACF","status":"QUẢN TRỊ AI · TRỰC TUYẾN"},"modal":{"close":"×","beta":"","title":"Hỏi ACF","subtitle":"Chatbot trả lời câu hỏi dựa trên Tiêu chuẩn ACF và thông tin quản trị","placeholder":"Hỏi về quản trị ACF...","send":"Gửi","trending":{"label":"CÂU HỎI THỊNH HÀNH","q1":"Tiêu chuẩn ACF là gì?","q2":"Làm thế nào để đạt chứng nhận ACF?","q3":"Vai trò DDA là gì?","q4":"Điểm Chủ quyền là gì?","q5":"4 Nguyên tắc Nền tảng?"},"disclaimer":"Thí nghiệm AI. Phản hồi dựa trên tài liệu Tiêu chuẩn ACF.","seeMore":"Xem Thêm"}}}
+{
+  "meta": {
+    "language": "VI",
+    "languageCode": "vi",
+    "locale": "vi-VN"
+  },
+  "common": {
+    "readMore": "Đọc thêm",
+    "learnMore": "Tìm hiểu thêm",
+    "getStarted": "Bắt đầu",
+    "downloadPDF": "Tải xuống PDF",
+    "watchVideo": "Xem video",
+    "close": "Đóng",
+    "open": "Mở",
+    "loading": "Đang tải",
+    "backToHome": "Quay lại trang chủ",
+    "menu": "Menu"
+  },
+  "regionSelector": {
+    "title": "Chọn khu vực và ngôn ngữ của bạn",
+    "close": "✕ Đóng",
+    "global": "Toàn cầu (Tiếng Anh)",
+    "northAmerica": "Bắc Mỹ",
+    "latinAmerica": "Mỹ Latinh",
+    "westernEurope": "Tây Âu",
+    "nordicBaltic": "Bắc Âu & Baltic",
+    "centralEasternEurope": "Trung & Đông Âu",
+    "middleEastAfrica": "Trung Đông & Châu Phi",
+    "asiaPacific": "Châu Á Thái Bình Dương"
+  },
+  "nav": {
+    "menu": "Menu",
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Tiêu chuẩn Toàn cầu về Quản trị AI",
+    "region": "GLOBAL | VI",
+    "theStandard": "Tiêu chuẩn",
+    "acfScore": "ACF Score",
+    "acfControl": "ACF Control",
+    "acfCertification": "ACF Certification",
+    "partners": "Đối tác",
+    "requestAssessment": "Yêu cầu Đánh giá",
+    "partnerLogin": "Đăng nhập Đối tác",
+    "applyPartner": "Đăng ký làm Đối tác",
+    "contact": "Liên hệ"
+  },
+  "megaMenu": {
+    "framework": {
+      "title": "Khung",
+      "link": "Tiêu chuẩn ACF →",
+      "subtitle": "Phương pháp quản trị chính thức cho các hệ thống tác tử trong môi trường thương mại.",
+      "architecture": {
+        "title": "Kiến trúc",
+        "principles": "4 Nguyên tắc Nền tảng",
+        "layers": "4 Tầng Vận hành",
+        "maturity": "4 Cấp độ Trưởng thành"
+      },
+      "methodology": {
+        "title": "Phương pháp",
+        "modules": "8 Mô-đun Triển khai",
+        "constitution": "Hiến chương Tác tử",
+        "dda": "Khung Vai trò DDA",
+        "killSwitch": "Giao thức Dừng Khẩn cấp"
+      },
+      "featured": {
+        "label": "NỔI BẬT",
+        "whitepaper": {
+          "title": "Tải xuống Sách trắng ACF",
+          "description": "Đặc tả đầy đủ — miễn phí cho người dùng đã đăng ký."
+        },
+        "release": {
+          "title": "ACF — Tháng 2 năm 2026",
+          "description": "Phát hành chính thức. Có gì mới trong khung."
+        }
+      }
+    },
+    "products": {
+      "title": "Sản phẩm",
+      "link": "Sản phẩm →",
+      "subtitle": "Ba công cụ vận hành hóa Tiêu chuẩn ACF trong toàn tổ chức.",
+      "diagnostic": {
+        "title": "Chẩn đoán",
+        "score": "ACF Score — Chỉ số Chủ quyền",
+        "methodology": "Phương pháp Chấm điểm",
+        "axes": "6 Trục Quản trị"
+      },
+      "saas": {
+        "title": "Nền tảng Quản trị",
+        "control": "ACF Control — Bảng điều khiển Quản trị",
+        "kpis": "18 KPI Chủ quyền",
+        "gating": "Hệ thống Gating Thích ứng"
+      },
+      "certification": {
+        "title": "Chứng nhận",
+        "program": "Chương trình ACF Certification",
+        "levels": "Cấp độ Chứng nhận",
+        "audit": "Quy trình Kiểm toán"
+      }
+    },
+    "resources": {
+      "title": "Tài nguyên",
+      "link": "Tài nguyên →",
+      "subtitle": "Thông tin chuyên sâu về quản trị, nghiên cứu và tài liệu kỹ thuật.",
+      "insights": {
+        "title": "Thông tin Mới nhất",
+        "aiAct": "Đạo luật AI EU & Hệ thống Tác tử",
+        "dda": "Giải thích Vai trò DDA",
+        "killSwitch": "Thiết kế Dừng Khẩn cấp 3 Cấp độ"
+      },
+      "documentation": {
+        "title": "Tài liệu",
+        "specs": "Đặc tả Kỹ thuật",
+        "research": "Bài nghiên cứu",
+        "academy": "Học viện ACF"
+      },
+      "tools": {
+        "title": "Công cụ",
+        "complianceChecker": "Kiểm tra Tuân thủ ACF",
+        "euAiAct": "EU AI Act Checker ↗"
+      }
+    },
+    "about": {
+      "title": "Về ACF",
+      "link": "Về ACF →",
+      "subtitle": "Câu chuyện, sứ mệnh và bảo hộ pháp lý đằng sau Agentic Commerce Framework®.",
+      "whoWeAre": {
+        "title": "Về Chúng tôi",
+        "vincent": "Vincent DORANGE — Người sáng lập",
+        "mission": "Sứ mệnh & Giá trị",
+        "legal": "Bảo hộ Pháp lý"
+      },
+      "howWeWork": {
+        "title": "Cách Chúng tôi Làm việc",
+        "network": "Mạng lưới Chuyên gia",
+        "audit": "Kiểm toán & Chứng nhận",
+        "contact": "Liên hệ"
+      },
+      "registered": {
+        "label": "NHÃN HIỆU ĐÃ ĐĂNG KÝ",
+        "title": "Nhãn hiệu Đã đăng ký ACF®",
+        "description": "ACF® là nhãn hiệu đã đăng ký. Tất cả phương pháp và công cụ đều được bảo hộ pháp lý."
+      }
+    },
+    "partners": {
+      "title": "Đối tác",
+      "link": "Đối tác →",
+      "subtitle": "Tham gia mạng lưới Chuyên gia ACF và cung cấp dịch vụ quản trị cho khách hàng của bạn.",
+      "portal": {
+        "title": "Cổng Đối tác",
+        "login": "Đăng nhập Cổng Đối tác",
+        "dashboard": "Bảng điều khiển & Công cụ",
+        "training": "Tài liệu Đào tạo",
+        "toolkit": "Bộ Công cụ Chuyên gia ACF"
+      },
+      "become": {
+        "title": "Trở thành Đối tác",
+        "apply": "Đăng ký Tham gia",
+        "tiers": "Cấp bậc Đối tác",
+        "certified": "Đạt Chứng nhận ACF Trước"
+      }
+    },
+    "user": {
+      "partnerAccess": "Truy cập Đối tác",
+      "partnerLogin": "Đăng nhập Đối tác",
+      "applyPartner": "Đăng ký làm Đối tác",
+      "contact": "Liên hệ"
+    }
+  },
+  "hero": {
+    "title": "Tiêu chuẩn Toàn cầu về",
+    "typing": {
+      "word1": "Quản trị",
+      "word2": "Chủ quyền",
+      "word3": "Trí tuệ",
+      "word4": "Thương mại"
+    },
+    "description": "Agentic Commerce Framework® (ACF) là phương pháp quản trị chính thức để triển khai, giám sát và kiểm soát các hệ thống tác tử tự trị trong môi trường thương mại.",
+    "cta": {
+      "primary": "Yêu cầu Đánh giá Quản trị →",
+      "secondary": "Đọc Tiêu chuẩn"
+    },
+    "stats": {
+      "principles": {
+        "value": "4",
+        "label": "Nguyên tắc<br>Nền tảng"
+      },
+      "modules": {
+        "value": "8",
+        "label": "Mô-đun<br>Triển khai"
+      },
+      "kpis": {
+        "value": "18",
+        "label": "KPI<br>Chủ quyền"
+      },
+      "tools": {
+        "value": "17",
+        "label": "Công cụ<br>Độc quyền"
+      }
+    },
+    "satellites": {
+      "score": {
+        "name": "ACF Score",
+        "description": "Chỉ số Chủ quyền"
+      },
+      "control": {
+        "name": "ACF Control",
+        "description": "Nền tảng Quản trị"
+      },
+      "certification": {
+        "name": "Certification",
+        "description": "Chứng nhận"
+      },
+      "partners": {
+        "name": "Đối tác",
+        "description": "Chuyên gia"
+      }
+    }
+  },
+  "statsBar": {
+    "layers": {
+      "value": "4",
+      "label": "Tầng Vận hành"
+    },
+    "kpis": {
+      "value": "18",
+      "label": "KPI Chủ quyền"
+    },
+    "tools": {
+      "value": "17",
+      "label": "Công cụ Độc quyền"
+    },
+    "sovereignty": {
+      "value": "100",
+      "suffix": "%",
+      "label": "Chủ quyền Con người"
+    }
+  },
+  "principles": {
+    "badge": "// Kiến trúc",
+    "title": "4 Nguyên tắc Nền tảng",
+    "subtitle": "Bốn tiên đề bất biến xác định ranh giới giữa quyền hạn con người và thực thi của tác tử tự trị.",
+    "principle1": {
+      "number": "01",
+      "title": "Chủ quyền Quyết định",
+      "description": "Các quyết định chiến lược quan trọng không bao giờ được ủy quyền cho tác tử tự trị."
+    },
+    "principle2": {
+      "number": "02",
+      "title": "Quản trị theo Thiết kế",
+      "description": "Khung quản trị được xác định trước khi triển khai, không phải sau."
+    },
+    "principle3": {
+      "number": "03",
+      "title": "Kiểm soát Tối cao của Con người",
+      "description": "Mọi hệ thống tác tử phải bảo toàn khả năng can thiệp của con người."
+    },
+    "principle4": {
+      "number": "04",
+      "title": "Trách nhiệm Truy vết được",
+      "description": "Mọi hành động tự trị phải có thể kiểm toán và quy trách."
+    }
+  },
+  "layers": {
+    "badge": "// Cấu trúc",
+    "title": "4 Tầng Vận hành",
+    "subtitle": "Kiến trúc phân cấp từ quản trị chiến lược đến giám sát thực thi thời gian thực.",
+    "layer1": {
+      "number": "LAYER_01",
+      "title": "Quản trị & Chủ quyền",
+      "description": "Hiến chương chủ quyền, ủy ban quản trị, ma trận RACI, bản đồ vùng không thể ủy quyền."
+    },
+    "layer2": {
+      "number": "LAYER_02",
+      "title": "Chính sách Quyết định",
+      "description": "Mục tiêu có trọng số, quy tắc phân xử, ngưỡng leo thang, ràng buộc pháp lý."
+    },
+    "layer3": {
+      "number": "LAYER_03",
+      "title": "Hệ thống Tác tử",
+      "description": "Ủy quyền rõ ràng cho mỗi tác tử, phạm vi tương tác, mức độ tự trị, phân loại 5 danh mục."
+    },
+    "layer4": {
+      "number": "LAYER_04",
+      "title": "Thực thi & Giám sát",
+      "description": "Ma trận gating thích ứng, cảnh báo đa cấp, 18 KPI chủ quyền, bảng điều khiển trực tiếp."
+    }
+  },
+  "maturity": {
+    "badge": "// Tiến triển",
+    "title": "4 Cấp độ Trưởng thành Tác tử",
+    "subtitle": "ACF phân loại hệ thống theo mức độ tự trị. Cấp độ 2 là mục tiêu triển khai được khuyến nghị.",
+    "level0": {
+      "code": "LEVEL_0",
+      "name": "Tự động hóa Truyền thống",
+      "risk": "Rủi ro Rất thấp",
+      "description": "Quy tắc cố định, không có ML. Can thiệp con người cho mọi thay đổi."
+    },
+    "level1": {
+      "code": "LEVEL_1",
+      "name": "Tác tử Hỗ trợ",
+      "risk": "Rủi ro Thấp",
+      "description": "Tác tử phân tích và đề xuất. Mọi quyết định cuối cùng thuộc về con người."
+    },
+    "level2": {
+      "code": "LEVEL_2",
+      "name": "Tác tử có Quản trị",
+      "risk": "Rủi ro Trung bình",
+      "description": "Tác tử quyết định trong khuôn khổ quản trị nghiêm ngặt. Vùng không thể ủy quyền bị khóa.",
+      "badge": "★ Mục tiêu Khuyến nghị"
+    },
+    "level3": {
+      "code": "LEVEL_3",
+      "name": "Tự trị có Giám sát",
+      "risk": "Rủi ro Cao",
+      "description": "Tác tử quyết định và học hỏi. Quản trị tối đa. Chỉ dành cho tổ chức trưởng thành."
+    }
+  },
+  "modules": {
+    "badge": "// Phương pháp",
+    "title": "8 Mô-đun Triển khai",
+    "subtitle": "Lộ trình tuần tự triển khai dần dần trong 6–18 tháng. Mỗi mô-đun xây dựng trên mô-đun trước.",
+    "module1": {
+      "code": "MOD_01",
+      "name": "Chẩn đoán Chủ quyền",
+      "description": "Tính toán Điểm Chủ quyền. Lập bản đồ vùng rủi ro."
+    },
+    "module2": {
+      "code": "MOD_02",
+      "name": "Lập bản đồ Quyết định",
+      "description": "Ma trận Mức độ Quan trọng. Vùng không thể ủy quyền."
+    },
+    "module3": {
+      "code": "MOD_03",
+      "name": "Hiến chương Tác tử",
+      "description": "9 điều khoản. Ký bởi ủy ban quản trị."
+    },
+    "module4": {
+      "code": "MOD_04",
+      "name": "Thiết kế Hệ thống Tác tử",
+      "description": "Bảng ủy quyền, phạm vi tương tác."
+    },
+    "module5": {
+      "code": "MOD_05",
+      "name": "Bảo mật & Khả năng Hoàn nguyên",
+      "description": "Sandboxing, kế hoạch hoàn nguyên. Thiết kế dừng khẩn cấp."
+    },
+    "module6": {
+      "code": "MOD_06",
+      "name": "Quản trị Liên tục",
+      "description": "Đánh giá hàng tháng. Kiểm toán tuân thủ hàng năm."
+    },
+    "module7": {
+      "code": "MOD_07",
+      "name": "Lộ trình Triển khai",
+      "description": "Triển khai dần dần 5 giai đoạn."
+    },
+    "module8": {
+      "code": "MOD_08",
+      "name": "Quản lý Khủng hoảng",
+      "description": "Sự cố 3 cấp độ. Diễn tập dừng khẩn cấp."
+    }
+  },
+  "video": {
+    "badge": "// Tại sao ACF",
+    "title": "Quản trị Không thể Chờ đợi.<br>Tác tử Đã Quyết định.",
+    "description1": "Năm 2026, các tác tử tự trị đã thực thi quyết định trong môi trường thương mại — định giá, sàng lọc khách hàng tiềm năng, xử lý yêu cầu bồi thường, quản lý hợp đồng. Hầu hết các tổ chức không có khung quản trị cho chúng.",
+    "description2": "ACF được tạo ra để lấp đầy khoảng trống đó — trước khi thất bại quản trị trở thành khủng hoảng pháp lý, tài chính hoặc uy tín.",
+    "quote": {
+      "text": "Câu hỏi không còn là <em>có nên</em> triển khai tác tử hay không. Mà là <em>làm thế nào</em> để triển khai mà không từ bỏ chủ quyền.",
+      "author": "— Agentic Commerce Framework®"
+    },
+    "player": {
+      "badge": "ACF — CUỘC CÁCH MẠNG TÁC TỬ",
+      "name": "Sự Trỗi dậy của Thương mại Tác tử",
+      "role": "Từ tự động hóa mất kiểm soát đến chủ quyền có quản trị",
+      "duration": "1:05"
+    },
+    "stats": {
+      "release": {
+        "value": "2026",
+        "label": "Phát hành Chính thức"
+      },
+      "documentation": {
+        "value": "45p",
+        "label": "Tài liệu Đầy đủ"
+      },
+      "protection": {
+        "value": "ACF®",
+        "label": "Nhãn hiệu Đã đăng ký"
+      }
+    },
+    "modal": {
+      "placeholder": "SẮP RA MẮT",
+      "title": "Cuộc Cách mạng Thương mại Tác tử",
+      "description": "Hành trình tường thuật: từ mất kiểm soát đến khung quản trị ACF. Tác tử tự trị đang định hình lại thương mại — câu hỏi là ai quản trị chúng."
+    }
+  },
+  "products": {
+    "badge": "// Hệ sinh thái",
+    "title": "Hệ sinh thái ACF",
+    "subtitle": "Ba sản phẩm bổ sung vận hành hóa Tiêu chuẩn ACF.",
+    "score": {
+      "label": "CÔNG CỤ CHẨN ĐOÁN",
+      "title": "ACF Score",
+      "description": "Điểm Chủ quyền độc quyền đo lường mức độ độc lập quyết định của bạn trên 6 chiều quản trị.",
+      "features": {
+        "feature1": "Chỉ số Điểm Chủ quyền tổng hợp",
+        "feature2": "Trực quan hóa radar 6 trục",
+        "feature3": "Kế hoạch hành động cá nhân hóa theo trục"
+      },
+      "cta": "Đo Điểm của bạn →"
+    },
+    "control": {
+      "label": "NỀN TẢNG QUẢN TRỊ",
+      "title": "ACF Control",
+      "description": "Bảng điều khiển quản trị thời gian thực giám sát 18 KPI Chủ quyền với gating thích ứng và leo thang tự động.",
+      "features": {
+        "feature1": "18 KPI trên 6 trục quản trị",
+        "feature2": "Gating thích ứng với leo thang con người",
+        "feature3": "Nhật ký kiểm toán chống giả mạo"
+      },
+      "cta": "Khám phá ACF Control →"
+    },
+    "certification": {
+      "label": "CHỨNG NHẬN ĐỘC LẬP",
+      "title": "ACF Certification",
+      "description": "Chứng nhận độc lập xác nhận tuân thủ tiêu chuẩn quản trị ACF. Có thể xác minh công khai.",
+      "features": {
+        "feature1": "Lộ trình chứng nhận Cấp 1, 2 và 3",
+        "feature2": "Huy hiệu có thể xác minh công khai",
+        "feature3": "Gia hạn hàng năm + giám sát liên tục"
+      },
+      "cta": "Đạt Chứng nhận →"
+    }
+  },
+  "blog": {
+    "badge": "// Thông tin chuyên sâu",
+    "title": "Mới nhất từ Blog ACF",
+    "subtitle": "Thông tin chuyên sâu về quản trị, cập nhật khung và nghiên cứu trí tuệ tác tử.",
+    "article1": {
+      "category": "QUY ĐỊNH AI",
+      "title": "Đạo luật AI EU áp dụng cho hệ thống tác tử năm 2026 như thế nào",
+      "excerpt": "Cách tiếp cận dựa trên rủi ro của Đạo luật AI tạo ra các nghĩa vụ cụ thể cho tác tử tự trị. Đây là những gì quản trị ACF Cấp 2 bao gồm.",
+      "date": "2026-02-15",
+      "cta": "Đọc →"
+    },
+    "article2": {
+      "category": "QUẢN TRỊ",
+      "title": "DDA: tại sao mọi công ty AI-native cần Chuyên viên Tác tử Quyết định Ủy quyền",
+      "excerpt": "DDA là người bảo hộ pháp lý cho các tác tử tự trị của bạn. Cách tạo và trao quyền cho vai trò quan trọng này.",
+      "date": "2026-02-08",
+      "cta": "Đọc →"
+    },
+    "article3": {
+      "category": "KỸ THUẬT",
+      "title": "Thiết kế dừng khẩn cấp ba cấp cho hệ thống tác tử tự trị",
+      "excerpt": "Dừng khẩn cấp hiệu quả không phải là một nút đơn. ACF quy định ba cấp ngắt với thời gian phản hồi xác định.",
+      "date": "2026-01-29",
+      "cta": "Đọc →"
+    },
+    "viewAll": "Xem Tất cả Bài viết →"
+  },
+  "cta": {
+    "watermark": "ACF®",
+    "badge": "// Bước Tiếp theo",
+    "title": "Sẵn sàng Quản trị<br>Hệ thống Tác tử của bạn?",
+    "description": "Yêu cầu đánh giá quản trị và khám phá Điểm Chủ quyền hiện tại của bạn.",
+    "primary": "Yêu cầu Đánh giá Quản trị →",
+    "secondary": "Trở thành Đối tác ACF"
+  },
+  "footer": {
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Tiêu chuẩn Toàn cầu về Quản trị AI",
+    "description": "Tiêu chuẩn quản trị chính thức cho các tổ chức triển khai hệ thống tác tử tự trị. Nhãn hiệu đã đăng ký.",
+    "framework": {
+      "title": "Khung",
+      "theStandard": "Tiêu chuẩn",
+      "methodology": "Phương pháp",
+      "research": "Nghiên cứu",
+      "certification": "ACF Certification"
+    },
+    "products": {
+      "title": "Sản phẩm",
+      "score": "ACF Score",
+      "control": "ACF Control",
+      "certification": "Chứng nhận",
+      "academy": "Học viện"
+    },
+    "organization": {
+      "title": "Tổ chức",
+      "partnerPortal": "Cổng Đối tác",
+      "about": "Giới thiệu",
+      "contact": "Liên hệ",
+      "legal": "Pháp lý"
+    },
+    "copyright": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Bảo lưu mọi quyền.",
+    "legal": {
+      "privacy": "Quyền riêng tư",
+      "terms": "Điều khoản",
+      "cookies": "Cookie"
+    }
+  },
+  "ai": {
+    "button": {
+      "label": "Hỏi Tác tử ACF",
+      "status": "QUẢN TRỊ AI · TRỰC TUYẾN"
+    },
+    "modal": {
+      "close": "×",
+      "beta": "",
+      "title": "Hỏi ACF",
+      "subtitle": "Chatbot trả lời câu hỏi dựa trên Tiêu chuẩn ACF và thông tin quản trị",
+      "placeholder": "Hỏi về quản trị ACF...",
+      "send": "Gửi",
+      "trending": {
+        "label": "CÂU HỎI THỊNH HÀNH",
+        "q1": "Tiêu chuẩn ACF là gì?",
+        "q2": "Làm thế nào để đạt chứng nhận ACF?",
+        "q3": "Vai trò DDA là gì?",
+        "q4": "Điểm Chủ quyền là gì?",
+        "q5": "4 Nguyên tắc Nền tảng?"
+      },
+      "disclaimer": "Thí nghiệm AI. Phản hồi dựa trên tài liệu Tiêu chuẩn ACF.",
+      "seeMore": "Xem Thêm"
+    }
+  }
+}

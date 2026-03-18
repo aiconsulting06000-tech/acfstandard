@@ -1,1 +1,526 @@
-{"meta":{"language":"ET","languageCode":"et","locale":"et-EE"},"common":{"readMore":"Loe lähemalt","learnMore":"Lisateave","getStarted":"Alustage","downloadPDF":"Laadi alla PDF","watchVideo":"Vaata videot","close":"Sulge","open":"Ava","loading":"Laadimine","backToHome":"Tagasi avalehele","menu":"Menüü"},"regionSelector":{"title":"Valige oma piirkond ja keel","close":"✕ Sulge","global":"Globaalne (inglise)","northAmerica":"Põhja-Ameerika","latinAmerica":"Ladina-Ameerika","westernEurope":"Lääne-Euroopa","nordicBaltic":"Põhjamaad ja Baltimaad","centralEasternEurope":"Kesk- ja Ida-Euroopa","middleEastAfrica":"Lähis-Ida ja Aafrika","asiaPacific":"Aasia ja Vaikse ookeani piirkond"},"nav":{"menu":"Menüü","logoText":"Agentic Commerce Framework®","logoSubtext":"Ülemaailmne tehisintellekti haldamise standard","region":"GLOBAL | ET","theStandard":"Standard","acfScore":"ACF Score","acfControl":"ACF Control","acfCertification":"ACF Certification","partners":"Partnerid","requestAssessment":"Taotlege hindamist","partnerLogin":"Partneri sisselogimine","applyPartner":"Kandideeri partneriks","contact":"Kontakt"},"megaMenu":{"framework":{"title":"Raamistik","link":"ACF standard →","subtitle":"Lõplik haldamismetoodika autonoomsete süsteemide jaoks kaubanduskeskkonnas.","architecture":{"title":"Arhitektuur","principles":"4 aluspõhimõtet","layers":"4 tegevuskihti","maturity":"4 küpsusastet"},"methodology":{"title":"Metoodika","modules":"8 juurutusmoodulit","constitution":"Agentide konstitutsioon","dda":"DDA rolliraamistik","killSwitch":"Hädaseiskamise protokoll"},"featured":{"label":"ESILETÕSTETUD","whitepaper":{"title":"Laadige alla ACF valge raamat","description":"Täielik spetsifikatsioon — tasuta registreeritud kasutajatele."},"release":{"title":"ACF — veebruar 2026","description":"Ametlik väljalase. Mis on raamistikus uut."}}},"products":{"title":"Tooted","link":"Tooted →","subtitle":"Kolm tööriista, mis rakendavad ACF standardit teie organisatsioonis.","diagnostic":{"title":"Diagnostika","score":"ACF Score — suveräänsuse mõõdik","methodology":"Hindamismetoodika","axes":"6 haldamistelge"},"saas":{"title":"Haldamisplatvorm","control":"ACF Control — haldamise juhtpaneel","kpis":"18 suveräänsuse KPI-d","gating":"Kohanduv lüüsisüsteem"},"certification":{"title":"Sertifitseerimine","program":"ACF Certification sertifitseerimisprogramm","levels":"Sertifitseerimistasemed","audit":"Auditi protsess"}},"resources":{"title":"Ressursid","link":"Ressursid →","subtitle":"Haldamisülevaated, uuringud ja tehniline dokumentatsioon.","insights":{"title":"Viimased ülevaated","aiAct":"EL tehisintellekti seadus ja autonoomsed süsteemid","dda":"DDA roll selgitatud","killSwitch":"Kolmetasemelise hädaseiskamise kavandamine"},"documentation":{"title":"Dokumentatsioon","specs":"Tehnilised spetsifikatsioonid","research":"Uurimistööd","academy":"ACF Academy"}},"about":{"title":"ACF-ist","link":"ACF-ist →","subtitle":"Lugu, missioon ja õiguskaitse Agentic Commerce Framework® taga.","whoWeAre":{"title":"Kes me oleme","vincent":"Vincent DORANGE — looja","mission":"Missioon ja väärtused","legal":"Õiguskaitse"},"howWeWork":{"title":"Kuidas me töötame","network":"Praktikute võrgustik","audit":"Audit ja sertifitseerimine","contact":"Võtke ühendust"},"registered":{"label":"REGISTREERITUD","title":"Registreeritud kaubamärk ACF®","description":"ACF® on registreeritud kaubamärk. Kogu metoodika ja tööriistad on õiguslikult kaitstud."}},"partners":{"title":"Partnerid","link":"Partnerid →","subtitle":"Liituge ACF praktikute võrgustikuga ja pakkuge oma klientidele haldamisteenuseid.","portal":{"title":"Partneriportaal","login":"Logi sisse partneriportaali","dashboard":"Juhtpaneel ja tööriistad","training":"Koolitusmaterjalid","toolkit":"ACF praktiku tööriistakomplekt"},"become":{"title":"Hakka partneriks","apply":"Kandideeri liitumiseks","tiers":"Partneritasemed","certified":"Hangi esmalt ACF sertifikaat"}},"user":{"partnerAccess":"Partneri juurdepääs","partnerLogin":"Partneri sisselogimine","applyPartner":"Kandideeri partneriks","contact":"Kontakt"}},"hero":{"title":"Ülemaailmne standard","typing":{"word1":"Haldamisele","word2":"Suveräänsusele","word3":"Intelligentsusele","word4":"Kaubandusele"},"description":"Agentic Commerce Framework® (ACF) on lõplik haldamismetoodika autonoomsete süsteemide juurutamiseks, järelevalveks ja kontrollimiseks kaubanduskeskkonnas.","cta":{"primary":"Taotlege haldamise hindamist →","secondary":"Lugege standardit"},"stats":{"principles":{"value":"4","label":"Alus-<br>põhimõtet"},"modules":{"value":"8","label":"Juurutus-<br>moodulit"},"kpis":{"value":"18","label":"Suveräänsuse<br>KPI-d"},"tools":{"value":"17","label":"Patenteeritud<br>tööriistad"}},"satellites":{"score":{"name":"ACF Score","description":"Suveräänsuse mõõdik"},"control":{"name":"ACF Control","description":"Haldamisplatvorm"},"certification":{"name":"Certification","description":"Tõendamine"},"partners":{"name":"Partnerid","description":"Praktikud"}}},"statsBar":{"layers":{"value":"4","label":"Tegevuskihid"},"kpis":{"value":"18","label":"Suveräänsuse KPI-d"},"tools":{"value":"17","label":"Patenteeritud tööriistad"},"sovereignty":{"value":"100","suffix":"%","label":"Inimese suveräänsus"}},"principles":{"badge":"// Arhitektuur","title":"4 aluspõhimõtet","subtitle":"Neli muutumatut aksioomi, mis määratlevad piiri inimvõimu ja autonoomse täitmise vahel.","principle1":{"number":"01","title":"Otsustussuveräänsus","description":"Kriitilisi strateegilisi otsuseid ei delegeerita kunagi autonoomsetele süsteemidele."},"principle2":{"number":"02","title":"Haldamine disaini järgi","description":"Haldamisraamistikud määratletakse enne juurutamist, mitte pärast."},"principle3":{"number":"03","title":"Ülim inimkontroll","description":"Iga autonoomne süsteem peab säilitama inimese sekkumisvõimaluse."},"principle4":{"number":"04","title":"Jälgitav vastutus","description":"Iga autonoomne tegevus peab olema auditeeritav ja omistatav."}},"layers":{"badge":"// Struktuur","title":"4 tegevuskihti","subtitle":"Hierarhiline arhitektuur strateegilisest haldamisest reaalajas täitmise järelevalveni.","layer1":{"number":"LAYER_01","title":"Haldamine ja suveräänsus","description":"Suveräänsuse harta, haldamiskomitee, RACI maatriks, mittedelegeeritava tsooni kaart."},"layer2":{"number":"LAYER_02","title":"Otsustuspoliitika","description":"Kaalutud eesmärgid, vahekohtu reeglid, eskalatsiooniläved, regulatiivsed piirangud."},"layer3":{"number":"LAYER_03","title":"Agendisüsteem","description":"Selge mandaat agendi kohta, suhtlusperimeeter, autonoomiatase, 5-kategooria taksonoomia."},"layer4":{"number":"LAYER_04","title":"Täitmine ja järelevalve","description":"Kohanduv lüüsimaatriks, mitmetasemelised hoiatused, 18 suveräänsuse KPI-d, reaalajas juhtpaneelid."}},"maturity":{"badge":"// Edasiminek","title":"4 agentide küpsustaset","subtitle":"ACF klassifitseerib süsteeme autonoomia taseme järgi. Tase 2 on soovituslik juurutamise sihtmärk.","level0":{"code":"LEVEL_0","name":"Klassikaline automatiseerimine","risk":"Väga madal risk","description":"Fikseeritud reeglid, masinõpet pole. Inimese sekkumine iga muudatuse korral."},"level1":{"code":"LEVEL_1","name":"Abistavad agendid","risk":"Madal risk","description":"Agendid analüüsivad ja soovitavad. Iga lõplik otsus jääb inimese teha."},"level2":{"code":"LEVEL_2","name":"Hallatud agendid","risk":"Mõõdukas risk","description":"Agendid otsustavad rangete haldamisreeglite piires. Mittedelegeeritavad tsoonid lukustatud.","badge":"★ Soovituslik sihtmärk"},"level3":{"code":"LEVEL_3","name":"Jälgitav autonoomne","risk":"Kõrge risk","description":"Agendid otsustavad ja õpivad. Maksimaalne haldamine. Ainult küpsetele organisatsioonidele."}},"modules":{"badge":"// Metoodika","title":"8 juurutusmoodulit","subtitle":"Järjestikune tee, mis juurutatakse järk-järgult 6–18 kuu jooksul. Iga moodul tugineb eelmisele.","module1":{"code":"MOD_01","name":"Suveräänsuse diagnostika","description":"Suveräänsuse skoori arvutamine. Riskitsoonide kaardistamine."},"module2":{"code":"MOD_02","name":"Otsuste kaardistamine","description":"Kriitilisuse maatriks. Mittedelegeeritavad tsoonid."},"module3":{"code":"MOD_03","name":"Agentide konstitutsioon","description":"9 artiklit. Allkirjastatud haldamiskomitee poolt."},"module4":{"code":"MOD_04","name":"Agendisüsteemi disain","description":"Mandaadilehed, suhtlusperimeetrid."},"module5":{"code":"MOD_05","name":"Turvalisus ja pööratavus","description":"Liivakastistamine, pööratavusplaan. Hädaseiskamise kavandamine."},"module6":{"code":"MOD_06","name":"Pidev haldamine","description":"Igakuised ülevaated. Iga-aastane vastavusaudit."},"module7":{"code":"MOD_07","name":"Juurutamise tegevuskava","description":"5-faasiline järkjärguline juurutamine."},"module8":{"code":"MOD_08","name":"Kriisijuhtimine","description":"3-tasemelised intsidendid. Hädaseiskamise harjutused."}},"video":{"badge":"// Miks ACF","title":"Haldamine ei saa oodata.<br>Agendid juba otsustavad.","description1":"Aastal 2026 täidavad autonoomsed agendid juba otsuseid kaubanduskeskkonnas — määravad hindu, kvalifitseerivad kontakte, töötlevad nõudeid, haldavad lepinguid. Enamikul organisatsioonidel puudub raamistik nende haldamiseks.","description2":"ACF loodi selle tühimiku täitmiseks — enne kui haldamistõrge muutub õiguslikuks, finants- või mainekatastroofiliseks kriisiks.","quote":{"text":"Küsimus ei ole enam <em>kas</em> agente juurutada. See on <em>kuidas</em> neid juurutada ilma oma suveräänsust loovutamata.","author":"— Agentic Commerce Framework®"},"player":{"badge":"ACF — AGENTIDE REVOLUTSIOON","name":"Agentse kaubanduse tõus","role":"Kontrollimata automatiseerimisest hallatud suveräänsuseni","duration":"1:05"},"stats":{"release":{"value":"2026","label":"Ametlik väljalase"},"documentation":{"value":"45p","label":"Täielik dokumentatsioon"},"protection":{"value":"ACF®","label":"Registreeritud kaubamärk"}},"modal":{"placeholder":"VARSTI TULEMAS","title":"Agentse kaubanduse revolutsioon","description":"Narratiivne teekond: kontrolli kaotusest ACF haldamisraamistikuni. Autonoomsed agendid kujundavad kaubandust ümber — küsimus on, kes neid haldab."}},"products":{"badge":"// Ökosüsteem","title":"ACF ökosüsteem","subtitle":"Kolm täiendavat toodet, mis rakendavad ACF standardit.","score":{"label":"DIAGNOSTIKATÖÖRIIST","title":"ACF Score","description":"Patenteeritud suveräänsuse skoor, mis mõõdab teie otsustuslikku sõltumatust 6 haldamisdimensiooni ulatuses.","features":{"feature1":"Liitsuveräänsuse skoori mõõdik","feature2":"6-teljeline radari visualiseerimine","feature3":"Isikupärastatud tegevuskava telje kohta"},"cta":"Mõõtke oma skoori →"},"control":{"label":"HALDAMISPLATVORM","title":"ACF Control","description":"Reaalajas haldamise juhtpaneel, mis jälgib teie 18 suveräänsuse KPI-d kohanduva lüüsimise ja automaatse eskalatsiooniga.","features":{"feature1":"18 KPI-d 6 haldamistelje ulatuses","feature2":"Kohanduv lüüsimine inimese eskalatsiooniga","feature3":"Võltsimiskindlad auditilogid"},"cta":"Avasta ACF Control →"},"certification":{"label":"SÕLTUMATU TÕENDAMINE","title":"ACF Certification","description":"Sõltumatu sertifitseerimine, mis tõendab vastavust ACF haldamisstandardile. Avalikult kontrollitav.","features":{"feature1":"Taseme 1, 2 ja 3 sertifitseerimisteed","feature2":"Avalikult kontrollitav märgis","feature3":"Iga-aastane uuendamine + pidev jälgimine"},"cta":"Hangi sertifikaat →"}},"blog":{"badge":"// Ülevaated","title":"Viimased ACF blogist","subtitle":"Haldamisülevaated, raamistiku uuendused ja agentse intelligentsuse uuringud.","article1":{"category":"TEHISINTELLEKTI REGULATSIOON","title":"Kuidas EL tehisintellekti seadus kehtib autonoomsetele süsteemidele aastal 2026","excerpt":"Tehisintellekti seaduse riskipõhine lähenemine loob spetsiifilised kohustused autonoomsetele agentidele. Siin on see, mida ACF tase 2 haldamine katab.","date":"2026-02-15","cta":"Loe →"},"article2":{"category":"HALDAMINE","title":"DDA: miks iga tehisintellektiga ettevõte vajab delegeeritud otsuste agendi ametnikku","excerpt":"DDA on teie autonoomsete agentide seaduslik eestkostja. Kuidas luua ja volitada seda kriitilist rolli.","date":"2026-02-08","cta":"Loe →"},"article3":{"category":"TEHNILINE","title":"Kolmetasemelise hädaseiskamise kavandamine autonoomsetele süsteemidele","excerpt":"Tõhus hädaseiskamine ei ole üks nupp. ACF määratleb kolm katkestuse taset koos määratletud reageerimisaegadega.","date":"2026-01-29","cta":"Loe →"},"viewAll":"Vaata kõiki artikleid →"},"cta":{"watermark":"ACF®","badge":"// Järgmine samm","title":"Valmis haldama oma<br>autonoomseid süsteeme?","description":"Taotlege haldamise hindamist ja avastage oma praegune suveräänsuse skoor.","primary":"Taotlege haldamise hindamist →","secondary":"Hakka ACF partneriks"},"footer":{"logoText":"Agentic Commerce Framework®","logoSubtext":"Ülemaailmne tehisintellekti haldamise standard","description":"Lõplik haldamisstandard autonoomseid süsteeme juurutavatele organisatsioonidele. Registreeritud kaubamärk.","framework":{"title":"Raamistik","theStandard":"Standard","methodology":"Metoodika","research":"Uuringud","certification":"ACF Certification"},"products":{"title":"Tooted","score":"ACF Score","control":"ACF Control","certification":"Sertifitseerimine","academy":"Academy"},"organization":{"title":"Organisatsioon","partnerPortal":"Partneriportaal","about":"Meist","contact":"Kontakt","legal":"Õiguslik"},"copyright":"© 2026 Agentic Commerce Framework® — Vincent DORANGE. Kõik õigused kaitstud.","legal":{"privacy":"Privaatsus","terms":"Tingimused","cookies":"Küpsised"}},"ai":{"button":{"label":"Küsi ACF agendilt","status":"TEHISINTELLEKTI HALDAMINE · VÕRGUS"},"modal":{"close":"×","beta":"","title":"Küsi ACF","subtitle":"Vestlusrobot, mis vastab küsimustele ACF standardi ja haldamisülevaadete põhjal","placeholder":"Küsige ACF haldamise kohta...","send":"Saada","trending":{"label":"POPULAARSED KÜSIMUSED","q1":"Mis on ACF standard?","q2":"Kuidas saada ACF sertifikaat?","q3":"Mis on DDA roll?","q4":"Mis on suveräänsuse skoor?","q5":"4 aluspõhimõtet?"},"disclaimer":"Tehisintellekti eksperiment. Vastused põhinevad ACF standardi dokumentatsioonil.","seeMore":"Vaata rohkem"}}}
+{
+  "meta": {
+    "language": "ET",
+    "languageCode": "et",
+    "locale": "et-EE"
+  },
+  "common": {
+    "readMore": "Loe lähemalt",
+    "learnMore": "Lisateave",
+    "getStarted": "Alustage",
+    "downloadPDF": "Laadi alla PDF",
+    "watchVideo": "Vaata videot",
+    "close": "Sulge",
+    "open": "Ava",
+    "loading": "Laadimine",
+    "backToHome": "Tagasi avalehele",
+    "menu": "Menüü"
+  },
+  "regionSelector": {
+    "title": "Valige oma piirkond ja keel",
+    "close": "✕ Sulge",
+    "global": "Globaalne (inglise)",
+    "northAmerica": "Põhja-Ameerika",
+    "latinAmerica": "Ladina-Ameerika",
+    "westernEurope": "Lääne-Euroopa",
+    "nordicBaltic": "Põhjamaad ja Baltimaad",
+    "centralEasternEurope": "Kesk- ja Ida-Euroopa",
+    "middleEastAfrica": "Lähis-Ida ja Aafrika",
+    "asiaPacific": "Aasia ja Vaikse ookeani piirkond"
+  },
+  "nav": {
+    "menu": "Menüü",
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Ülemaailmne tehisintellekti haldamise standard",
+    "region": "GLOBAL | ET",
+    "theStandard": "Standard",
+    "acfScore": "ACF Score",
+    "acfControl": "ACF Control",
+    "acfCertification": "ACF Certification",
+    "partners": "Partnerid",
+    "requestAssessment": "Taotlege hindamist",
+    "partnerLogin": "Partneri sisselogimine",
+    "applyPartner": "Kandideeri partneriks",
+    "contact": "Kontakt"
+  },
+  "megaMenu": {
+    "framework": {
+      "title": "Raamistik",
+      "link": "ACF standard →",
+      "subtitle": "Lõplik haldamismetoodika autonoomsete süsteemide jaoks kaubanduskeskkonnas.",
+      "architecture": {
+        "title": "Arhitektuur",
+        "principles": "4 aluspõhimõtet",
+        "layers": "4 tegevuskihti",
+        "maturity": "4 küpsusastet"
+      },
+      "methodology": {
+        "title": "Metoodika",
+        "modules": "8 juurutusmoodulit",
+        "constitution": "Agentide konstitutsioon",
+        "dda": "DDA rolliraamistik",
+        "killSwitch": "Hädaseiskamise protokoll"
+      },
+      "featured": {
+        "label": "ESILETÕSTETUD",
+        "whitepaper": {
+          "title": "Laadige alla ACF valge raamat",
+          "description": "Täielik spetsifikatsioon — tasuta registreeritud kasutajatele."
+        },
+        "release": {
+          "title": "ACF — veebruar 2026",
+          "description": "Ametlik väljalase. Mis on raamistikus uut."
+        }
+      }
+    },
+    "products": {
+      "title": "Tooted",
+      "link": "Tooted →",
+      "subtitle": "Kolm tööriista, mis rakendavad ACF standardit teie organisatsioonis.",
+      "diagnostic": {
+        "title": "Diagnostika",
+        "score": "ACF Score — suveräänsuse mõõdik",
+        "methodology": "Hindamismetoodika",
+        "axes": "6 haldamistelge"
+      },
+      "saas": {
+        "title": "Haldamisplatvorm",
+        "control": "ACF Control — haldamise juhtpaneel",
+        "kpis": "18 suveräänsuse KPI-d",
+        "gating": "Kohanduv lüüsisüsteem"
+      },
+      "certification": {
+        "title": "Sertifitseerimine",
+        "program": "ACF Certification sertifitseerimisprogramm",
+        "levels": "Sertifitseerimistasemed",
+        "audit": "Auditi protsess"
+      }
+    },
+    "resources": {
+      "title": "Ressursid",
+      "link": "Ressursid →",
+      "subtitle": "Haldamisülevaated, uuringud ja tehniline dokumentatsioon.",
+      "insights": {
+        "title": "Viimased ülevaated",
+        "aiAct": "EL tehisintellekti seadus ja autonoomsed süsteemid",
+        "dda": "DDA roll selgitatud",
+        "killSwitch": "Kolmetasemelise hädaseiskamise kavandamine"
+      },
+      "documentation": {
+        "title": "Dokumentatsioon",
+        "specs": "Tehnilised spetsifikatsioonid",
+        "research": "Uurimistööd",
+        "academy": "ACF Academy"
+      },
+      "tools": {
+        "title": "Tööriistad",
+        "complianceChecker": "ACF Vastavuskontroll",
+        "euAiAct": "EU AI Act Checker ↗"
+      }
+    },
+    "about": {
+      "title": "ACF-ist",
+      "link": "ACF-ist →",
+      "subtitle": "Lugu, missioon ja õiguskaitse Agentic Commerce Framework® taga.",
+      "whoWeAre": {
+        "title": "Kes me oleme",
+        "vincent": "Vincent DORANGE — looja",
+        "mission": "Missioon ja väärtused",
+        "legal": "Õiguskaitse"
+      },
+      "howWeWork": {
+        "title": "Kuidas me töötame",
+        "network": "Praktikute võrgustik",
+        "audit": "Audit ja sertifitseerimine",
+        "contact": "Võtke ühendust"
+      },
+      "registered": {
+        "label": "REGISTREERITUD",
+        "title": "Registreeritud kaubamärk ACF®",
+        "description": "ACF® on registreeritud kaubamärk. Kogu metoodika ja tööriistad on õiguslikult kaitstud."
+      }
+    },
+    "partners": {
+      "title": "Partnerid",
+      "link": "Partnerid →",
+      "subtitle": "Liituge ACF praktikute võrgustikuga ja pakkuge oma klientidele haldamisteenuseid.",
+      "portal": {
+        "title": "Partneriportaal",
+        "login": "Logi sisse partneriportaali",
+        "dashboard": "Juhtpaneel ja tööriistad",
+        "training": "Koolitusmaterjalid",
+        "toolkit": "ACF praktiku tööriistakomplekt"
+      },
+      "become": {
+        "title": "Hakka partneriks",
+        "apply": "Kandideeri liitumiseks",
+        "tiers": "Partneritasemed",
+        "certified": "Hangi esmalt ACF sertifikaat"
+      }
+    },
+    "user": {
+      "partnerAccess": "Partneri juurdepääs",
+      "partnerLogin": "Partneri sisselogimine",
+      "applyPartner": "Kandideeri partneriks",
+      "contact": "Kontakt"
+    }
+  },
+  "hero": {
+    "title": "Ülemaailmne standard",
+    "typing": {
+      "word1": "Haldamisele",
+      "word2": "Suveräänsusele",
+      "word3": "Intelligentsusele",
+      "word4": "Kaubandusele"
+    },
+    "description": "Agentic Commerce Framework® (ACF) on lõplik haldamismetoodika autonoomsete süsteemide juurutamiseks, järelevalveks ja kontrollimiseks kaubanduskeskkonnas.",
+    "cta": {
+      "primary": "Taotlege haldamise hindamist →",
+      "secondary": "Lugege standardit"
+    },
+    "stats": {
+      "principles": {
+        "value": "4",
+        "label": "Alus-<br>põhimõtet"
+      },
+      "modules": {
+        "value": "8",
+        "label": "Juurutus-<br>moodulit"
+      },
+      "kpis": {
+        "value": "18",
+        "label": "Suveräänsuse<br>KPI-d"
+      },
+      "tools": {
+        "value": "17",
+        "label": "Patenteeritud<br>tööriistad"
+      }
+    },
+    "satellites": {
+      "score": {
+        "name": "ACF Score",
+        "description": "Suveräänsuse mõõdik"
+      },
+      "control": {
+        "name": "ACF Control",
+        "description": "Haldamisplatvorm"
+      },
+      "certification": {
+        "name": "Certification",
+        "description": "Tõendamine"
+      },
+      "partners": {
+        "name": "Partnerid",
+        "description": "Praktikud"
+      }
+    }
+  },
+  "statsBar": {
+    "layers": {
+      "value": "4",
+      "label": "Tegevuskihid"
+    },
+    "kpis": {
+      "value": "18",
+      "label": "Suveräänsuse KPI-d"
+    },
+    "tools": {
+      "value": "17",
+      "label": "Patenteeritud tööriistad"
+    },
+    "sovereignty": {
+      "value": "100",
+      "suffix": "%",
+      "label": "Inimese suveräänsus"
+    }
+  },
+  "principles": {
+    "badge": "// Arhitektuur",
+    "title": "4 aluspõhimõtet",
+    "subtitle": "Neli muutumatut aksioomi, mis määratlevad piiri inimvõimu ja autonoomse täitmise vahel.",
+    "principle1": {
+      "number": "01",
+      "title": "Otsustussuveräänsus",
+      "description": "Kriitilisi strateegilisi otsuseid ei delegeerita kunagi autonoomsetele süsteemidele."
+    },
+    "principle2": {
+      "number": "02",
+      "title": "Haldamine disaini järgi",
+      "description": "Haldamisraamistikud määratletakse enne juurutamist, mitte pärast."
+    },
+    "principle3": {
+      "number": "03",
+      "title": "Ülim inimkontroll",
+      "description": "Iga autonoomne süsteem peab säilitama inimese sekkumisvõimaluse."
+    },
+    "principle4": {
+      "number": "04",
+      "title": "Jälgitav vastutus",
+      "description": "Iga autonoomne tegevus peab olema auditeeritav ja omistatav."
+    }
+  },
+  "layers": {
+    "badge": "// Struktuur",
+    "title": "4 tegevuskihti",
+    "subtitle": "Hierarhiline arhitektuur strateegilisest haldamisest reaalajas täitmise järelevalveni.",
+    "layer1": {
+      "number": "LAYER_01",
+      "title": "Haldamine ja suveräänsus",
+      "description": "Suveräänsuse harta, haldamiskomitee, RACI maatriks, mittedelegeeritava tsooni kaart."
+    },
+    "layer2": {
+      "number": "LAYER_02",
+      "title": "Otsustuspoliitika",
+      "description": "Kaalutud eesmärgid, vahekohtu reeglid, eskalatsiooniläved, regulatiivsed piirangud."
+    },
+    "layer3": {
+      "number": "LAYER_03",
+      "title": "Agendisüsteem",
+      "description": "Selge mandaat agendi kohta, suhtlusperimeeter, autonoomiatase, 5-kategooria taksonoomia."
+    },
+    "layer4": {
+      "number": "LAYER_04",
+      "title": "Täitmine ja järelevalve",
+      "description": "Kohanduv lüüsimaatriks, mitmetasemelised hoiatused, 18 suveräänsuse KPI-d, reaalajas juhtpaneelid."
+    }
+  },
+  "maturity": {
+    "badge": "// Edasiminek",
+    "title": "4 agentide küpsustaset",
+    "subtitle": "ACF klassifitseerib süsteeme autonoomia taseme järgi. Tase 2 on soovituslik juurutamise sihtmärk.",
+    "level0": {
+      "code": "LEVEL_0",
+      "name": "Klassikaline automatiseerimine",
+      "risk": "Väga madal risk",
+      "description": "Fikseeritud reeglid, masinõpet pole. Inimese sekkumine iga muudatuse korral."
+    },
+    "level1": {
+      "code": "LEVEL_1",
+      "name": "Abistavad agendid",
+      "risk": "Madal risk",
+      "description": "Agendid analüüsivad ja soovitavad. Iga lõplik otsus jääb inimese teha."
+    },
+    "level2": {
+      "code": "LEVEL_2",
+      "name": "Hallatud agendid",
+      "risk": "Mõõdukas risk",
+      "description": "Agendid otsustavad rangete haldamisreeglite piires. Mittedelegeeritavad tsoonid lukustatud.",
+      "badge": "★ Soovituslik sihtmärk"
+    },
+    "level3": {
+      "code": "LEVEL_3",
+      "name": "Jälgitav autonoomne",
+      "risk": "Kõrge risk",
+      "description": "Agendid otsustavad ja õpivad. Maksimaalne haldamine. Ainult küpsetele organisatsioonidele."
+    }
+  },
+  "modules": {
+    "badge": "// Metoodika",
+    "title": "8 juurutusmoodulit",
+    "subtitle": "Järjestikune tee, mis juurutatakse järk-järgult 6–18 kuu jooksul. Iga moodul tugineb eelmisele.",
+    "module1": {
+      "code": "MOD_01",
+      "name": "Suveräänsuse diagnostika",
+      "description": "Suveräänsuse skoori arvutamine. Riskitsoonide kaardistamine."
+    },
+    "module2": {
+      "code": "MOD_02",
+      "name": "Otsuste kaardistamine",
+      "description": "Kriitilisuse maatriks. Mittedelegeeritavad tsoonid."
+    },
+    "module3": {
+      "code": "MOD_03",
+      "name": "Agentide konstitutsioon",
+      "description": "9 artiklit. Allkirjastatud haldamiskomitee poolt."
+    },
+    "module4": {
+      "code": "MOD_04",
+      "name": "Agendisüsteemi disain",
+      "description": "Mandaadilehed, suhtlusperimeetrid."
+    },
+    "module5": {
+      "code": "MOD_05",
+      "name": "Turvalisus ja pööratavus",
+      "description": "Liivakastistamine, pööratavusplaan. Hädaseiskamise kavandamine."
+    },
+    "module6": {
+      "code": "MOD_06",
+      "name": "Pidev haldamine",
+      "description": "Igakuised ülevaated. Iga-aastane vastavusaudit."
+    },
+    "module7": {
+      "code": "MOD_07",
+      "name": "Juurutamise tegevuskava",
+      "description": "5-faasiline järkjärguline juurutamine."
+    },
+    "module8": {
+      "code": "MOD_08",
+      "name": "Kriisijuhtimine",
+      "description": "3-tasemelised intsidendid. Hädaseiskamise harjutused."
+    }
+  },
+  "video": {
+    "badge": "// Miks ACF",
+    "title": "Haldamine ei saa oodata.<br>Agendid juba otsustavad.",
+    "description1": "Aastal 2026 täidavad autonoomsed agendid juba otsuseid kaubanduskeskkonnas — määravad hindu, kvalifitseerivad kontakte, töötlevad nõudeid, haldavad lepinguid. Enamikul organisatsioonidel puudub raamistik nende haldamiseks.",
+    "description2": "ACF loodi selle tühimiku täitmiseks — enne kui haldamistõrge muutub õiguslikuks, finants- või mainekatastroofiliseks kriisiks.",
+    "quote": {
+      "text": "Küsimus ei ole enam <em>kas</em> agente juurutada. See on <em>kuidas</em> neid juurutada ilma oma suveräänsust loovutamata.",
+      "author": "— Agentic Commerce Framework®"
+    },
+    "player": {
+      "badge": "ACF — AGENTIDE REVOLUTSIOON",
+      "name": "Agentse kaubanduse tõus",
+      "role": "Kontrollimata automatiseerimisest hallatud suveräänsuseni",
+      "duration": "1:05"
+    },
+    "stats": {
+      "release": {
+        "value": "2026",
+        "label": "Ametlik väljalase"
+      },
+      "documentation": {
+        "value": "45p",
+        "label": "Täielik dokumentatsioon"
+      },
+      "protection": {
+        "value": "ACF®",
+        "label": "Registreeritud kaubamärk"
+      }
+    },
+    "modal": {
+      "placeholder": "VARSTI TULEMAS",
+      "title": "Agentse kaubanduse revolutsioon",
+      "description": "Narratiivne teekond: kontrolli kaotusest ACF haldamisraamistikuni. Autonoomsed agendid kujundavad kaubandust ümber — küsimus on, kes neid haldab."
+    }
+  },
+  "products": {
+    "badge": "// Ökosüsteem",
+    "title": "ACF ökosüsteem",
+    "subtitle": "Kolm täiendavat toodet, mis rakendavad ACF standardit.",
+    "score": {
+      "label": "DIAGNOSTIKATÖÖRIIST",
+      "title": "ACF Score",
+      "description": "Patenteeritud suveräänsuse skoor, mis mõõdab teie otsustuslikku sõltumatust 6 haldamisdimensiooni ulatuses.",
+      "features": {
+        "feature1": "Liitsuveräänsuse skoori mõõdik",
+        "feature2": "6-teljeline radari visualiseerimine",
+        "feature3": "Isikupärastatud tegevuskava telje kohta"
+      },
+      "cta": "Mõõtke oma skoori →"
+    },
+    "control": {
+      "label": "HALDAMISPLATVORM",
+      "title": "ACF Control",
+      "description": "Reaalajas haldamise juhtpaneel, mis jälgib teie 18 suveräänsuse KPI-d kohanduva lüüsimise ja automaatse eskalatsiooniga.",
+      "features": {
+        "feature1": "18 KPI-d 6 haldamistelje ulatuses",
+        "feature2": "Kohanduv lüüsimine inimese eskalatsiooniga",
+        "feature3": "Võltsimiskindlad auditilogid"
+      },
+      "cta": "Avasta ACF Control →"
+    },
+    "certification": {
+      "label": "SÕLTUMATU TÕENDAMINE",
+      "title": "ACF Certification",
+      "description": "Sõltumatu sertifitseerimine, mis tõendab vastavust ACF haldamisstandardile. Avalikult kontrollitav.",
+      "features": {
+        "feature1": "Taseme 1, 2 ja 3 sertifitseerimisteed",
+        "feature2": "Avalikult kontrollitav märgis",
+        "feature3": "Iga-aastane uuendamine + pidev jälgimine"
+      },
+      "cta": "Hangi sertifikaat →"
+    }
+  },
+  "blog": {
+    "badge": "// Ülevaated",
+    "title": "Viimased ACF blogist",
+    "subtitle": "Haldamisülevaated, raamistiku uuendused ja agentse intelligentsuse uuringud.",
+    "article1": {
+      "category": "TEHISINTELLEKTI REGULATSIOON",
+      "title": "Kuidas EL tehisintellekti seadus kehtib autonoomsetele süsteemidele aastal 2026",
+      "excerpt": "Tehisintellekti seaduse riskipõhine lähenemine loob spetsiifilised kohustused autonoomsetele agentidele. Siin on see, mida ACF tase 2 haldamine katab.",
+      "date": "2026-02-15",
+      "cta": "Loe →"
+    },
+    "article2": {
+      "category": "HALDAMINE",
+      "title": "DDA: miks iga tehisintellektiga ettevõte vajab delegeeritud otsuste agendi ametnikku",
+      "excerpt": "DDA on teie autonoomsete agentide seaduslik eestkostja. Kuidas luua ja volitada seda kriitilist rolli.",
+      "date": "2026-02-08",
+      "cta": "Loe →"
+    },
+    "article3": {
+      "category": "TEHNILINE",
+      "title": "Kolmetasemelise hädaseiskamise kavandamine autonoomsetele süsteemidele",
+      "excerpt": "Tõhus hädaseiskamine ei ole üks nupp. ACF määratleb kolm katkestuse taset koos määratletud reageerimisaegadega.",
+      "date": "2026-01-29",
+      "cta": "Loe →"
+    },
+    "viewAll": "Vaata kõiki artikleid →"
+  },
+  "cta": {
+    "watermark": "ACF®",
+    "badge": "// Järgmine samm",
+    "title": "Valmis haldama oma<br>autonoomseid süsteeme?",
+    "description": "Taotlege haldamise hindamist ja avastage oma praegune suveräänsuse skoor.",
+    "primary": "Taotlege haldamise hindamist →",
+    "secondary": "Hakka ACF partneriks"
+  },
+  "footer": {
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Ülemaailmne tehisintellekti haldamise standard",
+    "description": "Lõplik haldamisstandard autonoomseid süsteeme juurutavatele organisatsioonidele. Registreeritud kaubamärk.",
+    "framework": {
+      "title": "Raamistik",
+      "theStandard": "Standard",
+      "methodology": "Metoodika",
+      "research": "Uuringud",
+      "certification": "ACF Certification"
+    },
+    "products": {
+      "title": "Tooted",
+      "score": "ACF Score",
+      "control": "ACF Control",
+      "certification": "Sertifitseerimine",
+      "academy": "Academy"
+    },
+    "organization": {
+      "title": "Organisatsioon",
+      "partnerPortal": "Partneriportaal",
+      "about": "Meist",
+      "contact": "Kontakt",
+      "legal": "Õiguslik"
+    },
+    "copyright": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Kõik õigused kaitstud.",
+    "legal": {
+      "privacy": "Privaatsus",
+      "terms": "Tingimused",
+      "cookies": "Küpsised"
+    }
+  },
+  "ai": {
+    "button": {
+      "label": "Küsi ACF agendilt",
+      "status": "TEHISINTELLEKTI HALDAMINE · VÕRGUS"
+    },
+    "modal": {
+      "close": "×",
+      "beta": "",
+      "title": "Küsi ACF",
+      "subtitle": "Vestlusrobot, mis vastab küsimustele ACF standardi ja haldamisülevaadete põhjal",
+      "placeholder": "Küsige ACF haldamise kohta...",
+      "send": "Saada",
+      "trending": {
+        "label": "POPULAARSED KÜSIMUSED",
+        "q1": "Mis on ACF standard?",
+        "q2": "Kuidas saada ACF sertifikaat?",
+        "q3": "Mis on DDA roll?",
+        "q4": "Mis on suveräänsuse skoor?",
+        "q5": "4 aluspõhimõtet?"
+      },
+      "disclaimer": "Tehisintellekti eksperiment. Vastused põhinevad ACF standardi dokumentatsioonil.",
+      "seeMore": "Vaata rohkem"
+    }
+  }
+}

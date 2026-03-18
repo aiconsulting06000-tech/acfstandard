@@ -1,1 +1,526 @@
-{"meta":{"language":"MS","languageCode":"ms","locale":"ms-MY"},"common":{"readMore":"Baca lagi","learnMore":"Ketahui lebih lanjut","getStarted":"Mulakan","downloadPDF":"Muat turun PDF","watchVideo":"Tonton video","close":"Tutup","open":"Buka","loading":"Memuatkan","backToHome":"Kembali ke laman utama","menu":"Menu"},"regionSelector":{"title":"Pilih wilayah dan bahasa anda","close":"✕ Tutup","global":"Global (Inggeris)","northAmerica":"Amerika Utara","latinAmerica":"Amerika Latin","westernEurope":"Eropah Barat","nordicBaltic":"Nordik & Baltik","centralEasternEurope":"Eropah Tengah & Timur","middleEastAfrica":"Timur Tengah & Afrika","asiaPacific":"Asia & Pasifik"},"nav":{"menu":"Menu","logoText":"Agentic Commerce Framework®","logoSubtext":"Standard Global untuk Tadbir Urus AI","region":"GLOBAL | MS","theStandard":"Standard","acfScore":"ACF Score","acfControl":"ACF Control","acfCertification":"ACF Certification","partners":"Rakan Kongsi","requestAssessment":"Minta Penilaian","partnerLogin":"Log Masuk Rakan Kongsi","applyPartner":"Mohon Jadi Rakan Kongsi","contact":"Hubungi"},"megaMenu":{"framework":{"title":"Rangka Kerja","link":"Standard ACF →","subtitle":"Metodologi tadbir urus definitif untuk sistem agentik dalam persekitaran komersial.","architecture":{"title":"Seni Bina","principles":"4 Prinsip Asas","layers":"4 Lapisan Operasi","maturity":"4 Tahap Kematangan"},"methodology":{"title":"Metodologi","modules":"8 Modul Pelaksanaan","constitution":"Perlembagaan Agentik","dda":"Rangka Peranan DDA","killSwitch":"Protokol Hentian Kecemasan"},"featured":{"label":"PILIHAN","whitepaper":{"title":"Muat Turun Kertas Putih ACF","description":"Spesifikasi penuh — percuma untuk pengguna berdaftar."},"release":{"title":"ACF — Februari 2026","description":"Pelepasan rasmi. Apa yang baharu dalam rangka kerja."}}},"products":{"title":"Produk","link":"Produk →","subtitle":"Tiga alat yang mengoperasikan Standard ACF di seluruh organisasi anda.","diagnostic":{"title":"Diagnostik","score":"ACF Score — Metrik Kedaulatan","methodology":"Metodologi Pemarkahan","axes":"6 Paksi Tadbir Urus"},"saas":{"title":"Platform Tadbir Urus","control":"ACF Control — Papan Pemuka Tadbir Urus","kpis":"18 KPI Kedaulatan","gating":"Sistem Gating Adaptif"},"certification":{"title":"Pensijilan","program":"Program ACF Certification","levels":"Tahap Pensijilan","audit":"Proses Audit"}},"resources":{"title":"Sumber","link":"Sumber →","subtitle":"Wawasan tadbir urus, penyelidikan dan dokumentasi teknikal.","insights":{"title":"Wawasan Terkini","aiAct":"EU AI Act & Sistem Agentik","dda":"Peranan DDA Dijelaskan","killSwitch":"Mereka Bentuk Hentian Kecemasan 3 Tahap"},"documentation":{"title":"Dokumentasi","specs":"Spesifikasi Teknikal","research":"Kertas Penyelidikan","academy":"Akademi ACF"}},"about":{"title":"Tentang ACF","link":"Tentang ACF →","subtitle":"Kisah, misi, dan perlindungan undang-undang di sebalik Agentic Commerce Framework®.","whoWeAre":{"title":"Siapa Kami","vincent":"Vincent DORANGE — Pencipta","mission":"Misi & Nilai","legal":"Perlindungan Undang-undang"},"howWeWork":{"title":"Cara Kami Bekerja","network":"Rangkaian Pengamal","audit":"Audit & Pensijilan","contact":"Hubungi Kami"},"registered":{"label":"CAP DAGANGAN BERDAFTAR","title":"Cap Dagangan Berdaftar ACF®","description":"ACF® adalah cap dagangan berdaftar. Semua metodologi dan alat dilindungi secara sah."}},"partners":{"title":"Rakan Kongsi","link":"Rakan Kongsi →","subtitle":"Sertai rangkaian Pengamal ACF dan tawarkan perkhidmatan tadbir urus kepada pelanggan anda.","portal":{"title":"Portal Rakan Kongsi","login":"Log Masuk ke Portal Rakan Kongsi","dashboard":"Papan Pemuka & Alat","training":"Bahan Latihan","toolkit":"Kit Alat Pengamal ACF"},"become":{"title":"Menjadi Rakan Kongsi","apply":"Mohon untuk Menyertai","tiers":"Peringkat Rakan Kongsi","certified":"Dapatkan Pensijilan ACF Dahulu"}},"user":{"partnerAccess":"Akses Rakan Kongsi","partnerLogin":"Log Masuk Rakan Kongsi","applyPartner":"Mohon Jadi Rakan Kongsi","contact":"Hubungi"}},"hero":{"title":"Standard Global untuk","typing":{"word1":"Tadbir Urus","word2":"Kedaulatan","word3":"Kecerdasan","word4":"Perdagangan"},"description":"Agentic Commerce Framework® (ACF) ialah metodologi tadbir urus definitif untuk menggunakan, menyelia dan mengawal sistem agentik autonomi dalam persekitaran komersial.","cta":{"primary":"Minta Penilaian Tadbir Urus →","secondary":"Baca Standard"},"stats":{"principles":{"value":"4","label":"Prinsip<br>Asas"},"modules":{"value":"8","label":"Modul<br>Pelaksanaan"},"kpis":{"value":"18","label":"KPI<br>Kedaulatan"},"tools":{"value":"17","label":"Alat<br>Eksklusif"}},"satellites":{"score":{"name":"ACF Score","description":"Metrik Kedaulatan"},"control":{"name":"ACF Control","description":"Platform Tadbir Urus"},"certification":{"name":"Certification","description":"Atestasi"},"partners":{"name":"Rakan Kongsi","description":"Pengamal"}}},"statsBar":{"layers":{"value":"4","label":"Lapisan Operasi"},"kpis":{"value":"18","label":"KPI Kedaulatan"},"tools":{"value":"17","label":"Alat Eksklusif"},"sovereignty":{"value":"100","suffix":"%","label":"Kedaulatan Manusia"}},"principles":{"badge":"// Seni Bina","title":"4 Prinsip Asas","subtitle":"Empat aksioma tidak berubah yang mentakrifkan sempadan antara kuasa manusia dan pelaksanaan ejen autonomi.","principle1":{"number":"01","title":"Kedaulatan Keputusan","description":"Keputusan strategik kritikal tidak pernah diwakilkan kepada ejen autonomi."},"principle2":{"number":"02","title":"Tadbir Urus Berdasarkan Reka Bentuk","description":"Rangka tadbir urus ditakrifkan sebelum penggunaan, bukan selepas."},"principle3":{"number":"03","title":"Kawalan Manusia Tertinggi","description":"Setiap sistem agentik mesti mengekalkan keupayaan campur tangan manusia."},"principle4":{"number":"04","title":"Akauntabiliti Boleh Dijejak","description":"Setiap tindakan autonomi mesti boleh diaudit dan dipertanggungjawabkan."}},"layers":{"badge":"// Struktur","title":"4 Lapisan Operasi","subtitle":"Seni bina hierarki dari tadbir urus strategik hingga penyeliaan pelaksanaan masa nyata.","layer1":{"number":"LAYER_01","title":"Tadbir Urus & Kedaulatan","description":"Piagam kedaulatan, jawatankuasa tadbir urus, matriks RACI, peta zon tidak boleh diwakilkan."},"layer2":{"number":"LAYER_02","title":"Dasar Keputusan","description":"Objektif berwajaran, peraturan timbang tara, ambang eskalasi, kekangan pengawalseliaan."},"layer3":{"number":"LAYER_03","title":"Sistem Ejen","description":"Mandat eksplisit setiap ejen, perimeter interaksi, tahap autonomi, taksonomi 5 kategori."},"layer4":{"number":"LAYER_04","title":"Pelaksanaan & Penyeliaan","description":"Matriks gating adaptif, amaran pelbagai tahap, 18 KPI kedaulatan, papan pemuka langsung."}},"maturity":{"badge":"// Kemajuan","title":"4 Tahap Kematangan Agentik","subtitle":"ACF mengklasifikasikan sistem mengikut tahap autonomi. Tahap 2 ialah sasaran penggunaan yang disyorkan.","level0":{"code":"LEVEL_0","name":"Automasi Klasik","risk":"Risiko Sangat Rendah","description":"Peraturan tetap, tiada ML. Campur tangan manusia untuk sebarang pengubahsuaian."},"level1":{"code":"LEVEL_1","name":"Ejen Berbantu","risk":"Risiko Rendah","description":"Ejen menganalisis dan mengesyorkan. Setiap keputusan akhir kekal dengan manusia."},"level2":{"code":"LEVEL_2","name":"Ejen Bertadbir Urus","risk":"Risiko Sederhana","description":"Ejen memutuskan dalam tadbir urus ketat. Zon tidak boleh diwakilkan dikunci.","badge":"★ Sasaran Disyorkan"},"level3":{"code":"LEVEL_3","name":"Autonomi Diselia","risk":"Risiko Tinggi","description":"Ejen memutuskan dan belajar. Tadbir urus maksimum. Untuk organisasi matang sahaja."}},"modules":{"badge":"// Metodologi","title":"8 Modul Pelaksanaan","subtitle":"Laluan berurutan yang dilaksanakan secara progresif selama 6–18 bulan. Setiap modul dibina atas modul sebelumnya.","module1":{"code":"MOD_01","name":"Diagnostik Kedaulatan","description":"Pengiraan Skor Kedaulatan. Pemetaan zon risiko."},"module2":{"code":"MOD_02","name":"Pemetaan Keputusan","description":"Matriks Kritikal. Zon tidak boleh diwakilkan."},"module3":{"code":"MOD_03","name":"Perlembagaan Agentik","description":"9 artikel. Ditandatangani oleh jawatankuasa tadbir urus."},"module4":{"code":"MOD_04","name":"Reka Bentuk Sistem Ejen","description":"Lembaran mandat, perimeter interaksi."},"module5":{"code":"MOD_05","name":"Keselamatan & Kebolehbalikan","description":"Sandboxing, pelan kebolehbalikan. Reka bentuk hentian kecemasan."},"module6":{"code":"MOD_06","name":"Tadbir Urus Berterusan","description":"Semakan bulanan. Audit pematuhan tahunan."},"module7":{"code":"MOD_07","name":"Peta Jalan Pelaksanaan","description":"Penggunaan progresif 5 fasa."},"module8":{"code":"MOD_08","name":"Pengurusan Krisis","description":"Insiden 3 tahap. Latihan hentian kecemasan."}},"video":{"badge":"// Mengapa ACF","title":"Tadbir Urus Tidak Boleh Menunggu.<br>Ejen Sudah Membuat Keputusan.","description1":"Pada tahun 2026, ejen autonomi sudah melaksanakan keputusan dalam persekitaran komersial — menetapkan harga, menilai prospek, memproses tuntutan, menguruskan kontrak. Kebanyakan organisasi tidak mempunyai rangka kerja untuk mentadbir urus mereka.","description2":"ACF dicipta untuk mengisi kekosongan itu — sebelum kegagalan tadbir urus menjadi krisis undang-undang, kewangan atau reputasi.","quote":{"text":"Persoalannya bukan lagi <em>sama ada</em> untuk menggunakan ejen. Ia adalah <em>bagaimana</em> menggunakannya tanpa menyerahkan kedaulatan anda.","author":"— Agentic Commerce Framework®"},"player":{"badge":"ACF — REVOLUSI AGENTIK","name":"Kebangkitan Perdagangan Agentik","role":"Dari automasi tidak terkawal kepada kedaulatan yang ditadbir urus","duration":"1:05"},"stats":{"release":{"value":"2026","label":"Pelepasan Rasmi"},"documentation":{"value":"45p","label":"Dokumentasi Penuh"},"protection":{"value":"ACF®","label":"Cap Dagangan Berdaftar"}},"modal":{"placeholder":"AKAN DATANG","title":"Revolusi Perdagangan Agentik","description":"Perjalanan naratif: dari kehilangan kawalan kepada rangka tadbir urus ACF. Ejen autonomi sedang membentuk semula perdagangan — persoalannya siapa yang mentadbir urus mereka."}},"products":{"badge":"// Ekosistem","title":"Ekosistem ACF","subtitle":"Tiga produk pelengkap yang mengoperasikan Standard ACF.","score":{"label":"ALAT DIAGNOSTIK","title":"ACF Score","description":"Skor Kedaulatan eksklusif yang mengukur kebebasan keputusan anda merentas 6 dimensi tadbir urus.","features":{"feature1":"Metrik Skor Kedaulatan komposit","feature2":"Visualisasi radar 6 paksi","feature3":"Pelan tindakan peribadi setiap paksi"},"cta":"Ukur Skor Anda →"},"control":{"label":"PLATFORM TADBIR URUS","title":"ACF Control","description":"Papan pemuka tadbir urus masa nyata yang memantau 18 KPI Kedaulatan anda dengan gating adaptif dan eskalasi automatik.","features":{"feature1":"18 KPI merentas 6 paksi tadbir urus","feature2":"Gating adaptif dengan eskalasi manusia","feature3":"Log audit kalis gangguan"},"cta":"Temui ACF Control →"},"certification":{"label":"ATESTASI BEBAS","title":"ACF Certification","description":"Pensijilan bebas yang membuktikan pematuhan terhadap standard tadbir urus ACF. Boleh disahkan secara awam.","features":{"feature1":"Laluan pensijilan Tahap 1, 2, dan 3","feature2":"Lencana boleh disahkan secara awam","feature3":"Pembaharuan tahunan + pemantauan berterusan"},"cta":"Dapatkan Pensijilan →"}},"blog":{"badge":"// Wawasan","title":"Terkini dari Blog ACF","subtitle":"Wawasan tadbir urus, kemas kini rangka kerja dan penyelidikan kecerdasan agentik.","article1":{"category":"PERATURAN AI","title":"Bagaimana EU AI Act terpakai untuk sistem agentik pada 2026","excerpt":"Pendekatan berasaskan risiko AI Act mewujudkan kewajipan khusus untuk ejen autonomi. Inilah yang diliputi tadbir urus ACF Tahap 2.","date":"2026-02-15","cta":"Baca →"},"article2":{"category":"TADBIR URUS","title":"DDA: mengapa setiap syarikat AI-native memerlukan Pegawai Ejen Keputusan Diwakilkan","excerpt":"DDA ialah penjaga undang-undang ejen autonomi anda. Cara mewujudkan dan memperkasakan peranan kritikal ini.","date":"2026-02-08","cta":"Baca →"},"article3":{"category":"TEKNIKAL","title":"Mereka bentuk hentian kecemasan tiga tahap untuk sistem ejen autonomi","excerpt":"Hentian kecemasan yang berkesan bukan satu butang. ACF menentukan tiga tahap gangguan dengan masa tindak balas yang ditentukan.","date":"2026-01-29","cta":"Baca →"},"viewAll":"Lihat Semua Artikel →"},"cta":{"watermark":"ACF®","badge":"// Langkah Seterusnya","title":"Bersedia untuk Mentadbir Urus<br>Sistem Agentik Anda?","description":"Minta penilaian tadbir urus dan temui Skor Kedaulatan semasa anda.","primary":"Minta Penilaian Tadbir Urus →","secondary":"Jadi Rakan Kongsi ACF"},"footer":{"logoText":"Agentic Commerce Framework®","logoSubtext":"Standard Global untuk Tadbir Urus AI","description":"Standard tadbir urus definitif untuk organisasi yang menggunakan sistem agentik autonomi. Cap dagangan berdaftar.","framework":{"title":"Rangka Kerja","theStandard":"Standard","methodology":"Metodologi","research":"Penyelidikan","certification":"ACF Certification"},"products":{"title":"Produk","score":"ACF Score","control":"ACF Control","certification":"Pensijilan","academy":"Akademi"},"organization":{"title":"Organisasi","partnerPortal":"Portal Rakan Kongsi","about":"Tentang","contact":"Hubungi","legal":"Undang-undang"},"copyright":"© 2026 Agentic Commerce Framework® — Vincent DORANGE. Hak cipta terpelihara.","legal":{"privacy":"Privasi","terms":"Terma","cookies":"Kuki"}},"ai":{"button":{"label":"Tanya Ejen ACF","status":"TADBIR URUS AI · DALAM TALIAN"},"modal":{"close":"×","beta":"","title":"Tanya ACF","subtitle":"Chatbot yang menjawab soalan berdasarkan Standard ACF dan wawasan tadbir urus","placeholder":"Tanya tentang tadbir urus ACF...","send":"Hantar","trending":{"label":"SOALAN POPULAR","q1":"Apa itu Standard ACF?","q2":"Bagaimana untuk mendapat pensijilan ACF?","q3":"Apa itu peranan DDA?","q4":"Apa itu Skor Kedaulatan?","q5":"4 Prinsip Asas?"},"disclaimer":"Eksperimen AI. Jawapan berdasarkan dokumentasi Standard ACF.","seeMore":"Lihat Lagi"}}}
+{
+  "meta": {
+    "language": "MS",
+    "languageCode": "ms",
+    "locale": "ms-MY"
+  },
+  "common": {
+    "readMore": "Baca lagi",
+    "learnMore": "Ketahui lebih lanjut",
+    "getStarted": "Mulakan",
+    "downloadPDF": "Muat turun PDF",
+    "watchVideo": "Tonton video",
+    "close": "Tutup",
+    "open": "Buka",
+    "loading": "Memuatkan",
+    "backToHome": "Kembali ke laman utama",
+    "menu": "Menu"
+  },
+  "regionSelector": {
+    "title": "Pilih wilayah dan bahasa anda",
+    "close": "✕ Tutup",
+    "global": "Global (Inggeris)",
+    "northAmerica": "Amerika Utara",
+    "latinAmerica": "Amerika Latin",
+    "westernEurope": "Eropah Barat",
+    "nordicBaltic": "Nordik & Baltik",
+    "centralEasternEurope": "Eropah Tengah & Timur",
+    "middleEastAfrica": "Timur Tengah & Afrika",
+    "asiaPacific": "Asia & Pasifik"
+  },
+  "nav": {
+    "menu": "Menu",
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Standard Global untuk Tadbir Urus AI",
+    "region": "GLOBAL | MS",
+    "theStandard": "Standard",
+    "acfScore": "ACF Score",
+    "acfControl": "ACF Control",
+    "acfCertification": "ACF Certification",
+    "partners": "Rakan Kongsi",
+    "requestAssessment": "Minta Penilaian",
+    "partnerLogin": "Log Masuk Rakan Kongsi",
+    "applyPartner": "Mohon Jadi Rakan Kongsi",
+    "contact": "Hubungi"
+  },
+  "megaMenu": {
+    "framework": {
+      "title": "Rangka Kerja",
+      "link": "Standard ACF →",
+      "subtitle": "Metodologi tadbir urus definitif untuk sistem agentik dalam persekitaran komersial.",
+      "architecture": {
+        "title": "Seni Bina",
+        "principles": "4 Prinsip Asas",
+        "layers": "4 Lapisan Operasi",
+        "maturity": "4 Tahap Kematangan"
+      },
+      "methodology": {
+        "title": "Metodologi",
+        "modules": "8 Modul Pelaksanaan",
+        "constitution": "Perlembagaan Agentik",
+        "dda": "Rangka Peranan DDA",
+        "killSwitch": "Protokol Hentian Kecemasan"
+      },
+      "featured": {
+        "label": "PILIHAN",
+        "whitepaper": {
+          "title": "Muat Turun Kertas Putih ACF",
+          "description": "Spesifikasi penuh — percuma untuk pengguna berdaftar."
+        },
+        "release": {
+          "title": "ACF — Februari 2026",
+          "description": "Pelepasan rasmi. Apa yang baharu dalam rangka kerja."
+        }
+      }
+    },
+    "products": {
+      "title": "Produk",
+      "link": "Produk →",
+      "subtitle": "Tiga alat yang mengoperasikan Standard ACF di seluruh organisasi anda.",
+      "diagnostic": {
+        "title": "Diagnostik",
+        "score": "ACF Score — Metrik Kedaulatan",
+        "methodology": "Metodologi Pemarkahan",
+        "axes": "6 Paksi Tadbir Urus"
+      },
+      "saas": {
+        "title": "Platform Tadbir Urus",
+        "control": "ACF Control — Papan Pemuka Tadbir Urus",
+        "kpis": "18 KPI Kedaulatan",
+        "gating": "Sistem Gating Adaptif"
+      },
+      "certification": {
+        "title": "Pensijilan",
+        "program": "Program ACF Certification",
+        "levels": "Tahap Pensijilan",
+        "audit": "Proses Audit"
+      }
+    },
+    "resources": {
+      "title": "Sumber",
+      "link": "Sumber →",
+      "subtitle": "Wawasan tadbir urus, penyelidikan dan dokumentasi teknikal.",
+      "insights": {
+        "title": "Wawasan Terkini",
+        "aiAct": "EU AI Act & Sistem Agentik",
+        "dda": "Peranan DDA Dijelaskan",
+        "killSwitch": "Mereka Bentuk Hentian Kecemasan 3 Tahap"
+      },
+      "documentation": {
+        "title": "Dokumentasi",
+        "specs": "Spesifikasi Teknikal",
+        "research": "Kertas Penyelidikan",
+        "academy": "Akademi ACF"
+      },
+      "tools": {
+        "title": "Alat",
+        "complianceChecker": "Pemeriksa Pematuhan ACF",
+        "euAiAct": "EU AI Act Checker ↗"
+      }
+    },
+    "about": {
+      "title": "Tentang ACF",
+      "link": "Tentang ACF →",
+      "subtitle": "Kisah, misi, dan perlindungan undang-undang di sebalik Agentic Commerce Framework®.",
+      "whoWeAre": {
+        "title": "Siapa Kami",
+        "vincent": "Vincent DORANGE — Pencipta",
+        "mission": "Misi & Nilai",
+        "legal": "Perlindungan Undang-undang"
+      },
+      "howWeWork": {
+        "title": "Cara Kami Bekerja",
+        "network": "Rangkaian Pengamal",
+        "audit": "Audit & Pensijilan",
+        "contact": "Hubungi Kami"
+      },
+      "registered": {
+        "label": "CAP DAGANGAN BERDAFTAR",
+        "title": "Cap Dagangan Berdaftar ACF®",
+        "description": "ACF® adalah cap dagangan berdaftar. Semua metodologi dan alat dilindungi secara sah."
+      }
+    },
+    "partners": {
+      "title": "Rakan Kongsi",
+      "link": "Rakan Kongsi →",
+      "subtitle": "Sertai rangkaian Pengamal ACF dan tawarkan perkhidmatan tadbir urus kepada pelanggan anda.",
+      "portal": {
+        "title": "Portal Rakan Kongsi",
+        "login": "Log Masuk ke Portal Rakan Kongsi",
+        "dashboard": "Papan Pemuka & Alat",
+        "training": "Bahan Latihan",
+        "toolkit": "Kit Alat Pengamal ACF"
+      },
+      "become": {
+        "title": "Menjadi Rakan Kongsi",
+        "apply": "Mohon untuk Menyertai",
+        "tiers": "Peringkat Rakan Kongsi",
+        "certified": "Dapatkan Pensijilan ACF Dahulu"
+      }
+    },
+    "user": {
+      "partnerAccess": "Akses Rakan Kongsi",
+      "partnerLogin": "Log Masuk Rakan Kongsi",
+      "applyPartner": "Mohon Jadi Rakan Kongsi",
+      "contact": "Hubungi"
+    }
+  },
+  "hero": {
+    "title": "Standard Global untuk",
+    "typing": {
+      "word1": "Tadbir Urus",
+      "word2": "Kedaulatan",
+      "word3": "Kecerdasan",
+      "word4": "Perdagangan"
+    },
+    "description": "Agentic Commerce Framework® (ACF) ialah metodologi tadbir urus definitif untuk menggunakan, menyelia dan mengawal sistem agentik autonomi dalam persekitaran komersial.",
+    "cta": {
+      "primary": "Minta Penilaian Tadbir Urus →",
+      "secondary": "Baca Standard"
+    },
+    "stats": {
+      "principles": {
+        "value": "4",
+        "label": "Prinsip<br>Asas"
+      },
+      "modules": {
+        "value": "8",
+        "label": "Modul<br>Pelaksanaan"
+      },
+      "kpis": {
+        "value": "18",
+        "label": "KPI<br>Kedaulatan"
+      },
+      "tools": {
+        "value": "17",
+        "label": "Alat<br>Eksklusif"
+      }
+    },
+    "satellites": {
+      "score": {
+        "name": "ACF Score",
+        "description": "Metrik Kedaulatan"
+      },
+      "control": {
+        "name": "ACF Control",
+        "description": "Platform Tadbir Urus"
+      },
+      "certification": {
+        "name": "Certification",
+        "description": "Atestasi"
+      },
+      "partners": {
+        "name": "Rakan Kongsi",
+        "description": "Pengamal"
+      }
+    }
+  },
+  "statsBar": {
+    "layers": {
+      "value": "4",
+      "label": "Lapisan Operasi"
+    },
+    "kpis": {
+      "value": "18",
+      "label": "KPI Kedaulatan"
+    },
+    "tools": {
+      "value": "17",
+      "label": "Alat Eksklusif"
+    },
+    "sovereignty": {
+      "value": "100",
+      "suffix": "%",
+      "label": "Kedaulatan Manusia"
+    }
+  },
+  "principles": {
+    "badge": "// Seni Bina",
+    "title": "4 Prinsip Asas",
+    "subtitle": "Empat aksioma tidak berubah yang mentakrifkan sempadan antara kuasa manusia dan pelaksanaan ejen autonomi.",
+    "principle1": {
+      "number": "01",
+      "title": "Kedaulatan Keputusan",
+      "description": "Keputusan strategik kritikal tidak pernah diwakilkan kepada ejen autonomi."
+    },
+    "principle2": {
+      "number": "02",
+      "title": "Tadbir Urus Berdasarkan Reka Bentuk",
+      "description": "Rangka tadbir urus ditakrifkan sebelum penggunaan, bukan selepas."
+    },
+    "principle3": {
+      "number": "03",
+      "title": "Kawalan Manusia Tertinggi",
+      "description": "Setiap sistem agentik mesti mengekalkan keupayaan campur tangan manusia."
+    },
+    "principle4": {
+      "number": "04",
+      "title": "Akauntabiliti Boleh Dijejak",
+      "description": "Setiap tindakan autonomi mesti boleh diaudit dan dipertanggungjawabkan."
+    }
+  },
+  "layers": {
+    "badge": "// Struktur",
+    "title": "4 Lapisan Operasi",
+    "subtitle": "Seni bina hierarki dari tadbir urus strategik hingga penyeliaan pelaksanaan masa nyata.",
+    "layer1": {
+      "number": "LAYER_01",
+      "title": "Tadbir Urus & Kedaulatan",
+      "description": "Piagam kedaulatan, jawatankuasa tadbir urus, matriks RACI, peta zon tidak boleh diwakilkan."
+    },
+    "layer2": {
+      "number": "LAYER_02",
+      "title": "Dasar Keputusan",
+      "description": "Objektif berwajaran, peraturan timbang tara, ambang eskalasi, kekangan pengawalseliaan."
+    },
+    "layer3": {
+      "number": "LAYER_03",
+      "title": "Sistem Ejen",
+      "description": "Mandat eksplisit setiap ejen, perimeter interaksi, tahap autonomi, taksonomi 5 kategori."
+    },
+    "layer4": {
+      "number": "LAYER_04",
+      "title": "Pelaksanaan & Penyeliaan",
+      "description": "Matriks gating adaptif, amaran pelbagai tahap, 18 KPI kedaulatan, papan pemuka langsung."
+    }
+  },
+  "maturity": {
+    "badge": "// Kemajuan",
+    "title": "4 Tahap Kematangan Agentik",
+    "subtitle": "ACF mengklasifikasikan sistem mengikut tahap autonomi. Tahap 2 ialah sasaran penggunaan yang disyorkan.",
+    "level0": {
+      "code": "LEVEL_0",
+      "name": "Automasi Klasik",
+      "risk": "Risiko Sangat Rendah",
+      "description": "Peraturan tetap, tiada ML. Campur tangan manusia untuk sebarang pengubahsuaian."
+    },
+    "level1": {
+      "code": "LEVEL_1",
+      "name": "Ejen Berbantu",
+      "risk": "Risiko Rendah",
+      "description": "Ejen menganalisis dan mengesyorkan. Setiap keputusan akhir kekal dengan manusia."
+    },
+    "level2": {
+      "code": "LEVEL_2",
+      "name": "Ejen Bertadbir Urus",
+      "risk": "Risiko Sederhana",
+      "description": "Ejen memutuskan dalam tadbir urus ketat. Zon tidak boleh diwakilkan dikunci.",
+      "badge": "★ Sasaran Disyorkan"
+    },
+    "level3": {
+      "code": "LEVEL_3",
+      "name": "Autonomi Diselia",
+      "risk": "Risiko Tinggi",
+      "description": "Ejen memutuskan dan belajar. Tadbir urus maksimum. Untuk organisasi matang sahaja."
+    }
+  },
+  "modules": {
+    "badge": "// Metodologi",
+    "title": "8 Modul Pelaksanaan",
+    "subtitle": "Laluan berurutan yang dilaksanakan secara progresif selama 6–18 bulan. Setiap modul dibina atas modul sebelumnya.",
+    "module1": {
+      "code": "MOD_01",
+      "name": "Diagnostik Kedaulatan",
+      "description": "Pengiraan Skor Kedaulatan. Pemetaan zon risiko."
+    },
+    "module2": {
+      "code": "MOD_02",
+      "name": "Pemetaan Keputusan",
+      "description": "Matriks Kritikal. Zon tidak boleh diwakilkan."
+    },
+    "module3": {
+      "code": "MOD_03",
+      "name": "Perlembagaan Agentik",
+      "description": "9 artikel. Ditandatangani oleh jawatankuasa tadbir urus."
+    },
+    "module4": {
+      "code": "MOD_04",
+      "name": "Reka Bentuk Sistem Ejen",
+      "description": "Lembaran mandat, perimeter interaksi."
+    },
+    "module5": {
+      "code": "MOD_05",
+      "name": "Keselamatan & Kebolehbalikan",
+      "description": "Sandboxing, pelan kebolehbalikan. Reka bentuk hentian kecemasan."
+    },
+    "module6": {
+      "code": "MOD_06",
+      "name": "Tadbir Urus Berterusan",
+      "description": "Semakan bulanan. Audit pematuhan tahunan."
+    },
+    "module7": {
+      "code": "MOD_07",
+      "name": "Peta Jalan Pelaksanaan",
+      "description": "Penggunaan progresif 5 fasa."
+    },
+    "module8": {
+      "code": "MOD_08",
+      "name": "Pengurusan Krisis",
+      "description": "Insiden 3 tahap. Latihan hentian kecemasan."
+    }
+  },
+  "video": {
+    "badge": "// Mengapa ACF",
+    "title": "Tadbir Urus Tidak Boleh Menunggu.<br>Ejen Sudah Membuat Keputusan.",
+    "description1": "Pada tahun 2026, ejen autonomi sudah melaksanakan keputusan dalam persekitaran komersial — menetapkan harga, menilai prospek, memproses tuntutan, menguruskan kontrak. Kebanyakan organisasi tidak mempunyai rangka kerja untuk mentadbir urus mereka.",
+    "description2": "ACF dicipta untuk mengisi kekosongan itu — sebelum kegagalan tadbir urus menjadi krisis undang-undang, kewangan atau reputasi.",
+    "quote": {
+      "text": "Persoalannya bukan lagi <em>sama ada</em> untuk menggunakan ejen. Ia adalah <em>bagaimana</em> menggunakannya tanpa menyerahkan kedaulatan anda.",
+      "author": "— Agentic Commerce Framework®"
+    },
+    "player": {
+      "badge": "ACF — REVOLUSI AGENTIK",
+      "name": "Kebangkitan Perdagangan Agentik",
+      "role": "Dari automasi tidak terkawal kepada kedaulatan yang ditadbir urus",
+      "duration": "1:05"
+    },
+    "stats": {
+      "release": {
+        "value": "2026",
+        "label": "Pelepasan Rasmi"
+      },
+      "documentation": {
+        "value": "45p",
+        "label": "Dokumentasi Penuh"
+      },
+      "protection": {
+        "value": "ACF®",
+        "label": "Cap Dagangan Berdaftar"
+      }
+    },
+    "modal": {
+      "placeholder": "AKAN DATANG",
+      "title": "Revolusi Perdagangan Agentik",
+      "description": "Perjalanan naratif: dari kehilangan kawalan kepada rangka tadbir urus ACF. Ejen autonomi sedang membentuk semula perdagangan — persoalannya siapa yang mentadbir urus mereka."
+    }
+  },
+  "products": {
+    "badge": "// Ekosistem",
+    "title": "Ekosistem ACF",
+    "subtitle": "Tiga produk pelengkap yang mengoperasikan Standard ACF.",
+    "score": {
+      "label": "ALAT DIAGNOSTIK",
+      "title": "ACF Score",
+      "description": "Skor Kedaulatan eksklusif yang mengukur kebebasan keputusan anda merentas 6 dimensi tadbir urus.",
+      "features": {
+        "feature1": "Metrik Skor Kedaulatan komposit",
+        "feature2": "Visualisasi radar 6 paksi",
+        "feature3": "Pelan tindakan peribadi setiap paksi"
+      },
+      "cta": "Ukur Skor Anda →"
+    },
+    "control": {
+      "label": "PLATFORM TADBIR URUS",
+      "title": "ACF Control",
+      "description": "Papan pemuka tadbir urus masa nyata yang memantau 18 KPI Kedaulatan anda dengan gating adaptif dan eskalasi automatik.",
+      "features": {
+        "feature1": "18 KPI merentas 6 paksi tadbir urus",
+        "feature2": "Gating adaptif dengan eskalasi manusia",
+        "feature3": "Log audit kalis gangguan"
+      },
+      "cta": "Temui ACF Control →"
+    },
+    "certification": {
+      "label": "ATESTASI BEBAS",
+      "title": "ACF Certification",
+      "description": "Pensijilan bebas yang membuktikan pematuhan terhadap standard tadbir urus ACF. Boleh disahkan secara awam.",
+      "features": {
+        "feature1": "Laluan pensijilan Tahap 1, 2, dan 3",
+        "feature2": "Lencana boleh disahkan secara awam",
+        "feature3": "Pembaharuan tahunan + pemantauan berterusan"
+      },
+      "cta": "Dapatkan Pensijilan →"
+    }
+  },
+  "blog": {
+    "badge": "// Wawasan",
+    "title": "Terkini dari Blog ACF",
+    "subtitle": "Wawasan tadbir urus, kemas kini rangka kerja dan penyelidikan kecerdasan agentik.",
+    "article1": {
+      "category": "PERATURAN AI",
+      "title": "Bagaimana EU AI Act terpakai untuk sistem agentik pada 2026",
+      "excerpt": "Pendekatan berasaskan risiko AI Act mewujudkan kewajipan khusus untuk ejen autonomi. Inilah yang diliputi tadbir urus ACF Tahap 2.",
+      "date": "2026-02-15",
+      "cta": "Baca →"
+    },
+    "article2": {
+      "category": "TADBIR URUS",
+      "title": "DDA: mengapa setiap syarikat AI-native memerlukan Pegawai Ejen Keputusan Diwakilkan",
+      "excerpt": "DDA ialah penjaga undang-undang ejen autonomi anda. Cara mewujudkan dan memperkasakan peranan kritikal ini.",
+      "date": "2026-02-08",
+      "cta": "Baca →"
+    },
+    "article3": {
+      "category": "TEKNIKAL",
+      "title": "Mereka bentuk hentian kecemasan tiga tahap untuk sistem ejen autonomi",
+      "excerpt": "Hentian kecemasan yang berkesan bukan satu butang. ACF menentukan tiga tahap gangguan dengan masa tindak balas yang ditentukan.",
+      "date": "2026-01-29",
+      "cta": "Baca →"
+    },
+    "viewAll": "Lihat Semua Artikel →"
+  },
+  "cta": {
+    "watermark": "ACF®",
+    "badge": "// Langkah Seterusnya",
+    "title": "Bersedia untuk Mentadbir Urus<br>Sistem Agentik Anda?",
+    "description": "Minta penilaian tadbir urus dan temui Skor Kedaulatan semasa anda.",
+    "primary": "Minta Penilaian Tadbir Urus →",
+    "secondary": "Jadi Rakan Kongsi ACF"
+  },
+  "footer": {
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Standard Global untuk Tadbir Urus AI",
+    "description": "Standard tadbir urus definitif untuk organisasi yang menggunakan sistem agentik autonomi. Cap dagangan berdaftar.",
+    "framework": {
+      "title": "Rangka Kerja",
+      "theStandard": "Standard",
+      "methodology": "Metodologi",
+      "research": "Penyelidikan",
+      "certification": "ACF Certification"
+    },
+    "products": {
+      "title": "Produk",
+      "score": "ACF Score",
+      "control": "ACF Control",
+      "certification": "Pensijilan",
+      "academy": "Akademi"
+    },
+    "organization": {
+      "title": "Organisasi",
+      "partnerPortal": "Portal Rakan Kongsi",
+      "about": "Tentang",
+      "contact": "Hubungi",
+      "legal": "Undang-undang"
+    },
+    "copyright": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Hak cipta terpelihara.",
+    "legal": {
+      "privacy": "Privasi",
+      "terms": "Terma",
+      "cookies": "Kuki"
+    }
+  },
+  "ai": {
+    "button": {
+      "label": "Tanya Ejen ACF",
+      "status": "TADBIR URUS AI · DALAM TALIAN"
+    },
+    "modal": {
+      "close": "×",
+      "beta": "",
+      "title": "Tanya ACF",
+      "subtitle": "Chatbot yang menjawab soalan berdasarkan Standard ACF dan wawasan tadbir urus",
+      "placeholder": "Tanya tentang tadbir urus ACF...",
+      "send": "Hantar",
+      "trending": {
+        "label": "SOALAN POPULAR",
+        "q1": "Apa itu Standard ACF?",
+        "q2": "Bagaimana untuk mendapat pensijilan ACF?",
+        "q3": "Apa itu peranan DDA?",
+        "q4": "Apa itu Skor Kedaulatan?",
+        "q5": "4 Prinsip Asas?"
+      },
+      "disclaimer": "Eksperimen AI. Jawapan berdasarkan dokumentasi Standard ACF.",
+      "seeMore": "Lihat Lagi"
+    }
+  }
+}

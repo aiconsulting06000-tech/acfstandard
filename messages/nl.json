@@ -1,1 +1,526 @@
-{"meta":{"language":"NL","languageCode":"nl","locale":"nl-NL"},"common":{"readMore":"Lees meer","learnMore":"Meer weten","getStarted":"Aan de slag","downloadPDF":"PDF downloaden","watchVideo":"Video bekijken","close":"Sluiten","open":"Openen","loading":"Laden","backToHome":"Terug naar home","menu":"Menu"},"regionSelector":{"title":"Selecteer uw regio en taal","close":"✕ Sluiten","global":"Globaal (Engels)","northAmerica":"Noord-Amerika","latinAmerica":"Latijns-Amerika","westernEurope":"West-Europa","nordicBaltic":"Nordisch & Baltisch","centralEasternEurope":"Centraal- & Oost-Europa","middleEastAfrica":"Midden-Oosten & Afrika","asiaPacific":"Azië & Pacific"},"nav":{"menu":"Menu","logoText":"Agentic Commerce Framework®","logoSubtext":"Wereldwijde Standaard voor AI-Governance","region":"GLOBAL | NL","theStandard":"De Standaard","acfScore":"ACF Score","acfControl":"ACF Control","acfCertification":"ACF Certification","partners":"Partners","requestAssessment":"Beoordeling aanvragen","partnerLogin":"Partner Login","applyPartner":"Partner worden","contact":"Contact"},"megaMenu":{"framework":{"title":"Raamwerk","link":"ACF Standard →","subtitle":"De definitieve governance-methodologie voor agentische systemen in commerciële omgevingen.","architecture":{"title":"Architectuur","principles":"4 Grondprincipes","layers":"4 Operationele Lagen","maturity":"4 Volwassenheidsniveaus"},"methodology":{"title":"Methodologie","modules":"8 Implementatiemodules","constitution":"Agentische Grondwet","dda":"DDA-Rollenkader","killSwitch":"Noodstopprotocol"},"featured":{"label":"UITGELICHT","whitepaper":{"title":"Download het ACF-Whitepaper","description":"Volledige specificatie — gratis voor geregistreerde gebruikers."},"release":{"title":"ACF — Februari 2026","description":"Officiële release. Wat is nieuw in het raamwerk."}}},"products":{"title":"Producten","link":"Producten →","subtitle":"Drie tools die de ACF Standard operationaliseren in uw organisatie.","diagnostic":{"title":"Diagnostiek","score":"ACF Score — Soevereiniteitsmetriek","methodology":"Scoringsmethodologie","axes":"6 Governance-assen"},"saas":{"title":"Governance-platform","control":"ACF Control — Governance-dashboard","kpis":"18 Soevereiniteits-KPI's","gating":"Adaptief Gatingsysteem"},"certification":{"title":"Certificering","program":"ACF Certification Programma","levels":"Certificeringsniveaus","audit":"Auditproces"}},"resources":{"title":"Bronnen","link":"Bronnen →","subtitle":"Governance-inzichten, onderzoek en technische documentatie.","insights":{"title":"Laatste Inzichten","aiAct":"EU AI Act & Agentische Systemen","dda":"De DDA-rol Uitgelegd","killSwitch":"Een 3-niveaus Noodstop Ontwerpen"},"documentation":{"title":"Documentatie","specs":"Technische Specificaties","research":"Onderzoeksartikelen","academy":"ACF Academy"}},"about":{"title":"Over ACF","link":"Over ACF →","subtitle":"Het verhaal, de missie en de juridische bescherming achter het Agentic Commerce Framework®.","whoWeAre":{"title":"Wie Wij Zijn","vincent":"Vincent DORANGE — Bedenker","mission":"Missie & Waarden","legal":"Juridische Bescherming"},"howWeWork":{"title":"Hoe Wij Werken","network":"Praktijknetwerk","audit":"Audit & Certificering","contact":"Neem Contact Op"},"registered":{"label":"GEREGISTREERD","title":"Geregistreerd Handelsmerk ACF®","description":"ACF® is een geregistreerd handelsmerk. Alle methodologie en tools zijn juridisch beschermd."}},"partners":{"title":"Partners","link":"Partners →","subtitle":"Sluit u aan bij het ACF-praktijknetwerk en bied governance-diensten aan uw klanten aan.","portal":{"title":"Partnerportaal","login":"Inloggen op Partnerportaal","dashboard":"Dashboard & Tools","training":"Trainingsmateriaal","toolkit":"ACF-Praktijktoolkit"},"become":{"title":"Partner Worden","apply":"Aanvraag Indienen","tiers":"Partnerniveaus","certified":"Behaal eerst de ACF Certification"}},"user":{"partnerAccess":"Partnertoegang","partnerLogin":"Partner Login","applyPartner":"Partner worden","contact":"Contact"}},"hero":{"title":"De Wereldwijde Standaard voor","typing":{"word1":"Governance","word2":"Soevereiniteit","word3":"Intelligentie","word4":"Handel"},"description":"Het Agentic Commerce Framework® (ACF) is de definitieve governance-methodologie voor het inzetten, superviseren en controleren van autonome agentische systemen in commerciële omgevingen.","cta":{"primary":"Een Governance-beoordeling Aanvragen →","secondary":"Lees de Standaard"},"stats":{"principles":{"value":"4","label":"Grond-<br>principes"},"modules":{"value":"8","label":"Implementatie-<br>modules"},"kpis":{"value":"18","label":"Soevereiniteits-<br>KPI's"},"tools":{"value":"17","label":"Eigen<br>Tools"}},"satellites":{"score":{"name":"ACF Score","description":"Soevereiniteitsmetriek"},"control":{"name":"ACF Control","description":"Governance-platform"},"certification":{"name":"Certification","description":"Certificering"},"partners":{"name":"Partners","description":"Praktijkmensen"}}},"statsBar":{"layers":{"value":"4","label":"Operationele Lagen"},"kpis":{"value":"18","label":"Soevereiniteits-KPI's"},"tools":{"value":"17","label":"Eigen Tools"},"sovereignty":{"value":"100","suffix":"%","label":"Menselijke Soevereiniteit"}},"principles":{"badge":"// Architectuur","title":"4 Grondprincipes","subtitle":"Vier onveranderlijke axioma's die de grens definiëren tussen menselijke autoriteit en autonome agentuitvoering.","principle1":{"number":"01","title":"Beslissingssoevereiniteit","description":"Kritieke strategische beslissingen worden nooit gedelegeerd aan autonome agenten."},"principle2":{"number":"02","title":"Governance by Design","description":"Governance-kaders worden vóór de inzet gedefinieerd, niet erna."},"principle3":{"number":"03","title":"Ultieme Menselijke Controle","description":"Elk agentisch systeem moet de mogelijkheid voor menselijke interventie behouden."},"principle4":{"number":"04","title":"Traceerbare Verantwoordelijkheid","description":"Elke autonome actie moet auditeerbaar en toeschrijfbaar zijn."}},"layers":{"badge":"// Structuur","title":"4 Operationele Lagen","subtitle":"Een hiërarchische architectuur van strategische governance tot realtime uitvoeringssupervisie.","layer1":{"number":"LAYER_01","title":"Governance & Soevereiniteit","description":"Soevereiniteitscharter, governance-comité, RACI-matrix, kaart van niet-delegeerbare zones."},"layer2":{"number":"LAYER_02","title":"Beslissingsbeleid","description":"Gewogen doelstellingen, arbitrageregels, escalatiedrempels, regulatoire beperkingen."},"layer3":{"number":"LAYER_03","title":"Agentsysteem","description":"Expliciet mandaat per agent, interactieperimeter, autonomieniveau, 5-categorieën taxonomie."},"layer4":{"number":"LAYER_04","title":"Uitvoering & Supervisie","description":"Adaptieve gating-matrix, meerlagige waarschuwingen, 18 soevereiniteits-KPI's, live dashboards."}},"maturity":{"badge":"// Progressie","title":"4 Agentische Volwassenheidsniveaus","subtitle":"ACF classificeert systemen op autonomieniveau. Niveau 2 is het aanbevolen inzetdoel.","level0":{"code":"LEVEL_0","name":"Klassieke Automatisering","risk":"Zeer Laag Risico","description":"Vaste regels, geen ML. Menselijke interventie voor elke wijziging."},"level1":{"code":"LEVEL_1","name":"Geassisteerde Agenten","risk":"Laag Risico","description":"Agenten analyseren en adviseren. Elke definitieve beslissing blijft bij een mens."},"level2":{"code":"LEVEL_2","name":"Bestuurde Agenten","risk":"Matig Risico","description":"Agenten beslissen binnen strikte governance. Niet-delegeerbare zones vergrendeld.","badge":"★ Aanbevolen Doel"},"level3":{"code":"LEVEL_3","name":"Gesuperviseerd Autonoom","risk":"Hoog Risico","description":"Agenten beslissen en leren. Maximale governance. Alleen voor volwassen organisaties."}},"modules":{"badge":"// Methodologie","title":"8 Implementatiemodules","subtitle":"Een sequentieel pad dat progressief over 6-18 maanden wordt ingezet. Elke module bouwt voort op de vorige.","module1":{"code":"MOD_01","name":"Soevereiniteitsdiagnose","description":"Berekening van de Soevereiniteitsscore. Risicozone-mapping."},"module2":{"code":"MOD_02","name":"Beslissingsmapping","description":"Kritikaliteitsmatrix. Niet-delegeerbare zones."},"module3":{"code":"MOD_03","name":"Agentische Grondwet","description":"9 artikelen. Ondertekend door het governance-comité."},"module4":{"code":"MOD_04","name":"Agentsysteemontwerp","description":"Mandaatbladen, interactieperimeters."},"module5":{"code":"MOD_05","name":"Veiligheid & Omkeerbaarheid","description":"Sandboxing, omkeerbaarheidsplan. Ontwerp van het noodstopprotocol."},"module6":{"code":"MOD_06","name":"Continue Governance","description":"Maandelijkse beoordelingen. Jaarlijkse compliance-audit."},"module7":{"code":"MOD_07","name":"Implementatie-routekaart","description":"5-fasige progressieve inzet."},"module8":{"code":"MOD_08","name":"Crisismanagement","description":"3-niveaus incidenten. Noodstop-oefeningen."}},"video":{"badge":"// Waarom ACF","title":"Governance Kan Niet Wachten.<br>Agenten Beslissen Al.","description1":"In 2026 voeren autonome agenten al beslissingen uit in commerciële omgevingen — ze stellen prijzen vast, kwalificeren leads, verwerken claims, beheren contracten. De meeste organisaties hebben geen raamwerk om ze te besturen.","description2":"ACF werd gecreëerd om dat vacuüm te vullen — voordat een governance-falen een juridische, financiële of reputatiecrisis wordt.","quote":{"text":"De vraag is niet langer <em>of</em> agenten ingezet worden. Het is <em>hoe</em> ze in te zetten zonder uw soevereiniteit op te geven.","author":"— Agentic Commerce Framework®"},"player":{"badge":"ACF — DE AGENTISCHE REVOLUTIE","name":"De Opkomst van Agentische Handel","role":"Van ongecontroleerde automatisering naar bestuurde soevereiniteit","duration":"1:05"},"stats":{"release":{"value":"2026","label":"Officiële Release"},"documentation":{"value":"45p","label":"Volledige Documentatie"},"protection":{"value":"ACF®","label":"Geregistreerd Handelsmerk"}},"modal":{"placeholder":"BINNENKORT","title":"De Agentische Handelsrevolutie","description":"Een narratieve reis: van verlies van controle naar het ACF-governance-raamwerk. Autonome agenten hervormen de handel — de vraag is wie ze bestuurt."}},"products":{"badge":"// Ecosysteem","title":"Het ACF-Ecosysteem","subtitle":"Drie complementaire producten die de ACF Standard operationaliseren.","score":{"label":"DIAGNOSTISCH HULPMIDDEL","title":"ACF Score","description":"Eigen Soevereiniteitsscore die uw beslissingsautonomie meet over 6 governance-dimensies.","features":{"feature1":"Samengestelde Soevereiniteitsscore-metriek","feature2":"6-assen radarvisualisatie","feature3":"Gepersonaliseerd actieplan per as"},"cta":"Meet uw Score →"},"control":{"label":"GOVERNANCE-PLATFORM","title":"ACF Control","description":"Realtime governance-dashboard dat uw 18 Soevereiniteits-KPI's bewaakt met adaptieve gating en geautomatiseerde escalatie.","features":{"feature1":"18 KPI's over 6 governance-assen","feature2":"Adaptieve gating met menselijke escalatie","feature3":"Fraudebestendige auditlogs"},"cta":"Ontdek ACF Control →"},"certification":{"label":"ONAFHANKELIJKE CERTIFICERING","title":"ACF Certification","description":"Onafhankelijke certificering die naleving van de ACF-governance-standaard bevestigt. Openbaar verifieerbaar.","features":{"feature1":"Certificeringstrajecten Niveau 1, 2 en 3","feature2":"Openbaar verifieerbaar badge","feature3":"Jaarlijkse verlenging + continue monitoring"},"cta":"Certificering Behalen →"}},"blog":{"badge":"// Inzichten","title":"Laatste uit het ACF-Blog","subtitle":"Governance-inzichten, raamwerk-updates en onderzoek naar agentische intelligentie.","article1":{"category":"AI-REGULERING","title":"Hoe de EU AI Act van toepassing is op agentische systemen in 2026","excerpt":"De risicogebaseerde aanpak van de AI Act schept specifieke verplichtingen voor autonome agenten. Dit is wat ACF Niveau 2 governance dekt.","date":"2026-02-15","cta":"Lees →"},"article2":{"category":"GOVERNANCE","title":"De DDA: waarom elk AI-native bedrijf een Delegated Decision Agent Officer nodig heeft","excerpt":"De DDA is de juridische hoeder van uw autonome agenten. Hoe u deze kritieke rol creëert en versterkt.","date":"2026-02-08","cta":"Lees →"},"article3":{"category":"TECHNISCH","title":"Een drieniveaus noodstop ontwerpen voor autonome agentsystemen","excerpt":"Een effectieve noodstop is niet één knop. ACF specificeert drie onderbrekingsniveaus met gedefinieerde responstijden.","date":"2026-01-29","cta":"Lees →"},"viewAll":"Alle Artikelen Bekijken →"},"cta":{"watermark":"ACF®","badge":"// Volgende Stap","title":"Klaar om Uw Agentische<br>Systemen te Besturen?","description":"Vraag een governance-beoordeling aan en ontdek uw huidige Soevereiniteitsscore.","primary":"Een Governance-beoordeling Aanvragen →","secondary":"ACF-Partner Worden"},"footer":{"logoText":"Agentic Commerce Framework®","logoSubtext":"Wereldwijde Standaard voor AI-Governance","description":"De definitieve governance-standaard voor organisaties die autonome agentische systemen inzetten. Geregistreerd handelsmerk.","framework":{"title":"Raamwerk","theStandard":"De Standaard","methodology":"Methodologie","research":"Onderzoek","certification":"ACF Certification"},"products":{"title":"Producten","score":"ACF Score","control":"ACF Control","certification":"Certificering","academy":"Academy"},"organization":{"title":"Organisatie","partnerPortal":"Partnerportaal","about":"Over Ons","contact":"Contact","legal":"Juridisch"},"copyright":"© 2026 Agentic Commerce Framework® — Vincent DORANGE. Alle rechten voorbehouden.","legal":{"privacy":"Privacy","terms":"Voorwaarden","cookies":"Cookies"}},"ai":{"button":{"label":"Vraag ACF-Agent","status":"AI-GOVERNANCE · ONLINE"},"modal":{"close":"×","beta":"","title":"Vraag ACF","subtitle":"Een chatbot die vragen beantwoordt op basis van de ACF Standard en governance-inzichten","placeholder":"Vraag over ACF-governance...","send":"Versturen","trending":{"label":"POPULAIRE VRAGEN","q1":"Wat is de ACF Standard?","q2":"Hoe krijg ik de ACF Certification?","q3":"Wat is de DDA-rol?","q4":"Wat is de Soevereiniteitsscore?","q5":"De 4 Grondprincipes?"},"disclaimer":"AI-experiment. Antwoorden gebaseerd op ACF Standard-documentatie.","seeMore":"Meer Zien"}}}
+{
+  "meta": {
+    "language": "NL",
+    "languageCode": "nl",
+    "locale": "nl-NL"
+  },
+  "common": {
+    "readMore": "Lees meer",
+    "learnMore": "Meer weten",
+    "getStarted": "Aan de slag",
+    "downloadPDF": "PDF downloaden",
+    "watchVideo": "Video bekijken",
+    "close": "Sluiten",
+    "open": "Openen",
+    "loading": "Laden",
+    "backToHome": "Terug naar home",
+    "menu": "Menu"
+  },
+  "regionSelector": {
+    "title": "Selecteer uw regio en taal",
+    "close": "✕ Sluiten",
+    "global": "Globaal (Engels)",
+    "northAmerica": "Noord-Amerika",
+    "latinAmerica": "Latijns-Amerika",
+    "westernEurope": "West-Europa",
+    "nordicBaltic": "Nordisch & Baltisch",
+    "centralEasternEurope": "Centraal- & Oost-Europa",
+    "middleEastAfrica": "Midden-Oosten & Afrika",
+    "asiaPacific": "Azië & Pacific"
+  },
+  "nav": {
+    "menu": "Menu",
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Wereldwijde Standaard voor AI-Governance",
+    "region": "GLOBAL | NL",
+    "theStandard": "De Standaard",
+    "acfScore": "ACF Score",
+    "acfControl": "ACF Control",
+    "acfCertification": "ACF Certification",
+    "partners": "Partners",
+    "requestAssessment": "Beoordeling aanvragen",
+    "partnerLogin": "Partner Login",
+    "applyPartner": "Partner worden",
+    "contact": "Contact"
+  },
+  "megaMenu": {
+    "framework": {
+      "title": "Raamwerk",
+      "link": "ACF Standard →",
+      "subtitle": "De definitieve governance-methodologie voor agentische systemen in commerciële omgevingen.",
+      "architecture": {
+        "title": "Architectuur",
+        "principles": "4 Grondprincipes",
+        "layers": "4 Operationele Lagen",
+        "maturity": "4 Volwassenheidsniveaus"
+      },
+      "methodology": {
+        "title": "Methodologie",
+        "modules": "8 Implementatiemodules",
+        "constitution": "Agentische Grondwet",
+        "dda": "DDA-Rollenkader",
+        "killSwitch": "Noodstopprotocol"
+      },
+      "featured": {
+        "label": "UITGELICHT",
+        "whitepaper": {
+          "title": "Download het ACF-Whitepaper",
+          "description": "Volledige specificatie — gratis voor geregistreerde gebruikers."
+        },
+        "release": {
+          "title": "ACF — Februari 2026",
+          "description": "Officiële release. Wat is nieuw in het raamwerk."
+        }
+      }
+    },
+    "products": {
+      "title": "Producten",
+      "link": "Producten →",
+      "subtitle": "Drie tools die de ACF Standard operationaliseren in uw organisatie.",
+      "diagnostic": {
+        "title": "Diagnostiek",
+        "score": "ACF Score — Soevereiniteitsmetriek",
+        "methodology": "Scoringsmethodologie",
+        "axes": "6 Governance-assen"
+      },
+      "saas": {
+        "title": "Governance-platform",
+        "control": "ACF Control — Governance-dashboard",
+        "kpis": "18 Soevereiniteits-KPI's",
+        "gating": "Adaptief Gatingsysteem"
+      },
+      "certification": {
+        "title": "Certificering",
+        "program": "ACF Certification Programma",
+        "levels": "Certificeringsniveaus",
+        "audit": "Auditproces"
+      }
+    },
+    "resources": {
+      "title": "Bronnen",
+      "link": "Bronnen →",
+      "subtitle": "Governance-inzichten, onderzoek en technische documentatie.",
+      "insights": {
+        "title": "Laatste Inzichten",
+        "aiAct": "EU AI Act & Agentische Systemen",
+        "dda": "De DDA-rol Uitgelegd",
+        "killSwitch": "Een 3-niveaus Noodstop Ontwerpen"
+      },
+      "documentation": {
+        "title": "Documentatie",
+        "specs": "Technische Specificaties",
+        "research": "Onderzoeksartikelen",
+        "academy": "ACF Academy"
+      },
+      "tools": {
+        "title": "Tools",
+        "complianceChecker": "ACF Compliance Checker",
+        "euAiAct": "EU AI Act Checker ↗"
+      }
+    },
+    "about": {
+      "title": "Over ACF",
+      "link": "Over ACF →",
+      "subtitle": "Het verhaal, de missie en de juridische bescherming achter het Agentic Commerce Framework®.",
+      "whoWeAre": {
+        "title": "Wie Wij Zijn",
+        "vincent": "Vincent DORANGE — Bedenker",
+        "mission": "Missie & Waarden",
+        "legal": "Juridische Bescherming"
+      },
+      "howWeWork": {
+        "title": "Hoe Wij Werken",
+        "network": "Praktijknetwerk",
+        "audit": "Audit & Certificering",
+        "contact": "Neem Contact Op"
+      },
+      "registered": {
+        "label": "GEREGISTREERD",
+        "title": "Geregistreerd Handelsmerk ACF®",
+        "description": "ACF® is een geregistreerd handelsmerk. Alle methodologie en tools zijn juridisch beschermd."
+      }
+    },
+    "partners": {
+      "title": "Partners",
+      "link": "Partners →",
+      "subtitle": "Sluit u aan bij het ACF-praktijknetwerk en bied governance-diensten aan uw klanten aan.",
+      "portal": {
+        "title": "Partnerportaal",
+        "login": "Inloggen op Partnerportaal",
+        "dashboard": "Dashboard & Tools",
+        "training": "Trainingsmateriaal",
+        "toolkit": "ACF-Praktijktoolkit"
+      },
+      "become": {
+        "title": "Partner Worden",
+        "apply": "Aanvraag Indienen",
+        "tiers": "Partnerniveaus",
+        "certified": "Behaal eerst de ACF Certification"
+      }
+    },
+    "user": {
+      "partnerAccess": "Partnertoegang",
+      "partnerLogin": "Partner Login",
+      "applyPartner": "Partner worden",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "title": "De Wereldwijde Standaard voor",
+    "typing": {
+      "word1": "Governance",
+      "word2": "Soevereiniteit",
+      "word3": "Intelligentie",
+      "word4": "Handel"
+    },
+    "description": "Het Agentic Commerce Framework® (ACF) is de definitieve governance-methodologie voor het inzetten, superviseren en controleren van autonome agentische systemen in commerciële omgevingen.",
+    "cta": {
+      "primary": "Een Governance-beoordeling Aanvragen →",
+      "secondary": "Lees de Standaard"
+    },
+    "stats": {
+      "principles": {
+        "value": "4",
+        "label": "Grond-<br>principes"
+      },
+      "modules": {
+        "value": "8",
+        "label": "Implementatie-<br>modules"
+      },
+      "kpis": {
+        "value": "18",
+        "label": "Soevereiniteits-<br>KPI's"
+      },
+      "tools": {
+        "value": "17",
+        "label": "Eigen<br>Tools"
+      }
+    },
+    "satellites": {
+      "score": {
+        "name": "ACF Score",
+        "description": "Soevereiniteitsmetriek"
+      },
+      "control": {
+        "name": "ACF Control",
+        "description": "Governance-platform"
+      },
+      "certification": {
+        "name": "Certification",
+        "description": "Certificering"
+      },
+      "partners": {
+        "name": "Partners",
+        "description": "Praktijkmensen"
+      }
+    }
+  },
+  "statsBar": {
+    "layers": {
+      "value": "4",
+      "label": "Operationele Lagen"
+    },
+    "kpis": {
+      "value": "18",
+      "label": "Soevereiniteits-KPI's"
+    },
+    "tools": {
+      "value": "17",
+      "label": "Eigen Tools"
+    },
+    "sovereignty": {
+      "value": "100",
+      "suffix": "%",
+      "label": "Menselijke Soevereiniteit"
+    }
+  },
+  "principles": {
+    "badge": "// Architectuur",
+    "title": "4 Grondprincipes",
+    "subtitle": "Vier onveranderlijke axioma's die de grens definiëren tussen menselijke autoriteit en autonome agentuitvoering.",
+    "principle1": {
+      "number": "01",
+      "title": "Beslissingssoevereiniteit",
+      "description": "Kritieke strategische beslissingen worden nooit gedelegeerd aan autonome agenten."
+    },
+    "principle2": {
+      "number": "02",
+      "title": "Governance by Design",
+      "description": "Governance-kaders worden vóór de inzet gedefinieerd, niet erna."
+    },
+    "principle3": {
+      "number": "03",
+      "title": "Ultieme Menselijke Controle",
+      "description": "Elk agentisch systeem moet de mogelijkheid voor menselijke interventie behouden."
+    },
+    "principle4": {
+      "number": "04",
+      "title": "Traceerbare Verantwoordelijkheid",
+      "description": "Elke autonome actie moet auditeerbaar en toeschrijfbaar zijn."
+    }
+  },
+  "layers": {
+    "badge": "// Structuur",
+    "title": "4 Operationele Lagen",
+    "subtitle": "Een hiërarchische architectuur van strategische governance tot realtime uitvoeringssupervisie.",
+    "layer1": {
+      "number": "LAYER_01",
+      "title": "Governance & Soevereiniteit",
+      "description": "Soevereiniteitscharter, governance-comité, RACI-matrix, kaart van niet-delegeerbare zones."
+    },
+    "layer2": {
+      "number": "LAYER_02",
+      "title": "Beslissingsbeleid",
+      "description": "Gewogen doelstellingen, arbitrageregels, escalatiedrempels, regulatoire beperkingen."
+    },
+    "layer3": {
+      "number": "LAYER_03",
+      "title": "Agentsysteem",
+      "description": "Expliciet mandaat per agent, interactieperimeter, autonomieniveau, 5-categorieën taxonomie."
+    },
+    "layer4": {
+      "number": "LAYER_04",
+      "title": "Uitvoering & Supervisie",
+      "description": "Adaptieve gating-matrix, meerlagige waarschuwingen, 18 soevereiniteits-KPI's, live dashboards."
+    }
+  },
+  "maturity": {
+    "badge": "// Progressie",
+    "title": "4 Agentische Volwassenheidsniveaus",
+    "subtitle": "ACF classificeert systemen op autonomieniveau. Niveau 2 is het aanbevolen inzetdoel.",
+    "level0": {
+      "code": "LEVEL_0",
+      "name": "Klassieke Automatisering",
+      "risk": "Zeer Laag Risico",
+      "description": "Vaste regels, geen ML. Menselijke interventie voor elke wijziging."
+    },
+    "level1": {
+      "code": "LEVEL_1",
+      "name": "Geassisteerde Agenten",
+      "risk": "Laag Risico",
+      "description": "Agenten analyseren en adviseren. Elke definitieve beslissing blijft bij een mens."
+    },
+    "level2": {
+      "code": "LEVEL_2",
+      "name": "Bestuurde Agenten",
+      "risk": "Matig Risico",
+      "description": "Agenten beslissen binnen strikte governance. Niet-delegeerbare zones vergrendeld.",
+      "badge": "★ Aanbevolen Doel"
+    },
+    "level3": {
+      "code": "LEVEL_3",
+      "name": "Gesuperviseerd Autonoom",
+      "risk": "Hoog Risico",
+      "description": "Agenten beslissen en leren. Maximale governance. Alleen voor volwassen organisaties."
+    }
+  },
+  "modules": {
+    "badge": "// Methodologie",
+    "title": "8 Implementatiemodules",
+    "subtitle": "Een sequentieel pad dat progressief over 6-18 maanden wordt ingezet. Elke module bouwt voort op de vorige.",
+    "module1": {
+      "code": "MOD_01",
+      "name": "Soevereiniteitsdiagnose",
+      "description": "Berekening van de Soevereiniteitsscore. Risicozone-mapping."
+    },
+    "module2": {
+      "code": "MOD_02",
+      "name": "Beslissingsmapping",
+      "description": "Kritikaliteitsmatrix. Niet-delegeerbare zones."
+    },
+    "module3": {
+      "code": "MOD_03",
+      "name": "Agentische Grondwet",
+      "description": "9 artikelen. Ondertekend door het governance-comité."
+    },
+    "module4": {
+      "code": "MOD_04",
+      "name": "Agentsysteemontwerp",
+      "description": "Mandaatbladen, interactieperimeters."
+    },
+    "module5": {
+      "code": "MOD_05",
+      "name": "Veiligheid & Omkeerbaarheid",
+      "description": "Sandboxing, omkeerbaarheidsplan. Ontwerp van het noodstopprotocol."
+    },
+    "module6": {
+      "code": "MOD_06",
+      "name": "Continue Governance",
+      "description": "Maandelijkse beoordelingen. Jaarlijkse compliance-audit."
+    },
+    "module7": {
+      "code": "MOD_07",
+      "name": "Implementatie-routekaart",
+      "description": "5-fasige progressieve inzet."
+    },
+    "module8": {
+      "code": "MOD_08",
+      "name": "Crisismanagement",
+      "description": "3-niveaus incidenten. Noodstop-oefeningen."
+    }
+  },
+  "video": {
+    "badge": "// Waarom ACF",
+    "title": "Governance Kan Niet Wachten.<br>Agenten Beslissen Al.",
+    "description1": "In 2026 voeren autonome agenten al beslissingen uit in commerciële omgevingen — ze stellen prijzen vast, kwalificeren leads, verwerken claims, beheren contracten. De meeste organisaties hebben geen raamwerk om ze te besturen.",
+    "description2": "ACF werd gecreëerd om dat vacuüm te vullen — voordat een governance-falen een juridische, financiële of reputatiecrisis wordt.",
+    "quote": {
+      "text": "De vraag is niet langer <em>of</em> agenten ingezet worden. Het is <em>hoe</em> ze in te zetten zonder uw soevereiniteit op te geven.",
+      "author": "— Agentic Commerce Framework®"
+    },
+    "player": {
+      "badge": "ACF — DE AGENTISCHE REVOLUTIE",
+      "name": "De Opkomst van Agentische Handel",
+      "role": "Van ongecontroleerde automatisering naar bestuurde soevereiniteit",
+      "duration": "1:05"
+    },
+    "stats": {
+      "release": {
+        "value": "2026",
+        "label": "Officiële Release"
+      },
+      "documentation": {
+        "value": "45p",
+        "label": "Volledige Documentatie"
+      },
+      "protection": {
+        "value": "ACF®",
+        "label": "Geregistreerd Handelsmerk"
+      }
+    },
+    "modal": {
+      "placeholder": "BINNENKORT",
+      "title": "De Agentische Handelsrevolutie",
+      "description": "Een narratieve reis: van verlies van controle naar het ACF-governance-raamwerk. Autonome agenten hervormen de handel — de vraag is wie ze bestuurt."
+    }
+  },
+  "products": {
+    "badge": "// Ecosysteem",
+    "title": "Het ACF-Ecosysteem",
+    "subtitle": "Drie complementaire producten die de ACF Standard operationaliseren.",
+    "score": {
+      "label": "DIAGNOSTISCH HULPMIDDEL",
+      "title": "ACF Score",
+      "description": "Eigen Soevereiniteitsscore die uw beslissingsautonomie meet over 6 governance-dimensies.",
+      "features": {
+        "feature1": "Samengestelde Soevereiniteitsscore-metriek",
+        "feature2": "6-assen radarvisualisatie",
+        "feature3": "Gepersonaliseerd actieplan per as"
+      },
+      "cta": "Meet uw Score →"
+    },
+    "control": {
+      "label": "GOVERNANCE-PLATFORM",
+      "title": "ACF Control",
+      "description": "Realtime governance-dashboard dat uw 18 Soevereiniteits-KPI's bewaakt met adaptieve gating en geautomatiseerde escalatie.",
+      "features": {
+        "feature1": "18 KPI's over 6 governance-assen",
+        "feature2": "Adaptieve gating met menselijke escalatie",
+        "feature3": "Fraudebestendige auditlogs"
+      },
+      "cta": "Ontdek ACF Control →"
+    },
+    "certification": {
+      "label": "ONAFHANKELIJKE CERTIFICERING",
+      "title": "ACF Certification",
+      "description": "Onafhankelijke certificering die naleving van de ACF-governance-standaard bevestigt. Openbaar verifieerbaar.",
+      "features": {
+        "feature1": "Certificeringstrajecten Niveau 1, 2 en 3",
+        "feature2": "Openbaar verifieerbaar badge",
+        "feature3": "Jaarlijkse verlenging + continue monitoring"
+      },
+      "cta": "Certificering Behalen →"
+    }
+  },
+  "blog": {
+    "badge": "// Inzichten",
+    "title": "Laatste uit het ACF-Blog",
+    "subtitle": "Governance-inzichten, raamwerk-updates en onderzoek naar agentische intelligentie.",
+    "article1": {
+      "category": "AI-REGULERING",
+      "title": "Hoe de EU AI Act van toepassing is op agentische systemen in 2026",
+      "excerpt": "De risicogebaseerde aanpak van de AI Act schept specifieke verplichtingen voor autonome agenten. Dit is wat ACF Niveau 2 governance dekt.",
+      "date": "2026-02-15",
+      "cta": "Lees →"
+    },
+    "article2": {
+      "category": "GOVERNANCE",
+      "title": "De DDA: waarom elk AI-native bedrijf een Delegated Decision Agent Officer nodig heeft",
+      "excerpt": "De DDA is de juridische hoeder van uw autonome agenten. Hoe u deze kritieke rol creëert en versterkt.",
+      "date": "2026-02-08",
+      "cta": "Lees →"
+    },
+    "article3": {
+      "category": "TECHNISCH",
+      "title": "Een drieniveaus noodstop ontwerpen voor autonome agentsystemen",
+      "excerpt": "Een effectieve noodstop is niet één knop. ACF specificeert drie onderbrekingsniveaus met gedefinieerde responstijden.",
+      "date": "2026-01-29",
+      "cta": "Lees →"
+    },
+    "viewAll": "Alle Artikelen Bekijken →"
+  },
+  "cta": {
+    "watermark": "ACF®",
+    "badge": "// Volgende Stap",
+    "title": "Klaar om Uw Agentische<br>Systemen te Besturen?",
+    "description": "Vraag een governance-beoordeling aan en ontdek uw huidige Soevereiniteitsscore.",
+    "primary": "Een Governance-beoordeling Aanvragen →",
+    "secondary": "ACF-Partner Worden"
+  },
+  "footer": {
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Wereldwijde Standaard voor AI-Governance",
+    "description": "De definitieve governance-standaard voor organisaties die autonome agentische systemen inzetten. Geregistreerd handelsmerk.",
+    "framework": {
+      "title": "Raamwerk",
+      "theStandard": "De Standaard",
+      "methodology": "Methodologie",
+      "research": "Onderzoek",
+      "certification": "ACF Certification"
+    },
+    "products": {
+      "title": "Producten",
+      "score": "ACF Score",
+      "control": "ACF Control",
+      "certification": "Certificering",
+      "academy": "Academy"
+    },
+    "organization": {
+      "title": "Organisatie",
+      "partnerPortal": "Partnerportaal",
+      "about": "Over Ons",
+      "contact": "Contact",
+      "legal": "Juridisch"
+    },
+    "copyright": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Alle rechten voorbehouden.",
+    "legal": {
+      "privacy": "Privacy",
+      "terms": "Voorwaarden",
+      "cookies": "Cookies"
+    }
+  },
+  "ai": {
+    "button": {
+      "label": "Vraag ACF-Agent",
+      "status": "AI-GOVERNANCE · ONLINE"
+    },
+    "modal": {
+      "close": "×",
+      "beta": "",
+      "title": "Vraag ACF",
+      "subtitle": "Een chatbot die vragen beantwoordt op basis van de ACF Standard en governance-inzichten",
+      "placeholder": "Vraag over ACF-governance...",
+      "send": "Versturen",
+      "trending": {
+        "label": "POPULAIRE VRAGEN",
+        "q1": "Wat is de ACF Standard?",
+        "q2": "Hoe krijg ik de ACF Certification?",
+        "q3": "Wat is de DDA-rol?",
+        "q4": "Wat is de Soevereiniteitsscore?",
+        "q5": "De 4 Grondprincipes?"
+      },
+      "disclaimer": "AI-experiment. Antwoorden gebaseerd op ACF Standard-documentatie.",
+      "seeMore": "Meer Zien"
+    }
+  }
+}

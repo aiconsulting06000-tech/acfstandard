@@ -1,1 +1,526 @@
-{"meta":{"language":"SL","languageCode":"sl","locale":"sl-SI"},"common":{"readMore":"Preberite več","learnMore":"Več informacij","getStarted":"Začnite","downloadPDF":"Prenesite PDF","watchVideo":"Oglejte si video","close":"Zapri","open":"Odpri","loading":"Nalaganje","backToHome":"Nazaj na domačo stran","menu":"Meni"},"regionSelector":{"title":"Izberite svojo regijo in jezik","close":"✕ Zapri","global":"Globalno (angleščina)","northAmerica":"Severna Amerika","latinAmerica":"Latinska Amerika","westernEurope":"Zahodna Evropa","nordicBaltic":"Nordijske in baltske države","centralEasternEurope":"Srednja in Vzhodna Evropa","middleEastAfrica":"Bližnji vzhod in Afrika","asiaPacific":"Azija in Pacifik"},"nav":{"menu":"Meni","logoText":"Agentic Commerce Framework®","logoSubtext":"Globalni standard za upravljanje UI","region":"GLOBAL | EN","theStandard":"Standard","acfScore":"ACF Score","acfControl":"ACF Control","acfCertification":"ACF Certification","partners":"Partnerji","requestAssessment":"Zahtevajte oceno","partnerLogin":"Prijava partnerja","applyPartner":"Prijavite se za partnerja","contact":"Kontakt"},"megaMenu":{"framework":{"title":"Okvir","link":"ACF standard →","subtitle":"Dokončna metodologija upravljanja za agentne sisteme v komercialnih okoljih.","architecture":{"title":"Arhitektura","principles":"4 temeljna načela","layers":"4 operativne plasti","maturity":"4 stopnje zrelosti"},"methodology":{"title":"Metodologija","modules":"8 implementacijskih modulov","constitution":"Agentna ustava","dda":"DDA okvir vlog","killSwitch":"Protokol za zasilno zaustavitev"},"featured":{"label":"IZPOSTAVLJENO","whitepaper":{"title":"Prenesite ACF belo knjigo","description":"Popolna specifikacija — brezplačno za registrirane uporabnike."},"release":{"title":"ACF — Februar 2026","description":"Uradna izdaja. Kaj je novega v okviru."}}},"products":{"title":"Izdelki","link":"Izdelki →","subtitle":"Tri orodja, ki operacionalizirajo standard ACF v vaši organizaciji.","diagnostic":{"title":"Diagnostika","score":"ACF Score — Metrika suverenosti","methodology":"Metodologija ocenjevanja","axes":"6 osi upravljanja"},"saas":{"title":"Platforma za upravljanje","control":"ACF Control — Nadzorna plošča za upravljanje","kpis":"18 KPI-jev suverenosti","gating":"Prilagodljiv sistem filtriranja"},"certification":{"title":"Certificiranje","program":"Program ACF Certification","levels":"Stopnje certificiranja","audit":"Revizijski postopek"}},"resources":{"title":"Viri","link":"Viri →","subtitle":"Vpogledi v upravljanje, raziskave in tehnična dokumentacija.","insights":{"title":"Najnovejši vpogledi","aiAct":"Zakon EU o UI in agentni sistemi","dda":"Vloga DDA pojasnjena","killSwitch":"Načrtovanje 3-stopenjske zasilne zaustavitve"},"documentation":{"title":"Dokumentacija","specs":"Tehnične specifikacije","research":"Raziskovalni prispevki","academy":"Akademija ACF"}},"about":{"title":"O ACF","link":"O ACF →","subtitle":"Zgodba, poslanstvo in pravna zaščita za Agentic Commerce Framework®.","whoWeAre":{"title":"Kdo smo","vincent":"Vincent DORANGE — Ustvarjalec","mission":"Poslanstvo in vrednote","legal":"Pravna zaščita"},"howWeWork":{"title":"Kako delamo","network":"Mreža praktikov","audit":"Revizija in certificiranje","contact":"Kontaktirajte nas"},"registered":{"label":"REGISTRIRANO","title":"Registrirana blagovna znamka ACF®","description":"ACF® je registrirana blagovna znamka. Vsa metodologija in orodja so pravno zaščitena."}},"partners":{"title":"Partnerji","link":"Partnerji →","subtitle":"Pridružite se mreži praktikov ACF in ponudite storitve upravljanja svojim strankam.","portal":{"title":"Partnerski portal","login":"Prijava v partnerski portal","dashboard":"Nadzorna plošča in orodja","training":"Gradiva za usposabljanje","toolkit":"ACF komplet orodij za praktike"},"become":{"title":"Postanite partner","apply":"Prijavite se","tiers":"Partnerske stopnje","certified":"Najprej pridobite ACF certifikat"}},"user":{"partnerAccess":"Partnerski dostop","partnerLogin":"Prijava partnerja","applyPartner":"Prijavite se za partnerja","contact":"Kontakt"}},"hero":{"title":"Globalni standard za","typing":{"word1":"Upravljanje","word2":"Suverenost","word3":"Inteligenco","word4":"Trgovino"},"description":"Agentic Commerce Framework® (ACF) je dokončna metodologija upravljanja za uvajanje, nadzor in kontrolo avtonomnih agentnih sistemov v komercialnih okoljih.","cta":{"primary":"Zahtevajte oceno upravljanja →","secondary":"Preberite standard"},"stats":{"principles":{"value":"4","label":"Temeljna<br>načela"},"modules":{"value":"8","label":"Implementacijski<br>moduli"},"kpis":{"value":"18","label":"KPI-ji<br>suverenosti"},"tools":{"value":"17","label":"Lastniška<br>orodja"}},"satellites":{"score":{"name":"ACF Score","description":"Metrika suverenosti"},"control":{"name":"ACF Control","description":"Platforma za upravljanje"},"certification":{"name":"Certification","description":"Atestacija"},"partners":{"name":"Partnerji","description":"Praktiki"}}},"statsBar":{"layers":{"value":"4","label":"Operativne plasti"},"kpis":{"value":"18","label":"KPI-ji suverenosti"},"tools":{"value":"17","label":"Lastniška orodja"},"sovereignty":{"value":"100","suffix":"%","label":"Človeška suverenost"}},"principles":{"badge":"// Arhitektura","title":"4 temeljna načela","subtitle":"Štiri nespremenljivi aksiomi, ki opredeljujejo mejo med človeško avtoriteto in avtonomnim izvajanjem agentov.","principle1":{"number":"01","title":"Suverenost odločanja","description":"Kritične strateške odločitve se nikoli ne prenesejo na avtonomne agente."},"principle2":{"number":"02","title":"Upravljanje po zasnovi","description":"Okviri upravljanja se opredelijo pred uvajanjem, ne po njem."},"principle3":{"number":"03","title":"Končni človeški nadzor","description":"Vsak agentni sistem mora ohraniti možnost človeške intervencije."},"principle4":{"number":"04","title":"Sledljiva odgovornost","description":"Vsako avtonomno dejanje mora biti revizijsko preverljivo in pripisljivo."}},"layers":{"badge":"// Struktura","title":"4 operativne plasti","subtitle":"Hierarhična arhitektura od strateškega upravljanja do nadzora izvajanja v realnem času.","layer1":{"number":"LAYER_01","title":"Upravljanje in suverenost","description":"Listina suverenosti, odbor za upravljanje, RACI matrika, zemljevid nedelegirajočih con."},"layer2":{"number":"LAYER_02","title":"Politika odločanja","description":"Uteženi cilji, arbitražna pravila, pragovi eskalacije, regulativne omejitve."},"layer3":{"number":"LAYER_03","title":"Agentni sistem","description":"Eksplicitni mandat na agenta, perimeter interakcije, stopnja avtonomije, taksonomija s 5 kategorijami."},"layer4":{"number":"LAYER_04","title":"Izvajanje in nadzor","description":"Prilagodljiva matrika filtriranja, večstopenjska opozorila, 18 KPI-jev suverenosti, nadzorne plošče v živo."}},"maturity":{"badge":"// Napredovanje","title":"4 stopnje agentne zrelosti","subtitle":"ACF razvršča sisteme po stopnji avtonomije. Stopnja 2 je priporočeni cilj uvajanja.","level0":{"code":"LEVEL_0","name":"Klasična avtomatizacija","risk":"Zelo nizko tveganje","description":"Fiksna pravila, brez strojnega učenja. Človeška intervencija za vsako spremembo."},"level1":{"code":"LEVEL_1","name":"Asistirani agenti","risk":"Nizko tveganje","description":"Agenti analizirajo in priporočajo. Vsaka končna odločitev ostane pri človeku."},"level2":{"code":"LEVEL_2","name":"Upravljani agenti","risk":"Zmerno tveganje","description":"Agenti odločajo v okviru strogega upravljanja. Nedelegirajoče cone so zaklenjene.","badge":"★ Priporočeni cilj"},"level3":{"code":"LEVEL_3","name":"Nadzorovani avtonomni","risk":"Visoko tveganje","description":"Agenti odločajo in se učijo. Maksimalno upravljanje. Samo za zrele organizacije."}},"modules":{"badge":"// Metodologija","title":"8 implementacijskih modulov","subtitle":"Zaporedna pot, ki se uvaja postopno v 6–18 mesecih. Vsak modul nadgrajuje prejšnjega.","module1":{"code":"MOD_01","name":"Diagnostika suverenosti","description":"Izračun ocene suverenosti. Kartiranje con tveganja."},"module2":{"code":"MOD_02","name":"Kartiranje odločitev","description":"Matrika kritičnosti. Nedelegirajoče cone."},"module3":{"code":"MOD_03","name":"Agentna ustava","description":"9 členov. Podpisana s strani odbora za upravljanje."},"module4":{"code":"MOD_04","name":"Načrtovanje agentnega sistema","description":"Mandatni listi, perimetri interakcije."},"module5":{"code":"MOD_05","name":"Varnost in reverzibilnost","description":"Peskovnik, načrt reverzibilnosti. Načrtovanje zasilne zaustavitve."},"module6":{"code":"MOD_06","name":"Neprekinjeno upravljanje","description":"Mesečni pregledi. Letna revizija skladnosti."},"module7":{"code":"MOD_07","name":"Načrt implementacije","description":"Postopno uvajanje v 5 fazah."},"module8":{"code":"MOD_08","name":"Upravljanje kriz","description":"Incidenti na 3 stopnjah. Vaje zasilne zaustavitve."}},"video":{"badge":"// Zakaj ACF","title":"Upravljanje ne more čakati.<br>Agenti že odločajo.","description1":"V letu 2026 avtonomni agenti že izvajajo odločitve v komercialnih okoljih — določajo cene, kvalificirajo potencialne stranke, obdelujejo zahtevke, upravljajo pogodbe. Večina organizacij nima okvira za njihovo upravljanje.","description2":"ACF je bil ustvarjen, da zapolni to vrzel — preden upravljavska napaka postane pravna, finančna ali reputacijska kriza.","quote":{"text":"Vprašanje ni več, <em>ali</em> uvajati agente. Vprašanje je, <em>kako</em> jih uvajati brez predaje suverenosti.","author":"— Agentic Commerce Framework®"},"player":{"badge":"ACF — AGENTNA REVOLUCIJA","name":"Vzpon agentne trgovine","role":"Od nenadzorovane avtomatizacije do upravljane suverenosti","duration":"1:05"},"stats":{"release":{"value":"2026","label":"Uradna izdaja"},"documentation":{"value":"45p","label":"Popolna dokumentacija"},"protection":{"value":"ACF®","label":"Registrirana blagovna znamka"}},"modal":{"placeholder":"KMALU","title":"Revolucija agentne trgovine","description":"Pripovedno potovanje: od izgube nadzora do okvira upravljanja ACF. Avtonomni agenti preoblikujejo trgovino — vprašanje je, kdo jih upravlja."}},"products":{"badge":"// Ekosistem","title":"Ekosistem ACF","subtitle":"Trije komplementarni izdelki, ki operacionalizirajo standard ACF.","score":{"label":"DIAGNOSTIČNO ORODJE","title":"ACF Score","description":"Lastniška ocena suverenosti, ki meri vašo odločitveno neodvisnost po 6 dimenzijah upravljanja.","features":{"feature1":"Kompozitna metrika ocene suverenosti","feature2":"Radarska vizualizacija po 6 oseh","feature3":"Personaliziran akcijski načrt po osi"},"cta":"Izmerite svojo oceno →"},"control":{"label":"PLATFORMA ZA UPRAVLJANJE","title":"ACF Control","description":"Nadzorna plošča za upravljanje v realnem času, ki spremlja vaših 18 KPI-jev suverenosti s prilagodljivim filtriranjem in avtomatizirano eskalacijo.","features":{"feature1":"18 KPI-jev po 6 oseh upravljanja","feature2":"Prilagodljivo filtriranje s človeško eskalacijo","feature3":"Revizijski zapisi odporni na poseganje"},"cta":"Odkrijte ACF Control →"},"certification":{"label":"NEODVISNA ATESTACIJA","title":"ACF Certification","description":"Neodvisno certificiranje, ki potrjuje skladnost s standardom upravljanja ACF. Javno preverljivo.","features":{"feature1":"Poti certificiranja stopnje 1, 2 in 3","feature2":"Javno preverljiv znak","feature3":"Letna obnova + neprekinjeno spremljanje"},"cta":"Pridobite certifikat →"}},"blog":{"badge":"// Vpogledi","title":"Najnovejše z bloga ACF","subtitle":"Vpogledi v upravljanje, posodobitve okvira in raziskave agentne inteligence.","article1":{"category":"REGULACIJA UI","title":"Kako zakon EU o UI velja za agentne sisteme v letu 2026","excerpt":"Pristop zakona o UI, temelječ na tveganju, ustvarja posebne obveznosti za avtonomne agente. Tukaj je, kaj pokriva upravljanje ACF stopnje 2.","date":"2026-02-15","cta":"Preberite →"},"article2":{"category":"UPRAVLJANJE","title":"DDA: zakaj vsako UI-nativno podjetje potrebuje pooblaščenega uradnika za agentne odločitve","excerpt":"DDA je pravni skrbnik vaših avtonomnih agentov. Kako ustvariti in opolnomočiti to kritično vlogo.","date":"2026-02-08","cta":"Preberite →"},"article3":{"category":"TEHNIČNO","title":"Načrtovanje tristopenjske zasilne zaustavitve za avtonomne agentne sisteme","excerpt":"Učinkovita zasilna zaustavitev ni en sam gumb. ACF določa tri stopnje prekinitve z opredeljenimi odzivnimi časi.","date":"2026-01-29","cta":"Preberite →"},"viewAll":"Oglejte si vse članke →"},"cta":{"watermark":"ACF®","badge":"// Naslednji korak","title":"Ste pripravljeni upravljati<br>svoje agentne sisteme?","description":"Zahtevajte oceno upravljanja in odkrijte svojo trenutno oceno suverenosti.","primary":"Zahtevajte oceno upravljanja →","secondary":"Postanite partner ACF"},"footer":{"logoText":"Agentic Commerce Framework®","logoSubtext":"Globalni standard za upravljanje UI","description":"Dokončni standard upravljanja za organizacije, ki uvajajo avtonomne agentne sisteme. Registrirana blagovna znamka.","framework":{"title":"Okvir","theStandard":"Standard","methodology":"Metodologija","research":"Raziskave","certification":"ACF Certification"},"products":{"title":"Izdelki","score":"ACF Score","control":"ACF Control","certification":"Certificiranje","academy":"Akademija"},"organization":{"title":"Organizacija","partnerPortal":"Partnerski portal","about":"O nas","contact":"Kontakt","legal":"Pravno"},"copyright":"© 2026 Agentic Commerce Framework® — Vincent DORANGE. Vse pravice pridržane.","legal":{"privacy":"Zasebnost","terms":"Pogoji","cookies":"Piškotki"}},"ai":{"button":{"label":"Vprašajte agenta ACF","status":"UPRAVLJANJE UI · ONLINE"},"modal":{"close":"×","beta":"","title":"Vprašajte ACF","subtitle":"Klepetalni robot, ki odgovarja na vprašanja na podlagi standarda ACF in vpogledov v upravljanje","placeholder":"Vprašajte o upravljanju ACF...","send":"Pošlji","trending":{"label":"PRILJUBLJENA VPRAŠANJA","q1":"Kaj je standard ACF?","q2":"Kako pridobim ACF certifikat?","q3":"Kaj je vloga DDA?","q4":"Kaj je ocena suverenosti?","q5":"4 temeljna načela?"},"disclaimer":"UI eksperiment. Odgovori temeljijo na dokumentaciji standarda ACF.","seeMore":"Več"}}}
+{
+  "meta": {
+    "language": "SL",
+    "languageCode": "sl",
+    "locale": "sl-SI"
+  },
+  "common": {
+    "readMore": "Preberite več",
+    "learnMore": "Več informacij",
+    "getStarted": "Začnite",
+    "downloadPDF": "Prenesite PDF",
+    "watchVideo": "Oglejte si video",
+    "close": "Zapri",
+    "open": "Odpri",
+    "loading": "Nalaganje",
+    "backToHome": "Nazaj na domačo stran",
+    "menu": "Meni"
+  },
+  "regionSelector": {
+    "title": "Izberite svojo regijo in jezik",
+    "close": "✕ Zapri",
+    "global": "Globalno (angleščina)",
+    "northAmerica": "Severna Amerika",
+    "latinAmerica": "Latinska Amerika",
+    "westernEurope": "Zahodna Evropa",
+    "nordicBaltic": "Nordijske in baltske države",
+    "centralEasternEurope": "Srednja in Vzhodna Evropa",
+    "middleEastAfrica": "Bližnji vzhod in Afrika",
+    "asiaPacific": "Azija in Pacifik"
+  },
+  "nav": {
+    "menu": "Meni",
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Globalni standard za upravljanje UI",
+    "region": "GLOBAL | EN",
+    "theStandard": "Standard",
+    "acfScore": "ACF Score",
+    "acfControl": "ACF Control",
+    "acfCertification": "ACF Certification",
+    "partners": "Partnerji",
+    "requestAssessment": "Zahtevajte oceno",
+    "partnerLogin": "Prijava partnerja",
+    "applyPartner": "Prijavite se za partnerja",
+    "contact": "Kontakt"
+  },
+  "megaMenu": {
+    "framework": {
+      "title": "Okvir",
+      "link": "ACF standard →",
+      "subtitle": "Dokončna metodologija upravljanja za agentne sisteme v komercialnih okoljih.",
+      "architecture": {
+        "title": "Arhitektura",
+        "principles": "4 temeljna načela",
+        "layers": "4 operativne plasti",
+        "maturity": "4 stopnje zrelosti"
+      },
+      "methodology": {
+        "title": "Metodologija",
+        "modules": "8 implementacijskih modulov",
+        "constitution": "Agentna ustava",
+        "dda": "DDA okvir vlog",
+        "killSwitch": "Protokol za zasilno zaustavitev"
+      },
+      "featured": {
+        "label": "IZPOSTAVLJENO",
+        "whitepaper": {
+          "title": "Prenesite ACF belo knjigo",
+          "description": "Popolna specifikacija — brezplačno za registrirane uporabnike."
+        },
+        "release": {
+          "title": "ACF — Februar 2026",
+          "description": "Uradna izdaja. Kaj je novega v okviru."
+        }
+      }
+    },
+    "products": {
+      "title": "Izdelki",
+      "link": "Izdelki →",
+      "subtitle": "Tri orodja, ki operacionalizirajo standard ACF v vaši organizaciji.",
+      "diagnostic": {
+        "title": "Diagnostika",
+        "score": "ACF Score — Metrika suverenosti",
+        "methodology": "Metodologija ocenjevanja",
+        "axes": "6 osi upravljanja"
+      },
+      "saas": {
+        "title": "Platforma za upravljanje",
+        "control": "ACF Control — Nadzorna plošča za upravljanje",
+        "kpis": "18 KPI-jev suverenosti",
+        "gating": "Prilagodljiv sistem filtriranja"
+      },
+      "certification": {
+        "title": "Certificiranje",
+        "program": "Program ACF Certification",
+        "levels": "Stopnje certificiranja",
+        "audit": "Revizijski postopek"
+      }
+    },
+    "resources": {
+      "title": "Viri",
+      "link": "Viri →",
+      "subtitle": "Vpogledi v upravljanje, raziskave in tehnična dokumentacija.",
+      "insights": {
+        "title": "Najnovejši vpogledi",
+        "aiAct": "Zakon EU o UI in agentni sistemi",
+        "dda": "Vloga DDA pojasnjena",
+        "killSwitch": "Načrtovanje 3-stopenjske zasilne zaustavitve"
+      },
+      "documentation": {
+        "title": "Dokumentacija",
+        "specs": "Tehnične specifikacije",
+        "research": "Raziskovalni prispevki",
+        "academy": "Akademija ACF"
+      },
+      "tools": {
+        "title": "Orodja",
+        "complianceChecker": "ACF Preverjanje skladnosti",
+        "euAiAct": "EU AI Act Checker ↗"
+      }
+    },
+    "about": {
+      "title": "O ACF",
+      "link": "O ACF →",
+      "subtitle": "Zgodba, poslanstvo in pravna zaščita za Agentic Commerce Framework®.",
+      "whoWeAre": {
+        "title": "Kdo smo",
+        "vincent": "Vincent DORANGE — Ustvarjalec",
+        "mission": "Poslanstvo in vrednote",
+        "legal": "Pravna zaščita"
+      },
+      "howWeWork": {
+        "title": "Kako delamo",
+        "network": "Mreža praktikov",
+        "audit": "Revizija in certificiranje",
+        "contact": "Kontaktirajte nas"
+      },
+      "registered": {
+        "label": "REGISTRIRANO",
+        "title": "Registrirana blagovna znamka ACF®",
+        "description": "ACF® je registrirana blagovna znamka. Vsa metodologija in orodja so pravno zaščitena."
+      }
+    },
+    "partners": {
+      "title": "Partnerji",
+      "link": "Partnerji →",
+      "subtitle": "Pridružite se mreži praktikov ACF in ponudite storitve upravljanja svojim strankam.",
+      "portal": {
+        "title": "Partnerski portal",
+        "login": "Prijava v partnerski portal",
+        "dashboard": "Nadzorna plošča in orodja",
+        "training": "Gradiva za usposabljanje",
+        "toolkit": "ACF komplet orodij za praktike"
+      },
+      "become": {
+        "title": "Postanite partner",
+        "apply": "Prijavite se",
+        "tiers": "Partnerske stopnje",
+        "certified": "Najprej pridobite ACF certifikat"
+      }
+    },
+    "user": {
+      "partnerAccess": "Partnerski dostop",
+      "partnerLogin": "Prijava partnerja",
+      "applyPartner": "Prijavite se za partnerja",
+      "contact": "Kontakt"
+    }
+  },
+  "hero": {
+    "title": "Globalni standard za",
+    "typing": {
+      "word1": "Upravljanje",
+      "word2": "Suverenost",
+      "word3": "Inteligenco",
+      "word4": "Trgovino"
+    },
+    "description": "Agentic Commerce Framework® (ACF) je dokončna metodologija upravljanja za uvajanje, nadzor in kontrolo avtonomnih agentnih sistemov v komercialnih okoljih.",
+    "cta": {
+      "primary": "Zahtevajte oceno upravljanja →",
+      "secondary": "Preberite standard"
+    },
+    "stats": {
+      "principles": {
+        "value": "4",
+        "label": "Temeljna<br>načela"
+      },
+      "modules": {
+        "value": "8",
+        "label": "Implementacijski<br>moduli"
+      },
+      "kpis": {
+        "value": "18",
+        "label": "KPI-ji<br>suverenosti"
+      },
+      "tools": {
+        "value": "17",
+        "label": "Lastniška<br>orodja"
+      }
+    },
+    "satellites": {
+      "score": {
+        "name": "ACF Score",
+        "description": "Metrika suverenosti"
+      },
+      "control": {
+        "name": "ACF Control",
+        "description": "Platforma za upravljanje"
+      },
+      "certification": {
+        "name": "Certification",
+        "description": "Atestacija"
+      },
+      "partners": {
+        "name": "Partnerji",
+        "description": "Praktiki"
+      }
+    }
+  },
+  "statsBar": {
+    "layers": {
+      "value": "4",
+      "label": "Operativne plasti"
+    },
+    "kpis": {
+      "value": "18",
+      "label": "KPI-ji suverenosti"
+    },
+    "tools": {
+      "value": "17",
+      "label": "Lastniška orodja"
+    },
+    "sovereignty": {
+      "value": "100",
+      "suffix": "%",
+      "label": "Človeška suverenost"
+    }
+  },
+  "principles": {
+    "badge": "// Arhitektura",
+    "title": "4 temeljna načela",
+    "subtitle": "Štiri nespremenljivi aksiomi, ki opredeljujejo mejo med človeško avtoriteto in avtonomnim izvajanjem agentov.",
+    "principle1": {
+      "number": "01",
+      "title": "Suverenost odločanja",
+      "description": "Kritične strateške odločitve se nikoli ne prenesejo na avtonomne agente."
+    },
+    "principle2": {
+      "number": "02",
+      "title": "Upravljanje po zasnovi",
+      "description": "Okviri upravljanja se opredelijo pred uvajanjem, ne po njem."
+    },
+    "principle3": {
+      "number": "03",
+      "title": "Končni človeški nadzor",
+      "description": "Vsak agentni sistem mora ohraniti možnost človeške intervencije."
+    },
+    "principle4": {
+      "number": "04",
+      "title": "Sledljiva odgovornost",
+      "description": "Vsako avtonomno dejanje mora biti revizijsko preverljivo in pripisljivo."
+    }
+  },
+  "layers": {
+    "badge": "// Struktura",
+    "title": "4 operativne plasti",
+    "subtitle": "Hierarhična arhitektura od strateškega upravljanja do nadzora izvajanja v realnem času.",
+    "layer1": {
+      "number": "LAYER_01",
+      "title": "Upravljanje in suverenost",
+      "description": "Listina suverenosti, odbor za upravljanje, RACI matrika, zemljevid nedelegirajočih con."
+    },
+    "layer2": {
+      "number": "LAYER_02",
+      "title": "Politika odločanja",
+      "description": "Uteženi cilji, arbitražna pravila, pragovi eskalacije, regulativne omejitve."
+    },
+    "layer3": {
+      "number": "LAYER_03",
+      "title": "Agentni sistem",
+      "description": "Eksplicitni mandat na agenta, perimeter interakcije, stopnja avtonomije, taksonomija s 5 kategorijami."
+    },
+    "layer4": {
+      "number": "LAYER_04",
+      "title": "Izvajanje in nadzor",
+      "description": "Prilagodljiva matrika filtriranja, večstopenjska opozorila, 18 KPI-jev suverenosti, nadzorne plošče v živo."
+    }
+  },
+  "maturity": {
+    "badge": "// Napredovanje",
+    "title": "4 stopnje agentne zrelosti",
+    "subtitle": "ACF razvršča sisteme po stopnji avtonomije. Stopnja 2 je priporočeni cilj uvajanja.",
+    "level0": {
+      "code": "LEVEL_0",
+      "name": "Klasična avtomatizacija",
+      "risk": "Zelo nizko tveganje",
+      "description": "Fiksna pravila, brez strojnega učenja. Človeška intervencija za vsako spremembo."
+    },
+    "level1": {
+      "code": "LEVEL_1",
+      "name": "Asistirani agenti",
+      "risk": "Nizko tveganje",
+      "description": "Agenti analizirajo in priporočajo. Vsaka končna odločitev ostane pri človeku."
+    },
+    "level2": {
+      "code": "LEVEL_2",
+      "name": "Upravljani agenti",
+      "risk": "Zmerno tveganje",
+      "description": "Agenti odločajo v okviru strogega upravljanja. Nedelegirajoče cone so zaklenjene.",
+      "badge": "★ Priporočeni cilj"
+    },
+    "level3": {
+      "code": "LEVEL_3",
+      "name": "Nadzorovani avtonomni",
+      "risk": "Visoko tveganje",
+      "description": "Agenti odločajo in se učijo. Maksimalno upravljanje. Samo za zrele organizacije."
+    }
+  },
+  "modules": {
+    "badge": "// Metodologija",
+    "title": "8 implementacijskih modulov",
+    "subtitle": "Zaporedna pot, ki se uvaja postopno v 6–18 mesecih. Vsak modul nadgrajuje prejšnjega.",
+    "module1": {
+      "code": "MOD_01",
+      "name": "Diagnostika suverenosti",
+      "description": "Izračun ocene suverenosti. Kartiranje con tveganja."
+    },
+    "module2": {
+      "code": "MOD_02",
+      "name": "Kartiranje odločitev",
+      "description": "Matrika kritičnosti. Nedelegirajoče cone."
+    },
+    "module3": {
+      "code": "MOD_03",
+      "name": "Agentna ustava",
+      "description": "9 členov. Podpisana s strani odbora za upravljanje."
+    },
+    "module4": {
+      "code": "MOD_04",
+      "name": "Načrtovanje agentnega sistema",
+      "description": "Mandatni listi, perimetri interakcije."
+    },
+    "module5": {
+      "code": "MOD_05",
+      "name": "Varnost in reverzibilnost",
+      "description": "Peskovnik, načrt reverzibilnosti. Načrtovanje zasilne zaustavitve."
+    },
+    "module6": {
+      "code": "MOD_06",
+      "name": "Neprekinjeno upravljanje",
+      "description": "Mesečni pregledi. Letna revizija skladnosti."
+    },
+    "module7": {
+      "code": "MOD_07",
+      "name": "Načrt implementacije",
+      "description": "Postopno uvajanje v 5 fazah."
+    },
+    "module8": {
+      "code": "MOD_08",
+      "name": "Upravljanje kriz",
+      "description": "Incidenti na 3 stopnjah. Vaje zasilne zaustavitve."
+    }
+  },
+  "video": {
+    "badge": "// Zakaj ACF",
+    "title": "Upravljanje ne more čakati.<br>Agenti že odločajo.",
+    "description1": "V letu 2026 avtonomni agenti že izvajajo odločitve v komercialnih okoljih — določajo cene, kvalificirajo potencialne stranke, obdelujejo zahtevke, upravljajo pogodbe. Večina organizacij nima okvira za njihovo upravljanje.",
+    "description2": "ACF je bil ustvarjen, da zapolni to vrzel — preden upravljavska napaka postane pravna, finančna ali reputacijska kriza.",
+    "quote": {
+      "text": "Vprašanje ni več, <em>ali</em> uvajati agente. Vprašanje je, <em>kako</em> jih uvajati brez predaje suverenosti.",
+      "author": "— Agentic Commerce Framework®"
+    },
+    "player": {
+      "badge": "ACF — AGENTNA REVOLUCIJA",
+      "name": "Vzpon agentne trgovine",
+      "role": "Od nenadzorovane avtomatizacije do upravljane suverenosti",
+      "duration": "1:05"
+    },
+    "stats": {
+      "release": {
+        "value": "2026",
+        "label": "Uradna izdaja"
+      },
+      "documentation": {
+        "value": "45p",
+        "label": "Popolna dokumentacija"
+      },
+      "protection": {
+        "value": "ACF®",
+        "label": "Registrirana blagovna znamka"
+      }
+    },
+    "modal": {
+      "placeholder": "KMALU",
+      "title": "Revolucija agentne trgovine",
+      "description": "Pripovedno potovanje: od izgube nadzora do okvira upravljanja ACF. Avtonomni agenti preoblikujejo trgovino — vprašanje je, kdo jih upravlja."
+    }
+  },
+  "products": {
+    "badge": "// Ekosistem",
+    "title": "Ekosistem ACF",
+    "subtitle": "Trije komplementarni izdelki, ki operacionalizirajo standard ACF.",
+    "score": {
+      "label": "DIAGNOSTIČNO ORODJE",
+      "title": "ACF Score",
+      "description": "Lastniška ocena suverenosti, ki meri vašo odločitveno neodvisnost po 6 dimenzijah upravljanja.",
+      "features": {
+        "feature1": "Kompozitna metrika ocene suverenosti",
+        "feature2": "Radarska vizualizacija po 6 oseh",
+        "feature3": "Personaliziran akcijski načrt po osi"
+      },
+      "cta": "Izmerite svojo oceno →"
+    },
+    "control": {
+      "label": "PLATFORMA ZA UPRAVLJANJE",
+      "title": "ACF Control",
+      "description": "Nadzorna plošča za upravljanje v realnem času, ki spremlja vaših 18 KPI-jev suverenosti s prilagodljivim filtriranjem in avtomatizirano eskalacijo.",
+      "features": {
+        "feature1": "18 KPI-jev po 6 oseh upravljanja",
+        "feature2": "Prilagodljivo filtriranje s človeško eskalacijo",
+        "feature3": "Revizijski zapisi odporni na poseganje"
+      },
+      "cta": "Odkrijte ACF Control →"
+    },
+    "certification": {
+      "label": "NEODVISNA ATESTACIJA",
+      "title": "ACF Certification",
+      "description": "Neodvisno certificiranje, ki potrjuje skladnost s standardom upravljanja ACF. Javno preverljivo.",
+      "features": {
+        "feature1": "Poti certificiranja stopnje 1, 2 in 3",
+        "feature2": "Javno preverljiv znak",
+        "feature3": "Letna obnova + neprekinjeno spremljanje"
+      },
+      "cta": "Pridobite certifikat →"
+    }
+  },
+  "blog": {
+    "badge": "// Vpogledi",
+    "title": "Najnovejše z bloga ACF",
+    "subtitle": "Vpogledi v upravljanje, posodobitve okvira in raziskave agentne inteligence.",
+    "article1": {
+      "category": "REGULACIJA UI",
+      "title": "Kako zakon EU o UI velja za agentne sisteme v letu 2026",
+      "excerpt": "Pristop zakona o UI, temelječ na tveganju, ustvarja posebne obveznosti za avtonomne agente. Tukaj je, kaj pokriva upravljanje ACF stopnje 2.",
+      "date": "2026-02-15",
+      "cta": "Preberite →"
+    },
+    "article2": {
+      "category": "UPRAVLJANJE",
+      "title": "DDA: zakaj vsako UI-nativno podjetje potrebuje pooblaščenega uradnika za agentne odločitve",
+      "excerpt": "DDA je pravni skrbnik vaših avtonomnih agentov. Kako ustvariti in opolnomočiti to kritično vlogo.",
+      "date": "2026-02-08",
+      "cta": "Preberite →"
+    },
+    "article3": {
+      "category": "TEHNIČNO",
+      "title": "Načrtovanje tristopenjske zasilne zaustavitve za avtonomne agentne sisteme",
+      "excerpt": "Učinkovita zasilna zaustavitev ni en sam gumb. ACF določa tri stopnje prekinitve z opredeljenimi odzivnimi časi.",
+      "date": "2026-01-29",
+      "cta": "Preberite →"
+    },
+    "viewAll": "Oglejte si vse članke →"
+  },
+  "cta": {
+    "watermark": "ACF®",
+    "badge": "// Naslednji korak",
+    "title": "Ste pripravljeni upravljati<br>svoje agentne sisteme?",
+    "description": "Zahtevajte oceno upravljanja in odkrijte svojo trenutno oceno suverenosti.",
+    "primary": "Zahtevajte oceno upravljanja →",
+    "secondary": "Postanite partner ACF"
+  },
+  "footer": {
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "Globalni standard za upravljanje UI",
+    "description": "Dokončni standard upravljanja za organizacije, ki uvajajo avtonomne agentne sisteme. Registrirana blagovna znamka.",
+    "framework": {
+      "title": "Okvir",
+      "theStandard": "Standard",
+      "methodology": "Metodologija",
+      "research": "Raziskave",
+      "certification": "ACF Certification"
+    },
+    "products": {
+      "title": "Izdelki",
+      "score": "ACF Score",
+      "control": "ACF Control",
+      "certification": "Certificiranje",
+      "academy": "Akademija"
+    },
+    "organization": {
+      "title": "Organizacija",
+      "partnerPortal": "Partnerski portal",
+      "about": "O nas",
+      "contact": "Kontakt",
+      "legal": "Pravno"
+    },
+    "copyright": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Vse pravice pridržane.",
+    "legal": {
+      "privacy": "Zasebnost",
+      "terms": "Pogoji",
+      "cookies": "Piškotki"
+    }
+  },
+  "ai": {
+    "button": {
+      "label": "Vprašajte agenta ACF",
+      "status": "UPRAVLJANJE UI · ONLINE"
+    },
+    "modal": {
+      "close": "×",
+      "beta": "",
+      "title": "Vprašajte ACF",
+      "subtitle": "Klepetalni robot, ki odgovarja na vprašanja na podlagi standarda ACF in vpogledov v upravljanje",
+      "placeholder": "Vprašajte o upravljanju ACF...",
+      "send": "Pošlji",
+      "trending": {
+        "label": "PRILJUBLJENA VPRAŠANJA",
+        "q1": "Kaj je standard ACF?",
+        "q2": "Kako pridobim ACF certifikat?",
+        "q3": "Kaj je vloga DDA?",
+        "q4": "Kaj je ocena suverenosti?",
+        "q5": "4 temeljna načela?"
+      },
+      "disclaimer": "UI eksperiment. Odgovori temeljijo na dokumentaciji standarda ACF.",
+      "seeMore": "Več"
+    }
+  }
+}
