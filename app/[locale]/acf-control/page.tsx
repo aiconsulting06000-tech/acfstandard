@@ -742,10 +742,11 @@ export default function ACFControlPage() {
               <a key={l.href} href={`#${l.href}`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
                 onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l.label}</a>
             ))}
-            <button className="gold-glow" style={{
+            <a href={`/${locale}/contact`} className="gold-glow" style={{
               background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
               border: "none", padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, cursor: "pointer", transition: "all .3s",
-            }}>{t.navRequestDemo}</button>
+              display: "inline-block", textDecoration: "none",
+            }}>{t.navRequestDemo}</a>
           </div>
         </div>
       </nav>
@@ -771,10 +772,11 @@ export default function ACFControlPage() {
               </p>
 
               <div style={{ display: "flex", gap: 12, marginBottom: 32 }}>
-                <button className="gold-glow" style={{
+                <a href={`/${locale}/contact`} className="gold-glow" style={{
                   background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
                   border: "none", padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, cursor: "pointer", transition: "all .3s",
-                }}>{t.heroBookDemo}</button>
+                  display: "inline-block", textDecoration: "none",
+                }}>{t.heroBookDemo}</a>
                 <button style={{
                   background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
                   padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 500, cursor: "pointer", transition: "all .3s",
@@ -1420,12 +1422,13 @@ export default function ACFControlPage() {
                   ))}
                 </div>
 
-                <button className="gold-glow" style={{
+                <a href={`/${locale}/contact`} className="gold-glow" style={{
                   width: "100%", padding: 12, borderRadius: 10, border: "none", fontSize: 13, fontWeight: 700, cursor: "pointer", transition: "all .3s",
                   background: plan.recommended ? `linear-gradient(135deg, ${C.gold}, ${C.gold2})` : C.navy2,
                   color: plan.recommended ? C.navy1 : C.gray2,
                   outline: plan.recommended ? "none" : `1px solid ${C.bd1}`,
-                }}>{plan.recommended ? t.planRequestDemo : t.planContactUs}</button>
+                  display: "block", textAlign: "center", textDecoration: "none",
+                }}>{plan.recommended ? t.planRequestDemo : t.planContactUs}</a>
               </div>
             ))}
           </div>
@@ -1434,13 +1437,14 @@ export default function ACFControlPage() {
           <div style={{ background: C.goldDim, border: `1px solid ${C.goldBorder}`, borderRadius: 16, padding: 24, textAlign: "center" }}>
             <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".14em", marginBottom: 8 }}>{t.partnerLabel}</div>
             <p style={{ fontSize: 13, color: C.gray2, marginBottom: 12 }}>{t.partnerDesc}</p>
-            <button style={{
+            <a href={`/${locale}/acf-certification`} style={{
               background: "transparent", border: `1px solid ${C.goldBorder}`, color: C.gold,
               padding: "10px 24px", borderRadius: 10, fontSize: 13, fontWeight: 600, cursor: "pointer", transition: "all .3s",
+              display: "inline-block", textDecoration: "none",
             }}
               onMouseEnter={e => { (e.target as HTMLElement).style.background = C.goldDim; }}
               onMouseLeave={e => { (e.target as HTMLElement).style.background = "transparent"; }}
-            >{t.partnerApply}</button>
+            >{t.partnerApply}</a>
           </div>
         </div>
       </section>
@@ -1475,17 +1479,19 @@ export default function ACFControlPage() {
             {t.ctaDesc1}<strong style={{ color: "#fff" }}>{t.ctaDescStrong}</strong>
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 12 }}>
-            <button className="gold-glow" style={{
+            <a href={`/${locale}/contact`} className="gold-glow" style={{
               background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
               border: "none", padding: "16px 36px", borderRadius: 12, fontSize: 15, fontWeight: 700, cursor: "pointer", transition: "all .3s",
-            }}>{t.ctaDemo}</button>
-            <button style={{
+              display: "inline-block", textDecoration: "none",
+            }}>{t.ctaDemo}</a>
+            <a href="https://www.acf-score.com/" className="gold-glow" style={{
               background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
               padding: "16px 36px", borderRadius: 12, fontSize: 15, fontWeight: 500, cursor: "pointer",
+              display: "inline-block", textDecoration: "none",
             }}
               onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
               onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}
-            >{t.ctaScore}</button>
+            >{t.ctaScore}</a>
           </div>
         </div>
       </section>

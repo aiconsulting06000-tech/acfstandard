@@ -12,6 +12,46 @@ const C = {
 
 export default function Footer() {
   const locale = useLocale();
+  const fr = locale === "fr";
+
+  const subtitle = fr
+    ? "STANDARD MONDIAL POUR LA GOUVERNANCE IA"
+    : "GLOBAL STANDARD FOR AI GOVERNANCE";
+
+  const description = fr
+    ? "Le standard de gouvernance pour les organisations déployant des agents IA autonomes."
+    : "The governance standard for organizations deploying autonomous AI agents.";
+
+  const columns = [
+    {
+      title: fr ? "Framework" : "Framework",
+      links: [
+        { label: fr ? "Le Standard" : "The Standard", href: `/${locale}/standard` },
+        { label: fr ? "Méthodologie" : "Methodology", href: `/${locale}/standard#methodology` },
+        { label: fr ? "Recherche" : "Research", href: `/${locale}/blog` },
+        { label: "ACF Certification", href: `/${locale}/acf-certification` },
+      ],
+    },
+    {
+      title: fr ? "Produits" : "Products",
+      links: [
+        { label: "ACF Score", href: `/${locale}/acf-score` },
+        { label: "ACF Control", href: `/${locale}/acf-control` },
+        { label: "Certification", href: `/${locale}/acf-certification` },
+        { label: "Academy", href: `/${locale}/acf-certification#academy` },
+      ],
+    },
+    {
+      title: fr ? "Organisation" : "Organization",
+      links: [
+        { label: fr ? "Portail partenaire" : "Partner Portal", href: `/${locale}/acf-partners` },
+        { label: fr ? "À propos" : "About", href: `/${locale}/about` },
+        { label: "Contact", href: `/${locale}/contact` },
+        { label: fr ? "Légal" : "Legal", href: `/${locale}/legal` },
+      ],
+    },
+  ];
+
   return (
     <footer style={{ padding: "48px 0 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
       <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
@@ -21,16 +61,12 @@ export default function Footer() {
               <div style={{ width: 44, height: 44, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 13, color: C.navy1, letterSpacing: 1 }}>ACF</div>
               <div>
                 <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff" }}>Agentic Commerce Framework®</div>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase" }}>GLOBAL STANDARD FOR AI GOVERNANCE</div>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase" }}>{subtitle}</div>
               </div>
             </div>
-            <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 320 }}>The governance standard for organizations deploying autonomous AI agents.</p>
+            <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 320 }}>{description}</p>
           </div>
-          {[
-            { title: "Framework", links: [{ label: "The Standard", href: `/${locale}/standard` },{ label: "Blog", href: `/${locale}/blog` },{ label: "ACF Certification", href: `/${locale}/acf-certification` }] },
-            { title: "Products", links: [{ label: "ACF Score®", href: `/${locale}/acf-score` },{ label: "ACF Control", href: `/${locale}/acf-control` },{ label: "Academy", href: `/${locale}/acf-certification#academy` }] },
-            { title: "Organization", links: [{ label: "Partner Portal", href: `/${locale}/acf-partners` },{ label: "About", href: `/${locale}/about` },{ label: "Contact", href: `/${locale}/contact` },{ label: "Legal", href: `/${locale}/legal` }] },
-          ].map(col => (
+          {columns.map(col => (
             <div key={col.title}>
               <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 20 }}>{col.title}</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>

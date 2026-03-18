@@ -613,7 +613,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="mpt"><a href="/standard">${m.megaMenu.framework.link}</a></div>
       <div class="mpd">${m.megaMenu.framework.subtitle}</div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.framework.architecture.title}</div><ul class="mlinks"><li><a href="/standard#principles">${m.megaMenu.framework.architecture.principles}</a></li><li><a href="/standard#layers">${m.megaMenu.framework.architecture.layers}</a></li><li><a href="/standard#maturity">${m.megaMenu.framework.architecture.maturity}</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">${m.megaMenu.framework.methodology.title}</div><ul class="mlinks"><li><a href="/method">${m.megaMenu.framework.methodology.modules}</a></li><li><a href="/method#constitution">${m.megaMenu.framework.methodology.constitution}</a></li><li><a href="/method#dda">${m.megaMenu.framework.methodology.dda}</a></li><li><a href="/method#killswitch">${m.megaMenu.framework.methodology.killSwitch}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.framework.methodology.title}</div><ul class="mlinks"><li><a href="/method">${m.megaMenu.framework.methodology.modules}</a></li><li><a href="/method#methodology">${m.megaMenu.framework.methodology.constitution}</a></li><li><a href="/method#methodology">${m.megaMenu.framework.methodology.dda}</a></li><li><a href="/method#methodology">${m.megaMenu.framework.methodology.killSwitch}</a></li></ul></div>
       <div class="mfeat"><div class="mflbl">${m.megaMenu.framework.featured.label}</div><div class="mfitem"><div class="mftitle">${m.megaMenu.framework.featured.whitepaper.title}</div><div class="mfdesc">${m.megaMenu.framework.featured.whitepaper.description}</div></div><div class="mfitem"><div class="mftitle">${m.megaMenu.framework.featured.release.title}</div><div class="mfdesc">${m.megaMenu.framework.featured.release.description}</div></div></div>
     </div>
     <div class="mp" id="panel-products">
@@ -632,7 +632,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div class="mp" id="panel-about">
       <div class="mpt"><a href="/about">${m.megaMenu.about.link}</a></div>
       <div class="mpd">${m.megaMenu.about.subtitle}</div>
-      <div class="mgroup"><div class="mgtitle">${m.megaMenu.about.whoWeAre.title}</div><ul class="mlinks"><li><a href="/about#vincent">${m.megaMenu.about.whoWeAre.vincent}</a></li><li><a href="/about#mission">${m.megaMenu.about.whoWeAre.mission}</a></li><li><a href="/about#legal">${m.megaMenu.about.whoWeAre.legal}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.about.whoWeAre.title}</div><ul class="mlinks"><li><a href="/about#vincent">${m.megaMenu.about.whoWeAre.vincent}</a></li><li><a href="/about#mission">${m.megaMenu.about.whoWeAre.mission}</a></li><li><a href="/legal">${m.megaMenu.about.whoWeAre.legal}</a></li></ul></div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.about.howWeWork.title}</div><ul class="mlinks"><li><a href="/partners">${m.megaMenu.about.howWeWork.network}</a></li><li><a href="/certification">${m.megaMenu.about.howWeWork.audit}</a></li><li><a href="/contact">${m.megaMenu.about.howWeWork.contact}</a></li></ul></div>
       <div class="mfeat"><div class="mflbl">${m.megaMenu.about.registered.label}</div><div class="mfitem"><div class="mftitle">${m.megaMenu.about.registered.title}</div><div class="mfdesc">${m.megaMenu.about.registered.description}</div></div></div>
     </div>
@@ -1037,7 +1037,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div class="fgrid">
       <div><a href="/" class="logo"><div class="lb">ACF</div><div><div class="ln">${m.footer.logoText}</div><div class="ls">${m.footer.logoSubtext}</div></div></a><p class="fdesc">${m.footer.description}</p></div>
       <div><div class="ftitle">${m.footer.framework.title}</div><ul class="flinks"><li><a href="/standard">${m.footer.framework.theStandard}</a></li><li><a href="/method">${m.footer.framework.methodology}</a></li><li><a href="/research">${m.footer.framework.research}</a></li><li><a href="/certification">${m.footer.framework.certification}</a></li></ul></div>
-      <div><div class="ftitle">${m.footer.products.title}</div><ul class="flinks"><li><a href="https://acf-score.com">${m.footer.products.score}</a></li><li><a href="/control">${m.footer.products.control}</a></li><li><a href="/certification">${m.footer.products.certification}</a></li><li><a href="/academy">${m.footer.products.academy}</a></li></ul></div>
+      <div><div class="ftitle">${m.footer.products.title}</div><ul class="flinks"><li><a href="/score">${m.footer.products.score}</a></li><li><a href="/control">${m.footer.products.control}</a></li><li><a href="/certification">${m.footer.products.certification}</a></li><li><a href="/academy">${m.footer.products.academy}</a></li></ul></div>
       <div><div class="ftitle">${m.footer.organization.title}</div><ul class="flinks"><li><a href="/partners/login">${m.footer.organization.partnerPortal}</a></li><li><a href="/about">${m.footer.organization.about}</a></li><li><a href="/contact">${m.footer.organization.contact}</a></li><li><a href="/legal">${m.footer.organization.legal}</a></li></ul></div>
     </div>
     <div class="fbot">
@@ -1233,7 +1233,7 @@ document.getElementById('aibtn').addEventListener('click',function(){document.ge
 function closeAI(){document.getElementById('aimodal').classList.remove('open');document.body.style.overflow=''}
 </script>
 <script>
-var REMAP={'/certification':'/acf-certification','/partners':'/acf-partners','/score':'/acf-score','/control':'/acf-control','/partners/login':'/acf-partners','/partners/apply':'/acf-partners'};
+var REMAP={'/certification':'/acf-certification','/partners':'/acf-partners','/score':'/acf-score','/control':'/acf-control','/partners/login':'/acf-partners','/partners/apply':'/acf-partners','/method':'/standard','/academy':'/acf-certification','/research':'/blog'};
 var LOCALES=['en','fr','es','de','it','pt','nl','pl','sv','da','no','fi','zh','ru'];
 document.addEventListener('click',function(e){
   var a=e.target.closest('a');

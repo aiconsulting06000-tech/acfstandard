@@ -48,6 +48,7 @@ const ui = {
     placeholderSubject: "Select a topic...",
     placeholderMessage: "Tell us how we can help...",
     subjectOptions: [
+      { value: "demo", label: "Request a Demo" },
       { value: "assessment", label: "Request an Assessment" },
       { value: "partnership", label: "Partnership Inquiry" },
       { value: "certification", label: "Certification Question" },
@@ -66,8 +67,6 @@ const ui = {
     quickAction2: "View certification programs",
     quickAction3: "Become a partner",
     quickAction4: "Read the standard",
-    createdByLabel: "Created By",
-    createdByRole: "Founder & Author of ACF®",
   },
   fr: {
     navSubtext: "CONTACT",
@@ -92,6 +91,7 @@ const ui = {
     placeholderSubject: "Sélectionnez un sujet...",
     placeholderMessage: "Dites-nous comment nous pouvons vous aider...",
     subjectOptions: [
+      { value: "demo", label: "Demander une démo" },
       { value: "assessment", label: "Demander une évaluation" },
       { value: "partnership", label: "Demande de partenariat" },
       { value: "certification", label: "Question sur la certification" },
@@ -110,8 +110,6 @@ const ui = {
     quickAction2: "Voir les programmes de certification",
     quickAction3: "Devenir partenaire",
     quickAction4: "Lire le standard",
-    createdByLabel: "Créé par",
-    createdByRole: "Fondateur & Auteur d'ACF®",
   },
 };
 
@@ -282,19 +280,6 @@ export default function ACFContactPage() {
               </div>
             </div>
 
-            {/* Founder */}
-            <div style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 16, padding: 28 }}>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 16 }}>{t.createdByLabel}</div>
-              <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-                <div style={{ width: 48, height: 48, borderRadius: 12, background: C.goldDim, border: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 800, color: C.gold }}>VD</span>
-                </div>
-                <div>
-                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 16, fontWeight: 700, color: "#fff" }}>Vincent DORANGE</div>
-                  <div style={{ fontSize: 13, color: C.gray }}>{t.createdByRole}</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
