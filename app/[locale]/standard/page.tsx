@@ -731,7 +731,7 @@ export default function TheStandardPage() {
       {/* ═══════════════════════════════════════════════
            INTRODUCING ACF
          ═══════════════════════════════════════════════ */}
-      <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
+      <section id="principles" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
           <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// {t.fwBadge}</div></Reveal>
 
@@ -854,7 +854,7 @@ export default function TheStandardPage() {
            FOUR-LAYER ARCHITECTURE — Detailed
          ═══════════════════════════════════════════════ */}
       <section id="architecture" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
-        <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
+        <div id="layers" style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
           <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// {t.archBadge}</div></Reveal>
 
           <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16 }}>{t.archTitle}</h2></Reveal>
@@ -929,7 +929,7 @@ export default function TheStandardPage() {
       {/* ═══════════════════════════════════════════════
            GOVERNANCE LOOP — Animated diagram
          ═══════════════════════════════════════════════ */}
-      <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
+      <section id="methodology" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
           <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// {t.loopBadge}</div></Reveal>
           <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16 }}>{t.loopTitle}</h2></Reveal>
@@ -943,7 +943,7 @@ export default function TheStandardPage() {
            ECOSYSTEM — Flow diagram + cards
          ═══════════════════════════════════════════════ */}
       <section id="ecosystem" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
-        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px" }}>
+        <div id="maturity" style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px" }}>
           <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24, textAlign: "center" }}>// {t.ecoBadge}</div></Reveal>
           <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16, textAlign: "center" }}>{t.ecoTitle}</h2></Reveal>
           <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, textAlign: "center", maxWidth: 560, margin: "0 auto" }}>{t.ecoSubtitle}</p></Reveal>

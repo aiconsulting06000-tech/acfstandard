@@ -185,8 +185,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* TIMELINE */}
-      <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
+      {/* TIMELINE / MISSION */}
+      <section id="mission" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <SectionLabel>{t.timelineLabel}</SectionLabel>
@@ -216,7 +216,7 @@ export default function AboutPage() {
       </section>
 
       {/* FOUNDER */}
-      <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
+      <section id="vincent" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "280px 1fr", gap: 56, alignItems: "start" }}>
           <div style={{ background: C.navy3, border: `1px solid ${C.goldBorder}`, borderRadius: 20, padding: 32, textAlign: "center", position: "sticky", top: 100 }}>
             <div style={{ width: 140, height: 140, borderRadius: "50%", background: C.goldDim, border: `3px solid ${C.goldBorder}`, margin: "0 auto 20px", display: "flex", alignItems: "center", justifyContent: "center" }}>

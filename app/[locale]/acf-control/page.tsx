@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { useLocale } from "next-intl";
+import Link from "next/link";
 import Footer from "../components/Footer";
 import AIAgent from "../components/AIAgent";
 
@@ -716,12 +717,11 @@ export default function ACFControlPage() {
         .fade-up { opacity: 0; animation: fadeUp .6s cubic-bezier(.16,1,.3,1) forwards; animation-delay: .1s; }
         .gold-glow:hover { box-shadow: 0 0 20px rgba(201,168,76,.2); }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        a { text-decoration: none; color: inherit; }
       `}</style>
 
       {/* ━━━ NAV ━━━ */}
       <nav style={{
-        position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: 72,
+        position: "fixed", top: 0, left: 0, right: 0, zIndex: 800, height: 72,
         background: "rgba(5,12,26,.92)", backdropFilter: "blur(24px)",
         borderBottom: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center",
       }}>
@@ -737,17 +737,17 @@ export default function ACFControlPage() {
             </div>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
-            <a href={`/${locale}/`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{t.navHome}</a>
+            <Link href={`/${locale}/`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{t.navHome}</Link>
             {navLinks.map(l => (
               <a key={l.href} href={`#${l.href}`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
                 onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l.label}</a>
             ))}
-            <a href={`/${locale}/contact`} className="gold-glow" style={{
+            <Link href={`/${locale}/contact`} className="gold-glow" style={{
               background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
               border: "none", padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, cursor: "pointer", transition: "all .3s",
               display: "inline-block", textDecoration: "none",
-            }}>{t.navRequestDemo}</a>
+            }}>{t.navRequestDemo}</Link>
           </div>
         </div>
       </nav>
@@ -772,12 +772,12 @@ export default function ACFControlPage() {
                 {t.heroDesc1}<strong style={{ color: "#fff" }}>{t.heroDescStrong}</strong>{t.heroDesc2}
               </p>
 
-              <div style={{ display: "flex", gap: 12, marginBottom: 32 }}>
-                <a href={`/${locale}/contact`} className="gold-glow" style={{
+              <div style={{ display: "flex", gap: 12, marginBottom: 32, position: "relative", zIndex: 5 }}>
+                <Link href={`/${locale}/contact`} className="gold-glow" style={{
                   background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
                   border: "none", padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, cursor: "pointer", transition: "all .3s",
                   display: "inline-block", textDecoration: "none",
-                }}>{t.heroBookDemo}</a>
+                }}>{t.heroBookDemo}</Link>
                 <button style={{
                   background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
                   padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 500, cursor: "pointer", transition: "all .3s",
@@ -1423,13 +1423,13 @@ export default function ACFControlPage() {
                   ))}
                 </div>
 
-                <a href={`/${locale}/contact`} className="gold-glow" style={{
+                <Link href={`/${locale}/contact`} className="gold-glow" style={{
                   width: "100%", padding: 12, borderRadius: 10, border: "none", fontSize: 13, fontWeight: 700, cursor: "pointer", transition: "all .3s",
                   background: plan.recommended ? `linear-gradient(135deg, ${C.gold}, ${C.gold2})` : C.navy2,
                   color: plan.recommended ? C.navy1 : C.gray2,
                   outline: plan.recommended ? "none" : `1px solid ${C.bd1}`,
                   display: "block", textAlign: "center", textDecoration: "none",
-                }}>{plan.recommended ? t.planRequestDemo : t.planContactUs}</a>
+                }}>{plan.recommended ? t.planRequestDemo : t.planContactUs}</Link>
               </div>
             ))}
           </div>
@@ -1438,14 +1438,14 @@ export default function ACFControlPage() {
           <div style={{ background: C.goldDim, border: `1px solid ${C.goldBorder}`, borderRadius: 16, padding: 24, textAlign: "center" }}>
             <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".14em", marginBottom: 8 }}>{t.partnerLabel}</div>
             <p style={{ fontSize: 13, color: C.gray2, marginBottom: 12 }}>{t.partnerDesc}</p>
-            <a href={`/${locale}/acf-certification`} style={{
+            <Link href={`/${locale}/acf-certification`} style={{
               background: "transparent", border: `1px solid ${C.goldBorder}`, color: C.gold,
               padding: "10px 24px", borderRadius: 10, fontSize: 13, fontWeight: 600, cursor: "pointer", transition: "all .3s",
               display: "inline-block", textDecoration: "none",
             }}
               onMouseEnter={e => { (e.target as HTMLElement).style.background = C.goldDim; }}
               onMouseLeave={e => { (e.target as HTMLElement).style.background = "transparent"; }}
-            >{t.partnerApply}</a>
+            >{t.partnerApply}</Link>
           </div>
         </div>
       </section>
@@ -1480,12 +1480,12 @@ export default function ACFControlPage() {
             {t.ctaDesc1}<strong style={{ color: "#fff" }}>{t.ctaDescStrong}</strong>
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 12 }}>
-            <a href={`/${locale}/contact`} className="gold-glow" style={{
+            <Link href={`/${locale}/contact`} className="gold-glow" style={{
               background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
               border: "none", padding: "16px 36px", borderRadius: 12, fontSize: 15, fontWeight: 700, cursor: "pointer", transition: "all .3s",
               display: "inline-block", textDecoration: "none",
-            }}>{t.ctaDemo}</a>
-            <a href="https://www.acf-score.com/" className="gold-glow" style={{
+            }}>{t.ctaDemo}</Link>
+            <a href="https://www.acf-score.com/" target="_blank" rel="noopener noreferrer" className="gold-glow" style={{
               background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
               padding: "16px 36px", borderRadius: 12, fontSize: 15, fontWeight: 500, cursor: "pointer",
               display: "inline-block", textDecoration: "none",

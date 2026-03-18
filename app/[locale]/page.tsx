@@ -1233,14 +1233,15 @@ document.getElementById('aibtn').addEventListener('click',function(){document.ge
 function closeAI(){document.getElementById('aimodal').classList.remove('open');document.body.style.overflow=''}
 </script>
 <script>
-var REMAP={'/certification':'/acf-certification','/partners':'/acf-partners','/score':'/acf-score','/control':'/acf-control','/partners/login':'/acf-partners','/partners/apply':'/acf-partners','/method':'/standard','/academy':'/acf-certification','/research':'/blog'};
+var REMAP={'/certification':'/acf-certification','/partners':'/acf-partners','/score':'/acf-score','/control':'/acf-control','/partners/login':'/acf-partners','/partners/apply':'/acf-partners','/method':'/standard','/academy':'/acf-certification','/research':'/blog','/privacy':'/legal','/terms':'/legal','/cookies':'/legal'};
 var LOCALES=['en','fr','es','de','it','pt','nl','pl','sv','da','no','fi','zh','ru'];
 document.addEventListener('click',function(e){
   var a=e.target.closest('a');
   if(!a)return;
   var h=a.getAttribute('href');
-  if(!h||h.charAt(0)!=='/')return;
-  if(h.indexOf('http')===0)return;
+  if(!h)return;
+  if(h.indexOf('http')===0){e.preventDefault();window.open(h,'_blank');return;}
+  if(h.charAt(0)!=='/')return;
   if(a.getAttribute('onclick'))return;
   e.preventDefault();
   var parts=h.split('/');

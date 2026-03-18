@@ -264,7 +264,7 @@ export default function ACFContactPage() {
                   { icon: "📊", label: t.quickAction1, href: "https://www.acf-score.com/" },
                   { icon: "🛡️", label: t.quickAction2, href: `/${locale}/acf-certification` },
                   { icon: "🤝", label: t.quickAction3, href: `/${locale}/acf-partners` },
-                  { icon: "📖", label: t.quickAction4, href: `/${locale}/` },
+                  { icon: "📖", label: t.quickAction4, href: `/${locale}/standard` },
                 ].map(a => (
                   <a key={a.label} href={a.href} style={{
                     display: "flex", alignItems: "center", gap: 12, padding: "12px 14px",
