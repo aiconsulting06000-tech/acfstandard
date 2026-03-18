@@ -16,7 +16,7 @@ WHAT YOU KNOW:
 - 4 maturity levels: Level 0 Classic automation, Level 1 Assisted agents, Level 2 Governed agents (recommended), Level 3 Supervised autonomy
 - 3 products:
   * ACF Score (acf-score.com): free online diagnostic to evaluate your AI governance maturity in 10 minutes
-  * ACF Control: real-time SaaS platform to monitor, supervise, and control all agents in production — dashboards, alerts, emergency stop, decision traceability, compliance tracking
+  * ACF Control: real-time governance platform to monitor, supervise, and control all agents in production — dashboards, alerts, emergency stop, decision traceability, compliance tracking
   * ACF Certification: 3 levels to prove your organization meets governance standards
 - Emergency stop: 3-level protocol built into ACF Control — automated alerts, supervised pause, full stop
 - Partners: ACF works through a network of certified partners (consultants, integrators) who can audit and implement in your organization
