@@ -1,9 +1,6 @@
 "use client"
-import { useLocale } from 'next-intl'
+import { useLocale, useMessages } from 'next-intl'
 import AIAgent from "./components/AIAgent"
-import messagesEn from '../../messages/en.json'
-import messagesFr from '../../messages/fr.json'
-const messagesMap: Record<string, any> = { en: messagesEn, fr: messagesFr }
 const buildHTML = (locale: string, m: Record<string, any>) => `<!DOCTYPE html>
 <html lang="${locale}">
 <head>
@@ -1652,7 +1649,7 @@ document.addEventListener('click',function(e){
 
 export default function Home() {
   const locale = useLocale()
-  const m = messagesMap[locale] || messagesMap.en
+  const m = useMessages() as Record<string, any>
   return (
     <>
       <iframe
