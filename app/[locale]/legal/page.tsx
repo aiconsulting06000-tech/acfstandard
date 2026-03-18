@@ -21,7 +21,7 @@ type Section = { id: string; label: string; content: { title: string; text: stri
 const sections_fr: Section[] = [
   {
     id: "mentions",
-    label: "Mentions Légales",
+    label: "Mentions légales",
     content: [
       { title: "Éditeur du site", text: "Le site acfstandard.vercel.app est édité par AI CONSULTING, SASU au capital variable, dont le siège social est situé au 38 Bis Boulevard Victor Hugo, 06000 Nice, France. Immatriculation RCS Nice : 909116329. Numéro de TVA intracommunautaire : FR96909116329. Directeur de la publication : Vincent DORANGE." },
       { title: "Hébergement", text: "Le site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis. Site web : vercel.com." },
@@ -32,7 +32,7 @@ const sections_fr: Section[] = [
   },
   {
     id: "cgu",
-    label: "Conditions d'Utilisation",
+    label: "Conditions d'utilisation",
     content: [
       { title: "Objet", text: "Les présentes Conditions Générales d'Utilisation (CGU) ont pour objet de définir les modalités et conditions d'accès et d'utilisation du site acfstandard.vercel.app et de ses services associés, incluant notamment le diagnostic ACF Score® et les informations relatives à l'Agentic Commerce Framework®." },
       { title: "Accès au site", text: "L'accès au site est gratuit. Le diagnostic ACF Score® est accessible sans inscription et sans frais. Certains services premium (ACF Control, Certification, Accompagnement) pourront faire l'objet de conditions particulières et de tarifications spécifiques communiquées au moment de la souscription." },
@@ -44,7 +44,7 @@ const sections_fr: Section[] = [
   },
   {
     id: "confidentialite",
-    label: "Politique de Confidentialité",
+    label: "Politique de confidentialité",
     content: [
       { title: "Responsable du traitement", text: "Le responsable du traitement des données personnelles est AI CONSULTING, SASU, 38 Bis Boulevard Victor Hugo, 06000 Nice, France. Contact : via la page Contact du site." },
       { title: "Données collectées", text: "Dans le cadre du diagnostic ACF Score® : les réponses aux questions du questionnaire sont traitées en temps réel pour calculer votre score et ne sont pas stockées sans votre consentement explicite. Si vous fournissez votre adresse email : celle-ci est utilisée uniquement pour l'envoi de votre rapport PDF et, avec votre accord, pour des communications relatives à l'ACF®." },
@@ -57,7 +57,7 @@ const sections_fr: Section[] = [
   },
   {
     id: "cookies",
-    label: "Politique Cookies",
+    label: "Politique cookies",
     content: [
       { title: "Qu'est-ce qu'un cookie ?", text: "Un cookie est un petit fichier texte stocké sur votre terminal (ordinateur, tablette, smartphone) lors de votre visite sur un site web. Il permet au site de mémoriser des informations sur votre visite." },
       { title: "Cookies utilisés", text: "Le site utilise exclusivement des cookies techniques essentiels au fonctionnement du site (gestion de session, préférences de langue, affichage). Ces cookies ne nécessitent pas votre consentement préalable car ils sont strictement nécessaires à la fourniture du service." },
