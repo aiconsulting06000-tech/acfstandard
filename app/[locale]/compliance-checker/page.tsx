@@ -31,6 +31,80 @@ const ui = {
     heroDesc: "Evaluate your organization's compliance with the Agentic Commerce Framework® across its 4 founding principles. Identify gaps, assess risks, and get actionable recommendations in 5 minutes.",
     heroStart: "Start the Assessment →",
     heroInfo: "20 questions · 5 steps · No sign-up required",
+    /* ── Profile step ── */
+    profileTitle: "Your Organization Profile",
+    profileDesc: "Help us contextualize the assessment by answering a few quick questions about your organization.",
+    profileQuestions: [
+      {
+        id: "orgSize",
+        q: "What is the size of your organization?",
+        options: [
+          { value: "startup", label: "Startup (1-50 employees)" },
+          { value: "sme", label: "SME (51-250 employees)" },
+          { value: "midmarket", label: "Mid-market (251-1,000 employees)" },
+          { value: "enterprise", label: "Enterprise (1,000+ employees)" },
+        ],
+      },
+      {
+        id: "sector",
+        q: "What is your primary industry sector?",
+        options: [
+          { value: "finance", label: "Finance & Banking" },
+          { value: "health", label: "Healthcare & Pharma" },
+          { value: "retail", label: "Retail & E-commerce" },
+          { value: "tech", label: "Technology & SaaS" },
+          { value: "manufacturing", label: "Manufacturing & Logistics" },
+          { value: "public", label: "Public Sector & Education" },
+          { value: "other", label: "Other" },
+        ],
+      },
+      {
+        id: "aiMaturity",
+        q: "What is your current level of AI agent deployment?",
+        options: [
+          { value: "exploring", label: "Exploring — no agents in production yet" },
+          { value: "pilot", label: "Piloting — 1-2 agents in limited scope" },
+          { value: "scaling", label: "Scaling — multiple agents across departments" },
+          { value: "advanced", label: "Advanced — agents making autonomous decisions daily" },
+        ],
+      },
+      {
+        id: "role",
+        q: "What is your role regarding AI systems?",
+        options: [
+          { value: "deployer", label: "Deployer — we use AI systems built by others" },
+          { value: "provider", label: "Provider — we build AI systems for others" },
+          { value: "both", label: "Both — we build and deploy AI systems" },
+          { value: "evaluator", label: "Evaluator — we audit/assess AI systems" },
+        ],
+      },
+    ],
+    profileNext: "Continue to Assessment →",
+    profileRequired: "Please answer all questions to continue",
+    profileContext: "Assessment Context",
+    profileLabels: {
+      orgSize: "Organization Size",
+      sector: "Industry Sector",
+      aiMaturity: "AI Maturity",
+      role: "Role",
+    },
+    profileValues: {
+      startup: "Startup (1-50)", sme: "SME (51-250)", midmarket: "Mid-market (251-1K)", enterprise: "Enterprise (1K+)",
+      finance: "Finance & Banking", health: "Healthcare", retail: "Retail & E-commerce", tech: "Technology & SaaS", manufacturing: "Manufacturing", public: "Public Sector", other: "Other",
+      exploring: "Exploring", pilot: "Piloting", scaling: "Scaling", advanced: "Advanced",
+      deployer: "Deployer", provider: "Provider", both: "Provider & Deployer", evaluator: "Evaluator",
+    },
+    sectorWarnings: {
+      finance: "⚠️ High-risk sector under EU AI Act — enhanced due diligence required for financial AI systems.",
+      health: "⚠️ High-risk sector under EU AI Act — strict requirements for AI in healthcare decisions.",
+      public: "⚠️ Public sector AI deployments face additional transparency and accountability requirements.",
+    },
+    maturityNote: {
+      exploring: "Your organization is in early stages. Focus on building governance foundations before scaling AI agents.",
+      pilot: "Good time to establish governance frameworks. Build compliance into your pilot programs from day one.",
+      scaling: "Critical phase — scaling without governance creates compounding risk. Prioritize ACF implementation now.",
+      advanced: "Advanced deployments require mature governance. Any gaps represent significant operational risk.",
+    },
     stepLabels: [
       "Decision Governance",
       "Non-Delegable Zones",
@@ -301,6 +375,80 @@ const ui = {
     heroDesc: "Évaluez la conformité de votre organisation avec l'Agentic Commerce Framework® à travers ses 4 principes fondateurs. Identifiez les lacunes, évaluez les risques et obtenez des recommandations concrètes en 5 minutes.",
     heroStart: "Commencer l'évaluation →",
     heroInfo: "20 questions · 5 étapes · Aucune inscription requise",
+    /* ── Profile step ── */
+    profileTitle: "Profil de votre organisation",
+    profileDesc: "Aidez-nous à contextualiser l'évaluation en répondant à quelques questions rapides sur votre organisation.",
+    profileQuestions: [
+      {
+        id: "orgSize",
+        q: "Quelle est la taille de votre organisation ?",
+        options: [
+          { value: "startup", label: "Startup (1-50 employés)" },
+          { value: "sme", label: "PME (51-250 employés)" },
+          { value: "midmarket", label: "ETI (251-1 000 employés)" },
+          { value: "enterprise", label: "Grande entreprise (1 000+ employés)" },
+        ],
+      },
+      {
+        id: "sector",
+        q: "Quel est votre secteur d'activité principal ?",
+        options: [
+          { value: "finance", label: "Finance & banque" },
+          { value: "health", label: "Santé & pharma" },
+          { value: "retail", label: "Retail & e-commerce" },
+          { value: "tech", label: "Technologie & SaaS" },
+          { value: "manufacturing", label: "Industrie & logistique" },
+          { value: "public", label: "Secteur public & éducation" },
+          { value: "other", label: "Autre" },
+        ],
+      },
+      {
+        id: "aiMaturity",
+        q: "Quel est votre niveau actuel de déploiement d'agents IA ?",
+        options: [
+          { value: "exploring", label: "Exploration — aucun agent en production" },
+          { value: "pilot", label: "Pilote — 1-2 agents en périmètre limité" },
+          { value: "scaling", label: "Passage à l'échelle — plusieurs agents dans différents services" },
+          { value: "advanced", label: "Avancé — des agents prennent des décisions autonomes quotidiennement" },
+        ],
+      },
+      {
+        id: "role",
+        q: "Quel est votre rôle par rapport aux systèmes d'IA ?",
+        options: [
+          { value: "deployer", label: "Déployeur — nous utilisons des systèmes d'IA conçus par d'autres" },
+          { value: "provider", label: "Fournisseur — nous concevons des systèmes d'IA pour d'autres" },
+          { value: "both", label: "Les deux — nous concevons et déployons des systèmes d'IA" },
+          { value: "evaluator", label: "Évaluateur — nous auditons/évaluons des systèmes d'IA" },
+        ],
+      },
+    ],
+    profileNext: "Continuer vers l'évaluation →",
+    profileRequired: "Veuillez répondre à toutes les questions pour continuer",
+    profileContext: "Contexte de l'évaluation",
+    profileLabels: {
+      orgSize: "Taille de l'organisation",
+      sector: "Secteur d'activité",
+      aiMaturity: "Maturité IA",
+      role: "Rôle",
+    },
+    profileValues: {
+      startup: "Startup (1-50)", sme: "PME (51-250)", midmarket: "ETI (251-1K)", enterprise: "Grande entreprise (1K+)",
+      finance: "Finance & banque", health: "Santé & pharma", retail: "Retail & e-commerce", tech: "Technologie & SaaS", manufacturing: "Industrie & logistique", public: "Secteur public", other: "Autre",
+      exploring: "Exploration", pilot: "Pilote", scaling: "Passage à l'échelle", advanced: "Avancé",
+      deployer: "Déployeur", provider: "Fournisseur", both: "Fournisseur & déployeur", evaluator: "Évaluateur",
+    },
+    sectorWarnings: {
+      finance: "⚠️ Secteur à haut risque selon l'AI Act — diligence renforcée requise pour les systèmes IA financiers.",
+      health: "⚠️ Secteur à haut risque selon l'AI Act — exigences strictes pour l'IA dans les décisions de santé.",
+      public: "⚠️ Les déploiements IA dans le secteur public font face à des exigences supplémentaires de transparence.",
+    },
+    maturityNote: {
+      exploring: "Votre organisation est en phase de découverte. Concentrez-vous sur les fondations de gouvernance avant de passer à l'échelle.",
+      pilot: "C'est le bon moment pour établir des cadres de gouvernance. Intégrez la conformité dès vos programmes pilotes.",
+      scaling: "Phase critique — passer à l'échelle sans gouvernance crée un risque cumulatif. Priorisez l'implémentation ACF maintenant.",
+      advanced: "Les déploiements avancés nécessitent une gouvernance mature. Toute lacune représente un risque opérationnel significatif.",
+    },
     stepLabels: [
       "Gouvernance Décisionnelle",
       "Zones Non Délégables",
@@ -566,6 +714,13 @@ const ui = {
 /* ═══════════════════════════════════════════════════════════════
    TYPES
    ═══════════════════════════════════════════════════════════════ */
+interface Profile {
+  orgSize: string;
+  sector: string;
+  aiMaturity: string;
+  role: string;
+}
+
 interface Results {
   answers: number[];
   principleScores: number[];
@@ -573,6 +728,7 @@ interface Results {
   overall: number;
   riskLevel: string;
   date: string;
+  profile?: Profile;
 }
 
 const QUESTIONS_PER_STEP = 4;
@@ -659,12 +815,14 @@ export default function ComplianceChecker() {
   const locale = useLocale();
   const t = locale === "fr" ? ui.fr : ui.en;
 
-  const [phase, setPhase] = useState<"intro" | "quiz" | "results">("intro");
+  const [phase, setPhase] = useState<"intro" | "profile" | "quiz" | "results">("intro");
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<number[]>(new Array(TOTAL_STEPS * QUESTIONS_PER_STEP).fill(-1));
   const [results, setResults] = useState<Results | null>(null);
   const [savedNotice, setSavedNotice] = useState(false);
   const [hasPrevResults, setHasPrevResults] = useState(false);
+  const [profile, setProfile] = useState<Profile>({ orgSize: "", sector: "", aiMaturity: "", role: "" });
+  const [visibleProfileQ, setVisibleProfileQ] = useState(1);
 
   useEffect(() => {
     try {
@@ -684,9 +842,30 @@ export default function ComplianceChecker() {
   }, []);
 
   const startQuiz = () => {
-    setPhase("quiz");
+    setPhase("profile");
+    setProfile({ orgSize: "", sector: "", aiMaturity: "", role: "" });
+    setVisibleProfileQ(1);
     setCurrentStep(0);
     setAnswers(new Array(TOTAL_STEPS * QUESTIONS_PER_STEP).fill(-1));
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleProfileAnswer = (field: keyof Profile, value: string) => {
+    const updated = { ...profile, [field]: value };
+    setProfile(updated);
+    // Progressive reveal: show next question after a short delay
+    const fields: (keyof Profile)[] = ["orgSize", "sector", "aiMaturity", "role"];
+    const currentIdx = fields.indexOf(field);
+    if (currentIdx < fields.length - 1) {
+      setTimeout(() => setVisibleProfileQ(prev => Math.max(prev, currentIdx + 2)), 300);
+    }
+  };
+
+  const profileComplete = profile.orgSize !== "" && profile.sector !== "" && profile.aiMaturity !== "" && profile.role !== "";
+
+  const startAssessment = () => {
+    setPhase("quiz");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const selectAnswer = (qIndex: number, score: number) => {
@@ -709,6 +888,7 @@ export default function ComplianceChecker() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       const r = computeResults(answers);
+      r.profile = profile;
       setResults(r);
       setPhase("results");
       try { localStorage.setItem(STORAGE_KEY, JSON.stringify(r)); } catch {}
@@ -852,6 +1032,97 @@ export default function ComplianceChecker() {
         </main>
       )}
 
+      {/* ═══ PROFILE PHASE ═══ */}
+      {phase === "profile" && (
+        <main className="pt-32 pb-24 px-4">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-10">
+              <span className="text-[10px] font-bold tracking-[.14em] uppercase px-4 py-1.5 rounded-full" style={{ color: C.gold, background: C.goldDim, border: `1px solid ${C.goldBorder}`, fontFamily: "'JetBrains Mono', monospace" }}>
+                {t.stepLabel} 0
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold mt-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                {t.profileTitle}
+              </h2>
+              <p className="text-sm mt-2" style={{ color: C.gray2 }}>{t.profileDesc}</p>
+            </div>
+
+            <div className="space-y-6">
+              {t.profileQuestions.map((pq, idx) => {
+                if (idx >= visibleProfileQ) return null;
+                const field = pq.id as keyof Profile;
+                const currentValue = profile[field];
+                return (
+                  <div
+                    key={pq.id}
+                    className="p-6 rounded-xl border transition-all duration-500"
+                    style={{
+                      background: C.navy2,
+                      borderColor: currentValue ? C.goldBorder : C.bd1,
+                      opacity: 1,
+                      animation: idx === visibleProfileQ - 1 ? "fadeSlideIn .5s ease-out" : undefined,
+                    }}
+                  >
+                    <div className="flex items-start gap-3 mb-4">
+                      <span className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style={{ background: currentValue ? C.gold : C.goldDim, color: currentValue ? C.navy1 : C.gold }}>
+                        {currentValue ? "✓" : idx + 1}
+                      </span>
+                      <h3 className="text-sm sm:text-base font-semibold leading-snug">{pq.q}</h3>
+                    </div>
+                    <div className="space-y-2 ml-10">
+                      {pq.options.map((opt) => {
+                        const selected = currentValue === opt.value;
+                        return (
+                          <button
+                            key={opt.value}
+                            onClick={() => handleProfileAnswer(field, opt.value)}
+                            className="w-full text-left p-3.5 rounded-lg border transition-all duration-200 hover:border-opacity-80"
+                            style={{
+                              background: selected ? "rgba(201,168,76,.1)" : "rgba(255,255,255,.02)",
+                              borderColor: selected ? C.gold : "rgba(255,255,255,.08)",
+                              color: selected ? C.white : C.gray2,
+                            }}
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="flex-shrink-0 w-4 h-4 rounded-full border-2 flex items-center justify-center transition-all duration-200" style={{ borderColor: selected ? C.gold : "rgba(255,255,255,.2)" }}>
+                                {selected && <div className="w-2 h-2 rounded-full" style={{ background: C.gold }} />}
+                              </div>
+                              <span className="text-sm">{opt.label}</span>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Continue button - appears when all profile questions answered */}
+            <div className="mt-10 text-center">
+              {profileComplete ? (
+                <button
+                  onClick={startAssessment}
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-lg text-base font-bold transition-all duration-300 hover:scale-105"
+                  style={{ background: C.gold, color: C.navy1, boxShadow: "0 4px 24px rgba(201,168,76,.35)" }}
+                >
+                  {t.profileNext}
+                </button>
+              ) : (
+                <p className="text-xs" style={{ color: C.gray, fontFamily: "'JetBrains Mono', monospace" }}>{t.profileRequired}</p>
+              )}
+            </div>
+          </div>
+
+          {/* Fade-in animation */}
+          <style>{`
+            @keyframes fadeSlideIn {
+              from { opacity: 0; transform: translateY(20px); }
+              to { opacity: 1; transform: translateY(0); }
+            }
+          `}</style>
+        </main>
+      )}
+
       {/* ═══ QUIZ PHASE ═══ */}
       {phase === "quiz" && (
         <main className="pt-40 pb-24 px-4">
@@ -949,6 +1220,33 @@ export default function ComplianceChecker() {
                 {t.resultsTitle1}<span style={{ color: C.gold }}>{t.resultsTitle2}</span>
               </h1>
             </div>
+
+            {/* Profile Context Card */}
+            {results.profile && results.profile.orgSize && (
+              <div className="p-6 rounded-2xl border mb-8" style={{ background: C.navy2, borderColor: C.bd1 }}>
+                <h2 className="text-sm font-bold tracking-[.12em] uppercase mb-5" style={{ color: C.gray, fontFamily: "'JetBrains Mono', monospace" }}>{t.profileContext}</h2>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
+                  {(["orgSize", "sector", "aiMaturity", "role"] as const).map((field) => (
+                    <div key={field} className="p-3 rounded-lg" style={{ background: "rgba(255,255,255,.03)" }}>
+                      <div className="text-[10px] uppercase tracking-wider mb-1" style={{ color: C.gray }}>{(t.profileLabels as Record<string, string>)[field]}</div>
+                      <div className="text-sm font-semibold" style={{ color: C.gold }}>{(t.profileValues as Record<string, string>)[results.profile![field]] || results.profile![field]}</div>
+                    </div>
+                  ))}
+                </div>
+                {/* Sector warning */}
+                {results.profile.sector && (t.sectorWarnings as Record<string, string>)[results.profile.sector] && (
+                  <div className="p-3 rounded-lg text-sm" style={{ background: "rgba(245,158,11,.08)", borderLeft: `3px solid ${C.amber}`, color: C.gray2 }}>
+                    {(t.sectorWarnings as Record<string, string>)[results.profile.sector]}
+                  </div>
+                )}
+                {/* Maturity note */}
+                {results.profile.aiMaturity && (t.maturityNote as Record<string, string>)[results.profile.aiMaturity] && (
+                  <div className="p-3 rounded-lg text-sm mt-3" style={{ background: "rgba(59,130,246,.08)", borderLeft: `3px solid ${C.blue}`, color: C.gray2 }}>
+                    {(t.maturityNote as Record<string, string>)[results.profile.aiMaturity]}
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* Overall Score Card */}
             <div className="p-8 sm:p-10 rounded-2xl border mb-8 text-center" style={{ background: C.navy2, borderColor: C.goldBorder }}>
