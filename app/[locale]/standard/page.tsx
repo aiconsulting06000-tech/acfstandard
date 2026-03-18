@@ -19,6 +19,250 @@ const C = {
   amber: "#f59e0b", purple: "#8b5cf6",
 };
 
+/* ── Bilingual UI strings ─── */
+const ui = {
+  en: {
+    navTitle: "ACF STANDARD",
+    navSubtitle: "THE GOVERNANCE FRAMEWORK",
+    navHome: "← Home",
+    navFramework: "Framework",
+    navArchitecture: "Architecture",
+    navEcosystem: "Ecosystem",
+    navBlog: "Blog",
+    navCta: "Get Your Score →",
+    heroBadge: "The Governance Standard",
+    heroTitle1: "Agentic Commerce",
+    heroTitle2: "Framework®",
+    heroSubtitle: "Governing decisions in the age of autonomous systems.",
+    heroCta: "Read the Framework ↓",
+    shiftBadge: "The shift",
+    shiftLine1: "Artificial intelligence is no longer just a tool.",
+    shiftLine2: "It is becoming a decision-maker.",
+    shiftP1: "Across industries, autonomous agents are now executing operational decisions in real time — pricing adjustments, procurement orders, customer engagement, logistics routing, risk assessments.",
+    shiftP2pre: "These decisions happen continuously, at machine speed. And in most organizations, ",
+    shiftP2bold: "no governance architecture exists to supervise them.",
+    shiftP3pre: "The result is a new category of risk: ",
+    shiftP3bold: "uncontrolled autonomous decision systems.",
+    shiftP4: "The Agentic Commerce Framework® was created to solve this problem.",
+    stmtLine1: "Autonomous systems do not create chaos.",
+    stmtLine2: "Ungoverned decisions do.",
+    stat1Label: "of organizations have no formal AI governance",
+    stat2Label: "maximum AI Act sanctions or 7% global revenue",
+    stat3Label: "lower correction costs with structured governance",
+    stat4Label: "Level 1 kill switch response time (ACF spec)",
+    gapBadge: "The governance gap",
+    gapTitle: "Organizations spent the last decade adopting AI. Governance models never evolved.",
+    gapP1: "Traditional governance assumes a simple structure: humans decide, systems execute.",
+    gapP2pre: "Agentic systems invert this relationship. Machines now execute ",
+    gapP2bold: "and decide",
+    gapP2post: " within defined parameters.",
+    gapP3: "When this shift occurs without structured governance, organizations lose visibility and control over their own operational decisions. The consequences are not theoretical:",
+    gapList: ["Untraceable autonomous decisions", "Conflicting agent optimizations", "Operational drift over time", "Regulatory exposure under emerging AI regulation", "Strategic dependence on external platforms"],
+    fwBadge: "The framework",
+    fwTitle: "The first governance architecture for autonomous decision systems.",
+    fwP1pre: "The Agentic Commerce Framework® does not control AI models. It governs the ",
+    fwP1bold: "decisions",
+    fwP1post: " they execute.",
+    fwP2: "The framework defines how organizations:",
+    fwList: ["Structure decision authority", "Define non-delegable zones", "Constrain autonomous behavior", "Maintain real-time oversight", "Preserve human sovereignty over critical actions"],
+    fwP3: "ACF creates a structured decision governance layer between human leadership and machine execution.",
+    compWithout: "WITHOUT GOVERNANCE",
+    compWith: "WITH ACF® GOVERNANCE",
+    compWithoutLabels: ["Opacity", "Drift", "Conflict", "Exposure"],
+    compWithLabels: ["Traceable", "Reversible", "Accountable", "Sovereign"],
+    compWithoutSvg: "UNCONTROLLED DECISIONS",
+    compWithSvg: "GOVERNED DECISIONS",
+    archBadge: "Architecture",
+    archTitle: "A four-layer governance architecture.",
+    archSubtitle: "Together they create a continuous control system for autonomous operations.",
+    archL1Name: "Governance",
+    archL1Sub: "Who holds authority",
+    archL1Text: "The governance layer establishes decision sovereignty. Organizations define who retains final authority, which decisions can be delegated, which remain exclusively human. At this level, companies formalize their Agentic Constitution — the foundational document establishing the principles of AI governance.",
+    archL2Name: "Policy",
+    archL2Sub: "What agents are allowed to do",
+    archL2Text: "Policy defines the behavioral boundaries of autonomous systems. It translates governance principles into operational rules — financial thresholds, time-based constraints, ethical limits, sector-specific regulatory policies. Policies ensure that agents operate within clearly defined decision boundaries.",
+    archL3Name: "System",
+    archL3Sub: "How decisions are executed",
+    archL3Text: "The system layer governs the technical execution environment. Every autonomous action remains observable, interruptible and auditable — through decision traceability, multi-agent coordination, and layered kill-switch mechanisms. The objective is not to slow agents down. It is to ensure they remain governable at machine speed.",
+    archL4Name: "Supervision",
+    archL4Sub: "How organizations maintain continuous oversight",
+    archL4Text: "Governance is not a one-time configuration. It is an ongoing operational discipline. The supervision layer introduces continuous monitoring, incident response and governance reviews. Supervision ensures that agent systems evolve without eroding control.",
+    centralLine1: "AI automates execution.",
+    centralLine2: "ACF governs decisions.",
+    centralP: "Without governance, autonomous systems create opacity. With governance, they become scalable instruments of strategic control.",
+    loopBadge: "Operational discipline",
+    loopTitle: "The Agent Governance Loop",
+    loopSubtitle: "Governance is not configuration. It is a continuous operational loop — define, constrain, execute, monitor, intervene, improve. Then loop again.",
+    ecoBadge: "The ecosystem",
+    ecoTitle: "ACF Operating System",
+    ecoSubtitle: "Five integrated tools. One closed-loop system. Diagnose → Train → Monitor → Certify → Scale.",
+    ecoScore: "Rapid diagnostic measuring decision sovereignty and governance maturity.",
+    ecoControl: "Real-time platform for supervising autonomous systems.",
+    ecoAcademy: "Training for executives and operators governing autonomous systems.",
+    ecoCert: "ACF TRUST™ and ACF CERTIFIED labels validating governance maturity.",
+    questionBadge: "A new operational discipline",
+    questionP1: "The transition to autonomous systems is not a technology shift. It is a governance shift.",
+    questionP2: "Organizations must evolve from managing software to governing decision systems.",
+    questionP3: "The Agentic Commerce Framework® provides the structure required to do so.",
+    questionPre: "Because in the age of autonomous systems,\nthe most important question is no longer:",
+    questionOld: "\"What can AI do?\"",
+    questionNew1: "\"Who governs the decisions ",
+    questionNew2: "it makes",
+    questionNew3: "?\"",
+    ctaAssess: "Assess your governance →",
+    ctaResearch: "Read the research",
+    // SVG text in HeroVisualization
+    svgHumanAuthority: "HUMAN AUTHORITY",
+    svgHumanAuthoritySub: "Leadership · Strategy · Accountability",
+    svgL1: "GOVERNANCE",
+    svgL1Sub: "Who decides · Authority · Constitution",
+    svgL2: "POLICY",
+    svgL2Sub: "Rules · Constraints · Ethical guardrails",
+    svgL3: "SYSTEM",
+    svgL3Sub: "Agents · Traceability · Kill switch",
+    svgL4: "SUPERVISION",
+    svgL4Sub: "Monitoring · Incidents · Sovereignty",
+    svgMachineSpeed: "MACHINE-SPEED EXECUTION",
+    // GovernanceLoopSVG
+    loopDefine: "DEFINE", loopDefineSub: "Authority",
+    loopConstrain: "CONSTRAIN", loopConstrainSub: "Rules",
+    loopExecute: "EXECUTE", loopExecuteSub: "Agents",
+    loopMonitor: "MONITOR", loopMonitorSub: "Drift",
+    loopIntervene: "INTERVENE", loopInterveneSub: "Override",
+    loopImprove: "IMPROVE", loopImproveSub: "Evolve",
+    loopCenter1: "CONTINUOUS",
+    loopCenter2: "LOOP",
+    // EcosystemFlowSVG
+    ecoFlowScore: "Score", ecoFlowScoreAction: "Diagnose",
+    ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "Train",
+    ecoFlowControl: "Control", ecoFlowControlAction: "Monitor",
+    ecoFlowCert: "Certification", ecoFlowCertAction: "Certify",
+    ecoFlowPartners: "Partners", ecoFlowPartnersAction: "Scale",
+    ecoFlowClosedLoop: "CLOSED LOOP",
+  },
+  fr: {
+    navTitle: "ACF STANDARD",
+    navSubtitle: "LE CADRE DE GOUVERNANCE",
+    navHome: "← Accueil",
+    navFramework: "Framework",
+    navArchitecture: "Architecture",
+    navEcosystem: "Écosystème",
+    navBlog: "Blog",
+    navCta: "Votre Score →",
+    heroBadge: "Le Standard de Gouvernance",
+    heroTitle1: "Agentic Commerce",
+    heroTitle2: "Framework®",
+    heroSubtitle: "Gouverner les décisions à l'ère des systèmes autonomes.",
+    heroCta: "Lire le Framework ↓",
+    shiftBadge: "Le tournant",
+    shiftLine1: "L'intelligence artificielle n'est plus un simple outil.",
+    shiftLine2: "Elle devient un décideur.",
+    shiftP1: "Dans tous les secteurs, des agents autonomes exécutent désormais des décisions opérationnelles en temps réel — ajustements de prix, commandes d'approvisionnement, engagement client, routage logistique, évaluations des risques.",
+    shiftP2pre: "Ces décisions se produisent en continu, à la vitesse des machines. Et dans la plupart des organisations, ",
+    shiftP2bold: "aucune architecture de gouvernance n'existe pour les superviser.",
+    shiftP3pre: "Le résultat est une nouvelle catégorie de risque : ",
+    shiftP3bold: "des systèmes de décision autonomes non contrôlés.",
+    shiftP4: "L'Agentic Commerce Framework® a été créé pour résoudre ce problème.",
+    stmtLine1: "Les systèmes autonomes ne créent pas le chaos.",
+    stmtLine2: "Les décisions non gouvernées, si.",
+    stat1Label: "des organisations n'ont aucune gouvernance IA formelle",
+    stat2Label: "sanctions maximales AI Act ou 7 % du CA mondial",
+    stat3Label: "coûts de correction réduits avec une gouvernance structurée",
+    stat4Label: "temps de réponse du kill switch Niveau 1 (spéc. ACF)",
+    gapBadge: "Le déficit de gouvernance",
+    gapTitle: "Les organisations ont passé la dernière décennie à adopter l'IA. Les modèles de gouvernance n'ont jamais évolué.",
+    gapP1: "La gouvernance traditionnelle repose sur une structure simple : les humains décident, les systèmes exécutent.",
+    gapP2pre: "Les systèmes agentiques inversent cette relation. Les machines exécutent désormais ",
+    gapP2bold: "et décident",
+    gapP2post: " dans des paramètres définis.",
+    gapP3: "Lorsque ce basculement se produit sans gouvernance structurée, les organisations perdent la visibilité et le contrôle sur leurs propres décisions opérationnelles. Les conséquences ne sont pas théoriques :",
+    gapList: ["Décisions autonomes intraçables", "Optimisations conflictuelles entre agents", "Dérive opérationnelle dans le temps", "Exposition réglementaire face aux réglementations IA émergentes", "Dépendance stratégique envers des plateformes externes"],
+    fwBadge: "Le framework",
+    fwTitle: "La première architecture de gouvernance pour les systèmes de décision autonomes.",
+    fwP1pre: "L'Agentic Commerce Framework® ne contrôle pas les modèles d'IA. Il gouverne les ",
+    fwP1bold: "décisions",
+    fwP1post: " qu'ils exécutent.",
+    fwP2: "Le framework définit comment les organisations :",
+    fwList: ["Structurent l'autorité décisionnelle", "Définissent les zones non déléguables", "Encadrent le comportement autonome", "Maintiennent une supervision en temps réel", "Préservent la souveraineté humaine sur les actions critiques"],
+    fwP3: "ACF crée une couche structurée de gouvernance décisionnelle entre le leadership humain et l'exécution machine.",
+    compWithout: "SANS GOUVERNANCE",
+    compWith: "AVEC LA GOUVERNANCE ACF®",
+    compWithoutLabels: ["Opacité", "Dérive", "Conflit", "Exposition"],
+    compWithLabels: ["Traçable", "Réversible", "Responsable", "Souverain"],
+    compWithoutSvg: "DÉCISIONS NON CONTRÔLÉES",
+    compWithSvg: "DÉCISIONS GOUVERNÉES",
+    archBadge: "Architecture",
+    archTitle: "Une architecture de gouvernance en quatre couches.",
+    archSubtitle: "Ensemble, elles créent un système de contrôle continu pour les opérations autonomes.",
+    archL1Name: "Gouvernance",
+    archL1Sub: "Qui détient l'autorité",
+    archL1Text: "La couche de gouvernance établit la souveraineté décisionnelle. Les organisations définissent qui conserve l'autorité finale, quelles décisions peuvent être déléguées, lesquelles restent exclusivement humaines. À ce niveau, les entreprises formalisent leur Constitution Agentique — le document fondateur établissant les principes de la gouvernance IA.",
+    archL2Name: "Politique",
+    archL2Sub: "Ce que les agents sont autorisés à faire",
+    archL2Text: "La politique définit les limites comportementales des systèmes autonomes. Elle traduit les principes de gouvernance en règles opérationnelles — seuils financiers, contraintes temporelles, limites éthiques, politiques réglementaires sectorielles. Les politiques garantissent que les agents opèrent dans des périmètres décisionnels clairement définis.",
+    archL3Name: "Système",
+    archL3Sub: "Comment les décisions sont exécutées",
+    archL3Text: "La couche système gouverne l'environnement d'exécution technique. Chaque action autonome reste observable, interruptible et auditable — grâce à la traçabilité des décisions, la coordination multi-agents et les mécanismes de kill switch à plusieurs niveaux. L'objectif n'est pas de ralentir les agents. C'est de s'assurer qu'ils restent gouvernables à la vitesse machine.",
+    archL4Name: "Supervision",
+    archL4Sub: "Comment les organisations maintiennent une surveillance continue",
+    archL4Text: "La gouvernance n'est pas une configuration ponctuelle. C'est une discipline opérationnelle continue. La couche de supervision introduit la surveillance continue, la réponse aux incidents et les revues de gouvernance. La supervision garantit que les systèmes d'agents évoluent sans éroder le contrôle.",
+    centralLine1: "L'IA automatise l'exécution.",
+    centralLine2: "ACF gouverne les décisions.",
+    centralP: "Sans gouvernance, les systèmes autonomes créent de l'opacité. Avec une gouvernance, ils deviennent des instruments évolutifs de contrôle stratégique.",
+    loopBadge: "Discipline opérationnelle",
+    loopTitle: "La Boucle de Gouvernance des Agents",
+    loopSubtitle: "La gouvernance n'est pas une configuration. C'est une boucle opérationnelle continue — définir, encadrer, exécuter, surveiller, intervenir, améliorer. Puis recommencer.",
+    ecoBadge: "L'écosystème",
+    ecoTitle: "Système Opérationnel ACF",
+    ecoSubtitle: "Cinq outils intégrés. Un système en boucle fermée. Diagnostiquer → Former → Surveiller → Certifier → Déployer.",
+    ecoScore: "Diagnostic rapide mesurant la souveraineté décisionnelle et la maturité de gouvernance.",
+    ecoControl: "Plateforme temps réel pour la supervision des systèmes autonomes.",
+    ecoAcademy: "Formation pour les dirigeants et opérateurs gouvernant les systèmes autonomes.",
+    ecoCert: "Labels ACF TRUST™ et ACF CERTIFIED validant la maturité de gouvernance.",
+    questionBadge: "Une nouvelle discipline opérationnelle",
+    questionP1: "La transition vers les systèmes autonomes n'est pas un changement technologique. C'est un changement de gouvernance.",
+    questionP2: "Les organisations doivent passer de la gestion de logiciels à la gouvernance de systèmes décisionnels.",
+    questionP3: "L'Agentic Commerce Framework® fournit la structure nécessaire pour y parvenir.",
+    questionPre: "Car à l'ère des systèmes autonomes,\nla question la plus importante n'est plus :",
+    questionOld: "« Que peut faire l'IA ? »",
+    questionNew1: "« Qui gouverne les décisions ",
+    questionNew2: "qu'elle prend",
+    questionNew3: " ? »",
+    ctaAssess: "Évaluez votre gouvernance →",
+    ctaResearch: "Lire la recherche",
+    // SVG text in HeroVisualization
+    svgHumanAuthority: "AUTORITÉ HUMAINE",
+    svgHumanAuthoritySub: "Leadership · Stratégie · Responsabilité",
+    svgL1: "GOUVERNANCE",
+    svgL1Sub: "Qui décide · Autorité · Constitution",
+    svgL2: "POLITIQUE",
+    svgL2Sub: "Règles · Contraintes · Garde-fous éthiques",
+    svgL3: "SYSTÈME",
+    svgL3Sub: "Agents · Traçabilité · Kill switch",
+    svgL4: "SUPERVISION",
+    svgL4Sub: "Surveillance · Incidents · Souveraineté",
+    svgMachineSpeed: "EXÉCUTION MACHINE",
+    // GovernanceLoopSVG
+    loopDefine: "DÉFINIR", loopDefineSub: "Autorité",
+    loopConstrain: "ENCADRER", loopConstrainSub: "Règles",
+    loopExecute: "EXÉCUTER", loopExecuteSub: "Agents",
+    loopMonitor: "SURVEILLER", loopMonitorSub: "Dérive",
+    loopIntervene: "INTERVENIR", loopInterveneSub: "Reprise",
+    loopImprove: "AMÉLIORER", loopImproveSub: "Évoluer",
+    loopCenter1: "BOUCLE",
+    loopCenter2: "CONTINUE",
+    // EcosystemFlowSVG
+    ecoFlowScore: "Score", ecoFlowScoreAction: "Diagnostiquer",
+    ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "Former",
+    ecoFlowControl: "Control", ecoFlowControlAction: "Surveiller",
+    ecoFlowCert: "Certification", ecoFlowCertAction: "Certifier",
+    ecoFlowPartners: "Partenaires", ecoFlowPartnersAction: "Déployer",
+    ecoFlowClosedLoop: "BOUCLE FERMÉE",
+  },
+};
+
+type UiStrings = typeof ui.en;
+
 /* ── Scroll-triggered reveal ─── */
 function useReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -69,7 +313,7 @@ function AnimatedStat({ value, prefix = "", suffix = "", duration = 1800 }: { va
    HERO ANIMATED VISUALIZATION — The signature visual
    4 layers floating with pulsing energy lines between them
    ══════════════════════════════════════════════════════════ */
-function HeroVisualization() {
+function HeroVisualization({ t }: { t: UiStrings }) {
   return (
     <svg viewBox="0 0 400 480" fill="none" style={{ width: "100%", maxWidth: 460, height: "auto" }}>
       <defs>
@@ -93,8 +337,8 @@ function HeroVisualization() {
       </circle>
 
       {/* HUMAN AUTHORITY label */}
-      <text x="200" y="32" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="11" fontWeight="700" fill="#fff" opacity=".5" letterSpacing="2">HUMAN AUTHORITY</text>
-      <text x="200" y="48" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="8" fill={C.gray} opacity=".5">Leadership · Strategy · Accountability</text>
+      <text x="200" y="32" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="11" fontWeight="700" fill="#fff" opacity=".5" letterSpacing="2">{t.svgHumanAuthority}</text>
+      <text x="200" y="48" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="8" fill={C.gray} opacity=".5">{t.svgHumanAuthoritySub}</text>
 
       {/* Energy line from top */}
       <line x1="200" y1="58" x2="200" y2="85" stroke="url(#line-pulse)" strokeWidth="1.5">
@@ -107,8 +351,8 @@ function HeroVisualization() {
           <animate attributeName="stroke-opacity" values=".5;1;.5" dur="3s" repeatCount="indefinite" />
         </rect>
         <text x="88" y="116" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gov} opacity=".6" fontWeight="600">L1</text>
-        <text x="112" y="116" fontFamily="'Space Grotesk'" fontSize="14" fill={C.gov} fontWeight="700">GOVERNANCE</text>
-        <text x="112" y="136" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray2} opacity=".7">Who decides · Authority · Constitution</text>
+        <text x="112" y="116" fontFamily="'Space Grotesk'" fontSize="14" fill={C.gov} fontWeight="700">{t.svgL1}</text>
+        <text x="112" y="136" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray2} opacity=".7">{t.svgL1Sub}</text>
       </g>
 
       {/* Pulse line */}
@@ -122,8 +366,8 @@ function HeroVisualization() {
           <animate attributeName="stroke-opacity" values=".5;1;.5" dur="3s" begin=".5s" repeatCount="indefinite" />
         </rect>
         <text x="88" y="208" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.pol} opacity=".6" fontWeight="600">L2</text>
-        <text x="112" y="208" fontFamily="'Space Grotesk'" fontSize="14" fill={C.pol} fontWeight="700">POLICY</text>
-        <text x="112" y="228" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray2} opacity=".7">Rules · Constraints · Ethical guardrails</text>
+        <text x="112" y="208" fontFamily="'Space Grotesk'" fontSize="14" fill={C.pol} fontWeight="700">{t.svgL2}</text>
+        <text x="112" y="228" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray2} opacity=".7">{t.svgL2Sub}</text>
       </g>
 
       {/* Pulse line */}
@@ -137,8 +381,8 @@ function HeroVisualization() {
           <animate attributeName="stroke-opacity" values=".5;1;.5" dur="3s" begin="1s" repeatCount="indefinite" />
         </rect>
         <text x="88" y="300" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.sys} opacity=".6" fontWeight="600">L3</text>
-        <text x="112" y="300" fontFamily="'Space Grotesk'" fontSize="14" fill={C.sys} fontWeight="700">SYSTEM</text>
-        <text x="112" y="320" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray2} opacity=".7">Agents · Traceability · Kill switch</text>
+        <text x="112" y="300" fontFamily="'Space Grotesk'" fontSize="14" fill={C.sys} fontWeight="700">{t.svgL3}</text>
+        <text x="112" y="320" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray2} opacity=".7">{t.svgL3Sub}</text>
       </g>
 
       {/* Pulse line */}
@@ -152,8 +396,8 @@ function HeroVisualization() {
           <animate attributeName="stroke-opacity" values=".5;1;.5" dur="3s" begin="1.5s" repeatCount="indefinite" />
         </rect>
         <text x="88" y="392" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.sup} opacity=".6" fontWeight="600">L4</text>
-        <text x="112" y="392" fontFamily="'Space Grotesk'" fontSize="14" fill={C.sup} fontWeight="700">SUPERVISION</text>
-        <text x="112" y="412" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray2} opacity=".7">Monitoring · Incidents · Sovereignty</text>
+        <text x="112" y="392" fontFamily="'Space Grotesk'" fontSize="14" fill={C.sup} fontWeight="700">{t.svgL4}</text>
+        <text x="112" y="412" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray2} opacity=".7">{t.svgL4Sub}</text>
       </g>
 
       {/* Energy line to bottom */}
@@ -162,7 +406,7 @@ function HeroVisualization() {
       </line>
 
       {/* MACHINE-SPEED EXECUTION label */}
-      <text x="200" y="470" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="11" fontWeight="700" fill="#fff" opacity=".5" letterSpacing="2">MACHINE-SPEED EXECUTION</text>
+      <text x="200" y="470" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="11" fontWeight="700" fill="#fff" opacity=".5" letterSpacing="2">{t.svgMachineSpeed}</text>
 
       {/* Floating particles */}
       {[0,1,2,3,4,5,6,7].map(i => (
@@ -178,15 +422,15 @@ function HeroVisualization() {
 /* ══════════════════════════════════════════════════════════
    GOVERNANCE LOOP — Animated hexagonal loop
    ══════════════════════════════════════════════════════════ */
-function GovernanceLoopSVG() {
+function GovernanceLoopSVG({ t }: { t: UiStrings }) {
   const { ref, vis } = useReveal();
   const steps = [
-    { label: "DEFINE", sub: "Authority", color: C.gov, angle: -90 },
-    { label: "CONSTRAIN", sub: "Rules", color: C.pol, angle: -30 },
-    { label: "EXECUTE", sub: "Agents", color: C.sys, angle: 30 },
-    { label: "MONITOR", sub: "Drift", color: C.sup, angle: 90 },
-    { label: "INTERVENE", sub: "Override", color: C.amber, angle: 150 },
-    { label: "IMPROVE", sub: "Evolve", color: C.gold, angle: 210 },
+    { label: t.loopDefine, sub: t.loopDefineSub, color: C.gov, angle: -90 },
+    { label: t.loopConstrain, sub: t.loopConstrainSub, color: C.pol, angle: -30 },
+    { label: t.loopExecute, sub: t.loopExecuteSub, color: C.sys, angle: 30 },
+    { label: t.loopMonitor, sub: t.loopMonitorSub, color: C.sup, angle: 90 },
+    { label: t.loopIntervene, sub: t.loopInterveneSub, color: C.amber, angle: 150 },
+    { label: t.loopImprove, sub: t.loopImproveSub, color: C.gold, angle: 210 },
   ];
   const cx = 200, cy = 200, r = 140;
   return (
@@ -240,8 +484,8 @@ function GovernanceLoopSVG() {
 
         {/* Center label */}
         <text x={cx} y={cy - 6} textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="11" fontWeight="800" fill={C.gold} opacity=".6">ACF®</text>
-        <text x={cx} y={cy + 8} textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill={C.gray} opacity=".5">CONTINUOUS</text>
-        <text x={cx} y={cy + 18} textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill={C.gray} opacity=".5">LOOP</text>
+        <text x={cx} y={cy + 8} textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill={C.gray} opacity=".5">{t.loopCenter1}</text>
+        <text x={cx} y={cy + 18} textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="7" fill={C.gray} opacity=".5">{t.loopCenter2}</text>
       </svg>
     </div>
   );
@@ -250,14 +494,14 @@ function GovernanceLoopSVG() {
 /* ══════════════════════════════════════════════════════════
    ECOSYSTEM FLOW — Animated horizontal pipeline
    ══════════════════════════════════════════════════════════ */
-function EcosystemFlowSVG() {
+function EcosystemFlowSVG({ t }: { t: UiStrings }) {
   const { ref, vis } = useReveal();
   const products = [
-    { name: "Score", action: "Diagnose", color: C.sup, icon: "◉" },
-    { name: "Academy", action: "Train", color: C.pol, icon: "◈" },
-    { name: "Control", action: "Monitor", color: C.amber, icon: "◎" },
-    { name: "Certification", action: "Certify", color: C.gold, icon: "◆" },
-    { name: "Partners", action: "Scale", color: C.gov, icon: "◇" },
+    { name: t.ecoFlowScore, action: t.ecoFlowScoreAction, color: C.sup, icon: "◉" },
+    { name: t.ecoFlowAcademy, action: t.ecoFlowAcademyAction, color: C.pol, icon: "◈" },
+    { name: t.ecoFlowControl, action: t.ecoFlowControlAction, color: C.amber, icon: "◎" },
+    { name: t.ecoFlowCert, action: t.ecoFlowCertAction, color: C.gold, icon: "◆" },
+    { name: t.ecoFlowPartners, action: t.ecoFlowPartnersAction, color: C.gov, icon: "◇" },
   ];
   return (
     <div ref={ref} style={{ maxWidth: 920, margin: "48px auto", opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(20px)", transition: "all .8s cubic-bezier(.16,1,.3,1)" }}>
@@ -289,7 +533,7 @@ function EcosystemFlowSVG() {
         })}
         {/* Loop-back arrow */}
         <path d="M 720 70 Q 750 70 750 40 Q 750 10 390 10 Q 30 10 30 40 Q 30 70 60 70" fill="none" stroke={C.gold} strokeWidth=".8" opacity=".15" strokeDasharray="4 6" />
-        <text x="390" y="8" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray} opacity=".5">CLOSED LOOP</text>
+        <text x="390" y="8" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray} opacity=".5">{t.ecoFlowClosedLoop}</text>
       </svg>
     </div>
   );
@@ -300,6 +544,8 @@ function EcosystemFlowSVG() {
    ══════════════════════════════════════════════════════════ */
 export default function TheStandardPage() {
   const locale = useLocale();
+  const lang = locale === "fr" ? "fr" : "en";
+  const t = ui[lang];
   return (
     <div style={{ minHeight: "100vh", background: C.navy1, color: "#fff", fontFamily: "'Inter', sans-serif", overflowX: "hidden" }}>
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -323,18 +569,18 @@ export default function TheStandardPage() {
           <a href={`/${locale}/`} style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <div style={{ width: 40, height: 40, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1 }}>ACF</div>
             <div>
-              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>ACF STANDARD</div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>THE GOVERNANCE FRAMEWORK</div>
+              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>{t.navTitle}</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>{t.navSubtitle}</div>
             </div>
           </a>
           <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
             <a href={`/${locale}/`} className="hide-mobile" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Home</a>
-            {["Framework", "Architecture", "Ecosystem", "Blog"].map(l => (
-              <a key={l} href={l === "Blog" ? `/${locale}/blog` : `#${l.toLowerCase()}`} className="hide-mobile" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-                onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l}</a>
+              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{t.navHome}</a>
+            {[{ label: t.navFramework, href: "#framework" }, { label: t.navArchitecture, href: "#architecture" }, { label: t.navEcosystem, href: "#ecosystem" }, { label: t.navBlog, href: `/${locale}/blog` }].map(l => (
+              <a key={l.label} href={l.href} className="hide-mobile" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+                onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l.label}</a>
             ))}
-            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, display: "inline-block" }}>Get Your Score →</a>
+            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, display: "inline-block" }}>{t.navCta}</a>
           </div>
         </div>
       </nav>
@@ -350,24 +596,24 @@ export default function TheStandardPage() {
           {/* LEFT — Text */}
           <div>
             <div className="hero-anim hero-d1" style={{ marginBottom: 28 }}>
-              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase" }}>The Governance Standard</span>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase" }}>{t.heroBadge}</span>
             </div>
             <h1 className="hero-anim hero-d2" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 54, fontWeight: 800, lineHeight: 1.04, letterSpacing: "-2px", marginBottom: 28 }}>
-              Agentic Commerce<br /><span style={{ color: C.gold }}>Framework®</span>
+              {t.heroTitle1}<br /><span style={{ color: C.gold }}>{t.heroTitle2}</span>
             </h1>
             <p className="hero-anim hero-d3" style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 21, color: C.gray2, lineHeight: 1.55, maxWidth: 500, marginBottom: 36, fontWeight: 400 }}>
-              Governing decisions in the age of autonomous systems.
+              {t.heroSubtitle}
             </p>
             <div className="hero-anim hero-d4" style={{ display: "flex", gap: 14 }}>
               <a href="#framework" style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "14px 24px", borderRadius: 10, fontSize: 14, fontWeight: 500, transition: "all .3s" }}
                 onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
-                onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>Read the Framework ↓</a>
+                onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>{t.heroCta}</a>
             </div>
           </div>
 
           {/* RIGHT — Animated Governance Stack */}
           <div className="hero-anim hero-d3 hide-mobile">
-            <HeroVisualization />
+            <HeroVisualization t={t} />
           </div>
         </div>
       </section>
@@ -377,33 +623,33 @@ export default function TheStandardPage() {
          ═══════════════════════════════════════════════ */}
       <section id="framework" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
-          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 40 }}>// The shift</div></Reveal>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 40 }}>// {t.shiftBadge}</div></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 700, lineHeight: 1.3, color: "#fff", marginBottom: 48, letterSpacing: "-.5px" }}>Artificial intelligence is no longer just a tool.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 700, lineHeight: 1.3, color: "#fff", marginBottom: 48, letterSpacing: "-.5px" }}>{t.shiftLine1}</p></Reveal>
 
-          <Reveal delay={0.15}><p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 700, lineHeight: 1.3, color: C.gold, marginBottom: 48, letterSpacing: "-.5px" }}>It is becoming a decision-maker.</p></Reveal>
+          <Reveal delay={0.15}><p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 700, lineHeight: 1.3, color: C.gold, marginBottom: 48, letterSpacing: "-.5px" }}>{t.shiftLine2}</p></Reveal>
 
           <Reveal delay={0.1}>
             <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>
-              Across industries, autonomous agents are now executing operational decisions in real time — pricing adjustments, procurement orders, customer engagement, logistics routing, risk assessments.
+              {t.shiftP1}
             </p>
           </Reveal>
 
           <Reveal delay={0.1}>
             <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>
-              These decisions happen continuously, at machine speed. And in most organizations, <strong style={{ color: "#fff" }}>no governance architecture exists to supervise them.</strong>
+              {t.shiftP2pre}<strong style={{ color: "#fff" }}>{t.shiftP2bold}</strong>
             </p>
           </Reveal>
 
           <Reveal delay={0.1}>
             <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>
-              The result is a new category of risk: <strong style={{ color: C.gold }}>uncontrolled autonomous decision systems.</strong>
+              {t.shiftP3pre}<strong style={{ color: C.gold }}>{t.shiftP3bold}</strong>
             </p>
           </Reveal>
 
           <Reveal delay={0.1}>
             <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9 }}>
-              The Agentic Commerce Framework® was created to solve this problem.
+              {t.shiftP4}
             </p>
           </Reveal>
         </div>
@@ -415,10 +661,10 @@ export default function TheStandardPage() {
       <section style={{ padding: "80px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
           <Reveal>
-            <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 700, color: C.gray, lineHeight: 1.4, marginBottom: 16 }}>Autonomous systems do not create chaos.</p>
+            <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 700, color: C.gray, lineHeight: 1.4, marginBottom: 16 }}>{t.stmtLine1}</p>
           </Reveal>
           <Reveal delay={0.15}>
-            <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 32, fontWeight: 800, color: "#fff", lineHeight: 1.3 }}>Ungoverned decisions do.</p>
+            <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 32, fontWeight: 800, color: "#fff", lineHeight: 1.3 }}>{t.stmtLine2}</p>
           </Reveal>
         </div>
       </section>
@@ -435,10 +681,10 @@ export default function TheStandardPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 32, textAlign: "center" }}>
             {[
-              { value: 73, suffix: "%", prefix: "", label: "of organizations have no formal AI governance", color: C.gold },
-              { value: 35, suffix: "M", prefix: "€", label: "maximum AI Act sanctions or 7% global revenue", color: C.amber },
-              { value: 4, suffix: "x", prefix: "", label: "lower correction costs with structured governance", color: C.sup },
-              { value: 1, suffix: "s", prefix: "<", label: "Level 1 kill switch response time (ACF spec)", color: C.sys },
+              { value: 73, suffix: "%", prefix: "", label: t.stat1Label, color: C.gold },
+              { value: 35, suffix: "M", prefix: "€", label: t.stat2Label, color: C.amber },
+              { value: 4, suffix: "x", prefix: "", label: t.stat3Label, color: C.sup },
+              { value: 1, suffix: "s", prefix: "<", label: t.stat4Label, color: C.sys },
             ].map((s, i) => (
               <Reveal key={i} delay={i * 0.12}>
                 <div style={{ padding: "20px 0" }}>
@@ -458,19 +704,19 @@ export default function TheStandardPage() {
          ═══════════════════════════════════════════════ */}
       <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
-          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// The governance gap</div></Reveal>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// {t.gapBadge}</div></Reveal>
 
-          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 32 }}>Organizations spent the last decade adopting AI. Governance models never evolved.</h2></Reveal>
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 32 }}>{t.gapTitle}</h2></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>Traditional governance assumes a simple structure: humans decide, systems execute.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>{t.gapP1}</p></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>Agentic systems invert this relationship. Machines now execute <strong style={{ color: "#fff" }}>and decide</strong> within defined parameters.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>{t.gapP2pre}<strong style={{ color: "#fff" }}>{t.gapP2bold}</strong>{t.gapP2post}</p></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 32 }}>When this shift occurs without structured governance, organizations lose visibility and control over their own operational decisions. The consequences are not theoretical:</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 32 }}>{t.gapP3}</p></Reveal>
 
           <Reveal delay={0.1}>
             <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 32, paddingLeft: 4 }}>
-              {["Untraceable autonomous decisions", "Conflicting agent optimizations", "Operational drift over time", "Regulatory exposure under emerging AI regulation", "Strategic dependence on external platforms"].map((item, i) => (
+              {t.gapList.map((item, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 14 }}>
                   <span style={{ color: C.gray, fontSize: 14, marginTop: 3, flexShrink: 0 }}>—</span>
                   <span style={{ fontSize: 16, color: C.gray2, lineHeight: 1.7 }}>{item}</span>
@@ -486,17 +732,17 @@ export default function TheStandardPage() {
          ═══════════════════════════════════════════════ */}
       <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
-          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// The framework</div></Reveal>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// {t.fwBadge}</div></Reveal>
 
-          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 32 }}>The first governance architecture for autonomous decision systems.</h2></Reveal>
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 32 }}>{t.fwTitle}</h2></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>The Agentic Commerce Framework® does not control AI models. It governs the <strong style={{ color: "#fff" }}>decisions</strong> they execute.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>{t.fwP1pre}<strong style={{ color: "#fff" }}>{t.fwP1bold}</strong>{t.fwP1post}</p></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>The framework defines how organizations:</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>{t.fwP2}</p></Reveal>
 
           <Reveal delay={0.1}>
             <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 32 }}>
-              {["Structure decision authority", "Define non-delegable zones", "Constrain autonomous behavior", "Maintain real-time oversight", "Preserve human sovereignty over critical actions"].map((item, i) => (
+              {t.fwList.map((item, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <span style={{ color: C.gold, fontSize: 12, flexShrink: 0 }}>▸</span>
                   <span style={{ fontSize: 16, color: C.gray2, lineHeight: 1.7 }}>{item}</span>
@@ -505,7 +751,7 @@ export default function TheStandardPage() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9 }}>ACF creates a structured decision governance layer between human leadership and machine execution.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9 }}>{t.fwP3}</p></Reveal>
         </div>
       </section>
 
@@ -527,7 +773,7 @@ export default function TheStandardPage() {
                   ))}
                 </div>
                 <style>{`@keyframes noiseLine{0%{left:-30%}100%{left:130%}}`}</style>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: "#ef4444", letterSpacing: ".14em", marginBottom: 24, position: "relative" }}>✕ WITHOUT GOVERNANCE</div>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: "#ef4444", letterSpacing: ".14em", marginBottom: 24, position: "relative" }}>✕ {t.compWithout}</div>
                 <div style={{ position: "relative" }}>
                   <svg viewBox="0 0 320 200" fill="none" style={{ width: "100%", marginBottom: 20 }}>
                     {/* Chaotic lines */}
@@ -545,10 +791,10 @@ export default function TheStandardPage() {
                         <text x={n.x} y={n.y + 4} textAnchor="middle" fontSize="8" fill="#ef4444" opacity=".7">?</text>
                       </g>
                     ))}
-                    <text x="160" y="195" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="8" fill="#ef4444" opacity=".6">UNCONTROLLED DECISIONS</text>
+                    <text x="160" y="195" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="8" fill="#ef4444" opacity=".6">{t.compWithoutSvg}</text>
                   </svg>
                   <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                    {["Opacity", "Drift", "Conflict", "Exposure"].map((r, i) => (
+                    {t.compWithoutLabels.map((r, i) => (
                       <div key={r} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "#c4c4c4" }}>
                         <span style={{ color: "#ef4444", fontSize: 12 }}>✕</span> {r}
                       </div>
@@ -559,15 +805,15 @@ export default function TheStandardPage() {
 
               {/* WITH ACF */}
               <div style={{ position: "relative", background: C.goldDim, border: `1px solid ${C.goldBorder}`, borderRadius: 20, padding: "40px 36px", overflow: "hidden" }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".14em", marginBottom: 24, position: "relative" }}>✓ WITH ACF® GOVERNANCE</div>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".14em", marginBottom: 24, position: "relative" }}>✓ {t.compWith}</div>
                 <div style={{ position: "relative" }}>
                   <svg viewBox="0 0 320 200" fill="none" style={{ width: "100%", marginBottom: 20 }}>
                     {/* Structured layers */}
                     {[
-                      { y: 20, color: C.gov, label: "GOVERNANCE" },
-                      { y: 65, color: C.pol, label: "POLICY" },
-                      { y: 110, color: C.sys, label: "SYSTEM" },
-                      { y: 155, color: C.sup, label: "SUPERVISION" },
+                      { y: 20, color: C.gov, label: t.svgL1 },
+                      { y: 65, color: C.pol, label: t.svgL2 },
+                      { y: 110, color: C.sys, label: t.svgL3 },
+                      { y: 155, color: C.sup, label: t.svgL4 },
                     ].map((l, i) => (
                       <g key={i}>
                         <rect x="40" y={l.y} width="240" height="32" rx="8" fill={C.navy3} stroke={l.color} strokeWidth="1">
@@ -587,10 +833,10 @@ export default function TheStandardPage() {
                       <animate attributeName="cx" values="160;160;160;160;160;160;160" dur="4s" repeatCount="indefinite" />
                       <animate attributeName="opacity" values=".3;.8;.3" dur="2s" repeatCount="indefinite" />
                     </circle>
-                    <text x="160" y="198" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="8" fill={C.gold} opacity=".5">GOVERNED DECISIONS</text>
+                    <text x="160" y="198" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="8" fill={C.gold} opacity=".5">{t.compWithSvg}</text>
                   </svg>
                   <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                    {["Traceable", "Reversible", "Accountable", "Sovereign"].map((r, i) => (
+                    {t.compWithLabels.map((r, i) => (
                       <div key={r} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "#c4c4c4" }}>
                         <span style={{ color: C.gold, fontSize: 12 }}>✓</span> {r}
                       </div>
@@ -608,21 +854,17 @@ export default function TheStandardPage() {
          ═══════════════════════════════════════════════ */}
       <section id="architecture" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
-          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// Architecture</div></Reveal>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// {t.archBadge}</div></Reveal>
 
-          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16 }}>A four-layer governance architecture.</h2></Reveal>
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16 }}>{t.archTitle}</h2></Reveal>
 
-          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 48 }}>Together they create a continuous control system for autonomous operations.</p></Reveal>
+          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 48 }}>{t.archSubtitle}</p></Reveal>
 
           {[
-            { num: "01", name: "Governance", sub: "Who holds authority", color: C.gov,
-              text: "The governance layer establishes decision sovereignty. Organizations define who retains final authority, which decisions can be delegated, which remain exclusively human. At this level, companies formalize their Agentic Constitution — the foundational document establishing the principles of AI governance." },
-            { num: "02", name: "Policy", sub: "What agents are allowed to do", color: C.pol,
-              text: "Policy defines the behavioral boundaries of autonomous systems. It translates governance principles into operational rules — financial thresholds, time-based constraints, ethical limits, sector-specific regulatory policies. Policies ensure that agents operate within clearly defined decision boundaries." },
-            { num: "03", name: "System", sub: "How decisions are executed", color: C.sys,
-              text: "The system layer governs the technical execution environment. Every autonomous action remains observable, interruptible and auditable — through decision traceability, multi-agent coordination, and layered kill-switch mechanisms. The objective is not to slow agents down. It is to ensure they remain governable at machine speed." },
-            { num: "04", name: "Supervision", sub: "How organizations maintain continuous oversight", color: C.sup,
-              text: "Governance is not a one-time configuration. It is an ongoing operational discipline. The supervision layer introduces continuous monitoring, incident response and governance reviews. Supervision ensures that agent systems evolve without eroding control." },
+            { num: "01", name: t.archL1Name, sub: t.archL1Sub, color: C.gov, text: t.archL1Text },
+            { num: "02", name: t.archL2Name, sub: t.archL2Sub, color: C.pol, text: t.archL2Text },
+            { num: "03", name: t.archL3Name, sub: t.archL3Sub, color: C.sys, text: t.archL3Text },
+            { num: "04", name: t.archL4Name, sub: t.archL4Sub, color: C.sup, text: t.archL4Text },
           ].map((layer, i) => (
             <Reveal key={layer.num} delay={0.1}>
               <div style={{ marginBottom: 48, paddingLeft: 24, borderLeft: `2px solid ${layer.color}40` }}>
@@ -667,17 +909,17 @@ export default function TheStandardPage() {
         <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px", textAlign: "center", position: "relative", zIndex: 2 }}>
           <Reveal>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 42, fontWeight: 800, lineHeight: 1.2, letterSpacing: "-1px" }}>
-              AI automates execution.
+              {t.centralLine1}
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 42, fontWeight: 800, lineHeight: 1.2, letterSpacing: "-1px", color: C.gold, marginTop: 8 }}>
-              ACF governs decisions.
+              {t.centralLine2}
             </h2>
           </Reveal>
           <Reveal delay={0.35}>
             <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.8, maxWidth: 520, margin: "32px auto 0" }}>
-              Without governance, autonomous systems create opacity. With governance, they become scalable instruments of strategic control.
+              {t.centralP}
             </p>
           </Reveal>
         </div>
@@ -688,11 +930,11 @@ export default function TheStandardPage() {
          ═══════════════════════════════════════════════ */}
       <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 40px" }}>
-          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// Operational discipline</div></Reveal>
-          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16 }}>The Agent Governance Loop</h2></Reveal>
-          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 0 }}>Governance is not configuration. It is a continuous operational loop — define, constrain, execute, monitor, intervene, improve. Then loop again.</p></Reveal>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// {t.loopBadge}</div></Reveal>
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16 }}>{t.loopTitle}</h2></Reveal>
+          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 0 }}>{t.loopSubtitle}</p></Reveal>
 
-          <GovernanceLoopSVG />
+          <GovernanceLoopSVG t={t} />
         </div>
       </section>
 
@@ -701,18 +943,18 @@ export default function TheStandardPage() {
          ═══════════════════════════════════════════════ */}
       <section id="ecosystem" style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px" }}>
-          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24, textAlign: "center" }}>// The ecosystem</div></Reveal>
-          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16, textAlign: "center" }}>ACF Operating System</h2></Reveal>
-          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, textAlign: "center", maxWidth: 560, margin: "0 auto" }}>Five integrated tools. One closed-loop system. Diagnose → Train → Monitor → Certify → Scale.</p></Reveal>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24, textAlign: "center" }}>// {t.ecoBadge}</div></Reveal>
+          <Reveal delay={0.1}><h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, lineHeight: 1.2, color: "#fff", marginBottom: 16, textAlign: "center" }}>{t.ecoTitle}</h2></Reveal>
+          <Reveal delay={0.15}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, textAlign: "center", maxWidth: 560, margin: "0 auto" }}>{t.ecoSubtitle}</p></Reveal>
 
-          <EcosystemFlowSVG />
+          <EcosystemFlowSVG t={t} />
 
           <div className="eco-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginTop: 40 }}>
             {[
-              { name: "ACF Score®", desc: "Rapid diagnostic measuring decision sovereignty and governance maturity.", href: `/${locale}/acf-score`, color: C.sup },
-              { name: "ACF Control", desc: "Real-time platform for supervising autonomous systems.", href: `/${locale}/acf-control`, color: C.amber },
-              { name: "ACF Academy", desc: "Training for executives and operators governing autonomous systems.", href: `/${locale}/acf-certification#academy`, color: C.pol },
-              { name: "ACF Certification", desc: "ACF TRUST™ and ACF CERTIFIED labels validating governance maturity.", href: `/${locale}/acf-certification`, color: C.gold },
+              { name: "ACF Score®", desc: t.ecoScore, href: `/${locale}/acf-score`, color: C.sup },
+              { name: "ACF Control", desc: t.ecoControl, href: `/${locale}/acf-control`, color: C.amber },
+              { name: "ACF Academy", desc: t.ecoAcademy, href: `/${locale}/acf-certification#academy`, color: C.pol },
+              { name: "ACF Certification", desc: t.ecoCert, href: `/${locale}/acf-certification`, color: C.gold },
             ].map(p => (
               <Reveal key={p.name}>
                 <a href={p.href} style={{ display: "block", background: `${p.color}06`, border: `1px solid ${p.color}20`, borderRadius: 14, padding: "22px 26px", transition: "all .3s" }}
@@ -732,20 +974,20 @@ export default function TheStandardPage() {
          ═══════════════════════════════════════════════ */}
       <section style={{ padding: "100px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px" }}>
-          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// A new operational discipline</div></Reveal>
+          <Reveal><div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600, color: C.gold, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 24 }}>// {t.questionBadge}</div></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>The transition to autonomous systems is not a technology shift. It is a governance shift.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>{t.questionP1}</p></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>Organizations must evolve from managing software to governing decision systems.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 28 }}>{t.questionP2}</p></Reveal>
 
-          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 48 }}>The Agentic Commerce Framework® provides the structure required to do so.</p></Reveal>
+          <Reveal delay={0.1}><p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.9, marginBottom: 48 }}>{t.questionP3}</p></Reveal>
 
           <Reveal delay={0.15}>
             <div style={{ textAlign: "center", padding: "48px 0" }}>
-              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, color: C.gray, fontWeight: 500, marginBottom: 16 }}>Because in the age of autonomous systems,<br />the most important question is no longer:</p>
-              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, color: C.gray, fontWeight: 600, marginBottom: 20 }}>"What can AI do?"</p>
+              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, color: C.gray, fontWeight: 500, marginBottom: 16 }}>{t.questionPre.split("\n").map((line, i) => <React.Fragment key={i}>{i > 0 && <br />}{line}</React.Fragment>)}</p>
+              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, color: C.gray, fontWeight: 600, marginBottom: 20 }}>{t.questionOld}</p>
               <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 800, color: "#fff" }}>
-                "Who governs the decisions <span style={{ color: C.gold }}>it makes</span>?"
+                {t.questionNew1}<span style={{ color: C.gold }}>{t.questionNew2}</span>{t.questionNew3}
               </p>
             </div>
           </Reveal>
@@ -758,10 +1000,10 @@ export default function TheStandardPage() {
       <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 600, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
           <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
-            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, display: "inline-block" }}>Assess your governance →</a>
+            <a href="https://www.acf-score.com/calculator" className="gold-glow" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, display: "inline-block" }}>{t.ctaAssess}</a>
             <a href={`/${locale}/blog`} style={{ background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`, padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 500, display: "inline-block", transition: "all .3s" }}
               onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
-              onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>Read the research</a>
+              onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>{t.ctaResearch}</a>
           </div>
         </div>
       </section>

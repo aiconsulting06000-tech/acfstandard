@@ -230,10 +230,228 @@ function FormField({ label, type = "text", placeholder, required = true, options
 }
 
 /* ═══════════════════════════════════════════════════
+   TRANSLATIONS
+   ═══════════════════════════════════════════════════ */
+const ui = {
+  en: {
+    navTitle: "ACF PARTNERS",
+    navSubtext: "PARTNER NETWORK",
+    navHome: "← Home",
+    navLogin: "Partner Login",
+    partnershipLabel: "PARTNERSHIP",
+    partnershipSubLabel: "Deploy the standard",
+    networkLabel: "NETWORK",
+    networkSubLabel: "Scale worldwide",
+    heroBadge: "PARTNER NETWORK",
+    heroTitle1: "Deploy the Standard.",
+    heroTitle2: "Scale the Trust.",
+    heroDesc1: "Agentic governance needs trusted relays.",
+    heroDesc2: "Not resellers. Not affiliates.",
+    heroDesc3: "Strategic partners who share the mission.",
+    heroSubDesc: "ACF Partners deploy, audit, train, and certify organizations worldwide.",
+    heroBtn1: "Become a Partner →",
+    heroBtn2: "Partner Portal Login",
+    advantagesLabel: "Strategic Advantages",
+    advantagesTitle1: "Why become an ACF ",
+    advantagesTitle2: "Partner",
+    advantagesDesc: "You don't just distribute a product. You ",
+    advantagesDescStrong: "deploy a governance standard",
+    advantagesDesc2: ". That comes with territory, tools, revenue, and authority.",
+    advantages: [
+      { icon: "🌍", title: "Territory Exclusivity", desc: "Secure your geographical zone. One region, one partner. No competition — only collaboration." },
+      { icon: "💰", title: "Revenue Share", desc: "Commission on every ACF Score, Control license, and certification deployed through your network." },
+      { icon: "🎓", title: "Academy Access", desc: "Full access to ACF Academy training modules. Train your team, then train your clients." },
+      { icon: "🏷️", title: "Co-Branding", desc: "Use the ACF Partner badge. Your brand, backed by the global governance standard." },
+      { icon: "📊", title: "Partner Dashboard", desc: "Real-time data on deployments, certifications, revenue. Full visibility on your portfolio." },
+      { icon: "🛡️", title: "Priority Support", desc: "Direct access to ACF team. Dedicated onboarding, quarterly reviews, and escalation path." },
+    ],
+    tiersLabel: "Partnership Levels",
+    tiersTitle: "ACF PARTNER",
+    tiersDesc: "Three levels of partnership. Each unlocks deeper access, more territory, and greater authority.",
+    tierAffiliate: { name: "Affiliate", desc: "Entry-level partnership. You recommend and refer.", items: ["Referral commission (15%)", "Partner badge usage", "Marketing materials", "Quarterly training webinars", "Partner directory listing"], tagline: "You recommend trust.", applyText: "Apply for Affiliate →" },
+    tierCertified: { name: "Certified", desc: "You deploy, train, and audit ACF governance.", items: ["Revenue share (25%)", "Territory exclusivity", "Full Academy access", "ACF Control deployment rights", "Co-branded audit reports", "Dedicated account manager"], tagline: "You deploy governance.", applyText: "Apply for Certified →" },
+    tierStrategic: { name: "Strategic", desc: "Enterprise-level alliance. Shape the standard.", items: ["Revenue share (35%)", "Multi-territory exclusivity", "Executive program delivery", "Advisory board seat", "White-label options", "Custom integrations", "Joint go-to-market"], tagline: "You shape the future.", applyText: "Apply for Strategic →" },
+    mostPopular: "MOST POPULAR",
+    portalLabel: "Existing Partners",
+    portalTitle1: "Partner ",
+    portalTitle2: "Portal",
+    portalDesc: "Access your dashboard, training materials, deployment data, certifications, and revenue reports.",
+    portalAccessTitle: "Partner Access",
+    portalAccessDesc: "Sign in with your partner credentials",
+    portalEmail: "Email",
+    portalPassword: "Password",
+    portalRemember: "Remember me",
+    portalForgot: "Forgot password?",
+    portalSignIn: "Sign In →",
+    portalNotPartner: "Not a partner yet? ",
+    portalApplyNow: "Apply now →",
+    insidePortal: "Inside the Portal",
+    portalFeatures: [
+      { icon: "📊", label: "Deployment Dashboard", desc: "Track all ACF deployments" },
+      { icon: "🎓", label: "Training Hub", desc: "Academy modules & certifications" },
+      { icon: "💰", label: "Revenue Center", desc: "Commissions & invoicing" },
+      { icon: "📋", label: "Audit Reports", desc: "Generate co-branded reports" },
+      { icon: "👥", label: "Client Portfolio", desc: "Manage your certified clients" },
+      { icon: "🔔", label: "Updates & News", desc: "Latest from ACF Standard" },
+    ],
+    applyLabel: "Join the Network",
+    applyTitle1: "Apply to become an ACF ",
+    applyTitle2: "Partner",
+    applyDesc: "We select partners carefully. We're looking for organizations that share our vision: ",
+    applyDescStrong: "accountable autonomy",
+    formFirstName: "First Name",
+    formLastName: "Last Name",
+    formEmail: "Email",
+    formPhone: "Phone",
+    formCompany: "Company Name",
+    formCountry: "Country / Territory",
+    formTier: "Partnership Tier",
+    formIndustry: "Industry",
+    formTeamSize: "Team Size",
+    formWhy: "Why do you want to become an ACF Partner?",
+    formWhyPlaceholder: "Tell us about your organization, your experience with AI governance, and what motivates you to deploy the ACF standard in your territory...",
+    formWebsite: "Website",
+    formTerms: "I agree to the ACF Partner Program Terms & Conditions and acknowledge that my application will be reviewed within 5 business days.",
+    formSubmit: "Submit Application →",
+    formSuccessTitle: "Application Received!",
+    formSuccessDesc1: "Thank you for your interest in the ACF Partner Network. Our team will review your application and get back to you within ",
+    formSuccessDesc2: "5 business days",
+    formSuccessSteps: ["Application confirmation sent to your email", "Review by ACF partner team", "Interview & alignment call", "Onboarding & territory assignment"],
+    tierOptions: ["Affiliate — Referral partner", "Certified — Deploy & train", "Strategic — Enterprise alliance"],
+    journeyLabel: "Partner Journey",
+    journeyTitle1: "From application to ",
+    journeyTitle2: "deployment",
+    journeySteps: [
+      { step: "01", label: "Apply", desc: "Submit your partner application" },
+      { step: "02", label: "Interview", desc: "Alignment call with ACF team" },
+      { step: "03", label: "Onboarding", desc: "Academy training & certification" },
+      { step: "04", label: "Territory", desc: "Exclusive zone assignment" },
+      { step: "05", label: "Deploy", desc: "Audit, train, and certify clients" },
+      { step: "06", label: "Grow", desc: "Revenue share, co-branding, scale" },
+    ],
+    statsLabels: ["Partnership tiers", "Max revenue share", "Portal features", "Application review"],
+    statsSuffixes: ["", "%", "", " days"],
+    finalTitle1: "The standard is global.",
+    finalTitle2: "The network is yours.",
+    finalDesc: "Whether you're a consultancy, a tech firm, or an enterprise — if you believe in accountable autonomy, there's a place for you.",
+    finalBtn1: "Become a Partner →",
+    finalBtn2: "Partner Portal Login",
+    finalBtn3: "View Certification",
+  },
+  fr: {
+    navTitle: "ACF PARTENAIRES",
+    navSubtext: "RÉSEAU PARTENAIRE",
+    navHome: "← Accueil",
+    navLogin: "Connexion Partenaire",
+    partnershipLabel: "PARTENARIAT",
+    partnershipSubLabel: "Déployez le standard",
+    networkLabel: "RÉSEAU",
+    networkSubLabel: "Passez à l'échelle mondiale",
+    heroBadge: "RÉSEAU PARTENAIRE",
+    heroTitle1: "Déployez le Standard.",
+    heroTitle2: "Passez la Confiance à l'Échelle.",
+    heroDesc1: "La gouvernance agentique a besoin de relais de confiance.",
+    heroDesc2: "Pas de revendeurs. Pas d'affiliés.",
+    heroDesc3: "Des partenaires stratégiques qui partagent la mission.",
+    heroSubDesc: "Les Partenaires ACF déploient, auditent, forment et certifient les organisations dans le monde entier.",
+    heroBtn1: "Devenir Partenaire →",
+    heroBtn2: "Connexion Portail Partenaire",
+    advantagesLabel: "Avantages Stratégiques",
+    advantagesTitle1: "Pourquoi devenir ",
+    advantagesTitle2: "Partenaire ACF",
+    advantagesDesc: "Vous ne distribuez pas simplement un produit. Vous ",
+    advantagesDescStrong: "déployez un standard de gouvernance",
+    advantagesDesc2: ". Cela inclut un territoire, des outils, du revenu et de l'autorité.",
+    advantages: [
+      { icon: "🌍", title: "Exclusivité Territoriale", desc: "Sécurisez votre zone géographique. Une région, un partenaire. Pas de concurrence — uniquement de la collaboration." },
+      { icon: "💰", title: "Partage de Revenus", desc: "Commission sur chaque ACF Score, licence Control et certification déployés via votre réseau." },
+      { icon: "🎓", title: "Accès Academy", desc: "Accès complet aux modules de formation ACF Academy. Formez votre équipe, puis formez vos clients." },
+      { icon: "🏷️", title: "Co-Branding", desc: "Utilisez le badge ACF Partner. Votre marque, adossée au standard de gouvernance mondial." },
+      { icon: "📊", title: "Tableau de Bord Partenaire", desc: "Données en temps réel sur les déploiements, certifications, revenus. Visibilité totale sur votre portefeuille." },
+      { icon: "🛡️", title: "Support Prioritaire", desc: "Accès direct à l'équipe ACF. Onboarding dédié, revues trimestrielles et chemin d'escalade." },
+    ],
+    tiersLabel: "Niveaux de Partenariat",
+    tiersTitle: "ACF PARTNER",
+    tiersDesc: "Trois niveaux de partenariat. Chacun débloque un accès plus profond, plus de territoire et plus d'autorité.",
+    tierAffiliate: { name: "Affilié", desc: "Partenariat d'entrée. Vous recommandez et référez.", items: ["Commission de référencement (15%)", "Utilisation du badge partenaire", "Supports marketing", "Webinaires de formation trimestriels", "Inscription annuaire partenaire"], tagline: "Vous recommandez la confiance.", applyText: "Candidater Affilié →" },
+    tierCertified: { name: "Certifié", desc: "Vous déployez, formez et auditez la gouvernance ACF.", items: ["Partage de revenus (25%)", "Exclusivité territoriale", "Accès complet Academy", "Droits de déploiement ACF Control", "Rapports d'audit co-brandés", "Account manager dédié"], tagline: "Vous déployez la gouvernance.", applyText: "Candidater Certifié →" },
+    tierStrategic: { name: "Stratégique", desc: "Alliance de niveau entreprise. Façonnez le standard.", items: ["Partage de revenus (35%)", "Exclusivité multi-territoire", "Livraison programme exécutif", "Siège au conseil consultatif", "Options marque blanche", "Intégrations personnalisées", "Go-to-market conjoint"], tagline: "Vous façonnez l'avenir.", applyText: "Candidater Stratégique →" },
+    mostPopular: "LE PLUS POPULAIRE",
+    portalLabel: "Partenaires Existants",
+    portalTitle1: "Portail ",
+    portalTitle2: "Partenaire",
+    portalDesc: "Accédez à votre tableau de bord, supports de formation, données de déploiement, certifications et rapports de revenus.",
+    portalAccessTitle: "Accès Partenaire",
+    portalAccessDesc: "Connectez-vous avec vos identifiants partenaire",
+    portalEmail: "Email",
+    portalPassword: "Mot de passe",
+    portalRemember: "Se souvenir de moi",
+    portalForgot: "Mot de passe oublié ?",
+    portalSignIn: "Se Connecter →",
+    portalNotPartner: "Pas encore partenaire ? ",
+    portalApplyNow: "Candidater maintenant →",
+    insidePortal: "À l'intérieur du Portail",
+    portalFeatures: [
+      { icon: "📊", label: "Tableau de Bord Déploiements", desc: "Suivez tous les déploiements ACF" },
+      { icon: "🎓", label: "Hub Formation", desc: "Modules Academy & certifications" },
+      { icon: "💰", label: "Centre Revenus", desc: "Commissions & facturation" },
+      { icon: "📋", label: "Rapports d'Audit", desc: "Générez des rapports co-brandés" },
+      { icon: "👥", label: "Portefeuille Clients", desc: "Gérez vos clients certifiés" },
+      { icon: "🔔", label: "Actualités & Mises à jour", desc: "Dernières nouvelles d'ACF Standard" },
+    ],
+    applyLabel: "Rejoindre le Réseau",
+    applyTitle1: "Candidater pour devenir ",
+    applyTitle2: "Partenaire ACF",
+    applyDesc: "Nous sélectionnons nos partenaires avec soin. Nous recherchons des organisations qui partagent notre vision : ",
+    applyDescStrong: "une autonomie responsable",
+    formFirstName: "Prénom",
+    formLastName: "Nom",
+    formEmail: "Email",
+    formPhone: "Téléphone",
+    formCompany: "Nom de l'Entreprise",
+    formCountry: "Pays / Territoire",
+    formTier: "Niveau de Partenariat",
+    formIndustry: "Secteur d'Activité",
+    formTeamSize: "Taille de l'Équipe",
+    formWhy: "Pourquoi souhaitez-vous devenir Partenaire ACF ?",
+    formWhyPlaceholder: "Parlez-nous de votre organisation, votre expérience en gouvernance IA et ce qui vous motive à déployer le standard ACF sur votre territoire...",
+    formWebsite: "Site Web",
+    formTerms: "J'accepte les Conditions Générales du Programme Partenaire ACF et reconnais que ma candidature sera examinée sous 5 jours ouvrés.",
+    formSubmit: "Soumettre la Candidature →",
+    formSuccessTitle: "Candidature Reçue !",
+    formSuccessDesc1: "Merci de votre intérêt pour le Réseau Partenaire ACF. Notre équipe examinera votre candidature et vous recontactera sous ",
+    formSuccessDesc2: "5 jours ouvrés",
+    formSuccessSteps: ["Confirmation de candidature envoyée à votre email", "Examen par l'équipe partenaire ACF", "Entretien & appel d'alignement", "Onboarding & attribution de territoire"],
+    tierOptions: ["Affilié — Partenaire de référencement", "Certifié — Déployer & former", "Stratégique — Alliance entreprise"],
+    journeyLabel: "Parcours Partenaire",
+    journeyTitle1: "De la candidature au ",
+    journeyTitle2: "déploiement",
+    journeySteps: [
+      { step: "01", label: "Candidater", desc: "Soumettez votre candidature partenaire" },
+      { step: "02", label: "Entretien", desc: "Appel d'alignement avec l'équipe ACF" },
+      { step: "03", label: "Onboarding", desc: "Formation Academy & certification" },
+      { step: "04", label: "Territoire", desc: "Attribution de zone exclusive" },
+      { step: "05", label: "Déployer", desc: "Auditer, former et certifier les clients" },
+      { step: "06", label: "Croître", desc: "Partage de revenus, co-branding, passage à l'échelle" },
+    ],
+    statsLabels: ["Niveaux de partenariat", "Partage de revenus max", "Fonctionnalités portail", "Examen candidature"],
+    statsSuffixes: ["", "%", "", " jours"],
+    finalTitle1: "Le standard est mondial.",
+    finalTitle2: "Le réseau est le vôtre.",
+    finalDesc: "Que vous soyez un cabinet de conseil, une entreprise tech ou une grande entreprise — si vous croyez en l'autonomie responsable, il y a une place pour vous.",
+    finalBtn1: "Devenir Partenaire →",
+    finalBtn2: "Connexion Portail Partenaire",
+    finalBtn3: "Voir la Certification",
+  },
+};
+
+/* ═══════════════════════════════════════════════════
    MAIN COMPONENT
    ═══════════════════════════════════════════════════ */
 export default function ACFPartnersPage() {
   const locale = useLocale();
+  const lang = locale === "fr" ? "fr" : "en";
+  const t = ui[lang];
   const [activeSection, setActiveSection] = useState<"advantages" | "portal" | "apply">("advantages");
   const [formSubmitted, setFormSubmitted] = useState(false);
   const navLinks = ["Advantages", "Tiers", "Portal", "Apply"];
@@ -277,13 +495,13 @@ export default function ACFPartnersPage() {
               background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1,
             }}>ACF</div>
             <div>
-              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>ACF PARTNERS</div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>PARTNER NETWORK</div>
+              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>{t.navTitle}</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>{t.navSubtext}</div>
             </div>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
             <a href="/" style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>← Home</a>
+              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{t.navHome}</a>
             {navLinks.map(l => (
               <a key={l} href={`#${l.toLowerCase()}`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
                 onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l}</a>
@@ -292,7 +510,7 @@ export default function ACFPartnersPage() {
               background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
               border: "none", padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, cursor: "pointer", transition: "all .3s",
               display: "inline-block",
-            }}>Partner Login</a>
+            }}>{t.navLogin}</a>
           </div>
         </div>
       </nav>
@@ -332,33 +550,33 @@ export default function ACFPartnersPage() {
               <div className="hero-left" style={{ position: "relative" }}>
                 <HeroHandshake />
                 <div style={{ textAlign: "center", marginTop: 12 }}>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".14em", opacity: 0.6 }}>PARTNERSHIP</div>
-                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 13, fontWeight: 700, color: C.gray2, marginTop: 2 }}>Deploy the standard</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".14em", opacity: 0.6 }}>{t.partnershipLabel}</div>
+                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 13, fontWeight: 700, color: C.gray2, marginTop: 2 }}>{t.partnershipSubLabel}</div>
                 </div>
               </div>
             </div>
 
             {/* CENTER — Text */}
             <div style={{ textAlign: "center" }} className="fade-up-d2">
-              <Badge>PARTNER NETWORK</Badge>
+              <Badge>{t.heroBadge}</Badge>
               <h1 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 48, fontWeight: 800, lineHeight: 1.08, marginTop: 24, marginBottom: 24, letterSpacing: "-1px" }}>
-                <span style={{ color: "#fff" }}>Deploy the Standard.</span><br />
-                <span style={{ color: C.gold }}>Scale the Trust.</span>
+                <span style={{ color: "#fff" }}>{t.heroTitle1}</span><br />
+                <span style={{ color: C.gold }}>{t.heroTitle2}</span>
               </h1>
               <p style={{ fontSize: 16, color: C.gray2, lineHeight: 1.7, maxWidth: 520, margin: "0 auto 28px" }}>
-                Agentic governance needs trusted relays.<br />
-                Not resellers. Not affiliates.<br />
-                <strong style={{ color: "#fff" }}>Strategic partners who share the mission.</strong>
+                {t.heroDesc1}<br />
+                {t.heroDesc2}<br />
+                <strong style={{ color: "#fff" }}>{t.heroDesc3}</strong>
               </p>
               <p style={{ fontSize: 14, color: C.gray, maxWidth: 420, margin: "0 auto 32px" }}>
-                ACF Partners deploy, audit, train, and certify organizations worldwide.
+                {t.heroSubDesc}
               </p>
               <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
                 <a href="#apply" className="gold-glow" style={{
                   background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
                   border: "none", padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 700, cursor: "pointer", transition: "all .3s",
                   display: "inline-block",
-                }}>Become a Partner →</a>
+                }}>{t.heroBtn1}</a>
                 <a href="#portal" style={{
                   background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
                   padding: "14px 28px", borderRadius: 10, fontSize: 14, fontWeight: 500, cursor: "pointer", transition: "all .3s",
@@ -366,7 +584,7 @@ export default function ACFPartnersPage() {
                 }}
                   onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
                   onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}
-                >Partner Portal Login</a>
+                >{t.heroBtn2}</a>
               </div>
             </div>
 
@@ -375,8 +593,8 @@ export default function ACFPartnersPage() {
               <div className="hero-right" style={{ position: "relative" }}>
                 <HeroNetwork />
                 <div style={{ textAlign: "center", marginTop: 4 }}>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".14em", opacity: 0.6 }}>NETWORK</div>
-                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 13, fontWeight: 700, color: C.gray2, marginTop: 2 }}>Scale worldwide</div>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".14em", opacity: 0.6 }}>{t.networkLabel}</div>
+                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 13, fontWeight: 700, color: C.gray2, marginTop: 2 }}>{t.networkSubLabel}</div>
                 </div>
               </div>
             </div>
@@ -388,48 +606,24 @@ export default function ACFPartnersPage() {
       <section id="advantages" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <SectionLabel>Strategic Advantages</SectionLabel>
+            <SectionLabel>{t.advantagesLabel}</SectionLabel>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>
-              Why become an ACF <span style={{ color: C.gold }}>Partner</span>
+              {t.advantagesTitle1}<span style={{ color: C.gold }}>{t.advantagesTitle2}</span>
             </h2>
             <GoldBar />
             <p style={{ fontSize: 15, color: C.gray2, maxWidth: 600, margin: "0 auto", lineHeight: 1.7 }}>
-              You don't just distribute a product. You <strong style={{ color: "#fff" }}>deploy a governance standard</strong>. That comes with territory, tools, revenue, and authority.
+              {t.advantagesDesc}<strong style={{ color: "#fff" }}>{t.advantagesDescStrong}</strong>{t.advantagesDesc2}
             </p>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
             {[
-              {
-                icon: "🌍", title: "Territory Exclusivity",
-                desc: "Secure your geographical zone. One region, one partner. No competition — only collaboration.",
-                color: C.green,
-              },
-              {
-                icon: "💰", title: "Revenue Share",
-                desc: "Commission on every ACF Score, Control license, and certification deployed through your network.",
-                color: C.gold,
-              },
-              {
-                icon: "🎓", title: "Academy Access",
-                desc: "Full access to ACF Academy training modules. Train your team, then train your clients.",
-                color: C.blue,
-              },
-              {
-                icon: "🏷️", title: "Co-Branding",
-                desc: "Use the ACF Partner badge. Your brand, backed by the global governance standard.",
-                color: C.amber,
-              },
-              {
-                icon: "📊", title: "Partner Dashboard",
-                desc: "Real-time data on deployments, certifications, revenue. Full visibility on your portfolio.",
-                color: C.purple,
-              },
-              {
-                icon: "🛡️", title: "Priority Support",
-                desc: "Direct access to ACF team. Dedicated onboarding, quarterly reviews, and escalation path.",
-                color: C.green,
-              },
+              { icon: t.advantages[0].icon, title: t.advantages[0].title, desc: t.advantages[0].desc, color: C.green },
+              { icon: t.advantages[1].icon, title: t.advantages[1].title, desc: t.advantages[1].desc, color: C.gold },
+              { icon: t.advantages[2].icon, title: t.advantages[2].title, desc: t.advantages[2].desc, color: C.blue },
+              { icon: t.advantages[3].icon, title: t.advantages[3].title, desc: t.advantages[3].desc, color: C.amber },
+              { icon: t.advantages[4].icon, title: t.advantages[4].title, desc: t.advantages[4].desc, color: C.purple },
+              { icon: t.advantages[5].icon, title: t.advantages[5].title, desc: t.advantages[5].desc, color: C.green },
             ].map(a => (
               <div key={a.title} style={{
                 background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 16, padding: "28px 24px",
@@ -451,86 +645,80 @@ export default function ACFPartnersPage() {
       <section id="tiers" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <SectionLabel>Partnership Levels</SectionLabel>
+            <SectionLabel>{t.tiersLabel}</SectionLabel>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>
-              ACF PARTNER<span style={{ color: C.gold }}>™</span> Tiers
+              {t.tiersTitle}<span style={{ color: C.gold }}>™</span> Tiers
             </h2>
             <GoldBar />
             <p style={{ fontSize: 15, color: C.gray2, maxWidth: 600, margin: "0 auto", lineHeight: 1.7 }}>
-              Three levels of partnership. Each unlocks deeper access, more territory, and greater authority.
+              {t.tiersDesc}
             </p>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
             {[
               {
-                stars: 1, name: "Affiliate", color: "#22c55e", colorLight: "#4ade80", glowColor: "rgba(34,197,94,.15)",
-                desc: "Entry-level partnership. You recommend and refer.",
-                items: ["Referral commission (15%)", "Partner badge usage", "Marketing materials", "Quarterly training webinars", "Partner directory listing"],
-                tagline: "You recommend trust.",
-                badge: null,
+                stars: 1, name: t.tierAffiliate.name, color: "#22c55e", colorLight: "#4ade80", glowColor: "rgba(34,197,94,.15)",
+                desc: t.tierAffiliate.desc, items: t.tierAffiliate.items, tagline: t.tierAffiliate.tagline,
+                badge: null, applyText: t.tierAffiliate.applyText,
               },
               {
-                stars: 2, name: "Certified", color: "#c9a84c", colorLight: "#e8c96a", glowColor: "rgba(201,168,76,.15)",
-                desc: "You deploy, train, and audit ACF governance.",
-                items: ["Revenue share (25%)", "Territory exclusivity", "Full Academy access", "ACF Control deployment rights", "Co-branded audit reports", "Dedicated account manager"],
-                tagline: "You deploy governance.",
-                badge: "MOST POPULAR",
+                stars: 2, name: t.tierCertified.name, color: "#c9a84c", colorLight: "#e8c96a", glowColor: "rgba(201,168,76,.15)",
+                desc: t.tierCertified.desc, items: t.tierCertified.items, tagline: t.tierCertified.tagline,
+                badge: t.mostPopular, applyText: t.tierCertified.applyText,
               },
               {
-                stars: 3, name: "Strategic", color: "#3b82f6", colorLight: "#60a5fa", glowColor: "rgba(59,130,246,.15)",
-                desc: "Enterprise-level alliance. Shape the standard.",
-                items: ["Revenue share (35%)", "Multi-territory exclusivity", "Executive program delivery", "Advisory board seat", "White-label options", "Custom integrations", "Joint go-to-market"],
-                tagline: "You shape the future.",
-                badge: null,
+                stars: 3, name: t.tierStrategic.name, color: "#3b82f6", colorLight: "#60a5fa", glowColor: "rgba(59,130,246,.15)",
+                desc: t.tierStrategic.desc, items: t.tierStrategic.items, tagline: t.tierStrategic.tagline,
+                badge: null, applyText: t.tierStrategic.applyText,
               },
-            ].map(t => (
-              <div key={t.name} style={{
+            ].map(tr => (
+              <div key={tr.name} style={{
                 background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 16, padding: "32px 28px 28px",
                 position: "relative", transition: "all .3s", textAlign: "center",
                 display: "flex", flexDirection: "column",
               }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = `${t.color}40`; e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = `0 12px 40px ${t.glowColor}`; }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = `${tr.color}40`; e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = `0 12px 40px ${tr.glowColor}`; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = C.bd1; e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}
               >
-                {t.badge && (
+                {tr.badge && (
                   <div style={{
                     position: "absolute", top: -14, left: "50%", transform: "translateX(-50%)",
                     background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
                     fontSize: 10, fontWeight: 800, letterSpacing: ".1em", padding: "5px 16px", borderRadius: 100,
                     fontFamily: "'JetBrains Mono', monospace", whiteSpace: "nowrap",
-                  }}>{t.badge}</div>
+                  }}>{tr.badge}</div>
                 )}
 
-                <PartnerShield name={t.name} color={t.color} colorLight={t.colorLight} stars={t.stars} />
+                <PartnerShield name={tr.name} color={tr.color} colorLight={tr.colorLight} stars={tr.stars} />
 
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginBottom: 8 }}>
-                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: t.color, letterSpacing: ".14em" }}>
-                    {"★".repeat(t.stars)} TIER {t.stars}
+                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: tr.color, letterSpacing: ".14em" }}>
+                    {"★".repeat(tr.stars)} TIER {tr.stars}
                   </span>
                 </div>
-                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, fontWeight: 700, color: "#fff", marginBottom: 6 }}>{t.name}</h3>
-                <p style={{ fontSize: 13, color: C.gray, marginBottom: 16 }}>{t.desc}</p>
+                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 22, fontWeight: 700, color: "#fff", marginBottom: 6 }}>{tr.name}</h3>
+                <p style={{ fontSize: 13, color: C.gray, marginBottom: 16 }}>{tr.desc}</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 16, textAlign: "left", flex: 1 }}>
-                  {t.items.map(item => (
+                  {tr.items.map(item => (
                     <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: C.gray2 }}>
-                      <span style={{ color: t.color, fontSize: 11 }}>✓</span> {item}
+                      <span style={{ color: tr.color, fontSize: 11 }}>✓</span> {item}
                     </div>
                   ))}
                 </div>
                 <div style={{ marginTop: "auto" }}>
                   <div style={{
                     borderTop: `1px solid ${C.bd1}`, paddingTop: 12, marginBottom: 16,
-                    fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 600, color: t.color,
+                    fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 600, color: tr.color,
                     fontStyle: "italic",
-                  }}>{t.tagline}</div>
+                  }}>{tr.tagline}</div>
                   <a href="#apply" className="gold-glow" style={{
                     display: "block", padding: "12px 20px", borderRadius: 10, fontSize: 13, fontWeight: 700, cursor: "pointer",
                     transition: "all .3s", textAlign: "center",
-                    background: t.badge ? `linear-gradient(135deg, ${C.gold}, ${C.gold2})` : "transparent",
-                    color: t.badge ? C.navy1 : t.color,
-                    border: t.badge ? "none" : `1px solid ${t.color}40`,
-                  }}>Apply for {t.name} →</a>
+                    background: tr.badge ? `linear-gradient(135deg, ${C.gold}, ${C.gold2})` : "transparent",
+                    color: tr.badge ? C.navy1 : tr.color,
+                    border: tr.badge ? "none" : `1px solid ${tr.color}40`,
+                  }}>{tr.applyText}</a>
                 </div>
               </div>
             ))}
@@ -542,13 +730,13 @@ export default function ACFPartnersPage() {
       <section id="portal" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 600, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <SectionLabel>Existing Partners</SectionLabel>
+            <SectionLabel>{t.portalLabel}</SectionLabel>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>
-              Partner <span style={{ color: C.gold }}>Portal</span>
+              {t.portalTitle1}<span style={{ color: C.gold }}>{t.portalTitle2}</span>
             </h2>
             <GoldBar />
             <p style={{ fontSize: 15, color: C.gray2, maxWidth: 500, margin: "0 auto", lineHeight: 1.7 }}>
-              Access your dashboard, training materials, deployment data, certifications, and revenue reports.
+              {t.portalDesc}
             </p>
           </div>
 
@@ -573,20 +761,20 @@ export default function ACFPartnersPage() {
                     <rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0110 0v4" />
                   </svg>
                 </div>
-                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, fontWeight: 700, color: "#fff", marginBottom: 4 }}>Partner Access</h3>
-                <p style={{ fontSize: 13, color: C.gray }}>Sign in with your partner credentials</p>
+                <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, fontWeight: 700, color: "#fff", marginBottom: 4 }}>{t.portalAccessTitle}</h3>
+                <p style={{ fontSize: 13, color: C.gray }}>{t.portalAccessDesc}</p>
               </div>
 
-              <FormField label="Email" type="email" placeholder="partner@company.com" />
-              <FormField label="Password" type="password" placeholder="••••••••" />
+              <FormField label={t.portalEmail} type="email" placeholder="partner@company.com" />
+              <FormField label={t.portalPassword} type="password" placeholder="••••••••" />
 
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 24 }}>
                 <label style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: C.gray2, cursor: "pointer" }}>
-                  <input type="checkbox" style={{ accentColor: C.gold }} /> Remember me
+                  <input type="checkbox" style={{ accentColor: C.gold }} /> {t.portalRemember}
                 </label>
                 <a href="#" style={{ fontSize: 13, color: C.gold, transition: "opacity .2s" }}
                   onMouseEnter={e => (e.target as HTMLElement).style.opacity = "0.7"} onMouseLeave={e => (e.target as HTMLElement).style.opacity = "1"}>
-                  Forgot password?
+                  {t.portalForgot}
                 </a>
               </div>
 
@@ -594,10 +782,10 @@ export default function ACFPartnersPage() {
                 width: "100%", padding: 14, borderRadius: 10, border: "none", fontSize: 14, fontWeight: 700,
                 cursor: "pointer", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
                 transition: "all .3s",
-              }}>Sign In →</button>
+              }}>{t.portalSignIn}</button>
 
               <div style={{ textAlign: "center", marginTop: 20, paddingTop: 20, borderTop: `1px solid ${C.bd1}` }}>
-                <p style={{ fontSize: 13, color: C.gray }}>Not a partner yet? <a href="#apply" style={{ color: C.gold, fontWeight: 600 }}>Apply now →</a></p>
+                <p style={{ fontSize: 13, color: C.gray }}>{t.portalNotPartner}<a href="#apply" style={{ color: C.gold, fontWeight: 600 }}>{t.portalApplyNow}</a></p>
               </div>
             </div>
           </div>
@@ -605,17 +793,10 @@ export default function ACFPartnersPage() {
           {/* Portal features preview */}
           <div style={{ marginTop: 32 }}>
             <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 16, textAlign: "center" }}>
-              Inside the Portal
+              {t.insidePortal}
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-              {[
-                { icon: "📊", label: "Deployment Dashboard", desc: "Track all ACF deployments" },
-                { icon: "🎓", label: "Training Hub", desc: "Academy modules & certifications" },
-                { icon: "💰", label: "Revenue Center", desc: "Commissions & invoicing" },
-                { icon: "📋", label: "Audit Reports", desc: "Generate co-branded reports" },
-                { icon: "👥", label: "Client Portfolio", desc: "Manage your certified clients" },
-                { icon: "🔔", label: "Updates & News", desc: "Latest from ACF Standard" },
-              ].map(f => (
+              {t.portalFeatures.map(f => (
                 <div key={f.label} style={{
                   display: "flex", alignItems: "center", gap: 12, padding: "14px 16px",
                   background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 10,
@@ -640,13 +821,13 @@ export default function ACFPartnersPage() {
       <section id="apply" style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}`, background: C.navy2 }}>
         <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <SectionLabel>Join the Network</SectionLabel>
+            <SectionLabel>{t.applyLabel}</SectionLabel>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>
-              Apply to become an ACF <span style={{ color: C.gold }}>Partner</span>
+              {t.applyTitle1}<span style={{ color: C.gold }}>{t.applyTitle2}</span>
             </h2>
             <GoldBar />
             <p style={{ fontSize: 15, color: C.gray2, maxWidth: 550, margin: "0 auto", lineHeight: 1.7 }}>
-              We select partners carefully. We're looking for organizations that share our vision: <strong style={{ color: "#fff" }}>accountable autonomy</strong>.
+              {t.applyDesc}<strong style={{ color: "#fff" }}>{t.applyDescStrong}</strong>.
             </p>
           </div>
 
@@ -655,42 +836,38 @@ export default function ACFPartnersPage() {
               background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 20, padding: 40,
             }}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-                <FormField label="First Name" placeholder="Vincent" />
-                <FormField label="Last Name" placeholder="DORANGE" />
+                <FormField label={t.formFirstName} placeholder="Vincent" />
+                <FormField label={t.formLastName} placeholder="DORANGE" />
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-                <FormField label="Email" type="email" placeholder="partner@company.com" />
-                <FormField label="Phone" type="tel" placeholder="+33 6 00 00 00 00" required={false} />
+                <FormField label={t.formEmail} type="email" placeholder="partner@company.com" />
+                <FormField label={t.formPhone} type="tel" placeholder="+33 6 00 00 00 00" required={false} />
               </div>
-              <FormField label="Company Name" placeholder="Your organization" />
+              <FormField label={t.formCompany} placeholder={t.formCompany} />
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
-                <FormField label="Country / Territory" type="select" options={[
+                <FormField label={t.formCountry} type="select" options={[
                   "France", "United Kingdom", "Germany", "United States", "Canada",
                   "Japan", "Australia", "United Arab Emirates", "Switzerland", "Netherlands",
                   "Singapore", "India", "Brazil", "Other"
                 ]} />
-                <FormField label="Partnership Tier" type="select" options={[
-                  "Affiliate — Referral partner",
-                  "Certified — Deploy & train",
-                  "Strategic — Enterprise alliance",
-                ]} />
+                <FormField label={t.formTier} type="select" options={t.tierOptions} />
               </div>
-              <FormField label="Industry" type="select" options={[
+              <FormField label={t.formIndustry} type="select" options={[
                 "Consulting / Advisory", "Technology / SaaS", "Financial Services",
                 "Legal / Compliance", "Healthcare", "Retail / E-Commerce",
                 "Manufacturing / Industry", "Education / Training", "Other"
               ]} />
-              <FormField label="Team Size" type="select" options={[
+              <FormField label={t.formTeamSize} type="select" options={[
                 "1-5", "6-20", "21-50", "51-200", "200+"
               ]} />
-              <FormField label="Why do you want to become an ACF Partner?" type="textarea"
-                placeholder="Tell us about your organization, your experience with AI governance, and what motivates you to deploy the ACF standard in your territory..." />
-              <FormField label="Website" type="url" placeholder="https://yourcompany.com" required={false} />
+              <FormField label={t.formWhy} type="textarea"
+                placeholder={t.formWhyPlaceholder} />
+              <FormField label={t.formWebsite} type="url" placeholder="https://yourcompany.com" required={false} />
 
               <div style={{ marginTop: 8 }}>
                 <label style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 13, color: C.gray2, cursor: "pointer", lineHeight: 1.5 }}>
                   <input type="checkbox" style={{ accentColor: C.gold, marginTop: 3, flexShrink: 0 }} />
-                  I agree to the ACF Partner Program Terms & Conditions and acknowledge that my application will be reviewed within 5 business days.
+                  {t.formTerms}
                 </label>
               </div>
 
@@ -701,7 +878,7 @@ export default function ACFPartnersPage() {
                   width: "100%", padding: 16, borderRadius: 12, border: "none", fontSize: 15, fontWeight: 700,
                   cursor: "pointer", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
                   transition: "all .3s", marginTop: 28,
-                }}>Submit Application →</button>
+                }}>{t.formSubmit}</button>
             </div>
           ) : (
             <div style={{
@@ -709,13 +886,13 @@ export default function ACFPartnersPage() {
             }}>
               <div style={{ fontSize: 48, marginBottom: 20 }}>🎉</div>
               <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 24, fontWeight: 700, color: "#fff", marginBottom: 12 }}>
-                Application Received!
+                {t.formSuccessTitle}
               </h3>
               <p style={{ fontSize: 15, color: C.gray2, maxWidth: 400, margin: "0 auto 24px", lineHeight: 1.7 }}>
-                Thank you for your interest in the ACF Partner Network. Our team will review your application and get back to you within <strong style={{ color: "#fff" }}>5 business days</strong>.
+                {t.formSuccessDesc1}<strong style={{ color: "#fff" }}>{t.formSuccessDesc2}</strong>.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 12, maxWidth: 320, margin: "0 auto" }}>
-                {["Application confirmation sent to your email", "Review by ACF partner team", "Interview & alignment call", "Onboarding & territory assignment"].map((step, i) => (
+                {t.formSuccessSteps.map((step, i) => (
                   <div key={step} style={{ display: "flex", alignItems: "center", gap: 12, textAlign: "left" }}>
                     <div style={{
                       width: 28, height: 28, borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center",
@@ -737,21 +914,21 @@ export default function ACFPartnersPage() {
       <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px" }}>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <SectionLabel>Partner Journey</SectionLabel>
+            <SectionLabel>{t.journeyLabel}</SectionLabel>
             <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 30, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>
-              From application to <span style={{ color: C.gold }}>deployment</span>
+              {t.journeyTitle1}<span style={{ color: C.gold }}>{t.journeyTitle2}</span>
             </h2>
             <GoldBar />
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 4, maxWidth: 600, margin: "0 auto" }}>
             {[
-              { step: "01", label: "Apply", desc: "Submit your partner application", color: C.green },
-              { step: "02", label: "Interview", desc: "Alignment call with ACF team", color: C.gold },
-              { step: "03", label: "Onboarding", desc: "Academy training & certification", color: C.amber },
-              { step: "04", label: "Territory", desc: "Exclusive zone assignment", color: C.blue },
-              { step: "05", label: "Deploy", desc: "Audit, train, and certify clients", color: C.gold },
-              { step: "06", label: "Grow", desc: "Revenue share, co-branding, scale", color: C.green },
+              { step: t.journeySteps[0].step, label: t.journeySteps[0].label, desc: t.journeySteps[0].desc, color: C.green },
+              { step: t.journeySteps[1].step, label: t.journeySteps[1].label, desc: t.journeySteps[1].desc, color: C.gold },
+              { step: t.journeySteps[2].step, label: t.journeySteps[2].label, desc: t.journeySteps[2].desc, color: C.amber },
+              { step: t.journeySteps[3].step, label: t.journeySteps[3].label, desc: t.journeySteps[3].desc, color: C.blue },
+              { step: t.journeySteps[4].step, label: t.journeySteps[4].label, desc: t.journeySteps[4].desc, color: C.gold },
+              { step: t.journeySteps[5].step, label: t.journeySteps[5].label, desc: t.journeySteps[5].desc, color: C.green },
             ].map((s, i) => (
               <div key={s.step}>
                 <div style={{ display: "flex", alignItems: "center", gap: 16, padding: "16px 20px", background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 12, transition: "all .3s" }}
@@ -775,10 +952,10 @@ export default function ACFPartnersPage() {
       <section style={{ padding: "40px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 24, textAlign: "center" }}>
           {[
-            { val: 3, suf: "", label: "Partnership tiers" },
-            { val: 35, suf: "%", label: "Max revenue share" },
-            { val: 6, suf: "", label: "Portal features" },
-            { val: 5, suf: " days", label: "Application review" },
+            { val: 3, suf: t.statsSuffixes[0], label: t.statsLabels[0] },
+            { val: 35, suf: t.statsSuffixes[1], label: t.statsLabels[1] },
+            { val: 6, suf: t.statsSuffixes[2], label: t.statsLabels[2] },
+            { val: 5, suf: t.statsSuffixes[3], label: t.statsLabels[3] },
           ].map(s => (
             <div key={s.label}>
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, color: C.gold }}><AnimatedCounter end={s.val} suffix={s.suf} /></div>
@@ -792,17 +969,17 @@ export default function ACFPartnersPage() {
       <section style={{ padding: "60px 0", borderTop: `1px solid ${C.bd1}` }}>
         <div style={{ maxWidth: 700, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
           <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 36, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 8 }}>
-            The standard is global.<br /><span style={{ color: C.gold }}>The network is yours.</span>
+            {t.finalTitle1}<br /><span style={{ color: C.gold }}>{t.finalTitle2}</span>
           </h2>
           <p style={{ fontSize: 15, color: C.gray2, maxWidth: 500, margin: "0 auto 32px" }}>
-            Whether you're a consultancy, a tech firm, or an enterprise — if you believe in accountable autonomy, there's a place for you.
+            {t.finalDesc}
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap" }}>
             <a href="#apply" className="gold-glow" style={{
               background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
               border: "none", padding: "16px 28px", borderRadius: 12, fontSize: 14, fontWeight: 700, cursor: "pointer", transition: "all .3s",
               display: "inline-block",
-            }}>Become a Partner →</a>
+            }}>{t.finalBtn1}</a>
             <a href="#portal" style={{
               background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
               padding: "16px 28px", borderRadius: 12, fontSize: 14, fontWeight: 500, cursor: "pointer",
@@ -810,7 +987,7 @@ export default function ACFPartnersPage() {
             }}
               onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
               onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>
-              Partner Portal Login
+              {t.finalBtn2}
             </a>
             <a href={`/${locale}/acf-certification`} style={{
               background: "transparent", color: C.gray2, border: `1px solid ${C.bd1}`,
@@ -819,7 +996,7 @@ export default function ACFPartnersPage() {
             }}
               onMouseEnter={e => { (e.target as HTMLElement).style.borderColor = C.goldBorder; (e.target as HTMLElement).style.color = "#fff"; }}
               onMouseLeave={e => { (e.target as HTMLElement).style.borderColor = C.bd1; (e.target as HTMLElement).style.color = C.gray2; }}>
-              View Certification
+              {t.finalBtn3}
             </a>
           </div>
         </div>

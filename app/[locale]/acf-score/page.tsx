@@ -1,7 +1,247 @@
 "use client"
 import { useLocale } from "next-intl";
-const buildHTML = (locale: string) => `<!DOCTYPE html>
-<html lang="en">
+
+const translations = {
+  en: {
+    // Nav
+    navSubtext: "DIAGNOSTIC TOOL — FREE",
+    navHome: "← Home",
+    navCta: "Calculate My Score →",
+    // Hero
+    heroTag: "DIAGNOSTIC TOOL — FREE",
+    heroLine1: "Measure Your",
+    heroLine2: "Sovereignty Score",
+    heroDesc: "Are you ready for the era of autonomous AI agents? Evaluate the robustness of your agentic governance in 10 minutes. Get your ACF Score® across 6 governance axes with personalized recommendations.",
+    heroCta: "Calculate My Score — Free →",
+    heroHow: "How It Works",
+    badge1: "7 guided steps",
+    badge2: "Full PDF report",
+    badge3: "No sign-up required",
+    badge4: "Result in 10 minutes",
+    // Dial
+    dialLabel: "SOVEREIGNTY SCORE",
+    // Stats
+    stat1: "of companies use AI agents without formal governance",
+    stat2: "average losses from uncontrolled AI decisions",
+    stat3: "of executives fear strategic loss of control",
+    // 6 Axes
+    axesSectionLabel: "// Measurement Framework",
+    axesSectionTitle: "6 Governance Axes",
+    axesSectionDesc: "Your Sovereignty Score is calculated across 6 critical dimensions of agentic governance. Each axis reveals a specific vulnerability or strength in your current framework.",
+    axis1Title: "Decisional Autonomy",
+    axis1Desc: "Measures the degree to which your AI agents make decisions independently — and whether those decisions stay within defined boundaries.",
+    axis2Title: "Control & Supervision",
+    axis2Desc: "Evaluates your capacity to monitor, intervene, and stop autonomous agent operations at any time through your kill switch protocols.",
+    axis3Title: "Resilience",
+    axis3Desc: "Assesses your organization's ability to maintain operations and recover quickly when agentic systems fail or act unexpectedly.",
+    axis4Title: "Platform Dependency",
+    axis4Desc: "Quantifies your exposure to third-party AI platforms (Amazon, Google, OpenAI) and the risk if any single provider becomes unavailable.",
+    axis5Title: "Regulatory Compliance",
+    axis5Desc: "Measures alignment with EU AI Act, GDPR, and sector-specific regulations governing the use of autonomous systems in commercial environments.",
+    axis6Title: "Technical Controls",
+    axis6Desc: "Evaluates the technical infrastructure: traceability, audit logs, sandboxing, reversibility mechanisms, and access control for your AI systems.",
+    // How it works
+    howSectionLabel: "// Process",
+    howSectionTitle: "7 Steps to Your Score",
+    howSectionDesc: "A structured diagnostic that takes 10 minutes. No sign-up required. Get your full results immediately.",
+    step1Title: "Company Context",
+    step1Desc: "Sector, company size, current AI agent usage and deployment scope.",
+    step1Tag: "FOUNDATION",
+    step2Title: "Maturity Level",
+    step2Desc: "How your agents currently operate — from assisted to fully autonomous.",
+    step2Tag: "ASSESSMENT",
+    step3Title: "4 ACF Layers",
+    step3Desc: "Governance, Decision Policy, Agent System, and Execution Supervision layers.",
+    step3Tag: "FRAMEWORK",
+    step4Title: "Dependencies",
+    step4Desc: "Critical supplier mapping, platform risk exposure, and single points of failure.",
+    step4Tag: "RISK MAP",
+    step5Title: "Control Mechanisms",
+    step5Desc: "Kill switch readiness, audit trail quality, and human escalation protocols.",
+    step5Tag: "CONTROLS",
+    step6Title: "Compliance Check",
+    step6Desc: "EU AI Act, GDPR, and sector-specific regulatory alignment assessment.",
+    step6Tag: "COMPLIANCE",
+    step7Title: "Your Score & Report",
+    step7Desc: "Immediate Sovereignty Score, axis breakdown, and your 3 priority actions.",
+    step7Tag: "RESULTS",
+    stepReadyTitle: "Ready?",
+    stepReadyDesc: "10 minutes. Free. No sign-up. Immediate results.",
+    stepReadyCta: "Start Now →",
+    // Deliverables
+    delSectionLabel: "// What You Get",
+    delSectionTitle: "Your Complete Governance Report",
+    delSectionDesc: "A full diagnostic report — actionable, specific to your organization, downloadable as PDF.",
+    del1Title: "Sovereignty Score",
+    del1Desc: "Your composite score measuring decisional independence across all 6 governance axes. Benchmarked against industry standards.",
+    del2Title: "Global ACF® Score",
+    del2Desc: "Full evaluation of your 4 operational governance layers with individual scores and gap analysis for each dimension.",
+    del3Title: "3 Priority Actions",
+    del3Desc: "A personalized, prioritized action plan to secure your transition and reach ACF Level 2 governance compliance.",
+    // Risks
+    riskSectionLabel: "// Why It Matters",
+    riskSectionTitle: "Without Agentic Governance, You Risk:",
+    risk1Title: "AI Decisions Against Your Business Interests",
+    risk1Desc: "Agents optimizing local metrics without global business vision — silently destroying value.",
+    risk2Title: "Loss of Strategic Control",
+    risk2Desc: "Inability to steer, audit, or correct your AI systems in real time when decisions go wrong.",
+    risk3Title: "Critical Platform Dependency",
+    risk3Desc: "One Amazon, Google, or OpenAI outage stops your entire operation. No fallback, no resilience.",
+    risk4Title: "Legal Liability on Automated Decisions",
+    risk4Desc: "You remain legally responsible for every decision your agents make — even those you can't explain.",
+    risk5Title: "Margin Erosion via Uncontrolled Pricing",
+    risk5Desc: "Agents setting prices and promotions without boundaries can destroy profitability in hours.",
+    risk6Title: "No Audit Trail",
+    risk6Desc: "Without traceability, you cannot understand, explain, or correct what your AI agents have done.",
+    // CTA
+    ctaFreeTag: "✓ 100% FREE · NO SIGN-UP · INSTANT RESULTS",
+    ctaTitle1: "Calculate Your",
+    ctaTitle2: "Sovereignty Score",
+    ctaTitle3: "Now",
+    ctaDesc: "10 minutes. A complete diagnostic of your agentic governance. Understand where you stand before a failure forces you to find out.",
+    ctaPrimary: "Start the Diagnostic — Free →",
+    ctaSecondary: "Request a Custom Assessment",
+    // Footer
+    footerLogoText: "Agentic Commerce Framework®",
+    footerLogoSubtext: "Global Standard for AI Governance",
+    footerDesc: "The governance standard for organizations deploying autonomous AI agents.",
+    footerFramework: "Framework",
+    footerTheStandard: "The Standard",
+    footerBlog: "Blog",
+    footerCertification: "ACF Certification",
+    footerProducts: "Products",
+    footerScore: "ACF Score®",
+    footerControl: "ACF Control",
+    footerAcademy: "Academy",
+    footerOrganization: "Organization",
+    footerPartnerPortal: "Partner Portal",
+    footerAbout: "About",
+    footerContact: "Contact",
+    footerLegal: "Legal",
+    footerCopyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved.",
+  },
+  fr: {
+    // Nav
+    navSubtext: "OUTIL DE DIAGNOSTIC — GRATUIT",
+    navHome: "← Accueil",
+    navCta: "Calculer Mon Score →",
+    // Hero
+    heroTag: "OUTIL DE DIAGNOSTIC — GRATUIT",
+    heroLine1: "Mesurez Votre",
+    heroLine2: "Score de Souveraineté",
+    heroDesc: "Êtes-vous prêt pour l'ère des agents IA autonomes ? Évaluez la robustesse de votre gouvernance agentique en 10 minutes. Obtenez votre ACF Score® sur 6 axes de gouvernance avec des recommandations personnalisées.",
+    heroCta: "Calculer Mon Score — Gratuit →",
+    heroHow: "Comment Ça Marche",
+    badge1: "7 étapes guidées",
+    badge2: "Rapport PDF complet",
+    badge3: "Aucune inscription requise",
+    badge4: "Résultat en 10 minutes",
+    // Dial
+    dialLabel: "SCORE DE SOUVERAINETÉ",
+    // Stats
+    stat1: "des entreprises utilisent des agents IA sans gouvernance formelle",
+    stat2: "de pertes moyennes liées aux décisions IA non contrôlées",
+    stat3: "des dirigeants craignent la perte de contrôle stratégique",
+    // 6 Axes
+    axesSectionLabel: "// Cadre de Mesure",
+    axesSectionTitle: "6 Axes de Gouvernance",
+    axesSectionDesc: "Votre Score de Souveraineté est calculé sur 6 dimensions critiques de gouvernance agentique. Chaque axe révèle une vulnérabilité ou une force spécifique de votre cadre actuel.",
+    axis1Title: "Autonomie Décisionnelle",
+    axis1Desc: "Mesure le degré d'indépendance décisionnelle de vos agents IA — et si ces décisions restent dans les limites définies.",
+    axis2Title: "Contrôle & Supervision",
+    axis2Desc: "Évalue votre capacité à surveiller, intervenir et arrêter les opérations autonomes des agents à tout moment via vos protocoles de kill switch.",
+    axis3Title: "Résilience",
+    axis3Desc: "Évalue la capacité de votre organisation à maintenir ses opérations et à se rétablir rapidement lorsque les systèmes agentiques échouent ou agissent de manière inattendue.",
+    axis4Title: "Dépendance aux Plateformes",
+    axis4Desc: "Quantifie votre exposition aux plateformes IA tierces (Amazon, Google, OpenAI) et le risque si un fournisseur unique devient indisponible.",
+    axis5Title: "Conformité Réglementaire",
+    axis5Desc: "Mesure l'alignement avec l'AI Act de l'UE, le RGPD et les réglementations sectorielles régissant l'utilisation des systèmes autonomes en environnements commerciaux.",
+    axis6Title: "Contrôles Techniques",
+    axis6Desc: "Évalue l'infrastructure technique : traçabilité, journaux d'audit, sandboxing, mécanismes de réversibilité et contrôle d'accès de vos systèmes IA.",
+    // How it works
+    howSectionLabel: "// Processus",
+    howSectionTitle: "7 Étapes Vers Votre Score",
+    howSectionDesc: "Un diagnostic structuré en 10 minutes. Aucune inscription requise. Obtenez vos résultats complets immédiatement.",
+    step1Title: "Contexte Entreprise",
+    step1Desc: "Secteur, taille de l'entreprise, utilisation actuelle des agents IA et périmètre de déploiement.",
+    step1Tag: "FONDATION",
+    step2Title: "Niveau de Maturité",
+    step2Desc: "Comment vos agents fonctionnent actuellement — de l'assistance à l'autonomie complète.",
+    step2Tag: "ÉVALUATION",
+    step3Title: "4 Couches ACF",
+    step3Desc: "Gouvernance, Politique Décisionnelle, Système d'Agents et Supervision de l'Exécution.",
+    step3Tag: "FRAMEWORK",
+    step4Title: "Dépendances",
+    step4Desc: "Cartographie des fournisseurs critiques, exposition aux risques des plateformes et points de défaillance uniques.",
+    step4Tag: "CARTE DES RISQUES",
+    step5Title: "Mécanismes de Contrôle",
+    step5Desc: "Disponibilité du kill switch, qualité de la piste d'audit et protocoles d'escalade humaine.",
+    step5Tag: "CONTRÔLES",
+    step6Title: "Vérification de Conformité",
+    step6Desc: "Évaluation de l'alignement avec l'AI Act de l'UE, le RGPD et les réglementations sectorielles.",
+    step6Tag: "CONFORMITÉ",
+    step7Title: "Votre Score & Rapport",
+    step7Desc: "Score de Souveraineté immédiat, analyse par axe et vos 3 actions prioritaires.",
+    step7Tag: "RÉSULTATS",
+    stepReadyTitle: "Prêt ?",
+    stepReadyDesc: "10 minutes. Gratuit. Sans inscription. Résultats immédiats.",
+    stepReadyCta: "Commencer →",
+    // Deliverables
+    delSectionLabel: "// Ce Que Vous Obtenez",
+    delSectionTitle: "Votre Rapport de Gouvernance Complet",
+    delSectionDesc: "Un rapport de diagnostic complet — actionnable, spécifique à votre organisation, téléchargeable en PDF.",
+    del1Title: "Score de Souveraineté",
+    del1Desc: "Votre score composite mesurant l'indépendance décisionnelle sur les 6 axes de gouvernance. Comparé aux standards de l'industrie.",
+    del2Title: "Score ACF® Global",
+    del2Desc: "Évaluation complète de vos 4 couches de gouvernance opérationnelle avec scores individuels et analyse des écarts pour chaque dimension.",
+    del3Title: "3 Actions Prioritaires",
+    del3Desc: "Un plan d'action personnalisé et priorisé pour sécuriser votre transition et atteindre la conformité de gouvernance ACF Niveau 2.",
+    // Risks
+    riskSectionLabel: "// Pourquoi C'est Important",
+    riskSectionTitle: "Sans Gouvernance Agentique, Vous Risquez :",
+    risk1Title: "Des Décisions IA Contre Vos Intérêts Commerciaux",
+    risk1Desc: "Des agents optimisant des métriques locales sans vision commerciale globale — détruisant silencieusement de la valeur.",
+    risk2Title: "Perte de Contrôle Stratégique",
+    risk2Desc: "Incapacité à piloter, auditer ou corriger vos systèmes IA en temps réel lorsque les décisions tournent mal.",
+    risk3Title: "Dépendance Critique aux Plateformes",
+    risk3Desc: "Une panne d'Amazon, Google ou OpenAI arrête toute votre opération. Aucun plan de repli, aucune résilience.",
+    risk4Title: "Responsabilité Juridique sur les Décisions Automatisées",
+    risk4Desc: "Vous restez juridiquement responsable de chaque décision prise par vos agents — même celles que vous ne pouvez pas expliquer.",
+    risk5Title: "Érosion des Marges par une Tarification Non Contrôlée",
+    risk5Desc: "Des agents fixant prix et promotions sans limites peuvent détruire la rentabilité en quelques heures.",
+    risk6Title: "Aucune Piste d'Audit",
+    risk6Desc: "Sans traçabilité, vous ne pouvez ni comprendre, ni expliquer, ni corriger ce que vos agents IA ont fait.",
+    // CTA
+    ctaFreeTag: "✓ 100% GRATUIT · SANS INSCRIPTION · RÉSULTATS IMMÉDIATS",
+    ctaTitle1: "Calculez Votre",
+    ctaTitle2: "Score de Souveraineté",
+    ctaTitle3: "Maintenant",
+    ctaDesc: "10 minutes. Un diagnostic complet de votre gouvernance agentique. Comprenez où vous en êtes avant qu'une défaillance ne vous force à le découvrir.",
+    ctaPrimary: "Lancer le Diagnostic — Gratuit →",
+    ctaSecondary: "Demander une Évaluation Personnalisée",
+    // Footer
+    footerLogoText: "Agentic Commerce Framework®",
+    footerLogoSubtext: "Standard Mondial de Gouvernance IA",
+    footerDesc: "Le standard de gouvernance pour les organisations déployant des agents IA autonomes.",
+    footerFramework: "Framework",
+    footerTheStandard: "Le Standard",
+    footerBlog: "Blog",
+    footerCertification: "ACF Certification",
+    footerProducts: "Produits",
+    footerScore: "ACF Score®",
+    footerControl: "ACF Control",
+    footerAcademy: "Academy",
+    footerOrganization: "Organisation",
+    footerPartnerPortal: "Portail Partenaire",
+    footerAbout: "À Propos",
+    footerContact: "Contact",
+    footerLegal: "Légal",
+    footerCopyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Tous droits réservés.",
+  },
+};
+
+const buildHTML = (locale: string, t: Record<string, string>) => `<!DOCTYPE html>
+<html lang="${locale}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -165,12 +405,12 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="lb">ACF</div>
       <div>
         <div class="ln">ACF SCORE</div>
-        <div class="ls">DIAGNOSTIC TOOL — FREE</div>
+        <div class="ls">${t.navSubtext}</div>
       </div>
     </a>
     <div class="nr">
-      <a href="/${locale}/" target="_top" class="nback">← Home</a>
-      <a href="https://www.acf-score.com/" target="_blank" class="ncta">Calculate My Score →</a>
+      <a href="/${locale}/" target="_top" class="nback">${t.navHome}</a>
+      <a href="https://www.acf-score.com/" target="_blank" class="ncta">${t.navCta}</a>
     </div>
   </div>
 </nav>
@@ -180,21 +420,21 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   <div class="hgrid"></div>
   <div class="hw">
     <div>
-      <div class="htag rev"><span class="hdot"></span>DIAGNOSTIC TOOL — FREE</div>
+      <div class="htag rev"><span class="hdot"></span>${t.heroTag}</div>
       <h1 class="rev d1">
-        <span style="display:block;color:var(--w)">Measure Your</span>
-        <span class="hgold hline">Sovereignty Score</span>
+        <span style="display:block;color:var(--w)">${t.heroLine1}</span>
+        <span class="hgold hline">${t.heroLine2}</span>
       </h1>
-      <p class="hdesc rev d2">Are you ready for the era of autonomous AI agents? Evaluate the robustness of your agentic governance in 10 minutes. Get your ACF Score® across 6 governance axes with personalized recommendations.</p>
+      <p class="hdesc rev d2">${t.heroDesc}</p>
       <div class="hact rev d2">
-        <a href="https://www.acf-score.com/" target="_blank" class="btng">Calculate My Score — Free →</a>
-        <a href="#how" class="btno">How It Works</a>
+        <a href="https://www.acf-score.com/" target="_blank" class="btng">${t.heroCta}</a>
+        <a href="#how" class="btno">${t.heroHow}</a>
       </div>
       <div class="hbadges rev d2">
-        <span class="hb">7 guided steps</span>
-        <span class="hb">Full PDF report</span>
-        <span class="hb">No sign-up required</span>
-        <span class="hb">Result in 10 minutes</span>
+        <span class="hb">${t.badge1}</span>
+        <span class="hb">${t.badge2}</span>
+        <span class="hb">${t.badge3}</span>
+        <span class="hb">${t.badge4}</span>
       </div>
     </div>
     <div class="dial-wrap rev d2">
@@ -221,7 +461,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         </svg>
         <div class="dial-center">
           <div class="dial-score" id="dialScore">0</div>
-          <div class="dial-label">SOVEREIGNTY SCORE</div>
+          <div class="dial-label">${t.dialLabel}</div>
           <div class="dial-status">/ 100 pts</div>
         </div>
       </div>
@@ -232,60 +472,60 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- STATS -->
 <div class="statsbar">
   <div class="sgrid">
-    <div class="sc"><div class="scn">73%</div><div class="scl">of companies use AI agents without formal governance</div></div>
-    <div class="sc"><div class="scn">€2.4M</div><div class="scl">average losses from uncontrolled AI decisions</div></div>
-    <div class="sc"><div class="scn">89%</div><div class="scl">of executives fear strategic loss of control</div></div>
+    <div class="sc"><div class="scn">73%</div><div class="scl">${t.stat1}</div></div>
+    <div class="sc"><div class="scn">€2.4M</div><div class="scl">${t.stat2}</div></div>
+    <div class="sc"><div class="scn">89%</div><div class="scl">${t.stat3}</div></div>
   </div>
 </div>
 
 <!-- 6 AXES -->
 <section class="secdark" id="axes">
   <div class="ctn">
-    <span class="ew rev">// Measurement Framework</span>
-    <h2 class="st rev d1">6 Governance Axes</h2>
+    <span class="ew rev">${t.axesSectionLabel}</span>
+    <h2 class="st rev d1">${t.axesSectionTitle}</h2>
     <div class="gb rev d1"></div>
-    <p class="sd rev d2">Your Sovereignty Score is calculated across 6 critical dimensions of agentic governance. Each axis reveals a specific vulnerability or strength in your current framework.</p>
+    <p class="sd rev d2">${t.axesSectionDesc}</p>
     <div class="axgrid">
       <div class="axcard rev d1">
         <div class="ax-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
         <div class="ax-num">AXIS_01</div>
-        <div class="ax-title">Decisional Autonomy</div>
-        <div class="ax-desc">Measures the degree to which your AI agents make decisions independently — and whether those decisions stay within defined boundaries.</div>
+        <div class="ax-title">${t.axis1Title}</div>
+        <div class="ax-desc">${t.axis1Desc}</div>
         <div class="ax-score"><div class="ax-bar"><div class="ax-fill" data-w="78"></div></div><span class="ax-pct">78/100</span></div>
       </div>
       <div class="axcard rev d2">
         <div class="ax-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <div class="ax-num">AXIS_02</div>
-        <div class="ax-title">Control & Supervision</div>
-        <div class="ax-desc">Evaluates your capacity to monitor, intervene, and stop autonomous agent operations at any time through your kill switch protocols.</div>
+        <div class="ax-title">${t.axis2Title}</div>
+        <div class="ax-desc">${t.axis2Desc}</div>
         <div class="ax-score"><div class="ax-bar"><div class="ax-fill" data-w="65"></div></div><span class="ax-pct">65/100</span></div>
       </div>
       <div class="axcard rev d3">
         <div class="ax-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <div class="ax-num">AXIS_03</div>
-        <div class="ax-title">Resilience</div>
-        <div class="ax-desc">Assesses your organization's ability to maintain operations and recover quickly when agentic systems fail or act unexpectedly.</div>
+        <div class="ax-title">${t.axis3Title}</div>
+        <div class="ax-desc">${t.axis3Desc}</div>
         <div class="ax-score"><div class="ax-bar"><div class="ax-fill" data-w="55"></div></div><span class="ax-pct">55/100</span></div>
       </div>
       <div class="axcard rev d1">
         <div class="ax-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div>
         <div class="ax-num">AXIS_04</div>
-        <div class="ax-title">Platform Dependency</div>
-        <div class="ax-desc">Quantifies your exposure to third-party AI platforms (Amazon, Google, OpenAI) and the risk if any single provider becomes unavailable.</div>
+        <div class="ax-title">${t.axis4Title}</div>
+        <div class="ax-desc">${t.axis4Desc}</div>
         <div class="ax-score"><div class="ax-bar"><div class="ax-fill" data-w="42"></div></div><span class="ax-pct">42/100</span></div>
       </div>
       <div class="axcard rev d2">
         <div class="ax-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
         <div class="ax-num">AXIS_05</div>
-        <div class="ax-title">Regulatory Compliance</div>
-        <div class="ax-desc">Measures alignment with EU AI Act, GDPR, and sector-specific regulations governing the use of autonomous systems in commercial environments.</div>
+        <div class="ax-title">${t.axis5Title}</div>
+        <div class="ax-desc">${t.axis5Desc}</div>
         <div class="ax-score"><div class="ax-bar"><div class="ax-fill" data-w="70"></div></div><span class="ax-pct">70/100</span></div>
       </div>
       <div class="axcard rev d3">
         <div class="ax-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
         <div class="ax-num">AXIS_06</div>
-        <div class="ax-title">Technical Controls</div>
-        <div class="ax-desc">Evaluates the technical infrastructure: traceability, audit logs, sandboxing, reversibility mechanisms, and access control for your AI systems.</div>
+        <div class="ax-title">${t.axis6Title}</div>
+        <div class="ax-desc">${t.axis6Desc}</div>
         <div class="ax-score"><div class="ax-bar"><div class="ax-fill" data-w="60"></div></div><span class="ax-pct">60/100</span></div>
       </div>
     </div>
@@ -295,58 +535,58 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- HOW IT WORKS -->
 <section id="how">
   <div class="ctn">
-    <span class="ew rev">// Process</span>
-    <h2 class="st rev d1">7 Steps to Your Score</h2>
+    <span class="ew rev">${t.howSectionLabel}</span>
+    <h2 class="st rev d1">${t.howSectionTitle}</h2>
     <div class="gb rev d1"></div>
-    <p class="sd rev d2">A structured diagnostic that takes 10 minutes. No sign-up required. Get your full results immediately.</p>
+    <p class="sd rev d2">${t.howSectionDesc}</p>
     <div class="steps">
       <div class="step rev d1">
         <div class="step-n">01</div>
-        <div class="step-title">Company Context</div>
-        <div class="step-desc">Sector, company size, current AI agent usage and deployment scope.</div>
-        <span class="step-tag">FOUNDATION</span>
+        <div class="step-title">${t.step1Title}</div>
+        <div class="step-desc">${t.step1Desc}</div>
+        <span class="step-tag">${t.step1Tag}</span>
       </div>
       <div class="step rev d2">
         <div class="step-n">02</div>
-        <div class="step-title">Maturity Level</div>
-        <div class="step-desc">How your agents currently operate — from assisted to fully autonomous.</div>
-        <span class="step-tag">ASSESSMENT</span>
+        <div class="step-title">${t.step2Title}</div>
+        <div class="step-desc">${t.step2Desc}</div>
+        <span class="step-tag">${t.step2Tag}</span>
       </div>
       <div class="step rev d3">
         <div class="step-n">03</div>
-        <div class="step-title">4 ACF Layers</div>
-        <div class="step-desc">Governance, Decision Policy, Agent System, and Execution Supervision layers.</div>
-        <span class="step-tag">FRAMEWORK</span>
+        <div class="step-title">${t.step3Title}</div>
+        <div class="step-desc">${t.step3Desc}</div>
+        <span class="step-tag">${t.step3Tag}</span>
       </div>
       <div class="step rev d1">
         <div class="step-n">04</div>
-        <div class="step-title">Dependencies</div>
-        <div class="step-desc">Critical supplier mapping, platform risk exposure, and single points of failure.</div>
-        <span class="step-tag">RISK MAP</span>
+        <div class="step-title">${t.step4Title}</div>
+        <div class="step-desc">${t.step4Desc}</div>
+        <span class="step-tag">${t.step4Tag}</span>
       </div>
       <div class="step rev d2">
         <div class="step-n">05</div>
-        <div class="step-title">Control Mechanisms</div>
-        <div class="step-desc">Kill switch readiness, audit trail quality, and human escalation protocols.</div>
-        <span class="step-tag">CONTROLS</span>
+        <div class="step-title">${t.step5Title}</div>
+        <div class="step-desc">${t.step5Desc}</div>
+        <span class="step-tag">${t.step5Tag}</span>
       </div>
       <div class="step rev d3">
         <div class="step-n">06</div>
-        <div class="step-title">Compliance Check</div>
-        <div class="step-desc">EU AI Act, GDPR, and sector-specific regulatory alignment assessment.</div>
-        <span class="step-tag">COMPLIANCE</span>
+        <div class="step-title">${t.step6Title}</div>
+        <div class="step-desc">${t.step6Desc}</div>
+        <span class="step-tag">${t.step6Tag}</span>
       </div>
       <div class="step rev d1">
         <div class="step-n">07</div>
-        <div class="step-title">Your Score & Report</div>
-        <div class="step-desc">Immediate Sovereignty Score, axis breakdown, and your 3 priority actions.</div>
-        <span class="step-tag">RESULTS</span>
+        <div class="step-title">${t.step7Title}</div>
+        <div class="step-desc">${t.step7Desc}</div>
+        <span class="step-tag">${t.step7Tag}</span>
       </div>
       <div class="step rev d2" style="background:var(--gold-dim);border-left:3px solid var(--gold)">
         <div class="step-n" style="color:rgba(201,168,76,.3)">→</div>
-        <div class="step-title" style="color:var(--gold)">Ready?</div>
-        <div class="step-desc">10 minutes. Free. No sign-up. Immediate results.</div>
-        <a href="https://www.acf-score.com/" target="_blank" class="btng" style="margin-top:16px;font-size:13px;padding:10px 18px">Start Now →</a>
+        <div class="step-title" style="color:var(--gold)">${t.stepReadyTitle}</div>
+        <div class="step-desc">${t.stepReadyDesc}</div>
+        <a href="https://www.acf-score.com/" target="_blank" class="btng" style="margin-top:16px;font-size:13px;padding:10px 18px">${t.stepReadyCta}</a>
       </div>
     </div>
   </div>
@@ -355,25 +595,25 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- DELIVERABLES -->
 <section class="secdark">
   <div class="ctn">
-    <span class="ew rev">// What You Get</span>
-    <h2 class="st rev d1">Your Complete Governance Report</h2>
+    <span class="ew rev">${t.delSectionLabel}</span>
+    <h2 class="st rev d1">${t.delSectionTitle}</h2>
     <div class="gb rev d1"></div>
-    <p class="sd rev d2">A full diagnostic report — actionable, specific to your organization, downloadable as PDF.</p>
+    <p class="sd rev d2">${t.delSectionDesc}</p>
     <div class="delgrid">
       <div class="delcard rev d1">
         <div class="del-ico"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-        <div class="del-title">Sovereignty Score</div>
-        <div class="del-desc">Your composite score measuring decisional independence across all 6 governance axes. Benchmarked against industry standards.</div>
+        <div class="del-title">${t.del1Title}</div>
+        <div class="del-desc">${t.del1Desc}</div>
       </div>
       <div class="delcard rev d2">
         <div class="del-ico"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-        <div class="del-title">Global ACF® Score</div>
-        <div class="del-desc">Full evaluation of your 4 operational governance layers with individual scores and gap analysis for each dimension.</div>
+        <div class="del-title">${t.del2Title}</div>
+        <div class="del-desc">${t.del2Desc}</div>
       </div>
       <div class="delcard rev d3">
         <div class="del-ico"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/></svg></div>
-        <div class="del-title">3 Priority Actions</div>
-        <div class="del-desc">A personalized, prioritized action plan to secure your transition and reach ACF Level 2 governance compliance.</div>
+        <div class="del-title">${t.del3Title}</div>
+        <div class="del-desc">${t.del3Desc}</div>
       </div>
     </div>
   </div>
@@ -382,33 +622,33 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <!-- RISKS -->
 <section>
   <div class="ctn">
-    <span class="ew rev">// Why It Matters</span>
-    <h2 class="st rev d1">Without Agentic Governance, You Risk:</h2>
+    <span class="ew rev">${t.riskSectionLabel}</span>
+    <h2 class="st rev d1">${t.riskSectionTitle}</h2>
     <div class="gb rev d1"></div>
     <div class="rgrid">
       <div class="rcard rev d1">
         <div class="rico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-        <div><div class="rtitle">AI Decisions Against Your Business Interests</div><div class="rdesc">Agents optimizing local metrics without global business vision — silently destroying value.</div></div>
+        <div><div class="rtitle">${t.risk1Title}</div><div class="rdesc">${t.risk1Desc}</div></div>
       </div>
       <div class="rcard rev d2">
         <div class="rico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="15" y1="13" x2="15.01" y2="13"/><line x1="18" y1="11" x2="18.01" y2="11"/><rect x="2" y="8" width="20" height="8" rx="4"/></svg></div>
-        <div><div class="rtitle">Loss of Strategic Control</div><div class="rdesc">Inability to steer, audit, or correct your AI systems in real time when decisions go wrong.</div></div>
+        <div><div class="rtitle">${t.risk2Title}</div><div class="rdesc">${t.risk2Desc}</div></div>
       </div>
       <div class="rcard rev d1">
         <div class="rico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div>
-        <div><div class="rtitle">Critical Platform Dependency</div><div class="rdesc">One Amazon, Google, or OpenAI outage stops your entire operation. No fallback, no resilience.</div></div>
+        <div><div class="rtitle">${t.risk3Title}</div><div class="rdesc">${t.risk3Desc}</div></div>
       </div>
       <div class="rcard rev d2">
         <div class="rico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-        <div><div class="rtitle">Legal Liability on Automated Decisions</div><div class="rdesc">You remain legally responsible for every decision your agents make — even those you can't explain.</div></div>
+        <div><div class="rtitle">${t.risk4Title}</div><div class="rdesc">${t.risk4Desc}</div></div>
       </div>
       <div class="rcard rev d1">
         <div class="rico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-        <div><div class="rtitle">Margin Erosion via Uncontrolled Pricing</div><div class="rdesc">Agents setting prices and promotions without boundaries can destroy profitability in hours.</div></div>
+        <div><div class="rtitle">${t.risk5Title}</div><div class="rdesc">${t.risk5Desc}</div></div>
       </div>
       <div class="rcard rev d2">
         <div class="rico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-        <div><div class="rtitle">No Audit Trail</div><div class="rdesc">Without traceability, you cannot understand, explain, or correct what your AI agents have done.</div></div>
+        <div><div class="rtitle">${t.risk6Title}</div><div class="rdesc">${t.risk6Desc}</div></div>
       </div>
     </div>
   </div>
@@ -418,12 +658,12 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
 <section class="ctasec">
   <div class="ctawm">ACF SCORE®</div>
   <div class="ctn ctain">
-    <div class="free-tag">✓ 100% FREE · NO SIGN-UP · INSTANT RESULTS</div>
-    <h2>Calculate Your<br><span style="color:var(--gold)">Sovereignty Score</span> Now</h2>
-    <p>10 minutes. A complete diagnostic of your agentic governance. Understand where you stand before a failure forces you to find out.</p>
+    <div class="free-tag">${t.ctaFreeTag}</div>
+    <h2>${t.ctaTitle1}<br><span style="color:var(--gold)">${t.ctaTitle2}</span> ${t.ctaTitle3}</h2>
+    <p>${t.ctaDesc}</p>
     <div class="ctabtns">
-      <a href="https://www.acf-score.com/" target="_blank" class="btng" style="font-size:15px;padding:16px 32px">Start the Diagnostic — Free →</a>
-      <a href="/${locale}/contact" target="_top" class="btno">Request a Custom Assessment</a>
+      <a href="https://www.acf-score.com/" target="_blank" class="btng" style="font-size:15px;padding:16px 32px">${t.ctaPrimary}</a>
+      <a href="/${locale}/contact" target="_top" class="btno">${t.ctaSecondary}</a>
     </div>
   </div>
 </section>
@@ -435,38 +675,38 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div>
         <a href="/${locale}/" target="_top" class="logo">
           <div class="lb">ACF</div>
-          <div><div class="ln">Agentic Commerce Framework®</div><div class="ls">Global Standard for AI Governance</div></div>
+          <div><div class="ln">${t.footerLogoText}</div><div class="ls">${t.footerLogoSubtext}</div></div>
         </a>
-        <p class="fdesc">The governance standard for organizations deploying autonomous AI agents.</p>
+        <p class="fdesc">${t.footerDesc}</p>
       </div>
       <div>
-        <div class="ftitle">Framework</div>
+        <div class="ftitle">${t.footerFramework}</div>
         <ul class="flinks">
-          <li><a href="/${locale}/standard" target="_top">The Standard</a></li>
-          <li><a href="/${locale}/blog" target="_top">Blog</a></li>
-          <li><a href="/${locale}/acf-certification" target="_top">ACF Certification</a></li>
+          <li><a href="/${locale}/standard" target="_top">${t.footerTheStandard}</a></li>
+          <li><a href="/${locale}/blog" target="_top">${t.footerBlog}</a></li>
+          <li><a href="/${locale}/acf-certification" target="_top">${t.footerCertification}</a></li>
         </ul>
       </div>
       <div>
-        <div class="ftitle">Products</div>
+        <div class="ftitle">${t.footerProducts}</div>
         <ul class="flinks">
-          <li><a href="/${locale}/acf-score" target="_top">ACF Score®</a></li>
-          <li><a href="/${locale}/acf-control" target="_top">ACF Control</a></li>
-          <li><a href="/${locale}/acf-certification#academy" target="_top">Academy</a></li>
+          <li><a href="/${locale}/acf-score" target="_top">${t.footerScore}</a></li>
+          <li><a href="/${locale}/acf-control" target="_top">${t.footerControl}</a></li>
+          <li><a href="/${locale}/acf-certification#academy" target="_top">${t.footerAcademy}</a></li>
         </ul>
       </div>
       <div>
-        <div class="ftitle">Organization</div>
+        <div class="ftitle">${t.footerOrganization}</div>
         <ul class="flinks">
-          <li><a href="/${locale}/acf-partners" target="_top">Partner Portal</a></li>
-          <li><a href="/${locale}/about" target="_top">About</a></li>
-          <li><a href="/${locale}/contact" target="_top">Contact</a></li>
-          <li><a href="/${locale}/legal" target="_top">Legal</a></li>
+          <li><a href="/${locale}/acf-partners" target="_top">${t.footerPartnerPortal}</a></li>
+          <li><a href="/${locale}/about" target="_top">${t.footerAbout}</a></li>
+          <li><a href="/${locale}/contact" target="_top">${t.footerContact}</a></li>
+          <li><a href="/${locale}/legal" target="_top">${t.footerLegal}</a></li>
         </ul>
       </div>
     </div>
     <div class="fbot">
-      <div class="fcopy">© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved.</div>
+      <div class="fcopy">${t.footerCopyright}</div>
     </div>
   </div>
 </footer>
@@ -541,9 +781,10 @@ new IntersectionObserver(function(entries){
 
 export default function ACFScore() {
   const locale = useLocale();
+  const t = translations[locale as keyof typeof translations] || translations.en;
   return (
     <iframe
-      srcDoc={buildHTML(locale)}
+      srcDoc={buildHTML(locale, t)}
       style={{position:"fixed",top:0,left:0,width:"100vw",height:"100vh",border:"none",zIndex:9999}}
       title="ACF Score"
     />
