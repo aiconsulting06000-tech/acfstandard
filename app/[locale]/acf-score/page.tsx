@@ -101,6 +101,9 @@ const translations = {
     ctaDesc: "10 minutes. A complete diagnostic of your agentic governance. Understand where you stand before a failure forces you to find out.",
     ctaPrimary: "Start the Diagnostic — Free →",
     ctaSecondary: "Request a Custom Assessment",
+    ctaChecker: "ACF AI Act Checker →",
+    footerChecker: "ACF AI Act Checker",
+    footerFaq: "FAQ",
     // Footer
     footerLogoText: "Agentic Commerce Framework®",
     footerLogoSubtext: "Global Standard for AI Governance",
@@ -219,6 +222,9 @@ const translations = {
     ctaDesc: "10 minutes. Un diagnostic complet de votre gouvernance agentique. Comprenez où vous en êtes avant qu'une défaillance ne vous force à le découvrir.",
     ctaPrimary: "Lancer le diagnostic — Gratuit →",
     ctaSecondary: "Demander une évaluation personnalisée",
+    ctaChecker: "ACF AI Act Checker →",
+    footerChecker: "ACF AI Act Checker",
+    footerFaq: "FAQ",
     // Footer
     footerLogoText: "Agentic Commerce Framework®",
     footerLogoSubtext: "Standard mondial de gouvernance IA",
@@ -328,6 +334,9 @@ const translations = {
     ctaDesc: "10 minutos. Un diagnóstico completo de su gobernanza agéntica. Comprenda dónde se encuentra antes de que un fallo le obligue a descubrirlo.",
     ctaPrimary: "Iniciar el diagnóstico — Gratis →",
     ctaSecondary: "Solicitar una evaluación personalizada",
+    ctaChecker: "ACF AI Act Checker →",
+    footerChecker: "ACF AI Act Checker",
+    footerFaq: "FAQ",
     footerLogoText: "Agentic Commerce Framework®",
     footerLogoSubtext: "Estándar global de gobernanza de IA",
     footerDesc: "El estándar de gobernanza para organizaciones que despliegan agentes de IA autónomos.",
@@ -436,6 +445,9 @@ const translations = {
     ctaDesc: "10 Minuten. Eine vollständige Diagnose Ihrer agentischen Governance. Verstehen Sie, wo Sie stehen, bevor ein Ausfall Sie zwingt, es herauszufinden.",
     ctaPrimary: "Diagnose starten — Kostenlos →",
     ctaSecondary: "Individuelle Bewertung anfordern",
+    ctaChecker: "ACF AI Act Checker →",
+    footerChecker: "ACF AI Act Checker",
+    footerFaq: "FAQ",
     footerLogoText: "Agentic Commerce Framework®",
     footerLogoSubtext: "Globaler Standard für KI-Governance",
     footerDesc: "Der Governance-Standard für Organisationen, die autonome KI-Agenten einsetzen.",
@@ -544,6 +556,9 @@ const translations = {
     ctaDesc: "10 minutos. Um diagnóstico completo da sua governança agêntica. Entenda onde você está antes que uma falha o force a descobrir.",
     ctaPrimary: "Iniciar o diagnóstico — Grátis →",
     ctaSecondary: "Solicitar uma avaliação personalizada",
+    ctaChecker: "ACF AI Act Checker →",
+    footerChecker: "ACF AI Act Checker",
+    footerFaq: "FAQ",
     footerLogoText: "Agentic Commerce Framework®",
     footerLogoSubtext: "Padrão global de governança de IA",
     footerDesc: "O padrão de governança para organizações que implantam agentes de IA autônomos.",
@@ -652,6 +667,9 @@ const translations = {
     ctaDesc: "10分。エージェンティックガバナンスの完全な診断。障害が発見を強いる前に、現状を把握しましょう。",
     ctaPrimary: "診断を開始する — 無料 →",
     ctaSecondary: "カスタム評価を依頼する",
+    ctaChecker: "ACF AI Act Checker →",
+    footerChecker: "ACF AI Act Checker",
+    footerFaq: "FAQ",
     footerLogoText: "Agentic Commerce Framework®",
     footerLogoSubtext: "AIガバナンスのグローバルスタンダード",
     footerDesc: "自律型AIエージェントを展開する組織のためのガバナンススタンダード。",
@@ -760,6 +778,9 @@ const translations = {
     ctaDesc: "10分钟。对您的代理治理进行完整诊断。在故障迫使您发现之前，了解您的现状。",
     ctaPrimary: "开始诊断 — 免费 →",
     ctaSecondary: "申请定制评估",
+    ctaChecker: "ACF AI Act Checker →",
+    footerChecker: "ACF AI Act Checker",
+    footerFaq: "FAQ",
     footerLogoText: "Agentic Commerce Framework®",
     footerLogoSubtext: "AI治理全球标准",
     footerDesc: "部署自主AI代理的组织的治理标准。",
@@ -868,6 +889,9 @@ const translations = {
     ctaDesc: "10분. 에이전틱 거버넌스에 대한 완전한 진단. 장애가 발견을 강제하기 전에 현재 상태를 파악하세요.",
     ctaPrimary: "진단 시작하기 — 무료 →",
     ctaSecondary: "맞춤 평가 요청",
+    ctaChecker: "ACF AI Act Checker →",
+    footerChecker: "ACF AI Act Checker",
+    footerFaq: "FAQ",
     footerLogoText: "Agentic Commerce Framework®",
     footerLogoSubtext: "AI 거버넌스 글로벌 표준",
     footerDesc: "자율 AI 에이전트를 배포하는 조직을 위한 거버넌스 표준.",
@@ -976,6 +1000,9 @@ const translations = {
     ctaDesc: "10 minuti. Una diagnosi completa della tua governance agentica. Comprendi dove ti trovi prima che un guasto ti costringa a scoprirlo.",
     ctaPrimary: "Avvia la diagnosi — Gratis →",
     ctaSecondary: "Richiedi una valutazione personalizzata",
+    ctaChecker: "ACF AI Act Checker →",
+    footerChecker: "ACF AI Act Checker",
+    footerFaq: "FAQ",
     footerLogoText: "Agentic Commerce Framework®",
     footerLogoSubtext: "Standard globale per la governance IA",
     footerDesc: "Lo standard di governance per le organizzazioni che implementano agenti IA autonomi.",
@@ -1084,6 +1111,9 @@ const translations = {
     ctaDesc: "10 minuten. Een volledige diagnose van uw agentisch bestuur. Begrijp waar u staat voordat een storing u dwingt het te ontdekken.",
     ctaPrimary: "Start de diagnose — Gratis →",
     ctaSecondary: "Vraag een maatwerkbeoordeling aan",
+    ctaChecker: "ACF AI Act Checker →",
+    footerChecker: "ACF AI Act Checker",
+    footerFaq: "FAQ",
     footerLogoText: "Agentic Commerce Framework®",
     footerLogoSubtext: "Wereldwijde standaard voor AI-bestuur",
     footerDesc: "De bestuursstandaard voor organisaties die autonome AI-agenten inzetten.",
@@ -1192,6 +1222,9 @@ const translations = {
     ctaDesc: "10 минут. Полная диагностика вашего агентного управления. Поймите, где вы находитесь, прежде чем сбой заставит вас это узнать.",
     ctaPrimary: "Начать диагностику — Бесплатно →",
     ctaSecondary: "Запросить индивидуальную оценку",
+    ctaChecker: "ACF AI Act Checker →",
+    footerChecker: "ACF AI Act Checker",
+    footerFaq: "FAQ",
     footerLogoText: "Agentic Commerce Framework®",
     footerLogoSubtext: "Глобальный стандарт управления ИИ",
     footerDesc: "Стандарт управления для организаций, внедряющих автономных ИИ-агентов.",
@@ -1300,6 +1333,9 @@ const translations = {
     ctaDesc: "10 دقائق. تشخيص كامل لحوكمتك الوكيلية. افهم أين أنت قبل أن يجبرك عطل على اكتشاف ذلك.",
     ctaPrimary: "ابدأ التشخيص — مجاناً →",
     ctaSecondary: "اطلب تقييماً مخصصاً",
+    ctaChecker: "ACF AI Act Checker →",
+    footerChecker: "ACF AI Act Checker",
+    footerFaq: "FAQ",
     footerLogoText: "Agentic Commerce Framework®",
     footerLogoSubtext: "المعيار العالمي لحوكمة الذكاء الاصطناعي",
     footerDesc: "معيار الحوكمة للمؤسسات التي تنشر وكلاء ذكاء اصطناعي مستقلين.",
@@ -1408,6 +1444,9 @@ const translations = {
     ctaDesc: "10 dakika. Ajantik yönetişiminizin eksiksiz bir teşhisi. Bir arıza sizi keşfetmeye zorlamadan önce nerede olduğunuzu anlayın.",
     ctaPrimary: "Teşhisi başlat — Ücretsiz →",
     ctaSecondary: "Özel bir değerlendirme talep edin",
+    ctaChecker: "ACF AI Act Checker →",
+    footerChecker: "ACF AI Act Checker",
+    footerFaq: "FAQ",
     footerLogoText: "Agentic Commerce Framework®",
     footerLogoSubtext: "Yapay Zeka Yönetişimi Küresel Standardı",
     footerDesc: "Otonom yapay zeka ajanları dağıtan kuruluşlar için yönetişim standardı.",
@@ -1851,7 +1890,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <p>${t.ctaDesc}</p>
     <div class="ctabtns">
       <a href="https://www.acf-score.com/" target="_blank" class="btng" style="font-size:15px;padding:16px 32px">${t.ctaPrimary}</a>
-      <a href="/${locale}/compliance-checker" target="_top" class="btno">${t.ctaChecker || 'ACF AI Act Checker →'}</a>
+      <a href="/${locale}/compliance-checker" target="_top" class="btno">${t.ctaChecker}</a>
       <a href="/${locale}/contact" target="_top" class="btno">${t.ctaSecondary}</a>
     </div>
   </div>
@@ -1874,11 +1913,13 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
           <li><a href="/${locale}/standard" target="_top">${t.footerTheStandard}</a></li>
           <li><a href="/${locale}/blog" target="_top">${t.footerBlog}</a></li>
           <li><a href="/${locale}/acf-certification" target="_top">${t.footerCertification}</a></li>
+          <li><a href="/${locale}/faq" target="_top">${t.footerFaq}</a></li>
         </ul>
       </div>
       <div>
         <div class="ftitle">${t.footerProducts}</div>
         <ul class="flinks">
+          <li><a href="/${locale}/compliance-checker" target="_top">${t.footerChecker}</a></li>
           <li><a href="/${locale}/acf-score" target="_top">${t.footerScore}</a></li>
           <li><a href="/${locale}/acf-control" target="_top">${t.footerControl}</a></li>
           <li><a href="/${locale}/acf-certification#academy" target="_top">${t.footerAcademy}</a></li>

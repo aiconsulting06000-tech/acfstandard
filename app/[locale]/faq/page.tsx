@@ -1417,10 +1417,11 @@ const uiStrings: Record<string, Record<string, string>> = {
   fr: {
     heroTitle: "FAQ",
     heroSub: "Tout ce que vous devez savoir sur l'Agentic Commerce Framework\u00ae, la gouvernance IA, l'EU AI Act et nos outils.",
-    ctaTitle: "Vous n'avez pas trouv\u00e9 votre r\u00e9ponse ?",
+    ctaTitle: "Vous n'avez pas trouvé votre réponse ?",
     ctaBtn: "Contactez-nous",
     ctaChecker: "Tester l'ACF AI Act Checker",
     ctaScore: "Faire mon diagnostic ACF Score",
+    navHome: "Accueil", navStandard: "Le Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partenaires", navFaq: "FAQ", navCta: "ACF Score →",
   },
   en: {
     heroTitle: "FAQ",
@@ -1429,6 +1430,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "Contact us",
     ctaChecker: "Try the ACF AI Act Checker",
     ctaScore: "Take the ACF Score diagnostic",
+    navHome: "Home", navStandard: "The Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partners", navFaq: "FAQ", navCta: "ACF Score →",
   },
   es: {
     heroTitle: "FAQ",
@@ -1436,7 +1438,8 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaTitle: "\u00bfNo encontraste tu respuesta?",
     ctaBtn: "Cont\u00e1ctenos",
     ctaChecker: "Probar el ACF AI Act Checker",
-    ctaScore: "Hacer mi diagn\u00f3stico ACF Score",
+    ctaScore: "Hacer mi diagnóstico ACF Score",
+    navHome: "Inicio", navStandard: "El Estándar", navScore: "ACF Score", navBlog: "Blog", navPartners: "Socios", navFaq: "FAQ", navCta: "ACF Score →",
   },
   de: {
     heroTitle: "FAQ",
@@ -1445,6 +1448,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "Kontaktieren Sie uns",
     ctaChecker: "ACF AI Act Checker testen",
     ctaScore: "ACF Score Diagnose starten",
+    navHome: "Startseite", navStandard: "Der Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partner", navFaq: "FAQ", navCta: "ACF Score →",
   },
   pt: {
     heroTitle: "FAQ",
@@ -1452,7 +1456,8 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaTitle: "N\u00e3o encontrou a sua resposta?",
     ctaBtn: "Contacte-nos",
     ctaChecker: "Testar o ACF AI Act Checker",
-    ctaScore: "Fazer o diagn\u00f3stico ACF Score",
+    ctaScore: "Fazer o diagnóstico ACF Score",
+    navHome: "Início", navStandard: "O Padrão", navScore: "ACF Score", navBlog: "Blog", navPartners: "Parceiros", navFaq: "FAQ", navCta: "ACF Score →",
   },
   it: {
     heroTitle: "FAQ",
@@ -1461,6 +1466,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "Contattaci",
     ctaChecker: "Provare l'ACF AI Act Checker",
     ctaScore: "Fare la diagnosi ACF Score",
+    navHome: "Home", navStandard: "Lo Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partner", navFaq: "FAQ", navCta: "ACF Score →",
   },
   nl: {
     heroTitle: "FAQ",
@@ -1469,54 +1475,61 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "Neem contact op",
     ctaChecker: "ACF AI Act Checker testen",
     ctaScore: "ACF Score diagnose starten",
+    navHome: "Home", navStandard: "De Standaard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partners", navFaq: "FAQ", navCta: "ACF Score →",
   },
   ja: {
     heroTitle: "FAQ",
     heroSub: "Agentic Commerce Framework\u00ae\u3001AI\u30ac\u30d0\u30ca\u30f3\u30b9\u3001EU AI Act\u3001\u30c4\u30fc\u30eb\u306b\u3064\u3044\u3066\u77e5\u3063\u3066\u304a\u304f\u3079\u304d\u3059\u3079\u3066\u3002",
     ctaTitle: "\u56de\u7b54\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f\u304b\uff1f",
     ctaBtn: "\u304a\u554f\u3044\u5408\u308f\u305b",
-    ctaChecker: "ACF AI Act Checker\u3092\u8a66\u3059",
-    ctaScore: "ACF Score\u306e\u8a3a\u65ad\u3092\u53d7\u3051\u308b",
+    ctaChecker: "ACF AI Act Checkerを試す",
+    ctaScore: "ACF Scoreの診断を受ける",
+    navHome: "ホーム", navStandard: "スタンダード", navScore: "ACF Score", navBlog: "ブログ", navPartners: "パートナー", navFaq: "FAQ", navCta: "ACF Score →",
   },
   zh: {
     heroTitle: "FAQ",
     heroSub: "\u5173\u4e8eAgentic Commerce Framework\u00ae\u3001AI\u6cbb\u7406\u3001EU AI Act\u548c\u6211\u4eec\u5de5\u5177\u7684\u6240\u6709\u4fe1\u606f\u3002",
     ctaTitle: "\u6ca1\u6709\u627e\u5230\u7b54\u6848\uff1f",
     ctaBtn: "\u8054\u7cfb\u6211\u4eec",
-    ctaChecker: "\u8bd5\u7528ACF AI Act Checker",
-    ctaScore: "\u8fdb\u884cACF Score\u8bca\u65ad",
+    ctaChecker: "试用ACF AI Act Checker",
+    ctaScore: "进行ACF Score诊断",
+    navHome: "首页", navStandard: "标准", navScore: "ACF Score", navBlog: "博客", navPartners: "合作伙伴", navFaq: "FAQ", navCta: "ACF Score →",
   },
   ko: {
     heroTitle: "FAQ",
     heroSub: "Agentic Commerce Framework\u00ae, AI \uac70\ubc84\ub10c\uc2a4, EU AI Act \ubc0f \ub3c4\uad6c\uc5d0 \ub300\ud574 \uc54c\uc544\uc57c \ud560 \ubaa8\ub4e0 \uac83.",
     ctaTitle: "\ub2f5\ubcc0\uc744 \ucc3e\uc9c0 \ubabb\ud558\uc168\ub098\uc694?",
     ctaBtn: "\ubb38\uc758\ud558\uae30",
-    ctaChecker: "ACF AI Act Checker \uc2dc\ub3c4",
-    ctaScore: "ACF Score \uc9c4\ub2e8 \ubc1b\uae30",
+    ctaChecker: "ACF AI Act Checker 시도",
+    ctaScore: "ACF Score 진단 받기",
+    navHome: "홈", navStandard: "표준", navScore: "ACF Score", navBlog: "블로그", navPartners: "파트너", navFaq: "FAQ", navCta: "ACF Score →",
   },
   ru: {
     heroTitle: "FAQ",
     heroSub: "\u0412\u0441\u0451, \u0447\u0442\u043e \u043d\u0443\u0436\u043d\u043e \u0437\u043d\u0430\u0442\u044c \u043e\u0431 Agentic Commerce Framework\u00ae, \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0438 \u0418\u0418, EU AI Act \u0438 \u043d\u0430\u0448\u0438\u0445 \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u0430\u0445.",
     ctaTitle: "\u041d\u0435 \u043d\u0430\u0448\u043b\u0438 \u043e\u0442\u0432\u0435\u0442?",
     ctaBtn: "\u0421\u0432\u044f\u0436\u0438\u0442\u0435\u0441\u044c \u0441 \u043d\u0430\u043c\u0438",
-    ctaChecker: "\u041f\u043e\u043f\u0440\u043e\u0431\u043e\u0432\u0430\u0442\u044c ACF AI Act Checker",
-    ctaScore: "\u041f\u0440\u043e\u0439\u0442\u0438 \u0434\u0438\u0430\u0433\u043d\u043e\u0441\u0442\u0438\u043a\u0443 ACF Score",
+    ctaChecker: "Попробовать ACF AI Act Checker",
+    ctaScore: "Пройти диагностику ACF Score",
+    navHome: "Главная", navStandard: "Стандарт", navScore: "ACF Score", navBlog: "Блог", navPartners: "Партнёры", navFaq: "FAQ", navCta: "ACF Score →",
   },
   ar: {
     heroTitle: "FAQ",
     heroSub: "\u0643\u0644 \u0645\u0627 \u062a\u062d\u062a\u0627\u062c \u0645\u0639\u0631\u0641\u062a\u0647 \u0639\u0646 Agentic Commerce Framework\u00ae \u0648\u062d\u0648\u0643\u0645\u0629 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u0649 \u0648\u0642\u0627\u0646\u0648\u0646 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u0649 \u0627\u0644\u0623\u0648\u0631\u0648\u0628\u0649 \u0648\u0623\u062f\u0648\u0627\u062a\u0646\u0627.",
     ctaTitle: "\u0644\u0645 \u062a\u062c\u062f \u0625\u062c\u0627\u0628\u062a\u0643\u061f",
     ctaBtn: "\u0627\u062a\u0635\u0644 \u0628\u0646\u0627",
-    ctaChecker: "\u062c\u0631\u0628 ACF AI Act Checker",
-    ctaScore: "\u0642\u0645 \u0628\u062a\u0634\u062e\u064a\u0635 ACF Score",
+    ctaChecker: "جرب ACF AI Act Checker",
+    ctaScore: "قم بتشخيص ACF Score",
+    navHome: "الرئيسية", navStandard: "المعيار", navScore: "ACF Score", navBlog: "المدونة", navPartners: "الشركاء", navFaq: "FAQ", navCta: "ACF Score →",
   },
   tr: {
     heroTitle: "FAQ",
     heroSub: "Agentic Commerce Framework\u00ae, yapay zeka y\u00f6neti\u015fimi, EU AI Act ve ara\u00e7lar\u0131m\u0131z hakk\u0131nda bilmeniz gereken her \u015fey.",
     ctaTitle: "Cevab\u0131n\u0131z\u0131 bulamad\u0131n\u0131z m\u0131?",
     ctaBtn: "Bize ula\u015f\u0131n",
-    ctaChecker: "ACF AI Act Checker'\u0131 deneyin",
-    ctaScore: "ACF Score tan\u0131lama yap\u0131n",
+    ctaChecker: "ACF AI Act Checker'ı deneyin",
+    ctaScore: "ACF Score tanılama yapın",
+    navHome: "Ana Sayfa", navStandard: "Standart", navScore: "ACF Score", navBlog: "Blog", navPartners: "İş Ortakları", navFaq: "FAQ", navCta: "ACF Score →",
   },
 };
 
@@ -1546,9 +1559,6 @@ export default function FaqPage() {
     })),
   };
 
-  const navHome = lang === "fr" ? "\u2190 Accueil" : "\u2190 Home";
-  const navCta = lang === "fr" ? "Obtenir votre ACF Score \u2192" : "Get your ACF Score \u2192";
-
   return (
     <>
       <script
@@ -1556,7 +1566,7 @@ export default function FaqPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* ── NAV ── */}
+      {/* ── NAV — Full site header ── */}
       <nav
         style={{
           position: "fixed",
@@ -1564,37 +1574,45 @@ export default function FaqPage() {
           left: 0,
           right: 0,
           zIndex: 1000,
-          background: `linear-gradient(135deg, ${C.navy1} 0%, ${C.navy2} 100%)`,
+          height: 72,
+          background: "rgba(5,12,26,.92)",
+          backdropFilter: "blur(24px)",
           borderBottom: `1px solid ${C.goldBorder}`,
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
-          padding: "0 24px",
-          height: 64,
-          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <a href={`/${locale}`} style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 16 }}>
+        <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px", width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <a href={`/${locale}/`} style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none" }}>
             <div
               style={{
                 width: 40, height: 40,
                 background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`,
-                borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center",
-                fontWeight: 800, fontSize: 16, color: C.navy1,
+                borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center",
+                fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1,
               }}
             >
               ACF
             </div>
             <div>
-              <div style={{ color: C.white, fontWeight: 700, fontSize: 16, lineHeight: 1.2 }}>ACF Standard</div>
-              <div style={{ color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase" as const }}>FAQ</div>
+              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>Agentic Commerce Framework®</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".1em" }}>GLOBAL STANDARD FOR AI GOVERNANCE</div>
             </div>
           </a>
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <a href={`/${locale}`} style={{ color: C.gray2, textDecoration: "none", fontSize: 14, fontWeight: 500 }}>{navHome}</a>
-          <a href="https://www.acf-score.com" target="_blank" rel="noopener" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "8px 18px", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 700 }}>{navCta}</a>
+          <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+            {[
+              { label: t.navHome, href: `/${locale}/` },
+              { label: t.navStandard, href: `/${locale}/standard` },
+              { label: t.navScore, href: `/${locale}/acf-score` },
+              { label: t.navBlog, href: `/${locale}/blog` },
+              { label: t.navPartners, href: `/${locale}/acf-partners` },
+              { label: t.navFaq, href: `/${locale}/faq` },
+            ].map((l) => (
+              <a key={l.label} href={l.href} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, textDecoration: "none", transition: "color .2s" }}
+                onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l.label}</a>
+            ))}
+            <a href="https://www.acf-score.com" target="_blank" rel="noopener" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 700, display: "inline-block" }}>{t.navCta}</a>
+          </div>
         </div>
       </nav>
 
@@ -1606,7 +1624,7 @@ export default function FaqPage() {
           textAlign: "center",
         }}
       >
-        <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 24px" }}>
+        <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 40px" }}>
           <div
             style={{
               display: "inline-block",
@@ -1650,7 +1668,7 @@ export default function FaqPage() {
 
       {/* ── TABS ── */}
       <section style={{ background: C.navy1, padding: "0 0 80px" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 24px" }}>
+        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px" }}>
           {/* Tab bar */}
           <div
             style={{
