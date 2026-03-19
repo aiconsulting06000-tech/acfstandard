@@ -31,10 +31,10 @@ const C = {
    ═══════════════════════════════════════════════════════════════ */
 const ui: Record<string, Record<string, string>> = {
   fr: {
-    navSubtext: "EU AI ACT CHECKER",
+    navSubtext: "ACF AI ACT CHECKER",
     navHome: "\u2190 Accueil",
     navCta: "Obtenir votre ACF Score \u2192",
-    heroTitle: "EU AI Act Checker",
+    heroTitle: "ACF AI Act Checker",
     heroSub:
       "Outil de diagnostic gratuit pour \u00e9valuer votre conformit\u00e9 au R\u00e8glement europ\u00e9en sur l\u2019intelligence artificielle (EU AI Act).",
     start: "Commencer le diagnostic",
@@ -97,10 +97,10 @@ const ui: Record<string, Record<string, string>> = {
     priorityInfo: "Info",
   },
   en: {
-    navSubtext: "EU AI ACT CHECKER",
+    navSubtext: "ACF AI ACT CHECKER",
     navHome: "\u2190 Home",
     navCta: "Get your ACF Score \u2192",
-    heroTitle: "EU AI Act Checker",
+    heroTitle: "ACF AI Act Checker",
     heroSub:
       "Free diagnostic tool to assess your compliance with the European AI Regulation (EU AI Act).",
     start: "Start the diagnostic",
@@ -1686,7 +1686,7 @@ export default function ComplianceCheckerPage() {
         body: JSON.stringify({
           name: aiName.trim(),
           email: email.trim() || "no-email@diagnostic.acf-standard.com",
-          message: `[EU AI Act Checker Results]\nAI System: ${aiName}\nEntity: ${entityType}\nHigh Risk: ${highRisk}\nGPAI: ${gpaiStatus}\nObligations (${oblIds.length}):\n${summary}`,
+          message: `[ACF AI Act Checker Results]\nAI System: ${aiName}\nEntity: ${entityType}\nHigh Risk: ${highRisk}\nGPAI: ${gpaiStatus}\nObligations (${oblIds.length}):\n${summary}`,
         }),
       });
       if (res.ok) {

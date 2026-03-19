@@ -27,9 +27,9 @@ export async function POST(request: Request) {
       return NextResponse.json({ status: 'ok' }, { status: 200 });
     }
 
-    const isChecker = type === 'checker' || message.startsWith('[EU AI Act Checker');
+    const isChecker = type === 'checker' || message.startsWith('[ACF AI Act Checker');
     const subject = isChecker
-      ? `[EU AI Act Checker] Résultats — ${name}`
+      ? `[ACF AI Act Checker] Résultats — ${name}`
       : `[ACF Contact] Message de ${name}`;
 
     // 1) Send notification to ACF team
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       await getResend()!.emails.send({
         from: FROM_EMAIL,
         to: [email],
-        subject: `Vos résultats EU AI Act Checker — ${name}`,
+        subject: `Vos résultats ACF AI Act Checker — ${name}`,
         html: buildUserResultsHtml(name, message),
       });
     }
@@ -73,7 +73,7 @@ function buildNotificationHtml(name: string, email: string, message: string, isC
         <td width="44" height="44" align="center" valign="middle" style="background-color:#c9a84c;font-weight:900;font-size:13px;color:#050c1a;letter-spacing:1px;">ACF</td>
         <td style="padding-left:14px;">
           <div style="font-size:16px;font-weight:700;color:#ffffff;">Agentic Commerce Framework&reg;</div>
-          <div style="font-size:11px;color:#c9a84c;letter-spacing:1px;text-transform:uppercase;margin-top:2px;">${isChecker ? 'EU AI ACT CHECKER' : 'CONTACT FORM'}</div>
+          <div style="font-size:11px;color:#c9a84c;letter-spacing:1px;text-transform:uppercase;margin-top:2px;">${isChecker ? 'ACF AI ACT CHECKER' : 'CONTACT FORM'}</div>
         </td>
       </tr></table>
     </td></tr>
@@ -168,7 +168,7 @@ function buildUserResultsHtml(name: string, message: string) {
       <table cellpadding="0" cellspacing="0" border="0"><tr>
         <td width="56" height="56" align="center" valign="middle" style="background-color:#c9a84c;font-weight:900;font-size:16px;color:#050c1a;">ACF</td>
       </tr></table>
-      <h1 style="font-size:22px;font-weight:800;color:#ffffff;margin:16px 0 4px 0;">EU AI Act Checker</h1>
+      <h1 style="font-size:22px;font-weight:800;color:#ffffff;margin:16px 0 4px 0;">ACF AI Act Checker</h1>
       <p style="font-size:13px;color:#c9a84c;margin:0;">Vos r&eacute;sultats de conformit&eacute;</p>
     </td></tr>
 

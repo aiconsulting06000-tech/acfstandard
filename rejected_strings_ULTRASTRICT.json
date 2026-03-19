@@ -1,0 +1,276 @@
+{
+  "total_rejected": 4144,
+  "total_kept": 267,
+  "rejection_rate": "93.9%",
+  "by_reason": {
+    "Ne commence pas par majuscule": {
+      "count": 2405,
+      "examples": [
+        "1px solid rgba(201,168,76,.2)",
+        "2px solid rgba(201,168,76,.3)",
+        "clamp(36px, 5vw, 68px)",
+        "linear-gradient(135deg, #c9a84c 0%, #e8c96a 100%)",
+        "linear-gradient(135deg, rgba(201,168,76,.15) 0%, rgba(201,168,76,.05) 100%)",
+        "1px solid rgba(255,255,255,.07)",
+        "1px solid rgba(255,255,255,.15)",
+        "3px solid #c9a84c",
+        "3px solid transparent",
+        "bloglist rev d2",
+        "ctn px-4 md:px-16",
+        "btn ghost w-full md:w-auto",
+        "btn primary w-full md:w-auto",
+        "ecgrid grid grid-cols-1 md:grid-cols-3 gap-6",
+        "btng w-full md:w-auto",
+        "btno w-full md:w-auto",
+        "hw grid grid-cols-1 md:grid-cols-2 gap-8",
+        "4 Operational Layers",
+        "lgrid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6",
+        "4 Agentic Maturity Levels"
+      ]
+    },
+    "Trop court (<15 chars)": {
+      "count": 744,
+      "examples": [
+        "#fff",
+        "0 auto",
+        "ACF®",
+        "Standard",
+        "cta.primary",
+        "cta.secondary",
+        "next-intl",
+        "next/link",
+        "repeat(4, 1fr)",
+        "typing.word1",
+        "use client",
+        "/${locale}",
+        "Framework",
+        "Products",
+        "acfControl",
+        "acfScore",
+        "blur(24px)",
+        "blur(4px)",
+        "logoSubtext",
+        "logoText"
+      ]
+    },
+    "Moins de 3 mots": {
+      "count": 409,
+      "examples": [
+        "ACF Practitioners",
+        "Regulated Organizations",
+        "Technology Partners",
+        "Sovereignty Metric",
+        "Decision Policy",
+        "Assisted Agents",
+        "Classical Automation",
+        "Governed Agents",
+        "Supervised Autonomous",
+        "// Implementation",
+        "Agent Authorization",
+        "Escalation Protocol",
+        "Governance Charter",
+        "Living Governance",
+        "Non-Delegable Zones",
+        "Objective Weighting",
+        "// Architecture",
+        "Audit Dashboard",
+        ");var d=document.createElement(",
+        "){var v=this.value.trim();if(v){this.value="
+      ]
+    },
+    "Un seul mot": {
+      "count": 381,
+      "examples": [
+        "next/navigation",
+        "/${locale}/contact",
+        "/${locale}/standard",
+        "rgba(201,168,76,.2)",
+        "satellites.control.description",
+        "satellites.control.name",
+        "satellites.score.description",
+        "satellites.score.name",
+        "stats.kpis.label",
+        "stats.kpis.value",
+        "stats.modules.label",
+        "stats.modules.value",
+        "stats.principles.label",
+        "stats.principles.value",
+        "stats.tools.label",
+        "stats.tools.value",
+        "/${locale}/acf-score",
+        "/${locale}/certification",
+        "/${locale}/control",
+        "/${locale}/partners"
+      ]
+    },
+    "Mots trop courts": {
+      "count": 99,
+      "examples": [
+        "How we built a governed agent",
+        "Operational lessons from Level 2 deployments",
+        "Contact our team to design a governed-agent pilot for your organization.",
+        "A network of certified partners, practitioners, and organizations building sovereign agentic systems.",
+        "Request a Governance Assessment →",
+        "A practical 6-step pathway to deploy governed agents safely.",
+        "A hierarchical architecture from strategic governance to real-time execution supervision.",
+        "ACF classifies systems by autonomy level. Level 2 is the recommended deployment target.",
+        "Agents analyze and recommend. Every final decision remains with a human.",
+        "No autonomous agent defines its own objectives. Humans define the ends; agents execute exclusively within the defined perimeter. Technically enforced — not a policy, a constraint.",
+        "A chatbot answering questions based on the ACF Standard and governance insights",
+        "A sequential path deployed progressively over 6–18 months. Each module builds on the previous.",
+        "ACF was created to fill that void — before a governance failure becomes a legal, financial, or reputational crisis.",
+        "ACF® is a registered trademark. All methodology and tools are legally protected.",
+        "An effective kill switch is not a single button. ACF specifies three interrupt levels with defined response times.",
+        "Become a Partner",
+        "Designing a 3-Level Kill Switch",
+        "Designing a Three-Level Kill Switch for Autonomous Agent Systems",
+        "How do I get ACF certified?",
+        "INPI Protected — Loi n° 2018-670"
+      ]
+    },
+    "Pas de mots anglais communs": {
+      "count": 47,
+      "examples": [
+        "Agentic risk frameworks explained",
+        "Explicit mandate per agent, interaction perimeter, autonomy level, 5-category taxonomy.",
+        "Weighted objectives, arbitration rules, escalation thresholds, regulatory constraints.",
+        "Mandate sheets, interaction perimeters.",
+        "Personalized action plan per axis",
+        "Publicly verifiable badge",
+        "Tamper-evident audit logs",
+        "Actionable recommendations within 30 days, not abstract theory.",
+        "Documented methodology, explainable scoring, verifiable results.",
+        "ACF committee review",
+        "Annual license fee",
+        "Annual partner fee",
+        "Build decision maps",
+        "Case study exam",
+        "Certify across regions",
+        "Certify client organizations",
+        "Co-develop sector frameworks",
+        "Conduct governance audits",
+        "Create agentic constitutions",
+        "Design governed agents"
+      ]
+    },
+    "Contient parenthèses": {
+      "count": 15,
+      "examples": [
+        "The Agentic Commerce Framework® (ACF) is the definitive governance methodology for deploying, supervising, and controlling autonomous agentic systems in commercial environments.",
+        "Any agentic autonomy requires active, permanent, evolving governance — with dedicated roles (DDA), regular review rituals, and recurring independent audits. Governance is a continuous practice, not a document.",
+        "Every agent decision is fully traceable, explainable, and stoppable at any time. Three-level kill switch: module stop (&lt;10s), agent stop (&lt;30s), emergency (&lt;60s). Complete auditable log chain, always.",
+        "Legal Protection (INPI)",
+        "Agentic Commerce Framework® (ACF®), a methodological framework designed to help organizations govern the use of AI agents and preserve their decision-making sovereignty in the agentic economy.",
+        "Core Track (101–103)",
+        "Professional Track (201–203)",
+        "SOVEREIGNTY TREND (30d)",
+        "AI Act. La couche Gouvernance (Layer 1) établit la constitution agentique et la cartographie des responsabilités. La couche Politique (Layer 2) formalise les règles et limites comportementales des agents. La couche Système (Layer 3) implémente les mécanismes techniques de contrôle et de logging. La couche Supervision (Layer 4) assure le monitoring continu et les revues périodiques.",
+        "La Layer 1 (Gouvernance) de l",
+        "Le DDA idéal combine une compréhension business (stratégie, risques, réglementation) avec une culture technique suffisante pour dialoguer avec les équipes IA. Il se positionne au niveau direction, reportant directement au CEO ou au COO. Ce n",
+        "Le rôle du Delegated Decision Agent Officer (DDA)",
+        "Les informations saisies dans le formulaire de contact (nom, email, entreprise, message) sont utilisées exclusivement pour répondre à votre demande. Elles ne sont ni revendues, ni partagées avec des tiers.",
+        "Utilisation (CGU) ont pour objet de définir les modalités et conditions d",
+        "M ${cx + r * Math.cos((-90 * Math.PI) / 180)} ${cy + r * Math.sin((-90 * Math.PI) / 180)} ${steps.map((s, i) => {\n            const next = steps[(i + 1) % steps.length];\n            return"
+      ]
+    },
+    "Contient slash": {
+      "count": 12,
+      "examples": [
+        "Decision / Execution Separation",
+        "Séparation Décision / Exécution",
+        "The question is no longer <em>whether</em> to deploy agents. It is <em>how</em> to deploy them without surrendering your sovereignty.",
+        "ACF Certification: follow the published process. Visit /en/certification.",
+        "Drift analysis • 7d/14d",
+        "Consulting / Advisory",
+        "Country / Territory",
+        "Education / Training",
+        "Legal / Compliance",
+        "Manufacturing / Industry",
+        "Retail / E-Commerce",
+        "Enterprise / ACF Control"
+      ]
+    },
+    "Contient guillemets": {
+      "count": 7,
+      "examples": [
+        "Official release. What's new in the framework.",
+        "The AI Act's risk-based approach creates specific obligations for autonomous agents. Here's what ACF Level 2 governance covers.",
+        "Whether you want a diagnostic, support, or a partnership, let's talk.",
+        "Whether you're an enterprise proving governance or a consultant building the future of agentic commerce — there's a path for you.",
+        "Deep-dive into each agent's performance. Adjust rules, manage drift thresholds, resolve incidents.",
+        "Assesses your organization's ability to maintain operations and recover quickly when agentic systems fail or act unexpectedly.",
+        "You remain legally responsible for every decision your agents make — even those you can't explain."
+      ]
+    },
+    "Contient accolades/crochets": {
+      "count": 6,
+      "examples": [
+        "Invalid. ${5-nc} left.",
+        "KILL SWITCH L${lvl}",
+        "KPI over ${v.length}d",
+        "Kill Switch L${lvl}",
+        "L${l} by ${sess?.user?.nm}",
+        "Claude API error ${res.status}: ${text}"
+      ]
+    },
+    "Ponctuation multiple": {
+      "count": 4,
+      "examples": [
+        "Ask about ACF governance...",
+        "Type to search...",
+        "Tell us about your organization, your experience with AI governance, and what motivates you to deploy the ACF standard in your territory...",
+        "Tell us how we can help..."
+      ]
+    },
+    "CamelCase détecté": {
+      "count": 4,
+      "examples": [
+        "Replace this modal with a YouTube or Vimeo embed URL in the code",
+        "Technology / SaaS",
+        "One Amazon, Google, or OpenAI outage stops your entire operation. No fallback, no resilience.",
+        "Quantifies your exposure to third-party AI platforms (Amazon, Google, OpenAI) and the risk if any single provider becomes unavailable."
+      ]
+    },
+    "Point sans espace (code)": {
+      "count": 3,
+      "examples": [
+        "OFFICIAL STANDARD — v1.0 — FEB 2026",
+        "ACF v1.0 — February 2026",
+        "ACF Control v3.0"
+      ]
+    },
+    "Symboles techniques": {
+      "count": 3,
+      "examples": [
+        "Annual renewal + continuous monitoring",
+        "Everything Consultant +",
+        "Everything Practitioner +"
+      ]
+    },
+    "Pas assez de lettres": {
+      "count": 2,
+      "examples": [
+        "Signed CEO — v2.1 — Feb 2026",
+        "RCS Nice : 909116329"
+      ]
+    },
+    "Trop long (>300 chars)": {
+      "count": 1,
+      "examples": [
+        "Vincent DORANGE has been working in e-commerce and digital strategy for over 25 years. Over these two decades, he has observed from the inside the profound transformations of digital commerce: the rise of platforms, the centralization of decisions in algorithms, and the growing dependence of companies on technological infrastructures."
+      ]
+    },
+    "Trop de chiffres": {
+      "count": 1,
+      "examples": [
+        "TVA : FR96909116329"
+      ]
+    },
+    "Contient underscore": {
+      "count": 1,
+      "examples": [
+        "Missing ANTHROPIC_API_KEY environment variable."
+      ]
+    }
+  }
+}

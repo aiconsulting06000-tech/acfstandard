@@ -571,7 +571,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="mpd">${m.megaMenu.resources.subtitle}</div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.insights.title}</div><ul class="mlinks"><li><a href="/${locale}/blog#eu-ai-act-agentic-systems-2026">${m.megaMenu.resources.insights.aiAct}</a></li><li><a href="/${locale}/blog#delegated-decision-agent-officer">${m.megaMenu.resources.insights.dda}</a></li><li><a href="/${locale}/blog#three-level-kill-switch">${m.megaMenu.resources.insights.killSwitch}</a></li></ul></div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.documentation.title}</div><ul class="mlinks"><li><a href="/${locale}/standard">${m.megaMenu.resources.documentation.specs}</a></li><li><a href="/${locale}/blog">${m.megaMenu.resources.documentation.research}</a></li><li><a href="/${locale}/acf-certification#academy">${m.megaMenu.resources.documentation.academy}</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.tools.title}</div><ul class="mlinks"><li><a href="/${locale}/compliance-checker">EU AI Act Checker</a></li><li><a href="https://artificialintelligenceact.eu/${locale === 'fr' ? 'fr/' : ''}ai-act-explorer/" target="_blank" rel="noopener">AI Act Explorer \u2197</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.tools.title}</div><ul class="mlinks"><li><a href="/${locale}/compliance-checker">ACF AI Act Checker</a></li><li><a href="https://artificialintelligenceact.eu/${locale === 'fr' ? 'fr/' : ''}ai-act-explorer/" target="_blank" rel="noopener">AI Act Explorer \u2197</a></li></ul></div>
     </div>
     <div class="mp" id="panel-about">
       <div class="mpt"><a href="/${locale}/about">${m.megaMenu.about.link}</a></div>
@@ -1649,7 +1649,7 @@ export default function Home() {
   /* Ensure deeply nested objects exist to prevent template literal crashes */
   if (!m.megaMenu) m.megaMenu = {}
   if (!m.megaMenu.resources) m.megaMenu.resources = {}
-  if (!m.megaMenu.resources.tools) m.megaMenu.resources.tools = { title: 'Tools', complianceChecker: 'EU AI Act Checker', euAiAct: 'AI Act Explorer ↗' }
+  if (!m.megaMenu.resources.tools) m.megaMenu.resources.tools = { title: 'Tools', complianceChecker: 'ACF AI Act Checker', euAiAct: 'AI Act Explorer ↗' }
   if (!m.megaMenu.resources.insights) m.megaMenu.resources.insights = {}
   if (!m.megaMenu.resources.documentation) m.megaMenu.resources.documentation = {}
   if (!m.megaMenu.framework) m.megaMenu.framework = {}
