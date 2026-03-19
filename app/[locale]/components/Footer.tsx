@@ -46,8 +46,8 @@ export default function Footer() {
       links: [
         { label: "ACF Score", href: `/${locale}/acf-score` },
         { label: "ACF Control", href: `/${locale}/acf-control` },
-        { label: "Certification", href: `/${locale}/acf-certification` },
         { label: t.euAiActChecker, href: `/${locale}/compliance-checker` },
+        { label: "Academy", href: `/${locale}/acf-certification` },
       ],
     },
     {
