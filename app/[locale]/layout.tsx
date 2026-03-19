@@ -8,7 +8,7 @@ const space = Space_Grotesk({ subsets: ['latin'], variable: '--font-space', disp
 const jb = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jb', display: 'swap' })
 
 const BASE_URL = 'https://acf-standard.com'
-const ALL_LOCALES = ['fr', 'en', 'es', 'de', 'it', 'pt', 'nl', 'pl', 'sv', 'da', 'no', 'fi', 'is', 'et', 'lv', 'lt', 'cs', 'sk', 'hu', 'ro', 'bg', 'hr', 'sl', 'sr', 'uk', 'el', 'ar', 'he', 'tr', 'ja', 'zh', 'ko', 'id', 'ms', 'th', 'vi', 'hi', 'ru'] as const
+const ALL_LOCALES = ['fr', 'en', 'es', 'de', 'pt', 'ja', 'zh', 'ko', 'it', 'nl', 'ru', 'ar', 'tr'] as const
 
 function getLocalizedTitle(locale: string): string {
   switch (locale) {

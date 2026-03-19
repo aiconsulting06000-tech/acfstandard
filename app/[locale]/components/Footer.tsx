@@ -10,30 +10,38 @@ const C = {
   goldBorder: "rgba(201,168,76,.2)",
 };
 
+const ui: Record<string, { subtitle: string; description: string; framework: string; theStandard: string; methodology: string; research: string; products: string; organization: string; partnerPortal: string; about: string; legal: string; copyright: string }> = {
+  en: { subtitle: "GLOBAL STANDARD FOR AI GOVERNANCE", description: "The governance standard for organizations deploying autonomous AI agents.", framework: "Framework", theStandard: "The Standard", methodology: "Methodology", research: "Research", products: "Products", organization: "Organization", partnerPortal: "Partner Portal", about: "About", legal: "Legal", copyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved." },
+  fr: { subtitle: "STANDARD MONDIAL POUR LA GOUVERNANCE IA", description: "Le standard de gouvernance pour les organisations déployant des agents IA autonomes.", framework: "Framework", theStandard: "Le Standard", methodology: "Méthodologie", research: "Recherche", products: "Produits", organization: "Organisation", partnerPortal: "Portail partenaire", about: "À propos", legal: "Légal", copyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Tous droits réservés." },
+  es: { subtitle: "ESTÁNDAR GLOBAL PARA LA GOBERNANZA DE IA", description: "El estándar de gobernanza para organizaciones que despliegan agentes de IA autónomos.", framework: "Framework", theStandard: "El Estándar", methodology: "Metodología", research: "Investigación", products: "Productos", organization: "Organización", partnerPortal: "Portal de Socios", about: "Acerca de", legal: "Legal", copyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Todos los derechos reservados." },
+  de: { subtitle: "GLOBALER STANDARD FÜR KI-GOVERNANCE", description: "Der Governance-Standard für Organisationen, die autonome KI-Agenten einsetzen.", framework: "Framework", theStandard: "Der Standard", methodology: "Methodik", research: "Forschung", products: "Produkte", organization: "Organisation", partnerPortal: "Partnerportal", about: "Über uns", legal: "Impressum", copyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Alle Rechte vorbehalten." },
+  pt: { subtitle: "PADRÃO GLOBAL PARA GOVERNANÇA DE IA", description: "O padrão de governança para organizações que implementam agentes de IA autônomos.", framework: "Framework", theStandard: "O Padrão", methodology: "Metodologia", research: "Pesquisa", products: "Produtos", organization: "Organização", partnerPortal: "Portal de Parceiros", about: "Sobre", legal: "Legal", copyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Todos os direitos reservados." },
+  ja: { subtitle: "AIガバナンスのグローバルスタンダード", description: "自律型AIエージェントを展開する組織のためのガバナンス基準。", framework: "フレームワーク", theStandard: "スタンダード", methodology: "方法論", research: "リサーチ", products: "プロダクト", organization: "組織", partnerPortal: "パートナーポータル", about: "概要", legal: "法的情報", copyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved." },
+  zh: { subtitle: "AI治理全球标准", description: "部署自主AI代理的组织的治理标准。", framework: "框架", theStandard: "标准", methodology: "方法论", research: "研究", products: "产品", organization: "组织", partnerPortal: "合作伙伴门户", about: "关于", legal: "法律", copyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. 版权所有。" },
+  ko: { subtitle: "AI 거버넌스 글로벌 표준", description: "자율 AI 에이전트를 배포하는 조직을 위한 거버넌스 표준.", framework: "프레임워크", theStandard: "표준", methodology: "방법론", research: "연구", products: "제품", organization: "조직", partnerPortal: "파트너 포털", about: "소개", legal: "법적 고지", copyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved." },
+  it: { subtitle: "STANDARD GLOBALE PER LA GOVERNANCE DELL'IA", description: "Lo standard di governance per le organizzazioni che implementano agenti IA autonomi.", framework: "Framework", theStandard: "Lo Standard", methodology: "Metodologia", research: "Ricerca", products: "Prodotti", organization: "Organizzazione", partnerPortal: "Portale Partner", about: "Chi siamo", legal: "Legale", copyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Tutti i diritti riservati." },
+  nl: { subtitle: "WERELDWIJDE STANDAARD VOOR AI-GOVERNANCE", description: "De governance-standaard voor organisaties die autonome AI-agents inzetten.", framework: "Framework", theStandard: "De Standaard", methodology: "Methodologie", research: "Onderzoek", products: "Producten", organization: "Organisatie", partnerPortal: "Partnerportaal", about: "Over ons", legal: "Juridisch", copyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Alle rechten voorbehouden." },
+  ru: { subtitle: "ГЛОБАЛЬНЫЙ СТАНДАРТ УПРАВЛЕНИЯ ИИ", description: "Стандарт управления для организаций, развертывающих автономные ИИ-агенты.", framework: "Фреймворк", theStandard: "Стандарт", methodology: "Методология", research: "Исследования", products: "Продукты", organization: "Организация", partnerPortal: "Портал партнёров", about: "О нас", legal: "Правовая информация", copyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Все права защищены." },
+  ar: { subtitle: "المعيار العالمي لحوكمة الذكاء الاصطناعي", description: "معيار الحوكمة للمؤسسات التي تنشر وكلاء الذكاء الاصطناعي المستقلين.", framework: "الإطار", theStandard: "المعيار", methodology: "المنهجية", research: "الأبحاث", products: "المنتجات", organization: "المؤسسة", partnerPortal: "بوابة الشركاء", about: "من نحن", legal: "قانوني", copyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. جميع الحقوق محفوظة." },
+  tr: { subtitle: "YAPAY ZEKA YÖNETİŞİMİ İÇİN KÜRESEL STANDART", description: "Otonom yapay zeka ajanları dağıtan kuruluşlar için yönetişim standardı.", framework: "Framework", theStandard: "Standart", methodology: "Metodoloji", research: "Araştırma", products: "Ürünler", organization: "Organizasyon", partnerPortal: "İş Ortağı Portalı", about: "Hakkımızda", legal: "Yasal", copyright: "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Tüm hakları saklıdır." },
+};
+
 export default function Footer() {
   const locale = useLocale();
-  const fr = locale === "fr";
-
-  const subtitle = fr
-    ? "STANDARD MONDIAL POUR LA GOUVERNANCE IA"
-    : "GLOBAL STANDARD FOR AI GOVERNANCE";
-
-  const description = fr
-    ? "Le standard de gouvernance pour les organisations déployant des agents IA autonomes."
-    : "The governance standard for organizations deploying autonomous AI agents.";
+  const t = ui[locale] || ui.en;
 
   const columns = [
     {
-      title: fr ? "Framework" : "Framework",
+      title: t.framework,
       links: [
-        { label: fr ? "Le Standard" : "The Standard", href: `/${locale}/standard` },
-        { label: fr ? "Méthodologie" : "Methodology", href: `/${locale}/standard#methodology` },
-        { label: fr ? "Recherche" : "Research", href: `/${locale}/blog` },
+        { label: t.theStandard, href: `/${locale}/standard` },
+        { label: t.methodology, href: `/${locale}/standard#methodology` },
+        { label: t.research, href: `/${locale}/blog` },
         { label: "ACF Certification", href: `/${locale}/acf-certification` },
       ],
     },
     {
-      title: fr ? "Produits" : "Products",
+      title: t.products,
       links: [
         { label: "ACF Score", href: `/${locale}/acf-score` },
         { label: "ACF Control", href: `/${locale}/acf-control` },
@@ -42,12 +50,12 @@ export default function Footer() {
       ],
     },
     {
-      title: fr ? "Organisation" : "Organization",
+      title: t.organization,
       links: [
-        { label: fr ? "Portail partenaire" : "Partner Portal", href: `/${locale}/acf-partners` },
-        { label: fr ? "À propos" : "About", href: `/${locale}/about` },
+        { label: t.partnerPortal, href: `/${locale}/acf-partners` },
+        { label: t.about, href: `/${locale}/about` },
         { label: "Contact", href: `/${locale}/contact` },
-        { label: fr ? "Légal" : "Legal", href: `/${locale}/legal` },
+        { label: t.legal, href: `/${locale}/legal` },
       ],
     },
   ];
@@ -61,22 +69,22 @@ export default function Footer() {
               <div style={{ width: 44, height: 44, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 13, color: C.navy1, letterSpacing: 1 }}>ACF</div>
               <div>
                 <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff" }}>Agentic Commerce Framework®</div>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase" }}>{subtitle}</div>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase" }}>{t.subtitle}</div>
               </div>
             </div>
-            <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 320 }}>{description}</p>
+            <p style={{ fontSize: 14, color: C.gray, lineHeight: 1.7, maxWidth: 320 }}>{t.description}</p>
           </div>
-          {columns.map(col => (
+          {columns.map((col: any) => (
             <div key={col.title}>
               <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 20 }}>{col.title}</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                {col.links.map(l => (<a key={l.label} href={l.href} style={{ fontSize: 14, color: C.gray2, transition: "color .2s", textDecoration: "none" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l.label}</a>))}
+                {col.links.map((l: any) => (<a key={l.label} href={l.href} style={{ fontSize: 14, color: C.gray2, transition: "color .2s", textDecoration: "none" }} onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l.label}</a>))}
               </div>
             </div>
           ))}
         </div>
         <div style={{ borderTop: `1px solid ${C.bd1}`, padding: "20px 0", textAlign: "center" }}>
-          <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved.</p>
+          <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: C.gray, letterSpacing: ".02em" }}>{t.copyright}</p>
         </div>
       </div>
     </footer>

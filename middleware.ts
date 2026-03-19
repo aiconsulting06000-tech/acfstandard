@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 const PUBLIC_FILE = /\.(.*)$/
-const SUPPORTED = ['en','fr']
+const SUPPORTED = ['fr', 'en', 'es', 'de', 'pt', 'ja', 'zh', 'ko', 'it', 'nl', 'ru', 'ar', 'tr']
 
 /**
  * Detect preferred language from Accept-Language header.

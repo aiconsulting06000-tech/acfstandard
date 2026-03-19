@@ -316,14 +316,168 @@ const ui = {
     ctaButton: "Calculate my ACF Score\u00ae \u2192",
     allFilter: "ALL",
   },
+  es: {
+    badge: "BLOG E INVESTIGACI\u00d3N",
+    title: "Gobernanza",
+    titleHighlight: "ag\u00e9ntica",
+    subtitle: "Investigaci\u00f3n, metodolog\u00eda y perspectivas sobre la gobernanza de agentes de IA aut\u00f3nomos.",
+    readCta: "Leer \u2192",
+    backAll: "\u2190 Todos los art\u00edculos",
+    readSuffix: "de lectura",
+    authorRole: "Fundador ACF\u00ae \u00b7 AI CONSULTING",
+    ctaTitle: "Eval\u00fae su gobernanza ag\u00e9ntica",
+    ctaSubtitle: "Diagn\u00f3stico gratuito en 10 minutos. Puntuaci\u00f3n inmediata. Informe PDF.",
+    ctaButton: "Calcular mi ACF Score\u00ae \u2192",
+    allFilter: "TODOS",
+  },
+  de: {
+    badge: "BLOG & FORSCHUNG",
+    title: "Agentische",
+    titleHighlight: "Governance",
+    subtitle: "Forschung, Methodik und Einblicke in die Governance autonomer KI-Agenten.",
+    readCta: "Lesen \u2192",
+    backAll: "\u2190 Alle Artikel",
+    readSuffix: "Lesezeit",
+    authorRole: "Gr\u00fcnder ACF\u00ae \u00b7 AI CONSULTING",
+    ctaTitle: "Bewerten Sie Ihre agentische Governance",
+    ctaSubtitle: "Kostenloses Diagnose in 10 Minuten. Sofortergebnis. PDF-Bericht.",
+    ctaButton: "Meinen ACF Score\u00ae berechnen \u2192",
+    allFilter: "ALLE",
+  },
+  pt: {
+    badge: "BLOG & PESQUISA",
+    title: "Governan\u00e7a",
+    titleHighlight: "ag\u00eantica",
+    subtitle: "Pesquisa, metodologia e perspectivas sobre a governan\u00e7a de agentes de IA aut\u00f4nomos.",
+    readCta: "Ler \u2192",
+    backAll: "\u2190 Todos os artigos",
+    readSuffix: "de leitura",
+    authorRole: "Fundador ACF\u00ae \u00b7 AI CONSULTING",
+    ctaTitle: "Avalie sua governan\u00e7a ag\u00eantica",
+    ctaSubtitle: "Diagn\u00f3stico gratuito em 10 minutos. Pontua\u00e7\u00e3o instant\u00e2nea. Relat\u00f3rio PDF.",
+    ctaButton: "Calcular meu ACF Score\u00ae \u2192",
+    allFilter: "TODOS",
+  },
+  ja: {
+    badge: "\u30d6\u30ed\u30b0\uff06\u30ea\u30b5\u30fc\u30c1",
+    title: "\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8",
+    titleHighlight: "\u30ac\u30d0\u30ca\u30f3\u30b9",
+    subtitle: "\u81ea\u5f8bAI\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\u306e\u30ac\u30d0\u30ca\u30f3\u30b9\u306b\u95a2\u3059\u308b\u7814\u7a76\u3001\u65b9\u6cd5\u8ad6\u3001\u77e5\u898b\u3002",
+    readCta: "\u8aad\u3080 \u2192",
+    backAll: "\u2190 \u5168\u8a18\u4e8b\u4e00\u89a7",
+    readSuffix: "\u8aad\u4e86\u6642\u9593",
+    authorRole: "\u5275\u8a2d\u8005 ACF\u00ae \u00b7 AI CONSULTING",
+    ctaTitle: "\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\u30fb\u30ac\u30d0\u30ca\u30f3\u30b9\u3092\u8a55\u4fa1\u3059\u308b",
+    ctaSubtitle: "10\u5206\u3067\u7121\u6599\u8a3a\u65ad\u3002\u5373\u6642\u30b9\u30b3\u30a2\u3002PDF\u30ec\u30dd\u30fc\u30c8\u3002",
+    ctaButton: "ACF Score\u00ae\u3092\u8a08\u7b97\u3059\u308b \u2192",
+    allFilter: "\u3059\u3079\u3066",
+  },
+  zh: {
+    badge: "\u535a\u5ba2\u4e0e\u7814\u7a76",
+    title: "\u667a\u80fd\u4f53",
+    titleHighlight: "\u6cbb\u7406",
+    subtitle: "\u5173\u4e8e\u81ea\u4e3bAI\u667a\u80fd\u4f53\u6cbb\u7406\u7684\u7814\u7a76\u3001\u65b9\u6cd5\u8bba\u4e0e\u89c1\u89e3\u3002",
+    readCta: "\u9605\u8bfb \u2192",
+    backAll: "\u2190 \u6240\u6709\u6587\u7ae0",
+    readSuffix: "\u9605\u8bfb\u65f6\u95f4",
+    authorRole: "\u521b\u59cb\u4eba ACF\u00ae \u00b7 AI CONSULTING",
+    ctaTitle: "\u8bc4\u4f30\u60a8\u7684\u667a\u80fd\u4f53\u6cbb\u7406",
+    ctaSubtitle: "10\u5206\u949f\u514d\u8d39\u8bca\u65ad\u3002\u5373\u65f6\u8bc4\u5206\u3002PDF\u62a5\u544a\u3002",
+    ctaButton: "\u8ba1\u7b97\u6211\u7684 ACF Score\u00ae \u2192",
+    allFilter: "\u5168\u90e8",
+  },
+  ko: {
+    badge: "\ube14\ub85c\uadf8 & \ub9ac\uc11c\uce58",
+    title: "\uc5d0\uc774\uc804\ud2b8",
+    titleHighlight: "\uac70\ubc84\ub10c\uc2a4",
+    subtitle: "\uc790\uc728 AI \uc5d0\uc774\uc804\ud2b8 \uac70\ubc84\ub10c\uc2a4\uc5d0 \ub300\ud55c \uc5f0\uad6c, \ubc29\ubc95\ub860 \ubc0f \uc778\uc0ac\uc774\ud2b8.",
+    readCta: "\uc77d\uae30 \u2192",
+    backAll: "\u2190 \ubaa8\ub4e0 \uae00",
+    readSuffix: "\uc77d\uae30 \uc2dc\uac04",
+    authorRole: "\uc124\ub9bd\uc790 ACF\u00ae \u00b7 AI CONSULTING",
+    ctaTitle: "\uc5d0\uc774\uc804\ud2b8 \uac70\ubc84\ub10c\uc2a4\ub97c \ud3c9\uac00\ud558\uc138\uc694",
+    ctaSubtitle: "10\ubd84 \ubb34\ub8cc \uc9c4\ub2e8. \uc989\uc2dc \uc810\uc218. PDF \ubcf4\uace0\uc11c.",
+    ctaButton: "ACF Score\u00ae \uacc4\uc0b0\ud558\uae30 \u2192",
+    allFilter: "\uc804\uccb4",
+  },
+  it: {
+    badge: "BLOG & RICERCA",
+    title: "Governance",
+    titleHighlight: "agentica",
+    subtitle: "Ricerca, metodologia e approfondimenti sulla governance degli agenti IA autonomi.",
+    readCta: "Leggi \u2192",
+    backAll: "\u2190 Tutti gli articoli",
+    readSuffix: "di lettura",
+    authorRole: "Fondatore ACF\u00ae \u00b7 AI CONSULTING",
+    ctaTitle: "Valuta la tua governance agentica",
+    ctaSubtitle: "Diagnosi gratuita in 10 minuti. Punteggio immediato. Report PDF.",
+    ctaButton: "Calcola il mio ACF Score\u00ae \u2192",
+    allFilter: "TUTTI",
+  },
+  nl: {
+    badge: "BLOG & ONDERZOEK",
+    title: "Agentisch",
+    titleHighlight: "bestuur",
+    subtitle: "Onderzoek, methodologie en inzichten over het bestuur van autonome AI-agenten.",
+    readCta: "Lezen \u2192",
+    backAll: "\u2190 Alle artikelen",
+    readSuffix: "leestijd",
+    authorRole: "Oprichter ACF\u00ae \u00b7 AI CONSULTING",
+    ctaTitle: "Beoordeel uw agentisch bestuur",
+    ctaSubtitle: "Gratis diagnose in 10 minuten. Direct resultaat. PDF-rapport.",
+    ctaButton: "Mijn ACF Score\u00ae berekenen \u2192",
+    allFilter: "ALLE",
+  },
+  ru: {
+    badge: "\u0411\u041b\u041e\u0413 \u0418 \u0418\u0421\u0421\u041b\u0415\u0414\u041e\u0412\u0410\u041d\u0418\u042f",
+    title: "\u0410\u0433\u0435\u043d\u0442\u043d\u043e\u0435",
+    titleHighlight: "\u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435",
+    subtitle: "\u0418\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u044f, \u043c\u0435\u0442\u043e\u0434\u043e\u043b\u043e\u0433\u0438\u044f \u0438 \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430 \u043f\u043e \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044e \u0430\u0432\u0442\u043e\u043d\u043e\u043c\u043d\u044b\u043c\u0438 \u0418\u0418-\u0430\u0433\u0435\u043d\u0442\u0430\u043c\u0438.",
+    readCta: "\u0427\u0438\u0442\u0430\u0442\u044c \u2192",
+    backAll: "\u2190 \u0412\u0441\u0435 \u0441\u0442\u0430\u0442\u044c\u0438",
+    readSuffix: "\u0447\u0442\u0435\u043d\u0438\u044f",
+    authorRole: "\u041e\u0441\u043d\u043e\u0432\u0430\u0442\u0435\u043b\u044c ACF\u00ae \u00b7 AI CONSULTING",
+    ctaTitle: "\u041e\u0446\u0435\u043d\u0438\u0442\u0435 \u0432\u0430\u0448\u0435 \u0430\u0433\u0435\u043d\u0442\u043d\u043e\u0435 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435",
+    ctaSubtitle: "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u0430\u044f \u0434\u0438\u0430\u0433\u043d\u043e\u0441\u0442\u0438\u043a\u0430 \u0437\u0430 10 \u043c\u0438\u043d\u0443\u0442. \u041c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u044b\u0439 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442. PDF-\u043e\u0442\u0447\u0451\u0442.",
+    ctaButton: "\u0420\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0442\u044c \u043c\u043e\u0439 ACF Score\u00ae \u2192",
+    allFilter: "\u0412\u0421\u0415",
+  },
+  ar: {
+    badge: "\u0627\u0644\u0645\u062f\u0648\u0651\u0646\u0629 \u0648\u0627\u0644\u0623\u0628\u062d\u0627\u062b",
+    title: "\u062d\u0648\u0643\u0645\u0629",
+    titleHighlight: "\u0627\u0644\u0648\u0643\u0644\u0627\u0621",
+    subtitle: "\u0623\u0628\u062d\u0627\u062b \u0648\u0645\u0646\u0647\u062c\u064a\u0627\u062a \u0648\u0631\u0624\u0649 \u062d\u0648\u0644 \u062d\u0648\u0643\u0645\u0629 \u0648\u0643\u0644\u0627\u0621 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a \u0627\u0644\u0645\u0633\u062a\u0642\u0644\u064a\u0646.",
+    readCta: "\u0627\u0642\u0631\u0623 \u2192",
+    backAll: "\u2190 \u062c\u0645\u064a\u0639 \u0627\u0644\u0645\u0642\u0627\u0644\u0627\u062a",
+    readSuffix: "\u0644\u0644\u0642\u0631\u0627\u0621\u0629",
+    authorRole: "\u0627\u0644\u0645\u0624\u0633\u0633 ACF\u00ae \u00b7 AI CONSULTING",
+    ctaTitle: "\u0642\u064a\u0651\u0645 \u062d\u0648\u0643\u0645\u0629 \u0627\u0644\u0648\u0643\u0644\u0627\u0621 \u0644\u062f\u064a\u0643",
+    ctaSubtitle: "\u062a\u0634\u062e\u064a\u0635 \u0645\u062c\u0627\u0646\u064a \u0641\u064a 10 \u062f\u0642\u0627\u0626\u0642. \u0646\u062a\u064a\u062c\u0629 \u0641\u0648\u0631\u064a\u0629. \u062a\u0642\u0631\u064a\u0631 PDF.",
+    ctaButton: "\u0627\u062d\u0633\u0628 ACF Score\u00ae \u0627\u0644\u062e\u0627\u0635 \u0628\u064a \u2192",
+    allFilter: "\u0627\u0644\u0643\u0644",
+  },
+  tr: {
+    badge: "BLOG & ARA\u015eTIRMA",
+    title: "Ajantik",
+    titleHighlight: "y\u00f6neti\u015fim",
+    subtitle: "Otonom yapay zek\u00e2 ajanlar\u0131n\u0131n y\u00f6neti\u015fimi \u00fczerine ara\u015ft\u0131rma, metodoloji ve i\u00e7g\u00f6r\u00fcler.",
+    readCta: "Oku \u2192",
+    backAll: "\u2190 T\u00fcm makaleler",
+    readSuffix: "okuma s\u00fcresi",
+    authorRole: "Kurucu ACF\u00ae \u00b7 AI CONSULTING",
+    ctaTitle: "Ajantik y\u00f6neti\u015fiminizi de\u011ferlendirin",
+    ctaSubtitle: "10 dakikada \u00fccretsiz tan\u0131. Anl\u0131k skor. PDF raporu.",
+    ctaButton: "ACF Score\u00ae hesapla \u2192",
+    allFilter: "T\u00dcM\u00dc",
+  },
 };
 
 export default function BlogPage() {
   const locale = useLocale();
-  const lang = locale === "fr" ? "fr" : "en";
+  const lang = (ui as any)[locale] ? locale : "en";
+  const t = (ui as any)[lang];
   const articles = lang === "fr" ? articles_fr : articles_en;
   const categoryFilters = lang === "fr" ? categoryFilters_fr : categoryFilters_en;
-  const t = ui[lang];
 
   const [activeArticle, setActiveArticle] = useState<string | null>(null);
   const [filter, setFilter] = useState(t.allFilter);
@@ -335,7 +489,7 @@ export default function BlogPage() {
 
   useEffect(() => { window.scrollTo(0, 0); }, [activeArticle]);
 
-  const filtered = filter === t.allFilter ? articles : articles.filter(a => a.category === filter);
+  const filtered = filter === t.allFilter ? articles : articles.filter((a: any) => a.category === filter);
   const current = articles.find(a => a.slug === activeArticle);
 
   return (
@@ -385,7 +539,7 @@ export default function BlogPage() {
           {/* FILTERS */}
           <section style={{ padding: "0 0 40px" }}>
             <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 40px", display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center" }}>
-              {categoryFilters.map(cat => (
+              {categoryFilters.map((cat: any) => (
                 <button key={cat} onClick={() => setFilter(cat)} style={{
                   padding: "8px 16px", borderRadius: 100, border: `1px solid ${filter === cat ? C.goldBorder : C.bd1}`,
                   background: filter === cat ? C.goldDim : "transparent", color: filter === cat ? C.gold : C.gray,
@@ -399,7 +553,7 @@ export default function BlogPage() {
           {/* ARTICLES GRID */}
           <section style={{ padding: "0 0 80px" }}>
             <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
-              {filtered.map(a => (
+              {filtered.map((a: any) => (
                 <article key={a.slug} onClick={() => { setActiveArticle(a.slug); window.location.hash = a.slug; }} style={{
                   background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 16, padding: 32, cursor: "pointer", transition: "all .3s",
                 }}
@@ -442,7 +596,7 @@ export default function BlogPage() {
             <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.7, marginBottom: 40, paddingBottom: 32, borderBottom: `1px solid ${C.bd1}` }}>{current.excerpt}</p>
 
             <div>
-              {current.content.map((block, i) => {
+              {current.content.map((block: any, i: number) => {
                 if (block.type === "h2") return <h2 key={i} style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 24, fontWeight: 700, color: "#fff", marginTop: 40, marginBottom: 16 }}>{block.text}</h2>;
                 if (block.type === "h3") return <h3 key={i} style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 18, fontWeight: 700, color: C.gold, marginTop: 28, marginBottom: 12 }}>{block.text}</h3>;
                 if (block.type === "p") return <p key={i} style={{ fontSize: 15, color: C.gray2, lineHeight: 1.85, marginBottom: 16 }}>{block.text}</p>;
@@ -453,7 +607,7 @@ export default function BlogPage() {
                 );
                 if (block.type === "list") return (
                   <div key={i} style={{ margin: "16px 0 20px", display: "flex", flexDirection: "column", gap: 10 }}>
-                    {block.text.split("|").map((item, j) => (
+                    {block.text.split("|").map((item: any, j: number) => (
                       <div key={j} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
                         <span style={{ color: C.gold, marginTop: 5, flexShrink: 0 }}>{"\u25b8"}</span>
                         <span style={{ fontSize: 14, color: C.gray2, lineHeight: 1.7 }}>{item.trim()}</span>

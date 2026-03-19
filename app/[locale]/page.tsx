@@ -465,7 +465,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         <li><a href="#" onclick="switchLocale('es');return false"><span class="rpflag">🇪🇸</span>Spain <span class="rplang">(Español)</span></a></li>
         <li><a href="#" onclick="switchLocale('it');return false"><span class="rpflag">🇮🇹</span>Italy <span class="rplang">(Italiano)</span></a></li>
         <li><a href="#" onclick="switchLocale('pt');return false"><span class="rpflag">🇵🇹</span>Portugal <span class="rplang">(Português)</span></a></li>
-        <li><a href="#" onclick="switchLocale('fr');return false"><span class="rpflag">🇧🇪</span>Belgium <span class="rplang">(FR/NL)</span></a></li>
+        <li><a href="#" onclick="switchLocale('nl');return false"><span class="rpflag">🇧🇪</span>Belgium <span class="rplang">(FR/NL)</span></a></li>
         <li><a href="#" onclick="switchLocale('fr');return false"><span class="rpflag">🇨🇭</span>Switzerland <span class="rplang">(FR/DE/IT)</span></a></li>
         <li><a href="#" onclick="switchLocale('nl');return false"><span class="rpflag">🇳🇱</span>Netherlands <span class="rplang">(Nederlands)</span></a></li>
         <li><a href="#" onclick="switchLocale('de');return false"><span class="rpflag">🇦🇹</span>Austria <span class="rplang">(Deutsch)</span></a></li>
@@ -476,59 +476,45 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div>
       <div class="rpcol-title">${m.regionSelector.nordicBaltic}</div>
       <ul class="rplinks">
-        <li><a href="#" onclick="switchLocale('sv');return false"><span class="rpflag">🇸🇪</span>Sweden <span class="rplang">(Svenska)</span></a></li>
-        <li><a href="#" onclick="switchLocale('no');return false"><span class="rpflag">🇳🇴</span>Norway <span class="rplang">(Norsk)</span></a></li>
-        <li><a href="#" onclick="switchLocale('da');return false"><span class="rpflag">🇩🇰</span>Denmark <span class="rplang">(Dansk)</span></a></li>
-        <li><a href="#" onclick="switchLocale('fi');return false"><span class="rpflag">🇫🇮</span>Finland <span class="rplang">(Suomi)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇮🇸</span>Iceland <span class="rplang">(Íslenska)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇪🇪</span>Estonia <span class="rplang">(Eesti)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇱🇻</span>Latvia <span class="rplang">(Latviešu)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇱🇹</span>Lithuania <span class="rplang">(Lietuvių)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇸🇪</span>Sweden <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇳🇴</span>Norway <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇩🇰</span>Denmark <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇫🇮</span>Finland <span class="rplang">(English)</span></a></li>
       </ul>
       <div class="rpcol-title" style="margin-top:20px">${m.regionSelector.centralEasternEurope}</div>
       <ul class="rplinks">
-        <li><a href="#" onclick="switchLocale('pl');return false"><span class="rpflag">🇵🇱</span>Poland <span class="rplang">(Polski)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇨🇿</span>Czech Republic <span class="rplang">(Čeština)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇸🇰</span>Slovakia <span class="rplang">(Slovenčina)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇭🇺</span>Hungary <span class="rplang">(Magyar)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇷🇴</span>Romania <span class="rplang">(Română)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇧🇬</span>Bulgaria <span class="rplang">(Български)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇭🇷</span>Croatia <span class="rplang">(Hrvatski)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇸🇮</span>Slovenia <span class="rplang">(Slovenščina)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇷🇸</span>Serbia <span class="rplang">(Srpski)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇺🇦</span>Ukraine <span class="rplang">(Українська)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇬🇷</span>Greece <span class="rplang">(Ελληνικά)</span></a></li>
+        <li><a href="#" onclick="switchLocale('ru');return false"><span class="rpflag">🇷🇺</span>Russia <span class="rplang">(Русский)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇵🇱</span>Poland <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇨🇿</span>Czech Republic <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇷🇴</span>Romania <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇺🇦</span>Ukraine <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇬🇷</span>Greece <span class="rplang">(English)</span></a></li>
       </ul>
     </div>
     <div>
       <div class="rpcol-title">${m.regionSelector.middleEastAfrica}</div>
       <ul class="rplinks">
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇦🇪</span>UAE <span class="rplang">(العربية)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇸🇦</span>Saudi Arabia <span class="rplang">(العربية)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇮🇱</span>Israel <span class="rplang">(עברית)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇹🇷</span>Turkey <span class="rplang">(Türkçe)</span></a></li>
+        <li><a href="#" onclick="switchLocale('ar');return false"><span class="rpflag">🇦🇪</span>UAE <span class="rplang">(العربية)</span></a></li>
+        <li><a href="#" onclick="switchLocale('ar');return false"><span class="rpflag">🇸🇦</span>Saudi Arabia <span class="rplang">(العربية)</span></a></li>
+        <li><a href="#" onclick="switchLocale('ar');return false"><span class="rpflag">🇪🇬</span>Egypt <span class="rplang">(العربية)</span></a></li>
+        <li><a href="#" onclick="switchLocale('fr');return false"><span class="rpflag">🇲🇦</span>Morocco <span class="rplang">(Français)</span></a></li>
+        <li><a href="#" onclick="switchLocale('tr');return false"><span class="rpflag">🇹🇷</span>Turkey <span class="rplang">(Türkçe)</span></a></li>
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇿🇦</span>South Africa <span class="rplang">(English)</span></a></li>
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇳🇬</span>Nigeria <span class="rplang">(English)</span></a></li>
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇰🇪</span>Kenya <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('fr');return false"><span class="rpflag">🇲🇦</span>Morocco <span class="rplang">(Français)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇪🇬</span>Egypt <span class="rplang">(العربية)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇮🇱</span>Israel <span class="rplang">(English)</span></a></li>
       </ul>
     </div>
     <div>
       <div class="rpcol-title">${m.regionSelector.asiaPacific}</div>
       <ul class="rplinks">
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇯🇵</span>Japan <span class="rplang">(日本語)</span></a></li>
+        <li><a href="#" onclick="switchLocale('ja');return false"><span class="rpflag">🇯🇵</span>Japan <span class="rplang">(日本語)</span></a></li>
         <li><a href="#" onclick="switchLocale('zh');return false"><span class="rpflag">🇨🇳</span>China <span class="rplang">(中文)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇰🇷</span>Korea <span class="rplang">(한국어)</span></a></li>
+        <li><a href="#" onclick="switchLocale('ko');return false"><span class="rpflag">🇰🇷</span>Korea <span class="rplang">(한국어)</span></a></li>
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇸🇬</span>Singapore <span class="rplang">(English)</span></a></li>
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇦🇺</span>Australia <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇳🇿</span>New Zealand <span class="rplang">(English)</span></a></li>
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇮🇳</span>India <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇮🇩</span>Indonesia <span class="rplang">(Bahasa)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇲🇾</span>Malaysia <span class="rplang">(Bahasa)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇹🇭</span>Thailand <span class="rplang">(ภาษาไทย)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇻🇳</span>Vietnam <span class="rplang">(Tiếng Việt)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇵🇭</span>Philippines <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇮🇩</span>Indonesia <span class="rplang">(English)</span></a></li>
         <li><a href="#" onclick="switchLocale('zh');return false"><span class="rpflag">🇭🇰</span>Hong Kong <span class="rplang">(中文)</span></a></li>
         <li><a href="#" onclick="switchLocale('zh');return false"><span class="rpflag">🇹🇼</span>Taiwan <span class="rplang">(中文)</span></a></li>
       </ul>
@@ -1188,8 +1174,8 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <a href="/partners/apply" class="btno">${m.cta.secondary}</a>
     </div>
     <div style="margin-top:28px">
-      <a href="/acf-whitepaper-fr.pdf" download style="color:var(--gold);font-size:14px;text-decoration:none;border:1px solid var(--bd);padding:10px 24px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:.3s" onmouseover="this.style.background='rgba(201,168,76,.1)'" onmouseout="this.style.background='transparent'">
-        <span style="font-size:18px">\u{1F4C4}</span> ${m.common.downloadPDF} — ACF\u00ae Livre Blanc
+      <a href="/acf-whitepaper-${locale}.pdf" download style="color:var(--gold);font-size:14px;text-decoration:none;border:1px solid var(--bd);padding:10px 24px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:.3s" onmouseover="this.style.background='rgba(201,168,76,.1)'" onmouseout="this.style.background='transparent'">
+        <span style="font-size:18px">\u{1F4C4}</span> ${m.common.downloadPDF} — ACF\u00ae White Paper
       </a>
     </div>
   </div>

@@ -49,7 +49,84 @@ const ui = {
     disclaimer: "Réponses générées par IA. Vérifiez toujours avec la documentation officielle.",
     seeMore: "Voir les mentions légales",
   },
-};
+  es: {
+    btnLabel: "ACF Agent", btnStatus: "En línea", beta: "", title: "ACF Agent",
+    subtitle: "Su experto en gobernanza de IA. Pregunte sobre el Agentic Commerce Framework®.",
+    placeholder: "Pregunte sobre la gobernanza ACF...", close: "\u2715", trending: "Preguntas frecuentes",
+    questions: ["¿Qué es el Agentic Commerce Framework?", "¿Cómo funciona ACF Score®?", "¿Qué es un DDA?", "Los 4 principios", "¿Qué es ACF Control?"],
+    disclaimer: "Respuestas generadas por IA. Siempre verifique con la documentación oficial.", seeMore: "Ver aviso legal",
+  },
+  de: {
+    btnLabel: "ACF Agent", btnStatus: "Online", beta: "", title: "ACF Agent",
+    subtitle: "Ihr KI-Governance-Experte. Stellen Sie Fragen zum Agentic Commerce Framework®.",
+    placeholder: "Fragen zur ACF-Governance...", close: "\u2715", trending: "Häufige Fragen",
+    questions: ["Was ist das Agentic Commerce Framework?", "Wie funktioniert ACF Score®?", "Was ist ein DDA?", "Die 4 Prinzipien", "Was ist ACF Control?"],
+    disclaimer: "KI-generierte Antworten. Überprüfen Sie immer die offizielle Dokumentation.", seeMore: "Rechtliche Hinweise",
+  },
+  pt: {
+    btnLabel: "ACF Agent", btnStatus: "Online", beta: "", title: "ACF Agent",
+    subtitle: "Seu especialista em governança de IA. Pergunte sobre o Agentic Commerce Framework®.",
+    placeholder: "Pergunte sobre governança ACF...", close: "\u2715", trending: "Perguntas frequentes",
+    questions: ["O que é o Agentic Commerce Framework?", "Como funciona o ACF Score®?", "O que é um DDA?", "Os 4 princípios", "O que é o ACF Control?"],
+    disclaimer: "Respostas geradas por IA. Sempre verifique com a documentação oficial.", seeMore: "Ver aviso legal",
+  },
+  ja: {
+    btnLabel: "ACF Agent", btnStatus: "オンライン", beta: "", title: "ACF Agent",
+    subtitle: "AIガバナンスの専門家。Agentic Commerce Framework®について質問してください。",
+    placeholder: "ACFガバナンスについて質問...", close: "\u2715", trending: "よくある質問",
+    questions: ["Agentic Commerce Frameworkとは？", "ACF Score®の仕組みは？", "DDAとは？", "4つの原則", "ACF Controlとは？"],
+    disclaimer: "AI生成の回答です。公式ドキュメントで必ず確認してください。", seeMore: "法的通知を見る",
+  },
+  zh: {
+    btnLabel: "ACF Agent", btnStatus: "在线", beta: "", title: "ACF Agent",
+    subtitle: "您的AI治理专家。了解Agentic Commerce Framework®相关信息。",
+    placeholder: "询问ACF治理...", close: "\u2715", trending: "热门问题",
+    questions: ["什么是Agentic Commerce Framework？", "ACF Score®如何运作？", "什么是DDA？", "4项原则", "什么是ACF Control？"],
+    disclaimer: "AI生成的回答。请始终以官方文档为准。", seeMore: "查看法律声明",
+  },
+  ko: {
+    btnLabel: "ACF Agent", btnStatus: "온라인", beta: "", title: "ACF Agent",
+    subtitle: "AI 거버넌스 전문가입니다. Agentic Commerce Framework®에 대해 문의하세요.",
+    placeholder: "ACF 거버넌스에 대해 질문...", close: "\u2715", trending: "자주 묻는 질문",
+    questions: ["Agentic Commerce Framework란?", "ACF Score®는 어떻게 작동하나요?", "DDA란 무엇인가요?", "4가지 원칙", "ACF Control이란?"],
+    disclaimer: "AI가 생성한 답변입니다. 항상 공식 문서를 확인하세요.", seeMore: "법적 고지 보기",
+  },
+  it: {
+    btnLabel: "ACF Agent", btnStatus: "Online", beta: "", title: "ACF Agent",
+    subtitle: "Il vostro esperto di governance IA. Fate domande sull'Agentic Commerce Framework®.",
+    placeholder: "Chiedi sulla governance ACF...", close: "\u2715", trending: "Domande frequenti",
+    questions: ["Cos'è l'Agentic Commerce Framework?", "Come funziona ACF Score®?", "Cos'è un DDA?", "I 4 principi", "Cos'è ACF Control?"],
+    disclaimer: "Risposte generate dall'IA. Verificare sempre con la documentazione ufficiale.", seeMore: "Vedi note legali",
+  },
+  nl: {
+    btnLabel: "ACF Agent", btnStatus: "Online", beta: "", title: "ACF Agent",
+    subtitle: "Uw AI-governance expert. Stel vragen over het Agentic Commerce Framework®.",
+    placeholder: "Vraag over ACF-governance...", close: "\u2715", trending: "Veelgestelde vragen",
+    questions: ["Wat is het Agentic Commerce Framework?", "Hoe werkt ACF Score®?", "Wat is een DDA?", "De 4 principes", "Wat is ACF Control?"],
+    disclaimer: "Door AI gegenereerde antwoorden. Verifieer altijd met de officiële documentatie.", seeMore: "Juridische kennisgeving",
+  },
+  ru: {
+    btnLabel: "ACF Agent", btnStatus: "Онлайн", beta: "", title: "ACF Agent",
+    subtitle: "Ваш эксперт по управлению ИИ. Задавайте вопросы об Agentic Commerce Framework®.",
+    placeholder: "Спросите об управлении ACF...", close: "\u2715", trending: "Популярные вопросы",
+    questions: ["Что такое Agentic Commerce Framework?", "Как работает ACF Score®?", "Что такое DDA?", "4 принципа", "Что такое ACF Control?"],
+    disclaimer: "Ответы сгенерированы ИИ. Всегда сверяйтесь с официальной документацией.", seeMore: "Юридическая информация",
+  },
+  ar: {
+    btnLabel: "ACF Agent", btnStatus: "متصل", beta: "", title: "ACF Agent",
+    subtitle: "خبير حوكمة الذكاء الاصطناعي. اسأل عن Agentic Commerce Framework®.",
+    placeholder: "اسأل عن حوكمة ACF...", close: "\u2715", trending: "الأسئلة الشائعة",
+    questions: ["ما هو Agentic Commerce Framework؟", "كيف يعمل ACF Score®؟", "ما هو DDA؟", "المبادئ الأربعة", "ما هو ACF Control؟"],
+    disclaimer: "إجابات مولدة بالذكاء الاصطناعي. تحقق دائمًا من الوثائق الرسمية.", seeMore: "الإشعار القانوني",
+  },
+  tr: {
+    btnLabel: "ACF Agent", btnStatus: "Çevrimiçi", beta: "", title: "ACF Agent",
+    subtitle: "Yapay zeka yönetişim uzmanınız. Agentic Commerce Framework® hakkında sorun.",
+    placeholder: "ACF yönetişimi hakkında sorun...", close: "\u2715", trending: "Sık sorulan sorular",
+    questions: ["Agentic Commerce Framework nedir?", "ACF Score® nasıl çalışır?", "DDA nedir?", "4 temel ilke", "ACF Control nedir?"],
+    disclaimer: "Yapay zeka tarafından üretilen yanıtlar. Her zaman resmi dokümantasyonu kontrol edin.", seeMore: "Yasal uyarı",
+  },
+} as Record<string, any>;
 
 interface Message {
   text: string;
@@ -78,7 +155,7 @@ declare global {
 
 export default function AIAgent() {
   const locale = useLocale();
-  const lang = locale === "fr" ? "fr" : "en";
+  const lang = ui[locale] ? locale : "en";
   const t = ui[lang];
 
   const [open, setOpen] = useState(false);
@@ -187,7 +264,7 @@ export default function AIAgent() {
 
     try {
       // Build conversation history for context
-      const history = messages.map(m => ({
+      const history = messages.map((m: any) => ({
         role: m.type === "user" ? "user" : "assistant",
         content: m.text,
       }));
@@ -259,7 +336,7 @@ export default function AIAgent() {
 
             {/* Messages */}
             <div className="acf-agent-msgs" ref={msgsRef}>
-              {messages.map((m, i) => (
+              {messages.map((m: any, i: number) => (
                 <div key={i} className={`acf-agent-msg acf-agent-msg-${m.type}`}>{m.text}</div>
               ))}
               {loading && <div className="acf-agent-dots"><span /><span /><span /></div>}
@@ -350,7 +427,7 @@ export default function AIAgent() {
               <div style={{ padding: "12px 20px 16px", borderTop: `1px solid ${C.bd1}` }}>
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 10 }}>{t.trending}</div>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                  {t.questions.map(q => (
+                  {t.questions.map((q: any) => (
                     <button key={q} className="acf-agent-q" onClick={() => sendMessage(q)}>{q}</button>
                   ))}
                 </div>

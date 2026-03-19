@@ -3,10 +3,7 @@ import type { MetadataRoute } from 'next'
 const BASE_URL = 'https://acf-standard.com'
 
 const locales = [
-  'fr', 'en', 'es', 'de', 'it', 'pt', 'nl', 'pl', 'sv', 'da',
-  'no', 'fi', 'is', 'et', 'lv', 'lt', 'cs', 'sk', 'hu', 'ro',
-  'bg', 'hr', 'sl', 'sr', 'uk', 'el', 'ar', 'he', 'tr', 'ja',
-  'zh', 'ko', 'id', 'ms', 'th', 'vi', 'hi', 'ru',
+  'fr', 'en', 'es', 'de', 'pt', 'ja', 'zh', 'ko', 'it', 'nl', 'ru', 'ar', 'tr',
 ] as const
 
 const pages = [
