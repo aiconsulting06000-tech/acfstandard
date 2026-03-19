@@ -1,1 +1,571 @@
-{"meta":{"language":"KO","languageCode":"ko","locale":"ko-KR"},"common":{"readMore":"더 읽기","learnMore":"자세히 알아보기","getStarted":"시작하기","downloadPDF":"PDF 다운로드","watchVideo":"동영상 보기","close":"닫기","open":"열기","loading":"로딩 중","backToHome":"홈으로 돌아가기","menu":"메뉴"},"regionSelector":{"title":"지역 및 언어 선택","close":"✕ 닫기","global":"글로벌 (영어)","northAmerica":"북미","latinAmerica":"라틴 아메리카","westernEurope":"서유럽","nordicBaltic":"북유럽 및 발트해","centralEasternEurope":"중앙 및 동유럽","middleEastAfrica":"중동 및 아프리카","asiaPacific":"아시아 태평양"},"nav":{"menu":"메뉴","logoText":"Agentic Commerce Framework®","logoSubtext":"AI 거버넌스 글로벌 표준","region":"GLOBAL | KO","theStandard":"표준","acfScore":"ACF Score","acfControl":"ACF Control","acfCertification":"ACF Certification","partners":"파트너","requestAssessment":"평가 요청","partnerLogin":"파트너 로그인","applyPartner":"파트너 신청","contact":"연락처"},"megaMenu":{"framework":{"title":"프레임워크","link":"ACF 표준 →","subtitle":"상업 환경에서 에이전틱 시스템을 위한 결정적 거버넌스 방법론.","architecture":{"title":"아키텍처","principles":"4가지 기본 원칙","layers":"4가지 운영 레이어","maturity":"4가지 성숙도 수준"},"methodology":{"title":"방법론","modules":"8가지 구현 모듈","constitution":"에이전틱 헌장","dda":"DDA 역할 프레임워크","killSwitch":"비상 정지 프로토콜"},"featured":{"label":"주요 콘텐츠","whitepaper":{"title":"ACF 백서 다운로드","description":"전체 사양 — 등록 사용자 무료."},"release":{"title":"ACF — 2026년 2월","description":"공식 출시. 프레임워크의 새로운 사항."}}},"products":{"title":"제품","link":"제품 →","subtitle":"ACF 표준을 조직 전체에 운영화하는 세 가지 도구.","diagnostic":{"title":"진단","score":"ACF Score — 주권 지표","methodology":"스코어링 방법론","axes":"6가지 거버넌스 축"},"saas":{"title":"거버넌스 플랫폼","control":"ACF Control — 거버넌스 대시보드","kpis":"18가지 주권 KPI","gating":"적응형 게이팅 시스템"},"certification":{"title":"인증","program":"ACF Certification 프로그램","levels":"인증 수준","audit":"감사 프로세스"}},"resources":{"title":"리소스","link":"리소스 →","subtitle":"거버넌스 인사이트, 연구 및 기술 문서.","insights":{"title":"최신 인사이트","aiAct":"EU AI법 및 에이전틱 시스템","dda":"DDA 역할 설명","killSwitch":"3단계 비상 정지 설계"},"documentation":{"title":"문서","specs":"기술 사양","research":"연구 논문","academy":"ACF 아카데미"},"tools":{"title":"도구","complianceChecker":"ACF AI Act Checker","euAiAct":"AI Act Explorer ↗"}},"about":{"title":"ACF 소개","link":"ACF 소개 →","subtitle":"Agentic Commerce Framework®의 이야기, 사명 및 법적 보호.","whoWeAre":{"title":"소개","vincent":"Vincent DORANGE — 창시자","mission":"사명 및 가치","legal":"법적 보호"},"howWeWork":{"title":"운영 방식","network":"실무자 네트워크","audit":"감사 및 인증","contact":"연락처"},"registered":{"label":"등록 상표","title":"등록 상표 ACF®","description":"ACF®는 등록 상표입니다. 모든 방법론과 도구는 법적으로 보호됩니다."}},"partners":{"title":"파트너","link":"파트너 →","subtitle":"ACF 실무자 네트워크에 참여하여 고객에게 거버넌스 서비스를 제공하세요.","portal":{"title":"파트너 포털","login":"파트너 포털 로그인","dashboard":"대시보드 및 도구","training":"교육 자료","toolkit":"ACF 실무자 도구함"},"become":{"title":"파트너 되기","apply":"가입 신청","tiers":"파트너 등급","certified":"먼저 ACF 인증 받기"}},"user":{"partnerAccess":"파트너 접근","partnerLogin":"파트너 로그인","applyPartner":"파트너 신청","contact":"연락처"}},"hero":{"title":"글로벌 표준:","typing":{"word1":"거버넌스","word2":"주권","word3":"인텔리전스","word4":"커머스"},"description":"Agentic Commerce Framework® (ACF)는 상업 환경에서 자율 에이전틱 시스템을 배포, 감독 및 제어하기 위한 결정적 거버넌스 방법론입니다.","cta":{"primary":"거버넌스 평가 요청 →","secondary":"표준 읽기"},"stats":{"principles":{"value":"4","label":"기본<br>원칙"},"modules":{"value":"8","label":"구현<br>모듈"},"kpis":{"value":"18","label":"주권<br>KPI"},"tools":{"value":"17","label":"독자적<br>도구"}},"satellites":{"score":{"name":"ACF Score","description":"주권 지표"},"control":{"name":"ACF Control","description":"거버넌스 플랫폼"},"certification":{"name":"Certification","description":"인증"},"partners":{"name":"파트너","description":"실무자"}}},"statsBar":{"layers":{"value":"4","label":"운영 레이어"},"kpis":{"value":"18","label":"주권 KPI"},"tools":{"value":"17","label":"독자적 도구"},"sovereignty":{"value":"100","suffix":"%","label":"인간 주권"}},"principles":{"badge":"// 아키텍처","title":"4가지 기본 원칙","subtitle":"인간 권한과 자율 에이전트 실행 간의 경계를 정의하는 네 가지 불변의 공리.","principle1":{"number":"01","title":"의사결정 주권","description":"중요한 전략적 결정은 절대 자율 에이전트에게 위임되지 않습니다."},"principle2":{"number":"02","title":"설계 기반 거버넌스","description":"거버넌스 프레임워크는 배포 전에 정의됩니다."},"principle3":{"number":"03","title":"궁극적 인간 통제","description":"모든 에이전틱 시스템은 인간 개입 가능성을 유지해야 합니다."},"principle4":{"number":"04","title":"추적 가능한 책임","description":"모든 자율 행동은 감사 가능하고 귀속 가능해야 합니다."}},"layers":{"badge":"// 구조","title":"4가지 운영 레이어","subtitle":"전략적 거버넌스에서 실시간 실행 감독까지의 계층적 아키텍처.","layer1":{"number":"LAYER_01","title":"거버넌스 및 주권","description":"주권 헌장, 거버넌스 위원회, RACI 매트릭스, 비위임 영역 맵."},"layer2":{"number":"LAYER_02","title":"의사결정 정책","description":"가중 목표, 중재 규칙, 에스컬레이션 임계값, 규제 제약."},"layer3":{"number":"LAYER_03","title":"에이전트 시스템","description":"에이전트별 명시적 권한, 상호작용 범위, 자율성 수준, 5가지 분류 체계."},"layer4":{"number":"LAYER_04","title":"실행 및 감독","description":"적응형 게이팅 매트릭스, 다단계 알림, 18가지 주권 KPI, 실시간 대시보드."}},"maturity":{"badge":"// 진행","title":"4가지 에이전틱 성숙도 수준","subtitle":"ACF는 자율성 수준별로 시스템을 분류합니다. 레벨 2가 권장 배포 목표입니다.","level0":{"code":"LEVEL_0","name":"기존 자동화","risk":"매우 낮은 위험","description":"고정 규칙, ML 없음. 수정 시 인간 개입 필요."},"level1":{"code":"LEVEL_1","name":"보조 에이전트","risk":"낮은 위험","description":"에이전트가 분석하고 추천. 모든 최종 결정은 인간이 담당."},"level2":{"code":"LEVEL_2","name":"거버넌스 에이전트","risk":"중간 위험","description":"엄격한 거버넌스 내에서 에이전트가 결정. 비위임 영역은 잠금.","badge":"★ 권장 목표"},"level3":{"code":"LEVEL_3","name":"감독형 자율","risk":"높은 위험","description":"에이전트가 결정하고 학습. 최대 거버넌스. 성숙한 조직만 해당."}},"modules":{"badge":"// 방법론","title":"8가지 구현 모듈","subtitle":"6~18개월에 걸쳐 점진적으로 배포되는 순차적 경로. 각 모듈은 이전 모듈을 기반으로 합니다.","module1":{"code":"MOD_01","name":"주권 진단","description":"주권 스코어 계산. 위험 영역 매핑."},"module2":{"code":"MOD_02","name":"의사결정 매핑","description":"중요도 매트릭스. 비위임 영역."},"module3":{"code":"MOD_03","name":"에이전틱 헌장","description":"9개 조항. 거버넌스 위원회 서명."},"module4":{"code":"MOD_04","name":"에이전트 시스템 설계","description":"권한 명세서, 상호작용 범위."},"module5":{"code":"MOD_05","name":"보안 및 가역성","description":"샌드박싱, 가역성 계획. 비상 정지 설계."},"module6":{"code":"MOD_06","name":"지속적 거버넌스","description":"월간 검토. 연간 컴플라이언스 감사."},"module7":{"code":"MOD_07","name":"구현 로드맵","description":"5단계 점진적 배포."},"module8":{"code":"MOD_08","name":"위기 관리","description":"3단계 인시던트. 비상 정지 훈련."}},"video":{"badge":"// ACF의 필요성","title":"거버넌스는 기다릴 수 없습니다.<br>에이전트는 이미 결정하고 있습니다.","description1":"2026년, 자율 에이전트는 이미 상업 환경에서 의사결정을 실행하고 있습니다 — 가격 설정, 리드 선별, 클레임 처리, 계약 관리. 대부분의 조직은 이를 관리할 프레임워크가 없습니다.","description2":"ACF는 거버넌스 실패가 법적, 재정적 또는 평판 위기로 이어지기 전에 그 공백을 메우기 위해 만들어졌습니다.","quote":{"text":"문제는 더 이상 에이전트를 배포<em>할지</em>가 아닙니다. 주권을 포기하지 않고 <em>어떻게</em> 배포할지입니다.","author":"— Agentic Commerce Framework®"},"player":{"badge":"ACF — 에이전틱 혁명","name":"에이전틱 커머스의 부상","role":"통제되지 않는 자동화에서 거버넌스 주권으로","duration":"1:05"},"stats":{"release":{"value":"2026","label":"공식 출시"},"documentation":{"value":"45p","label":"전체 문서"},"protection":{"value":"ACF®","label":"등록 상표"}},"modal":{"placeholder":"출시 예정","title":"에이전틱 커머스 혁명","description":"내러티브 여정: 통제 상실에서 ACF 거버넌스 프레임워크까지. 자율 에이전트가 커머스를 재편하고 있습니다 — 문제는 누가 그들을 관리하느냐입니다."}},"products":{"badge":"// 에코시스템","title":"ACF 에코시스템","subtitle":"ACF 표준을 운영화하는 세 가지 상호 보완적 제품.","score":{"label":"진단 도구","title":"ACF Score","description":"6가지 거버넌스 차원에서 의사결정 독립성을 측정하는 독자적 주권 스코어.","features":{"feature1":"복합 주권 스코어 지표","feature2":"6축 레이더 시각화","feature3":"축별 맞춤 행동 계획"},"cta":"스코어 측정 →"},"control":{"label":"거버넌스 플랫폼","title":"ACF Control","description":"적응형 게이팅 및 자동 에스컬레이션을 통해 18가지 주권 KPI를 모니터링하는 실시간 거버넌스 대시보드.","features":{"feature1":"6가지 거버넌스 축의 18가지 KPI","feature2":"인간 에스컬레이션 기반 적응형 게이팅","feature3":"변조 방지 감사 로그"},"cta":"ACF Control 알아보기 →"},"certification":{"label":"독립 인증","title":"ACF Certification","description":"ACF 거버넌스 표준 준수를 증명하는 독립 인증. 공개 검증 가능.","features":{"feature1":"레벨 1, 2, 3 인증 경로","feature2":"공개 검증 가능 배지","feature3":"연간 갱신 + 지속적 모니터링"},"cta":"인증 받기 →"}},"blog":{"badge":"// 인사이트","title":"ACF 블로그 최신 소식","subtitle":"거버넌스 인사이트, 프레임워크 업데이트 및 에이전틱 인텔리전스 연구.","article1":{"category":"AI 규제","title":"2026년 EU AI법이 에이전틱 시스템에 적용되는 방법","excerpt":"AI법의 위험 기반 접근법은 자율 에이전트에 대한 특정 의무를 생성합니다. ACF 레벨 2 거버넌스가 다루는 범위는 다음과 같습니다.","date":"2026-02-15","cta":"읽기 →"},"article2":{"category":"거버넌스","title":"DDA: 왜 모든 AI 네이티브 기업에 위임 의사결정 에이전트 책임자가 필요한가","excerpt":"DDA는 자율 에이전트의 법적 보호자입니다. 이 핵심 역할을 만들고 권한을 부여하는 방법.","date":"2026-02-08","cta":"읽기 →"},"article3":{"category":"기술","title":"자율 에이전트 시스템을 위한 3단계 비상 정지 설계","excerpt":"효과적인 비상 정지는 단일 버튼이 아닙니다. ACF는 정의된 응답 시간을 가진 세 가지 인터럽트 레벨을 명시합니다.","date":"2026-01-29","cta":"읽기 →"},"viewAll":"전체 기사 보기 →"},"cta":{"watermark":"ACF®","badge":"// 다음 단계","title":"에이전틱 시스템을<br>관리할 준비가 되셨나요?","description":"거버넌스 평가를 요청하고 현재 주권 스코어를 확인하세요.","primary":"거버넌스 평가 요청 →","secondary":"ACF 파트너 되기"},"footer":{"logoText":"Agentic Commerce Framework®","logoSubtext":"AI 거버넌스 글로벌 표준","description":"자율 에이전틱 시스템을 배포하는 조직을 위한 결정적 거버넌스 표준. 등록 상표.","framework":{"title":"프레임워크","theStandard":"표준","methodology":"방법론","research":"연구","certification":"ACF Certification"},"products":{"title":"제품","score":"ACF Score","control":"ACF Control","certification":"인증","academy":"아카데미"},"organization":{"title":"조직","partnerPortal":"파트너 포털","about":"소개","contact":"연락처","legal":"법적 사항"},"copyright":"© 2026 Agentic Commerce Framework® — Vincent DORANGE. 모든 권리 보유.","legal":{"privacy":"개인정보 보호","terms":"이용약관","cookies":"쿠키"}},"ai":{"button":{"label":"ACF 에이전트에게 질문","status":"AI 거버넌스 · 온라인"},"modal":{"close":"×","beta":"","title":"ACF에게 질문","subtitle":"ACF 표준 및 거버넌스 인사이트를 기반으로 질문에 답변하는 챗봇","placeholder":"ACF 거버넌스에 대해 질문하세요...","send":"보내기","trending":{"label":"인기 질문","q1":"ACF 표준이란 무엇인가요?","q2":"ACF 인증을 받으려면 어떻게 해야 하나요?","q3":"DDA 역할이란 무엇인가요?","q4":"주권 스코어란 무엇인가요?","q5":"4가지 기본 원칙은?"},"disclaimer":"AI 실험. ACF 표준 문서 기반 응답.","seeMore":"더 보기"}},"faq":{"title":"자주 묻는 질문","subtitle":"Agentic Commerce Framework®와 AI 거버넌스에 대해 알아야 할 모든 것.","q1":{"question":"Agentic Commerce Framework® (ACF)란?","answer":"ACF는 상업 환경에서 자율 AI 에이전트를 배치하는 조직을 위한 글로벌 거버넌스 표준입니다. 4가지 기본 원칙, 4개 운영 계층, 8개 구현 모듈, 18개 주권 KPI를 정의합니다."},"q2":{"question":"ACF 표준을 만든 사람은?","answer":"AI 거버넌스 전문가 Vincent DORANGE가 만들었습니다."},"q3":{"question":"ACF의 4가지 기본 원칙은?","answer":"(1) 의사결정 주권 (2) 설계에 의한 거버넌스 (3) 궁극적 인간 통제 (4) 추적 가능한 책임"},"q4":{"question":"ACF Sovereignty Score란?","answer":"6가지 거버넌스 차원에서 조직의 의사결정 독립성을 측정하는 독점 지표입니다."},"q5":{"question":"ACF 성숙도 레벨은?","answer":"4단계: 레벨0 (기존 자동화), 레벨1 (보조 에이전트), 레벨2 (관리형 에이전트 — 권장 목표), 레벨3 (감독형 자율)"},"q6":{"question":"ACF와 EU AI Act의 관계는?","answer":"ACF 프레임워크는 EU AI Act와 완전히 호환됩니다."},"q7":{"question":"DDA 역할이란?","answer":"DDA는 ACF가 정의한 거버넌스 역할로 자율 에이전트의 법적 후견인입니다."},"q8":{"question":"ACF 인증은 어떻게 받나요?","answer":"3가지 인증 경로 (레벨 1, 2, 3)가 있으며 각각 감사 프로세스가 필요합니다."},"q9":{"question":"ACF 비상정지 프로토콜이란?","answer":"자율 에이전트 시스템을 위한 3단계 중단 메커니즘입니다."},"q10":{"question":"ACF는 대기업 전용인가요?","answer":"아닙니다. 스타트업부터 대기업까지 확장 가능합니다. 8개 모듈을 6-18개월에 걸쳐 단계적으로 도입할 수 있습니다."},"badge":"// FAQ"}}
+{
+  "meta": {
+    "language": "KO",
+    "languageCode": "ko",
+    "locale": "ko-KR"
+  },
+  "common": {
+    "readMore": "더 읽기",
+    "learnMore": "자세히 알아보기",
+    "getStarted": "시작하기",
+    "downloadPDF": "PDF 다운로드",
+    "watchVideo": "동영상 보기",
+    "close": "닫기",
+    "open": "열기",
+    "loading": "로딩 중",
+    "backToHome": "홈으로 돌아가기",
+    "menu": "메뉴"
+  },
+  "regionSelector": {
+    "title": "지역 및 언어 선택",
+    "close": "✕ 닫기",
+    "global": "글로벌 (영어)",
+    "northAmerica": "북미",
+    "latinAmerica": "라틴 아메리카",
+    "westernEurope": "서유럽",
+    "nordicBaltic": "북유럽 및 발트해",
+    "centralEasternEurope": "중앙 및 동유럽",
+    "middleEastAfrica": "중동 및 아프리카",
+    "asiaPacific": "아시아 태평양"
+  },
+  "nav": {
+    "menu": "메뉴",
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "AI 거버넌스 글로벌 표준",
+    "region": "KO",
+    "theStandard": "표준",
+    "acfScore": "ACF Score",
+    "acfControl": "ACF Control",
+    "acfCertification": "ACF Certification",
+    "partners": "파트너",
+    "requestAssessment": "평가 요청",
+    "partnerLogin": "파트너 로그인",
+    "applyPartner": "파트너 신청",
+    "contact": "연락처"
+  },
+  "megaMenu": {
+    "framework": {
+      "title": "프레임워크",
+      "link": "ACF 표준 →",
+      "subtitle": "상업 환경에서 에이전틱 시스템을 위한 결정적 거버넌스 방법론.",
+      "architecture": {
+        "title": "아키텍처",
+        "principles": "4가지 기본 원칙",
+        "layers": "4가지 운영 레이어",
+        "maturity": "4가지 성숙도 수준"
+      },
+      "methodology": {
+        "title": "방법론",
+        "modules": "8가지 구현 모듈",
+        "constitution": "에이전틱 헌장",
+        "dda": "DDA 역할 프레임워크",
+        "killSwitch": "비상 정지 프로토콜"
+      },
+      "featured": {
+        "label": "주요 콘텐츠",
+        "whitepaper": {
+          "title": "ACF 백서 다운로드",
+          "description": "전체 사양 — 등록 사용자 무료."
+        },
+        "release": {
+          "title": "ACF — 2026년 2월",
+          "description": "공식 출시. 프레임워크의 새로운 사항."
+        }
+      }
+    },
+    "products": {
+      "title": "제품",
+      "link": "제품 →",
+      "subtitle": "ACF 표준을 조직 전체에 운영화하는 세 가지 도구.",
+      "diagnostic": {
+        "title": "진단",
+        "score": "ACF Score — 주권 지표",
+        "methodology": "스코어링 방법론",
+        "axes": "6가지 거버넌스 축"
+      },
+      "saas": {
+        "title": "거버넌스 플랫폼",
+        "control": "ACF Control — 거버넌스 대시보드",
+        "kpis": "18가지 주권 KPI",
+        "gating": "적응형 게이팅 시스템"
+      },
+      "certification": {
+        "title": "인증",
+        "program": "ACF Certification 프로그램",
+        "levels": "인증 수준",
+        "audit": "감사 프로세스"
+      }
+    },
+    "resources": {
+      "title": "리소스",
+      "link": "리소스 →",
+      "subtitle": "거버넌스 인사이트, 연구 및 기술 문서.",
+      "insights": {
+        "title": "최신 인사이트",
+        "aiAct": "EU AI법 및 에이전틱 시스템",
+        "dda": "DDA 역할 설명",
+        "killSwitch": "3단계 비상 정지 설계"
+      },
+      "documentation": {
+        "title": "문서",
+        "specs": "기술 사양",
+        "research": "연구 논문",
+        "academy": "ACF 아카데미"
+      },
+      "tools": {
+        "title": "도구",
+        "complianceChecker": "ACF AI Act Checker",
+        "euAiAct": "AI Act Explorer ↗"
+      }
+    },
+    "about": {
+      "title": "ACF 소개",
+      "link": "ACF 소개 →",
+      "subtitle": "Agentic Commerce Framework®의 이야기, 사명 및 법적 보호.",
+      "whoWeAre": {
+        "title": "소개",
+        "vincent": "Vincent DORANGE — 창시자",
+        "mission": "사명 및 가치",
+        "legal": "법적 보호"
+      },
+      "howWeWork": {
+        "title": "운영 방식",
+        "network": "실무자 네트워크",
+        "audit": "감사 및 인증",
+        "contact": "연락처"
+      },
+      "registered": {
+        "label": "등록 상표",
+        "title": "등록 상표 ACF®",
+        "description": "ACF®는 등록 상표입니다. 모든 방법론과 도구는 법적으로 보호됩니다."
+      }
+    },
+    "partners": {
+      "title": "파트너",
+      "link": "파트너 →",
+      "subtitle": "ACF 실무자 네트워크에 참여하여 고객에게 거버넌스 서비스를 제공하세요.",
+      "portal": {
+        "title": "파트너 포털",
+        "login": "파트너 포털 로그인",
+        "dashboard": "대시보드 및 도구",
+        "training": "교육 자료",
+        "toolkit": "ACF 실무자 도구함"
+      },
+      "become": {
+        "title": "파트너 되기",
+        "apply": "가입 신청",
+        "tiers": "파트너 등급",
+        "certified": "먼저 ACF 인증 받기"
+      }
+    },
+    "user": {
+      "partnerAccess": "파트너 접근",
+      "partnerLogin": "파트너 로그인",
+      "applyPartner": "파트너 신청",
+      "contact": "연락처"
+    }
+  },
+  "hero": {
+    "title": "글로벌 표준:",
+    "typing": {
+      "word1": "거버넌스",
+      "word2": "주권",
+      "word3": "인텔리전스",
+      "word4": "커머스"
+    },
+    "description": "Agentic Commerce Framework® (ACF)는 상업 환경에서 자율 에이전틱 시스템을 배포, 감독 및 제어하기 위한 결정적 거버넌스 방법론입니다.",
+    "cta": {
+      "primary": "거버넌스 평가 요청 →",
+      "secondary": "표준 읽기"
+    },
+    "stats": {
+      "principles": {
+        "value": "4",
+        "label": "기본<br>원칙"
+      },
+      "modules": {
+        "value": "8",
+        "label": "구현<br>모듈"
+      },
+      "kpis": {
+        "value": "18",
+        "label": "주권<br>KPI"
+      },
+      "tools": {
+        "value": "17",
+        "label": "독자적<br>도구"
+      }
+    },
+    "satellites": {
+      "score": {
+        "name": "ACF Score",
+        "description": "주권 지표"
+      },
+      "control": {
+        "name": "ACF Control",
+        "description": "거버넌스 플랫폼"
+      },
+      "certification": {
+        "name": "Certification",
+        "description": "인증"
+      },
+      "partners": {
+        "name": "파트너",
+        "description": "실무자"
+      }
+    }
+  },
+  "statsBar": {
+    "layers": {
+      "value": "4",
+      "label": "운영 레이어"
+    },
+    "kpis": {
+      "value": "18",
+      "label": "주권 KPI"
+    },
+    "tools": {
+      "value": "17",
+      "label": "독자적 도구"
+    },
+    "sovereignty": {
+      "value": "100",
+      "suffix": "%",
+      "label": "인간 주권"
+    }
+  },
+  "principles": {
+    "badge": "// 아키텍처",
+    "title": "4가지 기본 원칙",
+    "subtitle": "인간 권한과 자율 에이전트 실행 간의 경계를 정의하는 네 가지 불변의 공리.",
+    "principle1": {
+      "number": "01",
+      "title": "의사결정 주권",
+      "description": "중요한 전략적 결정은 절대 자율 에이전트에게 위임되지 않습니다."
+    },
+    "principle2": {
+      "number": "02",
+      "title": "설계 기반 거버넌스",
+      "description": "거버넌스 프레임워크는 배포 전에 정의됩니다."
+    },
+    "principle3": {
+      "number": "03",
+      "title": "궁극적 인간 통제",
+      "description": "모든 에이전틱 시스템은 인간 개입 가능성을 유지해야 합니다."
+    },
+    "principle4": {
+      "number": "04",
+      "title": "추적 가능한 책임",
+      "description": "모든 자율 행동은 감사 가능하고 귀속 가능해야 합니다."
+    }
+  },
+  "layers": {
+    "badge": "// 구조",
+    "title": "4가지 운영 레이어",
+    "subtitle": "전략적 거버넌스에서 실시간 실행 감독까지의 계층적 아키텍처.",
+    "layer1": {
+      "number": "LAYER_01",
+      "title": "거버넌스 및 주권",
+      "description": "주권 헌장, 거버넌스 위원회, RACI 매트릭스, 비위임 영역 맵."
+    },
+    "layer2": {
+      "number": "LAYER_02",
+      "title": "의사결정 정책",
+      "description": "가중 목표, 중재 규칙, 에스컬레이션 임계값, 규제 제약."
+    },
+    "layer3": {
+      "number": "LAYER_03",
+      "title": "에이전트 시스템",
+      "description": "에이전트별 명시적 권한, 상호작용 범위, 자율성 수준, 5가지 분류 체계."
+    },
+    "layer4": {
+      "number": "LAYER_04",
+      "title": "실행 및 감독",
+      "description": "적응형 게이팅 매트릭스, 다단계 알림, 18가지 주권 KPI, 실시간 대시보드."
+    }
+  },
+  "maturity": {
+    "badge": "// 진행",
+    "title": "4가지 에이전틱 성숙도 수준",
+    "subtitle": "ACF는 자율성 수준별로 시스템을 분류합니다. 레벨 2가 권장 배포 목표입니다.",
+    "level0": {
+      "code": "LEVEL_0",
+      "name": "기존 자동화",
+      "risk": "매우 낮은 위험",
+      "description": "고정 규칙, ML 없음. 수정 시 인간 개입 필요."
+    },
+    "level1": {
+      "code": "LEVEL_1",
+      "name": "보조 에이전트",
+      "risk": "낮은 위험",
+      "description": "에이전트가 분석하고 추천. 모든 최종 결정은 인간이 담당."
+    },
+    "level2": {
+      "code": "LEVEL_2",
+      "name": "거버넌스 에이전트",
+      "risk": "중간 위험",
+      "description": "엄격한 거버넌스 내에서 에이전트가 결정. 비위임 영역은 잠금.",
+      "badge": "★ 권장 목표"
+    },
+    "level3": {
+      "code": "LEVEL_3",
+      "name": "감독형 자율",
+      "risk": "높은 위험",
+      "description": "에이전트가 결정하고 학습. 최대 거버넌스. 성숙한 조직만 해당."
+    }
+  },
+  "modules": {
+    "badge": "// 방법론",
+    "title": "8가지 구현 모듈",
+    "subtitle": "6~18개월에 걸쳐 점진적으로 배포되는 순차적 경로. 각 모듈은 이전 모듈을 기반으로 합니다.",
+    "module1": {
+      "code": "MOD_01",
+      "name": "주권 진단",
+      "description": "주권 스코어 계산. 위험 영역 매핑."
+    },
+    "module2": {
+      "code": "MOD_02",
+      "name": "의사결정 매핑",
+      "description": "중요도 매트릭스. 비위임 영역."
+    },
+    "module3": {
+      "code": "MOD_03",
+      "name": "에이전틱 헌장",
+      "description": "9개 조항. 거버넌스 위원회 서명."
+    },
+    "module4": {
+      "code": "MOD_04",
+      "name": "에이전트 시스템 설계",
+      "description": "권한 명세서, 상호작용 범위."
+    },
+    "module5": {
+      "code": "MOD_05",
+      "name": "보안 및 가역성",
+      "description": "샌드박싱, 가역성 계획. 비상 정지 설계."
+    },
+    "module6": {
+      "code": "MOD_06",
+      "name": "지속적 거버넌스",
+      "description": "월간 검토. 연간 컴플라이언스 감사."
+    },
+    "module7": {
+      "code": "MOD_07",
+      "name": "구현 로드맵",
+      "description": "5단계 점진적 배포."
+    },
+    "module8": {
+      "code": "MOD_08",
+      "name": "위기 관리",
+      "description": "3단계 인시던트. 비상 정지 훈련."
+    }
+  },
+  "video": {
+    "badge": "// ACF의 필요성",
+    "title": "거버넌스는 기다릴 수 없습니다.<br>에이전트는 이미 결정하고 있습니다.",
+    "description1": "2026년, 자율 에이전트는 이미 상업 환경에서 의사결정을 실행하고 있습니다 — 가격 설정, 리드 선별, 클레임 처리, 계약 관리. 대부분의 조직은 이를 관리할 프레임워크가 없습니다.",
+    "description2": "ACF는 거버넌스 실패가 법적, 재정적 또는 평판 위기로 이어지기 전에 그 공백을 메우기 위해 만들어졌습니다.",
+    "quote": {
+      "text": "문제는 더 이상 에이전트를 배포<em>할지</em>가 아닙니다. 주권을 포기하지 않고 <em>어떻게</em> 배포할지입니다.",
+      "author": "— Agentic Commerce Framework®"
+    },
+    "player": {
+      "badge": "ACF — 에이전틱 혁명",
+      "name": "에이전틱 커머스의 부상",
+      "role": "통제되지 않는 자동화에서 거버넌스 주권으로",
+      "duration": "1:05"
+    },
+    "stats": {
+      "release": {
+        "value": "2026",
+        "label": "공식 출시"
+      },
+      "documentation": {
+        "value": "45p",
+        "label": "전체 문서"
+      },
+      "protection": {
+        "value": "ACF®",
+        "label": "등록 상표"
+      }
+    },
+    "modal": {
+      "placeholder": "출시 예정",
+      "title": "에이전틱 커머스 혁명",
+      "description": "내러티브 여정: 통제 상실에서 ACF 거버넌스 프레임워크까지. 자율 에이전트가 커머스를 재편하고 있습니다 — 문제는 누가 그들을 관리하느냐입니다."
+    }
+  },
+  "products": {
+    "badge": "// 에코시스템",
+    "title": "ACF 에코시스템",
+    "subtitle": "ACF 표준을 운영화하는 세 가지 상호 보완적 제품.",
+    "score": {
+      "label": "진단 도구",
+      "title": "ACF Score",
+      "description": "6가지 거버넌스 차원에서 의사결정 독립성을 측정하는 독자적 주권 스코어.",
+      "features": {
+        "feature1": "복합 주권 스코어 지표",
+        "feature2": "6축 레이더 시각화",
+        "feature3": "축별 맞춤 행동 계획"
+      },
+      "cta": "스코어 측정 →"
+    },
+    "control": {
+      "label": "거버넌스 플랫폼",
+      "title": "ACF Control",
+      "description": "적응형 게이팅 및 자동 에스컬레이션을 통해 18가지 주권 KPI를 모니터링하는 실시간 거버넌스 대시보드.",
+      "features": {
+        "feature1": "6가지 거버넌스 축의 18가지 KPI",
+        "feature2": "인간 에스컬레이션 기반 적응형 게이팅",
+        "feature3": "변조 방지 감사 로그"
+      },
+      "cta": "ACF Control 알아보기 →"
+    },
+    "certification": {
+      "label": "독립 인증",
+      "title": "ACF Certification",
+      "description": "ACF 거버넌스 표준 준수를 증명하는 독립 인증. 공개 검증 가능.",
+      "features": {
+        "feature1": "레벨 1, 2, 3 인증 경로",
+        "feature2": "공개 검증 가능 배지",
+        "feature3": "연간 갱신 + 지속적 모니터링"
+      },
+      "cta": "인증 받기 →"
+    }
+  },
+  "blog": {
+    "badge": "// 인사이트",
+    "title": "ACF 블로그 최신 소식",
+    "subtitle": "거버넌스 인사이트, 프레임워크 업데이트 및 에이전틱 인텔리전스 연구.",
+    "article1": {
+      "category": "AI 규제",
+      "title": "2026년 EU AI법이 에이전틱 시스템에 적용되는 방법",
+      "excerpt": "AI법의 위험 기반 접근법은 자율 에이전트에 대한 특정 의무를 생성합니다. ACF 레벨 2 거버넌스가 다루는 범위는 다음과 같습니다.",
+      "date": "2026-02-15",
+      "cta": "읽기 →"
+    },
+    "article2": {
+      "category": "거버넌스",
+      "title": "DDA: 왜 모든 AI 네이티브 기업에 위임 의사결정 에이전트 책임자가 필요한가",
+      "excerpt": "DDA는 자율 에이전트의 법적 보호자입니다. 이 핵심 역할을 만들고 권한을 부여하는 방법.",
+      "date": "2026-02-08",
+      "cta": "읽기 →"
+    },
+    "article3": {
+      "category": "기술",
+      "title": "자율 에이전트 시스템을 위한 3단계 비상 정지 설계",
+      "excerpt": "효과적인 비상 정지는 단일 버튼이 아닙니다. ACF는 정의된 응답 시간을 가진 세 가지 인터럽트 레벨을 명시합니다.",
+      "date": "2026-01-29",
+      "cta": "읽기 →"
+    },
+    "viewAll": "전체 기사 보기 →"
+  },
+  "cta": {
+    "watermark": "ACF®",
+    "badge": "// 다음 단계",
+    "title": "에이전틱 시스템을<br>관리할 준비가 되셨나요?",
+    "description": "거버넌스 평가를 요청하고 현재 주권 스코어를 확인하세요.",
+    "primary": "거버넌스 평가 요청 →",
+    "secondary": "ACF 파트너 되기"
+  },
+  "footer": {
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "AI 거버넌스 글로벌 표준",
+    "description": "자율 에이전틱 시스템을 배포하는 조직을 위한 결정적 거버넌스 표준. 등록 상표.",
+    "framework": {
+      "title": "프레임워크",
+      "theStandard": "표준",
+      "methodology": "방법론",
+      "research": "연구",
+      "certification": "ACF Certification"
+    },
+    "products": {
+      "title": "제품",
+      "score": "ACF Score",
+      "control": "ACF Control",
+      "certification": "인증",
+      "academy": "아카데미"
+    },
+    "organization": {
+      "title": "조직",
+      "partnerPortal": "파트너 포털",
+      "about": "소개",
+      "contact": "연락처",
+      "legal": "법적 사항"
+    },
+    "copyright": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. 모든 권리 보유.",
+    "legal": {
+      "privacy": "개인정보 보호",
+      "terms": "이용약관",
+      "cookies": "쿠키"
+    }
+  },
+  "ai": {
+    "button": {
+      "label": "ACF 에이전트에게 질문",
+      "status": "AI 거버넌스 · 온라인"
+    },
+    "modal": {
+      "close": "×",
+      "beta": "",
+      "title": "ACF에게 질문",
+      "subtitle": "ACF 표준 및 거버넌스 인사이트를 기반으로 질문에 답변하는 챗봇",
+      "placeholder": "ACF 거버넌스에 대해 질문하세요...",
+      "send": "보내기",
+      "trending": {
+        "label": "인기 질문",
+        "q1": "ACF 표준이란 무엇인가요?",
+        "q2": "ACF 인증을 받으려면 어떻게 해야 하나요?",
+        "q3": "DDA 역할이란 무엇인가요?",
+        "q4": "주권 스코어란 무엇인가요?",
+        "q5": "4가지 기본 원칙은?"
+      },
+      "disclaimer": "AI 실험. ACF 표준 문서 기반 응답.",
+      "seeMore": "더 보기"
+    }
+  },
+  "faq": {
+    "title": "자주 묻는 질문",
+    "subtitle": "Agentic Commerce Framework®와 AI 거버넌스에 대해 알아야 할 모든 것.",
+    "q1": {
+      "question": "Agentic Commerce Framework® (ACF)란?",
+      "answer": "ACF는 상업 환경에서 자율 AI 에이전트를 배치하는 조직을 위한 글로벌 거버넌스 표준입니다. 4가지 기본 원칙, 4개 운영 계층, 8개 구현 모듈, 18개 주권 KPI를 정의합니다."
+    },
+    "q2": {
+      "question": "ACF 표준을 만든 사람은?",
+      "answer": "AI 거버넌스 전문가 Vincent DORANGE가 만들었습니다."
+    },
+    "q3": {
+      "question": "ACF의 4가지 기본 원칙은?",
+      "answer": "(1) 의사결정 주권 (2) 설계에 의한 거버넌스 (3) 궁극적 인간 통제 (4) 추적 가능한 책임"
+    },
+    "q4": {
+      "question": "ACF Sovereignty Score란?",
+      "answer": "6가지 거버넌스 차원에서 조직의 의사결정 독립성을 측정하는 독점 지표입니다."
+    },
+    "q5": {
+      "question": "ACF 성숙도 레벨은?",
+      "answer": "4단계: 레벨0 (기존 자동화), 레벨1 (보조 에이전트), 레벨2 (관리형 에이전트 — 권장 목표), 레벨3 (감독형 자율)"
+    },
+    "q6": {
+      "question": "ACF와 EU AI Act의 관계는?",
+      "answer": "ACF 프레임워크는 EU AI Act와 완전히 호환됩니다."
+    },
+    "q7": {
+      "question": "DDA 역할이란?",
+      "answer": "DDA는 ACF가 정의한 거버넌스 역할로 자율 에이전트의 법적 후견인입니다."
+    },
+    "q8": {
+      "question": "ACF 인증은 어떻게 받나요?",
+      "answer": "3가지 인증 경로 (레벨 1, 2, 3)가 있으며 각각 감사 프로세스가 필요합니다."
+    },
+    "q9": {
+      "question": "ACF 비상정지 프로토콜이란?",
+      "answer": "자율 에이전트 시스템을 위한 3단계 중단 메커니즘입니다."
+    },
+    "q10": {
+      "question": "ACF는 대기업 전용인가요?",
+      "answer": "아닙니다. 스타트업부터 대기업까지 확장 가능합니다. 8개 모듈을 6-18개월에 걸쳐 단계적으로 도입할 수 있습니다."
+    },
+    "badge": "// FAQ"
+  }
+}

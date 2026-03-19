@@ -516,6 +516,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         <a href="/${locale}/acf-score">${m.nav.acfScore}</a>
         <a href="/control">${m.nav.acfControl}</a>
         <a href="/certification">${m.nav.acfCertification}</a>
+        <a href="/${locale}/#faq">FAQ</a>
       </div>
       <!-- Region selector Bain-style -->
       <button class="regionbtn" id="regionbtn" onclick="openRegion()">

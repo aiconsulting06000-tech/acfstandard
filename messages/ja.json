@@ -1,1 +1,571 @@
-{"meta":{"language":"JA","languageCode":"ja","locale":"ja-JP"},"common":{"readMore":"続きを読む","learnMore":"詳しく見る","getStarted":"始める","downloadPDF":"PDFをダウンロード","watchVideo":"動画を見る","close":"閉じる","open":"開く","loading":"読み込み中","backToHome":"ホームに戻る","menu":"メニュー"},"regionSelector":{"title":"地域と言語を選択してください","close":"✕ 閉じる","global":"グローバル（英語）","northAmerica":"北米","latinAmerica":"ラテンアメリカ","westernEurope":"西ヨーロッパ","nordicBaltic":"北欧・バルト","centralEasternEurope":"中央・東ヨーロッパ","middleEastAfrica":"中東・アフリカ","asiaPacific":"アジア太平洋"},"nav":{"menu":"メニュー","logoText":"Agentic Commerce Framework®","logoSubtext":"AIガバナンスのグローバルスタンダード","region":"GLOBAL | JA","theStandard":"スタンダード","acfScore":"ACF Score","acfControl":"ACF Control","acfCertification":"ACF Certification","partners":"パートナー","requestAssessment":"評価をリクエスト","partnerLogin":"パートナーログイン","applyPartner":"パートナー申請","contact":"お問い合わせ"},"megaMenu":{"framework":{"title":"フレームワーク","link":"ACF Standard →","subtitle":"商業環境におけるエージェントシステムのための決定的なガバナンス方法論。","architecture":{"title":"アーキテクチャ","principles":"4つの基本原則","layers":"4つの運用レイヤー","maturity":"4つの成熟度レベル"},"methodology":{"title":"方法論","modules":"8つの実装モジュール","constitution":"エージェント憲章","dda":"DDA役割フレームワーク","killSwitch":"緊急停止プロトコル"},"featured":{"label":"注目","whitepaper":{"title":"ACFホワイトペーパーをダウンロード","description":"完全仕様書 — 登録ユーザーは無料。"},"release":{"title":"ACF — 2026年2月","description":"公式リリース。フレームワークの新機能。"}}},"products":{"title":"製品","link":"製品 →","subtitle":"組織全体でACF Standardを運用する3つのツール。","diagnostic":{"title":"診断","score":"ACF Score — 主権メトリック","methodology":"スコアリング方法論","axes":"6つのガバナンス軸"},"saas":{"title":"ガバナンスプラットフォーム","control":"ACF Control — ガバナンスダッシュボード","kpis":"18の主権KPI","gating":"適応型ゲーティングシステム"},"certification":{"title":"認証","program":"ACF Certification プログラム","levels":"認証レベル","audit":"監査プロセス"}},"resources":{"title":"リソース","link":"リソース →","subtitle":"ガバナンスインサイト、研究、技術ドキュメント。","insights":{"title":"最新インサイト","aiAct":"EU AI法とエージェントシステム","dda":"DDA役割の解説","killSwitch":"3段階緊急停止の設計"},"documentation":{"title":"ドキュメント","specs":"技術仕様","research":"研究論文","academy":"ACFアカデミー"},"tools":{"title":"ツール","complianceChecker":"ACF AI Act Checker","euAiAct":"AI Act Explorer ↗"}},"about":{"title":"ACFについて","link":"ACFについて →","subtitle":"Agentic Commerce Framework®の背景にあるストーリー、ミッション、法的保護。","whoWeAre":{"title":"私たちについて","vincent":"Vincent DORANGE — 創設者","mission":"ミッションと価値観","legal":"法的保護"},"howWeWork":{"title":"私たちの活動","network":"実務者ネットワーク","audit":"監査と認証","contact":"お問い合わせ"},"registered":{"label":"登録済","title":"登録商標 ACF®","description":"ACF®は登録商標です。すべての方法論とツールは法的に保護されています。"}},"partners":{"title":"パートナー","link":"パートナー →","subtitle":"ACF実務者ネットワークに参加し、クライアントにガバナンスサービスを提供しましょう。","portal":{"title":"パートナーポータル","login":"パートナーポータルにログイン","dashboard":"ダッシュボードとツール","training":"研修資料","toolkit":"ACF実務者ツールキット"},"become":{"title":"パートナーになる","apply":"申請する","tiers":"パートナーティア","certified":"まずACF Certificationを取得"}},"user":{"partnerAccess":"パートナーアクセス","partnerLogin":"パートナーログイン","applyPartner":"パートナー申請","contact":"お問い合わせ"}},"hero":{"title":"グローバルスタンダード：","typing":{"word1":"ガバナンス","word2":"主権","word3":"インテリジェンス","word4":"コマース"},"description":"Agentic Commerce Framework®（ACF）は、商業環境における自律型エージェントシステムの展開、監督、制御のための決定的なガバナンス方法論です。","cta":{"primary":"ガバナンス評価をリクエスト →","secondary":"スタンダードを読む"},"stats":{"principles":{"value":"4","label":"基本<br>原則"},"modules":{"value":"8","label":"実装<br>モジュール"},"kpis":{"value":"18","label":"主権<br>KPI"},"tools":{"value":"17","label":"独自<br>ツール"}},"satellites":{"score":{"name":"ACF Score","description":"主権メトリック"},"control":{"name":"ACF Control","description":"ガバナンスプラットフォーム"},"certification":{"name":"Certification","description":"認証"},"partners":{"name":"パートナー","description":"実務者"}}},"statsBar":{"layers":{"value":"4","label":"運用レイヤー"},"kpis":{"value":"18","label":"主権KPI"},"tools":{"value":"17","label":"独自ツール"},"sovereignty":{"value":"100","suffix":"%","label":"人間の主権"}},"principles":{"badge":"// アーキテクチャ","title":"4つの基本原則","subtitle":"人間の権限と自律エージェントの実行の境界を定義する4つの不変の公理。","principle1":{"number":"01","title":"意思決定の主権","description":"重要な戦略的意思決定は、自律エージェントに委任されることはありません。"},"principle2":{"number":"02","title":"設計によるガバナンス","description":"ガバナンスフレームワークは展開前に定義され、展開後ではありません。"},"principle3":{"number":"03","title":"究極の人間制御","description":"すべてのエージェントシステムは、人間の介入能力を維持しなければなりません。"},"principle4":{"number":"04","title":"追跡可能な説明責任","description":"すべての自律的行動は、監査可能かつ帰属可能でなければなりません。"}},"layers":{"badge":"// 構造","title":"4つの運用レイヤー","subtitle":"戦略的ガバナンスからリアルタイム実行監督までの階層型アーキテクチャ。","layer1":{"number":"LAYER_01","title":"ガバナンスと主権","description":"主権憲章、ガバナンス委員会、RACI マトリックス、委任不可ゾーンマップ。"},"layer2":{"number":"LAYER_02","title":"意思決定ポリシー","description":"加重目標、仲裁ルール、エスカレーション閾値、規制上の制約。"},"layer3":{"number":"LAYER_03","title":"エージェントシステム","description":"エージェントごとの明示的な権限、インタラクション境界、自律レベル、5カテゴリ分類。"},"layer4":{"number":"LAYER_04","title":"実行と監督","description":"適応型ゲーティングマトリックス、多段階アラート、18の主権KPI、ライブダッシュボード。"}},"maturity":{"badge":"// 進展","title":"4つのエージェント成熟度レベル","subtitle":"ACFは自律レベルによってシステムを分類します。レベル2が推奨される展開目標です。","level0":{"code":"LEVEL_0","name":"従来型自動化","risk":"非常に低いリスク","description":"固定ルール、MLなし。あらゆる変更に人間の介入が必要。"},"level1":{"code":"LEVEL_1","name":"支援型エージェント","risk":"低リスク","description":"エージェントが分析・推奨。すべての最終判断は人間が行う。"},"level2":{"code":"LEVEL_2","name":"管理型エージェント","risk":"中程度のリスク","description":"エージェントが厳格なガバナンス内で意思決定。委任不可ゾーンはロック。","badge":"★ 推奨目標"},"level3":{"code":"LEVEL_3","name":"監督下の自律型","risk":"高リスク","description":"エージェントが意思決定と学習を実行。最大限のガバナンス。成熟した組織のみ。"}},"modules":{"badge":"// 方法論","title":"8つの実装モジュール","subtitle":"6〜18ヶ月にわたって段階的に展開される連続的なパス。各モジュールは前のモジュールの上に構築されます。","module1":{"code":"MOD_01","name":"主権診断","description":"主権スコアの算出。リスクゾーンのマッピング。"},"module2":{"code":"MOD_02","name":"意思決定マッピング","description":"重要度マトリックス。委任不可ゾーン。"},"module3":{"code":"MOD_03","name":"エージェント憲章","description":"9条項。ガバナンス委員会が署名。"},"module4":{"code":"MOD_04","name":"エージェントシステム設計","description":"権限シート、インタラクション境界。"},"module5":{"code":"MOD_05","name":"セキュリティと可逆性","description":"サンドボックス、可逆性計画。緊急停止設計。"},"module6":{"code":"MOD_06","name":"継続的ガバナンス","description":"月次レビュー。年次コンプライアンス監査。"},"module7":{"code":"MOD_07","name":"実装ロードマップ","description":"5段階の段階的展開。"},"module8":{"code":"MOD_08","name":"危機管理","description":"3段階のインシデント。緊急停止訓練。"}},"video":{"badge":"// なぜACF","title":"ガバナンスは待てない。<br>エージェントはすでに意思決定している。","description1":"2026年、自律エージェントはすでに商業環境で意思決定を実行しています — 価格設定、リード評価、クレーム処理、契約管理。ほとんどの組織にはそれらを統治するフレームワークがありません。","description2":"ACFはその空白を埋めるために創られました — ガバナンスの失敗が法的、財務的、または評判の危機になる前に。","quote":{"text":"問題はもはやエージェントを展開<em>するかどうか</em>ではありません。主権を手放すことなく<em>どのように</em>展開するかです。","author":"— Agentic Commerce Framework®"},"player":{"badge":"ACF — エージェント革命","name":"エージェントコマースの台頭","role":"制御不能な自動化から統治された主権へ","duration":"1:05"},"stats":{"release":{"value":"2026","label":"公式リリース"},"documentation":{"value":"45p","label":"完全ドキュメント"},"protection":{"value":"ACF®","label":"登録商標"}},"modal":{"placeholder":"近日公開","title":"エージェントコマース革命","description":"ナラティブの旅：制御の喪失からACFガバナンスフレームワークへ。自律エージェントがコマースを再形成しています — 問題は誰がそれを統治するかです。"}},"products":{"badge":"// エコシステム","title":"ACFエコシステム","subtitle":"ACF Standardを運用する3つの補完的な製品。","score":{"label":"診断ツール","title":"ACF Score","description":"6つのガバナンス次元にわたる意思決定の独立性を測定する独自の主権スコア。","features":{"feature1":"複合主権スコアメトリック","feature2":"6軸レーダー可視化","feature3":"軸ごとのパーソナライズされたアクションプラン"},"cta":"スコアを測定 →"},"control":{"label":"ガバナンスプラットフォーム","title":"ACF Control","description":"適応型ゲーティングと自動エスカレーションで18の主権KPIを監視するリアルタイムガバナンスダッシュボード。","features":{"feature1":"6つのガバナンス軸にわたる18のKPI","feature2":"人間のエスカレーション付き適応型ゲーティング","feature3":"改ざん防止監査ログ"},"cta":"ACF Controlを詳しく見る →"},"certification":{"label":"独立認証","title":"ACF Certification","description":"ACFガバナンス基準への準拠を証明する独立認証。公的に検証可能。","features":{"feature1":"レベル1、2、3の認証パス","feature2":"公的に検証可能なバッジ","feature3":"年次更新＋継続的モニタリング"},"cta":"認証を取得 →"}},"blog":{"badge":"// インサイト","title":"ACFブログの最新情報","subtitle":"ガバナンスインサイト、フレームワーク更新、エージェントインテリジェンス研究。","article1":{"category":"AI規制","title":"2026年にEU AI法がエージェントシステムにどう適用されるか","excerpt":"AI法のリスクベースアプローチは、自律エージェントに特定の義務を課します。ACFレベル2ガバナンスがカバーする内容をご覧ください。","date":"2026-02-15","cta":"読む →"},"article2":{"category":"ガバナンス","title":"DDA：なぜすべてのAIネイティブ企業に委任決定エージェントオフィサーが必要か","excerpt":"DDAは自律エージェントの法的後見人です。この重要な役割を作成し強化する方法。","date":"2026-02-08","cta":"読む →"},"article3":{"category":"技術","title":"自律エージェントシステムのための3段階緊急停止の設計","excerpt":"効果的な緊急停止は単一のボタンではありません。ACFは定義された応答時間で3つの中断レベルを規定します。","date":"2026-01-29","cta":"読む →"},"viewAll":"すべての記事を見る →"},"cta":{"watermark":"ACF®","badge":"// 次のステップ","title":"エージェントシステムを<br>統治する準備はできていますか？","description":"ガバナンス評価をリクエストし、現在の主権スコアを確認しましょう。","primary":"ガバナンス評価をリクエスト →","secondary":"ACFパートナーになる"},"footer":{"logoText":"Agentic Commerce Framework®","logoSubtext":"AIガバナンスのグローバルスタンダード","description":"自律型エージェントシステムを展開する組織のための決定的なガバナンススタンダード。登録商標。","framework":{"title":"フレームワーク","theStandard":"スタンダード","methodology":"方法論","research":"研究","certification":"ACF Certification"},"products":{"title":"製品","score":"ACF Score","control":"ACF Control","certification":"認証","academy":"アカデミー"},"organization":{"title":"組織","partnerPortal":"パートナーポータル","about":"概要","contact":"お問い合わせ","legal":"法的情報"},"copyright":"© 2026 Agentic Commerce Framework® — Vincent DORANGE. 全著作権所有。","legal":{"privacy":"プライバシー","terms":"利用規約","cookies":"Cookie"}},"ai":{"button":{"label":"ACF Agentに質問","status":"AIガバナンス · オンライン"},"modal":{"close":"×","beta":"","title":"ACFに質問","subtitle":"ACF Standardとガバナンスインサイトに基づいて質問に回答するチャットボット","placeholder":"ACFガバナンスについて質問...","send":"送信","trending":{"label":"よくある質問","q1":"ACF Standardとは？","q2":"ACF Certificationの取得方法は？","q3":"DDAの役割とは？","q4":"主権スコアとは？","q5":"4つの基本原則とは？"},"disclaimer":"AI実験。回答はACF Standardのドキュメントに基づいています。","seeMore":"もっと見る"}},"faq":{"title":"よくある質問","subtitle":"Agentic Commerce Framework®とAIガバナンスについて知っておくべきこと。","q1":{"question":"Agentic Commerce Framework® (ACF)とは？","answer":"ACFは、商業環境で自律AIエージェントを展開する組織のためのグローバルガバナンス基準です。4つの基本原則、4つの運用層、8つの実装モジュール、18の主権KPIを定義しています。"},"q2":{"question":"ACF基準を作ったのは誰？","answer":"ACFはAIガバナンスの専門家、Vincent DORANGEによって作られました。"},"q3":{"question":"ACFの4つの基本原則とは？","answer":"(1) 意思決定の主権 (2) 設計によるガバナンス (3) 究極の人間制御 (4) 追跡可能な責任"},"q4":{"question":"ACF Sovereignty Scoreとは？","answer":"6つのガバナンス次元で組織の意思決定独立性を測定する独自の指標です。"},"q5":{"question":"ACFの成熟度レベルとは？","answer":"4レベル：レベル0（従来型自動化）、レベル1（支援型エージェント）、レベル2（統制型エージェント — 推奨目標）、レベル3（監視付き自律）"},"q6":{"question":"ACFとEU AI Actの関係は？","answer":"ACFフレームワークはEU AI Actと完全に互換性があります。"},"q7":{"question":"DDAロールとは？","answer":"DDAはACFが定義するガバナンス役割で、自律型エージェントの法的後見人です。"},"q8":{"question":"ACF認証の取得方法は？","answer":"3つの認証パス（レベル1、2、3）があり、それぞれ監査プロセスが必要です。"},"q9":{"question":"ACF緊急停止プロトコルとは？","answer":"自律型エージェントシステムのための3レベル中断メカニズムです。"},"q10":{"question":"ACFは大企業専用？","answer":"いいえ。ACFはスタートアップから大企業まで対応。8モジュールを6〜18ヶ月で段階的に導入可能。"},"badge":"// FAQ"}}
+{
+  "meta": {
+    "language": "JA",
+    "languageCode": "ja",
+    "locale": "ja-JP"
+  },
+  "common": {
+    "readMore": "続きを読む",
+    "learnMore": "詳しく見る",
+    "getStarted": "始める",
+    "downloadPDF": "PDFをダウンロード",
+    "watchVideo": "動画を見る",
+    "close": "閉じる",
+    "open": "開く",
+    "loading": "読み込み中",
+    "backToHome": "ホームに戻る",
+    "menu": "メニュー"
+  },
+  "regionSelector": {
+    "title": "地域と言語を選択してください",
+    "close": "✕ 閉じる",
+    "global": "グローバル（英語）",
+    "northAmerica": "北米",
+    "latinAmerica": "ラテンアメリカ",
+    "westernEurope": "西ヨーロッパ",
+    "nordicBaltic": "北欧・バルト",
+    "centralEasternEurope": "中央・東ヨーロッパ",
+    "middleEastAfrica": "中東・アフリカ",
+    "asiaPacific": "アジア太平洋"
+  },
+  "nav": {
+    "menu": "メニュー",
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "AIガバナンスのグローバルスタンダード",
+    "region": "JA",
+    "theStandard": "スタンダード",
+    "acfScore": "ACF Score",
+    "acfControl": "ACF Control",
+    "acfCertification": "ACF Certification",
+    "partners": "パートナー",
+    "requestAssessment": "評価をリクエスト",
+    "partnerLogin": "パートナーログイン",
+    "applyPartner": "パートナー申請",
+    "contact": "お問い合わせ"
+  },
+  "megaMenu": {
+    "framework": {
+      "title": "フレームワーク",
+      "link": "ACF Standard →",
+      "subtitle": "商業環境におけるエージェントシステムのための決定的なガバナンス方法論。",
+      "architecture": {
+        "title": "アーキテクチャ",
+        "principles": "4つの基本原則",
+        "layers": "4つの運用レイヤー",
+        "maturity": "4つの成熟度レベル"
+      },
+      "methodology": {
+        "title": "方法論",
+        "modules": "8つの実装モジュール",
+        "constitution": "エージェント憲章",
+        "dda": "DDA役割フレームワーク",
+        "killSwitch": "緊急停止プロトコル"
+      },
+      "featured": {
+        "label": "注目",
+        "whitepaper": {
+          "title": "ACFホワイトペーパーをダウンロード",
+          "description": "完全仕様書 — 登録ユーザーは無料。"
+        },
+        "release": {
+          "title": "ACF — 2026年2月",
+          "description": "公式リリース。フレームワークの新機能。"
+        }
+      }
+    },
+    "products": {
+      "title": "製品",
+      "link": "製品 →",
+      "subtitle": "組織全体でACF Standardを運用する3つのツール。",
+      "diagnostic": {
+        "title": "診断",
+        "score": "ACF Score — 主権メトリック",
+        "methodology": "スコアリング方法論",
+        "axes": "6つのガバナンス軸"
+      },
+      "saas": {
+        "title": "ガバナンスプラットフォーム",
+        "control": "ACF Control — ガバナンスダッシュボード",
+        "kpis": "18の主権KPI",
+        "gating": "適応型ゲーティングシステム"
+      },
+      "certification": {
+        "title": "認証",
+        "program": "ACF Certification プログラム",
+        "levels": "認証レベル",
+        "audit": "監査プロセス"
+      }
+    },
+    "resources": {
+      "title": "リソース",
+      "link": "リソース →",
+      "subtitle": "ガバナンスインサイト、研究、技術ドキュメント。",
+      "insights": {
+        "title": "最新インサイト",
+        "aiAct": "EU AI法とエージェントシステム",
+        "dda": "DDA役割の解説",
+        "killSwitch": "3段階緊急停止の設計"
+      },
+      "documentation": {
+        "title": "ドキュメント",
+        "specs": "技術仕様",
+        "research": "研究論文",
+        "academy": "ACFアカデミー"
+      },
+      "tools": {
+        "title": "ツール",
+        "complianceChecker": "ACF AI Act Checker",
+        "euAiAct": "AI Act Explorer ↗"
+      }
+    },
+    "about": {
+      "title": "ACFについて",
+      "link": "ACFについて →",
+      "subtitle": "Agentic Commerce Framework®の背景にあるストーリー、ミッション、法的保護。",
+      "whoWeAre": {
+        "title": "私たちについて",
+        "vincent": "Vincent DORANGE — 創設者",
+        "mission": "ミッションと価値観",
+        "legal": "法的保護"
+      },
+      "howWeWork": {
+        "title": "私たちの活動",
+        "network": "実務者ネットワーク",
+        "audit": "監査と認証",
+        "contact": "お問い合わせ"
+      },
+      "registered": {
+        "label": "登録済",
+        "title": "登録商標 ACF®",
+        "description": "ACF®は登録商標です。すべての方法論とツールは法的に保護されています。"
+      }
+    },
+    "partners": {
+      "title": "パートナー",
+      "link": "パートナー →",
+      "subtitle": "ACF実務者ネットワークに参加し、クライアントにガバナンスサービスを提供しましょう。",
+      "portal": {
+        "title": "パートナーポータル",
+        "login": "パートナーポータルにログイン",
+        "dashboard": "ダッシュボードとツール",
+        "training": "研修資料",
+        "toolkit": "ACF実務者ツールキット"
+      },
+      "become": {
+        "title": "パートナーになる",
+        "apply": "申請する",
+        "tiers": "パートナーティア",
+        "certified": "まずACF Certificationを取得"
+      }
+    },
+    "user": {
+      "partnerAccess": "パートナーアクセス",
+      "partnerLogin": "パートナーログイン",
+      "applyPartner": "パートナー申請",
+      "contact": "お問い合わせ"
+    }
+  },
+  "hero": {
+    "title": "グローバルスタンダード：",
+    "typing": {
+      "word1": "ガバナンス",
+      "word2": "主権",
+      "word3": "インテリジェンス",
+      "word4": "コマース"
+    },
+    "description": "Agentic Commerce Framework®（ACF）は、商業環境における自律型エージェントシステムの展開、監督、制御のための決定的なガバナンス方法論です。",
+    "cta": {
+      "primary": "ガバナンス評価をリクエスト →",
+      "secondary": "スタンダードを読む"
+    },
+    "stats": {
+      "principles": {
+        "value": "4",
+        "label": "基本<br>原則"
+      },
+      "modules": {
+        "value": "8",
+        "label": "実装<br>モジュール"
+      },
+      "kpis": {
+        "value": "18",
+        "label": "主権<br>KPI"
+      },
+      "tools": {
+        "value": "17",
+        "label": "独自<br>ツール"
+      }
+    },
+    "satellites": {
+      "score": {
+        "name": "ACF Score",
+        "description": "主権メトリック"
+      },
+      "control": {
+        "name": "ACF Control",
+        "description": "ガバナンスプラットフォーム"
+      },
+      "certification": {
+        "name": "Certification",
+        "description": "認証"
+      },
+      "partners": {
+        "name": "パートナー",
+        "description": "実務者"
+      }
+    }
+  },
+  "statsBar": {
+    "layers": {
+      "value": "4",
+      "label": "運用レイヤー"
+    },
+    "kpis": {
+      "value": "18",
+      "label": "主権KPI"
+    },
+    "tools": {
+      "value": "17",
+      "label": "独自ツール"
+    },
+    "sovereignty": {
+      "value": "100",
+      "suffix": "%",
+      "label": "人間の主権"
+    }
+  },
+  "principles": {
+    "badge": "// アーキテクチャ",
+    "title": "4つの基本原則",
+    "subtitle": "人間の権限と自律エージェントの実行の境界を定義する4つの不変の公理。",
+    "principle1": {
+      "number": "01",
+      "title": "意思決定の主権",
+      "description": "重要な戦略的意思決定は、自律エージェントに委任されることはありません。"
+    },
+    "principle2": {
+      "number": "02",
+      "title": "設計によるガバナンス",
+      "description": "ガバナンスフレームワークは展開前に定義され、展開後ではありません。"
+    },
+    "principle3": {
+      "number": "03",
+      "title": "究極の人間制御",
+      "description": "すべてのエージェントシステムは、人間の介入能力を維持しなければなりません。"
+    },
+    "principle4": {
+      "number": "04",
+      "title": "追跡可能な説明責任",
+      "description": "すべての自律的行動は、監査可能かつ帰属可能でなければなりません。"
+    }
+  },
+  "layers": {
+    "badge": "// 構造",
+    "title": "4つの運用レイヤー",
+    "subtitle": "戦略的ガバナンスからリアルタイム実行監督までの階層型アーキテクチャ。",
+    "layer1": {
+      "number": "LAYER_01",
+      "title": "ガバナンスと主権",
+      "description": "主権憲章、ガバナンス委員会、RACI マトリックス、委任不可ゾーンマップ。"
+    },
+    "layer2": {
+      "number": "LAYER_02",
+      "title": "意思決定ポリシー",
+      "description": "加重目標、仲裁ルール、エスカレーション閾値、規制上の制約。"
+    },
+    "layer3": {
+      "number": "LAYER_03",
+      "title": "エージェントシステム",
+      "description": "エージェントごとの明示的な権限、インタラクション境界、自律レベル、5カテゴリ分類。"
+    },
+    "layer4": {
+      "number": "LAYER_04",
+      "title": "実行と監督",
+      "description": "適応型ゲーティングマトリックス、多段階アラート、18の主権KPI、ライブダッシュボード。"
+    }
+  },
+  "maturity": {
+    "badge": "// 進展",
+    "title": "4つのエージェント成熟度レベル",
+    "subtitle": "ACFは自律レベルによってシステムを分類します。レベル2が推奨される展開目標です。",
+    "level0": {
+      "code": "LEVEL_0",
+      "name": "従来型自動化",
+      "risk": "非常に低いリスク",
+      "description": "固定ルール、MLなし。あらゆる変更に人間の介入が必要。"
+    },
+    "level1": {
+      "code": "LEVEL_1",
+      "name": "支援型エージェント",
+      "risk": "低リスク",
+      "description": "エージェントが分析・推奨。すべての最終判断は人間が行う。"
+    },
+    "level2": {
+      "code": "LEVEL_2",
+      "name": "管理型エージェント",
+      "risk": "中程度のリスク",
+      "description": "エージェントが厳格なガバナンス内で意思決定。委任不可ゾーンはロック。",
+      "badge": "★ 推奨目標"
+    },
+    "level3": {
+      "code": "LEVEL_3",
+      "name": "監督下の自律型",
+      "risk": "高リスク",
+      "description": "エージェントが意思決定と学習を実行。最大限のガバナンス。成熟した組織のみ。"
+    }
+  },
+  "modules": {
+    "badge": "// 方法論",
+    "title": "8つの実装モジュール",
+    "subtitle": "6〜18ヶ月にわたって段階的に展開される連続的なパス。各モジュールは前のモジュールの上に構築されます。",
+    "module1": {
+      "code": "MOD_01",
+      "name": "主権診断",
+      "description": "主権スコアの算出。リスクゾーンのマッピング。"
+    },
+    "module2": {
+      "code": "MOD_02",
+      "name": "意思決定マッピング",
+      "description": "重要度マトリックス。委任不可ゾーン。"
+    },
+    "module3": {
+      "code": "MOD_03",
+      "name": "エージェント憲章",
+      "description": "9条項。ガバナンス委員会が署名。"
+    },
+    "module4": {
+      "code": "MOD_04",
+      "name": "エージェントシステム設計",
+      "description": "権限シート、インタラクション境界。"
+    },
+    "module5": {
+      "code": "MOD_05",
+      "name": "セキュリティと可逆性",
+      "description": "サンドボックス、可逆性計画。緊急停止設計。"
+    },
+    "module6": {
+      "code": "MOD_06",
+      "name": "継続的ガバナンス",
+      "description": "月次レビュー。年次コンプライアンス監査。"
+    },
+    "module7": {
+      "code": "MOD_07",
+      "name": "実装ロードマップ",
+      "description": "5段階の段階的展開。"
+    },
+    "module8": {
+      "code": "MOD_08",
+      "name": "危機管理",
+      "description": "3段階のインシデント。緊急停止訓練。"
+    }
+  },
+  "video": {
+    "badge": "// なぜACF",
+    "title": "ガバナンスは待てない。<br>エージェントはすでに意思決定している。",
+    "description1": "2026年、自律エージェントはすでに商業環境で意思決定を実行しています — 価格設定、リード評価、クレーム処理、契約管理。ほとんどの組織にはそれらを統治するフレームワークがありません。",
+    "description2": "ACFはその空白を埋めるために創られました — ガバナンスの失敗が法的、財務的、または評判の危機になる前に。",
+    "quote": {
+      "text": "問題はもはやエージェントを展開<em>するかどうか</em>ではありません。主権を手放すことなく<em>どのように</em>展開するかです。",
+      "author": "— Agentic Commerce Framework®"
+    },
+    "player": {
+      "badge": "ACF — エージェント革命",
+      "name": "エージェントコマースの台頭",
+      "role": "制御不能な自動化から統治された主権へ",
+      "duration": "1:05"
+    },
+    "stats": {
+      "release": {
+        "value": "2026",
+        "label": "公式リリース"
+      },
+      "documentation": {
+        "value": "45p",
+        "label": "完全ドキュメント"
+      },
+      "protection": {
+        "value": "ACF®",
+        "label": "登録商標"
+      }
+    },
+    "modal": {
+      "placeholder": "近日公開",
+      "title": "エージェントコマース革命",
+      "description": "ナラティブの旅：制御の喪失からACFガバナンスフレームワークへ。自律エージェントがコマースを再形成しています — 問題は誰がそれを統治するかです。"
+    }
+  },
+  "products": {
+    "badge": "// エコシステム",
+    "title": "ACFエコシステム",
+    "subtitle": "ACF Standardを運用する3つの補完的な製品。",
+    "score": {
+      "label": "診断ツール",
+      "title": "ACF Score",
+      "description": "6つのガバナンス次元にわたる意思決定の独立性を測定する独自の主権スコア。",
+      "features": {
+        "feature1": "複合主権スコアメトリック",
+        "feature2": "6軸レーダー可視化",
+        "feature3": "軸ごとのパーソナライズされたアクションプラン"
+      },
+      "cta": "スコアを測定 →"
+    },
+    "control": {
+      "label": "ガバナンスプラットフォーム",
+      "title": "ACF Control",
+      "description": "適応型ゲーティングと自動エスカレーションで18の主権KPIを監視するリアルタイムガバナンスダッシュボード。",
+      "features": {
+        "feature1": "6つのガバナンス軸にわたる18のKPI",
+        "feature2": "人間のエスカレーション付き適応型ゲーティング",
+        "feature3": "改ざん防止監査ログ"
+      },
+      "cta": "ACF Controlを詳しく見る →"
+    },
+    "certification": {
+      "label": "独立認証",
+      "title": "ACF Certification",
+      "description": "ACFガバナンス基準への準拠を証明する独立認証。公的に検証可能。",
+      "features": {
+        "feature1": "レベル1、2、3の認証パス",
+        "feature2": "公的に検証可能なバッジ",
+        "feature3": "年次更新＋継続的モニタリング"
+      },
+      "cta": "認証を取得 →"
+    }
+  },
+  "blog": {
+    "badge": "// インサイト",
+    "title": "ACFブログの最新情報",
+    "subtitle": "ガバナンスインサイト、フレームワーク更新、エージェントインテリジェンス研究。",
+    "article1": {
+      "category": "AI規制",
+      "title": "2026年にEU AI法がエージェントシステムにどう適用されるか",
+      "excerpt": "AI法のリスクベースアプローチは、自律エージェントに特定の義務を課します。ACFレベル2ガバナンスがカバーする内容をご覧ください。",
+      "date": "2026-02-15",
+      "cta": "読む →"
+    },
+    "article2": {
+      "category": "ガバナンス",
+      "title": "DDA：なぜすべてのAIネイティブ企業に委任決定エージェントオフィサーが必要か",
+      "excerpt": "DDAは自律エージェントの法的後見人です。この重要な役割を作成し強化する方法。",
+      "date": "2026-02-08",
+      "cta": "読む →"
+    },
+    "article3": {
+      "category": "技術",
+      "title": "自律エージェントシステムのための3段階緊急停止の設計",
+      "excerpt": "効果的な緊急停止は単一のボタンではありません。ACFは定義された応答時間で3つの中断レベルを規定します。",
+      "date": "2026-01-29",
+      "cta": "読む →"
+    },
+    "viewAll": "すべての記事を見る →"
+  },
+  "cta": {
+    "watermark": "ACF®",
+    "badge": "// 次のステップ",
+    "title": "エージェントシステムを<br>統治する準備はできていますか？",
+    "description": "ガバナンス評価をリクエストし、現在の主権スコアを確認しましょう。",
+    "primary": "ガバナンス評価をリクエスト →",
+    "secondary": "ACFパートナーになる"
+  },
+  "footer": {
+    "logoText": "Agentic Commerce Framework®",
+    "logoSubtext": "AIガバナンスのグローバルスタンダード",
+    "description": "自律型エージェントシステムを展開する組織のための決定的なガバナンススタンダード。登録商標。",
+    "framework": {
+      "title": "フレームワーク",
+      "theStandard": "スタンダード",
+      "methodology": "方法論",
+      "research": "研究",
+      "certification": "ACF Certification"
+    },
+    "products": {
+      "title": "製品",
+      "score": "ACF Score",
+      "control": "ACF Control",
+      "certification": "認証",
+      "academy": "アカデミー"
+    },
+    "organization": {
+      "title": "組織",
+      "partnerPortal": "パートナーポータル",
+      "about": "概要",
+      "contact": "お問い合わせ",
+      "legal": "法的情報"
+    },
+    "copyright": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. 全著作権所有。",
+    "legal": {
+      "privacy": "プライバシー",
+      "terms": "利用規約",
+      "cookies": "Cookie"
+    }
+  },
+  "ai": {
+    "button": {
+      "label": "ACF Agentに質問",
+      "status": "AIガバナンス · オンライン"
+    },
+    "modal": {
+      "close": "×",
+      "beta": "",
+      "title": "ACFに質問",
+      "subtitle": "ACF Standardとガバナンスインサイトに基づいて質問に回答するチャットボット",
+      "placeholder": "ACFガバナンスについて質問...",
+      "send": "送信",
+      "trending": {
+        "label": "よくある質問",
+        "q1": "ACF Standardとは？",
+        "q2": "ACF Certificationの取得方法は？",
+        "q3": "DDAの役割とは？",
+        "q4": "主権スコアとは？",
+        "q5": "4つの基本原則とは？"
+      },
+      "disclaimer": "AI実験。回答はACF Standardのドキュメントに基づいています。",
+      "seeMore": "もっと見る"
+    }
+  },
+  "faq": {
+    "title": "よくある質問",
+    "subtitle": "Agentic Commerce Framework®とAIガバナンスについて知っておくべきこと。",
+    "q1": {
+      "question": "Agentic Commerce Framework® (ACF)とは？",
+      "answer": "ACFは、商業環境で自律AIエージェントを展開する組織のためのグローバルガバナンス基準です。4つの基本原則、4つの運用層、8つの実装モジュール、18の主権KPIを定義しています。"
+    },
+    "q2": {
+      "question": "ACF基準を作ったのは誰？",
+      "answer": "ACFはAIガバナンスの専門家、Vincent DORANGEによって作られました。"
+    },
+    "q3": {
+      "question": "ACFの4つの基本原則とは？",
+      "answer": "(1) 意思決定の主権 (2) 設計によるガバナンス (3) 究極の人間制御 (4) 追跡可能な責任"
+    },
+    "q4": {
+      "question": "ACF Sovereignty Scoreとは？",
+      "answer": "6つのガバナンス次元で組織の意思決定独立性を測定する独自の指標です。"
+    },
+    "q5": {
+      "question": "ACFの成熟度レベルとは？",
+      "answer": "4レベル：レベル0（従来型自動化）、レベル1（支援型エージェント）、レベル2（統制型エージェント — 推奨目標）、レベル3（監視付き自律）"
+    },
+    "q6": {
+      "question": "ACFとEU AI Actの関係は？",
+      "answer": "ACFフレームワークはEU AI Actと完全に互換性があります。"
+    },
+    "q7": {
+      "question": "DDAロールとは？",
+      "answer": "DDAはACFが定義するガバナンス役割で、自律型エージェントの法的後見人です。"
+    },
+    "q8": {
+      "question": "ACF認証の取得方法は？",
+      "answer": "3つの認証パス（レベル1、2、3）があり、それぞれ監査プロセスが必要です。"
+    },
+    "q9": {
+      "question": "ACF緊急停止プロトコルとは？",
+      "answer": "自律型エージェントシステムのための3レベル中断メカニズムです。"
+    },
+    "q10": {
+      "question": "ACFは大企業専用？",
+      "answer": "いいえ。ACFはスタートアップから大企業まで対応。8モジュールを6〜18ヶ月で段階的に導入可能。"
+    },
+    "badge": "// FAQ"
+  }
+}
