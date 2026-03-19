@@ -1851,6 +1851,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <p>${t.ctaDesc}</p>
     <div class="ctabtns">
       <a href="https://www.acf-score.com/" target="_blank" class="btng" style="font-size:15px;padding:16px 32px">${t.ctaPrimary}</a>
+      <a href="/${locale}/compliance-checker" target="_top" class="btno">${t.ctaChecker || 'ACF AI Act Checker →'}</a>
       <a href="/${locale}/contact" target="_top" class="btno">${t.ctaSecondary}</a>
     </div>
   </div>
