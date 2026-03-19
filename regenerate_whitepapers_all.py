@@ -818,29 +818,29 @@ def generate_pdf(lang_code, t):
     draw_page_bg(c)
     y = H - 80; y = draw_section_header(c, t["prod_num"], t["prod_title"], y)
     y -= 10; c.setFillColor(GREY); c.setFont("Helvetica", 11); c.drawString(40, y, t["prod_intro"])
-    y -= 35
+    y -= 30
     for name, label, desc, features in t["products"]:
-        bh = 130
-        c.setFillColor(DARK_CARD); c.roundRect(40, y - 10, W - 80, bh, 6, fill=1, stroke=0)
-        c.setStrokeColor(GOLD); c.setLineWidth(2); c.line(50, y + bh - 12, W - 50, y + bh - 12)
-        c.setFillColor(GOLD); c.setFont("Helvetica", 8); c.drawString(55, y + bh - 28, label)
-        c.setFillColor(WHITE); c.setFont("Helvetica-Bold", 16); c.drawString(55, y + bh - 48, name)
-        c.setFillColor(GREY); c.setFont("Helvetica", 10)
-        words = desc.split(); line = ""; ly = y + bh - 68
+        bh = 115
+        c.setFillColor(DARK_CARD); c.roundRect(40, y - 8, W - 80, bh, 5, fill=1, stroke=0)
+        c.setStrokeColor(GOLD); c.setLineWidth(1.5); c.line(50, y + bh - 10, W - 50, y + bh - 10)
+        c.setFillColor(GOLD); c.setFont("Helvetica", 7.5); c.drawString(55, y + bh - 24, label)
+        c.setFillColor(WHITE); c.setFont("Helvetica-Bold", 14); c.drawString(55, y + bh - 40, name)
+        c.setFillColor(GREY); c.setFont("Helvetica", 9)
+        words = desc.split(); line = ""; ly = y + bh - 56
         for word in words:
             test = line + " " + word if line else word
-            if c.stringWidth(test, "Helvetica", 10) < W - 130:
+            if c.stringWidth(test, "Helvetica", 9) < W - 130:
                 line = test
             else:
-                c.drawString(55, ly, line); ly -= 14; line = word
+                c.drawString(55, ly, line); ly -= 12; line = word
         if line:
-            c.drawString(55, ly, line); ly -= 14
-        ly -= 6
+            c.drawString(55, ly, line); ly -= 12
+        ly -= 4
         for feat in features:
-            c.setFillColor(GOLD); c.setFont("Helvetica", 9); c.drawString(60, ly, "✓")
-            c.setFillColor(LIGHT_GREY); c.setFont("Helvetica", 9.5); c.drawString(78, ly, feat)
-            ly -= 15
-        y -= (bh + 14)
+            c.setFillColor(GOLD); c.setFont("Helvetica", 8); c.drawString(60, ly, "✓")
+            c.setFillColor(LIGHT_GREY); c.setFont("Helvetica", 8.5); c.drawString(76, ly, feat)
+            ly -= 13
+        y -= (bh + 10)
     draw_footer(c, 9); c.showPage()
 
     # ── Page 10: About ──

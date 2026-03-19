@@ -739,57 +739,57 @@ def draw_products_page(c):
           "Renouvellement annuel + monitoring continu"]),
     ]
 
-    y -= 35
+    y -= 30
     for name, label, desc, features in products:
-        box_h = 130
+        box_h = 115
         c.setFillColor(DARK_CARD)
-        c.roundRect(40, y - 10, W - 80, box_h, 6, fill=1, stroke=0)
+        c.roundRect(40, y - 8, W - 80, box_h, 5, fill=1, stroke=0)
 
         # Gold top border
         c.setStrokeColor(GOLD)
-        c.setLineWidth(2)
-        c.line(50, y + box_h - 12, W - 50, y + box_h - 12)
+        c.setLineWidth(1.5)
+        c.line(50, y + box_h - 10, W - 50, y + box_h - 10)
 
         # Label
         c.setFillColor(GOLD)
-        c.setFont("Helvetica", 8)
-        c.drawString(55, y + box_h - 28, label)
+        c.setFont("Helvetica", 7.5)
+        c.drawString(55, y + box_h - 24, label)
 
         # Title
         c.setFillColor(WHITE)
-        c.setFont("Helvetica-Bold", 16)
-        c.drawString(55, y + box_h - 48, name)
+        c.setFont("Helvetica-Bold", 14)
+        c.drawString(55, y + box_h - 40, name)
 
         # Description
         c.setFillColor(GREY)
-        c.setFont("Helvetica", 10)
+        c.setFont("Helvetica", 9)
         words = desc.split()
         line = ""
-        ly = y + box_h - 68
+        ly = y + box_h - 56
         for word in words:
             test = line + " " + word if line else word
-            if c.stringWidth(test, "Helvetica", 10) < W - 130:
+            if c.stringWidth(test, "Helvetica", 9) < W - 130:
                 line = test
             else:
                 c.drawString(55, ly, line)
-                ly -= 14
+                ly -= 12
                 line = word
         if line:
             c.drawString(55, ly, line)
-            ly -= 14
+            ly -= 12
 
         # Features
-        ly -= 6
+        ly -= 4
         for feat in features:
             c.setFillColor(GOLD)
-            c.setFont("Helvetica", 9)
+            c.setFont("Helvetica", 8)
             c.drawString(60, ly, "\u2713")
             c.setFillColor(LIGHT_GREY)
-            c.setFont("Helvetica", 9.5)
-            c.drawString(78, ly, feat)
-            ly -= 15
+            c.setFont("Helvetica", 8.5)
+            c.drawString(76, ly, feat)
+            ly -= 13
 
-        y -= (box_h + 14)
+        y -= (box_h + 10)
 
     draw_footer(c, 9)
 

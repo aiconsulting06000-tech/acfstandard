@@ -25,7 +25,7 @@ function GoldBar() { return <div style={{ width: 44, height: 3, background: `lin
 type Article = {
   slug: string; title: string; excerpt: string; date: string;
   category: string; catColor: string; readTime: string;
-  content: { type: "h2" | "h3" | "p" | "quote" | "list"; text: string }[];
+  content: { type: "h2" | "h3" | "p" | "quote" | "list" | "cta"; text: string; title?: string; btnText?: string; href?: string }[];
 };
 
 const articles_fr: Article[] = [
@@ -49,8 +49,7 @@ const articles_fr: Article[] = [
       { type: "p", text: "Les organisations qui attendent la mise en application pour structurer leur gouvernance agentique prennent un risque consid\u00e9rable. La mise en conformit\u00e9 n\u00e9cessite du temps : cartographier les agents, d\u00e9finir les politiques, impl\u00e9menter les contr\u00f4les techniques et former les \u00e9quipes." },
       { type: "h3", text: "Action recommand\u00e9e" },
       { type: "p", text: "R\u00e9alisez votre diagnostic ACF Score\u00ae gratuit pour \u00e9valuer votre niveau de pr\u00e9paration actuel, puis engagez un plan de mise en conformit\u00e9 structur\u00e9 autour des 4 couches ACF\u00ae." },
-      { type: "h3", text: "ACF AI Act Checker" },
-      { type: "p", text: "Testez votre conformit\u00e9 \u00e0 l\u2019EU AI Act avec notre outil gratuit ACF AI Act Checker. En quelques minutes, identifiez les \u00e9carts entre vos pratiques actuelles et les exigences r\u00e9glementaires. \u2192 acfstandard.com/compliance-checker" },
+      { type: "cta", title: "ACF AI Act Checker", text: "Testez votre conformité à l'EU AI Act avec notre outil gratuit ACF AI Act Checker. En quelques minutes, identifiez les écarts entre vos pratiques actuelles et les exigences réglementaires.", btnText: "Tester ma conformité EU AI Act →", href: "/fr/compliance-checker" },
     ]
   },
   {
@@ -179,8 +178,7 @@ const articles_en: Article[] = [
       { type: "p", text: "Organizations waiting for enforcement to structure their agentic governance are taking considerable risk. Compliance takes time: mapping agents, defining policies, implementing technical controls, and training teams." },
       { type: "h3", text: "Recommended action" },
       { type: "p", text: "Take the free ACF Score\u00ae diagnostic to assess your current readiness level, then engage a structured compliance plan built around the 4 ACF\u00ae layers." },
-      { type: "h3", text: "ACF AI Act Checker" },
-      { type: "p", text: "Test your EU AI Act compliance with our free ACF AI Act Checker. In just a few minutes, identify gaps between your current practices and regulatory requirements. \u2192 acfstandard.com/compliance-checker" },
+      { type: "cta", title: "ACF AI Act Checker", text: "Test your EU AI Act compliance with our free ACF AI Act Checker. In just a few minutes, identify gaps between your current practices and regulatory requirements.", btnText: "Check my EU AI Act compliance →", href: "/en/compliance-checker" },
     ]
   },
   {
@@ -608,6 +606,13 @@ export default function BlogPage() {
                   <blockquote key={i} style={{ margin: "28px 0", padding: "20px 24px", borderLeft: `3px solid ${C.gold}`, background: C.goldDim, borderRadius: "0 12px 12px 0" }}>
                     <p style={{ fontSize: 15, color: C.gold2, lineHeight: 1.7, fontStyle: "italic", fontWeight: 500 }}>{block.text}</p>
                   </blockquote>
+                );
+                if (block.type === "cta") return (
+                  <div key={i} style={{ margin: "28px 0", padding: "28px 28px", background: C.navy3, border: `1px solid ${C.goldBorder}`, borderRadius: 12 }}>
+                    <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 18, fontWeight: 700, color: C.gold, marginBottom: 12 }}>{block.title}</h3>
+                    <p style={{ fontSize: 14, color: C.gray2, lineHeight: 1.75, marginBottom: 18 }}>{block.text}</p>
+                    <a href={block.href} style={{ display: "inline-block", padding: "12px 24px", background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, fontWeight: 700, fontSize: 14, textDecoration: "none", borderRadius: 8 }}>{block.btnText}</a>
+                  </div>
                 );
                 if (block.type === "list") return (
                   <div key={i} style={{ margin: "16px 0 20px", display: "flex", flexDirection: "column", gap: 10 }}>
