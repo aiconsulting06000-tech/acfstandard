@@ -474,35 +474,17 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       </ul>
     </div>
     <div>
-      <div class="rpcol-title">${m.regionSelector.nordicBaltic}</div>
-      <ul class="rplinks">
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇸🇪</span>Sweden <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇳🇴</span>Norway <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇩🇰</span>Denmark <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇫🇮</span>Finland <span class="rplang">(English)</span></a></li>
-      </ul>
-      <div class="rpcol-title" style="margin-top:20px">${m.regionSelector.centralEasternEurope}</div>
+      <div class="rpcol-title">${m.regionSelector.centralEasternEurope}</div>
       <ul class="rplinks">
         <li><a href="#" onclick="switchLocale('ru');return false"><span class="rpflag">🇷🇺</span>Russia <span class="rplang">(Русский)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇵🇱</span>Poland <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇨🇿</span>Czech Republic <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇷🇴</span>Romania <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇺🇦</span>Ukraine <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇬🇷</span>Greece <span class="rplang">(English)</span></a></li>
       </ul>
-    </div>
-    <div>
-      <div class="rpcol-title">${m.regionSelector.middleEastAfrica}</div>
+      <div class="rpcol-title" style="margin-top:20px">${m.regionSelector.middleEastAfrica}</div>
       <ul class="rplinks">
         <li><a href="#" onclick="switchLocale('ar');return false"><span class="rpflag">🇦🇪</span>UAE <span class="rplang">(العربية)</span></a></li>
         <li><a href="#" onclick="switchLocale('ar');return false"><span class="rpflag">🇸🇦</span>Saudi Arabia <span class="rplang">(العربية)</span></a></li>
         <li><a href="#" onclick="switchLocale('ar');return false"><span class="rpflag">🇪🇬</span>Egypt <span class="rplang">(العربية)</span></a></li>
         <li><a href="#" onclick="switchLocale('fr');return false"><span class="rpflag">🇲🇦</span>Morocco <span class="rplang">(Français)</span></a></li>
         <li><a href="#" onclick="switchLocale('tr');return false"><span class="rpflag">🇹🇷</span>Turkey <span class="rplang">(Türkçe)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇿🇦</span>South Africa <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇳🇬</span>Nigeria <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇰🇪</span>Kenya <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇮🇱</span>Israel <span class="rplang">(English)</span></a></li>
       </ul>
     </div>
     <div>
@@ -511,10 +493,8 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         <li><a href="#" onclick="switchLocale('ja');return false"><span class="rpflag">🇯🇵</span>Japan <span class="rplang">(日本語)</span></a></li>
         <li><a href="#" onclick="switchLocale('zh');return false"><span class="rpflag">🇨🇳</span>China <span class="rplang">(中文)</span></a></li>
         <li><a href="#" onclick="switchLocale('ko');return false"><span class="rpflag">🇰🇷</span>Korea <span class="rplang">(한국어)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇸🇬</span>Singapore <span class="rplang">(English)</span></a></li>
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇦🇺</span>Australia <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇮🇳</span>India <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇮🇩</span>Indonesia <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇸🇬</span>Singapore <span class="rplang">(English)</span></a></li>
         <li><a href="#" onclick="switchLocale('zh');return false"><span class="rpflag">🇭🇰</span>Hong Kong <span class="rplang">(中文)</span></a></li>
         <li><a href="#" onclick="switchLocale('zh');return false"><span class="rpflag">🇹🇼</span>Taiwan <span class="rplang">(中文)</span></a></li>
       </ul>
@@ -591,7 +571,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="mpd">${m.megaMenu.resources.subtitle}</div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.insights.title}</div><ul class="mlinks"><li><a href="/${locale}/blog#eu-ai-act-agentic-systems-2026">${m.megaMenu.resources.insights.aiAct}</a></li><li><a href="/${locale}/blog#delegated-decision-agent-officer">${m.megaMenu.resources.insights.dda}</a></li><li><a href="/${locale}/blog#three-level-kill-switch">${m.megaMenu.resources.insights.killSwitch}</a></li></ul></div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.documentation.title}</div><ul class="mlinks"><li><a href="/${locale}/standard">${m.megaMenu.resources.documentation.specs}</a></li><li><a href="/${locale}/blog">${m.megaMenu.resources.documentation.research}</a></li><li><a href="/${locale}/acf-certification#academy">${m.megaMenu.resources.documentation.academy}</a></li></ul></div>
-      <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.tools.title}</div><ul class="mlinks"><li><a href="/${locale}/compliance-checker">${m.megaMenu.resources.tools.complianceChecker}</a></li><li><a href="https://artificialintelligenceact.eu/fr/evaluation/verificateur-de-conformite-a-l-acte-de-l-ai-de-l-ue/" target="_blank" rel="noopener">${m.megaMenu.resources.tools.euAiAct}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.resources.tools.title}</div><ul class="mlinks"><li><a href="/${locale}/compliance-checker">EU AI Act Checker</a></li><li><a href="https://artificialintelligenceact.eu/${locale === 'fr' ? 'fr/' : ''}ai-act-explorer/" target="_blank" rel="noopener">AI Act Explorer \u2197</a></li></ul></div>
     </div>
     <div class="mp" id="panel-about">
       <div class="mpt"><a href="/${locale}/about">${m.megaMenu.about.link}</a></div>
@@ -1669,7 +1649,7 @@ export default function Home() {
   /* Ensure deeply nested objects exist to prevent template literal crashes */
   if (!m.megaMenu) m.megaMenu = {}
   if (!m.megaMenu.resources) m.megaMenu.resources = {}
-  if (!m.megaMenu.resources.tools) m.megaMenu.resources.tools = { title: 'Tools', complianceChecker: 'ACF Compliance Checker', euAiAct: 'EU AI Act Checker ↗' }
+  if (!m.megaMenu.resources.tools) m.megaMenu.resources.tools = { title: 'Tools', complianceChecker: 'EU AI Act Checker', euAiAct: 'AI Act Explorer ↗' }
   if (!m.megaMenu.resources.insights) m.megaMenu.resources.insights = {}
   if (!m.megaMenu.resources.documentation) m.megaMenu.resources.documentation = {}
   if (!m.megaMenu.framework) m.megaMenu.framework = {}

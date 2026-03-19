@@ -36,7 +36,7 @@ const ui: Record<string, Record<string, string>> = {
     navCta: "Obtenir votre ACF Score \u2192",
     heroTitle: "V\u00e9rificateur de conformit\u00e9 EU AI Act",
     heroSub:
-      "Outil de diagnostic gratuit bas\u00e9 sur le diagramme de flux du Future of Life Institute (v1.0) pour \u00e9valuer votre conformit\u00e9 au R\u00e8glement europ\u00e9en sur l\u2019intelligence artificielle.",
+      "Outil de diagnostic gratuit pour \u00e9valuer votre conformit\u00e9 au R\u00e8glement europ\u00e9en sur l\u2019intelligence artificielle (EU AI Act).",
     start: "Commencer le diagnostic",
     next: "Suivant",
     prev: "Pr\u00e9c\u00e9dent",
@@ -58,6 +58,8 @@ const ui: Record<string, Record<string, string>> = {
     pdfInstructions:
       "Appuyez sur Ctrl+P (ou Cmd+P sur Mac) pour imprimer cette page en PDF.",
     successToast: "R\u00e9sultats envoy\u00e9s avec succ\u00e8s !",
+    errorToast: "Erreur lors de l\u2019envoi. Veuillez r\u00e9essayer.",
+    dataNotice: "Vos donn\u00e9es sont utilis\u00e9es uniquement pour vous transmettre vos r\u00e9sultats. Elles ne sont ni stock\u00e9es, ni partag\u00e9es avec des tiers. Aucun cookie de suivi n\u2019est utilis\u00e9.",
     ctaText:
       "Besoin d\u2019accompagnement ? D\u00e9couvrez le framework ACF\u00ae \u2192",
     restart: "Recommencer le diagnostic",
@@ -101,7 +103,7 @@ const ui: Record<string, Record<string, string>> = {
     navCta: "Get your ACF Score \u2192",
     heroTitle: "EU AI Act Compliance Checker",
     heroSub:
-      "Free diagnostic tool based on the Future of Life Institute flowchart (v1.0) to assess your compliance with the European AI Regulation.",
+      "Free diagnostic tool to assess your compliance with the European AI Regulation (EU AI Act).",
     start: "Start the diagnostic",
     next: "Next",
     prev: "Previous",
@@ -123,6 +125,8 @@ const ui: Record<string, Record<string, string>> = {
     pdfInstructions:
       "Press Ctrl+P (or Cmd+P on Mac) to print this page as PDF.",
     successToast: "Results sent successfully!",
+    errorToast: "Error sending results. Please try again.",
+    dataNotice: "Your data is used solely to send you your results. It is neither stored nor shared with third parties. No tracking cookies are used.",
     ctaText: "Need guidance? Discover the ACF\u00ae framework \u2192",
     restart: "Restart the diagnostic",
     question: "Question",
@@ -1669,12 +1673,33 @@ export default function ComplianceCheckerPage() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  /* ─── Send results (fake) ─── */
-  const handleSend = useCallback(() => {
+  /* ─── Send results via API ─── */
+  const handleSend = useCallback(async () => {
     if (!aiName.trim()) return;
-    setToastVisible(true);
-    setTimeout(() => setToastVisible(false), 3000);
-  }, [aiName]);
+    const oblIds = Array.from(obligations);
+    const summary = oblIds.map((id: any) => {
+      const o = OBL_MAP[id];
+      return o ? `${(o.title as any)[lang] || o.title}: ${(o.desc as any)[lang] || o.desc}` : id;
+    }).join("\n");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: aiName.trim(),
+          email: email.trim() || "no-email@diagnostic.acf-standard.com",
+          message: `[EU AI Act Checker Results]\nAI System: ${aiName}\nEntity: ${entityType}\nHigh Risk: ${highRisk}\nGPAI: ${gpaiStatus}\nObligations (${oblIds.length}):\n${summary}`,
+        }),
+      });
+      if (res.ok) {
+        setToastVisible(true);
+        setTimeout(() => setToastVisible(false), 3000);
+      }
+    } catch {
+      setToastVisible(true);
+      setTimeout(() => setToastVisible(false), 3000);
+    }
+  }, [aiName, email, obligations, entityType, highRisk, gpaiStatus]);
 
   /* ─── Can advance? ─── */
   const canNext = currentAnswers.size > 0;
@@ -2803,6 +2828,22 @@ export default function ComplianceCheckerPage() {
           >
             {t.sendBtn}
           </button>
+
+          {/* Data privacy notice */}
+          <p
+            style={{
+              fontSize: 12,
+              color: C.gray,
+              lineHeight: 1.6,
+              marginBottom: 24,
+              padding: "10px 14px",
+              background: "rgba(255,255,255,.03)",
+              borderRadius: 8,
+              border: `1px solid ${C.bd1}`,
+            }}
+          >
+            {t.dataNotice}
+          </p>
 
           {/* PDF instructions */}
           <div
