@@ -34,7 +34,7 @@ const ui: Record<string, Record<string, string>> = {
     navSubtext: "EU AI ACT CHECKER",
     navHome: "\u2190 Accueil",
     navCta: "Obtenir votre ACF Score \u2192",
-    heroTitle: "V\u00e9rificateur de conformit\u00e9 EU AI Act",
+    heroTitle: "EU AI Act Checker",
     heroSub:
       "Outil de diagnostic gratuit pour \u00e9valuer votre conformit\u00e9 au R\u00e8glement europ\u00e9en sur l\u2019intelligence artificielle (EU AI Act).",
     start: "Commencer le diagnostic",
@@ -101,7 +101,7 @@ const ui: Record<string, Record<string, string>> = {
     navSubtext: "EU AI ACT CHECKER",
     navHome: "\u2190 Home",
     navCta: "Get your ACF Score \u2192",
-    heroTitle: "EU AI Act Compliance Checker",
+    heroTitle: "EU AI Act Checker",
     heroSub:
       "Free diagnostic tool to assess your compliance with the European AI Regulation (EU AI Act).",
     start: "Start the diagnostic",
