@@ -522,5 +522,50 @@
       "disclaimer": "AI-experiment. Antwoorden gebaseerd op ACF Standard-documentatie.",
       "seeMore": "Meer Zien"
     }
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "subtitle": "Alles wat u moet weten over het Agentic Commerce Framework® en AI-governance.",
+    "q1": {
+      "question": "Wat is het Agentic Commerce Framework® (ACF)?",
+      "answer": "Het ACF is de wereldwijde governance-standaard voor organisaties die autonome AI-agenten inzetten. Het definieert 4 grondprincipes, 4 operationele lagen, 8 implementatiemodules en 18 soevereiniteits-KPI's."
+    },
+    "q2": {
+      "question": "Wie heeft de ACF-standaard gecreëerd?",
+      "answer": "Het ACF is gecreëerd door Vincent DORANGE, expert in AI-governance."
+    },
+    "q3": {
+      "question": "Wat zijn de 4 grondprincipes van ACF?",
+      "answer": "(1) Beslissingssoevereiniteit, (2) Governance by Design, (3) Ultieme menselijke controle, (4) Traceerbare verantwoordelijkheid."
+    },
+    "q4": {
+      "question": "Wat is de ACF Sovereignty Score?",
+      "answer": "Een eigen metriek die de beslissingsautonomie van uw organisatie meet over 6 governance-dimensies."
+    },
+    "q5": {
+      "question": "Wat zijn de ACF-volwassenheidsniveaus?",
+      "answer": "4 niveaus: Niveau 0 (Klassieke automatisering), Niveau 1 (Geassisteerde agenten), Niveau 2 (Bestuurde agenten — aanbevolen doel), Niveau 3 (Gecontroleerde autonomie)."
+    },
+    "q6": {
+      "question": "Hoe verhoudt ACF zich tot de EU AI Act?",
+      "answer": "Het ACF-framework is volledig compatibel met de EU AI Act."
+    },
+    "q7": {
+      "question": "Wat is de DDA-rol?",
+      "answer": "De DDA is een governance-rol als wettelijke bewaker van uw autonome agenten."
+    },
+    "q8": {
+      "question": "Hoe krijg ik ACF-certificering?",
+      "answer": "Drie certificeringspaden (Niveau 1, 2 en 3) met auditproces."
+    },
+    "q9": {
+      "question": "Wat is het ACF-noodstopprotocol?",
+      "answer": "Een 3-niveau onderbrekingsmechanisme voor autonome agentsystemen."
+    },
+    "q10": {
+      "question": "Is ACF alleen voor grote bedrijven?",
+      "answer": "Nee. ACF schaalt van startups tot grote ondernemingen. De 8 modules kunnen over 6-18 maanden worden ingezet."
+    },
+    "badge": "// FAQ"
   }
 }

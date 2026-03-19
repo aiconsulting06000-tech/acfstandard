@@ -522,5 +522,50 @@
       "disclaimer": "Esperimento IA. Risposte basate sulla documentazione dell'ACF Standard.",
       "seeMore": "Vedi Altro"
     }
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "subtitle": "Tutto quello che devi sapere sull'Agentic Commerce Framework® e la governance dell'IA.",
+    "q1": {
+      "question": "Cos'è l'Agentic Commerce Framework® (ACF)?",
+      "answer": "L'ACF è lo standard globale di governance per le organizzazioni che implementano agenti IA autonomi. Definisce 4 principi fondatori, 4 livelli operativi, 8 moduli di implementazione e 18 KPI di sovranità."
+    },
+    "q2": {
+      "question": "Chi ha creato lo standard ACF?",
+      "answer": "L'ACF è stato creato da Vincent DORANGE, esperto di governance IA."
+    },
+    "q3": {
+      "question": "Quali sono i 4 principi fondatori dell'ACF?",
+      "answer": "(1) Sovranità decisionale, (2) Governance by Design, (3) Controllo umano ultimo, (4) Responsabilità tracciabile."
+    },
+    "q4": {
+      "question": "Cos'è l'ACF Sovereignty Score?",
+      "answer": "Una metrica proprietaria che misura l'indipendenza decisionale su 6 dimensioni di governance."
+    },
+    "q5": {
+      "question": "Quali sono i livelli di maturità ACF?",
+      "answer": "4 livelli: Livello 0 (Automazione classica), Livello 1 (Agenti assistiti), Livello 2 (Agenti governati — obiettivo raccomandato), Livello 3 (Autonomia supervisionata)."
+    },
+    "q6": {
+      "question": "Come si relaziona ACF con l'EU AI Act?",
+      "answer": "Il framework ACF è pienamente compatibile con l'EU AI Act."
+    },
+    "q7": {
+      "question": "Cos'è il ruolo DDA?",
+      "answer": "Il DDA è un ruolo di governance definito da ACF come guardiano legale degli agenti autonomi."
+    },
+    "q8": {
+      "question": "Come ottenere la certificazione ACF?",
+      "answer": "Tre percorsi di certificazione (Livello 1, 2 e 3) con processo di audit."
+    },
+    "q9": {
+      "question": "Cos'è il protocollo di arresto di emergenza ACF?",
+      "answer": "Un meccanismo di interruzione a 3 livelli per sistemi di agenti autonomi."
+    },
+    "q10": {
+      "question": "ACF è solo per grandi aziende?",
+      "answer": "No. ACF scala dalle startup alle grandi imprese. Gli 8 moduli possono essere implementati in 6-18 mesi."
+    },
+    "badge": "// FAQ"
   }
 }

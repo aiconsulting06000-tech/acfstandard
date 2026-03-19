@@ -1158,6 +1158,24 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq" style="padding:100px 0;background:var(--navy)">
+  <div class="ctn">
+    <div style="text-align:center;margin-bottom:60px" class="rev">
+      <span class="ew">${m.faq?.badge || '// FAQ'}</span>
+      <h2>${m.faq?.title || 'FAQ'}</h2>
+      <p style="color:var(--gr);max-width:600px;margin:16px auto 0">${m.faq?.subtitle || ''}</p>
+    </div>
+    <div style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:12px">
+      ${[1,2,3,4,5,6,7,8,9,10].map((i: number) => {
+        const q = m.faq?.['q'+i] as any
+        if (!q) return ''
+        return '<div class="faq-item" style="border:1px solid var(--bd);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.02);transition:.3s"><button onclick="const p=this.parentElement;const a=p.querySelector(\'.faq-a\');const open=a.style.maxHeight!==\'0px\';a.style.maxHeight=open?\'0px\':a.scrollHeight+\'px\';this.querySelector(\'.faq-icon\').textContent=open?\'+\':\'-\';p.style.borderColor=open?\'var(--bd)\':\'var(--gold)\'" style="width:100%;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;background:transparent;border:none;color:var(--w);font-size:16px;font-weight:500;cursor:pointer;text-align:left;font-family:Inter,sans-serif;gap:16px"><span>'+q.question+'</span><span class="faq-icon" style="color:var(--gold);font-size:22px;font-weight:300;flex-shrink:0">+</span></button><div class="faq-a" style="max-height:0px;overflow:hidden;transition:max-height .3s ease"><p style="padding:0 24px 20px;color:var(--gr);line-height:1.7;font-size:15px">'+q.answer+'</p></div></div>'
+      }).join('')}
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="ctasec">
   <div class="ctawm">${m.cta.watermark}</div>
@@ -1672,6 +1690,7 @@ export default function Home() {
   if (!m.megaMenu.products) m.megaMenu.products = {}
   if (!m.megaMenu.about) m.megaMenu.about = {}
   if (!m.megaMenu.partners) m.megaMenu.partners = {}
+  if (!m.faq) m.faq = { badge: '// FAQ', title: 'FAQ', subtitle: '', q1: { question: '', answer: '' } }
 
   return (
     <>

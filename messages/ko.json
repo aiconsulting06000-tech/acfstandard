@@ -522,5 +522,50 @@
       "disclaimer": "AI 실험. ACF 표준 문서 기반 응답.",
       "seeMore": "더 보기"
     }
+  },
+  "faq": {
+    "title": "자주 묻는 질문",
+    "subtitle": "Agentic Commerce Framework®와 AI 거버넌스에 대해 알아야 할 모든 것.",
+    "q1": {
+      "question": "Agentic Commerce Framework® (ACF)란?",
+      "answer": "ACF는 상업 환경에서 자율 AI 에이전트를 배치하는 조직을 위한 글로벌 거버넌스 표준입니다. 4가지 기본 원칙, 4개 운영 계층, 8개 구현 모듈, 18개 주권 KPI를 정의합니다."
+    },
+    "q2": {
+      "question": "ACF 표준을 만든 사람은?",
+      "answer": "AI 거버넌스 전문가 Vincent DORANGE가 만들었습니다."
+    },
+    "q3": {
+      "question": "ACF의 4가지 기본 원칙은?",
+      "answer": "(1) 의사결정 주권 (2) 설계에 의한 거버넌스 (3) 궁극적 인간 통제 (4) 추적 가능한 책임"
+    },
+    "q4": {
+      "question": "ACF Sovereignty Score란?",
+      "answer": "6가지 거버넌스 차원에서 조직의 의사결정 독립성을 측정하는 독점 지표입니다."
+    },
+    "q5": {
+      "question": "ACF 성숙도 레벨은?",
+      "answer": "4단계: 레벨0 (기존 자동화), 레벨1 (보조 에이전트), 레벨2 (관리형 에이전트 — 권장 목표), 레벨3 (감독형 자율)"
+    },
+    "q6": {
+      "question": "ACF와 EU AI Act의 관계는?",
+      "answer": "ACF 프레임워크는 EU AI Act와 완전히 호환됩니다."
+    },
+    "q7": {
+      "question": "DDA 역할이란?",
+      "answer": "DDA는 ACF가 정의한 거버넌스 역할로 자율 에이전트의 법적 후견인입니다."
+    },
+    "q8": {
+      "question": "ACF 인증은 어떻게 받나요?",
+      "answer": "3가지 인증 경로 (레벨 1, 2, 3)가 있으며 각각 감사 프로세스가 필요합니다."
+    },
+    "q9": {
+      "question": "ACF 비상정지 프로토콜이란?",
+      "answer": "자율 에이전트 시스템을 위한 3단계 중단 메커니즘입니다."
+    },
+    "q10": {
+      "question": "ACF는 대기업 전용인가요?",
+      "answer": "아닙니다. 스타트업부터 대기업까지 확장 가능합니다. 8개 모듈을 6-18개월에 걸쳐 단계적으로 도입할 수 있습니다."
+    },
+    "badge": "// FAQ"
   }
 }

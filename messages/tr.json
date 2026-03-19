@@ -522,5 +522,50 @@
       "disclaimer": "Yapay zeka deneyi. Yanıtlar ACF Standard dokümantasyonuna dayanmaktadır.",
       "seeMore": "Daha Fazla"
     }
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "subtitle": "Agentic Commerce Framework® ve AI yönetişimi hakkında bilmeniz gereken her şey.",
+    "q1": {
+      "question": "Agentic Commerce Framework® (ACF) nedir?",
+      "answer": "ACF, otonom AI ajanlarını kullanan kuruluşlar için global yönetişim standardıdır. 4 kurucu ilke, 4 operasyonel katman, 8 uygulama modülü ve 18 egemenlik KPI'sı tanımlar."
+    },
+    "q2": {
+      "question": "ACF standardını kim oluşturdu?",
+      "answer": "ACF, AI yönetişimi uzmanı Vincent DORANGE tarafından oluşturuldu."
+    },
+    "q3": {
+      "question": "ACF'nin 4 kurucu ilkesi nedir?",
+      "answer": "(1) Karar egemenliği (2) Tasarım ile yönetişim (3) Nihai insan kontrolu (4) İzlenebilir hesap verebilirlik"
+    },
+    "q4": {
+      "question": "ACF Sovereignty Score nedir?",
+      "answer": "6 yönetişim boyutunda karar bağımsızlığını ölçen özel bir metriktir."
+    },
+    "q5": {
+      "question": "ACF olgunluk seviyeleri nelerdir?",
+      "answer": "4 seviye: Seviye 0 (Klasik otomasyon), Seviye 1 (Yardımcı ajanlar), Seviye 2 (Yönetilen ajanlar — önerilen hedef), Seviye 3 (Denetimli özerklik)"
+    },
+    "q6": {
+      "question": "ACF'nin EU AI Act ile ilişkisi nedir?",
+      "answer": "ACF çerçevesi EU AI Act ile tam uyumludur."
+    },
+    "q7": {
+      "question": "DDA rolü nedir?",
+      "answer": "DDA, ACF tarafından otonom ajanların yasal koruyucusu olarak tanımlanan bir yönetişim rolüdür."
+    },
+    "q8": {
+      "question": "ACF sertifikası nasıl alınır?",
+      "answer": "Üç sertifikasyon yolu (Seviye 1, 2 ve 3) ile denetim süreci gerektirir."
+    },
+    "q9": {
+      "question": "ACF acil durdurma protokolü nedir?",
+      "answer": "Otonom ajan sistemleri için 3 seviyeli kesme mekanizmasıdır."
+    },
+    "q10": {
+      "question": "ACF sadece büyük şirketler için mi?",
+      "answer": "Hayır. ACF, startup'lardan büyük şirketlere kadar ölçeklenir. 8 modül 6-18 ayda aşamalı olarak uygulanabilir."
+    },
+    "badge": "// FAQ"
   }
 }

@@ -522,5 +522,50 @@
       "disclaimer": "Experimento de IA. Respuestas basadas en la documentación del ACF Standard.",
       "seeMore": "Ver Más"
     }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesita saber sobre el Agentic Commerce Framework® y la gobernanza de IA.",
+    "q1": {
+      "question": "¿Qué es el Agentic Commerce Framework® (ACF)?",
+      "answer": "El ACF es el estándar global de gobernanza para organizaciones que despliegan agentes de IA autónomos en entornos comerciales. Define 4 principios fundadores, 4 capas operativas, 8 módulos de implementación y 18 KPIs de soberanía."
+    },
+    "q2": {
+      "question": "¿Quién creó el estándar ACF?",
+      "answer": "El ACF fue creado por Vincent DORANGE, experto en gobernanza de IA."
+    },
+    "q3": {
+      "question": "¿Cuáles son los 4 principios fundadores del ACF?",
+      "answer": "Los cuatro principios inmutables son: (1) Soberanía decisional, (2) Gobernanza por diseño, (3) Control humano último, (4) Responsabilidad trazable."
+    },
+    "q4": {
+      "question": "¿Qué es el ACF Sovereignty Score?",
+      "answer": "El Score ACF es una métrica propietaria que mide la independencia decisional de su organización en 6 dimensiones de gobernanza."
+    },
+    "q5": {
+      "question": "¿Cuáles son los niveles de madurez ACF?",
+      "answer": "ACF define 4 niveles: Nivel 0 (Automatización clásica), Nivel 1 (Agentes asistidos), Nivel 2 (Agentes gobernados — objetivo recomendado), Nivel 3 (Autonomía supervisada)."
+    },
+    "q6": {
+      "question": "¿Cómo se relaciona ACF con el EU AI Act?",
+      "answer": "El framework ACF es totalmente compatible con el EU AI Act."
+    },
+    "q7": {
+      "question": "¿Qué es el rol DDA?",
+      "answer": "El DDA es un rol de gobernanza definido por ACF. El responsable de decisiones delegadas actúa como guardián legal de sus agentes autónomos."
+    },
+    "q8": {
+      "question": "¿Cómo obtener la certificación ACF?",
+      "answer": "La certificación ACF es una atestación independiente con tres vías (Nivel 1, 2 y 3)."
+    },
+    "q9": {
+      "question": "¿Qué es el protocolo de parada de emergencia ACF?",
+      "answer": "Es un mecanismo de interrupción de 3 niveles para sistemas de agentes autónomos."
+    },
+    "q10": {
+      "question": "¿ACF es solo para grandes empresas?",
+      "answer": "No. ACF escala de startups a grandes empresas. Los 8 módulos pueden desplegarse en 6-18 meses."
+    },
+    "badge": "// FAQ"
   }
 }

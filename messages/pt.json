@@ -522,5 +522,50 @@
       "disclaimer": "Experiência de IA. Respostas baseadas na documentação do ACF Standard.",
       "seeMore": "Ver Mais"
     }
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Tudo sobre o Agentic Commerce Framework® e a governança de IA.",
+    "q1": {
+      "question": "O que é o Agentic Commerce Framework® (ACF)?",
+      "answer": "O ACF é o padrão global de governança para organizações que implementam agentes de IA autónomos. Define 4 princípios fundadores, 4 camadas operacionais, 8 módulos de implementação e 18 KPIs de soberania."
+    },
+    "q2": {
+      "question": "Quem criou o padrão ACF?",
+      "answer": "O ACF foi criado por Vincent DORANGE, especialista em governança de IA."
+    },
+    "q3": {
+      "question": "Quais são os 4 princípios fundadores?",
+      "answer": "(1) Soberania decisional, (2) Governança por design, (3) Controlo humano último, (4) Responsabilidade rastreável."
+    },
+    "q4": {
+      "question": "O que é o ACF Sovereignty Score?",
+      "answer": "Uma métrica proprietária que mede a independência decisional em 6 dimensões de governança."
+    },
+    "q5": {
+      "question": "Quais são os níveis de maturidade ACF?",
+      "answer": "4 níveis: Nível 0 (Automação clássica), Nível 1 (Agentes assistidos), Nível 2 (Agentes governados — alvo recomendado), Nível 3 (Autonomia supervisionada)."
+    },
+    "q6": {
+      "question": "Como o ACF se relaciona com o EU AI Act?",
+      "answer": "O ACF é totalmente compatível com o EU AI Act."
+    },
+    "q7": {
+      "question": "O que é o papel DDA?",
+      "answer": "O DDA é um papel de governança definido pelo ACF como guardião legal dos agentes autónomos."
+    },
+    "q8": {
+      "question": "Como obter a certificação ACF?",
+      "answer": "Três percursos de certificação (Nível 1, 2 e 3) com processo de auditoria."
+    },
+    "q9": {
+      "question": "O que é o protocolo de paragem de emergência ACF?",
+      "answer": "Um mecanismo de interrupção de 3 níveis para sistemas de agentes autónomos."
+    },
+    "q10": {
+      "question": "O ACF é só para grandes empresas?",
+      "answer": "Não. O ACF escala de startups a grandes empresas em 6-18 meses."
+    },
+    "badge": "// FAQ"
   }
 }

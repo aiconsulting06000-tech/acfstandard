@@ -522,5 +522,50 @@
       "disclaimer": "AI-eksperiment. Svar basert på ACF-standarddokumentasjon.",
       "seeMore": "Se mer"
     }
+  },
+  "faq": {
+    "title": "Ofte stilte spørsmål",
+    "subtitle": "Alt du trenger å vite om Agentic Commerce Framework® og AI-styring.",
+    "q1": {
+      "question": "Hva er Agentic Commerce Framework® (ACF)?",
+      "answer": "ACF er den globale styringsstandarden for organisasjoner som bruker autonome AI-agenter. Den definerer 4 grunnprinsipper, 4 operative lag, 8 implementeringsmoduler og 18 suverenitetets-KPIer."
+    },
+    "q2": {
+      "question": "Hvem skapte ACF-standarden?",
+      "answer": "ACF ble skapt av Vincent DORANGE, ekspert på AI-styring."
+    },
+    "q3": {
+      "question": "Hva er ACFs 4 grunnprinsipper?",
+      "answer": "(1) Beslutningssuverenitet, (2) Governance by Design, (3) Ultimat menneskelig kontroll, (4) Sporbar ansvarlighet."
+    },
+    "q4": {
+      "question": "Hva er ACF Sovereignty Score?",
+      "answer": "En proprietær måling av din organisasjons beslutningsuavhengighet på tvers av 6 styringsdimensjoner."
+    },
+    "q5": {
+      "question": "Hva er ACF-modenhetsnivåene?",
+      "answer": "4 nivåer: Nivå 0 (Klassisk automatisering), Nivå 1 (Assisterte agenter), Nivå 2 (Styrte agenter — anbefalt mål), Nivå 3 (Overvåket autonomi)."
+    },
+    "q6": {
+      "question": "Hvordan forholder ACF seg til EU AI Act?",
+      "answer": "ACF-rammeverket er fullt kompatibelt med EU AI Act."
+    },
+    "q7": {
+      "question": "Hva er DDA-rollen?",
+      "answer": "DDA er en styringsrolle definert av ACF som juridisk verge for autonome agenter."
+    },
+    "q8": {
+      "question": "Hvordan får jeg ACF-sertifisering?",
+      "answer": "Tre sertifiseringsveier (Nivå 1, 2 og 3) med revisjonsprocess."
+    },
+    "q9": {
+      "question": "Hva er ACFs nødstoppprotokoll?",
+      "answer": "En 3-nivå avbruddsmekanisme for autonome agentsystemer."
+    },
+    "q10": {
+      "question": "Er ACF bare for store bedrifter?",
+      "answer": "Nei. ACF skalerer fra startups til store bedrifter. De 8 modulene kan implementeres over 6–18 måneder."
+    },
+    "badge": "// FAQ"
   }
 }

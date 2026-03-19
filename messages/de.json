@@ -522,5 +522,50 @@
       "disclaimer": "KI-Experiment. Antworten basieren auf der ACF-Standard-Dokumentation.",
       "seeMore": "Mehr sehen"
     }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über das Agentic Commerce Framework® und KI-Governance wissen müssen.",
+    "q1": {
+      "question": "Was ist das Agentic Commerce Framework® (ACF)?",
+      "answer": "Das ACF ist der globale Governance-Standard für Organisationen, die autonome KI-Agenten in kommerziellen Umgebungen einsetzen. Es definiert 4 Gründungsprinzipien, 4 operative Schichten, 8 Implementierungsmodule und 18 Souveränitäts-KPIs."
+    },
+    "q2": {
+      "question": "Wer hat den ACF-Standard geschaffen?",
+      "answer": "Das ACF wurde von Vincent DORANGE geschaffen, einem Experten für KI-Governance."
+    },
+    "q3": {
+      "question": "Was sind die 4 Gründungsprinzipien des ACF?",
+      "answer": "Die vier unveränderlichen Prinzipien: (1) Entscheidungssouveränität, (2) Governance by Design, (3) Ultimative menschliche Kontrolle, (4) Rückverfolgbare Verantwortlichkeit."
+    },
+    "q4": {
+      "question": "Was ist der ACF Sovereignty Score?",
+      "answer": "Der ACF Score misst die Entscheidungsunabhängigkeit Ihrer Organisation über 6 Governance-Dimensionen."
+    },
+    "q5": {
+      "question": "Was sind die ACF-Reifegrade?",
+      "answer": "ACF definiert 4 Stufen: Stufe 0 (Klassische Automation), Stufe 1 (Assistierte Agenten), Stufe 2 (Governierte Agenten — empfohlenes Ziel), Stufe 3 (Überwachte Autonomie)."
+    },
+    "q6": {
+      "question": "Wie verhält sich ACF zum EU AI Act?",
+      "answer": "Das ACF-Framework ist vollständig kompatibel mit dem EU AI Act."
+    },
+    "q7": {
+      "question": "Was ist die DDA-Rolle?",
+      "answer": "Der DDA ist eine von ACF definierte Governance-Rolle als rechtlicher Hüter Ihrer autonomen Agenten."
+    },
+    "q8": {
+      "question": "Wie erhalte ich die ACF-Zertifizierung?",
+      "answer": "Es gibt drei Zertifizierungswege (Stufe 1, 2 und 3) mit jeweils einem Auditprozess."
+    },
+    "q9": {
+      "question": "Was ist das ACF-Notfallstoppprotokoll?",
+      "answer": "Ein 3-stufiger Unterbrechungsmechanismus für autonome Agentensysteme."
+    },
+    "q10": {
+      "question": "Ist ACF nur für Großunternehmen?",
+      "answer": "Nein. ACF skaliert von Startups bis zu Großunternehmen. Die 8 Module können über 6–18 Monate progressiv eingesetzt werden."
+    },
+    "badge": "// FAQ"
   }
 }

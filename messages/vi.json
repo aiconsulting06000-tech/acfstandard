@@ -522,5 +522,50 @@
       "disclaimer": "Thí nghiệm AI. Phản hồi dựa trên tài liệu Tiêu chuẩn ACF.",
       "seeMore": "Xem Thêm"
     }
+  },
+  "faq": {
+    "badge": "// FAQ",
+    "title": "Câu hỏi thường gặp",
+    "subtitle": "Mọi điều bạn cần biết về Agentic Commerce Framework® và quản trị AI.",
+    "q1": {
+      "question": "What is the Agentic Commerce Framework® (ACF)?",
+      "answer": "The ACF is the global governance standard for organizations deploying autonomous AI agents in commercial environments. It defines 4 founding principles, 4 operational layers, 8 implementation modules, and 18 sovereignty KPIs to ensure that humans retain strategic control over agentic systems."
+    },
+    "q2": {
+      "question": "Who created the ACF Standard?",
+      "answer": "The ACF was created by Vincent DORANGE, an AI governance expert. The framework was developed to address the growing need for structured governance as autonomous agents increasingly make decisions in commerce, finance, and operations."
+    },
+    "q3": {
+      "question": "What are the 4 Founding Principles of ACF?",
+      "answer": "The four immutable principles are: (1) Decision Sovereignty — critical decisions are never delegated to agents, (2) Governance by Design — governance is defined before deployment, (3) Ultimate Human Control — every system preserves human intervention capability, (4) Traceable Accountability — every autonomous action is auditable and attributable."
+    },
+    "q4": {
+      "question": "What is the ACF Sovereignty Score?",
+      "answer": "The ACF Score is a proprietary metric that measures your organization’s decisional independence across 6 governance dimensions. It provides a composite sovereignty score, a 6-axis radar visualization, and a personalized action plan."
+    },
+    "q5": {
+      "question": "What are the ACF maturity levels?",
+      "answer": "ACF defines 4 maturity levels: Level 0 (Classical Automation), Level 1 (Assisted Agents), Level 2 (Governed Agents — recommended target), Level 3 (Supervised Autonomous — for mature organizations only)."
+    },
+    "q6": {
+      "question": "How does ACF relate to the EU AI Act?",
+      "answer": "The ACF framework is designed to be fully compatible with the EU AI Act. Its risk-based governance approach maps directly to the Act’s requirements for high-risk AI systems."
+    },
+    "q7": {
+      "question": "What is the DDA (Delegated Decision Agent) role?",
+      "answer": "The DDA is a governance role defined by ACF. The Delegated Decision Agent Officer serves as the legal guardian of your autonomous agents — responsible for defining mandates, monitoring compliance, and ensuring that no agent exceeds its authorized decision perimeter."
+    },
+    "q8": {
+      "question": "How do I get ACF certified?",
+      "answer": "ACF Certification is an independent attestation of compliance with the ACF governance standard. There are three certification paths (Level 1, 2, and 3), each requiring an audit process. Certified organizations receive a publicly verifiable badge with annual renewal."
+    },
+    "q9": {
+      "question": "What is the ACF Emergency Stop Protocol?",
+      "answer": "The ACF Emergency Stop Protocol is a 3-level interrupt mechanism. Level 1 pauses non-critical operations, Level 2 suspends all agent decision-making, and Level 3 performs a full system shutdown."
+    },
+    "q10": {
+      "question": "Is ACF only for large enterprises?",
+      "answer": "No. ACF is designed to scale from startups deploying their first AI agent to large enterprises managing hundreds of autonomous systems. The 8 implementation modules can be deployed progressively over 6–18 months."
+    }
   }
 }

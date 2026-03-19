@@ -115,6 +115,62 @@ export default async function LocaleLayout({ children, params }: { children: Rea
       "worksFor": { "@type": "Organization", "name": "AI Consulting" },
       "knowsAbout": ["AI Governance", "Agentic Commerce", "E-commerce Strategy", "Autonomous AI Agents", "EU AI Act Compliance"],
       "sameAs": ["https://www.linkedin.com/in/vincent-dorange"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Agentic Commerce Framework® (ACF)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The ACF is the global governance standard for organizations deploying autonomous AI agents in commercial environments. It defines 4 founding principles, 4 operational layers, 8 implementation modules, and 18 sovereignty KPIs to ensure humans retain strategic control over agentic systems." }
+        },
+        {
+          "@type": "Question",
+          "name": "Who created the ACF Standard?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The ACF was created by Vincent DORANGE, an AI governance expert. The framework addresses the growing need for structured governance as autonomous agents increasingly make decisions in commerce, finance, and operations." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the 4 Founding Principles of ACF?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The four principles are: (1) Decision Sovereignty — critical decisions are never delegated to agents, (2) Governance by Design — governance is defined before deployment, (3) Ultimate Human Control — every system preserves human intervention, (4) Traceable Accountability — every action is auditable." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the ACF Sovereignty Score?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The ACF Score is a proprietary metric measuring organizational decisional independence across 6 governance dimensions, providing a composite sovereignty score, 6-axis radar visualization, and personalized action plan." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the ACF maturity levels?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ACF defines 4 levels: Level 0 (Classical Automation), Level 1 (Assisted Agents), Level 2 (Governed Agents — recommended target), Level 3 (Supervised Autonomous — for mature organizations only)." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does ACF relate to the EU AI Act?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ACF is designed to be fully compatible with the EU AI Act. Its risk-based governance approach maps directly to the Act's requirements for high-risk AI systems." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the DDA (Delegated Decision Agent) role?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The DDA is a governance role defined by ACF. The Delegated Decision Agent Officer serves as the legal guardian of autonomous agents — defining mandates, monitoring compliance, and ensuring agents stay within authorized decision perimeters." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get ACF certified?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ACF Certification is an independent attestation with three paths (Level 1, 2, and 3), each requiring an audit. Certified organizations receive a publicly verifiable badge with annual renewal and continuous monitoring." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the ACF Emergency Stop Protocol?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A 3-level interrupt mechanism: Level 1 pauses non-critical operations, Level 2 suspends all agent decision-making, Level 3 performs full system shutdown. Each level has defined response times and escalation procedures." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ACF only for large enterprises?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. ACF scales from startups to large enterprises. The 8 implementation modules can be deployed progressively over 6-18 months, allowing organizations of any size to build governance at their own pace." }
+        }
+      ]
     }
   ]
 

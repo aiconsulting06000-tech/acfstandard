@@ -522,5 +522,50 @@
       "disclaimer": "Eksperyment AI. Odpowiedzi oparte na dokumentacji ACF Standard.",
       "seeMore": "Zobacz Więcej"
     }
+  },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "subtitle": "Wszystko o Agentic Commerce Framework® i zarządzaniu AI.",
+    "q1": {
+      "question": "Czym jest Agentic Commerce Framework® (ACF)?",
+      "answer": "ACF to globalny standard zarządzania dla organizacji wdrażających autonomiczne agenty AI. Definiuje 4 zasady założycielskie, 4 warstwy operacyjne, 8 modułów wdrożeniowych i 18 KPI suwerenności."
+    },
+    "q2": {
+      "question": "Kto stworzył standard ACF?",
+      "answer": "ACF został stworzony przez Vincenta DORANGE, eksperta od zarządzania AI."
+    },
+    "q3": {
+      "question": "Jakie są 4 zasady założycielskie ACF?",
+      "answer": "(1) Suwerenność decyzyjna, (2) Governance by Design, (3) Ostateczna kontrola człowieka, (4) Śledzalna odpowiedzialność."
+    },
+    "q4": {
+      "question": "Czym jest ACF Sovereignty Score?",
+      "answer": "Własna metryka mierząca niezależność decyzyjną w 6 wymiarach zarządzania."
+    },
+    "q5": {
+      "question": "Jakie są poziomy dojrzałości ACF?",
+      "answer": "4 poziomy: Poziom 0 (Klasyczna automatyzacja), Poziom 1 (Agenci asystujący), Poziom 2 (Agenci zarządzani — zalecany cel), Poziom 3 (Nadzorowana autonomia)."
+    },
+    "q6": {
+      "question": "Jak ACF odnosi się do EU AI Act?",
+      "answer": "Framework ACF jest w pełni zgodny z EU AI Act."
+    },
+    "q7": {
+      "question": "Czym jest rola DDA?",
+      "answer": "DDA to rola zarządcza definiowana przez ACF jako prawny opiekun agentów autonomicznych."
+    },
+    "q8": {
+      "question": "Jak uzyskać certyfikację ACF?",
+      "answer": "Trzy ścieżki certyfikacji (Poziom 1, 2 i 3) z procesem audytu."
+    },
+    "q9": {
+      "question": "Czym jest protokół awaryjnego zatrzymania ACF?",
+      "answer": "3-poziomowy mechanizm przerwania dla systemów agentów autonomicznych."
+    },
+    "q10": {
+      "question": "Czy ACF jest tylko dla dużych firm?",
+      "answer": "Nie. ACF skaluje się od startupów po duże przedsiębiorstwa. 8 modułów można wdrażać przez 6-18 miesięcy."
+    },
+    "badge": "// FAQ"
   }
 }

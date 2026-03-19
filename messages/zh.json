@@ -522,5 +522,50 @@
       "disclaimer": "AI实验。回答基于ACF标准文档。",
       "seeMore": "查看更多"
     }
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "关于Agentic Commerce Framework®和AI治理您需要了解的一切。",
+    "q1": {
+      "question": "什么是Agentic Commerce Framework® (ACF)？",
+      "answer": "ACF是针对在商业环境中部署自主AI代理的组织的全球治理标准。它定义4项基本原则、4个运营层、8个实施模块和18个主权KPI。"
+    },
+    "q2": {
+      "question": "谁创建了ACF标准？",
+      "answer": "ACF由AI治理专家Vincent DORANGE创建。"
+    },
+    "q3": {
+      "question": "ACF的4项基本原则是什么？",
+      "answer": "(1) 决策主权 (2) 设计治理 (3) 最终人类控制 (4) 可追溯责任"
+    },
+    "q4": {
+      "question": "什么是ACF Sovereignty Score？",
+      "answer": "衡量您组织在6个治理维度上的决策独立性的专有指标。"
+    },
+    "q5": {
+      "question": "ACF的成熟度级别是什么？",
+      "answer": "4个级别：级别0（经典自动化）、级别1（辅助代理）、级别2（受治代理 — 推荐目标）、级别3（监督自主）"
+    },
+    "q6": {
+      "question": "ACF与EU AI Act有什么关系？",
+      "answer": "ACF框架与EU AI Act完全兼容。"
+    },
+    "q7": {
+      "question": "什么是DDA角色？",
+      "answer": "DDA是ACF定义的治理角色，作为自主代理的法律监护人。"
+    },
+    "q8": {
+      "question": "如何获得ACF认证？",
+      "answer": "三条认证路径（级别1、2、3），各需审计流程。"
+    },
+    "q9": {
+      "question": "什么是ACF紧急停止协议？",
+      "answer": "针对自主代理系统的3级中断机制。"
+    },
+    "q10": {
+      "question": "ACF只适用于大企业吗？",
+      "answer": "不是。ACF从初创企业到大型企业均可适用。8个模块可在6-18个月内逐步部署。"
+    },
+    "badge": "// FAQ"
   }
 }
