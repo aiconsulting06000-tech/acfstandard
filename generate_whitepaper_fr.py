@@ -417,10 +417,10 @@ def draw_framework_page1(c):
          "Le cadre de gouvernance \u00e9volue continuellement avec les capacit\u00e9s des agents."),
     ]
 
-    y -= 25
+    y -= 20
     for code, title, desc in principles:
         c.setFillColor(DARK_CARD)
-        c.roundRect(50, y - 15, W - 100, 48, 5, fill=1, stroke=0)
+        c.roundRect(50, y - 12, W - 100, 45, 5, fill=1, stroke=0)
         # Gold number
         c.setFillColor(GOLD)
         c.setFont("Helvetica-Bold", 12)
@@ -433,10 +433,10 @@ def draw_framework_page1(c):
         c.setFillColor(GREY)
         c.setFont("Helvetica", 9)
         c.drawString(62, y - 2, desc)
-        y -= 60
+        y -= 55
 
     # 4 Layers
-    y -= 15
+    y -= 10
     c.setFillColor(GOLD)
     c.setFont("Helvetica-Bold", 14)
     c.drawString(40, y, "Les 4 Couches Op\u00e9rationnelles")
@@ -451,10 +451,10 @@ def draw_framework_page1(c):
         ("C4", "Technique", "Gating adaptatif, alertes multi-niveaux, 18 KPIs, dashboards temps r\u00e9el"),
     ]
 
-    y -= 25
+    y -= 20
     for code, title, desc in layers:
         c.setFillColor(DARK_CARD)
-        c.roundRect(50, y - 12, W - 100, 42, 5, fill=1, stroke=0)
+        c.roundRect(50, y - 10, W - 100, 40, 5, fill=1, stroke=0)
         c.setFillColor(GOLD)
         c.setFont("Helvetica-Bold", 11)
         c.drawString(62, y + 14, code)
@@ -464,7 +464,7 @@ def draw_framework_page1(c):
         c.setFillColor(GREY)
         c.setFont("Helvetica", 9)
         c.drawString(62, y - 2, desc)
-        y -= 55
+        y -= 50
 
     draw_footer(c, 5)
 
@@ -583,27 +583,27 @@ def draw_methodology_page(c):
         ("MOD 08", "Gestion de crise", "Incidents 3 niveaux. Exercices de simulation d'arr\u00eat d'urgence."),
     ]
 
-    y -= 45
+    y -= 40
     for code, name, desc in modules:
         c.setFillColor(DARK_CARD)
-        c.roundRect(40, y - 8, W - 80, 55, 5, fill=1, stroke=0)
+        c.roundRect(40, y - 6, W - 80, 48, 5, fill=1, stroke=0)
 
         # Code
         c.setFillColor(GOLD)
         c.setFont("Helvetica-Bold", 10)
-        c.drawString(52, y + 28, code)
+        c.drawString(52, y + 24, code)
 
         # Name
         c.setFillColor(WHITE)
         c.setFont("Helvetica-Bold", 11)
-        c.drawString(120, y + 28, name)
+        c.drawString(120, y + 24, name)
 
         # Description
         c.setFillColor(GREY)
-        c.setFont("Helvetica", 9.5)
-        c.drawString(52, y + 8, desc)
+        c.setFont("Helvetica", 9)
+        c.drawString(52, y + 6, desc)
 
-        y -= 68
+        y -= 58
 
     # Timeline hint
     y -= 5

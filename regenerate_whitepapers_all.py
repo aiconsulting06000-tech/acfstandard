@@ -728,22 +728,22 @@ def generate_pdf(lang_code, t):
     # ── Page 5: Framework Principles & Layers ──
     draw_page_bg(c)
     y = H - 80; y = draw_section_header(c, t["fw_num"], t["fw_title"], y)
-    y -= 15; c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 14); c.drawString(40, y, t["fw_principles_title"])
-    y -= 8; draw_gold_line(c, 40, y, 180, 1); y -= 25
+    y -= 12; c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 14); c.drawString(40, y, t["fw_principles_title"])
+    y -= 8; draw_gold_line(c, 40, y, 180, 1); y -= 20
     for code, title, desc in t["principles"]:
-        c.setFillColor(DARK_CARD); c.roundRect(50, y - 15, W - 100, 48, 5, fill=1, stroke=0)
+        c.setFillColor(DARK_CARD); c.roundRect(50, y - 12, W - 100, 45, 5, fill=1, stroke=0)
         c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 12); c.drawString(62, y + 16, code)
         c.setFillColor(WHITE); c.setFont("Helvetica-Bold", 11); c.drawString(95, y + 16, title)
         c.setFillColor(GREY); c.setFont("Helvetica", 9); c.drawString(62, y - 2, desc)
-        y -= 60
-    y -= 15; c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 14); c.drawString(40, y, t["fw_layers_title"])
-    y -= 8; draw_gold_line(c, 40, y, 200, 1); y -= 25
+        y -= 55
+    y -= 10; c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 14); c.drawString(40, y, t["fw_layers_title"])
+    y -= 8; draw_gold_line(c, 40, y, 200, 1); y -= 20
     for code, title, desc in t["layers"]:
-        c.setFillColor(DARK_CARD); c.roundRect(50, y - 12, W - 100, 42, 5, fill=1, stroke=0)
+        c.setFillColor(DARK_CARD); c.roundRect(50, y - 10, W - 100, 40, 5, fill=1, stroke=0)
         c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 11); c.drawString(62, y + 14, code)
         c.setFillColor(WHITE); c.setFont("Helvetica-Bold", 10); c.drawString(95, y + 14, title)
         c.setFillColor(GREY); c.setFont("Helvetica", 9); c.drawString(62, y - 2, desc)
-        y -= 55
+        y -= 50
     draw_footer(c, 5); c.showPage()
 
     # ── Page 6: Maturity Levels ──
@@ -776,13 +776,13 @@ def generate_pdf(lang_code, t):
     y = H - 80; y = draw_section_header(c, t["meth_num"], t["meth_title"], y)
     y -= 10; c.setFillColor(GREY); c.setFont("Helvetica", 11)
     c.drawString(40, y, t["meth_desc1"]); c.drawString(40, y - 16, t["meth_desc2"])
-    y -= 45
+    y -= 40
     for code, name, desc in t["modules"]:
-        c.setFillColor(DARK_CARD); c.roundRect(40, y - 8, W - 80, 55, 5, fill=1, stroke=0)
-        c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 10); c.drawString(52, y + 28, code)
-        c.setFillColor(WHITE); c.setFont("Helvetica-Bold", 11); c.drawString(120, y + 28, name)
-        c.setFillColor(GREY); c.setFont("Helvetica", 9.5); c.drawString(52, y + 8, desc)
-        y -= 68
+        c.setFillColor(DARK_CARD); c.roundRect(40, y - 6, W - 80, 48, 5, fill=1, stroke=0)
+        c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 10); c.drawString(52, y + 24, code)
+        c.setFillColor(WHITE); c.setFont("Helvetica-Bold", 11); c.drawString(120, y + 24, name)
+        c.setFillColor(GREY); c.setFont("Helvetica", 9); c.drawString(52, y + 6, desc)
+        y -= 58
     y -= 5; draw_gold_line(c, 40, y + 10, W - 80, 0.5)
     c.setFillColor(GREY); c.setFont("Helvetica-Oblique", 9); c.drawCentredString(W / 2, y - 8, t["meth_timeline"])
     draw_footer(c, 7); c.showPage()
