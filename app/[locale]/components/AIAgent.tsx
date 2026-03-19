@@ -221,14 +221,20 @@ export default function AIAgent() {
     if (!window.speechSynthesis || !ttsEnabled) return;
     window.speechSynthesis.cancel();
 
+    const LANG_MAP: Record<string, string> = {
+      fr: "fr-FR", en: "en-US", es: "es-ES", de: "de-DE", pt: "pt-BR",
+      ja: "ja-JP", zh: "zh-CN", ko: "ko-KR", it: "it-IT", nl: "nl-NL",
+      ru: "ru-RU", ar: "ar-SA", tr: "tr-TR",
+    };
+
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = lang === "fr" ? "fr-FR" : "en-US";
+    utterance.lang = LANG_MAP[lang] || "en-US";
     utterance.rate = 1.0;
     utterance.pitch = 1.0;
 
-    // Simple: pick first matching Google voice, or first available
+    // Pick first matching Google voice, or first available for the language
     const voices = window.speechSynthesis.getVoices();
-    const targetLang = lang === "fr" ? "fr" : "en";
+    const targetLang = LANG_MAP[lang]?.split("-")[0] || "en";
     const preferred = voices.find(v => v.lang.startsWith(targetLang) && v.name.includes("Google")) ||
                       voices.find(v => v.lang.startsWith(targetLang));
     if (preferred) utterance.voice = preferred;
