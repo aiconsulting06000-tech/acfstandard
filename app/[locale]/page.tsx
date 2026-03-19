@@ -1094,7 +1094,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="plbl">${m.products.checker.label}</div><div class="ptitle">${m.products.checker.title}</div>
       <div class="pdesc">${m.products.checker.description}</div>
       <ul class="pfeat"><li>${m.products.checker.features.feature1}</li><li>${m.products.checker.features.feature2}</li><li>${m.products.checker.features.feature3}</li></ul>
-      <a href="/${locale}/compliance-checker" class="plink">${m.products.checker.cta}</a>
+      <a href="/${locale}/compliance-checker" class="plink" target="_top">${m.products.checker.cta}</a>
     </div>
     <div class="pc rev d2">
       <div class="piw"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
@@ -1108,14 +1108,14 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="plbl">${m.products.control.label}</div><div class="ptitle">${m.products.control.title}</div>
       <div class="pdesc">${m.products.control.description}</div>
       <ul class="pfeat"><li>${m.products.control.features.feature1}</li><li>${m.products.control.features.feature2}</li><li>${m.products.control.features.feature3}</li></ul>
-      <a href="/control" class="plink">${m.products.control.cta}</a>
+      <a href="/${locale}/acf-control" class="plink" target="_top">${m.products.control.cta}</a>
     </div>
     <div class="pc rev d4">
       <div class="piw"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg></div>
       <div class="plbl">${m.products.certification.label}</div><div class="ptitle">${m.products.certification.title}</div>
       <div class="pdesc">${m.products.certification.description}</div>
       <ul class="pfeat"><li>${m.products.certification.features.feature1}</li><li>${m.products.certification.features.feature2}</li><li>${m.products.certification.features.feature3}</li></ul>
-      <a href="/certification" class="plink">${m.products.certification.cta}</a>
+      <a href="/${locale}/acf-certification" class="plink" target="_top">${m.products.certification.cta}</a>
     </div>
   </div>
 </section>
