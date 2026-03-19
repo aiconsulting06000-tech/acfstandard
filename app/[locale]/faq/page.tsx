@@ -131,7 +131,7 @@ const faqData: Record<string, FaqTab[]> = {
         { q: "Combien de temps pour implémenter l'ACF ?", a: "L'implémentation complète des 8 modules prend 6 à 18 mois, selon la maturité existante et la complexité de vos systèmes. Le déploiement est progressif : les modules fondamentaux (M01-M03) peuvent être implémentés en 2-3 mois, fournissant une base de gouvernance immédiate." },
         { q: "L'ACF est-il adapté aux startups et PME ?", a: "Absolument. L'ACF est conçu pour s'adapter à toutes les tailles. Les startups déployant leur premier agent IA bénéficient d'un cadre structurant dès le départ (Gouvernance by Design). Les 8 modules se déploient progressivement. Des tarifs adaptés sont disponibles." },
         { q: "Faut-il implémenter les 8 modules d'un coup ?", a: "Non. L'implémentation est progressive. Commencez par les 3 modules fondamentaux : M01 (Cartographie), M02 (Classification des risques), M03 (Mandats). Les modules suivants s'ajoutent à mesure que votre maturité agentique évolue. Chaque module apporte une valeur autonome." },
-        { q: "Comment démarrer avec l'ACF ?", a: "Trois étapes simples : (1) Réalisez votre diagnostic ACF Score gratuit sur acf-score.com, (2) Téléchargez le livre blanc ACF pour comprendre le framework, (3) Contactez notre équipe pour un accompagnement personnalisé. Vous pouvez aussi utiliser l'ACF AI Act Checker pour évaluer votre conformité EU AI Act." },
+        { q: "Comment démarrer avec l'ACF ?", a: "Quatre étapes simples : (1) Vérifiez votre conformité EU AI Act avec l'ACF AI Act Checker gratuit, (2) Évaluez votre gouvernance avec le diagnostic ACF Score sur acf-score.com, (3) Téléchargez le livre blanc ACF pour comprendre le framework complet, (4) Contactez notre équipe pour un accompagnement personnalisé." },
         { q: "L'ACF est-il compatible avec d'autres frameworks IA ?", a: "Oui. L'ACF complète les frameworks existants : NIST AI RMF, ISO/IEC 42001, IEEE 7000, OECD AI Principles. L'ACF se distingue par sa spécialisation dans le commerce agentique et les agents IA autonomes — un domaine que les frameworks génériques ne couvrent pas. L'ACF fournit la couche de gouvernance spécifique aux agents commerciaux." },
       ],
     },
@@ -237,7 +237,7 @@ const faqData: Record<string, FaqTab[]> = {
         { q: "How long to implement ACF?", a: "Full implementation takes 6-18 months. Foundational modules (M01-M03) can deploy in 2-3 months for immediate governance. Progressive deployment adapts to your existing maturity and system complexity." },
         { q: "Is ACF suitable for startups and SMEs?", a: "Absolutely. ACF scales to all organization sizes. Startups benefit from structured governance from the start (Governance by Design). The 8 modules deploy progressively at the pace of growth. Adapted pricing available." },
         { q: "Do all 8 modules need implementing at once?", a: "No. Start with 3 foundational modules: M01 (Mapping), M02 (Risk Classification), M03 (Mandates). Add subsequent modules as agentic maturity evolves. Each module delivers standalone value." },
-        { q: "How to get started with ACF?", a: "Three steps: (1) Take the free ACF Score diagnostic on acf-score.com, (2) Download the ACF whitepaper, (3) Contact our team for personalized guidance. Also use the ACF AI Act Checker for EU AI Act compliance assessment." },
+        { q: "How to get started with ACF?", a: "Four simple steps: (1) Check your EU AI Act compliance with the free ACF AI Act Checker, (2) Assess your governance with the ACF Score diagnostic on acf-score.com, (3) Download the ACF whitepaper to understand the complete framework, (4) Contact our team for personalized guidance." },
         { q: "Is ACF compatible with other AI frameworks?", a: "Yes. ACF complements NIST AI RMF, ISO/IEC 42001, IEEE 7000, and OECD AI Principles. ACF specializes in agentic commerce and autonomous AI agents — a domain generic frameworks don't cover in depth. ACF provides the commercial agent-specific governance layer." },
       ],
     },
@@ -292,6 +292,9 @@ export default function FaqPage() {
     })),
   };
 
+  const navHome = lang === "fr" ? "\u2190 Accueil" : "\u2190 Home";
+  const navCta = lang === "fr" ? "Obtenir votre ACF Score \u2192" : "Get your ACF Score \u2192";
+
   return (
     <>
       <script
@@ -299,11 +302,53 @@ export default function FaqPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
+      {/* ── NAV ── */}
+      <nav
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1000,
+          background: `linear-gradient(135deg, ${C.navy1} 0%, ${C.navy2} 100%)`,
+          borderBottom: `1px solid ${C.goldBorder}`,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "0 24px",
+          height: 64,
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <a href={`/${locale}`} style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 16 }}>
+            <div
+              style={{
+                width: 40, height: 40,
+                background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`,
+                borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center",
+                fontWeight: 800, fontSize: 16, color: C.navy1,
+              }}
+            >
+              ACF
+            </div>
+            <div>
+              <div style={{ color: C.white, fontWeight: 700, fontSize: 16, lineHeight: 1.2 }}>ACF Standard</div>
+              <div style={{ color: C.gold, fontSize: 11, fontWeight: 600, letterSpacing: 1.5, textTransform: "uppercase" as const }}>FAQ</div>
+            </div>
+          </a>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+          <a href={`/${locale}`} style={{ color: C.gray2, textDecoration: "none", fontSize: 14, fontWeight: 500 }}>{navHome}</a>
+          <a href="https://www.acf-score.com" target="_blank" rel="noopener" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "8px 18px", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 700 }}>{navCta}</a>
+        </div>
+      </nav>
+
       {/* ── HERO ── */}
       <section
         style={{
           background: C.navy1,
-          padding: "120px 0 60px",
+          padding: "140px 0 60px",
           textAlign: "center",
         }}
       >
