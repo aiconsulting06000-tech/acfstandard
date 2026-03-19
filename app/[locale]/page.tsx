@@ -438,24 +438,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div class="rptitle">${m.regionSelector.title}</div>
     <button class="rpclose" onclick="closeRegion()">${m.regionSelector.close}</button>
   </div>
-  <div class="rpcols" style="grid-template-columns:repeat(5,1fr);gap:28px">
-    <div>
-      <div class="rpcol-title">Global</div>
-      <a class="rpglobal" href="#" onclick="switchLocale('en');return false"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span><span>${m.regionSelector.global}</span></a>
-      <div class="rpcol-title" style="margin-top:20px">${m.regionSelector.northAmerica}</div>
-      <ul class="rplinks">
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇺🇸</span>United States <span class="rplang">(English)</span></a></li>
-        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇨🇦</span>Canada <span class="rplang">(EN/FR)</span></a></li>
-        <li><a href="#" onclick="switchLocale('es');return false"><span class="rpflag">🇲🇽</span>Mexico <span class="rplang">(Español)</span></a></li>
-      </ul>
-      <div class="rpcol-title" style="margin-top:20px">${m.regionSelector.latinAmerica}</div>
-      <ul class="rplinks">
-        <li><a href="#" onclick="switchLocale('pt');return false"><span class="rpflag">🇧🇷</span>Brazil <span class="rplang">(Português)</span></a></li>
-        <li><a href="#" onclick="switchLocale('es');return false"><span class="rpflag">🇦🇷</span>Argentina <span class="rplang">(Español)</span></a></li>
-        <li><a href="#" onclick="switchLocale('es');return false"><span class="rpflag">🇨🇱</span>Chile <span class="rplang">(Español)</span></a></li>
-        <li><a href="#" onclick="switchLocale('es');return false"><span class="rpflag">🇨🇴</span>Colombia <span class="rplang">(Español)</span></a></li>
-      </ul>
-    </div>
+  <div class="rpcols" style="grid-template-columns:repeat(4,1fr);gap:32px">
     <div>
       <div class="rpcol-title">${m.regionSelector.westernEurope}</div>
       <ul class="rplinks">
@@ -485,6 +468,21 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         <li><a href="#" onclick="switchLocale('ar');return false"><span class="rpflag">🇪🇬</span>Egypt <span class="rplang">(العربية)</span></a></li>
         <li><a href="#" onclick="switchLocale('fr');return false"><span class="rpflag">🇲🇦</span>Morocco <span class="rplang">(Français)</span></a></li>
         <li><a href="#" onclick="switchLocale('tr');return false"><span class="rpflag">🇹🇷</span>Turkey <span class="rplang">(Türkçe)</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="rpcol-title">${m.regionSelector.northAmerica}</div>
+      <ul class="rplinks">
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇺🇸</span>United States <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇨🇦</span>Canada <span class="rplang">(EN/FR)</span></a></li>
+        <li><a href="#" onclick="switchLocale('es');return false"><span class="rpflag">🇲🇽</span>Mexico <span class="rplang">(Español)</span></a></li>
+      </ul>
+      <div class="rpcol-title" style="margin-top:20px">${m.regionSelector.latinAmerica}</div>
+      <ul class="rplinks">
+        <li><a href="#" onclick="switchLocale('pt');return false"><span class="rpflag">🇧🇷</span>Brazil <span class="rplang">(Português)</span></a></li>
+        <li><a href="#" onclick="switchLocale('es');return false"><span class="rpflag">🇦🇷</span>Argentina <span class="rplang">(Español)</span></a></li>
+        <li><a href="#" onclick="switchLocale('es');return false"><span class="rpflag">🇨🇱</span>Chile <span class="rplang">(Español)</span></a></li>
+        <li><a href="#" onclick="switchLocale('es');return false"><span class="rpflag">🇨🇴</span>Colombia <span class="rplang">(Español)</span></a></li>
       </ul>
     </div>
     <div>
