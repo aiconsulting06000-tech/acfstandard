@@ -516,7 +516,8 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         <a href="/${locale}/acf-score">${m.nav.acfScore}</a>
         <a href="/control">${m.nav.acfControl}</a>
         <a href="/certification">${m.nav.acfCertification}</a>
-        <a href="/${locale}/#faq">FAQ</a>
+        <a href="/${locale}/compliance-checker">ACF AI Act Checker</a>
+        <a href="/${locale}/faq">FAQ</a>
       </div>
       <!-- Region selector Bain-style -->
       <button class="regionbtn" id="regionbtn" onclick="openRegion()">
@@ -528,7 +529,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v2h20v-2c0-3.3-6.7-5-10-5z"/></svg>
         ${m.nav.partners}
       </a>
-      <a href="/contact" class="ncta">${m.nav.requestAssessment}</a>
+      <a href="/contact" class="ncta">${m.nav.requestAssessment?.length > 15 ? (locale === 'fr' ? 'Nous contacter' : 'Contact us') : m.nav.requestAssessment}</a>
     </div>
   </div>
 </nav>
