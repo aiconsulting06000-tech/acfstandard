@@ -66,7 +66,7 @@ def draw_cover_page(c):
     # Subtitle
     c.setFillColor(GOLD)
     c.setFont("Helvetica-Bold", 18)
-    c.drawString(40, H - 240, "LIVRE BLANC v1.0")
+    c.drawString(40, H - 240, "LIVRE BLANC")
 
     c.setFillColor(LIGHT_GREY)
     c.setFont("Helvetica", 13)
@@ -121,7 +121,7 @@ def draw_cover_page(c):
     c.drawString(250, y_info, "Date")
     c.setFillColor(WHITE)
     c.setFont("Helvetica-Bold", 12)
-    c.drawString(250, y_info - 18, "Mars 2026")
+    c.drawString(250, y_info - 18, "Décembre 2025")
 
     c.setFillColor(GREY)
     c.setFont("Helvetica", 10)
@@ -134,7 +134,7 @@ def draw_cover_page(c):
     draw_gold_line(c, 40, 60, W - 80, 1)
     c.setFillColor(GREY)
     c.setFont("Helvetica", 8)
-    c.drawCentredString(W / 2, 42, "www.acf-standard.com")
+    c.drawCentredString(W / 2, 42, "www.acfstandard.com")
 
 
 def draw_page_bg(c):
@@ -710,9 +710,15 @@ def draw_products_page(c):
     y -= 10
     c.setFillColor(GREY)
     c.setFont("Helvetica", 11)
-    c.drawString(40, y, "Trois produits compl\u00e9mentaires op\u00e9rationnalisant le standard ACF.")
+    c.drawString(40, y, "Quatre produits compl\u00e9mentaires op\u00e9rationnalisant le standard ACF.")
 
     products = [
+        ("ACF AI Act Checker", "OUTIL DE CONFORMIT\u00c9",
+         "Outil de pr\u00e9-diagnostic gratuit pour v\u00e9rifier la conformit\u00e9 de votre syst\u00e8me IA "
+         "avec le EU AI Act. Identifiez vos obligations selon votre r\u00f4le et niveau de risque.",
+         ["Diagnostic de conformit\u00e9 EU AI Act",
+          "Cartographie des obligations par r\u00f4le",
+          "Classification automatis\u00e9e des risques"]),
         ("ACF Score", "OUTIL DIAGNOSTIQUE",
          "Score de souverainet\u00e9 propri\u00e9taire mesurant votre ind\u00e9pendance d\u00e9cisionnelle "
          "sur 6 dimensions de gouvernance.",
@@ -735,7 +741,7 @@ def draw_products_page(c):
 
     y -= 35
     for name, label, desc, features in products:
-        box_h = 155
+        box_h = 130
         c.setFillColor(DARK_CARD)
         c.roundRect(40, y - 10, W - 80, box_h, 6, fill=1, stroke=0)
 
@@ -783,7 +789,7 @@ def draw_products_page(c):
             c.drawString(78, ly, feat)
             ly -= 15
 
-        y -= (box_h + 18)
+        y -= (box_h + 14)
 
     draw_footer(c, 9)
 
@@ -821,8 +827,7 @@ def draw_about_page(c):
 
     y -= 45
     info = [
-        ("Site web", "www.acf-standard.com"),
-        ("Email", "contact@acf-standard.com"),
+        ("Site web", "www.acfstandard.com"),
         ("Standard", "ACF\u00ae \u2014 Agentic Commerce Framework"),
     ]
     for label, value in info:
@@ -866,11 +871,7 @@ def draw_back_page(c):
     # Website
     c.setFillColor(WHITE)
     c.setFont("Helvetica", 13)
-    c.drawCentredString(W / 2, cy - 105, "www.acf-standard.com")
-
-    c.setFillColor(GREY)
-    c.setFont("Helvetica", 11)
-    c.drawCentredString(W / 2, cy - 130, "contact@acf-standard.com")
+    c.drawCentredString(W / 2, cy - 105, "www.acfstandard.com")
 
     # Footer
     c.setFillColor(MEDIUM_GREY)
@@ -881,7 +882,7 @@ def draw_back_page(c):
 
 def main():
     c = canvas.Canvas(OUTPUT_PATH, pagesize=A4)
-    c.setTitle("ACF\u00ae \u2014 Livre Blanc v1.0")
+    c.setTitle("ACF\u00ae \u2014 Livre Blanc")
     c.setAuthor("Vincent DORANGE")
     c.setSubject("Agentic Commerce Framework \u2014 Standard de gouvernance pour syst\u00e8mes agentiques")
 

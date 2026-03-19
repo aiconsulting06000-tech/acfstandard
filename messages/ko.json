@@ -41,7 +41,7 @@
     "requestAssessment": "평가 요청",
     "partnerLogin": "파트너 로그인",
     "applyPartner": "파트너 신청",
-    "contact": "연락처"
+    "contact": "문의"
   },
   "megaMenu": {
     "framework": {
@@ -397,7 +397,18 @@
   "products": {
     "badge": "// 에코시스템",
     "title": "ACF 에코시스템",
-    "subtitle": "ACF 표준을 운영화하는 세 가지 상호 보완적 제품.",
+    "subtitle": "ACF 표준을 운영화하는 네 가지 상호 보완적 제품.",
+    "checker": {
+      "label": "컴플라이언스 도구",
+      "title": "ACF AI Act Checker",
+      "description": "EU AI Act에 대한 AI 시스템의 규정 준수를 확인하는 무료 사전 진단 도구.",
+      "features": {
+        "feature1": "EU AI Act 규정 준수 진단",
+        "feature2": "역할 기반 의무 매핑",
+        "feature3": "자동 위험 분류"
+      },
+      "cta": "규정 준수 확인 →"
+    },
     "score": {
       "label": "진단 도구",
       "title": "ACF Score",

@@ -314,7 +314,7 @@ section{padding:60px 0;position:relative;z-index:1}
 .vsl{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gr);margin-top:2px}
 
 /* ═══ PRODUCTS ═══ */
-.prodgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:60px}
+.prodgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:60px}
 .pc{background:var(--navy3);padding:52px 44px;transition:.3s;position:relative;overflow:hidden}
 .pc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));transform:scaleX(0);transform-origin:left;transition:.4s cubic-bezier(.16,1,.3,1)}
 .pc:hover::after{transform:scaleX(1)}
@@ -378,7 +378,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   .hw{grid-template-columns:1fr;gap:48px;padding:80px 32px 60px}
   .hvis{height:360px}
   .lgrid{grid-template-columns:repeat(2,1fr)}
-  .prodgrid{grid-template-columns:1fr}
+  .prodgrid{grid-template-columns:repeat(2,1fr)}
   .bgrid{grid-template-columns:repeat(2,1fr)}
   .fgrid{grid-template-columns:1fr 1fr;gap:36px}
   .sgrid{grid-template-columns:repeat(2,1fr)}
@@ -438,7 +438,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div class="rptitle">${m.regionSelector.title}</div>
     <button class="rpclose" onclick="closeRegion()">${m.regionSelector.close}</button>
   </div>
-  <div class="rpcols" style="grid-template-columns:repeat(4,1fr);gap:32px">
+  <div class="rpcols" style="grid-template-columns:repeat(5,1fr);gap:28px">
     <div>
       <div class="rpcol-title">${m.regionSelector.westernEurope}</div>
       <ul class="rplinks">
@@ -450,15 +450,33 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         <li><a href="#" onclick="switchLocale('pt');return false"><span class="rpflag">🇵🇹</span>Portugal <span class="rplang">(Português)</span></a></li>
         <li><a href="#" onclick="switchLocale('nl');return false"><span class="rpflag">🇧🇪</span>Belgium <span class="rplang">(FR/NL)</span></a></li>
         <li><a href="#" onclick="switchLocale('fr');return false"><span class="rpflag">🇨🇭</span>Switzerland <span class="rplang">(FR/DE/IT)</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="rpcol-title">${m.regionSelector.westernEurope}</div>
+      <ul class="rplinks">
         <li><a href="#" onclick="switchLocale('nl');return false"><span class="rpflag">🇳🇱</span>Netherlands <span class="rplang">(Nederlands)</span></a></li>
         <li><a href="#" onclick="switchLocale('de');return false"><span class="rpflag">🇦🇹</span>Austria <span class="rplang">(Deutsch)</span></a></li>
         <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇮🇪</span>Ireland <span class="rplang">(English)</span></a></li>
         <li><a href="#" onclick="switchLocale('fr');return false"><span class="rpflag">🇱🇺</span>Luxembourg <span class="rplang">(FR/DE)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇸🇪</span>Sweden <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇩🇰</span>Denmark <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇳🇴</span>Norway <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇫🇮</span>Finland <span class="rplang">(English)</span></a></li>
       </ul>
     </div>
     <div>
       <div class="rpcol-title">${m.regionSelector.centralEasternEurope}</div>
       <ul class="rplinks">
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇵🇱</span>Poland <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇨🇿</span>Czech Republic <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇷🇴</span>Romania <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇭🇺</span>Hungary <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇺🇦</span>Ukraine <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇬🇷</span>Greece <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇪🇪</span>Estonia <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇱🇻</span>Latvia <span class="rplang">(English)</span></a></li>
+        <li><a href="#" onclick="switchLocale('en');return false"><span class="rpflag">🇱🇹</span>Lithuania <span class="rplang">(English)</span></a></li>
         <li><a href="#" onclick="switchLocale('ru');return false"><span class="rpflag">🇷🇺</span>Russia <span class="rplang">(Русский)</span></a></li>
       </ul>
       <div class="rpcol-title" style="margin-top:20px">${m.regionSelector.middleEastAfrica}</div>
@@ -514,6 +532,8 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         <a href="/${locale}/acf-score">${m.nav.acfScore}</a>
         <a href="/control">${m.nav.acfControl}</a>
         <a href="/certification">${m.nav.acfCertification}</a>
+        <a href="/${locale}/faq">FAQ</a>
+        <a href="/${locale}/acf-partners">${m.nav.partners || 'Partners'}</a>
       </div>
       <!-- Region selector Bain-style -->
       <button class="regionbtn" id="regionbtn" onclick="openRegion()">
@@ -521,7 +541,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
         <span>${m.nav.region}</span>
         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
-      <a href="/contact" class="ncta">Contact</a>
+      <a href="/contact" class="ncta">${m.nav.contact || 'Contact'}</a>
     </div>
   </div>
 </nav>
@@ -1070,20 +1090,27 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   </div>
   <div class="prodgrid" style="max-width:1320px;margin:60px auto 0;padding:0 40px">
     <div class="pc rev d1">
+      <div class="piw"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+      <div class="plbl">${m.products.checker.label}</div><div class="ptitle">${m.products.checker.title}</div>
+      <div class="pdesc">${m.products.checker.description}</div>
+      <ul class="pfeat"><li>${m.products.checker.features.feature1}</li><li>${m.products.checker.features.feature2}</li><li>${m.products.checker.features.feature3}</li></ul>
+      <a href="/${locale}/compliance-checker" class="plink">${m.products.checker.cta}</a>
+    </div>
+    <div class="pc rev d2">
       <div class="piw"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
       <div class="plbl">${m.products.score.label}</div><div class="ptitle">${m.products.score.title}</div>
       <div class="pdesc">${m.products.score.description}</div>
       <ul class="pfeat"><li>${m.products.score.features.feature1}</li><li>${m.products.score.features.feature2}</li><li>${m.products.score.features.feature3}</li></ul>
       <a href="https://acf-score.com" class="plink" target="_blank">${m.products.score.cta}</a>
     </div>
-    <div class="pc rev d2">
+    <div class="pc rev d3">
       <div class="piw"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div>
       <div class="plbl">${m.products.control.label}</div><div class="ptitle">${m.products.control.title}</div>
       <div class="pdesc">${m.products.control.description}</div>
       <ul class="pfeat"><li>${m.products.control.features.feature1}</li><li>${m.products.control.features.feature2}</li><li>${m.products.control.features.feature3}</li></ul>
       <a href="/control" class="plink">${m.products.control.cta}</a>
     </div>
-    <div class="pc rev d3">
+    <div class="pc rev d4">
       <div class="piw"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg></div>
       <div class="plbl">${m.products.certification.label}</div><div class="ptitle">${m.products.certification.title}</div>
       <div class="pdesc">${m.products.certification.description}</div>
@@ -1644,6 +1671,7 @@ export default function Home() {
   if (!m.megaMenu.about) m.megaMenu.about = {}
   if (!m.megaMenu.partners) m.megaMenu.partners = {}
   if (!m.faq) m.faq = { badge: '// FAQ', title: 'FAQ', subtitle: '', q1: { question: '', answer: '' } }
+  if (!m.products.checker) m.products.checker = { label: 'COMPLIANCE TOOL', title: 'ACF AI Act Checker', description: 'Free pre-diagnostic tool to check your AI system compliance with the EU AI Act.', features: { feature1: 'EU AI Act compliance diagnostic', feature2: 'Role-based obligation mapping', feature3: 'Automated risk classification' }, cta: 'Check my compliance →' }
 
   return (
     <>

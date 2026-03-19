@@ -49,6 +49,8 @@ const articles_fr: Article[] = [
       { type: "p", text: "Les organisations qui attendent la mise en application pour structurer leur gouvernance agentique prennent un risque consid\u00e9rable. La mise en conformit\u00e9 n\u00e9cessite du temps : cartographier les agents, d\u00e9finir les politiques, impl\u00e9menter les contr\u00f4les techniques et former les \u00e9quipes." },
       { type: "h3", text: "Action recommand\u00e9e" },
       { type: "p", text: "R\u00e9alisez votre diagnostic ACF Score\u00ae gratuit pour \u00e9valuer votre niveau de pr\u00e9paration actuel, puis engagez un plan de mise en conformit\u00e9 structur\u00e9 autour des 4 couches ACF\u00ae." },
+      { type: "h3", text: "ACF AI Act Checker" },
+      { type: "p", text: "Testez votre conformit\u00e9 \u00e0 l\u2019EU AI Act avec notre outil gratuit ACF AI Act Checker. En quelques minutes, identifiez les \u00e9carts entre vos pratiques actuelles et les exigences r\u00e9glementaires. \u2192 acfstandard.com/compliance-checker" },
     ]
   },
   {
@@ -177,6 +179,8 @@ const articles_en: Article[] = [
       { type: "p", text: "Organizations waiting for enforcement to structure their agentic governance are taking considerable risk. Compliance takes time: mapping agents, defining policies, implementing technical controls, and training teams." },
       { type: "h3", text: "Recommended action" },
       { type: "p", text: "Take the free ACF Score\u00ae diagnostic to assess your current readiness level, then engage a structured compliance plan built around the 4 ACF\u00ae layers." },
+      { type: "h3", text: "ACF AI Act Checker" },
+      { type: "p", text: "Test your EU AI Act compliance with our free ACF AI Act Checker. In just a few minutes, identify gaps between your current practices and regulatory requirements. \u2192 acfstandard.com/compliance-checker" },
     ]
   },
   {

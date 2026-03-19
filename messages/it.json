@@ -41,7 +41,7 @@
     "requestAssessment": "Richiedi Valutazione",
     "partnerLogin": "Accesso Partner",
     "applyPartner": "Diventa Partner",
-    "contact": "Contatti"
+    "contact": "Contattaci"
   },
   "megaMenu": {
     "framework": {
@@ -397,7 +397,18 @@
   "products": {
     "badge": "// Ecosistema",
     "title": "L'Ecosistema ACF",
-    "subtitle": "Tre prodotti complementari che operazionalizzano l'ACF Standard.",
+    "subtitle": "Quattro prodotti complementari che operazionalizzano l'ACF Standard.",
+    "checker": {
+      "label": "STRUMENTO DI CONFORMITÀ",
+      "title": "ACF AI Act Checker",
+      "description": "Strumento gratuito di pre-diagnosi per verificare la conformità del sistema IA con l'EU AI Act.",
+      "features": {
+        "feature1": "Diagnostica di conformità EU AI Act",
+        "feature2": "Mappatura degli obblighi per ruolo",
+        "feature3": "Classificazione automatizzata dei rischi"
+      },
+      "cta": "Verificare la mia conformità →"
+    },
     "score": {
       "label": "STRUMENTO DI DIAGNOSTICA",
       "title": "ACF Score",

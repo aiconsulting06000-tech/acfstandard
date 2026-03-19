@@ -397,7 +397,18 @@
   "products": {
     "badge": "// Ecosysteem",
     "title": "Het ACF-Ecosysteem",
-    "subtitle": "Drie complementaire producten die de ACF Standard operationaliseren.",
+    "subtitle": "Vier complementaire producten die de ACF Standard operationaliseren.",
+    "checker": {
+      "label": "COMPLIANCE TOOL",
+      "title": "ACF AI Act Checker",
+      "description": "Gratis voordiagnose-tool om de conformiteit van uw AI-systeem met de EU AI Act te controleren.",
+      "features": {
+        "feature1": "EU AI Act compliance diagnose",
+        "feature2": "Rolgebaseerde verplichtingen mapping",
+        "feature3": "Geautomatiseerde risicoclassificatie"
+      },
+      "cta": "Mijn compliance controleren →"
+    },
     "score": {
       "label": "DIAGNOSTISCH HULPMIDDEL",
       "title": "ACF Score",

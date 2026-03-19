@@ -397,7 +397,18 @@
   "products": {
     "badge": "// 生态系统",
     "title": "ACF生态系统",
-    "subtitle": "三个互补产品，实施ACF标准。",
+    "subtitle": "四个互补产品，实施ACF标准。",
+    "checker": {
+      "label": "合规工具",
+      "title": "ACF AI Act Checker",
+      "description": "免费预诊断工具，检查您的AI系统是否符合EU AI Act。",
+      "features": {
+        "feature1": "EU AI Act合规诊断",
+        "feature2": "基于角色的义务映射",
+        "feature3": "自动风险分类"
+      },
+      "cta": "检查我的合规性 →"
+    },
     "score": {
       "label": "诊断工具",
       "title": "ACF Score",

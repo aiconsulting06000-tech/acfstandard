@@ -22,13 +22,13 @@ OUT_DIR = r"C:\Users\vdora\acfstandard\public"
 # ── All translations ──
 LANGS = {
     "en": {
-        "doc_title": "ACF\u00ae \u2014 White Paper v1.0",
+        "doc_title": "ACF\u00ae \u2014 White Paper",
         "cover_label": "AI CONSULTING",
-        "cover_subtitle": "WHITE PAPER v1.0",
+        "cover_subtitle": "WHITE PAPER",
         "cover_desc1": "The global governance standard for autonomous",
         "cover_desc2": "agentic systems in commercial environments.",
         "stats": [("4","Founding\nPrinciples"),("8","Implementation\nModules"),("18","Sovereignty\nKPIs"),("17","Proprietary\nTools")],
-        "author_label": "Author", "date_label": "Date", "date_val": "March 2026",
+        "author_label": "Author", "date_label": "Date", "date_val": "December 2025",
         "class_label": "Classification", "class_val": "Public",
         "toc_label": "// Contents", "toc_title": "Table of Contents",
         "toc": [("01","Executive Summary","3"),("02","The Agentic Commerce Challenge","4"),("03","The ACF\u00ae Framework","5"),("04","Methodology \u2014 8 Modules","7"),("05","Emergency Stop Protocol","8"),("06","ACF\u00ae Products","9"),("07","About","10")],
@@ -70,24 +70,24 @@ LANGS = {
         "em_note": "Each level is tested via quarterly simulation exercises (Module 08)",
         "prod_num": "06", "prod_title": "ACF\u00ae Products",
         "prod_intro": "Four complementary products operationalizing the ACF standard.",
-        "products": [("ACF Score","DIAGNOSTIC TOOL","Proprietary sovereignty score measuring your decisional independence across 6 governance dimensions.",["Composite sovereignty score","6-axis radar visualization","Personalized action plan per axis"]),("ACF Control","GOVERNANCE PLATFORM","Real-time governance dashboard monitoring your 18 sovereignty KPIs with adaptive gating and automated escalation.",["18 KPIs across 6 governance axes","Adaptive gating with human escalation","Tamper-proof audit logs"]),("ACF Certification","INDEPENDENT CERTIFICATION","Independent certification attesting compliance with the ACF governance standard. Publicly verifiable.",["Level 1, 2 and 3 pathway","Publicly verifiable badge","Annual renewal + continuous monitoring"]),("ACF AI Act Checker","COMPLIANCE TOOL","Free diagnostic tool to assess your compliance with the EU AI Act. Identify your obligations based on your role and risk level.",["EU AI Act compliance diagnostic","Role-based obligation mapping","Automated risk classification"])],
+        "products": [("ACF AI Act Checker","COMPLIANCE TOOL","Free diagnostic tool to assess your compliance with the EU AI Act. Identify your obligations based on your role and risk level.",["EU AI Act compliance diagnostic","Role-based obligation mapping","Automated risk classification"]),("ACF Score","DIAGNOSTIC TOOL","Proprietary sovereignty score measuring your decisional independence across 6 governance dimensions.",["Composite sovereignty score","6-axis radar visualization","Personalized action plan per axis"]),("ACF Control","GOVERNANCE PLATFORM","Real-time governance dashboard monitoring your 18 sovereignty KPIs with adaptive gating and automated escalation.",["18 KPIs across 6 governance axes","Adaptive gating with human escalation","Tamper-proof audit logs"]),("ACF Certification","INDEPENDENT CERTIFICATION","Independent certification attesting compliance with the ACF governance standard. Publicly verifiable.",["Level 1, 2 and 3 pathway","Publicly verifiable badge","Annual renewal + continuous monitoring"])],
         "about_num": "07", "about_title": "About",
         "about_p1": "The Agentic Commerce Framework\u00ae was created by Vincent DORANGE, AI governance expert and founder of AI CONSULTING. The framework is the result of several years of research on the governance of autonomous systems in commercial environments.",
         "about_p2": "ACF\u00ae is a registered trademark. The entire methodology and tools are legally protected.",
         "contact_label": "Contact",
-        "contact_info": [("Website","www.acf-standard.com"),("Email","contact@acf-standard.com"),("Standard","ACF\u00ae \u2014 Agentic Commerce Framework")],
+        "contact_info": [("Website","www.acfstandard.com"),("Standard","ACF\u00ae \u2014 Agentic Commerce Framework")],
         "back_tagline": "Global Standard for AI Governance",
         "back_footer1": "\u00a9 2026 Agentic Commerce Framework\u00ae \u2014 Vincent DORANGE. All rights reserved.",
         "back_footer2": "ACF\u00ae is a registered trademark. Methodology and tools legally protected.",
     },
     "es": {
-        "doc_title": "ACF® — Libro Blanco v1.0",
+        "doc_title": "ACF® — Libro Blanco",
         "cover_label": "AI CONSULTING",
-        "cover_subtitle": "LIBRO BLANCO v1.0",
+        "cover_subtitle": "LIBRO BLANCO",
         "cover_desc1": "El estándar mundial de gobernanza para sistemas",
         "cover_desc2": "agénticos autónomos en entornos comerciales.",
         "stats": [("4","Principios\nFundadores"),("8","Módulos de\nImplementación"),("18","KPIs de\nSoberanía"),("17","Herramientas\nPropietarias")],
-        "author_label": "Autor", "date_label": "Fecha", "date_val": "Marzo 2026",
+        "author_label": "Autor", "date_label": "Fecha", "date_val": "Diciembre 2025",
         "class_label": "Clasificación", "class_val": "Público",
         "toc_label": "// Índice", "toc_title": "Índice de contenidos",
         "toc": [("01","Resumen ejecutivo","3"),("02","El desafío del comercio agéntico","4"),("03","El framework ACF®","5"),("04","Metodología — 8 Módulos","7"),("05","Protocolo de parada de emergencia","8"),("06","Los productos ACF®","9"),("07","Acerca de","10")],
@@ -129,24 +129,24 @@ LANGS = {
         "em_note": "Cada nivel se prueba mediante ejercicios de simulación trimestrales (Módulo 08)",
         "prod_num": "06", "prod_title": "Los productos ACF®",
         "prod_intro": "Cuatro productos complementarios que operacionalizan el estándar ACF.",
-        "products": [("ACF Score","HERRAMIENTA DIAGNÓSTICA","Score de soberanía propietario que mide su independencia decisional en 6 dimensiones de gobernanza.",["Score compuesto de soberanía","Visualización radar 6 ejes","Plan de acción personalizado por eje"]),("ACF Control","PLATAFORMA DE GOBERNANZA","Dashboard de gobernanza en tiempo real que monitorea sus 18 KPIs de soberanía con gating adaptativo.",["18 KPIs en 6 ejes de gobernanza","Gating adaptativo con escalada humana","Logs de auditoría infalsificables"]),("ACF Certification","CERTIFICACIÓN INDEPENDIENTE","Certificación independiente que atestigua la conformidad al estándar de gobernanza ACF.",["Recorrido Level 1, 2 y 3","Badge públicamente verificable","Renovación anual + monitoreo continuo"]),("ACF AI Act Checker","HERRAMIENTA DE CUMPLIMIENTO","Herramienta de diagnóstico gratuita para evaluar su cumplimiento con la EU AI Act.",["Diagnóstico de cumplimiento EU AI Act","Mapeo de obligaciones por rol","Clasificación automática de riesgo"])],
+        "products": [("ACF AI Act Checker","HERRAMIENTA DE CUMPLIMIENTO","Herramienta de diagnóstico gratuita para evaluar su cumplimiento con la EU AI Act.",["Diagnóstico de cumplimiento EU AI Act","Mapeo de obligaciones por rol","Clasificación automática de riesgo"]),("ACF Score","HERRAMIENTA DIAGNÓSTICA","Score de soberanía propietario que mide su independencia decisional en 6 dimensiones de gobernanza.",["Score compuesto de soberanía","Visualización radar 6 ejes","Plan de acción personalizado por eje"]),("ACF Control","PLATAFORMA DE GOBERNANZA","Dashboard de gobernanza en tiempo real que monitorea sus 18 KPIs de soberanía con gating adaptativo.",["18 KPIs en 6 ejes de gobernanza","Gating adaptativo con escalada humana","Logs de auditoría infalsificables"]),("ACF Certification","CERTIFICACIÓN INDEPENDIENTE","Certificación independiente que atestigua la conformidad al estándar de gobernanza ACF.",["Recorrido Level 1, 2 y 3","Badge públicamente verificable","Renovación anual + monitoreo continuo"])],
         "about_num": "07", "about_title": "Acerca de",
         "about_p1": "El Agentic Commerce Framework® fue creado por Vincent DORANGE, experto en gobernanza IA y fundador de AI CONSULTING. El framework es el resultado de varios años de investigación sobre la gobernanza de sistemas autónomos en entornos comerciales.",
         "about_p2": "ACF® es una marca registrada. Toda la metodología y herramientas están jurídicamente protegidas.",
         "contact_label": "Contacto",
-        "contact_info": [("Sitio web","www.acf-standard.com"),("Email","contact@acf-standard.com"),("Estándar","ACF® — Agentic Commerce Framework")],
+        "contact_info": [("Sitio web","www.acfstandard.com"),("Estándar","ACF® — Agentic Commerce Framework")],
         "back_tagline": "Global Standard for AI Governance",
         "back_footer1": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Todos los derechos reservados.",
         "back_footer2": "ACF® es una marca registrada. Metodología y herramientas jurídicamente protegidas.",
     },
     "de": {
-        "doc_title": "ACF® — Whitepaper v1.0",
+        "doc_title": "ACF® — Whitepaper",
         "cover_label": "AI CONSULTING",
-        "cover_subtitle": "WHITEPAPER v1.0",
+        "cover_subtitle": "WHITEPAPER",
         "cover_desc1": "Der globale Governance-Standard für autonome",
         "cover_desc2": "agentische Systeme in kommerziellen Umgebungen.",
         "stats": [("4","Gründungs-\nprinzipien"),("8","Implementierungs-\nmodule"),("18","Souveränitäts-\nKPIs"),("17","Proprietäre\nWerkzeuge")],
-        "author_label": "Autor", "date_label": "Datum", "date_val": "März 2026",
+        "author_label": "Autor", "date_label": "Datum", "date_val": "Dezember 2025",
         "class_label": "Klassifizierung", "class_val": "Öffentlich",
         "toc_label": "// Inhalt", "toc_title": "Inhaltsverzeichnis",
         "toc": [("01","Zusammenfassung","3"),("02","Die agentische Herausforderung","4"),("03","Das ACF® Framework","5"),("04","Methodik — 8 Module","7"),("05","Notabschaltprotokoll","8"),("06","ACF® Produkte","9"),("07","Über uns","10")],
@@ -188,24 +188,24 @@ LANGS = {
         "em_note": "Jede Stufe wird durch vierteljährliche Simulationsübungen getestet (Modul 08)",
         "prod_num": "06", "prod_title": "ACF® Produkte",
         "prod_intro": "Vier komplementäre Produkte, die den ACF-Standard operationalisieren.",
-        "products": [("ACF Score","DIAGNOSE-TOOL","Proprietärer Souveränitäts-Score, der Ihre Entscheidungsunabhängigkeit über 6 Governance-Dimensionen misst.",["Zusammengesetzter Souveränitäts-Score","6-Achsen-Radarvisualisierung","Personalisierter Aktionsplan pro Achse"]),("ACF Control","GOVERNANCE-PLATTFORM","Echtzeit-Governance-Dashboard, das Ihre 18 Souveränitäts-KPIs mit adaptivem Gating überwacht.",["18 KPIs über 6 Governance-Achsen","Adaptives Gating mit menschlicher Eskalation","Fälschungssichere Audit-Logs"]),("ACF Certification","UNABHÄNGIGE ZERTIFIZIERUNG","Unabhängige Zertifizierung, die die Konformität mit dem ACF-Governance-Standard bescheinigt.",["Level 1, 2 und 3 Pfad","Öffentlich verifizierbares Badge","Jährliche Erneuerung + kontinuierliches Monitoring"]),("ACF AI Act Checker","COMPLIANCE-TOOL","Kostenloses Diagnosetool zur Bewertung Ihrer Konformität mit dem EU AI Act.",["EU AI Act Compliance-Diagnose","Rollenbasierte Pflichtenzuordnung","Automatische Risikoklassifizierung"])],
+        "products": [("ACF AI Act Checker","COMPLIANCE-TOOL","Kostenloses Diagnosetool zur Bewertung Ihrer Konformität mit dem EU AI Act.",["EU AI Act Compliance-Diagnose","Rollenbasierte Pflichtenzuordnung","Automatische Risikoklassifizierung"]),("ACF Score","DIAGNOSE-TOOL","Proprietärer Souveränitäts-Score, der Ihre Entscheidungsunabhängigkeit über 6 Governance-Dimensionen misst.",["Zusammengesetzter Souveränitäts-Score","6-Achsen-Radarvisualisierung","Personalisierter Aktionsplan pro Achse"]),("ACF Control","GOVERNANCE-PLATTFORM","Echtzeit-Governance-Dashboard, das Ihre 18 Souveränitäts-KPIs mit adaptivem Gating überwacht.",["18 KPIs über 6 Governance-Achsen","Adaptives Gating mit menschlicher Eskalation","Fälschungssichere Audit-Logs"]),("ACF Certification","UNABHÄNGIGE ZERTIFIZIERUNG","Unabhängige Zertifizierung, die die Konformität mit dem ACF-Governance-Standard bescheinigt.",["Level 1, 2 und 3 Pfad","Öffentlich verifizierbares Badge","Jährliche Erneuerung + kontinuierliches Monitoring"])],
         "about_num": "07", "about_title": "Über uns",
         "about_p1": "Das Agentic Commerce Framework® wurde von Vincent DORANGE erstellt, KI-Governance-Experte und Gründer von AI CONSULTING. Das Framework ist das Ergebnis mehrjähriger Forschung zur Governance autonomer Systeme in kommerziellen Umgebungen.",
         "about_p2": "ACF® ist eine eingetragene Marke. Die gesamte Methodik und alle Werkzeuge sind rechtlich geschützt.",
         "contact_label": "Kontakt",
-        "contact_info": [("Website","www.acf-standard.com"),("E-Mail","contact@acf-standard.com"),("Standard","ACF® — Agentic Commerce Framework")],
+        "contact_info": [("Website","www.acfstandard.com"),("Standard","ACF® — Agentic Commerce Framework")],
         "back_tagline": "Global Standard for AI Governance",
         "back_footer1": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Alle Rechte vorbehalten.",
         "back_footer2": "ACF® ist eine eingetragene Marke. Methodik und Werkzeuge rechtlich geschützt.",
     },
     "it": {
-        "doc_title": "ACF® — Libro Bianco v1.0",
+        "doc_title": "ACF® — Libro Bianco",
         "cover_label": "AI CONSULTING",
-        "cover_subtitle": "LIBRO BIANCO v1.0",
+        "cover_subtitle": "LIBRO BIANCO",
         "cover_desc1": "Lo standard globale di governance per i sistemi",
         "cover_desc2": "agentici autonomi in ambienti commerciali.",
         "stats": [("4","Principi\nFondatori"),("8","Moduli di\nImplementazione"),("18","KPI di\nSovranità"),("17","Strumenti\nProprietari")],
-        "author_label": "Autore", "date_label": "Data", "date_val": "Marzo 2026",
+        "author_label": "Autore", "date_label": "Data", "date_val": "Dicembre 2025",
         "class_label": "Classificazione", "class_val": "Pubblico",
         "toc_label": "// Indice", "toc_title": "Indice dei contenuti",
         "toc": [("01","Sintesi esecutiva","3"),("02","La sfida del commercio agentico","4"),("03","Il framework ACF®","5"),("04","Metodologia — 8 Moduli","7"),("05","Protocollo di arresto d'emergenza","8"),("06","I prodotti ACF®","9"),("07","Chi siamo","10")],
@@ -247,23 +247,23 @@ LANGS = {
         "em_note": "Ogni livello viene testato tramite esercitazioni di simulazione trimestrali (Modulo 08)",
         "prod_num": "06", "prod_title": "I prodotti ACF®",
         "prod_intro": "Quattro prodotti complementari che operazionalizzano lo standard ACF.",
-        "products": [("ACF Score","STRUMENTO DIAGNOSTICO","Score di sovranità proprietario che misura la vostra indipendenza decisionale su 6 dimensioni di governance.",["Score composito di sovranità","Visualizzazione radar 6 assi","Piano d'azione personalizzato per asse"]),("ACF Control","PIATTAFORMA DI GOVERNANCE","Dashboard di governance in tempo reale che monitora i vostri 18 KPI di sovranità con gating adattivo.",["18 KPI su 6 assi di governance","Gating adattivo con escalation umana","Log di audit infalsificabili"]),("ACF Certification","CERTIFICAZIONE INDIPENDENTE","Certificazione indipendente che attesta la conformità allo standard di governance ACF.",["Percorso Level 1, 2 e 3","Badge pubblicamente verificabile","Rinnovo annuale + monitoraggio continuo"]),("ACF AI Act Checker","STRUMENTO DI CONFORMITÀ","Strumento diagnostico gratuito per valutare la conformità all'EU AI Act.",["Diagnostica conformità EU AI Act","Mappatura obblighi per ruolo","Classificazione automatica del rischio"])],
+        "products": [("ACF AI Act Checker","STRUMENTO DI CONFORMITÀ","Strumento diagnostico gratuito per valutare la conformità all'EU AI Act.",["Diagnostica conformità EU AI Act","Mappatura obblighi per ruolo","Classificazione automatica del rischio"]),("ACF Score","STRUMENTO DIAGNOSTICO","Score di sovranità proprietario che misura la vostra indipendenza decisionale su 6 dimensioni di governance.",["Score composito di sovranità","Visualizzazione radar 6 assi","Piano d'azione personalizzato per asse"]),("ACF Control","PIATTAFORMA DI GOVERNANCE","Dashboard di governance in tempo reale che monitora i vostri 18 KPI di sovranità con gating adattivo.",["18 KPI su 6 assi di governance","Gating adattivo con escalation umana","Log di audit infalsificabili"]),("ACF Certification","CERTIFICAZIONE INDIPENDENTE","Certificazione indipendente che attesta la conformità allo standard di governance ACF.",["Percorso Level 1, 2 e 3","Badge pubblicamente verificabile","Rinnovo annuale + monitoraggio continuo"])],
         "about_num": "07", "about_title": "Chi siamo",
         "about_p1": "L'Agentic Commerce Framework® è stato creato da Vincent DORANGE, esperto in governance IA e fondatore di AI CONSULTING. Il framework è il risultato di diversi anni di ricerca sulla governance dei sistemi autonomi in ambienti commerciali.",
         "about_p2": "ACF® è un marchio registrato. L'intera metodologia e gli strumenti sono giuridicamente protetti.",
         "contact_label": "Contatto",
-        "contact_info": [("Sito web","www.acf-standard.com"),("Email","contact@acf-standard.com"),("Standard","ACF® — Agentic Commerce Framework")],
+        "contact_info": [("Sito web","www.acfstandard.com"),("Standard","ACF® — Agentic Commerce Framework")],
         "back_tagline": "Global Standard for AI Governance",
         "back_footer1": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Tutti i diritti riservati.",
         "back_footer2": "ACF® è un marchio registrato. Metodologia e strumenti giuridicamente protetti.",
     },
     "pt": {
-        "doc_title": "ACF® — Livro Branco v1.0",
-        "cover_label": "AI CONSULTING", "cover_subtitle": "LIVRO BRANCO v1.0",
+        "doc_title": "ACF® — Livro Branco",
+        "cover_label": "AI CONSULTING", "cover_subtitle": "LIVRO BRANCO",
         "cover_desc1": "O padrão global de governança para sistemas",
         "cover_desc2": "agênticos autônomos em ambientes comerciais.",
         "stats": [("4","Princípios\nFundadores"),("8","Módulos de\nImplementação"),("18","KPIs de\nSoberania"),("17","Ferramentas\nProprietárias")],
-        "author_label": "Autor", "date_label": "Data", "date_val": "Março 2026",
+        "author_label": "Autor", "date_label": "Data", "date_val": "Dezembro 2025",
         "class_label": "Classificação", "class_val": "Público",
         "toc_label": "// Sumário", "toc_title": "Sumário",
         "toc": [("01","Resumo executivo","3"),("02","O desafio do comércio agêntico","4"),("03","O framework ACF®","5"),("04","Metodologia — 8 Módulos","7"),("05","Protocolo de parada de emergência","8"),("06","Os produtos ACF®","9"),("07","Sobre","10")],
@@ -305,23 +305,23 @@ LANGS = {
         "em_note": "Cada nível é testado por meio de exercícios de simulação trimestrais (Módulo 08)",
         "prod_num": "06", "prod_title": "Os produtos ACF®",
         "prod_intro": "Quatro produtos complementares que operacionalizam o padrão ACF.",
-        "products": [("ACF Score","FERRAMENTA DIAGNÓSTICA","Score de soberania proprietário que mede sua independência decisional em 6 dimensões de governança.",["Score composto de soberania","Visualização radar 6 eixos","Plano de ação personalizado por eixo"]),("ACF Control","PLATAFORMA DE GOVERNANÇA","Dashboard de governança em tempo real que monitora seus 18 KPIs de soberania com gating adaptativo.",["18 KPIs em 6 eixos de governança","Gating adaptativo com escalada humana","Logs de auditoria infalsificáveis"]),("ACF Certification","CERTIFICAÇÃO INDEPENDENTE","Certificação independente que atesta a conformidade ao padrão de governança ACF.",["Percurso Level 1, 2 e 3","Badge publicamente verificável","Renovação anual + monitoramento contínuo"]),("ACF AI Act Checker","FERRAMENTA DE CONFORMIDADE","Ferramenta de diagnóstico gratuita para avaliar sua conformidade com o EU AI Act.",["Diagnóstico de conformidade EU AI Act","Mapeamento de obrigações por papel","Classificação automática de risco"])],
+        "products": [("ACF AI Act Checker","FERRAMENTA DE CONFORMIDADE","Ferramenta de diagnóstico gratuita para avaliar sua conformidade com o EU AI Act.",["Diagnóstico de conformidade EU AI Act","Mapeamento de obrigações por papel","Classificação automática de risco"]),("ACF Score","FERRAMENTA DIAGNÓSTICA","Score de soberania proprietário que mede sua independência decisional em 6 dimensões de governança.",["Score composto de soberania","Visualização radar 6 eixos","Plano de ação personalizado por eixo"]),("ACF Control","PLATAFORMA DE GOVERNANÇA","Dashboard de governança em tempo real que monitora seus 18 KPIs de soberania com gating adaptativo.",["18 KPIs em 6 eixos de governança","Gating adaptativo com escalada humana","Logs de auditoria infalsificáveis"]),("ACF Certification","CERTIFICAÇÃO INDEPENDENTE","Certificação independente que atesta a conformidade ao padrão de governança ACF.",["Percurso Level 1, 2 e 3","Badge publicamente verificável","Renovação anual + monitoramento contínuo"])],
         "about_num": "07", "about_title": "Sobre",
         "about_p1": "O Agentic Commerce Framework® foi criado por Vincent DORANGE, especialista em governança de IA e fundador da AI CONSULTING. O framework é o resultado de vários anos de pesquisa sobre governança de sistemas autônomos em ambientes comerciais.",
         "about_p2": "ACF® é uma marca registrada. Toda a metodologia e ferramentas são juridicamente protegidas.",
         "contact_label": "Contato",
-        "contact_info": [("Site","www.acf-standard.com"),("Email","contact@acf-standard.com"),("Padrão","ACF® — Agentic Commerce Framework")],
+        "contact_info": [("Site","www.acfstandard.com"),("Padrão","ACF® — Agentic Commerce Framework")],
         "back_tagline": "Global Standard for AI Governance",
         "back_footer1": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Todos os direitos reservados.",
         "back_footer2": "ACF® é uma marca registrada. Metodologia e ferramentas juridicamente protegidas.",
     },
     "nl": {
-        "doc_title": "ACF® — Whitepaper v1.0",
-        "cover_label": "AI CONSULTING", "cover_subtitle": "WHITEPAPER v1.0",
+        "doc_title": "ACF® — Whitepaper",
+        "cover_label": "AI CONSULTING", "cover_subtitle": "WHITEPAPER",
         "cover_desc1": "De wereldwijde governance-standaard voor autonome",
         "cover_desc2": "agentische systemen in commerciële omgevingen.",
         "stats": [("4","Grond-\nbeginselen"),("8","Implementatie-\nmodules"),("18","Soevereiniteits-\nKPI's"),("17","Eigen\nTools")],
-        "author_label": "Auteur", "date_label": "Datum", "date_val": "Maart 2026",
+        "author_label": "Auteur", "date_label": "Datum", "date_val": "December 2025",
         "class_label": "Classificatie", "class_val": "Openbaar",
         "toc_label": "// Inhoud", "toc_title": "Inhoudsopgave",
         "toc": [("01","Samenvatting","3"),("02","De agentische uitdaging","4"),("03","Het ACF® framework","5"),("04","Methodologie — 8 Modules","7"),("05","Noodstopprotocol","8"),("06","ACF® Producten","9"),("07","Over ons","10")],
@@ -363,23 +363,23 @@ LANGS = {
         "em_note": "Elk niveau wordt getest via driemaandelijkse simulatie-oefeningen (Module 08)",
         "prod_num": "06", "prod_title": "ACF® Producten",
         "prod_intro": "Vier complementaire producten die de ACF-standaard operationaliseren.",
-        "products": [("ACF Score","DIAGNOSTISCH INSTRUMENT","Eigen soevereiniteitsscore die uw beslissingsOnafhankelijkheid meet over 6 governance-dimensies.",["Samengestelde soevereiniteitsscore","6-as radarvisualisatie","Gepersonaliseerd actieplan per as"]),("ACF Control","GOVERNANCE-PLATFORM","Real-time governance dashboard dat uw 18 soevereiniteits-KPI's bewaakt met adaptieve gating.",["18 KPI's over 6 governance-assen","Adaptieve gating met menselijke escalatie","Onvervalsbare auditlogs"]),("ACF Certification","ONAFHANKELIJKE CERTIFICERING","Onafhankelijke certificering die conformiteit met de ACF-governance-standaard bevestigt.",["Level 1, 2 en 3 traject","Openbaar verifieerbaar badge","Jaarlijkse vernieuwing + continue monitoring"]),("ACF AI Act Checker","COMPLIANCE TOOL","Gratis diagnosetool om uw naleving van de EU AI Act te beoordelen.",["EU AI Act compliance diagnose","Rolgebaseerde verplichtingsmapping","Automatische risicoclassificatie"])],
+        "products": [("ACF AI Act Checker","COMPLIANCE TOOL","Gratis diagnosetool om uw naleving van de EU AI Act te beoordelen.",["EU AI Act compliance diagnose","Rolgebaseerde verplichtingsmapping","Automatische risicoclassificatie"]),("ACF Score","DIAGNOSTISCH INSTRUMENT","Eigen soevereiniteitsscore die uw beslissingsOnafhankelijkheid meet over 6 governance-dimensies.",["Samengestelde soevereiniteitsscore","6-as radarvisualisatie","Gepersonaliseerd actieplan per as"]),("ACF Control","GOVERNANCE-PLATFORM","Real-time governance dashboard dat uw 18 soevereiniteits-KPI's bewaakt met adaptieve gating.",["18 KPI's over 6 governance-assen","Adaptieve gating met menselijke escalatie","Onvervalsbare auditlogs"]),("ACF Certification","ONAFHANKELIJKE CERTIFICERING","Onafhankelijke certificering die conformiteit met de ACF-governance-standaard bevestigt.",["Level 1, 2 en 3 traject","Openbaar verifieerbaar badge","Jaarlijkse vernieuwing + continue monitoring"])],
         "about_num": "07", "about_title": "Over ons",
         "about_p1": "Het Agentic Commerce Framework® is gecreëerd door Vincent DORANGE, AI-governance expert en oprichter van AI CONSULTING. Het framework is het resultaat van meerdere jaren onderzoek naar governance van autonome systemen in commerciële omgevingen.",
         "about_p2": "ACF® is een gedeponeerd merk. De volledige methodologie en tools zijn juridisch beschermd.",
         "contact_label": "Contact",
-        "contact_info": [("Website","www.acf-standard.com"),("E-mail","contact@acf-standard.com"),("Standaard","ACF® — Agentic Commerce Framework")],
+        "contact_info": [("Website","www.acfstandard.com"),("Standaard","ACF® — Agentic Commerce Framework")],
         "back_tagline": "Global Standard for AI Governance",
         "back_footer1": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Alle rechten voorbehouden.",
         "back_footer2": "ACF® is een gedeponeerd merk. Methodologie en tools juridisch beschermd.",
     },
     "ru": {
-        "doc_title": "ACF® — White Paper v1.0",
-        "cover_label": "AI CONSULTING", "cover_subtitle": "WHITE PAPER v1.0",
+        "doc_title": "ACF® — White Paper",
+        "cover_label": "AI CONSULTING", "cover_subtitle": "WHITE PAPER",
         "cover_desc1": "Global governance standard for autonomous",
         "cover_desc2": "agentic systems in commercial environments.",
         "stats": [("4","Founding\nPrinciples"),("8","Implementation\nModules"),("18","Sovereignty\nKPIs"),("17","Proprietary\nTools")],
-        "author_label": "Author", "date_label": "Date", "date_val": "March 2026",
+        "author_label": "Author", "date_label": "Date", "date_val": "December 2025",
         "class_label": "Classification", "class_val": "Public",
         "toc_label": "// Contents", "toc_title": "Table of Contents",
         "toc": [("01","Executive Summary","3"),("02","The Agentic Commerce Challenge","4"),("03","The ACF® Framework","5"),("04","Methodology — 8 Modules","7"),("05","Emergency Stop Protocol","8"),("06","ACF® Products","9"),("07","About","10")],
@@ -421,23 +421,23 @@ LANGS = {
         "em_note": "Each level is tested via quarterly simulation exercises (Module 08)",
         "prod_num": "06", "prod_title": "ACF® Products",
         "prod_intro": "Four complementary products operationalizing the ACF standard.",
-        "products": [("ACF Score","DIAGNOSTIC TOOL","Proprietary sovereignty score measuring your decisional independence across 6 governance dimensions.",["Composite sovereignty score","6-axis radar visualization","Personalized action plan per axis"]),("ACF Control","GOVERNANCE PLATFORM","Real-time governance dashboard monitoring your 18 sovereignty KPIs with adaptive gating.",["18 KPIs across 6 governance axes","Adaptive gating with human escalation","Tamper-proof audit logs"]),("ACF Certification","INDEPENDENT CERTIFICATION","Independent certification attesting compliance with the ACF governance standard.",["Level 1, 2 and 3 pathway","Publicly verifiable badge","Annual renewal + continuous monitoring"]),("ACF AI Act Checker","COMPLIANCE TOOL","Free diagnostic tool to assess your compliance with the EU AI Act. Identify your obligations based on your role and risk level.",["EU AI Act compliance diagnostic","Role-based obligation mapping","Automated risk classification"])],
+        "products": [("ACF AI Act Checker","COMPLIANCE TOOL","Free diagnostic tool to assess your compliance with the EU AI Act. Identify your obligations based on your role and risk level.",["EU AI Act compliance diagnostic","Role-based obligation mapping","Automated risk classification"]),("ACF Score","DIAGNOSTIC TOOL","Proprietary sovereignty score measuring your decisional independence across 6 governance dimensions.",["Composite sovereignty score","6-axis radar visualization","Personalized action plan per axis"]),("ACF Control","GOVERNANCE PLATFORM","Real-time governance dashboard monitoring your 18 sovereignty KPIs with adaptive gating.",["18 KPIs across 6 governance axes","Adaptive gating with human escalation","Tamper-proof audit logs"]),("ACF Certification","INDEPENDENT CERTIFICATION","Independent certification attesting compliance with the ACF governance standard.",["Level 1, 2 and 3 pathway","Publicly verifiable badge","Annual renewal + continuous monitoring"])],
         "about_num": "07", "about_title": "About",
         "about_p1": "The Agentic Commerce Framework® was created by Vincent DORANGE, AI governance expert and founder of AI CONSULTING. The framework is the result of several years of research on autonomous system governance in commercial environments.",
         "about_p2": "ACF® is a registered trademark. The entire methodology and tools are legally protected.",
         "contact_label": "Contact",
-        "contact_info": [("Website","www.acf-standard.com"),("Email","contact@acf-standard.com"),("Standard","ACF® — Agentic Commerce Framework")],
+        "contact_info": [("Website","www.acfstandard.com"),("Standard","ACF® — Agentic Commerce Framework")],
         "back_tagline": "Global Standard for AI Governance",
         "back_footer1": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved.",
         "back_footer2": "ACF® is a registered trademark. Methodology and tools legally protected.",
     },
     "ar": {
-        "doc_title": "ACF® — White Paper v1.0",
-        "cover_label": "AI CONSULTING", "cover_subtitle": "WHITE PAPER v1.0",
+        "doc_title": "ACF® — White Paper",
+        "cover_label": "AI CONSULTING", "cover_subtitle": "WHITE PAPER",
         "cover_desc1": "Global governance standard for autonomous",
         "cover_desc2": "agentic systems in commercial environments.",
         "stats": [("4","Founding\nPrinciples"),("8","Implementation\nModules"),("18","Sovereignty\nKPIs"),("17","Proprietary\nTools")],
-        "author_label": "Author", "date_label": "Date", "date_val": "March 2026",
+        "author_label": "Author", "date_label": "Date", "date_val": "December 2025",
         "class_label": "Classification", "class_val": "Public",
         "toc_label": "// Contents", "toc_title": "Table of Contents",
         "toc": [("01","Executive Summary","3"),("02","The Agentic Commerce Challenge","4"),("03","The ACF® Framework","5"),("04","Methodology — 8 Modules","7"),("05","Emergency Stop Protocol","8"),("06","ACF® Products","9"),("07","About","10")],
@@ -479,23 +479,23 @@ LANGS = {
         "em_note": "Each level is tested via quarterly simulation exercises (Module 08)",
         "prod_num": "06", "prod_title": "ACF® Products",
         "prod_intro": "Four complementary products operationalizing the ACF standard.",
-        "products": [("ACF Score","DIAGNOSTIC TOOL","Proprietary sovereignty score measuring your decisional independence across 6 governance dimensions.",["Composite sovereignty score","6-axis radar visualization","Personalized action plan per axis"]),("ACF Control","GOVERNANCE PLATFORM","Real-time governance dashboard monitoring your 18 sovereignty KPIs with adaptive gating.",["18 KPIs across 6 governance axes","Adaptive gating with human escalation","Tamper-proof audit logs"]),("ACF Certification","INDEPENDENT CERTIFICATION","Independent certification attesting compliance with the ACF governance standard.",["Level 1, 2 and 3 pathway","Publicly verifiable badge","Annual renewal + continuous monitoring"]),("ACF AI Act Checker","COMPLIANCE TOOL","Free diagnostic tool to assess your compliance with the EU AI Act. Identify your obligations based on your role and risk level.",["EU AI Act compliance diagnostic","Role-based obligation mapping","Automated risk classification"])],
+        "products": [("ACF AI Act Checker","COMPLIANCE TOOL","Free diagnostic tool to assess your compliance with the EU AI Act. Identify your obligations based on your role and risk level.",["EU AI Act compliance diagnostic","Role-based obligation mapping","Automated risk classification"]),("ACF Score","DIAGNOSTIC TOOL","Proprietary sovereignty score measuring your decisional independence across 6 governance dimensions.",["Composite sovereignty score","6-axis radar visualization","Personalized action plan per axis"]),("ACF Control","GOVERNANCE PLATFORM","Real-time governance dashboard monitoring your 18 sovereignty KPIs with adaptive gating.",["18 KPIs across 6 governance axes","Adaptive gating with human escalation","Tamper-proof audit logs"]),("ACF Certification","INDEPENDENT CERTIFICATION","Independent certification attesting compliance with the ACF governance standard.",["Level 1, 2 and 3 pathway","Publicly verifiable badge","Annual renewal + continuous monitoring"])],
         "about_num": "07", "about_title": "About",
         "about_p1": "The Agentic Commerce Framework® was created by Vincent DORANGE, AI governance expert and founder of AI CONSULTING. The framework is the result of several years of research on autonomous system governance in commercial environments.",
         "about_p2": "ACF® is a registered trademark. The entire methodology and tools are legally protected.",
         "contact_label": "Contact",
-        "contact_info": [("Website","www.acf-standard.com"),("Email","contact@acf-standard.com"),("Standard","ACF® — Agentic Commerce Framework")],
+        "contact_info": [("Website","www.acfstandard.com"),("Standard","ACF® — Agentic Commerce Framework")],
         "back_tagline": "Global Standard for AI Governance",
         "back_footer1": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. All rights reserved.",
         "back_footer2": "ACF® is a registered trademark. Methodology and tools legally protected.",
     },
     "tr": {
-        "doc_title": "ACF® — Teknik Rapor v1.0",
-        "cover_label": "AI CONSULTING", "cover_subtitle": "TEKNİK RAPOR v1.0",
+        "doc_title": "ACF® — Teknik Rapor",
+        "cover_label": "AI CONSULTING", "cover_subtitle": "TEKNİK RAPOR",
         "cover_desc1": "Ticari ortamlarda otonom ajantik sistemler",
         "cover_desc2": "için küresel yönetişim standardı.",
         "stats": [("4","Kurucu\nİlke"),("8","Uygulama\nModülü"),("18","Egemenlik\nKPI'ları"),("17","Tescilli\nAraçlar")],
-        "author_label": "Yazar", "date_label": "Tarih", "date_val": "Mart 2026",
+        "author_label": "Yazar", "date_label": "Tarih", "date_val": "Aralık 2025",
         "class_label": "Sınıflandırma", "class_val": "Halka Açık",
         "toc_label": "// İçindekiler", "toc_title": "İçindekiler",
         "toc": [("01","Yönetici Özeti","3"),("02","Ajantik Ticaret Zorluğu","4"),("03","ACF® Çerçevesi","5"),("04","Metodoloji — 8 Modül","7"),("05","Acil Durdurma Protokolü","8"),("06","ACF® Ürünleri","9"),("07","Hakkında","10")],
@@ -537,12 +537,12 @@ LANGS = {
         "em_note": "Her seviye üç aylık simülasyon tatbikatlarıyla test edilir (Modül 08)",
         "prod_num": "06", "prod_title": "ACF® Ürünleri",
         "prod_intro": "ACF standardını operasyonelleştiren dört tamamlayıcı ürün.",
-        "products": [("ACF Score","TEŞHİS ARACI","6 yönetişim boyutunda karar bağımsızlığınızı ölçen tescilli egemenlik skoru.",["Bileşik egemenlik skoru","6 eksenli radar görselleştirme","Eksen başına kişiselleştirilmiş eylem planı"]),("ACF Control","YÖNETİŞİM PLATFORMU","Uyarlanabilir geçitleme ile 18 egemenlik KPI'nızı izleyen gerçek zamanlı yönetişim panosu.",["6 yönetişim ekseninde 18 KPI","İnsan eskalasyonlu uyarlanabilir geçitleme","Tahrif edilemez denetim günlükleri"]),("ACF Certification","BAĞIMSIZ SERTİFİKASYON","ACF yönetişim standardına uygunluğu belgeleyen bağımsız sertifikasyon.",["Seviye 1, 2 ve 3 yolu","Kamuya açık doğrulanabilir rozet","Yıllık yenileme + sürekli izleme"]),("ACF AI Act Checker","UYUMLULUK ARACI","EU AI Act ile uyumluluğunuzu değerlendirmek için ücretsiz teşhis aracı.",["EU AI Act uyumluluk teşhisi","Rol bazlı yükümlülük haritalama","Otomatik risk sınıflandırması"])],
+        "products": [("ACF AI Act Checker","UYUMLULUK ARACI","EU AI Act ile uyumluluğunuzu değerlendirmek için ücretsiz teşhis aracı.",["EU AI Act uyumluluk teşhisi","Rol bazlı yükümlülük haritalama","Otomatik risk sınıflandırması"]),("ACF Score","TEŞHİS ARACI","6 yönetişim boyutunda karar bağımsızlığınızı ölçen tescilli egemenlik skoru.",["Bileşik egemenlik skoru","6 eksenli radar görselleştirme","Eksen başına kişiselleştirilmiş eylem planı"]),("ACF Control","YÖNETİŞİM PLATFORMU","Uyarlanabilir geçitleme ile 18 egemenlik KPI'nızı izleyen gerçek zamanlı yönetişim panosu.",["6 yönetişim ekseninde 18 KPI","İnsan eskalasyonlu uyarlanabilir geçitleme","Tahrif edilemez denetim günlükleri"]),("ACF Certification","BAĞIMSIZ SERTİFİKASYON","ACF yönetişim standardına uygunluğu belgeleyen bağımsız sertifikasyon.",["Seviye 1, 2 ve 3 yolu","Kamuya açık doğrulanabilir rozet","Yıllık yenileme + sürekli izleme"])],
         "about_num": "07", "about_title": "Hakkında",
         "about_p1": "Agentic Commerce Framework®, yapay zeka yönetişim uzmanı ve AI CONSULTING kurucusu Vincent DORANGE tarafından oluşturulmuştur. Çerçeve, ticari ortamlarda otonom sistem yönetişimi üzerine birkaç yıllık araştırmanın sonucudur.",
         "about_p2": "ACF® tescilli bir markadır. Tüm metodoloji ve araçlar yasal olarak korunmaktadır.",
         "contact_label": "İletişim",
-        "contact_info": [("Web sitesi","www.acf-standard.com"),("E-posta","contact@acf-standard.com"),("Standart","ACF® — Agentic Commerce Framework")],
+        "contact_info": [("Web sitesi","www.acfstandard.com"),("Standart","ACF® — Agentic Commerce Framework")],
         "back_tagline": "Global Standard for AI Governance",
         "back_footer1": "© 2026 Agentic Commerce Framework® — Vincent DORANGE. Tüm hakları saklıdır.",
         "back_footer2": "ACF® tescilli bir markadır. Metodoloji ve araçlar yasal olarak korunmaktadır.",
@@ -553,11 +553,11 @@ LANGS = {
 for lang in ("ja", "zh", "ko"):
     LANGS[lang] = dict(LANGS["ru"])  # Copy EN-based content
     if lang == "ja":
-        LANGS[lang]["doc_title"] = "ACF® — ホワイトペーパー v1.0"
+        LANGS[lang]["doc_title"] = "ACF® — ホワイトペーパー"
     elif lang == "zh":
-        LANGS[lang]["doc_title"] = "ACF® — 白皮书 v1.0"
+        LANGS[lang]["doc_title"] = "ACF® — 白皮书"
     elif lang == "ko":
-        LANGS[lang]["doc_title"] = "ACF® — 백서 v1.0"
+        LANGS[lang]["doc_title"] = "ACF® — 백서"
 
 
 # ── Drawing functions (same as FR version) ──
@@ -664,7 +664,7 @@ def generate_pdf(lang_code, t):
     c.setFillColor(GREY); c.setFont("Helvetica", 10); c.drawString(400, y_info, t["class_label"])
     c.setFillColor(WHITE); c.setFont("Helvetica-Bold", 12); c.drawString(400, y_info - 18, t["class_val"])
     draw_gold_line(c, 40, 60, W - 80, 1)
-    c.setFillColor(GREY); c.setFont("Helvetica", 8); c.drawCentredString(W / 2, 42, "www.acf-standard.com")
+    c.setFillColor(GREY); c.setFont("Helvetica", 8); c.drawCentredString(W / 2, 42, "www.acfstandard.com")
     c.showPage()
 
     # ── Page 2: TOC ──
@@ -820,7 +820,7 @@ def generate_pdf(lang_code, t):
     y -= 10; c.setFillColor(GREY); c.setFont("Helvetica", 11); c.drawString(40, y, t["prod_intro"])
     y -= 35
     for name, label, desc, features in t["products"]:
-        bh = 155
+        bh = 130
         c.setFillColor(DARK_CARD); c.roundRect(40, y - 10, W - 80, bh, 6, fill=1, stroke=0)
         c.setStrokeColor(GOLD); c.setLineWidth(2); c.line(50, y + bh - 12, W - 50, y + bh - 12)
         c.setFillColor(GOLD); c.setFont("Helvetica", 8); c.drawString(55, y + bh - 28, label)
@@ -840,7 +840,7 @@ def generate_pdf(lang_code, t):
             c.setFillColor(GOLD); c.setFont("Helvetica", 9); c.drawString(60, ly, "✓")
             c.setFillColor(LIGHT_GREY); c.setFont("Helvetica", 9.5); c.drawString(78, ly, feat)
             ly -= 15
-        y -= (bh + 18)
+        y -= (bh + 14)
     draw_footer(c, 9); c.showPage()
 
     # ── Page 10: About ──
@@ -865,8 +865,7 @@ def generate_pdf(lang_code, t):
     c.setFillColor(GOLD); c.setFont("Helvetica", 14); c.drawCentredString(W / 2, cy - 25, "Agentic Commerce Framework®")
     c.setFillColor(GREY); c.setFont("Helvetica", 11); c.drawCentredString(W / 2, cy - 50, t["back_tagline"])
     draw_gold_line(c, W / 2 - 60, cy - 75, 120, 1)
-    c.setFillColor(WHITE); c.setFont("Helvetica", 13); c.drawCentredString(W / 2, cy - 105, "www.acf-standard.com")
-    c.setFillColor(GREY); c.setFont("Helvetica", 11); c.drawCentredString(W / 2, cy - 130, "contact@acf-standard.com")
+    c.setFillColor(WHITE); c.setFont("Helvetica", 13); c.drawCentredString(W / 2, cy - 105, "www.acfstandard.com")
     c.setFillColor(MEDIUM_GREY); c.setFont("Helvetica", 8)
     c.drawCentredString(W / 2, 60, t["back_footer1"])
     c.drawCentredString(W / 2, 45, t["back_footer2"])

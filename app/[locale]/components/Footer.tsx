@@ -38,7 +38,7 @@ export default function Footer() {
         { label: t.methodology, href: `/${locale}/standard#methodology` },
         { label: t.research, href: `/${locale}/blog` },
         { label: "ACF Certification", href: `/${locale}/acf-certification` },
-        { label: t.faq, href: `/${locale}/#faq` },
+        { label: t.faq, href: `/${locale}/faq` },
       ],
     },
     {

@@ -397,7 +397,18 @@
   "products": {
     "badge": "// エコシステム",
     "title": "ACFエコシステム",
-    "subtitle": "ACF Standardを運用する3つの補完的な製品。",
+    "subtitle": "ACF Standardを運用する4つの補完的な製品。",
+    "checker": {
+      "label": "コンプライアンスツール",
+      "title": "ACF AI Act Checker",
+      "description": "EU AI Actに対するAIシステムのコンプライアンスを確認する無料の事前診断ツール。",
+      "features": {
+        "feature1": "EU AI Actコンプライアンス診断",
+        "feature2": "役割ベースの義務マッピング",
+        "feature3": "自動リスク分類"
+      },
+      "cta": "コンプライアンスを確認 →"
+    },
     "score": {
       "label": "診断ツール",
       "title": "ACF Score",

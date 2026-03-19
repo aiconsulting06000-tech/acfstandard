@@ -397,7 +397,18 @@
   "products": {
     "badge": "// Ekosistem",
     "title": "ACF Ekosistemi",
-    "subtitle": "ACF Standard'ı hayata geçiren üç tamamlayıcı ürün.",
+    "subtitle": "ACF Standard'ı hayata geçiren dört tamamlayıcı ürün.",
+    "checker": {
+      "label": "UYUMLULUK ARACI",
+      "title": "ACF AI Act Checker",
+      "description": "AI sisteminizin EU AI Act ile uyumluluğunu kontrol etmek için ücretsiz ön teşhis aracı.",
+      "features": {
+        "feature1": "EU AI Act uyumluluk teşhisi",
+        "feature2": "Role dayalı yükümlülük haritalama",
+        "feature3": "Otomatik risk sınıflandırması"
+      },
+      "cta": "Uyumluluğumu kontrol et →"
+    },
     "score": {
       "label": "TEŞHİS ARACI",
       "title": "ACF Score",

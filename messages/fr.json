@@ -397,7 +397,18 @@
   "products": {
     "badge": "// Écosystème",
     "title": "L'écosystème ACF",
-    "subtitle": "Trois produits complémentaires opérationnalisant le Standard ACF.",
+    "subtitle": "Quatre produits complémentaires opérationnalisant le Standard ACF.",
+    "checker": {
+      "label": "OUTIL DE CONFORMITÉ",
+      "title": "ACF AI Act Checker",
+      "description": "Outil de pré-diagnostic gratuit pour vérifier la conformité de votre système IA avec l'EU AI Act.",
+      "features": {
+        "feature1": "Diagnostic de conformité EU AI Act",
+        "feature2": "Cartographie des obligations par rôle",
+        "feature3": "Classification automatisée des risques"
+      },
+      "cta": "Vérifier ma conformité →"
+    },
     "score": {
       "label": "OUTIL DE DIAGNOSTIC",
       "title": "ACF Score",
