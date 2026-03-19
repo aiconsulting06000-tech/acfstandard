@@ -60,70 +60,203 @@ export async function POST(request: Request) {
 /* ── Email templates ── */
 
 function buildNotificationHtml(name: string, email: string, message: string, isChecker: boolean) {
-  return `
-<!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"></head>
-<body style="margin:0;padding:0;background:#050c1a;font-family:Arial,sans-serif">
-  <div style="max-width:600px;margin:0 auto;padding:32px 24px">
-    <div style="background:#071122;border:1px solid rgba(201,168,76,.2);border-radius:12px;padding:32px">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
-        <div style="width:40px;height:40px;background:linear-gradient(135deg,#c9a84c,#e8c96a);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12px;color:#050c1a">ACF</div>
-        <div>
-          <div style="font-size:16px;font-weight:700;color:#fff">Agentic Commerce Framework®</div>
-          <div style="font-size:11px;color:#c9a84c;letter-spacing:.1em;text-transform:uppercase">${isChecker ? 'EU AI ACT CHECKER' : 'CONTACT FORM'}</div>
-        </div>
-      </div>
-      <div style="border-top:1px solid rgba(255,255,255,.07);padding-top:20px">
-        <table style="width:100%;border-collapse:collapse">
-          <tr><td style="padding:8px 0;color:#6b7fa0;font-size:13px;width:120px">Nom / Système</td><td style="padding:8px 0;color:#fff;font-size:14px;font-weight:600">${escHtml(name)}</td></tr>
-          <tr><td style="padding:8px 0;color:#6b7fa0;font-size:13px">Email</td><td style="padding:8px 0;color:#9db0c8;font-size:14px">${escHtml(email || '—')}</td></tr>
-        </table>
-      </div>
-      <div style="margin-top:20px;padding:16px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.05)">
-        <div style="font-size:11px;color:#c9a84c;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">${isChecker ? 'RÉSULTATS' : 'MESSAGE'}</div>
-        <div style="font-size:14px;color:#9db0c8;line-height:1.7;white-space:pre-wrap">${escHtml(message)}</div>
-      </div>
-    </div>
-    <div style="text-align:center;padding:16px 0;font-size:11px;color:#6b7fa0">
-      © 2026 Agentic Commerce Framework® — www.acf-standard.com
-    </div>
-  </div>
+  return `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/></head>
+<body style="margin:0;padding:0;background-color:#050c1a;font-family:Arial,Helvetica,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#050c1a;">
+<tr><td align="center" style="padding:32px 16px;">
+  <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#071122;border:1px solid #3d3220;">
+    <!-- Header -->
+    <tr><td style="padding:28px 32px 20px 32px;border-bottom:1px solid #1a2740;">
+      <table cellpadding="0" cellspacing="0" border="0"><tr>
+        <td width="44" height="44" align="center" valign="middle" style="background-color:#c9a84c;font-weight:900;font-size:13px;color:#050c1a;letter-spacing:1px;">ACF</td>
+        <td style="padding-left:14px;">
+          <div style="font-size:16px;font-weight:700;color:#ffffff;">Agentic Commerce Framework&reg;</div>
+          <div style="font-size:11px;color:#c9a84c;letter-spacing:1px;text-transform:uppercase;margin-top:2px;">${isChecker ? 'EU AI ACT CHECKER' : 'CONTACT FORM'}</div>
+        </td>
+      </tr></table>
+    </td></tr>
+    <!-- Info -->
+    <tr><td style="padding:24px 32px;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="padding:8px 0;color:#6b7fa0;font-size:13px;width:130px;vertical-align:top;">Nom / Syst&egrave;me</td>
+          <td style="padding:8px 0;color:#ffffff;font-size:14px;font-weight:600;">${escHtml(name)}</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 0;color:#6b7fa0;font-size:13px;vertical-align:top;">Email</td>
+          <td style="padding:8px 0;color:#9db0c8;font-size:14px;">${escHtml(email || '—')}</td>
+        </tr>
+      </table>
+    </td></tr>
+    <!-- Message / Results -->
+    <tr><td style="padding:0 32px 28px 32px;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0a1a30;border:1px solid #1a2740;">
+        <tr><td style="padding:16px 20px;">
+          <div style="font-size:11px;color:#c9a84c;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;font-weight:700;">${isChecker ? 'R&Eacute;SULTATS' : 'MESSAGE'}</div>
+          <div style="font-size:14px;color:#9db0c8;line-height:24px;white-space:pre-wrap;">${escHtml(message)}</div>
+        </td></tr>
+      </table>
+    </td></tr>
+    <!-- Footer -->
+    <tr><td style="padding:16px 32px;border-top:1px solid #1a2740;text-align:center;">
+      <span style="font-size:11px;color:#6b7fa0;">&copy; 2026 Agentic Commerce Framework&reg; &mdash; www.acf-standard.com</span>
+    </td></tr>
+  </table>
+</td></tr>
+</table>
 </body>
 </html>`;
 }
 
 function buildUserResultsHtml(name: string, message: string) {
-  const lines = message.replace('[EU AI Act Checker Results]\n', '').split('\n');
-  return `
-<!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"></head>
-<body style="margin:0;padding:0;background:#050c1a;font-family:Arial,sans-serif">
-  <div style="max-width:600px;margin:0 auto;padding:32px 24px">
-    <div style="background:#071122;border:1px solid rgba(201,168,76,.2);border-radius:12px;padding:32px">
-      <div style="text-align:center;margin-bottom:24px">
-        <div style="width:56px;height:56px;background:linear-gradient(135deg,#c9a84c,#e8c96a);border-radius:12px;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;color:#050c1a">ACF</div>
-        <h1 style="font-size:20px;font-weight:800;color:#fff;margin:16px 0 4px">EU AI Act Checker</h1>
-        <p style="font-size:13px;color:#c9a84c;margin:0">Vos résultats de conformité</p>
-      </div>
-      <div style="border-top:1px solid rgba(255,255,255,.07);padding-top:20px">
-        <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:12px">Système : ${escHtml(name)}</div>
-        <div style="padding:16px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.05)">
-          ${lines.map((l: string) => `<div style="font-size:13px;color:#9db0c8;line-height:1.8;padding:2px 0">${escHtml(l)}</div>`).join('')}
-        </div>
-      </div>
-      <div style="margin-top:24px;text-align:center">
-        <a href="https://www.acf-standard.com/fr/compliance-checker" style="display:inline-block;padding:12px 28px;background:linear-gradient(135deg,#c9a84c,#e8c96a);color:#050c1a;font-weight:700;font-size:14px;text-decoration:none;border-radius:8px">Refaire le diagnostic</a>
-      </div>
-      <div style="margin-top:20px;padding:12px;background:rgba(201,168,76,.06);border-radius:8px;border:1px solid rgba(201,168,76,.15)">
-        <p style="font-size:12px;color:#6b7fa0;margin:0;line-height:1.6">Cet outil fournit une indication préliminaire. Il ne constitue pas un avis juridique. Pour un accompagnement complet, découvrez le <a href="https://www.acf-standard.com" style="color:#c9a84c">framework ACF®</a>.</p>
-      </div>
-    </div>
-    <div style="text-align:center;padding:16px 0;font-size:11px;color:#6b7fa0">
-      © 2026 Agentic Commerce Framework® — www.acf-standard.com
-    </div>
-  </div>
+  // Parse structured data from message
+  const lines = message.split('\n');
+  let aiSystem = '', entity = '', highRisk = '', gpai = '';
+  const obligations: string[] = [];
+  let inObligations = false;
+
+  for (const line of lines) {
+    if (line.startsWith('AI System:')) aiSystem = line.replace('AI System:', '').trim();
+    else if (line.startsWith('Entity:')) entity = line.replace('Entity:', '').trim();
+    else if (line.startsWith('High Risk:')) highRisk = line.replace('High Risk:', '').trim();
+    else if (line.startsWith('GPAI:')) gpai = line.replace('GPAI:', '').trim();
+    else if (line.startsWith('Obligations')) { inObligations = true; }
+    else if (inObligations && line.trim()) { obligations.push(line.trim()); }
+  }
+
+  // Translate entity type
+  const entityLabels: Record<string, string> = {
+    provider: 'Fournisseur', deployer: 'D\u00e9ployeur', distributor: 'Distributeur',
+    importer: 'Importateur', product_manufacturer: 'Fabricant de produit', authorized_rep: 'Repr\u00e9sentant autoris\u00e9'
+  };
+  const entityLabel = entityLabels[entity] || entity;
+  const riskColor = highRisk === 'true' ? '#ef4444' : '#22c55e';
+  const riskLabel = highRisk === 'true' ? 'Haut risque' : 'Risque limit\u00e9';
+  const gpaiLabel = gpai === 'true' ? 'Oui' : 'Non';
+
+  // Build obligation cards
+  const oblCards = obligations.map((obl: string) => {
+    const parts = obl.split(':');
+    const title = parts[0]?.trim() || '';
+    const desc = parts.slice(1).join(':').trim() || '';
+    return `
+    <tr><td style="padding:6px 0;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0d1f3c;border:1px solid #1a2740;">
+        <tr><td style="padding:14px 16px;">
+          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td style="font-size:14px;font-weight:700;color:#ffffff;padding-bottom:${desc ? '6' : '0'}px;">${escHtml(title)}</td>
+            </tr>
+            ${desc ? `<tr><td style="font-size:12px;color:#9db0c8;line-height:18px;">${escHtml(desc)}</td></tr>` : ''}
+          </table>
+        </td></tr>
+      </table>
+    </td></tr>`;
+  }).join('');
+
+  return `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/></head>
+<body style="margin:0;padding:0;background-color:#050c1a;font-family:Arial,Helvetica,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#050c1a;">
+<tr><td align="center" style="padding:32px 16px;">
+  <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#071122;border:1px solid #3d3220;">
+    <!-- Logo + Title -->
+    <tr><td align="center" style="padding:32px 32px 20px 32px;">
+      <table cellpadding="0" cellspacing="0" border="0"><tr>
+        <td width="56" height="56" align="center" valign="middle" style="background-color:#c9a84c;font-weight:900;font-size:16px;color:#050c1a;">ACF</td>
+      </tr></table>
+      <h1 style="font-size:22px;font-weight:800;color:#ffffff;margin:16px 0 4px 0;">EU AI Act Checker</h1>
+      <p style="font-size:13px;color:#c9a84c;margin:0;">Vos r&eacute;sultats de conformit&eacute;</p>
+    </td></tr>
+
+    <!-- System Info Cards -->
+    <tr><td style="padding:0 32px 20px 32px;border-top:1px solid #1a2740;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:20px;">
+        <tr>
+          <td width="50%" style="padding-right:8px;vertical-align:top;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0a1a30;border:1px solid #1a2740;">
+              <tr><td style="padding:14px 16px;">
+                <div style="font-size:10px;color:#6b7fa0;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">SYST&Egrave;ME IA</div>
+                <div style="font-size:15px;font-weight:700;color:#ffffff;">${escHtml(aiSystem || name)}</div>
+              </td></tr>
+            </table>
+          </td>
+          <td width="50%" style="padding-left:8px;vertical-align:top;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0a1a30;border:1px solid #1a2740;">
+              <tr><td style="padding:14px 16px;">
+                <div style="font-size:10px;color:#6b7fa0;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">ENTIT&Eacute;</div>
+                <div style="font-size:15px;font-weight:700;color:#ffffff;">${escHtml(entityLabel)}</div>
+              </td></tr>
+            </table>
+          </td>
+        </tr>
+        <tr><td colspan="2" height="10"></td></tr>
+        <tr>
+          <td width="50%" style="padding-right:8px;vertical-align:top;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0a1a30;border:1px solid #1a2740;">
+              <tr><td style="padding:14px 16px;">
+                <div style="font-size:10px;color:#6b7fa0;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">NIVEAU DE RISQUE</div>
+                <div style="font-size:15px;font-weight:700;color:${riskColor};">${riskLabel}</div>
+              </td></tr>
+            </table>
+          </td>
+          <td width="50%" style="padding-left:8px;vertical-align:top;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0a1a30;border:1px solid #1a2740;">
+              <tr><td style="padding:14px 16px;">
+                <div style="font-size:10px;color:#6b7fa0;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">GPAI / MOD&Egrave;LE G&Eacute;N&Eacute;RATIF</div>
+                <div style="font-size:15px;font-weight:700;color:#ffffff;">${gpaiLabel}</div>
+              </td></tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td></tr>
+
+    <!-- Obligations Header -->
+    <tr><td style="padding:0 32px 12px 32px;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="font-size:11px;color:#c9a84c;letter-spacing:1px;text-transform:uppercase;font-weight:700;">OBLIGATIONS IDENTIFI&Eacute;ES</td>
+          <td align="right"><span style="background-color:#c9a84c;color:#050c1a;font-size:12px;font-weight:800;padding:4px 12px;">${obligations.length}</span></td>
+        </tr>
+      </table>
+    </td></tr>
+
+    <!-- Obligation Cards -->
+    <tr><td style="padding:0 32px 24px 32px;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        ${oblCards}
+      </table>
+    </td></tr>
+
+    <!-- CTA Button -->
+    <tr><td align="center" style="padding:0 32px 24px 32px;">
+      <table cellpadding="0" cellspacing="0" border="0"><tr>
+        <td align="center" style="background-color:#c9a84c;padding:14px 32px;">
+          <a href="https://www.acf-standard.com/fr/compliance-checker" style="color:#050c1a;font-weight:700;font-size:14px;text-decoration:none;display:block;">Refaire le diagnostic</a>
+        </td>
+      </tr></table>
+    </td></tr>
+
+    <!-- Disclaimer -->
+    <tr><td style="padding:0 32px 24px 32px;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0d1525;border:1px solid #2a2415;">
+        <tr><td style="padding:14px 16px;">
+          <p style="font-size:12px;color:#6b7fa0;margin:0;line-height:18px;">Cet outil fournit une indication pr&eacute;liminaire. Il ne constitue pas un avis juridique. Pour un accompagnement complet, d&eacute;couvrez le <a href="https://www.acf-standard.com" style="color:#c9a84c;">framework ACF&reg;</a>.</p>
+        </td></tr>
+      </table>
+    </td></tr>
+
+    <!-- Footer -->
+    <tr><td style="padding:16px 32px;border-top:1px solid #1a2740;text-align:center;">
+      <span style="font-size:11px;color:#6b7fa0;">&copy; 2026 Agentic Commerce Framework&reg; &mdash; www.acf-standard.com</span>
+    </td></tr>
+  </table>
+</td></tr>
+</table>
 </body>
 </html>`;
 }
