@@ -55,8 +55,7 @@ const ui: Record<string, Record<string, string>> = {
     emailPlaceholder: "nom@entreprise.com",
     sendBtn: "Envoyer mes r\u00e9sultats par courriel",
     pdfTitle: "Enregistrer en PDF",
-    pdfInstructions:
-      "Appuyez sur Ctrl+P (ou Cmd+P sur Mac) pour imprimer cette page en PDF.",
+    pdfBtn: "Télécharger en PDF",
     successToast: "R\u00e9sultats envoy\u00e9s avec succ\u00e8s !",
     errorToast: "Erreur lors de l\u2019envoi. Veuillez r\u00e9essayer.",
     dataNotice: "Vos donn\u00e9es sont utilis\u00e9es uniquement pour vous transmettre vos r\u00e9sultats. Elles ne sont ni stock\u00e9es, ni partag\u00e9es avec des tiers. Aucun cookie de suivi n\u2019est utilis\u00e9.",
@@ -122,8 +121,7 @@ const ui: Record<string, Record<string, string>> = {
     emailPlaceholder: "name@company.com",
     sendBtn: "Send my results by email",
     pdfTitle: "Save as PDF",
-    pdfInstructions:
-      "Press Ctrl+P (or Cmd+P on Mac) to print this page as PDF.",
+    pdfBtn: "Download as PDF",
     successToast: "Results sent successfully!",
     errorToast: "Error sending results. Please try again.",
     dataNotice: "Your data is used solely to send you your results. It is neither stored nor shared with third parties. No tracking cookies are used.",
@@ -2852,27 +2850,34 @@ export default function ComplianceCheckerPage() {
               paddingTop: 20,
             }}
           >
-            <h3
+            <button
+              onClick={() => window.print()}
               style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 10,
+                background: "transparent",
+                border: `1px solid ${C.goldBorder}`,
                 color: C.gold,
-                fontSize: 16,
+                padding: "14px 28px",
+                borderRadius: 10,
+                fontSize: 15,
                 fontWeight: 700,
-                marginBottom: 8,
-                marginTop: 0,
+                cursor: "pointer",
+                transition: "all .2s",
+              }}
+              onMouseEnter={(e) => {
+                (e.target as HTMLElement).style.background = `linear-gradient(135deg, ${C.gold}, ${C.gold2})`;
+                (e.target as HTMLElement).style.color = C.navy1;
+              }}
+              onMouseLeave={(e) => {
+                (e.target as HTMLElement).style.background = "transparent";
+                (e.target as HTMLElement).style.color = C.gold;
               }}
             >
-              {t.pdfTitle}
-            </h3>
-            <p
-              style={{
-                color: C.gray2,
-                fontSize: 14,
-                lineHeight: 1.5,
-                margin: 0,
-              }}
-            >
-              {t.pdfInstructions}
-            </p>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              {t.pdfBtn}
+            </button>
           </div>
         </div>
 
