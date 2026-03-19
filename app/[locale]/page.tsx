@@ -315,14 +315,14 @@ section{padding:60px 0;position:relative;z-index:1}
 
 /* ═══ PRODUCTS ═══ */
 .prodgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:60px}
-.pc{background:var(--navy3);padding:52px 44px;transition:.3s;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.pc{background:var(--navy3);padding:52px 32px;transition:.3s;position:relative;overflow:hidden;display:flex;flex-direction:column}
 .pc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));transform:scaleX(0);transform-origin:left;transition:.4s cubic-bezier(.16,1,.3,1)}
 .pc:hover::after{transform:scaleX(1)}
 .pc:hover{background:#071520}
 .piw{width:52px;height:52px;border-radius:12px;background:var(--gold-dim);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:.3s}
 .pc:hover .piw{background:var(--gold)}
 .plbl{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
-.ptitle{font-family:'Space Grotesk',sans-serif;font-size:27px;font-weight:800;margin-bottom:14px}
+.ptitle{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:800;margin-bottom:14px;white-space:nowrap}
 .pdesc{font-size:14.5px;color:var(--gr2);line-height:1.75;margin-bottom:22px}
 .pfeat{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:22px}
 .pfeat li{font-size:13px;color:var(--gr);display:flex;align-items:center;gap:8px}
