@@ -444,7 +444,7 @@ export default function FaqPage() {
                   >
                     <span
                       style={{
-                        fontSize: 15,
+                        fontSize: 16,
                         fontWeight: 600,
                         color: isOpen ? C.gold : C.white,
                         lineHeight: 1.5,
@@ -484,7 +484,7 @@ export default function FaqPage() {
                       style={{
                         padding: "0 24px 20px",
                         margin: 0,
-                        fontSize: 14,
+                        fontSize: 16,
                         color: C.gray2,
                         lineHeight: 1.8,
                       }}
