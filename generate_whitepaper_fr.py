@@ -403,7 +403,7 @@ def draw_framework_page1(c):
     c.setFont("Helvetica-Bold", 14)
     c.drawString(40, y, "Les 4 Principes Fondateurs")
 
-    y -= 8
+    y -= 12
     draw_gold_line(c, 40, y, 180, 1)
 
     principles = [
@@ -417,31 +417,28 @@ def draw_framework_page1(c):
          "Le cadre de gouvernance \u00e9volue continuellement avec les capacit\u00e9s des agents."),
     ]
 
-    y -= 20
+    y -= 35
     for code, title, desc in principles:
         c.setFillColor(DARK_CARD)
-        c.roundRect(50, y - 12, W - 100, 45, 5, fill=1, stroke=0)
-        # Gold number
+        c.roundRect(50, y - 5, W - 100, 40, 5, fill=1, stroke=0)
         c.setFillColor(GOLD)
-        c.setFont("Helvetica-Bold", 12)
-        c.drawString(62, y + 16, code)
-        # Title
-        c.setFillColor(WHITE)
         c.setFont("Helvetica-Bold", 11)
-        c.drawString(95, y + 16, title)
-        # Desc
+        c.drawString(62, y + 20, code)
+        c.setFillColor(WHITE)
+        c.setFont("Helvetica-Bold", 10)
+        c.drawString(92, y + 20, title)
         c.setFillColor(GREY)
-        c.setFont("Helvetica", 9)
-        c.drawString(62, y - 2, desc)
-        y -= 55
+        c.setFont("Helvetica", 8.5)
+        c.drawString(62, y + 4, desc)
+        y -= 50
 
     # 4 Layers
-    y -= 10
+    y -= 15
     c.setFillColor(GOLD)
     c.setFont("Helvetica-Bold", 14)
     c.drawString(40, y, "Les 4 Couches Op\u00e9rationnelles")
 
-    y -= 8
+    y -= 12
     draw_gold_line(c, 40, y, 200, 1)
 
     layers = [
@@ -451,20 +448,20 @@ def draw_framework_page1(c):
         ("C4", "Technique", "Gating adaptatif, alertes multi-niveaux, 18 KPIs, dashboards temps r\u00e9el"),
     ]
 
-    y -= 20
+    y -= 35
     for code, title, desc in layers:
         c.setFillColor(DARK_CARD)
-        c.roundRect(50, y - 10, W - 100, 40, 5, fill=1, stroke=0)
+        c.roundRect(50, y - 5, W - 100, 38, 5, fill=1, stroke=0)
         c.setFillColor(GOLD)
-        c.setFont("Helvetica-Bold", 11)
-        c.drawString(62, y + 14, code)
-        c.setFillColor(WHITE)
         c.setFont("Helvetica-Bold", 10)
-        c.drawString(95, y + 14, title)
+        c.drawString(62, y + 18, code)
+        c.setFillColor(WHITE)
+        c.setFont("Helvetica-Bold", 9.5)
+        c.drawString(92, y + 18, title)
         c.setFillColor(GREY)
-        c.setFont("Helvetica", 9)
-        c.drawString(62, y - 2, desc)
-        y -= 50
+        c.setFont("Helvetica", 8.5)
+        c.drawString(62, y + 3, desc)
+        y -= 48
 
     draw_footer(c, 5)
 
@@ -583,10 +580,10 @@ def draw_methodology_page(c):
         ("MOD 08", "Gestion de crise", "Incidents 3 niveaux. Exercices de simulation d'arr\u00eat d'urgence."),
     ]
 
-    y -= 40
+    y -= 60
     for code, name, desc in modules:
         c.setFillColor(DARK_CARD)
-        c.roundRect(40, y - 6, W - 80, 48, 5, fill=1, stroke=0)
+        c.roundRect(40, y - 4, W - 80, 44, 5, fill=1, stroke=0)
 
         # Code
         c.setFillColor(GOLD)
@@ -603,7 +600,7 @@ def draw_methodology_page(c):
         c.setFont("Helvetica", 9)
         c.drawString(52, y + 6, desc)
 
-        y -= 58
+        y -= 56
 
     # Timeline hint
     y -= 5
@@ -645,7 +642,7 @@ def draw_emergency_stop_page(c):
          "< 1 seconde", "#ef4444"),
     ]
 
-    y -= 35
+    y -= 50
     for code, name, desc, response, color_hex in levels:
         box_h = 110
         c.setFillColor(DARK_CARD)
@@ -707,7 +704,7 @@ def draw_products_page(c):
     y = H - 80
     y = draw_section_header(c, "06", "Les produits ACF\u00ae", y)
 
-    y -= 10
+    y -= 15
     c.setFillColor(GREY)
     c.setFont("Helvetica", 11)
     c.drawString(40, y, "Quatre produits compl\u00e9mentaires op\u00e9rationnalisant le standard ACF.")
@@ -739,7 +736,7 @@ def draw_products_page(c):
           "Renouvellement annuel + monitoring continu"]),
     ]
 
-    y -= 30
+    y -= 45
     for name, label, desc, features in products:
         box_h = 115
         c.setFillColor(DARK_CARD)
