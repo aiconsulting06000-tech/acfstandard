@@ -1421,7 +1421,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "Contactez-nous",
     ctaChecker: "Tester l'ACF AI Act Checker",
     ctaScore: "Faire mon diagnostic ACF Score",
-    navHome: "Accueil", navStandard: "Le Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partenaires", navFaq: "FAQ", navCta: "ACF Score →",
+    navHome: "Accueil", navStandard: "Le Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partenaires", navFaq: "FAQ", navCta: "Contact",
   },
   en: {
     heroTitle: "FAQ",
@@ -1430,7 +1430,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "Contact us",
     ctaChecker: "Try the ACF AI Act Checker",
     ctaScore: "Take the ACF Score diagnostic",
-    navHome: "Home", navStandard: "The Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partners", navFaq: "FAQ", navCta: "ACF Score →",
+    navHome: "Home", navStandard: "The Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partners", navFaq: "FAQ", navCta: "Contact",
   },
   es: {
     heroTitle: "FAQ",
@@ -1439,7 +1439,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "Cont\u00e1ctenos",
     ctaChecker: "Probar el ACF AI Act Checker",
     ctaScore: "Hacer mi diagnóstico ACF Score",
-    navHome: "Inicio", navStandard: "El Estándar", navScore: "ACF Score", navBlog: "Blog", navPartners: "Socios", navFaq: "FAQ", navCta: "ACF Score →",
+    navHome: "Inicio", navStandard: "El Estándar", navScore: "ACF Score", navBlog: "Blog", navPartners: "Socios", navFaq: "FAQ", navCta: "Contact",
   },
   de: {
     heroTitle: "FAQ",
@@ -1448,7 +1448,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "Kontaktieren Sie uns",
     ctaChecker: "ACF AI Act Checker testen",
     ctaScore: "ACF Score Diagnose starten",
-    navHome: "Startseite", navStandard: "Der Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partner", navFaq: "FAQ", navCta: "ACF Score →",
+    navHome: "Startseite", navStandard: "Der Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partner", navFaq: "FAQ", navCta: "Contact",
   },
   pt: {
     heroTitle: "FAQ",
@@ -1457,7 +1457,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "Contacte-nos",
     ctaChecker: "Testar o ACF AI Act Checker",
     ctaScore: "Fazer o diagnóstico ACF Score",
-    navHome: "Início", navStandard: "O Padrão", navScore: "ACF Score", navBlog: "Blog", navPartners: "Parceiros", navFaq: "FAQ", navCta: "ACF Score →",
+    navHome: "Início", navStandard: "O Padrão", navScore: "ACF Score", navBlog: "Blog", navPartners: "Parceiros", navFaq: "FAQ", navCta: "Contact",
   },
   it: {
     heroTitle: "FAQ",
@@ -1466,7 +1466,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "Contattaci",
     ctaChecker: "Provare l'ACF AI Act Checker",
     ctaScore: "Fare la diagnosi ACF Score",
-    navHome: "Home", navStandard: "Lo Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partner", navFaq: "FAQ", navCta: "ACF Score →",
+    navHome: "Home", navStandard: "Lo Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partner", navFaq: "FAQ", navCta: "Contact",
   },
   nl: {
     heroTitle: "FAQ",
@@ -1475,7 +1475,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "Neem contact op",
     ctaChecker: "ACF AI Act Checker testen",
     ctaScore: "ACF Score diagnose starten",
-    navHome: "Home", navStandard: "De Standaard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partners", navFaq: "FAQ", navCta: "ACF Score →",
+    navHome: "Home", navStandard: "De Standaard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partners", navFaq: "FAQ", navCta: "Contact",
   },
   ja: {
     heroTitle: "FAQ",
@@ -1484,7 +1484,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "\u304a\u554f\u3044\u5408\u308f\u305b",
     ctaChecker: "ACF AI Act Checkerを試す",
     ctaScore: "ACF Scoreの診断を受ける",
-    navHome: "ホーム", navStandard: "スタンダード", navScore: "ACF Score", navBlog: "ブログ", navPartners: "パートナー", navFaq: "FAQ", navCta: "ACF Score →",
+    navHome: "ホーム", navStandard: "スタンダード", navScore: "ACF Score", navBlog: "ブログ", navPartners: "パートナー", navFaq: "FAQ", navCta: "Contact",
   },
   zh: {
     heroTitle: "FAQ",
@@ -1493,7 +1493,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "\u8054\u7cfb\u6211\u4eec",
     ctaChecker: "试用ACF AI Act Checker",
     ctaScore: "进行ACF Score诊断",
-    navHome: "首页", navStandard: "标准", navScore: "ACF Score", navBlog: "博客", navPartners: "合作伙伴", navFaq: "FAQ", navCta: "ACF Score →",
+    navHome: "首页", navStandard: "标准", navScore: "ACF Score", navBlog: "博客", navPartners: "合作伙伴", navFaq: "FAQ", navCta: "Contact",
   },
   ko: {
     heroTitle: "FAQ",
@@ -1502,7 +1502,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "\ubb38\uc758\ud558\uae30",
     ctaChecker: "ACF AI Act Checker 시도",
     ctaScore: "ACF Score 진단 받기",
-    navHome: "홈", navStandard: "표준", navScore: "ACF Score", navBlog: "블로그", navPartners: "파트너", navFaq: "FAQ", navCta: "ACF Score →",
+    navHome: "홈", navStandard: "표준", navScore: "ACF Score", navBlog: "블로그", navPartners: "파트너", navFaq: "FAQ", navCta: "Contact",
   },
   ru: {
     heroTitle: "FAQ",
@@ -1511,7 +1511,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "\u0421\u0432\u044f\u0436\u0438\u0442\u0435\u0441\u044c \u0441 \u043d\u0430\u043c\u0438",
     ctaChecker: "Попробовать ACF AI Act Checker",
     ctaScore: "Пройти диагностику ACF Score",
-    navHome: "Главная", navStandard: "Стандарт", navScore: "ACF Score", navBlog: "Блог", navPartners: "Партнёры", navFaq: "FAQ", navCta: "ACF Score →",
+    navHome: "Главная", navStandard: "Стандарт", navScore: "ACF Score", navBlog: "Блог", navPartners: "Партнёры", navFaq: "FAQ", navCta: "Contact",
   },
   ar: {
     heroTitle: "FAQ",
@@ -1520,7 +1520,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "\u0627\u062a\u0635\u0644 \u0628\u0646\u0627",
     ctaChecker: "جرب ACF AI Act Checker",
     ctaScore: "قم بتشخيص ACF Score",
-    navHome: "الرئيسية", navStandard: "المعيار", navScore: "ACF Score", navBlog: "المدونة", navPartners: "الشركاء", navFaq: "FAQ", navCta: "ACF Score →",
+    navHome: "الرئيسية", navStandard: "المعيار", navScore: "ACF Score", navBlog: "المدونة", navPartners: "الشركاء", navFaq: "FAQ", navCta: "Contact",
   },
   tr: {
     heroTitle: "FAQ",
@@ -1529,7 +1529,7 @@ const uiStrings: Record<string, Record<string, string>> = {
     ctaBtn: "Bize ula\u015f\u0131n",
     ctaChecker: "ACF AI Act Checker'ı deneyin",
     ctaScore: "ACF Score tanılama yapın",
-    navHome: "Ana Sayfa", navStandard: "Standart", navScore: "ACF Score", navBlog: "Blog", navPartners: "İş Ortakları", navFaq: "FAQ", navCta: "ACF Score →",
+    navHome: "Ana Sayfa", navStandard: "Standart", navScore: "ACF Score", navBlog: "Blog", navPartners: "İş Ortakları", navFaq: "FAQ", navCta: "Contact",
   },
 };
 
@@ -1611,7 +1611,7 @@ export default function FaqPage() {
               <a key={l.label} href={l.href} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, textDecoration: "none", transition: "color .2s" }}
                 onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l.label}</a>
             ))}
-            <a href="https://www.acf-score.com" target="_blank" rel="noopener" style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 700, display: "inline-block" }}>{t.navCta}</a>
+            <a href={`/${locale}/contact`} style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 700, display: "inline-block" }}>{t.navCta}</a>
           </div>
         </div>
       </nav>

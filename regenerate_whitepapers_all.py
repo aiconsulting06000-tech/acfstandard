@@ -716,7 +716,7 @@ def generate_pdf(lang_code, t):
     y -= 18; y = draw_body_text(c, t["ch_p3"], 40, y, font_size=12, line_height=18)
     y -= 40; draw_gold_line(c, 40, y + 15, W - 80, 1)
     c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 10); c.drawString(40, y - 5, t["risks_label"])
-    y -= 35
+    y -= 45
     for rt, rd in t["risks"]:
         c.setFillColor(DARK_CARD); c.roundRect(50, y - 10, W - 100, 38, 5, fill=1, stroke=0)
         c.setFillColor(GOLD); c.circle(68, y + 8, 4, fill=1, stroke=0)
@@ -729,7 +729,7 @@ def generate_pdf(lang_code, t):
     draw_page_bg(c)
     y = H - 80; y = draw_section_header(c, t["fw_num"], t["fw_title"], y)
     y -= 15; c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 14); c.drawString(40, y, t["fw_principles_title"])
-    y -= 12; draw_gold_line(c, 40, y, 180, 1); y -= 35
+    y -= 14; draw_gold_line(c, 40, y, 180, 1); y -= 40
     for code, title, desc in t["principles"]:
         c.setFillColor(DARK_CARD); c.roundRect(50, y - 5, W - 100, 40, 5, fill=1, stroke=0)
         c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 11); c.drawString(62, y + 20, code)
@@ -737,7 +737,7 @@ def generate_pdf(lang_code, t):
         c.setFillColor(GREY); c.setFont("Helvetica", 8.5); c.drawString(62, y + 4, desc)
         y -= 50
     y -= 15; c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 14); c.drawString(40, y, t["fw_layers_title"])
-    y -= 12; draw_gold_line(c, 40, y, 200, 1); y -= 35
+    y -= 14; draw_gold_line(c, 40, y, 200, 1); y -= 40
     for code, title, desc in t["layers"]:
         c.setFillColor(DARK_CARD); c.roundRect(50, y - 5, W - 100, 38, 5, fill=1, stroke=0)
         c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 10); c.drawString(62, y + 18, code)
@@ -753,7 +753,7 @@ def generate_pdf(lang_code, t):
     y -= 35; c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 14); c.drawString(40, y, t["mat_title"])
     y -= 8; draw_gold_line(c, 40, y, 260, 1)
     c.setFillColor(GREY); c.setFont("Helvetica", 10); y -= 20; c.drawString(40, y, t["mat_desc"])
-    y -= 30
+    y -= 40
     for code, name, risk, desc, badge in t["levels"]:
         bh = 75 if badge else 65
         c.setFillColor(DARK_CARD); c.roundRect(40, y - 10, W - 80, bh, 6, fill=1, stroke=0)
@@ -776,7 +776,7 @@ def generate_pdf(lang_code, t):
     y = H - 80; y = draw_section_header(c, t["meth_num"], t["meth_title"], y)
     y -= 10; c.setFillColor(GREY); c.setFont("Helvetica", 11)
     c.drawString(40, y, t["meth_desc1"]); c.drawString(40, y - 16, t["meth_desc2"])
-    y -= 60
+    y -= 65
     for code, name, desc in t["modules"]:
         c.setFillColor(DARK_CARD); c.roundRect(40, y - 4, W - 80, 44, 5, fill=1, stroke=0)
         c.setFillColor(GOLD); c.setFont("Helvetica-Bold", 10); c.drawString(52, y + 24, code)

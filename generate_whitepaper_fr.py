@@ -368,7 +368,7 @@ def draw_challenge_page(c):
         ("Risque op\u00e9rationnel", "Cascades de d\u00e9cisions autonomes sans m\u00e9canisme d'arr\u00eat"),
     ]
 
-    y -= 35
+    y -= 45
     for title, desc in risks:
         # Card
         c.setFillColor(DARK_CARD)
@@ -403,7 +403,7 @@ def draw_framework_page1(c):
     c.setFont("Helvetica-Bold", 14)
     c.drawString(40, y, "Les 4 Principes Fondateurs")
 
-    y -= 12
+    y -= 14
     draw_gold_line(c, 40, y, 180, 1)
 
     principles = [
@@ -417,7 +417,7 @@ def draw_framework_page1(c):
          "Le cadre de gouvernance \u00e9volue continuellement avec les capacit\u00e9s des agents."),
     ]
 
-    y -= 35
+    y -= 40
     for code, title, desc in principles:
         c.setFillColor(DARK_CARD)
         c.roundRect(50, y - 5, W - 100, 40, 5, fill=1, stroke=0)
@@ -438,7 +438,7 @@ def draw_framework_page1(c):
     c.setFont("Helvetica-Bold", 14)
     c.drawString(40, y, "Les 4 Couches Op\u00e9rationnelles")
 
-    y -= 12
+    y -= 14
     draw_gold_line(c, 40, y, 200, 1)
 
     layers = [
@@ -448,7 +448,7 @@ def draw_framework_page1(c):
         ("C4", "Technique", "Gating adaptatif, alertes multi-niveaux, 18 KPIs, dashboards temps r\u00e9el"),
     ]
 
-    y -= 35
+    y -= 40
     for code, title, desc in layers:
         c.setFillColor(DARK_CARD)
         c.roundRect(50, y - 5, W - 100, 38, 5, fill=1, stroke=0)
@@ -503,7 +503,7 @@ def draw_framework_page2(c):
          None),
     ]
 
-    y -= 30
+    y -= 40
     for code, name, risk, desc, badge in levels:
         box_h = 75 if badge else 65
         c.setFillColor(DARK_CARD)
@@ -580,7 +580,7 @@ def draw_methodology_page(c):
         ("MOD 08", "Gestion de crise", "Incidents 3 niveaux. Exercices de simulation d'arr\u00eat d'urgence."),
     ]
 
-    y -= 60
+    y -= 65
     for code, name, desc in modules:
         c.setFillColor(DARK_CARD)
         c.roundRect(40, y - 4, W - 80, 44, 5, fill=1, stroke=0)
