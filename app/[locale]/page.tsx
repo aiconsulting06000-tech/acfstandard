@@ -110,6 +110,26 @@ nav.scrolled{background:rgba(5,12,26,.99);box-shadow:0 4px 40px rgba(0,0,0,.5)}
 .mftitle{font-weight:600;font-size:13.5px;margin-bottom:3px}
 .mfdesc{font-size:12px;color:var(--gr);line-height:1.5}
 
+/* ═══ MOBILE ACCORDION MENU ═══ */
+.macc{display:none;flex-direction:column;padding-top:64px;overflow-y:auto;height:100%}
+.macc-cat{border-bottom:1px solid var(--bd2)}
+.macc-btn{display:flex;align-items:center;justify-content:space-between;width:100%;padding:16px 22px;background:transparent;border:none;cursor:pointer;transition:.2s}
+.macc-btn span{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;color:var(--w)}
+.macc-arr{color:var(--gr);font-size:14px;transition:transform .3s}
+.macc-cat.open .macc-arr{transform:rotate(90deg);color:var(--gold)}
+.macc-cat.open .macc-btn{background:var(--gold-dim);border-left:3px solid var(--gold)}
+.macc-cat.open .macc-btn span{color:var(--gold)}
+.macc-body{display:none;padding:8px 22px 16px;background:rgba(201,168,76,.03)}
+.macc-cat.open .macc-body{display:block}
+.macc-body .mgtitle{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.14em;color:var(--gold);margin:12px 0 8px;text-transform:uppercase}
+.macc-body .mlinks{list-style:none;display:flex;flex-direction:column;gap:8px}
+.macc-body .mlinks a{color:var(--gr2);font-size:14px;text-decoration:none;padding:6px 0;display:block;transition:.2s}
+.macc-body .mlinks a:active{color:var(--gold)}
+.macc-user{padding:20px 22px;border-top:1px solid var(--bd2);margin-top:auto}
+.macc-user .muname{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;color:var(--gold);letter-spacing:.08em;margin-bottom:8px}
+.macc-user .mulinks{display:flex;flex-direction:column;gap:8px}
+.macc-user .mulinks a{color:var(--gr);font-size:14px;text-decoration:none;padding:6px 0;display:flex;align-items:center;gap:8px}
+
 /* ═══ HERO ═══ */
 .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:72px}
 .hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.05) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,black 20%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,black 20%,transparent 100%)}
@@ -407,7 +427,9 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
   .hs:nth-child(3){border-top:1px solid var(--bd)}
   .hs:nth-child(4){border-top:1px solid var(--bd);border-right:none}
   .md{width:100%}
-  .ms{width:180px}
+  .ms{display:none}
+  .mc{display:none}
+  .macc{display:flex}
   .ctr{font-size:36px}
   .sgrid{grid-template-columns:repeat(2,1fr)}
   .sc2:nth-child(2){border-right:none}
@@ -599,6 +621,66 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="mpd">${m.megaMenu.partners.subtitle}</div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.partners.portal.title}</div><ul class="mlinks"><li><a href="/${locale}/acf-partners"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> ${m.megaMenu.partners.portal.login}</a></li><li><a href="/${locale}/acf-partners">${m.megaMenu.partners.portal.dashboard}</a></li><li><a href="/${locale}/acf-partners">${m.megaMenu.partners.portal.training}</a></li><li><a href="/${locale}/acf-partners">${m.megaMenu.partners.portal.toolkit}</a></li></ul></div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.partners.become.title}</div><ul class="mlinks"><li><a href="/${locale}/acf-partners">${m.megaMenu.partners.become.apply}</a></li><li><a href="/${locale}/acf-partners">${m.megaMenu.partners.become.tiers}</a></li><li><a href="/${locale}/acf-certification">${m.megaMenu.partners.become.certified}</a></li></ul></div>
+    </div>
+  </div>
+  <!-- MOBILE ACCORDION -->
+  <div class="macc">
+    <div class="macc-cat">
+      <button class="macc-btn" onclick="toggleAccordion(this)"><span>${m.megaMenu.framework.title}</span><span class="macc-arr">›</span></button>
+      <div class="macc-body">
+        <div class="mgtitle">${m.megaMenu.framework.architecture.title}</div>
+        <ul class="mlinks"><li><a href="/${locale}/standard#principles" onclick="closeMega()">${m.megaMenu.framework.architecture.principles}</a></li><li><a href="/${locale}/standard#layers" onclick="closeMega()">${m.megaMenu.framework.architecture.layers}</a></li><li><a href="/${locale}/standard#maturity" onclick="closeMega()">${m.megaMenu.framework.architecture.maturity}</a></li></ul>
+        <div class="mgtitle">${m.megaMenu.framework.methodology.title}</div>
+        <ul class="mlinks"><li><a href="/${locale}/standard#modules" onclick="closeMega()">${m.megaMenu.framework.methodology.modules}</a></li><li><a href="/${locale}/standard#modules" onclick="closeMega()">${m.megaMenu.framework.methodology.constitution}</a></li><li><a href="/${locale}/blog#delegated-decision-agent-officer" onclick="closeMega()">${m.megaMenu.framework.methodology.dda}</a></li><li><a href="/${locale}/blog#three-level-kill-switch" onclick="closeMega()">${m.megaMenu.framework.methodology.killSwitch}</a></li></ul>
+      </div>
+    </div>
+    <div class="macc-cat">
+      <button class="macc-btn" onclick="toggleAccordion(this)"><span>${m.megaMenu.products.title}</span><span class="macc-arr">›</span></button>
+      <div class="macc-body">
+        <div class="mgtitle">${m.megaMenu.products.diagnostic.title}</div>
+        <ul class="mlinks"><li><a href="https://www.acf-score.com/" onclick="closeMega()">${m.megaMenu.products.diagnostic.score}</a></li><li><a href="https://www.acf-score.com/pourquoi" onclick="closeMega()">${m.megaMenu.products.diagnostic.methodology}</a></li><li><a href="https://www.acf-score.com/calculator" onclick="closeMega()">${m.megaMenu.products.diagnostic.axes}</a></li></ul>
+        <div class="mgtitle">${m.megaMenu.products.saas.title}</div>
+        <ul class="mlinks"><li><a href="/${locale}/acf-control" onclick="closeMega()">${m.megaMenu.products.saas.control}</a></li><li><a href="/${locale}/acf-control#modules" onclick="closeMega()">${m.megaMenu.products.saas.kpis}</a></li><li><a href="/${locale}/acf-control#drift-engine" onclick="closeMega()">${m.megaMenu.products.saas.gating}</a></li></ul>
+        <div class="mgtitle">${m.megaMenu.products.certification.title}</div>
+        <ul class="mlinks"><li><a href="/${locale}/acf-certification" onclick="closeMega()">${m.megaMenu.products.certification.program}</a></li><li><a href="/${locale}/acf-certification#levels" onclick="closeMega()">${m.megaMenu.products.certification.levels}</a></li><li><a href="/${locale}/acf-certification#process" onclick="closeMega()">${m.megaMenu.products.certification.audit}</a></li></ul>
+      </div>
+    </div>
+    <div class="macc-cat">
+      <button class="macc-btn" onclick="toggleAccordion(this)"><span>${m.megaMenu.resources.title}</span><span class="macc-arr">›</span></button>
+      <div class="macc-body">
+        <div class="mgtitle">${m.megaMenu.resources.insights.title}</div>
+        <ul class="mlinks"><li><a href="/${locale}/blog#eu-ai-act-agentic-systems-2026" onclick="closeMega()">${m.megaMenu.resources.insights.aiAct}</a></li><li><a href="/${locale}/blog#delegated-decision-agent-officer" onclick="closeMega()">${m.megaMenu.resources.insights.dda}</a></li><li><a href="/${locale}/blog#three-level-kill-switch" onclick="closeMega()">${m.megaMenu.resources.insights.killSwitch}</a></li></ul>
+        <div class="mgtitle">${m.megaMenu.resources.documentation.title}</div>
+        <ul class="mlinks"><li><a href="/${locale}/standard" onclick="closeMega()">${m.megaMenu.resources.documentation.specs}</a></li><li><a href="/${locale}/blog" onclick="closeMega()">${m.megaMenu.resources.documentation.research}</a></li><li><a href="/${locale}/acf-certification#academy" onclick="closeMega()">${m.megaMenu.resources.documentation.academy}</a></li></ul>
+        <div class="mgtitle">${m.megaMenu.resources.tools.title}</div>
+        <ul class="mlinks"><li><a href="/${locale}/compliance-checker" onclick="closeMega()">ACF AI Act Checker</a></li><li><a href="https://artificialintelligenceact.eu/${locale === 'fr' ? 'fr/' : ''}ai-act-explorer/" target="_blank" rel="noopener">AI Act Explorer \u2197</a></li></ul>
+      </div>
+    </div>
+    <div class="macc-cat">
+      <button class="macc-btn" onclick="toggleAccordion(this)"><span>${m.megaMenu.about.title}</span><span class="macc-arr">›</span></button>
+      <div class="macc-body">
+        <div class="mgtitle">${m.megaMenu.about.whoWeAre.title}</div>
+        <ul class="mlinks"><li><a href="/${locale}/about#vincent" onclick="closeMega()">${m.megaMenu.about.whoWeAre.vincent}</a></li><li><a href="/${locale}/about#mission" onclick="closeMega()">${m.megaMenu.about.whoWeAre.mission}</a></li><li><a href="/${locale}/legal" onclick="closeMega()">${m.megaMenu.about.whoWeAre.legal}</a></li></ul>
+        <div class="mgtitle">${m.megaMenu.about.howWeWork.title}</div>
+        <ul class="mlinks"><li><a href="/${locale}/acf-partners" onclick="closeMega()">${m.megaMenu.about.howWeWork.network}</a></li><li><a href="/${locale}/acf-certification" onclick="closeMega()">${m.megaMenu.about.howWeWork.audit}</a></li><li><a href="/${locale}/contact" onclick="closeMega()">${m.megaMenu.about.howWeWork.contact}</a></li></ul>
+      </div>
+    </div>
+    <div class="macc-cat">
+      <button class="macc-btn" onclick="toggleAccordion(this)"><span>${m.megaMenu.partners.title}</span><span class="macc-arr">›</span></button>
+      <div class="macc-body">
+        <div class="mgtitle">${m.megaMenu.partners.portal.title}</div>
+        <ul class="mlinks"><li><a href="/${locale}/acf-partners" onclick="closeMega()">${m.megaMenu.partners.portal.login}</a></li><li><a href="/${locale}/acf-partners" onclick="closeMega()">${m.megaMenu.partners.portal.dashboard}</a></li><li><a href="/${locale}/acf-partners" onclick="closeMega()">${m.megaMenu.partners.portal.training}</a></li></ul>
+        <div class="mgtitle">${m.megaMenu.partners.become.title}</div>
+        <ul class="mlinks"><li><a href="/${locale}/acf-partners" onclick="closeMega()">${m.megaMenu.partners.become.apply}</a></li><li><a href="/${locale}/acf-partners" onclick="closeMega()">${m.megaMenu.partners.become.tiers}</a></li><li><a href="/${locale}/acf-certification" onclick="closeMega()">${m.megaMenu.partners.become.certified}</a></li></ul>
+      </div>
+    </div>
+    <div class="macc-user">
+      <div class="muname">${m.megaMenu.user.partnerAccess}</div>
+      <div class="mulinks">
+        <a href="/partners/login" onclick="closeMega()"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> ${m.megaMenu.user.partnerLogin}</a>
+        <a href="/partners/apply" onclick="closeMega()">${m.megaMenu.user.applyPartner}</a>
+        <a href="/contact" onclick="closeMega()">${m.megaMenu.user.contact}</a>
+      </div>
     </div>
   </div>
 </div>
@@ -1255,6 +1337,7 @@ function showPanel(id){
   document.querySelectorAll('.mni').forEach(function(el){el.classList.toggle('active',el.dataset.panel===id)});
   document.querySelectorAll('.mp').forEach(function(el){el.classList.toggle('active',el.id==='panel-'+id)});
 }
+function toggleAccordion(btn){var cat=btn.parentElement;cat.classList.toggle('open')}
 document.getElementById('hambtn').addEventListener('click',openMega);
 addEventListener('keydown',function(e){if(e.key==='Escape'){closeMega();closeRegion();closeVideoModal()}});
 
