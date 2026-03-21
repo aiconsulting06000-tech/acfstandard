@@ -151,9 +151,9 @@ nav.scrolled{background:rgba(5,12,26,.99);box-shadow:0 4px 40px rgba(0,0,0,.5)}
 .sn{font-size:13px;font-weight:700}
 .ss{font-size:10.5px;color:var(--gr);margin-top:1px}
 .stop{top:4%;left:50%;transform:translateX(-50%)}
-.sright{top:50%;right:-5%;transform:translateY(-50%)}
+.sright{top:50%;right:-8%;transform:translateY(-50%)}
 .sbott{bottom:4%;left:50%;transform:translateX(-50%)}
-.sleft{top:50%;left:0;transform:translateY(-50%)}
+.sleft{top:50%;left:-3%;transform:translateY(-50%)}
 .gi{display:flex;align-items:center;justify-content:center;width:14px;height:14px}
 
 /* ═══ STATS BAR ═══ */
