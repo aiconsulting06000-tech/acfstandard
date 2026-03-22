@@ -143,8 +143,9 @@ const ui = {
     loopSubtitle: "Governance is not configuration. It is a continuous operational loop — define, constrain, execute, monitor, intervene, improve. Then loop again.",
     ecoBadge: "The ecosystem",
     ecoTitle: "ACF Operating System",
-    ecoSubtitle: "Six integrated tools. One closed-loop system. Comply → Diagnose → Train → Monitor → Certify → Scale.",
+    ecoSubtitle: "Seven integrated tools. One closed-loop system. Comply → Diagnose → Audit → Train → Monitor → Certify → Scale.",
     ecoScore: "Rapid diagnostic measuring decision sovereignty and governance maturity.",
+    ecoAuditor: "Guided audit platform assessing agentic maturity across 7 weighted dimensions.",
     ecoChecker: "Free pre-diagnostic to check your AI system's EU AI Act compliance.",
     ecoControl: "Real-time platform for supervising autonomous systems.",
     ecoAcademy: "Training for executives and operators governing autonomous systems.",
@@ -183,6 +184,7 @@ const ui = {
     loopCenter2: "LOOP",
     // EcosystemFlowSVG
     ecoFlowScore: "Score", ecoFlowScoreAction: "Diagnose",
+    ecoFlowAuditor: "Auditor", ecoFlowAuditorAction: "Audit",
     ecoFlowChecker: "Checker", ecoFlowCheckerAction: "Comply",
     ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "Train",
     ecoFlowControl: "Control", ecoFlowControlAction: "Monitor",
@@ -311,8 +313,9 @@ const ui = {
     loopSubtitle: "La gouvernance n'est pas une configuration. C'est une boucle opérationnelle continue — définir, encadrer, exécuter, surveiller, intervenir, améliorer. Puis recommencer.",
     ecoBadge: "L'écosystème",
     ecoTitle: "Système opérationnel ACF",
-    ecoSubtitle: "Six outils intégrés. Un système en boucle fermée. Conformer → Diagnostiquer → Former → Surveiller → Certifier → Déployer.",
+    ecoSubtitle: "Sept outils intégrés. Un système en boucle fermée. Conformer → Diagnostiquer → Auditer → Former → Surveiller → Certifier → Déployer.",
     ecoScore: "Diagnostic rapide mesurant la souveraineté décisionnelle et la maturité de gouvernance.",
+    ecoAuditor: "Plateforme d'audit guidé évaluant la maturité agentique sur 7 dimensions pondérées.",
     ecoChecker: "Pré-diagnostic gratuit pour vérifier la conformité de votre système IA avec l'EU AI Act.",
     ecoControl: "Plateforme temps réel pour la supervision des systèmes autonomes.",
     ecoAcademy: "Formation pour les dirigeants et opérateurs gouvernant les systèmes autonomes.",
@@ -351,6 +354,7 @@ const ui = {
     loopCenter2: "CONTINUE",
     // EcosystemFlowSVG
     ecoFlowScore: "Score", ecoFlowScoreAction: "Diagnostiquer",
+    ecoFlowAuditor: "Auditor", ecoFlowAuditorAction: "Auditer",
     ecoFlowChecker: "Checker", ecoFlowCheckerAction: "Conformer",
     ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "Former",
     ecoFlowControl: "Control", ecoFlowControlAction: "Surveiller",
@@ -479,8 +483,9 @@ const ui = {
     loopSubtitle: "La gobernanza no es configuración. Es un bucle operativo continuo — definir, restringir, ejecutar, monitorizar, intervenir, mejorar. Y volver a empezar.",
     ecoBadge: "El ecosistema",
     ecoTitle: "Sistema operativo ACF",
-    ecoSubtitle: "Seis herramientas integradas. Un sistema en bucle cerrado. Cumplir → Diagnosticar → Formar → Supervisar → Certificar → Escalar.",
+    ecoSubtitle: "Siete herramientas integradas. Un sistema en bucle cerrado. Cumplir → Diagnosticar → Auditar → Formar → Supervisar → Certificar → Escalar.",
     ecoScore: "Diagnóstico rápido que mide la soberanía decisional y la madurez de gobernanza.",
+    ecoAuditor: "Plataforma de auditoría guiada que evalúa la madurez agéntica en 7 dimensiones ponderadas.",
     ecoChecker: "Pre-diagnóstico gratuito para verificar la conformidad de su sistema IA con la EU AI Act.",
     ecoControl: "Plataforma en tiempo real para supervisar sistemas autónomos.",
     ecoAcademy: "Formación para ejecutivos y operadores que gobiernan sistemas autónomos.",
@@ -516,6 +521,7 @@ const ui = {
     loopCenter1: "BUCLE",
     loopCenter2: "CONTINUO",
     ecoFlowScore: "Score", ecoFlowScoreAction: "Diagnosticar",
+    ecoFlowAuditor: "Auditor", ecoFlowAuditorAction: "Auditar",
     ecoFlowChecker: "Checker", ecoFlowCheckerAction: "Cumplir",
     ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "Formar",
     ecoFlowControl: "Control", ecoFlowControlAction: "Supervisar",
@@ -644,8 +650,9 @@ const ui = {
     loopSubtitle: "Governance ist keine Konfiguration. Es ist ein kontinuierlicher operativer Kreislauf — definieren, einschränken, ausführen, überwachen, eingreifen, verbessern. Dann von vorn.",
     ecoBadge: "Das Ökosystem",
     ecoTitle: "ACF-Betriebssystem",
-    ecoSubtitle: "Sechs integrierte Werkzeuge. Ein geschlossenes System. Konform → Diagnostizieren → Schulen → Überwachen → Zertifizieren → Skalieren.",
+    ecoSubtitle: "Sieben integrierte Werkzeuge. Ein geschlossenes System. Konform → Diagnostizieren → Auditieren → Schulen → Überwachen → Zertifizieren → Skalieren.",
     ecoScore: "Schnelldiagnose zur Messung von Entscheidungssouveränität und Governance-Reife.",
+    ecoAuditor: "Geführte Audit-Plattform zur Bewertung der agentischen Reife über 7 gewichtete Dimensionen.",
     ecoChecker: "Kostenlose Vordiagnose zur Überprüfung der EU AI Act Konformität Ihres KI-Systems.",
     ecoControl: "Echtzeit-Plattform zur Überwachung autonomer Systeme.",
     ecoAcademy: "Schulung für Führungskräfte und Operatoren, die autonome Systeme steuern.",
@@ -681,6 +688,7 @@ const ui = {
     loopCenter1: "KONTINUIERLICHER",
     loopCenter2: "KREISLAUF",
     ecoFlowScore: "Score", ecoFlowScoreAction: "Diagnostizieren",
+    ecoFlowAuditor: "Auditor", ecoFlowAuditorAction: "Auditieren",
     ecoFlowChecker: "Checker", ecoFlowCheckerAction: "Konform",
     ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "Schulen",
     ecoFlowControl: "Control", ecoFlowControlAction: "Überwachen",
@@ -809,8 +817,9 @@ const ui = {
     loopSubtitle: "Governança não é configuração. É um loop operacional contínuo — definir, restringir, executar, monitorar, intervir, melhorar. E recomeçar.",
     ecoBadge: "O ecossistema",
     ecoTitle: "Sistema operacional ACF",
-    ecoSubtitle: "Seis ferramentas integradas. Um sistema em loop fechado. Conformar → Diagnosticar → Treinar → Monitorar → Certificar → Escalar.",
+    ecoSubtitle: "Sete ferramentas integradas. Um sistema em loop fechado. Conformar → Diagnosticar → Auditar → Treinar → Monitorar → Certificar → Escalar.",
     ecoScore: "Diagnóstico rápido que mede a soberania decisória e a maturidade de governança.",
+    ecoAuditor: "Plataforma de auditoria guiada avaliando a maturidade agêntica em 7 dimensões ponderadas.",
     ecoChecker: "Pré-diagnóstico gratuito para verificar a conformidade do seu sistema de IA com o EU AI Act.",
     ecoControl: "Plataforma em tempo real para supervisionar sistemas autônomos.",
     ecoAcademy: "Treinamento para executivos e operadores que governam sistemas autônomos.",
@@ -846,6 +855,7 @@ const ui = {
     loopCenter1: "LOOP",
     loopCenter2: "CONTÍNUO",
     ecoFlowScore: "Score", ecoFlowScoreAction: "Diagnosticar",
+    ecoFlowAuditor: "Auditor", ecoFlowAuditorAction: "Auditar",
     ecoFlowChecker: "Checker", ecoFlowCheckerAction: "Conformar",
     ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "Treinar",
     ecoFlowControl: "Control", ecoFlowControlAction: "Monitorar",
@@ -974,8 +984,9 @@ const ui = {
     loopSubtitle: "ガバナンスは設定ではない。継続的な運用ループである——定義、制約、実行、監視、介入、改善。そして再びループする。",
     ecoBadge: "エコシステム",
     ecoTitle: "ACFオペレーティングシステム",
-    ecoSubtitle: "6つの統合ツール。1つのクローズドループシステム。準拠→診断→訓練→監視→認証→スケール。",
+    ecoSubtitle: "7つの統合ツール。1つのクローズドループシステム。準拠→診断→監査→訓練→監視→認証→スケール。",
     ecoScore: "意思決定の主権とガバナンスの成熟度を測定する迅速な診断。",
+    ecoAuditor: "7つの加重次元でエージェンティック成熟度を評価するガイド付き監査プラットフォーム。",
     ecoChecker: "EU AI Actに対するAIシステムのコンプライアンスを確認する無料の事前診断。",
     ecoControl: "自律システムを監視するリアルタイムプラットフォーム。",
     ecoAcademy: "自律システムを統治するエグゼクティブとオペレーターのための研修。",
@@ -1011,6 +1022,7 @@ const ui = {
     loopCenter1: "継続的",
     loopCenter2: "ループ",
     ecoFlowScore: "Score", ecoFlowScoreAction: "診断",
+    ecoFlowAuditor: "Auditor", ecoFlowAuditorAction: "監査",
     ecoFlowChecker: "Checker", ecoFlowCheckerAction: "準拠",
     ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "訓練",
     ecoFlowControl: "Control", ecoFlowControlAction: "監視",
@@ -1139,8 +1151,9 @@ const ui = {
     loopSubtitle: "治理不是配置。它是一个持续的运营循环——定义、约束、执行、监控、干预、改进。然后再次循环。",
     ecoBadge: "生态系统",
     ecoTitle: "ACF操作系统",
-    ecoSubtitle: "六个集成工具。一个闭环系统。合规→诊断→培训→监控→认证→扩展。",
+    ecoSubtitle: "七个集成工具。一个闭环系统。合规→诊断→审计→培训→监控→认证→扩展。",
     ecoScore: "快速诊断，衡量决策主权和治理成熟度。",
+    ecoAuditor: "引导式审计平台，评估7个加权维度的智能体成熟度。",
     ecoChecker: "免费预诊断，检查您的AI系统是否符合EU AI Act。",
     ecoControl: "用于监督自主系统的实时平台。",
     ecoAcademy: "为治理自主系统的高管和运营者提供培训。",
@@ -1176,6 +1189,7 @@ const ui = {
     loopCenter1: "持续",
     loopCenter2: "循环",
     ecoFlowScore: "Score", ecoFlowScoreAction: "诊断",
+    ecoFlowAuditor: "Auditor", ecoFlowAuditorAction: "审计",
     ecoFlowChecker: "Checker", ecoFlowCheckerAction: "合规",
     ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "培训",
     ecoFlowControl: "Control", ecoFlowControlAction: "监控",
@@ -1304,8 +1318,9 @@ const ui = {
     loopSubtitle: "거버넌스는 구성이 아니다. 지속적인 운영 루프이다 — 정의, 제약, 실행, 모니터링, 개입, 개선. 그리고 다시 루프.",
     ecoBadge: "에코시스템",
     ecoTitle: "ACF 운영 시스템",
-    ecoSubtitle: "6개의 통합 도구. 하나의 폐쇄 루프 시스템. 준수 → 진단 → 교육 → 모니터링 → 인증 → 확장.",
+    ecoSubtitle: "7개의 통합 도구. 하나의 폐쇄 루프 시스템. 준수 → 진단 → 감사 → 교육 → 모니터링 → 인증 → 확장.",
     ecoScore: "의사결정 주권과 거버넌스 성숙도를 측정하는 빠른 진단.",
+    ecoAuditor: "7개 가중 차원에서 에이전틱 성숙도를 평가하는 가이드 감사 플랫폼.",
     ecoChecker: "EU AI Act에 대한 AI 시스템의 규정 준수를 확인하는 무료 사전 진단.",
     ecoControl: "자율 시스템을 감독하는 실시간 플랫폼.",
     ecoAcademy: "자율 시스템을 통치하는 경영진과 운영자를 위한 교육.",
@@ -1341,6 +1356,7 @@ const ui = {
     loopCenter1: "지속적",
     loopCenter2: "루프",
     ecoFlowScore: "Score", ecoFlowScoreAction: "진단",
+    ecoFlowAuditor: "Auditor", ecoFlowAuditorAction: "감사",
     ecoFlowChecker: "Checker", ecoFlowCheckerAction: "준수",
     ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "교육",
     ecoFlowControl: "Control", ecoFlowControlAction: "모니터링",
@@ -1469,8 +1485,9 @@ const ui = {
     loopSubtitle: "La governance non è configurazione. È un loop operativo continuo — definire, vincolare, eseguire, monitorare, intervenire, migliorare. Poi ricominciare.",
     ecoBadge: "L'ecosistema",
     ecoTitle: "Sistema operativo ACF",
-    ecoSubtitle: "Sei strumenti integrati. Un sistema a ciclo chiuso. Conformare → Diagnosticare → Formare → Monitorare → Certificare → Scalare.",
+    ecoSubtitle: "Sette strumenti integrati. Un sistema a ciclo chiuso. Conformare → Diagnosticare → Auditare → Formare → Monitorare → Certificare → Scalare.",
     ecoScore: "Diagnosi rapida che misura la sovranità decisionale e la maturità di governance.",
+    ecoAuditor: "Piattaforma di audit guidato che valuta la maturità agentica su 7 dimensioni ponderate.",
     ecoChecker: "Pre-diagnosi gratuita per verificare la conformità del sistema IA con l'EU AI Act.",
     ecoControl: "Piattaforma in tempo reale per la supervisione dei sistemi autonomi.",
     ecoAcademy: "Formazione per dirigenti e operatori che governano sistemi autonomi.",
@@ -1506,6 +1523,7 @@ const ui = {
     loopCenter1: "LOOP",
     loopCenter2: "CONTINUO",
     ecoFlowScore: "Score", ecoFlowScoreAction: "Diagnosticare",
+    ecoFlowAuditor: "Auditor", ecoFlowAuditorAction: "Auditare",
     ecoFlowChecker: "Checker", ecoFlowCheckerAction: "Conformare",
     ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "Formare",
     ecoFlowControl: "Control", ecoFlowControlAction: "Monitorare",
@@ -1634,8 +1652,9 @@ const ui = {
     loopSubtitle: "Governance is geen configuratie. Het is een continue operationele lus — definiëren, beperken, uitvoeren, monitoren, ingrijpen, verbeteren. Dan opnieuw.",
     ecoBadge: "Het ecosysteem",
     ecoTitle: "ACF-besturingssysteem",
-    ecoSubtitle: "Zes geïntegreerde tools. Eén gesloten systeem. Conform → Diagnosticeren → Opleiden → Monitoren → Certificeren → Schalen.",
+    ecoSubtitle: "Zeven geïntegreerde tools. Eén gesloten systeem. Conform → Diagnosticeren → Auditen → Opleiden → Monitoren → Certificeren → Schalen.",
     ecoScore: "Snelle diagnose die beslissingssoevereiniteit en governance-volwassenheid meet.",
+    ecoAuditor: "Begeleid auditplatform dat agentische volwassenheid beoordeelt over 7 gewogen dimensies.",
     ecoChecker: "Gratis voordiagnose om de EU AI Act compliance van uw AI-systeem te controleren.",
     ecoControl: "Realtime-platform voor het bewaken van autonome systemen.",
     ecoAcademy: "Training voor leidinggevenden en operators die autonome systemen besturen.",
@@ -1671,6 +1690,7 @@ const ui = {
     loopCenter1: "CONTINUE",
     loopCenter2: "LUS",
     ecoFlowScore: "Score", ecoFlowScoreAction: "Diagnosticeren",
+    ecoFlowAuditor: "Auditor", ecoFlowAuditorAction: "Auditen",
     ecoFlowChecker: "Checker", ecoFlowCheckerAction: "Conform",
     ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "Opleiden",
     ecoFlowControl: "Control", ecoFlowControlAction: "Monitoren",
@@ -1799,8 +1819,9 @@ const ui = {
     loopSubtitle: "Управление — это не настройка. Это непрерывный операционный цикл — определить, ограничить, исполнить, мониторить, вмешаться, улучшить. Затем повторить.",
     ecoBadge: "Экосистема",
     ecoTitle: "Операционная система ACF",
-    ecoSubtitle: "Шесть интегрированных инструментов. Одна замкнутая система. Соответствие → Диагностика → Обучение → Мониторинг → Сертификация → Масштабирование.",
+    ecoSubtitle: "Семь интегрированных инструментов. Одна замкнутая система. Соответствие → Диагностика → Аудит → Обучение → Мониторинг → Сертификация → Масштабирование.",
     ecoScore: "Экспресс-диагностика, измеряющая суверенитет решений и зрелость управления.",
+    ecoAuditor: "Платформа управляемого аудита, оценивающая агентическую зрелость по 7 взвешенным измерениям.",
     ecoChecker: "Бесплатная предварительная диагностика соответствия вашей ИИ-системы EU AI Act.",
     ecoControl: "Платформа реального времени для контроля автономных систем.",
     ecoAcademy: "Обучение для руководителей и операторов, управляющих автономными системами.",
@@ -1836,6 +1857,7 @@ const ui = {
     loopCenter1: "НЕПРЕРЫВНЫЙ",
     loopCenter2: "ЦИКЛ",
     ecoFlowScore: "Score", ecoFlowScoreAction: "Диагностика",
+    ecoFlowAuditor: "Auditor", ecoFlowAuditorAction: "Аудит",
     ecoFlowChecker: "Checker", ecoFlowCheckerAction: "Соответствие",
     ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "Обучение",
     ecoFlowControl: "Control", ecoFlowControlAction: "Мониторинг",
@@ -1964,8 +1986,9 @@ const ui = {
     loopSubtitle: "الحوكمة ليست إعداداً. إنها حلقة تشغيلية مستمرة — تحديد، تقييد، تنفيذ، مراقبة، تدخل، تحسين. ثم الحلقة مجدداً.",
     ecoBadge: "المنظومة",
     ecoTitle: "نظام تشغيل ACF",
-    ecoSubtitle: "ست أدوات متكاملة. نظام حلقة مغلقة واحد. امتثال → تشخيص → تدريب → مراقبة → اعتماد → توسيع.",
+    ecoSubtitle: "سبع أدوات متكاملة. نظام حلقة مغلقة واحد. امتثال → تشخيص → تدقيق → تدريب → مراقبة → اعتماد → توسيع.",
     ecoScore: "تشخيص سريع يقيس سيادة القرار ونضج الحوكمة.",
+    ecoAuditor: "منصة تدقيق موجهة تقيّم النضج الوكيلي عبر 7 أبعاد مرجحة.",
     ecoChecker: "تشخيص مسبق مجاني للتحقق من امتثال نظام الذكاء الاصطناعي الخاص بك لقانون EU AI Act.",
     ecoControl: "منصة في الوقت الفعلي للإشراف على الأنظمة المستقلة.",
     ecoAcademy: "تدريب للمديرين التنفيذيين والمشغلين الذين يحكمون الأنظمة المستقلة.",
@@ -2001,6 +2024,7 @@ const ui = {
     loopCenter1: "حلقة",
     loopCenter2: "مستمرة",
     ecoFlowScore: "Score", ecoFlowScoreAction: "تشخيص",
+    ecoFlowAuditor: "Auditor", ecoFlowAuditorAction: "تدقيق",
     ecoFlowChecker: "Checker", ecoFlowCheckerAction: "امتثال",
     ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "تدريب",
     ecoFlowControl: "Control", ecoFlowControlAction: "مراقبة",
@@ -2129,8 +2153,9 @@ const ui = {
     loopSubtitle: "Yönetişim bir yapılandırma değildir. Sürekli bir operasyonel döngüdür — tanımla, kısıtla, yürüt, izle, müdahale et, iyileştir. Sonra tekrar.",
     ecoBadge: "Ekosistem",
     ecoTitle: "ACF işletim sistemi",
-    ecoSubtitle: "Altı entegre araç. Bir kapalı döngü sistemi. Uyum → Teşhis → Eğitim → İzleme → Sertifikasyon → Ölçeklendirme.",
+    ecoSubtitle: "Yedi entegre araç. Bir kapalı döngü sistemi. Uyum → Teşhis → Denetim → Eğitim → İzleme → Sertifikasyon → Ölçeklendirme.",
     ecoScore: "Karar egemenliğini ve yönetişim olgunluğunu ölçen hızlı teşhis.",
+    ecoAuditor: "7 ağırlıklı boyutta ajantik olgunluğu değerlendiren rehberli denetim platformu.",
     ecoChecker: "AI sisteminizin EU AI Act uyumluluğunu kontrol etmek için ücretsiz ön teşhis.",
     ecoControl: "Otonom sistemleri denetlemek için gerçek zamanlı platform.",
     ecoAcademy: "Otonom sistemleri yöneten yöneticiler ve operatörler için eğitim.",
@@ -2166,6 +2191,7 @@ const ui = {
     loopCenter1: "SÜREKLİ",
     loopCenter2: "DÖNGÜ",
     ecoFlowScore: "Score", ecoFlowScoreAction: "Teşhis",
+    ecoFlowAuditor: "Auditor", ecoFlowAuditorAction: "Denetim",
     ecoFlowChecker: "Checker", ecoFlowCheckerAction: "Uyum",
     ecoFlowAcademy: "Academy", ecoFlowAcademyAction: "Eğitim",
     ecoFlowControl: "Control", ecoFlowControlAction: "İzleme",
@@ -2413,6 +2439,7 @@ function EcosystemFlowSVG({ t }: { t: UiStrings }) {
   const products = [
     { name: t.ecoFlowChecker, action: t.ecoFlowCheckerAction, color: "#ef4444", icon: "⬡" },
     { name: t.ecoFlowScore, action: t.ecoFlowScoreAction, color: C.sup, icon: "◉" },
+    { name: t.ecoFlowAuditor || "Auditor", action: t.ecoFlowAuditorAction || "Audit", color: "#8b5cf6", icon: "▣" },
     { name: t.ecoFlowAcademy, action: t.ecoFlowAcademyAction, color: C.pol, icon: "◈" },
     { name: t.ecoFlowControl, action: t.ecoFlowControlAction, color: C.amber, icon: "◎" },
     { name: t.ecoFlowCert, action: t.ecoFlowCertAction, color: C.gold, icon: "◆" },
@@ -2420,12 +2447,12 @@ function EcosystemFlowSVG({ t }: { t: UiStrings }) {
   ];
   return (
     <div ref={ref} style={{ maxWidth: 920, margin: "48px auto", opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(20px)", transition: "all .8s cubic-bezier(.16,1,.3,1)" }}>
-      <svg viewBox="0 0 830 160" fill="none" style={{ width: "100%" }}>
+      <svg viewBox="0 0 960 160" fill="none" style={{ width: "100%" }}>
         {/* Connecting line */}
-        <line x1="70" y1="70" x2="720" y2="70" stroke={C.gold} strokeWidth=".8" opacity=".15" />
+        <line x1="70" y1="70" x2="850" y2="70" stroke={C.gold} strokeWidth=".8" opacity=".15" />
         {/* Animated pulse on line */}
         <circle r="4" fill={C.gold} opacity=".5">
-          <animate attributeName="cx" values="70;720;70" dur="5s" repeatCount="indefinite" />
+          <animate attributeName="cx" values="70;850;70" dur="5s" repeatCount="indefinite" />
           <animate attributeName="cy" values="70;70;70" dur="5s" repeatCount="indefinite" />
           <animate attributeName="opacity" values=".2;.7;.2" dur="5s" repeatCount="indefinite" />
         </circle>
@@ -2440,15 +2467,15 @@ function EcosystemFlowSVG({ t }: { t: UiStrings }) {
               <text x={x} y="74" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="16" fontWeight="700" fill={p.color}>{p.icon}</text>
               <text x={x} y="118" textAnchor="middle" fontFamily="'Space Grotesk'" fontSize="13" fontWeight="700" fill="#fff" opacity=".8">{p.name}</text>
               <text x={x} y="136" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="10" fill={C.gray}>{p.action}</text>
-              {i < 5 && (
+              {i < 6 && (
                 <text x={x + 65} y="74" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="14" fill={C.gold} opacity=".3">→</text>
               )}
             </g>
           );
         })}
         {/* Loop-back arrow */}
-        <path d="M 730 70 Q 760 70 760 40 Q 760 10 400 10 Q 30 10 30 40 Q 30 70 60 70" fill="none" stroke={C.gold} strokeWidth=".8" opacity=".15" strokeDasharray="4 6" />
-        <text x="400" y="8" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray} opacity=".5">{t.ecoFlowClosedLoop}</text>
+        <path d="M 860 70 Q 890 70 890 40 Q 890 10 460 10 Q 30 10 30 40 Q 30 70 60 70" fill="none" stroke={C.gold} strokeWidth=".8" opacity=".15" strokeDasharray="4 6" />
+        <text x="460" y="8" textAnchor="middle" fontFamily="'JetBrains Mono'" fontSize="9" fill={C.gray} opacity=".5">{t.ecoFlowClosedLoop}</text>
       </svg>
     </div>
   );
@@ -2964,6 +2991,7 @@ export default function TheStandardPage() {
             {[
               { name: "ACF AI Act Checker", desc: t.ecoChecker, href: `/${locale}/compliance-checker`, color: "#ef4444" },
               { name: "ACF Score®", desc: t.ecoScore, href: `/${locale}/acf-score`, color: C.sup },
+              { name: "ACF Auditor", desc: t.ecoAuditor || "Guided audit platform assessing agentic maturity across 7 weighted dimensions.", href: `/${locale}/acf-auditor`, color: "#8b5cf6" },
               { name: "ACF Control", desc: t.ecoControl, href: `/${locale}/acf-control`, color: C.amber },
               { name: "ACF Academy", desc: t.ecoAcademy, href: `/${locale}/acf-certification#academy`, color: C.pol },
               { name: "ACF Certification", desc: t.ecoCert, href: `/${locale}/acf-certification`, color: C.gold },

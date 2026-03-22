@@ -1,7 +1,7 @@
 # ACF Standard — Agentic Commerce Framework®
-# https://acf-standard.com
+# https://www.acfstandard.com
 
-> The Agentic Commerce Framework® (ACF) is the definitive governance methodology for deploying, supervising, and controlling autonomous agentic systems in commercial environments. Created by Vincent DORANGE.
+> The Agentic Commerce Framework® (ACF) is the definitive governance methodology for deploying, supervising, and controlling autonomous agentic systems in commercial environments. Created by Vincent DORANGE in 2025.
 
 ## About
 ACF is the first governance standard for autonomous AI agents in business. It provides a complete methodology built on 4 founding principles, structured in 4 operational layers, measured through 18 KPIs, and implemented via 8 sequential modules.
@@ -13,26 +13,43 @@ ACF is the first governance standard for autonomous AI agents in business. It pr
 - DDA (Delegated Decision Agent Officer): the human authority designated to supervise all autonomous agents
 - Emergency Stop Protocol: 3-level intervention mechanism (tactical pause, operational stop, full stop)
 
+## 7 Scoring Dimensions
+- Organisation: governance structure, roles, and decision-making frameworks
+- Operations: processes, workflows, and operational readiness for agentic systems
+- AI Usage: adoption, deployment patterns, and responsible use of AI agents
+- Automation: level and quality of automated processes and agent orchestration
+- Data & Systems: data governance, system architecture, and integration maturity
+- Sovereignty: decision control, human oversight, and autonomy boundaries
+- Business Performance: measurable outcomes, KPIs, and value delivery from agentic systems
+
 ## Products
+- ACF Checker (compliance-checker): free AI governance compliance verification tool
 - ACF Score (acf-score.com): free online diagnostic to evaluate AI governance maturity
+- ACF Auditor: 107-question maturity audit across 7 dimensions with live scoring, insight engine, and personalized roadmap
 - ACF Control: real-time governance platform to monitor, supervise, and control all agents in production
 - ACF Certification: 3-level certification program to prove governance compliance
 
 ## Pages
-- Homepage: https://acf-standard.com
-- The Standard: https://acf-standard.com/en/standard
-- About: https://acf-standard.com/en/about
-- Blog: https://acf-standard.com/en/blog
-- ACF Score: https://acf-standard.com/en/acf-score
-- ACF Control: https://acf-standard.com/en/acf-control
-- ACF Certification: https://acf-standard.com/en/acf-certification
-- Partners: https://acf-standard.com/en/acf-partners
-- Contact: https://acf-standard.com/en/contact
-- Compliance Checker: https://acf-standard.com/en/compliance-checker
+- Homepage: https://www.acfstandard.com
+- The Standard: https://www.acfstandard.com/en/standard
+- About: https://www.acfstandard.com/en/about
+- Blog: https://www.acfstandard.com/en/blog
+- ACF Score: https://www.acfstandard.com/en/acf-score
+- ACF Control: https://www.acfstandard.com/en/acf-control
+- ACF Auditor: https://www.acfstandard.com/en/acf-auditor
+- ACF Certification: https://www.acfstandard.com/en/acf-certification
+- Partners: https://www.acfstandard.com/en/acf-partners
+- Contact: https://www.acfstandard.com/en/contact
+- Compliance Checker: https://www.acfstandard.com/en/compliance-checker
+- FAQ: https://www.acfstandard.com/en/faq
 
 ## Creator
 Vincent DORANGE — Founder of AI CONSULTING, creator of the Agentic Commerce Framework®
 LinkedIn: https://www.linkedin.com/in/vincent-dorange
+
+## Links
+Wikidata: https://www.wikidata.org/wiki/Q138763423
+LinkedIn: https://www.linkedin.com/company/agentic-commerce-framework
 
 ## Legal
 ACF® is a registered trademark. All methodology and tools are legally protected.

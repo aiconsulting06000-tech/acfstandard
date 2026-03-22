@@ -125,6 +125,17 @@ const T: Record<string, Record<string, string>> = {
     phase3Desc: "Déploiement d'agents supervisés via ACF Control, KPIs temps réel, objectif niveau Autonome.",
     phase3Time: "6 — 12 mois",
 
+    heroNote: "ACF Auditor est utilisé par les équipes et partenaires certifiés d'ACF Standard dans le cadre des audits de maturité, avant le déploiement d'ACF Control.",
+
+    liveTitle: "ACF AUDITOR — EN DIRECT",
+    liveScoreGlobal: "SCORE GLOBAL",
+    liveAgentic: "AGENTIC READINESS",
+    liveSov: "SOUVERAINETÉ",
+    liveProgression: "PROGRESSION",
+    liveAlert1: "IA cosmétique détectée — Score IA élevé mais processus manuels",
+    liveAlert2: "Gouvernance structurée — Comité de pilotage identifié",
+    liveAlert3: "Quick win automatisation — 3 processus éligibles détectés",
+
     bridgeTitle: "Le pont vers ACF Control",
     bridgeSub: "ACF Auditor répond à « Où en êtes-vous ? ». ACF Control répond à « Comment y aller ? ». Chaque recommandation devient une action traçable.",
     bridgeAudit: "Diagnostic",
@@ -203,6 +214,17 @@ const T: Record<string, Record<string, string>> = {
     phase3Desc: "Deploy supervised agents via ACF Control, real-time KPIs, target Autonomous level.",
     phase3Time: "6 — 12 months",
 
+    heroNote: "ACF Auditor is used by ACF Standard's certified teams and partners for maturity audits, before deploying ACF Control.",
+
+    liveTitle: "ACF AUDITOR — LIVE",
+    liveScoreGlobal: "GLOBAL SCORE",
+    liveAgentic: "AGENTIC READINESS",
+    liveSov: "SOVEREIGNTY",
+    liveProgression: "PROGRESSION",
+    liveAlert1: "AI washing detected — High AI score but manual processes",
+    liveAlert2: "Structured governance — Steering committee identified",
+    liveAlert3: "Automation quick win — 3 eligible processes detected",
+
     bridgeTitle: "The bridge to ACF Control",
     bridgeSub: 'ACF Auditor answers "Where are you?". ACF Control answers "How to get there?". Each recommendation becomes a trackable action.',
     bridgeAudit: "Diagnosis",
@@ -223,13 +245,13 @@ const T: Record<string, Record<string, string>> = {
 };
 
 const DIMENSIONS = [
-  { key: "org", icon: "\u{1F3DB}", weight: "10%", color: "#6366f1" },
-  { key: "ops", icon: "\u2699\uFE0F", weight: "20%", color: "#f59e0b" },
-  { key: "ai", icon: "\u{1F916}", weight: "15%", color: "#8b5cf6" },
-  { key: "auto", icon: "\u{1F504}", weight: "15%", color: "#10b981" },
-  { key: "data", icon: "\u{1F5C4}", weight: "15%", color: "#3b82f6" },
-  { key: "sov", icon: "\u{1F6E1}", weight: "10%", color: "#ef4444" },
-  { key: "biz", icon: "\u{1F4C8}", weight: "15%", color: "#06b6d4" },
+  { key: "org", color: "#6366f1" },
+  { key: "ops", color: "#f59e0b" },
+  { key: "ai", color: "#8b5cf6" },
+  { key: "auto", color: "#10b981" },
+  { key: "data", color: "#3b82f6" },
+  { key: "sov", color: "#ef4444" },
+  { key: "biz", color: "#06b6d4" },
 ];
 
 export default function ACFAuditorPage() {
@@ -270,8 +292,15 @@ export default function ACFAuditorPage() {
           <h1 style={{ fontFamily: "'Space Grotesk'", fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 800, lineHeight: 1.1, margin: "24px 0 20px", letterSpacing: "-0.02em" }}>
             {t.heroTitle}
           </h1>
-          <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.7, maxWidth: 640, margin: "0 auto 32px" }}>
+          <p style={{ fontSize: 17, color: C.gray2, lineHeight: 1.7, maxWidth: 640, margin: "0 auto 24px" }}>
             {t.heroSub}
+          </p>
+          <p style={{
+            fontSize: 13, color: C.gray, lineHeight: 1.6, maxWidth: 580, margin: "0 auto 32px",
+            fontStyle: "italic", background: C.goldDim, border: `1px solid ${C.goldBorder}`,
+            borderRadius: 8, padding: "12px 20px",
+          }}>
+            {t.heroNote}
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <Link href={`/${locale}/contact`} style={{
@@ -307,6 +336,91 @@ export default function ACFAuditorPage() {
         ))}
       </div>
 
+      {/* ── LIVE DASHBOARD MOCKUP ── */}
+      <section style={{ maxWidth: 700, margin: "0 auto 80px", padding: "0 24px" }}>
+        <div style={{
+          background: C.navy2, border: `1px solid ${C.bd1}`, borderRadius: 16, overflow: "hidden",
+          boxShadow: `0 0 40px rgba(201,168,76,.06)`,
+        }}>
+          {/* Header */}
+          <div style={{
+            display: "flex", alignItems: "center", justifyContent: "space-between",
+            padding: "14px 20px", borderBottom: `1px solid ${C.bd1}`, background: C.navy3,
+          }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <span style={{
+                display: "inline-block", width: 8, height: 8, borderRadius: "50%",
+                background: C.green, boxShadow: `0 0 8px ${C.green}`,
+                animation: "pulse 2s ease-in-out infinite",
+              }} />
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 700, color: C.gold, letterSpacing: ".1em" }}>
+                {t.liveTitle}
+              </span>
+            </div>
+            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: C.gray }}>14:32:18</span>
+          </div>
+
+          <div style={{ padding: 20 }}>
+            {/* Score Global */}
+            <div style={{
+              background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 12, padding: 20, marginBottom: 16, textAlign: "center",
+            }}>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gray, letterSpacing: ".12em", textTransform: "uppercase", marginBottom: 8 }}>
+                {t.liveScoreGlobal}
+              </div>
+              <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 4, marginBottom: 12 }}>
+                <span style={{ fontFamily: "'Space Grotesk'", fontSize: 48, fontWeight: 800, color: C.gold }}>54</span>
+                <span style={{ fontSize: 18, color: C.gray }}>/100</span>
+              </div>
+              <div style={{ height: 6, background: C.navy1, borderRadius: 3, overflow: "hidden" }}>
+                <div style={{ width: "54%", height: "100%", background: `linear-gradient(90deg, ${C.amber}, ${C.gold})`, borderRadius: 3 }} />
+              </div>
+            </div>
+
+            {/* 3 Mini KPIs */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 16 }}>
+              <div style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 10, padding: "14px 10px", textAlign: "center" }}>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 6 }}>
+                  {t.liveAgentic}
+                </div>
+                <div style={{ fontFamily: "'Space Grotesk'", fontSize: 28, fontWeight: 800, color: C.purple }}>58</div>
+              </div>
+              <div style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 10, padding: "14px 10px", textAlign: "center" }}>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 6 }}>
+                  {t.liveSov}
+                </div>
+                <div style={{ fontFamily: "'Space Grotesk'", fontSize: 28, fontWeight: 800, color: C.red }}>35</div>
+              </div>
+              <div style={{ background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 10, padding: "14px 10px", textAlign: "center" }}>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 6 }}>
+                  {t.liveProgression}
+                </div>
+                <div style={{ fontFamily: "'Space Grotesk'", fontSize: 28, fontWeight: 800, color: C.green }}>67<span style={{ fontSize: 16 }}>%</span></div>
+              </div>
+            </div>
+
+            {/* Insight Alerts */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+              {[
+                { time: "14:30", icon: "\u26A0", color: C.amber, text: t.liveAlert1 },
+                { time: "14:28", icon: "\u2713", color: C.green, text: t.liveAlert2 },
+                { time: "14:25", icon: "\u{1F4A1}", color: C.blue, text: t.liveAlert3 },
+              ].map((alert, i) => (
+                <div key={i} style={{
+                  display: "flex", alignItems: "center", gap: 10, padding: "8px 12px",
+                  background: C.navy3, borderRadius: 8, border: `1px solid ${C.bd1}`,
+                }}>
+                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: C.gray, flexShrink: 0 }}>{alert.time}</span>
+                  <span style={{ fontSize: 13, flexShrink: 0 }}>{alert.icon}</span>
+                  <span style={{ fontSize: 12, color: C.gray2, lineHeight: 1.4 }}>{alert.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <style>{`@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .4; } }`}</style>
+      </section>
+
       {/* ── 7 DIMENSIONS ── */}
       <section id="dimensions" style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px 80px" }}>
         <div style={{ textAlign: "center", marginBottom: 48 }}>
@@ -324,14 +438,9 @@ export default function ACFAuditorPage() {
                 background: C.navy2, border: `1px solid ${C.bd1}`, borderRadius: 12, padding: 20,
                 borderLeft: `3px solid ${dim.color}`,
               }}>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                    <span style={{ fontSize: 22 }}>{dim.icon}</span>
-                    <span style={{ fontWeight: 700, fontSize: 14 }}>{labels[i]}</span>
-                  </div>
-                  <span style={{ fontFamily: "'JetBrains Mono'", fontSize: 12, color: dim.color, fontWeight: 700, background: `${dim.color}18`, padding: "3px 10px", borderRadius: 20 }}>
-                    {dim.weight}
-                  </span>
+                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
+                  <span style={{ display: "inline-block", width: 8, height: 8, borderRadius: "50%", background: dim.color, boxShadow: `0 0 6px ${dim.color}`, flexShrink: 0 }} />
+                  <span style={{ fontWeight: 700, fontSize: 14 }}>{labels[i]}</span>
                 </div>
                 <p style={{ fontSize: 13, color: C.gray2, margin: 0, lineHeight: 1.6 }}>{descs[i]}</p>
               </div>
@@ -351,14 +460,15 @@ export default function ACFAuditorPage() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
             {[
-              { title: t.scoreGlobal, desc: t.scoreGlobalDesc, color: C.gold, icon: "📊" },
-              { title: t.scoreAgentic, desc: t.scoreAgenticDesc, color: C.purple, icon: "🤖" },
-              { title: t.scoreSov, desc: t.scoreSovDesc, color: C.red, icon: "🛡" },
+              { title: t.scoreGlobal, desc: t.scoreGlobalDesc, color: C.gold },
+              { title: t.scoreAgentic, desc: t.scoreAgenticDesc, color: C.purple },
+              { title: t.scoreSov, desc: t.scoreSovDesc, color: C.red },
             ].map(s => (
               <div key={s.title} style={{
                 background: C.navy3, border: `1px solid ${C.bd1}`, borderRadius: 12, padding: 24, textAlign: "center",
+                borderTop: `3px solid ${s.color}`,
               }}>
-                <div style={{ fontSize: 36, marginBottom: 12 }}>{s.icon}</div>
+                <div style={{ width: 14, height: 14, borderRadius: "50%", background: s.color, boxShadow: `0 0 12px ${s.color}`, margin: "0 auto 14px" }} />
                 <div style={{ fontFamily: "'Space Grotesk'", fontWeight: 700, fontSize: 16, marginBottom: 8, color: s.color }}>{s.title}</div>
                 <p style={{ fontSize: 13, color: C.gray2, lineHeight: 1.7, margin: 0 }}>{s.desc}</p>
               </div>

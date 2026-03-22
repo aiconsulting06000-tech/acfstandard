@@ -1203,13 +1203,6 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <ul class="pfeat"><li>${m.products.control.features.feature1}</li><li>${m.products.control.features.feature2}</li><li>${m.products.control.features.feature3}</li></ul>
       <a href="/${locale}/acf-control" class="plink" target="_top">${m.products.control.cta}</a>
     </div>
-    <div class="pc rev d4">
-      <div class="piw"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg></div>
-      <div class="plbl">${m.products.certification.label}</div><div class="ptitle">${m.products.certification.title}</div>
-      <div class="pdesc">${m.products.certification.description}</div>
-      <ul class="pfeat"><li>${m.products.certification.features.feature1}</li><li>${m.products.certification.features.feature2}</li><li>${m.products.certification.features.feature3}</li></ul>
-      <a href="/${locale}/acf-certification" class="plink" target="_top">${m.products.certification.cta}</a>
-    </div>
   </div>
 </section>
 

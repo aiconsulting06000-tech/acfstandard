@@ -145,12 +145,13 @@ const ui = {
   en: {
     // Nav
     navDecisionGovOS: "DECISION GOVERNANCE OS",
-    navHome: "← Home",
+    navHome: "Home",
     navModules: "Modules",
     navDriftEngine: "Drift Engine",
     navDashboard: "Dashboard",
     navRisks: "Risks",
     navRequestDemo: "Request a Demo",
+    navStandard: "The Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partners", navFaq: "FAQ", navCta: "Contact",
 
     // Hero
     badgeLive: "LIVE GOVERNANCE SYSTEM",
@@ -412,12 +413,13 @@ const ui = {
   fr: {
     // Nav
     navDecisionGovOS: "OS DE GOUVERNANCE DÉCISIONNELLE",
-    navHome: "← Accueil",
+    navHome: "Accueil",
     navModules: "Modules",
     navDriftEngine: "Moteur de dérive",
     navDashboard: "Tableau de bord",
     navRisks: "Risques",
     navRequestDemo: "Demander une démo",
+    navStandard: "Le Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partenaires", navFaq: "FAQ", navCta: "Contact",
 
     // Hero
     badgeLive: "SYSTÈME DE GOUVERNANCE EN DIRECT",
@@ -678,12 +680,13 @@ const ui = {
   },
   es: {
     navDecisionGovOS: "SO DE GOBERNANZA DECISIONAL",
-    navHome: "← Inicio",
+    navHome: "Inicio",
     navModules: "Módulos",
     navDriftEngine: "Motor de deriva",
     navDashboard: "Panel de control",
     navRisks: "Riesgos",
     navRequestDemo: "Solicitar una demo",
+    navStandard: "El Estándar", navScore: "ACF Score", navBlog: "Blog", navPartners: "Socios", navFaq: "FAQ", navCta: "Contact",
     badgeLive: "SISTEMA DE GOBERNANZA EN VIVO",
     heroLine1: "Sus agentes deciden.",
     heroLine2: "Usted mantiene el control.",
@@ -906,12 +909,13 @@ const ui = {
   },
   de: {
     navDecisionGovOS: "ENTSCHEIDUNGS-GOVERNANCE-BS",
-    navHome: "← Startseite",
+    navHome: "Startseite",
     navModules: "Module",
     navDriftEngine: "Drift-Engine",
     navDashboard: "Dashboard",
     navRisks: "Risiken",
     navRequestDemo: "Demo anfragen",
+    navStandard: "Der Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partner", navFaq: "FAQ", navCta: "Contact",
     badgeLive: "LIVE-GOVERNANCE-SYSTEM",
     heroLine1: "Ihre Agenten entscheiden.",
     heroLine2: "Sie behalten die Kontrolle.",
@@ -1134,12 +1138,13 @@ const ui = {
   },
   pt: {
     navDecisionGovOS: "SO DE GOVERNANÇA DECISIONAL",
-    navHome: "← Início",
+    navHome: "Início",
     navModules: "Módulos",
     navDriftEngine: "Motor de deriva",
     navDashboard: "Painel",
     navRisks: "Riscos",
     navRequestDemo: "Solicitar uma demo",
+    navStandard: "O Padrão", navScore: "ACF Score", navBlog: "Blog", navPartners: "Parceiros", navFaq: "FAQ", navCta: "Contact",
     badgeLive: "SISTEMA DE GOVERNANÇA AO VIVO",
     heroLine1: "Os seus agentes decidem.",
     heroLine2: "Você mantém o controlo.",
@@ -1362,12 +1367,13 @@ const ui = {
   },
   ja: {
     navDecisionGovOS: "意思決定ガバナンスOS",
-    navHome: "← ホーム",
+    navHome: "ホーム",
     navModules: "モジュール",
     navDriftEngine: "ドリフトエンジン",
     navDashboard: "ダッシュボード",
     navRisks: "リスク",
     navRequestDemo: "デモを依頼",
+    navStandard: "スタンダード", navScore: "ACF Score", navBlog: "ブログ", navPartners: "パートナー", navFaq: "FAQ", navCta: "Contact",
     badgeLive: "ライブガバナンスシステム",
     heroLine1: "エージェントが決定する。",
     heroLine2: "あなたが統制する。",
@@ -1590,12 +1596,13 @@ const ui = {
   },
   zh: {
     navDecisionGovOS: "决策治理操作系统",
-    navHome: "← 首页",
+    navHome: "首页",
     navModules: "模块",
     navDriftEngine: "漂移引擎",
     navDashboard: "仪表盘",
     navRisks: "风险",
     navRequestDemo: "申请演示",
+    navStandard: "标准", navScore: "ACF Score", navBlog: "博客", navPartners: "合作伙伴", navFaq: "FAQ", navCta: "Contact",
     badgeLive: "实时治理系统",
     heroLine1: "您的智能体在决策。",
     heroLine2: "您保持控制。",
@@ -1818,12 +1825,13 @@ const ui = {
   },
   ko: {
     navDecisionGovOS: "의사결정 거버넌스 OS",
-    navHome: "← 홈",
+    navHome: "홈",
     navModules: "모듈",
     navDriftEngine: "드리프트 엔진",
     navDashboard: "대시보드",
     navRisks: "리스크",
     navRequestDemo: "데모 요청",
+    navStandard: "표준", navScore: "ACF Score", navBlog: "블로그", navPartners: "파트너", navFaq: "FAQ", navCta: "Contact",
     badgeLive: "라이브 거버넌스 시스템",
     heroLine1: "에이전트가 결정합니다.",
     heroLine2: "당신이 통제합니다.",
@@ -2046,12 +2054,13 @@ const ui = {
   },
   it: {
     navDecisionGovOS: "SO DI GOVERNANCE DECISIONALE",
-    navHome: "← Home",
+    navHome: "Home",
     navModules: "Moduli",
     navDriftEngine: "Motore di deriva",
     navDashboard: "Dashboard",
     navRisks: "Rischi",
     navRequestDemo: "Richiedi una demo",
+    navStandard: "Lo Standard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partner", navFaq: "FAQ", navCta: "Contact",
     badgeLive: "SISTEMA DI GOVERNANCE LIVE",
     heroLine1: "I vostri agenti decidono.",
     heroLine2: "Voi mantenete il controllo.",
@@ -2274,12 +2283,13 @@ const ui = {
   },
   nl: {
     navDecisionGovOS: "BESLISSINGS-GOVERNANCE-OS",
-    navHome: "← Home",
+    navHome: "Home",
     navModules: "Modules",
     navDriftEngine: "Drift Engine",
     navDashboard: "Dashboard",
     navRisks: "Risico's",
     navRequestDemo: "Demo aanvragen",
+    navStandard: "De Standaard", navScore: "ACF Score", navBlog: "Blog", navPartners: "Partners", navFaq: "FAQ", navCta: "Contact",
     badgeLive: "LIVE GOVERNANCE-SYSTEEM",
     heroLine1: "Uw agents beslissen.",
     heroLine2: "U behoudt de controle.",
@@ -2502,12 +2512,13 @@ const ui = {
   },
   ru: {
     navDecisionGovOS: "ОС УПРАВЛЕНИЯ РЕШЕНИЯМИ",
-    navHome: "← Главная",
+    navHome: "Главная",
     navModules: "Модули",
     navDriftEngine: "Движок дрифта",
     navDashboard: "Панель управления",
     navRisks: "Риски",
     navRequestDemo: "Запросить демо",
+    navStandard: "Стандарт", navScore: "ACF Score", navBlog: "Блог", navPartners: "Партнёры", navFaq: "FAQ", navCta: "Contact",
     badgeLive: "СИСТЕМА УПРАВЛЕНИЯ В РЕАЛЬНОМ ВРЕМЕНИ",
     heroLine1: "Ваши агенты принимают решения.",
     heroLine2: "Вы сохраняете контроль.",
@@ -2730,12 +2741,13 @@ const ui = {
   },
   ar: {
     navDecisionGovOS: "نظام تشغيل حوكمة القرارات",
-    navHome: "← الرئيسية",
+    navHome: "الرئيسية",
     navModules: "الوحدات",
     navDriftEngine: "محرك الانحراف",
     navDashboard: "لوحة التحكم",
     navRisks: "المخاطر",
     navRequestDemo: "طلب عرض توضيحي",
+    navStandard: "المعيار", navScore: "ACF Score", navBlog: "المدونة", navPartners: "الشركاء", navFaq: "FAQ", navCta: "Contact",
     badgeLive: "نظام حوكمة مباشر",
     heroLine1: "وكلاؤك يقررون.",
     heroLine2: "أنت تحافظ على السيطرة.",
@@ -2958,12 +2970,13 @@ const ui = {
   },
   tr: {
     navDecisionGovOS: "KARAR YÖNETİŞİM İS",
-    navHome: "← Ana Sayfa",
+    navHome: "Ana Sayfa",
     navModules: "Modüller",
     navDriftEngine: "Sapma Motoru",
     navDashboard: "Gösterge Paneli",
     navRisks: "Riskler",
     navRequestDemo: "Demo Talep Et",
+    navStandard: "Standart", navScore: "ACF Score", navBlog: "Blog", navPartners: "İş Ortakları", navFaq: "FAQ", navCta: "Contact",
     badgeLive: "CANLI YÖNETİŞİM SİSTEMİ",
     heroLine1: "Ajanlarınız karar veriyor.",
     heroLine2: "Siz kontrolde kalıyorsunuz.",
@@ -3250,28 +3263,29 @@ export default function ACFControlPage() {
         borderBottom: `1px solid ${C.goldBorder}`, display: "flex", alignItems: "center",
       }}>
         <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 40px", width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <a href={`/${locale}/`} style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none" }}>
             <div style={{
               width: 40, height: 40, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center",
               background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, fontWeight: 900, fontSize: 12, color: C.navy1, letterSpacing: 1,
             }}>ACF</div>
             <div>
-              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>ACF CONTROL</div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gray, letterSpacing: ".1em" }}>{t.navDecisionGovOS}</div>
+              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", letterSpacing: ".5px" }}>Agentic Commerce Framework®</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: C.gold, letterSpacing: ".1em" }}>GLOBAL STANDARD FOR AI GOVERNANCE</div>
             </div>
-          </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 28 }}>
-            <Link href={`/${locale}/`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{t.navHome}</Link>
-            {navLinks.map((l: any) => (
-              <a key={l.href} href={`#${l.href}`} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, transition: "color .2s" }}
+          </a>
+          <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+            {[
+              { label: t.navHome, href: `/${locale}/` },
+              { label: t.navStandard, href: `/${locale}/standard` },
+              { label: t.navScore, href: `/${locale}/acf-score` },
+              { label: t.navBlog, href: `/${locale}/blog` },
+              { label: t.navPartners, href: `/${locale}/acf-partners` },
+              { label: t.navFaq, href: `/${locale}/faq` },
+            ].map((l) => (
+              <a key={l.label} href={l.href} style={{ fontSize: 13, color: C.gray2, fontWeight: 500, textDecoration: "none", transition: "color .2s" }}
                 onMouseEnter={e => (e.target as HTMLElement).style.color = C.gold} onMouseLeave={e => (e.target as HTMLElement).style.color = C.gray2}>{l.label}</a>
             ))}
-            <Link href={`/${locale}/contact`} className="gold-glow" style={{
-              background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1,
-              border: "none", padding: "10px 22px", borderRadius: 8, fontSize: 13, fontWeight: 700, cursor: "pointer", transition: "all .3s",
-              display: "inline-block", textDecoration: "none",
-            }}>{t.navRequestDemo}</Link>
+            <a href={`/${locale}/contact`} style={{ background: `linear-gradient(135deg, ${C.gold}, ${C.gold2})`, color: C.navy1, padding: "10px 22px", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 700, display: "inline-block" }}>{t.navCta}</a>
           </div>
         </div>
       </nav>

@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'sw
 const space = Space_Grotesk({ subsets: ['latin'], variable: '--font-space', display: 'swap' })
 const jb = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jb', display: 'swap' })
 
-const BASE_URL = 'https://acf-standard.com'
+const BASE_URL = 'https://www.acfstandard.com'
 const ALL_LOCALES = ['fr', 'en', 'es', 'de', 'pt', 'ja', 'zh', 'ko', 'it', 'nl', 'ru', 'ar', 'tr'] as const
 
 function getLocalizedTitle(locale: string): string {
@@ -83,16 +83,28 @@ export default async function LocaleLayout({ children, params }: { children: Rea
       "@type": "Organization",
       "name": "ACF Standard",
       "alternateName": ["Agentic Commerce Framework", "ACF"],
-      "url": "https://acf-standard.com",
+      "url": "https://www.acfstandard.com",
       "description": "The global governance standard for organizations deploying autonomous AI agents.",
       "foundingDate": "2025",
+      "logo": "https://www.acfstandard.com/acf-logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "38 Bis Boulevard Victor Hugo",
+        "addressLocality": "Nice",
+        "postalCode": "06000",
+        "addressCountry": "FR"
+      },
       "founder": {
         "@type": "Person",
         "name": "Vincent DORANGE",
-        "url": "https://acf-standard.com/en/about",
+        "url": "https://www.acfstandard.com/en/about",
         "sameAs": ["https://www.linkedin.com/in/vincent-dorange"]
       },
-      "sameAs": ["https://www.linkedin.com/in/vincent-dorange"],
+      "sameAs": [
+        "https://www.linkedin.com/in/vincent-dorange",
+        "https://www.linkedin.com/company/agentic-commerce-framework",
+        "https://www.wikidata.org/wiki/Q138763423"
+      ],
       "knowsAbout": ["AI Governance", "Agentic Commerce", "Autonomous AI Agents", "EU AI Act", "Decision Sovereignty"]
     },
     {
@@ -100,10 +112,10 @@ export default async function LocaleLayout({ children, params }: { children: Rea
       "@type": "WebSite",
       "name": "ACF Standard",
       "alternateName": "Agentic Commerce Framework",
-      "url": "https://acf-standard.com",
+      "url": "https://www.acfstandard.com",
       "description": "The governance standard for organizations deploying autonomous AI agents.",
       "inLanguage": locale,
-      "publisher": { "@type": "Organization", "name": "ACF Standard", "url": "https://acf-standard.com" }
+      "publisher": { "@type": "Organization", "name": "ACF Standard", "url": "https://www.acfstandard.com" }
     },
     {
       "@context": "https://schema.org",
@@ -111,7 +123,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
       "name": "Vincent DORANGE",
       "jobTitle": "Founder & AI Governance Expert",
       "description": "Creator of the Agentic Commerce Framework\u00AE (ACF\u00AE).",
-      "url": "https://acf-standard.com/en/about",
+      "url": "https://www.acfstandard.com/en/about",
       "worksFor": { "@type": "Organization", "name": "AI Consulting" },
       "knowsAbout": ["AI Governance", "Agentic Commerce", "E-commerce Strategy", "Autonomous AI Agents", "EU AI Act Compliance"],
       "sameAs": ["https://www.linkedin.com/in/vincent-dorange"]
