@@ -21,7 +21,7 @@ export default function DiagramCanvas(){
         {x:cx,y:el.height*.88,label:'Execution',icon:'⚙️'},
         {x:el.width*.04,y:cy,label:'Agent',icon:'🤖'},
         {x:cx+r*Math.cos(0),y:cy+r*Math.sin(0),label:'ACF Control',icon:'📊'},
-        {x:cx+r*Math.cos(Math.PI/5),y:cy+r*Math.sin(Math.PI/5),label:'Partners',icon:'🤝'},
+        {x:cx+r*Math.cos(Math.PI/5),y:cy+r*Math.sin(Math.PI/5),label:'ACF Auditor',icon:'📋'},
         {x:cx+r*Math.cos(2*Math.PI/5),y:cy+r*Math.sin(2*Math.PI/5),label:'Practitioners',icon:'👨‍💼'},
         {x:cx+r*Math.cos(3*Math.PI/5),y:cy+r*Math.sin(3*Math.PI/5),label:'Certification',icon:'🏆'},
         {x:cx+r*Math.cos(4*Math.PI/5),y:cy+r*Math.sin(4*Math.PI/5),label:'Attestation',icon:'✓'}

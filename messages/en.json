@@ -36,6 +36,7 @@
     "theStandard": "The Standard",
     "acfScore": "ACF Score",
     "acfControl": "ACF Control",
+    "acfAuditor": "ACF Auditor",
     "acfCertification": "ACF Certification",
     "partners": "Partners",
     "requestAssessment": "Request Assessment",
@@ -82,6 +83,12 @@
         "score": "ACF Score — Sovereignty Metric",
         "methodology": "Scoring Methodology",
         "axes": "6 Governance Axes"
+      },
+      "audit": {
+        "title": "Agentic Audit Platform",
+        "auditor": "ACF Auditor — Agentic Maturity Audit",
+        "dimensions": "7 Weighted Dimensions",
+        "roadmap": "Automated Roadmap"
       },
       "saas": {
         "title": "Governance Platform",
@@ -209,9 +216,9 @@
         "name": "Certification",
         "description": "Attestation"
       },
-      "partners": {
-        "name": "Partners",
-        "description": "Practitioners"
+      "auditor": {
+        "name": "ACF Auditor",
+        "description": "Audit Platform"
       }
     }
   },
@@ -397,7 +404,7 @@
   "products": {
     "badge": "// Ecosystem",
     "title": "The ACF Ecosystem",
-    "subtitle": "Four complementary products operationalizing the ACF Standard.",
+    "subtitle": "Five complementary products operationalizing the ACF Standard.",
     "checker": {
       "label": "COMPLIANCE TOOL",
       "title": "ACF AI Act Checker",
@@ -419,6 +426,17 @@
         "feature3": "Personalized action plan per axis"
       },
       "cta": "Measure your Score →"
+    },
+    "auditor": {
+      "label": "AGENTIC AUDIT PLATFORM",
+      "title": "ACF Auditor",
+      "description": "Guided audit platform assessing digital and agentic maturity across 7 weighted dimensions with industry-calibrated scoring.",
+      "features": {
+        "feature1": "Guided audit: 107 questions / 7 dimensions",
+        "feature2": "Agentic Readiness Score + Sovereignty Score",
+        "feature3": "3-phase roadmap generated automatically"
+      },
+      "cta": "Discover ACF Auditor →"
     },
     "control": {
       "label": "GOVERNANCE PLATFORM",
@@ -492,6 +510,7 @@
     "products": {
       "title": "Products",
       "score": "ACF Score",
+      "auditor": "ACF Auditor",
       "control": "ACF Control",
       "certification": "Certification",
       "academy": "Academy"

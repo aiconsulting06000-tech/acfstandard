@@ -36,6 +36,7 @@
     "theStandard": "Le Standard",
     "acfScore": "ACF Score",
     "acfControl": "ACF Control",
+    "acfAuditor": "ACF Auditor",
     "acfCertification": "ACF Certification",
     "partners": "Partenaires",
     "requestAssessment": "Demander une évaluation",
@@ -82,6 +83,12 @@
         "score": "ACF Score — Métrique de souveraineté",
         "methodology": "Méthodologie de scoring",
         "axes": "6 axes de gouvernance"
+      },
+      "audit": {
+        "title": "Plateforme d'audit agentique",
+        "auditor": "ACF Auditor — Audit de maturité agentique",
+        "dimensions": "7 dimensions pondérées",
+        "roadmap": "Feuille de route automatisée"
       },
       "saas": {
         "title": "Plateforme de gouvernance en temps réel",
@@ -209,9 +216,9 @@
         "name": "Certification",
         "description": "Attestation"
       },
-      "partners": {
-        "name": "Partenaires",
-        "description": "Praticiens"
+      "auditor": {
+        "name": "ACF Auditor",
+        "description": "Plateforme d'audit"
       }
     }
   },
@@ -397,7 +404,7 @@
   "products": {
     "badge": "// Écosystème",
     "title": "L'écosystème ACF",
-    "subtitle": "Quatre produits complémentaires opérationnalisant le Standard ACF.",
+    "subtitle": "Cinq produits complémentaires opérationnalisant le Standard ACF.",
     "checker": {
       "label": "OUTIL DE CONFORMITÉ",
       "title": "ACF AI Act Checker",
@@ -419,6 +426,17 @@
         "feature3": "Plan d'action personnalisé par axe"
       },
       "cta": "Mesurez votre Score →"
+    },
+    "auditor": {
+      "label": "PLATEFORME D'AUDIT AGENTIQUE",
+      "title": "ACF Auditor",
+      "description": "Plateforme d'audit guidé évaluant la maturité digitale et agentique sur 7 dimensions pondérées avec scoring calibré par industrie.",
+      "features": {
+        "feature1": "Audit guidé 107 questions / 7 dimensions",
+        "feature2": "Agentic Readiness Score + Score de Souveraineté",
+        "feature3": "Feuille de route 3 phases générée automatiquement"
+      },
+      "cta": "Découvrir ACF Auditor →"
     },
     "control": {
       "label": "PLATEFORME DE GOUVERNANCE",
@@ -492,6 +510,7 @@
     "products": {
       "title": "Produits",
       "score": "ACF Score",
+      "auditor": "ACF Auditor",
       "control": "ACF Control",
       "certification": "Certification",
       "academy": "Academy"

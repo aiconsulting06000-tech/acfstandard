@@ -552,6 +552,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="nlm">
         <a href="/standard">${m.nav.theStandard}</a>
         <a href="/${locale}/acf-score">${m.nav.acfScore}</a>
+        <a href="/${locale}/acf-auditor">${m.nav.acfAuditor || 'ACF Auditor'}</a>
         <a href="/control">${m.nav.acfControl}</a>
         <a href="/certification">${m.nav.acfCertification}</a>
         <a href="/${locale}/faq">FAQ</a>
@@ -599,6 +600,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="mpt"><a href="/standard">${m.megaMenu.products.link}</a></div>
       <div class="mpd">${m.megaMenu.products.subtitle}</div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.products.diagnostic.title}</div><ul class="mlinks"><li><a href="https://www.acf-score.com/">${m.megaMenu.products.diagnostic.score}</a></li><li><a href="https://www.acf-score.com/pourquoi">${m.megaMenu.products.diagnostic.methodology}</a></li><li><a href="https://www.acf-score.com/calculator">${m.megaMenu.products.diagnostic.axes}</a></li></ul></div>
+      <div class="mgroup"><div class="mgtitle">${m.megaMenu.products.audit?.title || 'Agentic Audit Platform'}</div><ul class="mlinks"><li><a href="/${locale}/acf-auditor">${m.megaMenu.products.audit?.auditor || 'ACF Auditor — Agentic Maturity Audit'}</a></li><li><a href="/${locale}/acf-auditor#dimensions">${m.megaMenu.products.audit?.dimensions || '7 Weighted Dimensions'}</a></li><li><a href="/${locale}/acf-auditor#roadmap">${m.megaMenu.products.audit?.roadmap || 'Automated Roadmap'}</a></li></ul></div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.products.saas.title}</div><ul class="mlinks"><li><a href="/${locale}/acf-control">${m.megaMenu.products.saas.control}</a></li><li><a href="/${locale}/acf-control#modules">${m.megaMenu.products.saas.kpis}</a></li><li><a href="/${locale}/acf-control#drift-engine">${m.megaMenu.products.saas.gating}</a></li></ul></div>
       <div class="mgroup"><div class="mgtitle">${m.megaMenu.products.certification.title}</div><ul class="mlinks"><li><a href="/${locale}/acf-certification">${m.megaMenu.products.certification.program}</a></li><li><a href="/${locale}/acf-certification#levels">${m.megaMenu.products.certification.levels}</a></li><li><a href="/${locale}/acf-certification#process">${m.megaMenu.products.certification.audit}</a></li></ul></div>
     </div>
@@ -639,6 +641,8 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="macc-body">
         <div class="mgtitle">${m.megaMenu.products.diagnostic.title}</div>
         <ul class="mlinks"><li><a href="https://www.acf-score.com/" onclick="closeMega()">${m.megaMenu.products.diagnostic.score}</a></li><li><a href="https://www.acf-score.com/pourquoi" onclick="closeMega()">${m.megaMenu.products.diagnostic.methodology}</a></li><li><a href="https://www.acf-score.com/calculator" onclick="closeMega()">${m.megaMenu.products.diagnostic.axes}</a></li></ul>
+        <div class="mgtitle">${m.megaMenu.products.audit?.title || 'Agentic Audit Platform'}</div>
+        <ul class="mlinks"><li><a href="/${locale}/acf-auditor" onclick="closeMega()">${m.megaMenu.products.audit?.auditor || 'ACF Auditor'}</a></li><li><a href="/${locale}/acf-auditor#dimensions" onclick="closeMega()">${m.megaMenu.products.audit?.dimensions || '7 Dimensions'}</a></li><li><a href="/${locale}/acf-auditor#roadmap" onclick="closeMega()">${m.megaMenu.products.audit?.roadmap || 'Roadmap'}</a></li></ul>
         <div class="mgtitle">${m.megaMenu.products.saas.title}</div>
         <ul class="mlinks"><li><a href="/${locale}/acf-control" onclick="closeMega()">${m.megaMenu.products.saas.control}</a></li><li><a href="/${locale}/acf-control#modules" onclick="closeMega()">${m.megaMenu.products.saas.kpis}</a></li><li><a href="/${locale}/acf-control#drift-engine" onclick="closeMega()">${m.megaMenu.products.saas.gating}</a></li></ul>
         <div class="mgtitle">${m.megaMenu.products.certification.title}</div>
@@ -715,7 +719,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <div class="sat stop"><div class="sc"><div class="si"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><div class="sn">${m.hero.satellites.score.name}</div><div class="ss">${m.hero.satellites.score.description}</div></div></div></div>
       <div class="sat sright"><div class="sc"><div class="si"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div><div><div class="sn">${m.hero.satellites.control.name}</div><div class="ss">${m.hero.satellites.control.description}</div></div></div></div>
       <div class="sat sbott"><div class="sc"><div class="si"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg></div><div><div class="sn">${m.hero.satellites.certification.name}</div><div class="ss">${m.hero.satellites.certification.description}</div></div></div></div>
-      <div class="sat sleft"><div class="sc"><div class="si"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div><div class="sn">${m.hero.satellites.partners.name}</div><div class="ss">${m.hero.satellites.partners.description}</div></div></div></div>
+      <div class="sat sleft"><div class="sc"><div class="si"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg></div><div><div class="sn">${m.hero.satellites.auditor.name}</div><div class="ss">${m.hero.satellites.auditor.description}</div></div></div></div>
     </div>
   </div>
 </section>
@@ -1186,6 +1190,13 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
       <a href="https://acf-score.com" class="plink" target="_blank">${m.products.score.cta}</a>
     </div>
     <div class="pc rev d3">
+      <div class="piw"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg></div>
+      <div class="plbl">${m.products.auditor?.label || 'AGENTIC AUDIT PLATFORM'}</div><div class="ptitle">${m.products.auditor?.title || 'ACF Auditor'}</div>
+      <div class="pdesc">${m.products.auditor?.description || ''}</div>
+      <ul class="pfeat"><li>${m.products.auditor?.features?.feature1 || ''}</li><li>${m.products.auditor?.features?.feature2 || ''}</li><li>${m.products.auditor?.features?.feature3 || ''}</li></ul>
+      <a href="/${locale}/acf-auditor" class="plink" target="_top">${m.products.auditor?.cta || 'Discover ACF Auditor →'}</a>
+    </div>
+    <div class="pc rev d4">
       <div class="piw"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div>
       <div class="plbl">${m.products.control.label}</div><div class="ptitle">${m.products.control.title}</div>
       <div class="pdesc">${m.products.control.description}</div>
@@ -1263,7 +1274,7 @@ footer{background:var(--navy2);border-top:1px solid var(--bd);padding:50px 0 28p
     <div class="fgrid">
       <div><a href="/" class="logo"><div class="lb">ACF</div><div><div class="ln">${m.footer.logoText}</div><div class="ls">${m.footer.logoSubtext}</div></div></a><p class="fdesc">${m.footer.description}</p></div>
       <div><div class="ftitle">${m.footer.framework.title}</div><ul class="flinks"><li><a href="/standard">${m.footer.framework.theStandard}</a></li><li><a href="/method">${m.footer.framework.methodology}</a></li><li><a href="/research">${m.footer.framework.research}</a></li><li><a href="/certification">${m.footer.framework.certification}</a></li></ul></div>
-      <div><div class="ftitle">${m.footer.products.title}</div><ul class="flinks"><li><a href="/score">${m.footer.products.score}</a></li><li><a href="/control">${m.footer.products.control}</a></li><li><a href="/certification">${m.footer.products.certification}</a></li><li><a href="/academy">${m.footer.products.academy}</a></li></ul></div>
+      <div><div class="ftitle">${m.footer.products.title}</div><ul class="flinks"><li><a href="/score">${m.footer.products.score}</a></li><li><a href="/${locale}/acf-auditor">${m.footer.products.auditor || 'ACF Auditor'}</a></li><li><a href="/control">${m.footer.products.control}</a></li><li><a href="/certification">${m.footer.products.certification}</a></li><li><a href="/academy">${m.footer.products.academy}</a></li></ul></div>
       <div><div class="ftitle">${m.footer.organization.title}</div><ul class="flinks"><li><a href="/partners/login">${m.footer.organization.partnerPortal}</a></li><li><a href="/about">${m.footer.organization.about}</a></li><li><a href="/contact">${m.footer.organization.contact}</a></li><li><a href="/legal">${m.footer.organization.legal}</a></li></ul></div>
     </div>
     <div class="fbot">
@@ -1755,6 +1766,8 @@ export default function Home() {
   if (!m.megaMenu.partners) m.megaMenu.partners = {}
   if (!m.faq) m.faq = { badge: '// FAQ', title: 'FAQ', subtitle: '', q1: { question: '', answer: '' } }
   if (!m.products.checker) m.products.checker = { label: 'COMPLIANCE TOOL', title: 'ACF AI Act Checker', description: 'Free pre-diagnostic tool to check your AI system compliance with the EU AI Act.', features: { feature1: 'EU AI Act compliance diagnostic', feature2: 'Role-based obligation mapping', feature3: 'Automated risk classification' }, cta: 'Check my compliance →' }
+  if (!m.products.auditor) m.products.auditor = { label: 'AGENTIC AUDIT PLATFORM', title: 'ACF Auditor', description: 'Guided audit platform assessing digital and agentic maturity across 7 weighted dimensions with industry-calibrated scoring.', features: { feature1: 'Guided audit: 107 questions / 7 dimensions', feature2: 'Agentic Readiness Score + Sovereignty Score', feature3: '3-phase roadmap generated automatically' }, cta: 'Discover ACF Auditor →' }
+  if (!m.hero.satellites.auditor) m.hero.satellites.auditor = { name: 'ACF Auditor', description: 'Audit Platform' }
 
   return (
     <>
