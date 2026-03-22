@@ -707,7 +707,7 @@ def draw_products_page(c):
     y -= 15
     c.setFillColor(GREY)
     c.setFont("Helvetica", 11)
-    c.drawString(40, y, "Quatre produits compl\u00e9mentaires op\u00e9rationnalisant le standard ACF.")
+    c.drawString(40, y, "Cinq produits compl\u00e9mentaires op\u00e9rationnalisant le standard ACF.")
 
     products = [
         ("ACF AI Act Checker", "OUTIL DE CONFORMIT\u00c9",
@@ -722,6 +722,13 @@ def draw_products_page(c):
          ["Score composite de souverainet\u00e9",
           "Visualisation radar 6 axes",
           "Plan d'action personnalis\u00e9 par axe"]),
+        ("ACF Auditor", "PLATEFORME D'AUDIT",
+         "Plateforme d'audit guid\u00e9 \u00e9valuant la maturit\u00e9 digitale et agentique de votre "
+         "organisation sur 7 dimensions pond\u00e9r\u00e9es. Scoring calibr\u00e9 par industrie, d\u00e9tection "
+         "automatique de patterns critiques et g\u00e9n\u00e9ration d'une feuille de route actionnables.",
+         ["Audit guid\u00e9 107 questions / 7 dimensions avec calibration industrie",
+          "Agentic Readiness Score + Score de Souverainet\u00e9",
+          "Feuille de route 3 phases g\u00e9n\u00e9r\u00e9e automatiquement"]),
         ("ACF Control", "PLATEFORME DE GOUVERNANCE",
          "Dashboard de gouvernance temps r\u00e9el surveillant vos 18 KPIs de souverainet\u00e9 "
          "avec gating adaptatif et escalade automatis\u00e9e.",
@@ -736,57 +743,83 @@ def draw_products_page(c):
           "Renouvellement annuel + monitoring continu"]),
     ]
 
-    y -= 45
+    y -= 30
+    desc_font = 9
+    desc_lh = 12
+    feat_font = 8.5
+    feat_lh = 12
+    max_w = W - 130
+
     for name, label, desc, features in products:
-        box_h = 115
+        # Pre-calculate box height based on content
+        # Header area: 18 (label) + 14 (title) + 6 (gap) = 38
+        # Description lines
+        words = desc.split()
+        line = ""
+        desc_lines = 0
+        for word in words:
+            test = line + " " + word if line else word
+            if c.stringWidth(test, "Helvetica", desc_font) < max_w:
+                line = test
+            else:
+                desc_lines += 1
+                line = word
+        if line:
+            desc_lines += 1
+        # Features
+        n_feat = len(features)
+        box_h = 38 + desc_lines * desc_lh + 6 + n_feat * feat_lh + 10
+
         c.setFillColor(DARK_CARD)
-        c.roundRect(40, y - 8, W - 80, box_h, 5, fill=1, stroke=0)
+        c.roundRect(40, y - box_h, W - 80, box_h, 5, fill=1, stroke=0)
 
         # Gold top border
         c.setStrokeColor(GOLD)
         c.setLineWidth(1.5)
-        c.line(50, y + box_h - 10, W - 50, y + box_h - 10)
+        c.line(50, y - 2, W - 50, y - 2)
 
         # Label
+        ly = y - 16
         c.setFillColor(GOLD)
         c.setFont("Helvetica", 7.5)
-        c.drawString(55, y + box_h - 24, label)
+        c.drawString(55, ly, label)
 
         # Title
+        ly -= 15
         c.setFillColor(WHITE)
         c.setFont("Helvetica-Bold", 14)
-        c.drawString(55, y + box_h - 40, name)
+        c.drawString(55, ly, name)
 
         # Description
+        ly -= 12
         c.setFillColor(GREY)
-        c.setFont("Helvetica", 9)
+        c.setFont("Helvetica", desc_font)
         words = desc.split()
         line = ""
-        ly = y + box_h - 56
         for word in words:
             test = line + " " + word if line else word
-            if c.stringWidth(test, "Helvetica", 9) < W - 130:
+            if c.stringWidth(test, "Helvetica", desc_font) < max_w:
                 line = test
             else:
                 c.drawString(55, ly, line)
-                ly -= 12
+                ly -= desc_lh
                 line = word
         if line:
             c.drawString(55, ly, line)
-            ly -= 12
+            ly -= desc_lh
 
         # Features
-        ly -= 4
+        ly -= 3
         for feat in features:
             c.setFillColor(GOLD)
-            c.setFont("Helvetica", 8)
+            c.setFont("Helvetica", feat_font)
             c.drawString(60, ly, "\u2713")
             c.setFillColor(LIGHT_GREY)
-            c.setFont("Helvetica", 8.5)
+            c.setFont("Helvetica", feat_font)
             c.drawString(76, ly, feat)
-            ly -= 13
+            ly -= feat_lh
 
-        y -= (box_h + 10)
+        y -= (box_h + 6)
 
     draw_footer(c, 9)
 
